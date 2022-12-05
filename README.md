@@ -6,7 +6,7 @@
 
 ## [はじめに](preface/README.md)
 
-## 力学の復習
+## [力学の復習](review/README.md)
 
 * 次元解析
 * 数学的準備
