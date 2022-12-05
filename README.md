@@ -8,6 +8,9 @@
 
 ## 力学の復習
 
+* 次元解析
+* 数学的準備
+
 ## ライセンス
 
 Copyright (C) 2022-present Hiroshi Watanabe
