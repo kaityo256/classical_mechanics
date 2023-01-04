@@ -130,7 +130,9 @@ $$
 \end{pmatrix}
 = 0
 $$
-つまり、添字が同じであれば1に、異なれば0になる。座標を$x,y,z$と書いていると不便なので、以下$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$を、それぞれ$\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$と表記しよう。相方となる基底$\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3$も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。
+つまり、添字が同じであれば1に、異なれば0になる。
+
+いちいち座標を$x,y,z$と書いていると、特に和を取る時に不便なので、以下$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$を、それぞれ$\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$と表記しよう。相方となる基底$\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3$も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。
 
 $$
 (\bm{e}^i, \bm{e}_j) = \delta_{i,j}
