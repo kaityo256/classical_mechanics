@@ -6,6 +6,9 @@
 
 ## [はじめに](preface/README.md)
 
+* 式の見方について
+* 解析力学とは
+
 ## [数学的準備](preparation/README.md)
 
 * 微分と偏微分
