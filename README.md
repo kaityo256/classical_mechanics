@@ -75,7 +75,12 @@
 
 ## 解析力学から量子力学へ
 
-## [参考文献](references/README.md)
+## [より深く学ぶために](references/README.md)
+
+* 教科書の読み方
+* 参考文献
+
+## [おわりに](postface/README.md)
 
 ## ライセンス
 
