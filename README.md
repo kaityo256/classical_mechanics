@@ -1,4 +1,6 @@
-# 解析力学
+# [苦しんで学ぶ解析力学](https://kaityo256.github.io/classical_mechanics/)
+
+<a href="https://github.com/kaityo256/classical_mechanics"> <div class="btn-square"><i class="fab fa-github"></i> View on GitHub</div></a>
 
 ## この講義ノートについて
 
