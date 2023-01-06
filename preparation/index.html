@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>数学的準備</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://kaityo256.github.io/python_zero/github-markdown.css" type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">数学的準備</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。最初に断言してしまうが、解析力学の美しさを実感するためには、長ったらしい計算を泥臭く最後まで完遂する腕力が必須である<a
+                                    href="#fn1" class="footnote-ref"
+                                    id="fnref1"
+                                    role="doc-noteref"><sup>1</sup></a>。以下、かなり当たり前な計算を延々と実行するが、面倒くさがらずについてきて欲しい。また、随所で数学的にいい加減な扱いをする。</p>
+                                    <h1
+                                    id="ベクトルとスカラー">ベクトルとスカラー</h1>
+                                    <h2
+                                    id="ベクトルの表記">ベクトルの表記</h2>
+                                    <p>我々は3次元空間に住んでいるため、力学でも3次元空間中の運動を扱うことが多い。3次元空間中では、質点の位置を指定したり、速度や力を指定したりするのに3つの数字の組が必要になる。例えば、ある質点の座標が<span
+                                    class="math inline">\((r_x,r_y,r_z)\)</span>である時、</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} =
+                                    \begin{pmatrix}
+                                    r_x\\
+                                    r_y\\
+                                    r_z
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>とまとめて表記する。このように、いくつかの数字の組で表現される量を
+                                    <strong>ベクトル(vector)</strong>
+                                    と呼ぶ。特に、<span
+                                    class="math inline">\(\bm{r}\)</span>
+                                    は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本講義ノートでは<span
+                                    class="math inline">\(\bm{r}\)</span>のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。</p>
+                                    <p>TODO: 板書のベクトルの例</p>
+                                    <p>一方、ベクトルではない普通の数を
+                                    <strong>スカラー(scalar)</strong>
+                                    と呼ぶ。スカラーの定義は追って与える。また、板書では縦ベクトルは縦に書くが、講義ノートでは紙面の都合から横に書きたいことがある。その場合は<span
+                                    class="math inline">\(\bm{r} =
+                                    {}^t(r_x, r_y,
+                                    r_z)\)</span>のように、ベクトルの最初に<span
+                                    class="math inline">\(t\)</span>をつけて表す。この<span
+                                    class="math inline">\(t\)</span>は転置を表し、横ベクトルを転置することで、縦ベクトルであることを表現している。</p>
+                                    <h2
+                                    id="基底ベクトルと内積">基底ベクトルと内積</h2>
+                                    <p>力学におけるベクトルで重要な点は、座標変換によるベクトルの変換である。先程のベクトル表記では、数を3つ縦に並べた。これは、以下のように書き直すことができる。</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} =
+                                    r_x
+                                    \begin{pmatrix}
+                                    1\\
+                                    0\\
+                                    0
+                                    \end{pmatrix}
+                                    +
+                                    r_y
+                                    \begin{pmatrix}
+                                    0\\
+                                    1\\
+                                    0
+                                    \end{pmatrix}
+                                    +
+                                    r_y
+                                    \begin{pmatrix}
+                                    0\\
+                                    0\\
+                                    1
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>3つの基本的なベクトルの和にわけることができた。この基本的なベクトルを<span
+                                    class="math inline">\(\bm{e}_x,\bm{e}_y,\bm{e}_z\)</span>と書こう。すると、</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} = r_x \bm{e_x} + r_y \bm{e_y}
+                                    + r_z \bm{e_z}
+                                    \]</span></p>
+                                    <p>と表記できる。この時、<span
+                                    class="math inline">\(\bm{e}_x,\bm{e}_y,\bm{e}_z\)</span>を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ<span
+                                    class="math inline">\((r_x, r_y,
+                                    r_z)\)</span>は、基底ベクトル<span
+                                    class="math inline">\(\bm{e}_x,\bm{e}_y,\bm{e}_z\)</span>を採用した時のベクトル<span
+                                    class="math inline">\(\bm{r}\)</span>の展開表現であり、別の基底ベクトルを採用した場合は別の表現になる。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} =
+                                    \begin{pmatrix}
+                                    r_x\\
+                                    r_y\\
+                                    r_z
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>という表記は、基底ベクトルを<span
+                                    class="math inline">\(\bm{e}_x,\bm{e}_y,\bm{e}_z\)</span>と暗黙に仮定した上で</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} = r_x \bm{e_x} + r_y \bm{e_y}
+                                    + r_z \bm{e_z}
+                                    \]</span></p>
+                                    <p>と書くべきところを、括弧で略記した記法である。</p>
+                                    <p>さて、今、<span
+                                    class="math inline">\(\bm{e}_x\)</span>などが簡単な形をしているため、<span
+                                    class="math inline">\(\bm{r}\)</span>を<span
+                                    class="math inline">\(\bm{e}_x\)</span>などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。</p>
+                                    <p>基底ベクトル<span
+                                    class="math inline">\(\bm{e}_x,\bm{e}_y,\bm{e}_z\)</span>は、要素が縦に並んでいる縦ベクトルであった。これらの対になるベクトルとして、以下の横ベクトルを定義する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \bm{e}^x =
+                                    \begin{pmatrix}
+                                    1 &amp; 0 &amp; 0
+                                    \end{pmatrix} \\
+                                    \bm{e}^y =
+                                    \begin{pmatrix}
+                                    0 &amp; 1 &amp; 0
+                                    \end{pmatrix} \\
+                                    \bm{e}^z =
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 1
+                                    \end{pmatrix}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>縦ベクトルの添字を下に、横ベクトルの添字を上につけている。縦ベクトルと横ベクトルの間には内積を定義することができる。</p>
+                                    <p>例えば、<span
+                                    class="math inline">\(\bm{e}^x\)</span>と<span
+                                    class="math inline">\(\bm{e}_x\)</span>の内積を取ると</p>
+                                    <p><span class="math display">\[
+                                    (\bm{e}^x, \bm{e}_x) =
+                                    \begin{pmatrix}
+                                    1 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    1\\
+                                    0\\
+                                    0
+                                    \end{pmatrix}
+                                    = 1
+                                    \]</span></p>
+                                    <p>同様に、<span
+                                    class="math inline">\(\bm{e}^x\)</span>と<span
+                                    class="math inline">\(\bm{e}_y\)</span>の内積を取ると</p>
+                                    <p><span class="math display">\[
+                                    (\bm{e}^x, \bm{e}_y) =
+                                    \begin{pmatrix}
+                                    1 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    0\\
+                                    1\\
+                                    0
+                                    \end{pmatrix}
+                                    = 0
+                                    \]</span>
+                                    つまり、添字が同じであれば1に、異なれば0になる。</p>
+                                    <p>いちいち座標を<span
+                                    class="math inline">\(x,y,z\)</span>と書いていると、特に和を取る時に不便なので、以下<span
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を、それぞれ<span
+                                    class="math inline">\(\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3\)</span>と表記しよう。相方となる基底<span
+                                    class="math inline">\(\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3\)</span>も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。</p>
+                                    <p><span class="math display">\[
+                                    (\bm{e}^i, \bm{e}_j) = \delta_{i,j}
+                                    \]</span></p>
+                                    <p>内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。</p>
+                                    <p>基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。</p>
+                                    <p>一般に、あるベクトルと、内積をとる相手のベクトルの住む空間は異なる。自分が住む空間から見て、内積を取る相手が住む空間を
+                                    <strong>双対空間(dual
+                                    space)</strong>と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で、内積を括弧で表現したが、ベクトルが住む空間と、相方の住む空間を区別する必要がない場合は、２つのベクトル<span
+                                    class="math inline">\(\mathbf{a} =
+                                    {}^t(a_1, a_2, a_3)\)</span>と<span
+                                    class="math inline">\(\mathbf{b} =
+                                    {}^t(b_1, b_2,
+                                    b_3)\)</span>の内積を</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \mathbf{a} \cdot \mathbf{b}
+                                    &amp;\equiv ({}^t \mathbf{a},
+                                    \mathbf{b}) \\
+                                    &amp;= a_1 b_1 + a_2 b_2 + a_3 b_3
+                                    \\
+                                    &amp;= \sum_i^{3} a_i b_j
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と書く場合もある。適宜使い分けるので混乱しないようにして欲しい。</p>
+                                    <p>さて、ある基底<span
+                                    class="math inline">\(\bm{e}_1,
+                                    \bm{e}_2,
+                                    \bm{e}_3\)</span>で表現されたベクトル<span
+                                    class="math inline">\(\bm{r} =
+                                    {}^t(r_1, r_2,
+                                    r_3)\)</span>について、別の基底<span
+                                    class="math inline">\(\bm{e}&#39;_1,
+                                    \bm{e}&#39;_2,
+                                    \bm{e}&#39;_3\)</span>で展開した時の表現<span
+                                    class="math inline">\(\bm{r} =
+                                    {}^t(r&#39;_1, r&#39;_2,
+                                    r&#39;_3)\)</span>を求めたい。つまり、</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} = r&#39;_1
+                                    \mathbf{e}&#39;_1  +r&#39;_1
+                                    \mathbf{e}&#39;_2+r&#39;_3
+                                    \mathbf{e}&#39;_3
+                                    \]</span></p>
+                                    <p>任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。つまり、</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} = r_x \bm{e_x} + r_y \bm{e_y}
+                                    + r_z \bm{e_z}
+                                    \]</span></p>
+                                    <p>という表記は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \bm{r} \cdot \bm{e_x} &amp;= r_x \\
+                                    \bm{r} \cdot \bm{e_y} &amp;= r_y \\
+                                    \bm{r} \cdot \bm{e_z} &amp;= r_z
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ということを意味している。</p>
+                                    <h2
+                                    id="関数空間とベクトル">関数空間とベクトル</h2>
+                                    <p>高校まではベクトルを「複数個の値の組」として捉えていた。しかし、大学ではより一般的な扱いをする。すなわちベクトルとは、なにかの集合の要素であり、その線形結合がやはり同じ集合に所属するものを言う。3次元ベクトルはこの定義を満たしているが、例えば変数<span
+                                    class="math inline">\(x\)</span>の任意の関数もベクトルの定義を満たす。つまり、関数全体の集合を<span
+                                    class="math inline">\(\mathcal{V}\)</span>として、関数<span
+                                    class="math inline">\(f(x)\)</span>と<span
+                                    class="math inline">\(g(x)\)</span>が<span
+                                    class="math inline">\(\mathcal{V}\)</span>の要素である、つまり<span
+                                    class="math inline">\(f(x),g(x) \in
+                                    \mathcal{V}\)</span>である時、その線形結合<span
+                                    class="math inline">\(a f(x)+ b
+                                    (g)\)</span>もやはり<span
+                                    class="math inline">\(x\)</span>の関数であるから、関数の集合はベクトルである。この時、関数の集合<span
+                                    class="math inline">\(\mathcal{V}\)</span>をベクトル空間、その要素をベクトルと呼ぶ。</p>
+                                    <p>関数をベクトルとみなす時、内積も定義することができる。いま、関数<span
+                                    class="math inline">\(f(x)\)</span>と<span
+                                    class="math inline">\(g(x)\)</span>について、その内積を</p>
+                                    <p><span class="math display">\[
+                                    (f,g) =
+                                    \int_{-\infty}^{\infty}f^*(x)g(x)dx
+                                    \]</span></p>
+                                    <p>により定義する。ただし<span
+                                    class="math inline">\(f^*(x)\)</span>は<span
+                                    class="math inline">\(f(x)\)</span>の複素共役である。これにより、ベクトル2つからスカラーを結びつけることができる。こうして、関数をベクトルとみなし、ある基底から別の基底での表現を得るのがフーリエ変換であった。</p>
+                                    <p>後で見るように、<span
+                                    class="math inline">\(\partial_x\)</span>や、<span
+                                    class="math inline">\(dx\)</span>といった演算子もベクトルとみなすことができ、さらにその間に内積を考えることができる。</p>
+                                    <h2 id="基底の変換">基底の変換</h2>
+                                    <p>TODO: 書く</p>
+                                    <h2 id="テンソル積">テンソル積</h2>
+                                    <p>解析力学において、(いわゆる行列の意味での)テンソル積はあまりでてこない。しかし、この後に学ぶ微分形式で必要となるので、簡単におさらいしておこう。</p>
+                                    <p>ここで、<span
+                                    class="math inline">\(\mathbf{e}_1\)</span>と、その相方とのテンソル積
+                                    <span
+                                    class="math inline">\(\mathbf{e}^1
+                                    \otimes
+                                    \mathbf{e}_1\)</span>を以下のように作る。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \mathbf{e}^1 \otimes \mathbf{e}_1
+                                    &amp;=
+                                    \begin{pmatrix}
+                                    1 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \otimes
+                                    \begin{pmatrix}
+                                    1\\ 0\\0
+                                    \end{pmatrix}
+                                    =
+                                    \end{aligned}
+                                    \begin{pmatrix}
+                                    1 &amp; 0 &amp; 0 \\
+                                    0 &amp; 0 &amp; 0 \\
+                                    0 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>全く同様に<span
+                                    class="math inline">\(\mathbf{e}^i
+                                    \otimes
+                                    \mathbf{e}_j\)</span>を定義することができる。これらにより3行3列の行列を展開できる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    A &amp;=
+                                    \begin{pmatrix}
+                                    a^1_1 &amp; a^2_1 &amp; a^3_1 \\
+                                    a^1_2 &amp; a^2_2 &amp; a^3_2 \\
+                                    a^1_3 &amp; a^2_3 &amp; a^3_3
+                                    \end{pmatrix}
+                                    = \sum_{i=1}^{3} \sum_{j=1}^{3}
+                                    a^i_j \mathbf{e}^i \otimes
+                                    \mathbf{e}_j
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <h1
+                                    id="微分と偏微分">微分と偏微分</h1>
+                                    <p>力学は微分方程式を解く学問であるから、当然微積分が出てくる。特に合成関数の微分や、ベクトルによる微分などが現れるので、ここで簡単に確認しておこう。</p>
+                                    <h2
+                                    id="微分の表記方法">微分の表記方法</h2>
+                                    <p>微分の記法にはいくつか方法がある。関数<span
+                                    class="math inline">\(f(x)\)</span>の<span
+                                    class="math inline">\(x\)</span>による導関数は</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dx} f(x), \frac{d
+                                    f(x)}{dx}, \frac{df}{dx}
+                                    \]</span></p>
+                                    <p>などと分数の形で表記する。この表記を
+                                    <strong>ライプニッツ記法(Leibniz’s
+                                    notation)</strong> と呼ぶ<a
+                                    href="#fn2" class="footnote-ref"
+                                    id="fnref2"
+                                    role="doc-noteref"><sup>2</sup></a>。</p>
+                                    <p>ライプニッツ記法では、何を何で微分したかが明記されているため混乱が少ないが、式が複雑であるときに煩わしいことがある。そこで、本講義では適宜、別の記法も用いることにする。</p>
+                                    <p>まず関数<span
+                                    class="math inline">\(f(x)\)</span>を見ると、<span
+                                    class="math inline">\(f\)</span>という値が<span
+                                    class="math inline">\(x\)</span>という引数に依存していることがわかる。したがって、<span
+                                    class="math inline">\(f(x)\)</span>を微分しようとしたら<span
+                                    class="math inline">\(x\)</span>に決まっているので、以下のようにプライム記号で表記する。</p>
+                                    <p><span class="math display">\[
+                                    f&#39;(x) \equiv \frac{df}{dx}
+                                    \]</span></p>
+                                    <p>二階微分や三階微分は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    f&#39;&#39;(x) &amp;\equiv
+                                    \frac{d^2f}{dx^2}\\
+                                    f&#39;&#39;&#39;(x) &amp;\equiv
+                                    \frac{d^3f}{dx^3}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>とプライム記号を増やして表記する。このような表記を
+                                    <strong>ラグランジュ記法(Lagrange’s
+                                    notation)</strong> と呼ぶ<a
+                                    href="#fn3" class="footnote-ref"
+                                    id="fnref3"
+                                    role="doc-noteref"><sup>3</sup></a></p>
+                                    <p>それ以上の高階微分や、<span
+                                    class="math inline">\(n\)</span>階微分など微分回数が変数である場合は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    f^{(4)}(x) &amp;\equiv \frac{d^4
+                                    f}{dx^4}\\
+                                    f^{(n)}(x) &amp;\equiv \frac{d^n
+                                    f}{dx^n}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>などと表記するが、力学においてはほとんど高階微分は出てこないので気にしなくて良い。なお、扱う記号はプライム「’」であるが、<span
+                                    class="math inline">\(f&#39;(x)\)</span>を「エフダッシュエックス」と呼ぶことがある(余談参照)。</p>
+                                    <p>さて、力学は物体の運動、すなわち時間変化を追う学問である。したがって、時間微分が頻出する。そこで、時間微分をドットで表記することにする。二階微分は二重ドットで表記する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{x} &amp;\equiv \frac{dx}{dt} \\
+                                    \ddot{x} &amp;\equiv
+                                    \frac{d^2x}{dt^2}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを
+                                    <strong>ニュートン記法(Newton’s
+                                    notation)</strong> と呼ぶ。<a
+                                    href="#fn4" class="footnote-ref"
+                                    id="fnref4"
+                                    role="doc-noteref"><sup>4</sup></a>
+                                    高階数微分ではドットの上に数を書く表記もあるが、ほとんどの場合において二階微分までしか扱わないため、二重ドット表記まで覚えれば良い。</p>
+                                    <p>これらの表記が複合する場合がある。例えば位置<span
+                                    class="math inline">\(x\)</span>は時間の関数であり、力<span
+                                    class="math inline">\(f\)</span>は位置の関数であるとき、<span
+                                    class="math inline">\(f(x)\)</span>を時間で微分したもののライプニッツ表記は</p>
+                                    <p><span class="math display">\[
+                                    \frac{df }{dt} = \frac{df}{dx}
+                                    \frac{dx}{dt}
+                                    \]</span></p>
+                                    <p>となる。これは</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{dt} = f&#39;(x) \dot{x}
+                                    \]</span></p>
+                                    <p>と表記できる。関数を、その引数で微分する場合はラグランジュ記法が、時間に関する変数<span
+                                    class="math inline">\(x\)</span>の時間微分はニュートン記法が使われている。ややこしいようにも見えるが、慣れてしまえば表記が簡略化される分、読みやすくなる。</p>
+                                    <p>次に、ベクトルが絡んだ微分について考えよう。質点の位置が<span
+                                    class="math inline">\(\bm{r} =
+                                    (x,y,z)\)</span>で表されている。</p>
+                                    <p>TODO: 続きを書く</p>
+                                    <p>もう少し実際的な例を見てみよう。三次元空間に質点が2つあり、それぞれの座標が<span
+                                    class="math inline">\(\bm{r}_1 =
+                                    (x_1, y_1, z_1)\)</span>, <span
+                                    class="math inline">\(\bm{r}_2 =
+                                    (x_2, y_2,
+                                    z_2)\)</span>で与えられているとする。この二点の距離<span
+                                    class="math inline">\(r\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    r &amp;=
+                                    \sqrt{(\bm{r}_1-\bm{r}_2)^2} \\
+                                      &amp;=
+                                    \sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>で与えられる。いま、2つの質点の間に万有引力の法則が成り立つとすると、質点の間には距離<span
+                                    class="math inline">\(r\)</span>に依存する力<span
+                                    class="math inline">\(f(r)\)</span>が働くことになる。力学の問題を扱う場合、この<span
+                                    class="math inline">\(f(r)\)</span>の時間微分や、<span
+                                    class="math inline">\(x_1\)</span>による微分が現れる。面倒だが、このような計算がすらすらできないと今後の議論に全くついていけなくなるため、ここで真面目に計算しよう。</p>
+                                    <p>まず、<span
+                                    class="math inline">\(f(r)\)</span>の時間微分を考える。合成関数の微分により</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{dt} = \frac{df}{dr}
+                                    \frac{dr}{dt} = f&#39;(r) \dot{r}
+                                    \]</span></p>
+                                    <p>となる。次は<span
+                                    class="math inline">\(r\)</span>の時間微分だが、<span
+                                    class="math inline">\(r\)</span>は<span
+                                    class="math inline">\(\bm{r}_1\)</span>と<span
+                                    class="math inline">\(\bm{r}_2\)</span>の関数であるから、</p>
+                                    <p><span class="math display">\[
+                                    \dot{r} = \frac{\partial r}{\partial
+                                    \bm{r}_1} \dot{\bm{r}_1} +
+                                    \frac{\partial r}{\partial \bm{r}_2}
+                                    \dot{\bm{r}_2}
+                                    \]</span></p>
+                                    <p>TODO: 続きを書く。</p>
+                                    <h1
+                                    id="ベクトル解析">ベクトル解析</h1>
+                                    <p>多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、運動エネルギーやポテンシャルエネルギーといった量は、エネルギーであるからスカラーだが、引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。</p>
+                                    <p>例として、太陽系を考えよう。太陽質量を<span
+                                    class="math inline">\(M\)</span>、地球の質量を<span
+                                    class="math inline">\(m\)</span>とし、地球の座標を<span
+                                    class="math inline">\((x,y)\)</span>とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似することで(太陽質量は地球の33万倍なので、これは非常に良い近似となる)、この系の運動方程式は以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2x}{dt^2} &amp;=  -G
+                                    \frac{Mmx}{r^3} \\
+                                    m \frac{d^2y}{dt^2} &amp;=  -G
+                                    \frac{Mmy}{r^3}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(r = \sqrt{x^2
+                                    +
+                                    y^2}\)</span>である。これをベクトルの言葉で書いていきたい。</p>
+                                    <p>まず、重力は保存力なので、ポテンシャルエネルギー<span
+                                    class="math inline">\(V(r)\)</span>を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    V(r) = -\frac{GMm}{r}
+                                    \]</span></p>
+                                    <p>これを<span
+                                    class="math inline">\(x\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial V}{\partial x} =
+                                    V&#39;(r) \frac{dr}{dx}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(dr/dx\)</span>をそのまま計算しても良いが、<span
+                                    class="math inline">\(r^2\)</span>の全微分を考えるのが楽である。</p>
+                                    <p><span class="math display">\[
+                                    r^2 = x^2 + y^2
+                                    \]</span></p>
+                                    <p>より、</p>
+                                    <p><span class="math display">\[
+                                    2r dr = 2xdx + 2ydy
+                                    \]</span></p>
+                                    <p>ここから</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial r}{\partial x} =
+                                    \frac{x}{r}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial V}{\partial x} = G
+                                    \frac{Mmx}{r^3}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(y\)</span>も同様である。ここから運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2x}{dt^2} &amp;=  -
+                                    \frac{\partial V}{\partial x} \\
+                                    m \frac{d^2y}{dt^2} &amp;=  -
+                                    \frac{\partial V}{\partial y}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>まず、地球の座標をベクトルで表そう。</p>
+                                    <p><span class="math display">\[
+                                    \bm{r} =
+                                    \begin{pmatrix}
+                                    x \\ y
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 \bm{r}}{dt^2} &amp;=  -G
+                                    \frac{Mmx}{r^2} \bm{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <h1 id="座標変換">座標変換</h1>
+                                    <p>共変、反変について書く。</p>
+                                    <h1 id="微分形式">微分形式</h1>
+                                    <p>変数<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(y\)</span>に依存する2変数関数<span
+                                    class="math inline">\(f(x,y)\)</span>を考える。<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(y\)</span>が時間<span
+                                    class="math inline">\(t\)</span>に依存している時、<span
+                                    class="math inline">\(f\)</span>の時間微分は</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{dt} = \frac{\partial
+                                    f}{\partial x} \frac{dx}{dt} +
+                                    \frac{\partial f}{\partial y}
+                                    \frac{dy}{dt}
+                                    \]</span></p>
+                                    <p>さて、<span
+                                    class="math inline">\(f(x,y)\)</span>は<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(y\)</span>にしか依存していないので、<span
+                                    class="math inline">\(x\)</span>や<span
+                                    class="math inline">\(y\)</span>が<span
+                                    class="math inline">\(t\)</span>ではなく<span
+                                    class="math inline">\(s\)</span>に依存していても式の形は全く変わらない。</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{ds} = \frac{\partial
+                                    f}{\partial x} \frac{dx}{ds} +
+                                    \frac{\partial f}{\partial y}
+                                    \frac{dy}{ds}
+                                    \]</span></p>
+                                    <p>そこで、<span
+                                    class="math inline">\(dt\)</span>や<span
+                                    class="math inline">\(ds\)</span>を形式的に消して、以下のように書いてみる。</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial x}
+                                    dx
+                                    + \frac{\partial f}{\partial y} dy
+                                    \]</span></p>
+                                    <p>このように書ける時<span
+                                    class="math inline">\(f\)</span>は全微分可能であると言い、この表式を<span
+                                    class="math inline">\(f\)</span>の全微分と呼ぶ。</p>
+                                    <p>さて、この式の意味を考えよう。<span
+                                    class="math inline">\(f(x,y)\)</span>という関数を、点<span
+                                    class="math inline">\((x,y)\)</span>の周りでテイラー展開し、一次の項目だけ残す。</p>
+                                    <p><span class="math display">\[
+                                    f(x+\delta x, y+\delta x) - f(x,y)
+                                    \sim \frac{\partial f}{\partial x}
+                                    \delta x +
+                                    \frac{\partial f}{\partial y} \delta
+                                    y
+                                    \]</span></p>
+                                    <p>つまり、<span
+                                    class="math inline">\(\partial
+                                    f/\partial
+                                    x\)</span>という量は、<span
+                                    class="math inline">\(y\)</span>を変化させずに、<span
+                                    class="math inline">\(x\)</span>だけを変化させた場合の<span
+                                    class="math inline">\(f\)</span>の変化の割合であった。そこで、全微分の両辺を形式的に<span
+                                    class="math inline">\(dx\)</span>でわろう。この時、微分記号が偏微分に化ける。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial f}{\partial x} &amp;=
+                                    \frac{\partial f}{\partial x}
+                                    \underbrace{\frac{\partial
+                                    x}{\partial x}}_{=1}
+                                    + \frac{\partial f}{\partial y}
+                                    \underbrace{\frac{\partial
+                                    y}{\partial x}}_{=0} \\
+                                    &amp;= \frac{\partial f}{\partial x}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この事実をもって、もう一度先の全微分の式を眺めてみる。</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial x}
+                                    dx
+                                    + \frac{\partial f}{\partial y} dy
+                                    \]</span></p>
+                                    <p>すると、これがまるでベクトルを基底で展開しているかのように見える。</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{f} = \frac{\partial
+                                    f}{\partial x} \mathbf{e}_x +
+                                    \frac{\partial f}{\partial y}
+                                    \mathbf{e}_y
+                                    \]</span></p>
+                                    <p>両辺、<span
+                                    class="math inline">\(\mathbf{e}_x\)</span>の相方である<span
+                                    class="math inline">\(\mathbf{e}^x\)</span>との内積を取ると、</p>
+                                    <p><span class="math display">\[
+                                    (\mathbf{e}^x, \mathbf{f}) =
+                                    \frac{\partial f}{\partial x}
+                                    \]</span></p>
+                                    <p>となる。以上から、<span
+                                    class="math inline">\(df\)</span>をベクトル、<span
+                                    class="math inline">\(dx\)</span>や<span
+                                    class="math inline">\(dy\)</span>を基底のように扱うことができることがわかる。さらに、<span
+                                    class="math inline">\(dx\)</span>をベクトルと見た時、その相方となるベクトルが<span
+                                    class="math inline">\(\partial_x\)</span>であることもわかる。すなわち、<span
+                                    class="math inline">\(dx, dy,
+                                    dz\)</span>と<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y,
+                                    \partial_z\)</span>の間には、自然な内積、</p>
+                                    <p><span class="math display">\[
+                                    \left&lt;d\alpha,
+                                    \frac{\partial}{\partial
+                                    \beta}\right&gt; = \frac{\partial
+                                    \alpha}{\partial \beta} =
+                                    \delta_{\alpha, \beta}
+                                    \]</span></p>
+                                    <p>が定義される。</p>
+                                    <h1
+                                    id="余談ダッシュかプライムか">余談：ダッシュかプライムか</h1>
+                                    <p>ラグランジュによる微分記法<span
+                                    class="math inline">\(f&#39;(x)\)</span>を「エフダッシュ」と呼ぶべきか「エフプライム」と呼ぶべきかはよく論争になる。田野村忠温氏による調査では、<span
+                                    class="math inline">\(a&#39;\)</span>を「a
+                                    dash」と読む最も初期の文献が1823年まで遡ることがわかっている。これは「A
+                                    Familiar Introduction
+                                    to　Crystallography」という、英国で出版された出版物である。一方、<span
+                                    class="math inline">\(a&#39;\)</span>を「a
+                                    prime」と呼ぶ文献では、1832年に米国で出版された代数学の教科書がある(John
+                                    Radford Young An Elementary Treatise
+                                    on Algebra, Theoretical and
+                                    Practical, First American Edition,
+                                    With Additions and Improvements by
+                                    Samuel Ward,
+                                    1832)。どうやら英国でダッシュ読みが、米国でプライム読みが普及したらしいが、詳細は不明である。</p>
+                                    <ul>
+                                    <li>参考：<a
+                                    href="http://www.tanomura.com/research/papers/tanomura_2018_dash_prime_addenda.pdf">a’
+                                    の英語における読みの歴史に関する覚書
+                                    ─「ダッシュ、プライム」余論─
+                                    田野村忠温</a></li>
+                                    </ul>
+                                    <section id="footnotes"
+                                    class="footnotes footnotes-end-of-document"
+                                    role="doc-endnotes">
+                                    <hr />
+                                    <ol>
+                                    <li
+                                    id="fn1"><p>これは解析力学に限らない。どんなに美しく完成された学問でも、教科書を眺めているだけでは理解できない。途中に現れる泥臭い計算を地道に実行するのが、結局は理解の早道だ。まずは式の意味を理解しなくて良いから、何も見ず計算がすらすらとできるようにしよう。理解はその後についてくる。<a
+                                    href="#fnref1" class="footnote-back"
+                                    role="doc-backlink">↩︎</a></p></li>
+                                    <li
+                                    id="fn2"><p>ゴッドフリート・ライプニッツ(Gottfried
+                                    Wilhelm Leibniz,
+                                    1646-1716)に因む。積分記号なども彼の発明である。<a
+                                    href="#fnref2" class="footnote-back"
+                                    role="doc-backlink">↩︎</a></p></li>
+                                    <li
+                                    id="fn3"><p>ジョセフ＝ルイ・ラグランジュ(Joseph-Louis
+                                    Lagrange,
+                                    1736-1813)に因む。解析力学の創始者の一人である。<a
+                                    href="#fnref3" class="footnote-back"
+                                    role="doc-backlink">↩︎</a></p></li>
+                                    <li
+                                    id="fn4"><p>アイザック・ニュートン(1642–1727)に因む。ニュートン力学を構築した。微積分の研究、万有引力の法則や、光学の研究でも有名。<a
+                                    href="#fnref4" class="footnote-back"
+                                    role="doc-backlink">↩︎</a></p></li>
+                                    </ol>
+                                    </section>
+                    </article>
+    </body>
+
+    </html>
