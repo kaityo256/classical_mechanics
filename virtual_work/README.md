@@ -7,38 +7,124 @@
 保存力のみが働いている系では、エネルギーが保存しているのであった。今、保存力$F$の他に、外部からの力$F_\mathrm{ex}$が働いているとする。運動方程式は以下のように書ける。
 
 $$
-m\frac{dx^2}{dt^2} = F + F_\mathrm{ex}
+m\frac{dx^2}{dt^2} = F + F_\mathrm{ex}.
 $$
 
 保存力だけ左辺に移項しよう。
 
 $$
-m\frac{dx^2}{dt^2} -F = F_\mathrm{ex}
+m\frac{dx^2}{dt^2} -F = F_\mathrm{ex}.
 $$
 
 $F$は保存力であるから、あるポテンシャル関数$U(x)$が存在し、$F=-U'(x)$と表現できる。
 
 $$
-m\frac{dx^2}{dt^2} + U'(x) = F_\mathrm{ex}
+m\frac{dx^2}{dt^2} + U'(x) = F_\mathrm{ex}.
 $$
 
 両辺を$x$で積分する。積分範囲は$x_i$から$x_f$までとしよう。
 
 $$
-\int_{x_i}^{x_f} \left(m\frac{dx^2}{dt^2}\right)dx + \int_{x_i}^{x_f} U'(x)dx = \int_{x_i}^{x_f}F_\mathrm{ex} dx
+\int_{x_i}^{x_f} \left(m\frac{dx^2}{dt^2}\right)dx + \int_{x_i}^{x_f} U'(x)dx = \int_{x_i}^{x_f}F_\mathrm{ex} dx.
 $$
 
 ここで
 
 $$
-\frac{d^2 x}{dt^2} = \frac{dv}{dt}
+\begin{aligned}
+m \frac{dx^2}{dt^2} &= m \frac{dv}{dt} \\
+&= m \frac{dv}{dx} \underbrace{\frac{dx}{dt}}_{v} \\
+&= m v \frac{dv}{dx} \\
+&= \frac{d}{dx}\left( \frac{1}{2}mv^2\right)
+\end{aligned}
 $$
 
-であるから、
+従って、全エネルギーを
+
+$$
+E(x) = \frac{1}{2}mv^2 + U
+$$
+
+により定義すると、
+
+$$
+\int_{x_i}^{x_f} \frac{dE}{dx} dx = \int_{x_i}^{x_f}F_\mathrm{ex} dx
+$$
+
+つまり、
+
+$$
+\Delta E \equiv E(x_f) - E(x_i) = \int_{x_i}^{x_f}F_\mathrm{ex} dx
+$$
+
+となった。左辺は、物体のエネルギーの変化を表している。ここで、右辺の量を
+
+$$
+W \equiv \int_{x_i}^{x_f}F_\mathrm{ex} dx
+$$
+
+と定義すると
+
+$$
+\Delta E = W.
+$$
+
+つまり、物体のエネルギーの変化$\Delta E$は、物体にかかる外力の距離に関する積分$W$だけ変化する。この$W$を仕事と呼ぶのであった。
+
+2つほど簡単な例を挙げよう。
+
+TODO:図解
+
+まず、物体が平面上に静止した状態から、一定の力$F_\mathrm{ex}$をかけ続けて距離$l$だけ運動させた結果、速度が$V$になったとしよう。運動方程式は
+
+$$
+m \frac{d^2 x}{dt^2} = F_\mathrm{ex}
+$$
+
+両辺を$x$で積分すると、
+
+$$
+\int_0^l m \frac{d^2 x}{dt^2}dx = F_\mathrm{ex} l
+$$
+
+左辺は
 
 $$
 \begin{aligned}
-\frac{d}{dx}\left(\frac{1}{2}mv^2 \right)
-&= mv \frac{dv}{dx}
+\int_0^l m \frac{d^2 x}{dt^2}dx &= \int_0^l \frac{d}{dx} \left(\frac{1}{2}mv^2 \right) dx \\
+&= \left[ \frac{1}{2}mv^2 \right]_0^l\\
+&= \frac{1}{2}mV^2
 \end{aligned}
 $$
+
+つまり、
+
+$$
+F_ex l = \frac{1}{2}mV^2
+$$
+
+であり、外からした仕事が運動エネルギーに変換されたことがわかる。
+
+TODO:図解
+
+次に、バネ定数$k$のバネにつながれた物体を、釣り合いの位置で静止した状態から距離$l$だけ正の方向に引っ張り、最後に静止させるような操作を考える。運動方程式は以下で与えられる。
+
+$$
+m \frac{d^2 x}{dt^2} = -kx + F_\mathrm{ex}.
+$$
+
+両辺を$0$から$l$まで$x$で積分すると、
+
+$$
+\left[\frac{1}{2}mv^2 + \frac{1}{2}kx^2 \right]_0^l = \int_0^l F_\mathrm{ex} dx \equiv W
+$$
+
+物体は最初と最後は静止していたのであるから$v=0$なので
+
+$$
+\frac{1}{2}kx^2 = W.
+$$
+
+要するに、与えられた仕事が位置エネルギーに変換されたことがわかる。
+
+ここまで「当たり前だ」と思うかもしれないが、我々は運動方程式しか使っていないことに注意してほしい。運動方程式を出発として、等式変形しているだけであるから、ここで得られた情報は全ては運動方程式にもともと含まれている。しかし、運動方程式を変形することでエネルギーや仕事という概念を作り出すことができた。これにより、微分方程式を直接解くことなく運動をより直感的かつ平易に扱うことができる。また、運動方程式は一般にベクトルを扱う必要があるが、エネルギーや仕事はスカラー量であるために、より扱いやすいという利点もある。
