@@ -9,7 +9,7 @@
 ## [はじめに](preface/README.md)
 
 * 式の見方について
-* 解析力学とは
+* 解析力学の概観
 
 ## [数学的準備](preparation/README.md)
 

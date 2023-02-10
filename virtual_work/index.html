@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>仮想仕事の原理</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">仮想仕事の原理</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1 id="仕事">仕事</h1>
+                                    <p>仮想仕事について学ぶ前に、仕事について復習しておこう。仕事とは「力と距離の積」であり、物体が受けた仕事の分だけエネルギーを得る。以下ではそれを見てみよう。</p>
+                                    <p>保存力のみが働いている系では、エネルギーが保存しているのであった。今、保存力<span
+                                    class="math inline">\(F\)</span>の他に、外部からの力<span
+                                    class="math inline">\(F_\mathrm{ex}\)</span>が働いているとする。運動方程式は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    m\frac{dx^2}{dt^2} = F +
+                                    F_\mathrm{ex}.
+                                    \]</span></p>
+                                    <p>保存力だけ左辺に移項しよう。</p>
+                                    <p><span class="math display">\[
+                                    m\frac{dx^2}{dt^2} -F =
+                                    F_\mathrm{ex}.
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(F\)</span>は保存力であるから、あるポテンシャル関数<span
+                                    class="math inline">\(U(x)\)</span>が存在し、<span
+                                    class="math inline">\(F=-U&#39;(x)\)</span>と表現できる。</p>
+                                    <p><span class="math display">\[
+                                    m\frac{dx^2}{dt^2} + U&#39;(x) =
+                                    F_\mathrm{ex}.
+                                    \]</span></p>
+                                    <p>両辺を<span
+                                    class="math inline">\(x\)</span>で積分する。積分範囲は<span
+                                    class="math inline">\(x_i\)</span>から<span
+                                    class="math inline">\(x_f\)</span>までとしよう。</p>
+                                    <p><span class="math display">\[
+                                    \int_{x_i}^{x_f}
+                                    \left(m\frac{dx^2}{dt^2}\right)dx +
+                                    \int_{x_i}^{x_f} U&#39;(x)dx =
+                                    \int_{x_i}^{x_f}F_\mathrm{ex} dx.
+                                    \]</span></p>
+                                    <p>ここで</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{dx^2}{dt^2} &amp;= m
+                                    \frac{dv}{dt} \\
+                                    &amp;= m \frac{dv}{dx}
+                                    \underbrace{\frac{dx}{dt}}_{v} \\
+                                    &amp;= m v \frac{dv}{dx} \\
+                                    &amp;= \frac{d}{dx}\left(
+                                    \frac{1}{2}mv^2\right)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、全エネルギーを</p>
+                                    <p><span class="math display">\[
+                                    E(x) = \frac{1}{2}mv^2 + U
+                                    \]</span></p>
+                                    <p>により定義すると、</p>
+                                    <p><span class="math display">\[
+                                    \int_{x_i}^{x_f} \frac{dE}{dx} dx =
+                                    \int_{x_i}^{x_f}F_\mathrm{ex} dx
+                                    \]</span></p>
+                                    <p>つまり、</p>
+                                    <p><span class="math display">\[
+                                    \Delta E \equiv E(x_f) - E(x_i) =
+                                    \int_{x_i}^{x_f}F_\mathrm{ex} dx
+                                    \]</span></p>
+                                    <p>となった。左辺は、物体のエネルギーの変化を表している。ここで、右辺の量を</p>
+                                    <p><span class="math display">\[
+                                    W \equiv
+                                    \int_{x_i}^{x_f}F_\mathrm{ex} dx
+                                    \]</span></p>
+                                    <p>と定義すると</p>
+                                    <p><span class="math display">\[
+                                    \Delta E = W.
+                                    \]</span></p>
+                                    <p>つまり、物体のエネルギーの変化<span
+                                    class="math inline">\(\Delta
+                                    E\)</span>は、物体にかかる外力の距離に関する積分<span
+                                    class="math inline">\(W\)</span>だけ変化する。この<span
+                                    class="math inline">\(W\)</span>を仕事と呼ぶのであった。</p>
+                                    <p>2つほど簡単な例を挙げよう。</p>
+                                    <p>TODO:図解</p>
+                                    <p>まず、物体が平面上に静止した状態から、一定の力<span
+                                    class="math inline">\(F_\mathrm{ex}\)</span>をかけ続けて距離<span
+                                    class="math inline">\(l\)</span>だけ運動させた結果、速度が<span
+                                    class="math inline">\(V\)</span>になったとしよう。運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d^2 x}{dt^2} = F_\mathrm{ex}
+                                    \]</span></p>
+                                    <p>両辺を<span
+                                    class="math inline">\(x\)</span>で積分すると、</p>
+                                    <p><span class="math display">\[
+                                    \int_0^l m \frac{d^2 x}{dt^2}dx =
+                                    F_\mathrm{ex} l
+                                    \]</span></p>
+                                    <p>左辺は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \int_0^l m \frac{d^2 x}{dt^2}dx
+                                    &amp;= \int_0^l \frac{d}{dx}
+                                    \left(\frac{1}{2}mv^2 \right) dx \\
+                                    &amp;= \left[ \frac{1}{2}mv^2
+                                    \right]_0^l\\
+                                    &amp;= \frac{1}{2}mV^2
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>つまり、</p>
+                                    <p><span class="math display">\[
+                                    F_ex l = \frac{1}{2}mV^2
+                                    \]</span></p>
+                                    <p>であり、外からした仕事が運動エネルギーに変換されたことがわかる。</p>
+                                    <p>TODO:図解</p>
+                                    <p>次に、バネ定数<span
+                                    class="math inline">\(k\)</span>のバネにつながれた物体を、釣り合いの位置で静止した状態から距離<span
+                                    class="math inline">\(l\)</span>だけ正の方向に引っ張り、最後に静止させるような操作を考える。運動方程式は以下で与えられる。</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d^2 x}{dt^2} = -kx +
+                                    F_\mathrm{ex}.
+                                    \]</span></p>
+                                    <p>両辺を<span
+                                    class="math inline">\(0\)</span>から<span
+                                    class="math inline">\(l\)</span>まで<span
+                                    class="math inline">\(x\)</span>で積分すると、</p>
+                                    <p><span class="math display">\[
+                                    \left[\frac{1}{2}mv^2 +
+                                    \frac{1}{2}kx^2 \right]_0^l =
+                                    \int_0^l F_\mathrm{ex} dx \equiv W
+                                    \]</span></p>
+                                    <p>物体は最初と最後は静止していたのであるから<span
+                                    class="math inline">\(v=0\)</span>なので</p>
+                                    <p><span class="math display">\[
+                                    \frac{1}{2}kx^2 = W.
+                                    \]</span></p>
+                                    <p>要するに、与えられた仕事が位置エネルギーに変換されたことがわかる。</p>
+                                    <p>ここまで「当たり前だ」と思うかもしれないが、我々は運動方程式しか使っていないことに注意してほしい。運動方程式を出発として、等式変形しているだけであるから、ここで得られた情報は全ては運動方程式にもともと含まれている。しかし、運動方程式を変形することでエネルギーや仕事という概念を作り出すことができた。これにより、微分方程式を直接解くことなく運動をより直感的かつ平易に扱うことができる。また、運動方程式は一般にベクトルを扱う必要があるが、エネルギーや仕事はスカラー量であるために、より扱いやすいという利点もある。</p>
+                    </article>
+    </body>
+
+    </html>
