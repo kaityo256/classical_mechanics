@@ -41,6 +41,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
                         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
             type="text/css" />
@@ -54,7 +57,34 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <p>TODO: 講義ノートのサマリ</p>
+                                    <p>以上、ニュートンの運動方程式から始まり、量子力学に至るまでを一通り学んだ。ここまでの旅路を簡単に振り返っておこう。</p>
+                                    <p>ニュートンの運動方程式</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d^2 x}{dt^2} = F
+                                    \]</span></p>
+                                    <p>において、まずは物体が動かないケース、すなわち静力学を考えた。この時、加速度は零であるから</p>
+                                    <p><span class="math display">\[
+                                    F = 0
+                                    \]</span></p>
+                                    <p>となる。いま、力が保存力であり、あるポテンシャル関数<span
+                                    class="math inline">\(U(x)\)</span>を用いて<span
+                                    class="math inline">\(F = -
+                                    U&#39;(x)\)</span>と書ける時、つりあいの位置<span
+                                    class="math inline">\(x\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \delta U = U(x+\delta x) - U(x) =
+                                    U&#39;(x)\delta x = 0
+                                    \]</span></p>
+                                    <p>を満たす。これが仮想仕事の原理であり、「物体に働く力がつりあっている」という条件を「物体の位置があるポテンシャルの極小値を取る」という条件に読み替えることができた。</p>
+                                    <p>これをd’Alembertの原理を用いて動力学に応用すると、位置だけの関数であったポテンシャル<span
+                                    class="math inline">\(U(x)\)</span>の代わりに位置と速度の力学ポテンシャル<span
+                                    class="math inline">\(L(\dot{x},
+                                    x)\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    \delta L = 0
+                                    \]</span></p>
+                                    <p>を要請するのがハミルトンの原理であり、ここからEuler-Lagrangeの方程式が得られた。この力学ポテンシャルをラグランジアンであった。</p>
+                                    <p>TODO: 残りの「旅路」を追加</p>
                                     <p>最後に、この講義ノートの想定読者である大学生にアドバイスをしておきたい。解析力学の理解は難しい。量子力学も電磁気学も、熱力学も統計力学も簡単に学べる学問ではない、と著者は思う。すらすら問題を解いている同期の姿を見て、さっぱり理解できない自分を鑑み、頭が悪いのかも、と落ち込む必要は全くない。そもそも難しい学問であるから、教科書を読んでわからないのは当然である。問題を解ける能力と、学問を理解するということは別の問題である(もちろん問題を解けるに越したことはないが)。</p>
                                     <p>著者が「なんとなくわかってきたかな」と思ったのは、講義で教えるようになってからであり、その時初めて自分が学生の頃はさっぱり理解していなかったことがわかった。つまり、学生の頃は自分が理解していないことすら理解できていなかった。大学を卒業してから真面目に勉強をして、ようやくいろんなことがつながって来たように思う。</p>
                                     <p>解析力学に限らず、数式がたくさん出てくる難しい学問を学ぶと、「どうしてこんなものを学ばなければならないのか」という気持ちになるであろう。実生活で解析力学が役に立つことなど無いのでなおさらである。それでも、学生の皆さんには解析力学という美しい学問を学んで欲しい。「時間発展とは要するに回転であり、回転とは座標変換であり、ハミルトニアンはその座標変換の母関数である」という文章が理解できた時、あなたの視野は一段広がることであろう。</p>
