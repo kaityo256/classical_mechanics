@@ -57,10 +57,10 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。最初に断言してしまうが、解析力学の美しさを実感するためには、長ったらしい計算を泥臭く最後まで完遂する腕力が必須である<a
+                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。解析力学の美しさを実感するためには、長ったらしい計算を泥臭く最後まで完遂する腕力が必須である<a
                                     href="#fn1" class="footnote-ref"
                                     id="fnref1"
-                                    role="doc-noteref"><sup>1</sup></a>。以下、かなり当たり前な計算を延々と実行するが、面倒くさがらずについてきて欲しい。また、随所で数学的にいい加減な扱いをする。</p>
+                                    role="doc-noteref"><sup>1</sup></a>。以下、かなり当たり前な計算を延々と実行するが、面倒くさがらずについてきて欲しい。</p>
                                     <h1
                                     id="ベクトルとスカラー">ベクトルとスカラー</h1>
                                     <h2
@@ -125,11 +125,28 @@
                                     \boldsymbol{e_z}
                                     \]</span></p>
                                     <p>と表記できる。この時、<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ<span
-                                    class="math inline">\((r_x, r_y,
-                                    r_z)\)</span>は、基底ベクトル<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を採用した時のベクトル<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>の展開表現であり、別の基底ベクトルを採用した場合は別の表現になる。すなわち、</p>
+                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ。特に、</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{e}_x =
+                                    \begin{pmatrix}
+                                    1\\
+                                    0\\
+                                    0
+                                    \end{pmatrix},
+                                    \boldsymbol{e}_y =
+                                    \begin{pmatrix}
+                                    0\\
+                                    1\\
+                                    0
+                                    \end{pmatrix},
+                                    \boldsymbol{e}_z =
+                                    \begin{pmatrix}
+                                    0\\
+                                    0\\
+                                    1
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>の形をとる基底を標準基底と呼ぶ。</p>
                                     <p><span class="math display">\[
                                     \boldsymbol{r} =
                                     \begin{pmatrix}
@@ -137,17 +154,20 @@
                                     r_y\\
                                     r_z
                                     \end{pmatrix}
-                                    \]</span></p>
-                                    <p>という表記は、基底ベクトルを<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>と暗黙に仮定した上で</p>
+                                    \]</span>
+                                    という表記は、標準基底ベクトル<span
+                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を採用した時のベクトル<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>の展開表現である。</p>
+                                    <p>すなわち、本来なら</p>
                                     <p><span class="math display">\[
                                     \boldsymbol{r} = r_x
                                     \boldsymbol{e_x} + r_y
                                     \boldsymbol{e_y} + r_z
                                     \boldsymbol{e_z}
                                     \]</span></p>
-                                    <p>と書くべきところを、括弧で略記した記法である。</p>
-                                    <p>さて、今、<span
+                                    <p>と書くべきところを、基底ベクトルを<span
+                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>と暗黙に仮定した上で括弧で略記した記法である。</p>
+                                    <p>さて、今は<span
                                     class="math inline">\(\boldsymbol{e}_x\)</span>などが簡単な形をしているため、<span
                                     class="math inline">\(\boldsymbol{r}\)</span>を<span
                                     class="math inline">\(\boldsymbol{e}_x\)</span>などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。</p>
@@ -216,7 +236,9 @@
                                     <p>基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。</p>
                                     <p>一般に、あるベクトルと、内積をとる相手のベクトルの住む空間は異なる。自分が住む空間から見て、内積を取る相手が住む空間を
                                     <strong>双対空間(dual
-                                    space)</strong>と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で、内積を括弧で表現したが、ベクトルが住む空間と、相方の住む空間を区別する必要がない場合は、２つのベクトル<span
+                                    space)</strong>
+                                    と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。</p>
+                                    <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で、内積を括弧で表現したが、ベクトルが住む空間と、相方の住む空間を区別する必要がない場合は、２つのベクトル<span
                                     class="math inline">\(\boldsymbol{a}
                                     = {}^t(a_1, a_2,
                                     a_3)\)</span>と<span
@@ -302,8 +324,8 @@
                                     <h2 id="基底の変換">基底の変換</h2>
                                     <p>TODO: 書く</p>
                                     <h2 id="テンソル積">テンソル積</h2>
-                                    <p>解析力学において、(いわゆる行列の意味での)テンソル積はあまりでてこない。しかし、この後に学ぶ微分形式で必要となるので、簡単におさらいしておこう。</p>
-                                    <p>ここで、<span
+                                    <p>解析力学において、(いわゆる行列の意味での)テンソル積はあまりでてこない。しかし、この後に学ぶ微分形式で必要となるので、簡単に紹介しておこう。</p>
+                                    <p>基底<span
                                     class="math inline">\(\boldsymbol{e}_1\)</span>と、その相方とのテンソル積
                                     <span
                                     class="math inline">\(\boldsymbol{e}^1
@@ -328,6 +350,8 @@
                                     0 &amp; 0 &amp; 0
                                     \end{pmatrix}
                                     \]</span></p>
+                                    <p>すなわち、3次元空間の基底<span
+                                    class="math inline">\(\boldsymbox{e}_i\)</span>と、その双対基底</p>
                                     <p>全く同様に<span
                                     class="math inline">\(\boldsymbol{e}^i
                                     \otimes
@@ -345,6 +369,12 @@
                                     \boldsymbol{e}_j
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>さて、多くの場合において、和の範囲は自明である。例えば<span
+                                    class="math inline">\(i\)</span>が軸に関するものであれば1から3までであろうし、<span
+                                    class="math inline">\(i\)</span>が粒子番号であれば<span
+                                    class="math inline">\(1\)</span>から<span
+                                    class="math inline">\(N\)</span>まで走るであろう。その場合にいちいち和記号<span
+                                    class="math inline">\(\Sigma\)</span>を書くのは面倒である。そこで、同じ添字が２つ現れたら、その添字について和を取る、という約束をする。</p>
                                     <h1
                                     id="微分と偏微分">微分と偏微分</h1>
                                     <p>力学は微分方程式を解く学問であるから、当然微積分が出てくる。特に合成関数の微分や、ベクトルによる微分などが現れるので、ここで簡単に確認しておこう。</p>
@@ -591,7 +621,7 @@
                                     \]</span></p>
                                     <p>このように書ける時<span
                                     class="math inline">\(f\)</span>は全微分可能であると言い、この表式を<span
-                                    class="math inline">\(f\)</span>の全微分と呼ぶ。</p>
+                                    class="math inline">\(f\)</span>の<strong>全微分</strong>と呼ぶ。</p>
                                     <p>さて、この式の意味を考えよう。<span
                                     class="math inline">\(f(x,y)\)</span>という関数を、点<span
                                     class="math inline">\((x,y)\)</span>の周りでテイラー展開し、一次の項目だけ残す。</p>
