@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>ハミルトンの原理</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">ハミルトンの原理</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1
+                                    id="本章で学ぶこと">本章で学ぶこと</h1>
+                                    <p>運動エネルギーを<span
+                                    class="math inline">\(K\)</span>、ポテンシャルエネルギーを<span
+                                    class="math inline">\(U\)</span>とすると、ラグランジアンは<span
+                                    class="math inline">\(K-U\)</span>で与えられる。これが、なぜ全エネルギー<span
+                                    class="math inline">\(K+U\)</span>ではなく、<span
+                                    class="math inline">\(K-U\)</span>なのか疑問に思う人も多いだろう。簡単にいえば「部分積分により負符号が出るから」なのだが、以下では仮想仕事の原理と比較しながらラグランジアンの導出を行うことで、どのように<span
+                                    class="math inline">\(K-U\)</span>が出てくるかを理解する。</p>
+                                    <h1
+                                    id="ダランベールの原理">ダランベールの原理</h1>
+                                    <p>仮想仕事の原理は、力が釣り合っており物体が静止している場合、すなわち静力学に適用する原理であった。これを動力学に応用するため、まずダランベールの原理について述べる。</p>
+                                    <p>ニュートンの運動方程式から始めよう。</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d^2x}{dt^2} = F
+                                    \]</span></p>
+                                    <p>ここで、運動方程式の二階微分が扱いづらいので、新たな変数<span
+                                    class="math inline">\(v\)</span>を用いて一階の連立微分方程式にしておく。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dx}{dt} &amp;= v \\
+                                    m \frac{dv}{dt} &amp;= F
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>仮想仕事の原理では物体は静止していたために左辺はゼロであったが、今回は動いている場合を扱うのでゼロではない。さて、この運動方程式の左辺を右辺に移項しよう。</p>
+                                    <p><span class="math display">\[
+                                    0 = - m \frac{dv}{dt} + F
+                                    \]</span></p>
+                                    <p>ここで、慣性項<span
+                                    class="math inline">\(m
+                                    v/dt\)</span>を力とみなすと、式の上では力が釣り合っているかのように見える。そこで、右辺を仮想的な力であるとみなし、<span
+                                    class="math inline">\(F_D\)</span>とおく。</p>
+                                    <p><span class="math display">\[
+                                    F_D = - m \frac{dv}{dt} + F
+                                    \]</span></p>
+                                    <p>そして、力<span
+                                    class="math inline">\(F_D\)</span>が働いている状態で、拘束条件を破らない仮想変位<span
+                                    class="math inline">\(\delta
+                                    x\)</span>だけ動いた時の仮想仕事を考える。</p>
+                                    <p><span class="math display">\[
+                                    W = F_D \delta x
+                                    \]</span></p>
+                                    <p>いま、<span
+                                    class="math inline">\(F_D=0\)</span>であったのだから、この力のする仮想仕事はゼロである。</p>
+                                    <p><span class="math display">\[
+                                    W = (- m \frac{dv}{dt} + F) \delta x
+                                    = 0
+                                    \]</span></p>
+                                    <p>これを
+                                    <strong>ダランベールの原理(d’Alembert’s
+                                    principle)</strong>
+                                    と呼ぶ。ダランベールの原理とは、加速度がゼロでない時に、慣性項を移項することで、あたかも力であるように解釈し、その上で仮想仕事の原理を適用しようとするものである。</p>
+                                    <p>特に、力が保存力である場合を考えると、</p>
+                                    <p><span class="math display">\[
+                                    F(x) = -U&#39;(x)
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    W = - m \frac{dv}{dt}\delta x  -U(x)
+                                    \delta x = 0
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta U &amp;\equiv U(x+\delta x) -
+                                    U(x) \\
+                                    &amp;= U&#39;(x) \delta x\\
+                                    &amp;= -F \delta x
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>であるから、最終的にダランベールの原理は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    W = - m \frac{dv}{dt}\delta x
+                                    -\delta U = 0
+                                    \]</span></p>
+                                    <p>さて、静力学における仮想仕事の原理では、釣り合いの位置<span
+                                    class="math inline">\(x\)</span>において力<span
+                                    class="math inline">\(F(x)\)</span>がゼロである、すなわち</p>
+                                    <p><span class="math display">\[
+                                    F(x) = 0
+                                    \]</span></p>
+                                    <p>という条件を、<span
+                                    class="math inline">\(F(x) = -
+                                    U&#39;(x)\)</span>を満たすポテンシャル関数<span
+                                    class="math inline">\(U(x)\)</span>を考え、</p>
+                                    <p><span class="math display">\[
+                                    \delta U \equiv U(x+\delta) - U(x) =
+                                    0
+                                    \]</span></p>
+                                    <p>を満たす<span
+                                    class="math inline">\(x\)</span>を探せ、という条件に読み替えた。これにより、「位置に依存するベクトル量である力<span
+                                    class="math inline">\(F(x)\)</span>がゼロになる<span
+                                    class="math inline">\(x\)</span>を探せ」という問題が、「あるスカラー関数の最小値を取るような<span
+                                    class="math inline">\(x\)</span>を探せ」という問題に読み替えられた。</p>
+                                    <p>動力学においても、同様なことをしたい。すなわち、「ある時刻において運動方程式を満たす速度<span
+                                    class="math inline">\(v\)</span>と位置<span
+                                    class="math inline">\(x\)</span>の組を探せ」という問題を、「あるスカラー関数を最小化するような速度<span
+                                    class="math inline">\(v\)</span>と位置<span
+                                    class="math inline">\(x\)</span>を探せ」という問題に帰着させたい。そのために、保存力の場合のダランベールの原理をもう一度眺めてみる。</p>
+                                    <p><span class="math display">\[
+                                    W = - m \frac{dv}{dt}\delta x
+                                    -\delta U = 0
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\delta
+                                    U\)</span>とは、位置が<span
+                                    class="math inline">\(x\)</span>から<span
+                                    class="math inline">\(x + \delta
+                                    x\)</span>に移動した時のポテンシャルエネルギーの変化分である。これを、ポテンシャルエネルギーの変化が、運動エネルギーの変化に吸収されたと解釈したいので、運動エネルギーの変分を考える。</p>
+                                    <p><span class="math display">\[
+                                    K(v) = \frac{1}{2}mv^2
+                                    \]</span></p>
+                                    <p>として、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta K &amp;\equiv K(v+\delta v) -
+                                    K(v) \\
+                                    &amp;=K&#39;(v) \delta v \\
+                                    &amp;= mv \delta v
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで運動方程式から</p>
+                                    <p><span class="math display">\[
+                                    \delta v = \frac{d}{dt} \delta x
+                                    \]</span></p>
+                                    <p>を満たすので、</p>
+                                    <p><span class="math display">\[
+                                    \delta K = m v \frac{d}{dt} \delta x
+                                    \]</span></p>
+                                    <p>これと、仮想仕事の運動エネルギーに由来すると思われる項$
+                                    -m (dv/dt)
+                                    x$を見比べると、部分積分したくなるであろう。これによりラグランジアンが導入される。</p>
+                                    <h1
+                                    id="ラグランジアン">ラグランジアン</h1>
+                                    <p>時刻<span
+                                    class="math inline">\(t_1\)</span>から時刻<span
+                                    class="math inline">\(t_2\)</span>まで、運動方程式の解<span
+                                    class="math inline">\((v(t),
+                                    x(t))\)</span>が得られたとしよう。我々はこれから、ダランベールの原理を使って、運動エネルギーとポテンシャルエネルギーの変化について追いかけたい。そこで、運動エネルギーの時間積分を考える。</p>
+                                    <p><span class="math display">\[
+                                    I = \int_{t_1}^{t_2} K(v) dt
+                                    \]</span></p>
+                                    <p>ただし、この積分は、運動方程式の解<span
+                                    class="math inline">\(v(t)\)</span>にそって実行するものとする。ここで、<span
+                                    class="math inline">\(t=t_1\)</span>と<span
+                                    class="math inline">\(t=t_2\)</span>における運動エネルギーを固定したまま、運動が少しずれた経路を辿ったと過程する。この時の運動エネルギーの変化分の積分値を計算してみる。</p>
+                                    <p>時刻<span
+                                    class="math inline">\(t\)</span>における速度は<span
+                                    class="math inline">\(v(t)\)</span>であったが、少しだけずれた経路<span
+                                    class="math inline">\(v(t) + \delta
+                                    v(t)\)</span>を考える。ただし、最初と最後の運動エネルギーは固定しているから<span
+                                    class="math inline">\(\delta
+                                    v(t_1)=\delta
+                                    v(t_2)=0\)</span>である。運動エネルギーの変化分の積分値は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta I &amp;= \delta
+                                    \int_{t_1}^{t_2} K dt \\
+                                    &amp;= \int_{t_1}^{t_2}  \delta K dt
+                                    \\
+                                    &amp;= \int_{t_1}^{t_2} K&#39;(v)
+                                    \delta v dt \\
+                                    &amp;= \int_{t_1}^{t_2} m v \delta v
+                                    dt \\
+                                    &amp;= \int_{t_1}^{t_2} m v
+                                    \frac{d}{dt} \left(\delta x\right)
+                                    dt \\
+                                    &amp;= - \int_{t_1}^{t_2} m
+                                    \frac{dv}{dt} \delta x
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さて、ダランベールの原理により、
+                                    $$</p>
+                                    <ul>
+                                    <li>m x - U = 0 <span
+                                    class="math display">\[
+                                    であったから、
+                                    \]</span>
+                                    <span
+                                    class="math display">\[\begin{aligned}
+                                    \delta I &amp;= \int_{t_1}^{t_2}
+                                    \delta K dt \\
+                                    &amp;= \int_{t_1}^{t_2} \delta U dt
+                                    \end{aligned}\]</span>
+                                    $$</li>
+                                    </ul>
+                                    <p>以上から、 <span
+                                    class="math display">\[
+                                    \int_{t_1}^{t_2} \delta (K-U) dt = 0
+                                    \]</span> を得た。</p>
+                                    <p>静力学においては、 <span
+                                    class="math display">\[
+                                    \delta U = 0 \Leftrightarrow F=0
+                                    \]</span>
+                                    のように、力が釣り合っているという条件をポテンシャルの変分がゼロであるという条件に読み替えた。そこで、動力学でも同様に、
+                                    <span class="math display">\[
+                                    L(v, x) = K(v) - U(x)
+                                    \]</span> という量を考え、 <span
+                                    class="math display">\[
+                                    \delta L = 0 \Leftrightarrow
+                                    m\frac{dv}{dt} = -U&#39;(x)
+                                    \]</span>
+                                    という関係式を要求する。この量<span
+                                    class="math inline">\(L\)</span>を力学ポテンシャル、もしくはラグランジアンと呼ぶ。</p>
+                    </article>
+    </body>
+
+    </html>
