@@ -97,17 +97,20 @@
                                     class="math inline">\(\dot{q}\)</span>は、
                                     <span class="math display">\[
                                     \dot{q} = \frac{dq}{dQ} \dot{Q}
-                                    \]</span>
-                                    と書ける。以上から、ラグランジアンを<span
-                                    class="math inline">\(\dot{Q},
-                                    Q\)</span>で表すと <span
-                                    class="math display">\[
-                                    L(\dot{q}, q) = L(\frac{dq}{dQ}
-                                    \dot{Q}, Q(q))
-                                    \]</span> となる。ここで<span
-                                    class="math inline">\(dQ/dQ\)</span>は<span
-                                    class="math inline">\(Q\)</span>の関数であることに注意。</p>
-                                    <p>さて、<span
+                                    \]</span> と書ける。ここで<span
+                                    class="math inline">\(dq/dQ\)</span>は<span
+                                    class="math inline">\(Q\)</span>の関数であることから、<span
+                                    class="math inline">\(\dot{q}\)</span>は<span
+                                    class="math inline">\(Q\)</span>と<span
+                                    class="math inline">\(\dot{Q}\)</span>両方の関数である。</p>
+                                    <p>以上から、変数変換後のラグランジアンの<span
+                                    class="math inline">\(Q\)</span>、<span
+                                    class="math inline">\(\dot{Q}\)</span>依存性を明示すると</p>
+                                    <p><span class="math display">\[
+                                    L(\dot{q}, q) =
+                                    L(\dot{q}(\dot{Q},Q), q(Q))
+                                    \]</span> となる。</p>
+                                    <p>さて、このラグランジアン<span
                                     class="math inline">\(L\)</span>の<span
                                     class="math inline">\(Q\)</span>や<span
                                     class="math inline">\(\dot{Q}\)</span>による偏微分を考えよう。<span
@@ -116,11 +119,11 @@
                                     class="math inline">\(q\)</span>の両方の箇所に入っているから、
                                     <span class="math display">\[
                                     \frac{\partial L}{\partial Q} =
-                                    \frac{\partial L}{\partial q}
-                                    \frac{dq}{dQ}
-                                    +
                                     \frac{\partial L}{\partial \dot{q}}
                                     \frac{d\dot{q}}{dQ}
+                                    +
+                                    \frac{\partial L}{\partial q}
+                                    \frac{dq}{dQ}
                                     \]</span></p>
                                     <p>一方、<span
                                     class="math inline">\(\dot{Q}\)</span>は<span
@@ -185,7 +188,97 @@
                                     class="math inline">\(Q(q)\)</span>に変数変換した場合、<span
                                     class="math inline">\(q\)</span>がオイラー・ラグランジュの運動方程式に従うのであれば、<span
                                     class="math inline">\(Q\)</span>も全く同じ形の式に従うことが証明された。</p>
-                                    <p>TODO: 多変数の場合</p>
+                                    <h1
+                                    id="多変数の場合">多変数の場合</h1>
+                                    <p>これまで、なるべく1自由度系で議論を構築してきた。しかし、ほとんどの場合、我々の興味ある系は複数の自由度を持つ。例えば3次元空間に<span
+                                    class="math inline">\(n\)</span>個粒子がいれば、座標を指定するだけで<span
+                                    class="math inline">\(3n\)</span>個の変数が必要である。そこで、系の状態が<span
+                                    class="math inline">\(N\)</span>個の一般化座標<span
+                                    class="math inline">\(q_1, q_2,
+                                    \cdots,
+                                    q_N\)</span>で指定されていると考えよう。単振り子なら<span
+                                    class="math inline">\(N=1\)</span>、二重振り子なら<span
+                                    class="math inline">\(N=2\)</span>、3次元<span
+                                    class="math inline">\(n\)</span>粒子系なら<span
+                                    class="math inline">\(N=3n\)</span>だ。このような多自由度系のラグランジアンの変数変換について扱おう。</p>
+                                    <p>この<span
+                                    class="math inline">\(N\)</span>自由度系において、ラグランジアン<span
+                                    class="math inline">\(L(\dot{q}_1,
+                                    \dot{q}_2, \cdots, \dot{q}_N, q_1,
+                                    q_2, \cdots,
+                                    q_N)\)</span>が与えられており、以下のオイラー・ラグランジュの式が成り立つとしよう。</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left( \frac{\partial
+                                    L}{\partial \dot{q}_i}\right) -
+                                    \frac{\partial L}{\partial q_i} = 0
+                                    \]</span></p>
+                                    <p>ただし<span
+                                    class="math inline">\(i\)</span>は<span
+                                    class="math inline">\(1\)</span>から<span
+                                    class="math inline">\(N\)</span>までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、<span
+                                    class="math inline">\((q_1, q_2,
+                                    \cdots, q_N)\)</span>から<span
+                                    class="math inline">\((Q_1, Q_2,
+                                    \cdots,
+                                    Q_N)\)</span>への変換を考える。具体的には<span
+                                    class="math inline">\(N\)</span>本の関数<span
+                                    class="math inline">\(f_i\)</span>を使って、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q_1 &amp;= f_1(q_1, q_2, \cdots,
+                                    q_N) \\
+                                    Q_2 &amp;= f_2(q_1, q_2, \cdots,
+                                    q_N) \\
+                                    &amp;\cdots \\
+                                    Q_N &amp;= f_N(q_1, q_2, \cdots,
+                                    q_N)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と変換が与えられたとする。この時、新しい変数においても</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left( \frac{\partial
+                                    L}{\partial \dot{Q}_i}\right) -
+                                    \frac{\partial L}{\partial Q_i} = 0
+                                    \]</span></p>
+                                    <p>が全ての<span
+                                    class="math inline">\(i\)</span>で成立することを証明したい。やることは1自由度系とほとんど同様だが、偏微分などがややこしくなる。</p>
+                                    <h1
+                                    id="記号の節約表記について">記号の節約表記について</h1>
+                                    <p>ここで、ラグランジアンを扱う際にどの変数を独立とみなし、どの変数が独立でないのかがよくわからなくなることが多い。これは主に表記において記号の節約を行うことに起因する。例えば、ある関数<span
+                                    class="math inline">\(f\)</span>を使って<span
+                                    class="math inline">\(Q =
+                                    f(q)\)</span>と変換する時、<span
+                                    class="math inline">\(Q\)</span>の時間微分は</p>
+                                    <p><span class="math display">\[
+                                    \frac{dQ}{dt} = \frac{df}{dq}
+                                    \frac{dq}{dt}
+                                    \]</span></p>
+                                    <p>と書ける。これは単なる合成関数の微分公式であるから何も問題はない。しかし、多くの場合<span
+                                    class="math inline">\(f\)</span>は<span
+                                    class="math inline">\(Q\)</span>と同一視され、</p>
+                                    <p><span class="math display">\[
+                                    \dot{Q} = \frac{dQ}{dq} \dot{q}
+                                    \]</span></p>
+                                    <p>と書かれる。さらに、ラグランジアンにおいて<span
+                                    class="math inline">\(L(\dot{q},
+                                    q)\)</span>とし、<span
+                                    class="math inline">\(\dot{q}\)</span>と<span
+                                    class="math inline">\(q\)</span>は独立だとみなすが、ラグランジアンを時間積分する際には<span
+                                    class="math inline">\(q\)</span>と<span
+                                    class="math inline">\(\dot{q}\)</span>には<span
+                                    class="math inline">\(\dot{q} =
+                                    dq/dt\)</span>の関係がある。これを記号の節約をせずにきちんと書くなら、ラグランジアンを<span
+                                    class="math inline">\(L(v,
+                                    x)\)</span>と異なる記号で書いておけば独立であることがわかりやすく、これを時間積分する際には積分路が<span
+                                    class="math inline">\(s(t)\)</span>で指定されるとして、<span
+                                    class="math inline">\(x =
+                                    s(t)\)</span>、<span
+                                    class="math inline">\(v =
+                                    \dot{s}(t)\)</span>と表記することにすれば、<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(v\)</span>がどのような関係があるのかがわかりやすい。媒介変数であることがわかりやすいように<span
+                                    class="math inline">\(\xi\)</span>や<span
+                                    class="math inline">\(\eta\)</span>といった記号を使う流儀もある。しかし、このように表記すると記号が増え、かえって本質が見えにくくなると考える。大多数の読者はここで細かく計算せず、なんとなく「そういうものだ」と納得するであろうし、今はそれで良いと思う。どうせ解析力学をきちんと理解するのは時間がかかる。まずはざっと式変形の地図を頭にイメージできるようにして、あとで「あれ？」と思ったら別の書籍を調べて正確な理解を目指せば良い。</p>
                     </article>
     </body>
 
