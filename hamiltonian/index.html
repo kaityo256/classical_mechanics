@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>ハミルトン形式の力学</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">ハミルトン形式の力学</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1 id="本章の目的">本章の目的</h1>
+                                    <p>ここではラグランジアンをルジャンドル変換することにより、ハミルトニアンという新しい量が得られること、これがエネルギーに対応していること、さらにハミルトン形式の力学が得られることを見る。</p>
+                                    <h1
+                                    id="一般化運動量とハミルトニアン">一般化運動量とハミルトニアン</h1>
+                                    <h1
+                                    id="ルジャンドル変換">ルジャンドル変換</h1>
+                                    <h1
+                                    id="余談双対変換">余談：双対変換</h1>
+                                    <p>双対変換とは要するに「2回行うと元にもどる変換」のことである。例えば鏡に映る自分は左右が逆になるが、もう一度鏡に映すと元にもどる。すなわち鏡映変換は双対変換である。こういった双対変換の中で興味深いのは、正多面体の双対性である。</p>
+                                    <p>正多面体とは、同じ正多角形だけで構成された凸多面体のことである。正多面体は、ある頂点にどんな多角形が何個接しているかで特徴づけることができる。そこで、それぞれの頂点に正<span
+                                    class="math inline">\(m\)</span>角形が<span
+                                    class="math inline">\(n\)</span>個接している正多面体を<span
+                                    class="math inline">\((m,n)\)</span>と表記してみよう。例えば立方体は、一つの頂点に正方形が3つ接しているから<span
+                                    class="math inline">\((4,3)\)</span>と表記できる。さて、最小の多角形は三角形であるから<span
+                                    class="math inline">\(m \geq
+                                    3\)</span>でなければならない。また、立体を構成するためには一つの頂点に最低でも3つの図形を繋げなくてはならないから<span
+                                    class="math inline">\(n \geq
+                                    3\)</span>である。正六角形を3つなげてしまうと平面になってしまうから、正多面体に使えるのは正三角形、正方形、正五角形に限られる。正三角形は一つの頂点に3個、4個、5個つなげることができる。これにより<span
+                                    class="math inline">\((3,3)\)</span>、<span
+                                    class="math inline">\((3,4)\)</span>、<span
+                                    class="math inline">\((3,5)\)</span>の組み合わせが可能であり、それぞれ正四面体、正八面体、正二十面体に対応する。正方形は4つなげると平面になってしまうために3個だけしかつなげることができない。すなわち<span
+                                    class="math inline">\((4,3)\)</span>だけが可能であり、立方体に対応する。同様に正五角形も3個しかつなげることができず、<span
+                                    class="math inline">\((5,3)\)</span>は正十二面体に対応する。以上のように、一つの頂点に正<span
+                                    class="math inline">\(m\)</span>角形を<span
+                                    class="math inline">\(n\)</span>個つないで正多面体を作る組み合わせは<span
+                                    class="math inline">\((3,3)\)</span>、
+                                    <span
+                                    class="math inline">\((3,4)\)</span>、<span
+                                    class="math inline">\((3,5)\)</span>、<span
+                                    class="math inline">\((4,3)\)</span>、<span
+                                    class="math inline">\((5,3)\)</span>の5種類しかなく、それが正多面体が5種類しかないことに対応する。</p>
+                                    <p>TODO:図解</p>
+                                    <p>さて、立方体を思い浮かべて欲しい。立方体には面が6枚あるが、それぞれの面の重心を結んでみると、正八面体になる。これを<span
+                                    class="math inline">\((m,n)\)</span>の言葉で書くと、<span
+                                    class="math inline">\((4,3)\)</span>が<span
+                                    class="math inline">\((3,4)\)</span>になっている。正八面体の面の重心を結ぶと立方体に戻る。すなわち、面と点を入れ替える変換は双対変換になっており、これは<span
+                                    class="math inline">\((m,n)\)</span>の<span
+                                    class="math inline">\(m\)</span>と<span
+                                    class="math inline">\(n\)</span>を入れ替える変換になっている。これにより、立方体<span
+                                    class="math inline">\((4,3)\)</span>と正八面体<span
+                                    class="math inline">\((3,4)\)</span>、正十二面体<span
+                                    class="math inline">\((5,3)\)</span>と正二十面体<span
+                                    class="math inline">\((3,5)\)</span>がそれぞれ双対であることがわる。なお、正四面体<span
+                                    class="math inline">\((3,3)\)</span>は双対変換で形を変えない。これを自己双対という。</p>
+                                    <p>大学で習う双対変換のうち、特に重要なのはフーリエ変換である。フーリエ変換は逆変換で元に戻るから双対変換の一種である。フーリエ変換により、時間で表された空間から周波数で表された空間に移ることができる。つまり時間と周波数は双対の関係にある。実空間と波数空間も同様である。微分方程式を解く手段として教わるフーリエ変換が、「何かを裏返す操作である」と認識できれば、何か世界が広がった気がしないだろうか？</p>
+                    </article>
+    </body>
+
+    </html>
