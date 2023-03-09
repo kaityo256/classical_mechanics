@@ -115,16 +115,182 @@
                                     <p><span class="math display">\[
                                     m \frac{d^2 x}{dt^2} = - kx
                                     \]</span></p>
+                                    <p>以下、面倒なので微分をドットで表現する。両辺に<span
+                                    class="math inline">\(x\)</span>の時間微分、すなわち速度をかける。</p>
+                                    <p><span class="math display">\[
+                                    m \dot{x} \ddot{x} = - k x \dot{x}
+                                    \]</span></p>
+                                    <p>この式の左辺を眺めると、<span
+                                    class="math inline">\(m\dot{x}^2/2\)</span>を時間微分したものであることがわかる。同様に右辺も<span
+                                    class="math inline">\(-kx^2/2\)</span>を時間微分したものである。そこで、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2
+                                    \right) = - \frac{d}{dt}\left(
+                                    \frac{1}{2} k x^2\right)
+                                    \]</span></p>
+                                    <p>右辺を左辺に移行すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2
+                                    + \frac{1}{2} k x^2\right) =0
+                                    \]</span></p>
+                                    <p>すなわち、運動方程式</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d^2 x}{dt^2} = - kx
+                                    \]</span></p>
+                                    <p>に従う系には、必ず時間不変量</p>
+                                    <p><span class="math display">\[
+                                    E = \frac{1}{2}m\dot{x}^2 +
+                                    \frac{1}{2} k x^2
+                                    \]</span></p>
+                                    <p>が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を保存量(Conserved
+                                    value)と呼ぶ。この<span
+                                    class="math inline">\(E\)</span>をエネルギーと呼び、エネルギーが時間変化しないことをエネルギー保存則と呼ぶ。すなわち、エネルギーとは運動方程式の保存量の一つであり、エネルギー保存則は運動方程式の持つ性質の一つに過ぎない。</p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    -kx = - \frac{d}{dx} \left(
+                                    \frac{kx^2}{2}\right)
+                                    \]</span></p>
+                                    <p>であることに注意しよう。このように、力<span
+                                    class="math inline">\(F(x)\)</span>がスカラー関数<span
+                                    class="math inline">\(U(x)\)</span>を使って</p>
+                                    <p><span class="math display">\[
+                                    F(x) = -U&#39;(x)
+                                    \]</span></p>
+                                    <p>と書ける時、このスカラー関数をポテンシャル、この力を保存力と呼ぶ。運動方程式の力が全てポテンシャルから引き出される場合、すなわち運動方程式が以下のような形をしている時、</p>
+                                    <p><span class="math display">\[
+                                    m\ddot{x} = -U&#39;(x)
+                                    \]</span></p>
+                                    <p>先程と全く同様に両辺に<span
+                                    class="math inline">\(\dot{x}\)</span>をかけることにより、以下のエネルギーが保存することを示すことができる。</p>
+                                    <p><span class="math display">\[
+                                    E = \frac{1}{2} m \dot{x}^2 + U(x)
+                                    \]</span></p>
+                                    <p>このうち、右辺第一項を運動エネルギー(Kinetic
+                                    Energy)と呼び、<span
+                                    class="math inline">\(K\)</span>で表すことが多い。左辺第二項をポテンシャルエネルギーと呼び、<span
+                                    class="math inline">\(U\)</span>で表すことが多い。一般的、物体に働く力が全てポテンシャルから引き出される場合、運動エネルギーとポテンシャルエネルギーの和である全エネルギーが必ず保存量となる。</p>
+                                    <p>TODO: 図解</p>
+                                    <p>エネルギー保存則を用いると、微分方程式を明示的に解くことなく問題が解ける場合がある。例えば摩擦のない斜面で静止させていた物体の手を離し、物体が高さ<span
+                                    class="math inline">\(h\)</span>だけ滑りおりてから水平運動を始めたとする。水平運動の場合と比べて、静止時のポテンシャルエネルギーは<span
+                                    class="math inline">\(mgh\)</span>だけ高く、かつ静止時には運動エネルギーはゼロであるから、水平運動の速度を<span
+                                    class="math inline">\(v\)</span>とすると、エネルギー保存則より</p>
+                                    <p><span class="math display">\[
+                                    \frac{1}{2}mv^2 = mgh
+                                    \]</span></p>
+                                    <p>であり、ここから速度を求めることができる。当たり前だと思うであろうが、ここで斜面の形状の情報を全く使っていないことに注意。斜面の形状を変えると、落下を開始してから高さ<span
+                                    class="math inline">\(h\)</span>だけ落ちるまでの時間が変化する。にもかかわらず、斜面がどのような形状であったとしても、最終的な速度は高さの差にしか依存しないことをエネルギー保存則は主張する。</p>
+                                    <p>ここで、エネルギーは運動方程式から発見法的に求められた保存量であったが、解析力学ではこの量を積極的に使って理論を構築する。</p>
                                     <h2
                                     id="運動量保存則">運動量保存則</h2>
+                                    <p>2つの物体が、お互いに距離に依存する力により相互作用をする系を考えよう。簡単のために、一次元系を考えよう。例えば、摩擦のないレールに固定された電荷の運動を考えればよい。2つの物体に<span
+                                    class="math inline">\(1\)</span>、<span
+                                    class="math inline">\(2\)</span>と番号をつけ、それぞれの位置を<span
+                                    class="math inline">\(x_1\)</span>、<span
+                                    class="math inline">\(x_2\)</span>としよう。物体<span
+                                    class="math inline">\(1\)</span>から物体<span
+                                    class="math inline">\(2\)</span>に働く力を<span
+                                    class="math inline">\(F_{12}\)</span>、物体<span
+                                    class="math inline">\(2\)</span>から物体<span
+                                    class="math inline">\(1\)</span>に働く力を<span
+                                    class="math inline">\(F_{21}\)</span>とすると、運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x}_1 &amp;= F_{21} \\
+                                    m \ddot{x}_2 &amp;= F_{12}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>作用反作用の法則から<span
+                                    class="math inline">\(F_{21} = -
+                                    F_{12}\)</span>である。したがって、両辺を加えると、</p>
+                                    <p><span class="math display">\[
+                                    m (\ddot{x}_1 + \ddot{x_2}) = 0
+                                    \]</span></p>
+                                    <p>ここから、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left( m\dot{x}_1 + m
+                                    \dot{x}_2\right) = 0
+                                    \]</span></p>
+                                    <p>が導かれる。質量と速度の積<span
+                                    class="math inline">\(m
+                                    \dot{x}_1\)</span>を運動量と呼び、その総和の時間変化がゼロである、すなわち保存量となっていることを運動量保存則と呼ぶ。</p>
+                                    <p>ここでは一次元系でのみ示したが、一般に作用反作用が成り立ち、外力がない系では、<span
+                                    class="math inline">\(x\)</span>,<span
+                                    class="math inline">\(y\)</span>,<span
+                                    class="math inline">\(z\)</span>の全方向でそれぞれ運動量が保存する。例えば<span
+                                    class="math inline">\(z\)</span>方向に重力のような外力がかかっている場合は、<span
+                                    class="math inline">\(z\)</span>方向には運動量は保存しないが、<span
+                                    class="math inline">\(x\)</span>、<span
+                                    class="math inline">\(y\)</span>方向には保存する。</p>
                                     <h2
                                     id="角運動量保存則">角運動量保存則</h2>
+                                    <p>地球と太陽の間には万有引力が働いている。万有引力は、距離の自乗に反比例する力であった。太陽は地球に対して十分に重いために静止していると考え、地球の公転運動のみ考えよう。地球の質量を<span
+                                    class="math inline">\(m\)</span>、太陽の質量を<span
+                                    class="math inline">\(M\)</span>、万有引力定数を<span
+                                    class="math inline">\(G\)</span>とする。</p>
+                                    <p>公転面を<span
+                                    class="math inline">\(xy\)</span>平面にとり、太陽を原点とし、地球の座標を<span
+                                    class="math inline">\((x,y\)</span>)とすると、地球の運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= \frac{mMG}{r^2}
+                                    \frac{x}{r}\\
+                                    m \ddot{y} &amp;= \frac{mMG}{r^2}
+                                    \frac{y}{r}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(r =
+                                    \sqrt{x^2+y^2}\)</span>は地球と太陽の距離である。</p>
+                                    <p>さて、<span
+                                    class="math inline">\(x\)</span>成分の運動方程式の両辺に<span
+                                    class="math inline">\(y\)</span>を、<span
+                                    class="math inline">\(y\)</span>成分の運動方程式の両辺に<span
+                                    class="math inline">\(x\)</span>をかける。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m y\ddot{x} &amp;= \frac{mMG}{r^2}
+                                    \frac{xy}{r}\\
+                                    m x\ddot{y} &amp;= \frac{mMG}{r^2}
+                                    \frac{xy}{r}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺引くと、右辺は等しいから、</p>
+                                    <p><span class="math display">\[
+                                    m y \ddot{x} - m x \ddot{y} = 0
+                                    \]</span></p>
+                                    <p>$m - m $を足すと、</p>
+                                    <p><span class="math display">\[
+                                    m \left(y \ddot{x} + m\dot{x}
+                                    \dot{y} - \dot{x} \dot{y} - x
+                                    \ddot{y}\right) = 0
+                                    \]</span></p>
+                                    <p>この式をじっと眺めると</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d}{dt}\left( y\dot{x} - x
+                                    \dot{y} \right) =0
+                                    \]</span></p>
+                                    <p>ここで、位置ベクトルとして</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{r} =
+                                    \begin{pmatrix}
+                                    x \\y
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>を導入すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left( \boldsymbol{r}
+                                    \times m\dot{\boldsymbol{r}} \right)
+                                    =0
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(m\dot{\boldsymbol{r}}\)</span>は運動量ベクトルである。すなわち、位置ベクトルと運動量ベクトルの外積は時間不変量になっている。この量を角運動量と呼び、角運動量が保存することを角運動量保存則と呼ぶ。一般に中心力が働く系においては角運動量が保存量となる。</p>
                                     <h2
                                     id="保存則のまとめ">保存則のまとめ</h2>
+                                    <p>運動エネルギー、運動量、角運動量は、特定の条件を満たすような運動方程式における時間不変量であった。それらが保存することを導く際、両辺に速度をかけたり、ゼロとなる量を足したり引いたりした上に、式をじっと眺めて時間微分の形に持っていくなど、発見法的な方法に頼っていた。もっとシステマティックに保存量を見つけることはできないだろうか？また、保存量が存在するような特定の条件とはどのようなものであろうか？これらに答えを与えるのがこれから学ぶ解析力学である。</p>
                                     <h1 id="次元解析">次元解析</h1>
                                     <p>物理において最も重要なことは、全ての量に単位があるということである。単位は、例えば長さ(メートル)だったり、重さ(キログラム)だったりするであろう。このような単位を、物理では
                                     <strong>次元 (dimension)</strong>
-                                    と呼ぶ。</p>
+                                    と呼ぶ。解析力学とは直接関係ないが、次元の概念は力学を学ぶ際に重要であるので、ここで簡単に触れておこう。</p>
                                     <p>次元の異なる量を足したり引いたりすることはできない。1メートルのものと3キログラムのものを足す、という操作は全くのナンセンスである。次元の異なる量の加減算をしないように気をつけるだけで、計算ミスをかなり減らすことができる。また、次元の異なる量の加減算はできないが、それらを掛けたり割ったりすることはできる。その場合、結果の次元も、元の物理量の次元を掛けたり割ったりしたものになる。</p>
                                     <p>一般に、次元は基本となる量を組み合わせて作る。例えば速度を考えよう。速度とは、単位時間あたりに進む距離、すなわち、ある距離を進むのにかかった時間で割ったものであるから、距離の単位をメートル<span
                                     class="math inline">\([m]\)</span>、時間の単位を秒<span
