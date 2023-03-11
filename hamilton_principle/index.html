@@ -82,6 +82,10 @@
                                     m \frac{dv}{dt} &amp;= F
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>この微分方程式の気持ちは、運動方程式を<span
+                                    class="math inline">\(v\)</span>に関する一階の微分方程式に落とす代わりに、<span
+                                    class="math inline">\(x\)</span>に関する時間微分が<span
+                                    class="math inline">\(v\)</span>であるという条件の中で解を探しなさい、というものだ。</p>
                                     <p>仮想仕事の原理では物体は静止していたために左辺はゼロであったが、今回は動いている場合を扱うのでゼロではない。さて、この運動方程式の左辺を右辺に移項しよう。</p>
                                     <p><span class="math display">\[
                                     0 = - m \frac{dv}{dt} + F
@@ -151,11 +155,16 @@
                                     class="math inline">\(F(x)\)</span>がゼロになる<span
                                     class="math inline">\(x\)</span>を探せ」という問題が、「あるスカラー関数の最小値を取るような<span
                                     class="math inline">\(x\)</span>を探せ」という問題に読み替えられた。</p>
-                                    <p>動力学においても、同様なことをしたい。すなわち、「ある時刻において運動方程式を満たす速度<span
+                                    <p>動力学においても同様な手続きを考える。すなわち、「ある時刻において、<span
+                                    class="math inline">\(\dot{x} =
+                                    v\)</span>という条件を満たす変数の組<span
+                                    class="math inline">\((v,
+                                    x)\)</span>について、運動方程式を満たすものを探せ。」という問題を、「あるスカラー関数を最小化するような速度<span
                                     class="math inline">\(v\)</span>と位置<span
-                                    class="math inline">\(x\)</span>の組を探せ」という問題を、「あるスカラー関数を最小化するような速度<span
-                                    class="math inline">\(v\)</span>と位置<span
-                                    class="math inline">\(x\)</span>を探せ」という問題に帰着させたい。そのために、保存力の場合のダランベールの原理をもう一度眺めてみる。</p>
+                                    class="math inline">\(x\)</span>を探せ。ただし<span
+                                    class="math inline">\(v,x\)</span>は<span
+                                    class="math inline">\(\dot{x} =
+                                    v\)</span>という条件を満たすものとする。」という問題に帰着させたい。そのために、保存力の場合のダランベールの原理をもう一度眺めてみる。</p>
                                     <p><span class="math display">\[
                                     W = - m \frac{dv}{dt}\delta x
                                     -\delta U = 0
@@ -195,14 +204,17 @@
                                     class="math inline">\(t_1\)</span>から時刻<span
                                     class="math inline">\(t_2\)</span>まで、運動方程式の解<span
                                     class="math inline">\((v(t),
-                                    x(t))\)</span>が得られたとしよう。我々はこれから、ダランベールの原理を使って、運動エネルギーとポテンシャルエネルギーの変化について追いかけたい。そこで、運動エネルギーの時間積分を考える。</p>
+                                    x(t))\)</span>が得られたとしよう。我々はこれから、ダランベールの原理を使って、運動エネルギーとポテンシャルエネルギーの変化について追いかけたい。そこで、運動エネルギーの時間積分を考える。積分範囲は<span
+                                    class="math inline">\(t_1\)</span>から<span
+                                    class="math inline">\(t_2\)</span>までとしよう。</p>
                                     <p><span class="math display">\[
-                                    I = \int_{t_1}^{t_2} K(v) dt
+                                    \int_{t_1}^{t_2} K(v) dt
                                     \]</span></p>
                                     <p>ただし、この積分は、運動方程式の解<span
-                                    class="math inline">\(v(t)\)</span>にそって実行するものとする。ここで、<span
+                                    class="math inline">\((v(t),
+                                    x(t))\)</span>にそって実行するものとする。ここで、<span
                                     class="math inline">\(t=t_1\)</span>と<span
-                                    class="math inline">\(t=t_2\)</span>における運動エネルギーを固定したまま、運動が少しずれた経路を辿ったと過程する。この時の運動エネルギーの変化分の積分値を計算してみる。</p>
+                                    class="math inline">\(t=t_2\)</span>における運動エネルギーを固定したまま、運動が少しずれた経路を辿ったと仮定する。この時の運動エネルギーの変化分の積分値を計算してみよう。</p>
                                     <p>時刻<span
                                     class="math inline">\(t\)</span>における速度は<span
                                     class="math inline">\(v(t)\)</span>であったが、少しだけずれた経路<span
@@ -213,10 +225,10 @@
                                     v(t_2)=0\)</span>である。運動エネルギーの変化分の積分値は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \delta I &amp;= \delta
-                                    \int_{t_1}^{t_2} K dt \\
-                                    &amp;= \int_{t_1}^{t_2}  \delta K dt
-                                    \\
+                                    \delta \int_{t_1}^{t_2} K dt &amp;=
+                                    \int_{t_1}^{t_2}  \delta K dt \\
+                                    &amp;= \int_{t_1}^{t_2} \left(
+                                    K(v+\delta v) - K(v)\right) dt \\
                                     &amp;= \int_{t_1}^{t_2} K&#39;(v)
                                     \delta v dt \\
                                     &amp;= \int_{t_1}^{t_2} m v \delta v
@@ -225,44 +237,68 @@
                                     \frac{d}{dt} \left(\delta x\right)
                                     dt \\
                                     &amp;= - \int_{t_1}^{t_2} m
-                                    \frac{dv}{dt} \delta x
+                                    \frac{dv}{dt} \delta x dv
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>さて、ダランベールの原理により、
-                                    $$</p>
-                                    <ul>
-                                    <li>m x - U = 0 <span
-                                    class="math display">\[
-                                    であったから、
-                                    \]</span>
-                                    <span
-                                    class="math display">\[\begin{aligned}
-                                    \delta I &amp;= \int_{t_1}^{t_2}
-                                    \delta K dt \\
-                                    &amp;= \int_{t_1}^{t_2} \delta U dt
-                                    \end{aligned}\]</span>
-                                    $$</li>
-                                    </ul>
+                                    <p>ここで、少しずれた経路での変数の組<span
+                                    class="math inline">\((v+\delta v,
+                                    x+\delta
+                                    x)\)</span>は運動方程式を満たさないが、位置の微分が速度であるという条件は満たすので$
+                                    v = ) $であることを使った。</p>
+                                    <p>さて、ダランベールの原理により、</p>
+                                    <p><span class="math display">\[
+                                    - m \frac{dv}{dt} \delta x =  \delta
+                                    U
+                                    \]</span></p>
+                                    <p>であったから、</p>
+                                    <p><span class="math display">\[
+                                    \int_{t_1}^{t_2} \delta K dt =
+                                    \int_{t_1}^{t_2} \delta U dt
+                                    \]</span></p>
                                     <p>以上から、 <span
                                     class="math display">\[
                                     \int_{t_1}^{t_2} \delta (K-U) dt = 0
                                     \]</span> を得た。</p>
-                                    <p>静力学においては、 <span
-                                    class="math display">\[
-                                    \delta U = 0 \Leftrightarrow F=0
-                                    \]</span>
-                                    のように、力が釣り合っているという条件をポテンシャルの変分がゼロであるという条件に読み替えた。そこで、動力学でも同様に、
-                                    <span class="math display">\[
+                                    <p>さて、静力学においては、位置に依存する力<span
+                                    class="math inline">\(F(x)\)</span>がゼロであるような位置<span
+                                    class="math inline">\(x\)</span>を探すという力の釣り合い問題、すなわち</p>
+                                    <p><span class="math display">\[
+                                    F(x) = 0
+                                    \]</span></p>
+                                    <p>を満たす<span
+                                    class="math inline">\(x\)</span>を探せ、という問題を、力の積分であるポテンシャルエネルギー</p>
+                                    <p><span class="math display">\[
+                                    U(x) = \int F(x) dx
+                                    \]</span></p>
+                                    <p>を考え、</p>
+                                    <p><span class="math display">\[
+                                    \delta U(x) = 0
+                                    \]</span></p>
+                                    <p>を満たす<span
+                                    class="math inline">\(x\)</span>を探せ、という問題に読み替えた。</p>
+                                    <p>動力学でも同様に、</p>
+                                    <p><span class="math display">\[
                                     L(v, x) = K(v) - U(x)
-                                    \]</span> という量を考え、 <span
-                                    class="math display">\[
-                                    \delta L = 0 \Leftrightarrow
-                                    m\frac{dv}{dt} = -U&#39;(x)
-                                    \]</span>
-                                    という関係式を要求する。この量<span
-                                    class="math inline">\(L\)</span>を力学ポテンシャル、もしくはラグランジアンと呼ぶ。静力学において、釣り合いの位置がポテンシャルエネルギーを最小にする場所として決まったように、運動は、この力学ポテンシャルを最小にするように選ばれる。より正確に言えば、これを最小にするような速度<span
-                                    class="math inline">\(v\)</span>、位置<span
-                                    class="math inline">\(x\)</span>が、もともとの運動方程式の解となるように、この力学ポテンシャルが選ばれている。</p>
+                                    \]</span></p>
+                                    <p>という量を考え、その積分の最小値を与えるような<span
+                                    class="math inline">\((v(t),x(t))\)</span>の組を探す問題に帰着させる。静力学では時間変化がなかったので積分変数は<span
+                                    class="math inline">\(x\)</span>であったが、動力学では位置と速度が変化するため積分変数は<span
+                                    class="math inline">\(t\)</span>となる。</p>
+                                    <p><span class="math display">\[
+                                    I = \int L(v, x) dt
+                                    \]</span></p>
+                                    <p>この量を <strong>作用
+                                    (action)</strong>、この積分を作用積分と呼ぶ。この作用積分に対して、</p>
+                                    <p><span class="math display">\[
+                                    \delta I = 0
+                                    \]</span></p>
+                                    <p>という関係式を満たすことを要求すると、その結果として運動方程式の解<span
+                                    class="math inline">\((v(t),x(t))\)</span>を得る。これを
+                                    <strong>ハミルトンの原理 (Hamilton’s
+                                    principle)</strong>と呼ぶ。この量<span
+                                    class="math inline">\(L\)</span>を
+                                    <strong>ラグランジアン
+                                    (Lagrangian)</strong> と呼ぶ。</p>
                                     <h1
                                     id="オイラーラグランジュ方程式">オイラー・ラグランジュ方程式</h1>
                                     <p>ラグランジアンを用いた運動方程式の表現を導いておこう。簡単のため、一体かつ一次元の問題を考える。ポテンシャル力<span
@@ -300,6 +336,8 @@
                                     \frac{\partial L}{\partial x} = 0.
                                     \]</span></p>
                                     <p>これを、<strong>オイラー・ラグランジュ(Euler-Lagrange)の式</strong>と呼ぶ。ニュートンの運動方程式を変形しただけであるから、本質的にはニュートンの運動方程式と等価な式であるが、後で見るようにこの形式で書いておくと変数変換が非常にやりやすくなる。</p>
+                                    <h1
+                                    id="極小作用の原理">極小作用の原理</h1>
                     </article>
     </body>
 
