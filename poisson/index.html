@@ -41,6 +41,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
                         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
             type="text/css" />
@@ -54,11 +57,146 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1 id="本章の目的">本章の目的</h1>
+                                    <p>解析力学を学ぶ目的は、現象にたいして異なる見方を与えることである。その重要な例が「時間発展とは回転の一種である」と認識することだ。本章では、ポアソン括弧を定義し、リー代数という代数構造から自然に回転という概念が生まれる。さらにポアソン括弧は、</p>
                                     <ul>
                                     <li>ポアソン括弧</li>
                                     <li>Lie代数</li>
                                     <li>三次元回転</li>
                                     </ul>
+                                    <h1
+                                    id="ポアソン括弧-1">ポアソン括弧</h1>
+                                    <p>1自由度系における正準方程式を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q} \\
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この系は<span
+                                    class="math inline">\(q,p\)</span>という正準変数によって記述されており、この系の全ての物理量は<span
+                                    class="math inline">\(q,p\)</span>の関数として表現される。例えば運動エネルギーなら<span
+                                    class="math inline">\(K(q,p) =
+                                    p^2/2m\)</span>である。ある物理量<span
+                                    class="math inline">\(A(q,p)\)</span>を考えよう。この物理量を時間微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{dA}{dt} = \frac{\partial
+                                    A}{\partial q}\dot{q} +
+                                    \frac{\partial A}{\partial p}\dot{p}
+                                    \]</span></p>
+                                    <p>正準方程式を使って<span
+                                    class="math inline">\(\dot{p},
+                                    \dot{q}\)</span>を消去すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dA}{dt} &amp;= \frac{\partial
+                                    A}{\partial q}\frac{\partial
+                                    H}{\partial p} -\frac{\partial
+                                    A}{\partial p}\frac{\partial
+                                    H}{\partial q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この式の右辺を見ると、<span
+                                    class="math inline">\(p,q\)</span>や<span
+                                    class="math inline">\(H,A\)</span>が対称な形に入っていることがわかる。そこで、以下のような括弧式を定義する。</p>
+                                    <p><span class="math display">\[
+                                    \left\{X, Y\right\} \equiv
+                                    -\frac{\partial X}{\partial
+                                    p}\frac{\partial Y}{\partial q} +
+                                    \frac{\partial X}{\partial
+                                    q}\frac{\partial H}{\partial Y}
+                                    \]</span></p>
+                                    <p>これを用いると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{dA}{dt} = \left\{A, H\right\}
+                                    \]</span></p>
+                                    <p>と書ける。この括弧を
+                                    <strong>ポアッソン括弧(Poisson
+                                    bracket)</strong>
+                                    と呼ぶ。ポアッソン括弧を用いると、正準方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{p} &amp;= \left\{p, H\right\}
+                                    \\
+                                    \dot{q} &amp;= \left\{q, H\right\}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と書ける。<span
+                                    class="math inline">\(Y\)</span>という量から<span
+                                    class="math inline">\(\{X,
+                                    Y\}\)</span>という量を作ることを、「<span
+                                    class="math inline">\(Y\)</span>の左から<span
+                                    class="math inline">\(X\)</span>とのポアッソン括弧をとる」と表現しよう。同様に<span
+                                    class="math inline">\(\{Y,
+                                    X\}\)</span>は<span
+                                    class="math inline">\(Y\)</span>の右から<span
+                                    class="math inline">\(A\)</span>とのポアッソン括弧をとったものである。</p>
+                                    <p>すると、「ある物理量<span
+                                    class="math inline">\(A\)</span>について、右からハミルトニアン<span
+                                    class="math inline">\(H\)</span>とのポアッソン括弧をとること」が、「時間<span
+                                    class="math inline">\(t\)</span>で微分すること」に対応していることがわかる。ここでは時間微分からポアッソン括弧を定義したが、後に見るように、右からある物理量とのポアッソン括弧をとることは、その量と正準共役な量でで微分することに対応する。つまり、ポアッソン括弧は時間微分よりも広い概念を含んでおり、それ故に様々なことがわかる。</p>
+                                    <p>さて、ポアッソン括弧の物理的な意味を見る前に、ポアッソン括弧が満たす性質を調べておこう。</p>
+                                    <p>まず、括弧に入れる変数を入れ替えると負符号がつく。</p>
+                                    <p><span class="math display">\[
+                                    \left\{X, Y\right\} = - \left\{Y,
+                                    X\right\}
+                                    \]</span></p>
+                                    <p>これを反対称性と呼ぶ。</p>
+                                    <p>また、定数は括弧の外に出すことができる。</p>
+                                    <p><span class="math display">\[
+                                    \left\{a X, Y\right\} = a \left\{X,
+                                    Y\right\}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \left\{X, bY\right\} = b \left\{X,
+                                    Y\right\}
+                                    \]</span></p>
+                                    <p>さらに分配法則がなりたつ。</p>
+                                    <p><span class="math display">\[
+                                    \left\{X + Y , Z\right\} = \left\{X,
+                                    Z\right\} + \left\{X, Y\right\}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \left\{X, Y+Z\right\} = \left\{X,
+                                    Y\right\} + \left\{X, Z\right\}
+                                    \]</span></p>
+                                    <p>定数倍を外に出せることと、分配法則をまとめると以下の式が成り立つ。</p>
+                                    <p><span class="math display">\[
+                                    \left\{a X + bY , Z\right\} = a
+                                    \left\{X, Y\right\} + b  \left\{Y,
+                                    Z\right\}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \left\{X, aY + bZ\right\} = a
+                                    \left\{X, Y\right\} + b  \left\{X,
+                                    Z\right\}
+                                    \]</span></p>
+                                    <p>つまり、括弧の左側や右側に入れるものは線形性が成り立つ。括弧の両側で線形性が成り立っているため、これを双線形性と呼ぶ。</p>
+                                    <p>関数の積の微分は、ライプニッツ則により以下のように分解できるのであった。</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dx} (fg) = f&#39;g +
+                                    fg&#39;
+                                    \]</span></p>
+                                    <p>ポアッソン括弧も微分を含むことから、括弧に関数の積を入れるとライプニッツ則により分解することができる。</p>
+                                    <p><span class="math display">\[
+                                    \left\{XY , Z\right\} = X \left\{Y,
+                                    Z\right\} + \left\{X, Z\right\} Y
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \left\{X , YZ\right\} = \left\{X,
+                                    Y\right\}Z + Y\left\{X, Z\right\}
+                                    \]</span></p>
+                                    <p>これらの性質は定義から容易に導けるものであるが、非自明な性質として、以下の恒等式が成り立つ。</p>
+                                    <p><span class="math display">\[
+                                    \left\{X , \left\{Y,
+                                    Z\right\}\right\} +
+                                    \left\{Y , \left\{Z,
+                                    X\right\}\right\} +
+                                    \left\{Z , \left\{X,
+                                    Y\right\}\right\} = 0
+                                    \]</span></p>
                     </article>
     </body>
 
