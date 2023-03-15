@@ -232,13 +232,12 @@
                                     (\boldsymbol{e}^i, \boldsymbol{e}_j)
                                     = \delta_{i,j}
                                     \]</span></p>
-                                    <p>内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。</p>
-                                    <p>基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。</p>
+                                    <p>内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。</p>
                                     <p>一般に、あるベクトルと、内積をとる相手のベクトルの住む空間は異なる。自分が住む空間から見て、内積を取る相手が住む空間を
                                     <strong>双対空間(dual
                                     space)</strong>
                                     と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。</p>
-                                    <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で、内積を括弧で表現したが、ベクトルが住む空間と、相方の住む空間を区別する必要がない場合は、２つのベクトル<span
+                                    <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、２つの空間を区別する必要がない場合は２つのベクトル<span
                                     class="math inline">\(\boldsymbol{a}
                                     = {}^t(a_1, a_2,
                                     a_3)\)</span>と<span
@@ -255,7 +254,34 @@
                                     &amp;= \sum_i^{3} a_i b_j
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>と書く場合もある。適宜使い分けるので混乱しないようにして欲しい。</p>
+                                    <p>とドット表記で書く場合もある。以後、内積の表記法としてドット表記<span
+                                    class="math inline">\(\boldsymbol{a}
+                                    \cdot
+                                    \boldsymbol{b}\)</span>と括弧表記<span
+                                    class="math inline">\((\boldsymbol{a}
+                                    ,
+                                    \boldsymbol{b})\)</span>の両方を使う。</p>
+                                    <p>さて、ある基底<span
+                                    class="math inline">\(\boldsymbol{e_i}\)</span>が正規直交基底であるとする。ベクトル<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>と基底との内積が、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \boldsymbol{r} \cdot
+                                    \boldsymbol{e_x} &amp;= r_x \\
+                                    \boldsymbol{r} \cdot
+                                    \boldsymbol{e_y} &amp;= r_y \\
+                                    \boldsymbol{r} \cdot
+                                    \boldsymbol{e_z} &amp;= r_z
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>で与えられている時、この基底でベクトルが以下のように展開できる。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{r} = r_x
+                                    \boldsymbol{e_x} + r_y
+                                    \boldsymbol{e_y} + r_z
+                                    \boldsymbol{e_z}
+                                    \]</span></p>
+                                    <p>なんとなく展開係数が先で、内積が後のように考えがちだが、物理においては特定の座標を特別視しないため、座標系に依存しないベクトルがまず存在し、必要に応じて座標系を定義してその展開係数を調べる、というイメージを持った方がよい場合がある。</p>
                                     <p>さて、ある基底<span
                                     class="math inline">\(\boldsymbol{e}_1,
                                     \boldsymbol{e}_2,
@@ -268,32 +294,50 @@
                                     \boldsymbol{e}&#39;_3\)</span>で展開した時の表現<span
                                     class="math inline">\(\boldsymbol{r}
                                     = {}^t(r&#39;_1, r&#39;_2,
-                                    r&#39;_3)\)</span>を求めたい。つまり、</p>
-                                    <p><span class="math display">\[
-                                    \boldsymbol{r} = r&#39;_1
-                                    \boldsymbol{e}&#39;_1  +r&#39;_1
-                                    \boldsymbol{e}&#39;_2+r&#39;_3
-                                    \boldsymbol{e}&#39;_3
-                                    \]</span></p>
-                                    <p>任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。つまり、</p>
-                                    <p><span class="math display">\[
-                                    \boldsymbol{r} = r_x
-                                    \boldsymbol{e_x} + r_y
-                                    \boldsymbol{e_y} + r_z
-                                    \boldsymbol{e_z}
-                                    \]</span></p>
-                                    <p>という表記は</p>
+                                    r&#39;_3)\)</span>を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{r} \cdot
-                                    \boldsymbol{e_x} &amp;= r_x \\
-                                    \boldsymbol{r} \cdot
-                                    \boldsymbol{e_y} &amp;= r_y \\
-                                    \boldsymbol{r} \cdot
-                                    \boldsymbol{e_z} &amp;= r_z
+                                    \boldsymbol{r} &amp;= r_1
+                                    \boldsymbol{e}_1  +r_1
+                                    \boldsymbol{e}_2+r_3
+                                    \boldsymbol{e}_3\\
+                                    &amp;= r&#39;_1
+                                    \boldsymbol{e}&#39;_1  +r&#39;_1
+                                    \boldsymbol{e}&#39;_2+r&#39;_3
+                                    \boldsymbol{e}&#39;_3\\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>ということを意味している。</p>
+                                    <p>もし、それぞれの基底が正規直交基底であるならば、任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。</p>
+                                    <p>例えば、基底ベクトル<span
+                                    class="math inline">\(\boldsymbol{e}&#39;_1\)</span>に対する成分<span
+                                    class="math inline">\(r&#39;_1\)</span>を知りたければ、<span
+                                    class="math inline">\(\boldsymbol{e}&#39;_1\)</span>と<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>との内積を取ればよい。</p>
+                                    <p><span class="math display">\[
+                                    r&#39;_1 = \boldsymbol{e}&#39;_1
+                                    \cdot \boldsymbol{r}
+                                    \]</span></p>
+                                    <p>さて、<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>を基底<span
+                                    class="math inline">\(\boldsymbol{e}_i\)</span>で展開しておき、左から別の基底<span
+                                    class="math inline">\(\boldsymbol{e}&#39;_j\)</span>との内積を取ろう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    r&#39;_j &amp;=
+                                    \boldsymbol{e}&#39;_j \cdot
+                                    \boldsymbol{r}  \\
+                                    &amp;= \sum_i r_i
+                                    \boldsymbol{e}&#39;_j
+                                    \cdot  \boldsymbol{e}_i
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この式は「あるベクトル<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>について、ある基底<span
+                                    class="math inline">\(\boldsymbol{e}_i\)</span>での展開係数がわかっている場合、別の基底<span
+                                    class="math inline">\(\boldsymbol{e}&#39;_j\)</span>での展開係数を知るには、基底同士の内積$’_j
+                                    _i
+                                    $がわかっていればいれば良い」ということを意味する。</p>
+                                    <p>このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。</p>
                                     <h2
                                     id="関数空間とベクトル">関数空間とベクトル</h2>
                                     <p>高校まではベクトルを「複数個の値の組」として捉えていた。しかし、大学ではより一般的な扱いをする。すなわちベクトルとは、なにかの集合の要素であり、その線形結合がやはり同じ集合に所属するものを言う。3次元ベクトルはこの定義を満たしているが、例えば変数<span
@@ -461,137 +505,101 @@
                                     \]</span></p>
                                     <p>と表記できる。関数を、その引数で微分する場合はラグランジュ記法が、時間に関する変数<span
                                     class="math inline">\(x\)</span>の時間微分はニュートン記法が使われている。ややこしいようにも見えるが、慣れてしまえば表記が簡略化される分、読みやすくなる。</p>
-                                    <p>次に、ベクトルが絡んだ微分について考えよう。質点の位置が<span
-                                    class="math inline">\(\boldsymbol{r}
-                                    =
-                                    (x,y,z)\)</span>で表されている。</p>
-                                    <p>TODO: 続きを書く</p>
-                                    <p>もう少し実際的な例を見てみよう。三次元空間に質点が2つあり、それぞれの座標が<span
-                                    class="math inline">\(\boldsymbol{r}_1
-                                    = (x_1, y_1, z_1)\)</span>, <span
-                                    class="math inline">\(\boldsymbol{r}_2
-                                    = (x_2, y_2,
-                                    z_2)\)</span>で与えられているとする。この二点の距離<span
-                                    class="math inline">\(r\)</span>は</p>
+                                    <h2 id="偏微分">偏微分</h2>
+                                    <p>関数の微分とは、現在の場所と、少しずれた場所との差の極限であった。関数が複数の変数に依存している場合、「どの方向に少しずれるのか」を指定する必要がある。例えば斜面に立っている時、どの方向に足を踏み出すかによって一歩でどれだけ高さが変化するかが変わるため、どの方向に足を踏み出すかを定義する必要がある。いま、２つの変数<span
+                                    class="math inline">\(x,y\)</span>に依存する関数<span
+                                    class="math inline">\(f(x,y)\)</span>があるとする。ここで<span
+                                    class="math inline">\(y\)</span>を固定して<span
+                                    class="math inline">\(x\)</span>だけをずらした時の微分係数を<span
+                                    class="math inline">\(x\)</span>に関する偏微分係数と呼び、以下のように定義する。</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    r &amp;=
-                                    \sqrt{(\boldsymbol{r}_1-\boldsymbol{r}_2)^2}
-                                    \\
-                                      &amp;=
-                                    \sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}
-                                    \end{aligned}
+                                    \frac{\partial f}{\partial x} \equiv
+                                    \lim_{h \rightarrow 0}
+                                    \frac{f(x + h , y) - f(x,y)}{h}
                                     \]</span></p>
-                                    <p>で与えられる。いま、2つの質点の間に万有引力の法則が成り立つとすると、質点の間には距離<span
-                                    class="math inline">\(r\)</span>に依存する力<span
-                                    class="math inline">\(f(r)\)</span>が働くことになる。力学の問題を扱う場合、この<span
-                                    class="math inline">\(f(r)\)</span>の時間微分や、<span
-                                    class="math inline">\(x_1\)</span>による微分が現れる。面倒だが、このような計算がすらすらできないと今後の議論に全くついていけなくなるため、ここで真面目に計算しよう。</p>
-                                    <p>まず、<span
-                                    class="math inline">\(f(r)\)</span>の時間微分を考える。合成関数の微分により</p>
+                                    <p><span
+                                    class="math inline">\(y\)</span>に関する偏微分係数も同様に定義する。以後、<span
+                                    class="math inline">\(x\)</span>に関する偏微分演算子<span
+                                    class="math inline">\(\partial/\partial_x\)</span>を、<span
+                                    class="math inline">\(\partial_x\)</span>のように略記することがある。</p>
+                                    <p>偏微分する際、どの変数を固定しているのかを明示したい場合は、</p>
                                     <p><span class="math display">\[
-                                    \frac{df}{dt} = \frac{df}{dr}
-                                    \frac{dr}{dt} = f&#39;(r) \dot{r}
+                                    \left(\frac{\partial f}{\partial
+                                    x}\right)_y
                                     \]</span></p>
-                                    <p>となる。次は<span
-                                    class="math inline">\(r\)</span>の時間微分だが、<span
-                                    class="math inline">\(r\)</span>は<span
-                                    class="math inline">\(\boldsymbol{r}_1\)</span>と<span
-                                    class="math inline">\(\boldsymbol{r}_2\)</span>の関数であるから、</p>
-                                    <p><span class="math display">\[
-                                    \dot{r} = \frac{\partial r}{\partial
-                                    \boldsymbol{r}_1}
-                                    \dot{\boldsymbol{r}_1} +
-                                    \frac{\partial r}{\partial
-                                    \boldsymbol{r}_2}
-                                    \dot{\boldsymbol{r}_2}
-                                    \]</span></p>
-                                    <p>TODO: 続きを書く。</p>
+                                    <p>のように括弧の外に書く場合がある。熱力学ではどの変数を固定しているかが重要であるが、解析力学では自明であることが多いので本書では省略する。</p>
                                     <h1
                                     id="ベクトル解析">ベクトル解析</h1>
-                                    <p>多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、運動エネルギーやポテンシャルエネルギーといった量は、エネルギーであるからスカラーだが、引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。</p>
-                                    <p>例として、太陽系を考えよう。太陽質量を<span
-                                    class="math inline">\(M\)</span>、地球の質量を<span
-                                    class="math inline">\(m\)</span>とし、地球の座標を<span
-                                    class="math inline">\((x,y)\)</span>とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似することで(太陽質量は地球の33万倍なので、これは非常に良い近似となる)、この系の運動方程式は以下のようになる。</p>
+                                    <p>次に、ベクトルが絡んだ微分について考えよう。多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、ポテンシャルエネルギーはスカラー量であるが、位置の関数であるから引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。</p>
+                                    <p>質点の位置が<span
+                                    class="math inline">\(\boldsymbol{r}
+                                    =
+                                    {}^t(x,y,z)\)</span>で表されており、その位置に依存するスカラー関数<span
+                                    class="math inline">\(f(\boldsymbol{r})\)</span>があるとしよう。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。<span
+                                    class="math inline">\(f\)</span>は<span
+                                    class="math inline">\((x,y,z)\)</span>に依存する関数であるから、<span
+                                    class="math inline">\(f(x,y,z)\)</span>であると考えて</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2x}{dt^2} &amp;=  -G
-                                    \frac{Mmx}{r^3} \\
-                                    m \frac{d^2y}{dt^2} &amp;=  -G
-                                    \frac{Mmy}{r^3}
-                                    \end{aligned}
+                                    \frac{df}{dt} = \frac{\partial
+                                    f}{\partial x} \dot{x}
+                                    +\frac{\partial f}{\partial y}
+                                    \dot{y}
+                                    +\frac{\partial f}{\partial z}
+                                    \dot{z}
                                     \]</span></p>
-                                    <p>ただし、<span
-                                    class="math inline">\(r = \sqrt{x^2
-                                    +
-                                    y^2}\)</span>である。これをベクトルの言葉で書いていきたい。</p>
-                                    <p>まず、重力は保存力なので、ポテンシャルエネルギー<span
-                                    class="math inline">\(V(r)\)</span>を考えよう。</p>
+                                    <p>三次元空間では、このように<span
+                                    class="math inline">\(x, y,
+                                    z\)</span>座標での偏微分が頻繁に現れる。これらを毎回書くのは面倒であるので、以下のような<span
+                                    class="math inline">\(\nabla\)</span>(ナブラ)という演算子を定義する。</p>
                                     <p><span class="math display">\[
-                                    V(r) = -\frac{GMm}{r}
-                                    \]</span></p>
-                                    <p>これを<span
-                                    class="math inline">\(x\)</span>で偏微分すると</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial V}{\partial x} =
-                                    V&#39;(r) \frac{dr}{dx}
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(dr/dx\)</span>をそのまま計算しても良いが、<span
-                                    class="math inline">\(r^2\)</span>の全微分を考えるのが楽である。</p>
-                                    <p><span class="math display">\[
-                                    r^2 = x^2 + y^2
-                                    \]</span></p>
-                                    <p>より、</p>
-                                    <p><span class="math display">\[
-                                    2r dr = 2xdx + 2ydy
-                                    \]</span></p>
-                                    <p>ここから</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial r}{\partial x} =
-                                    \frac{x}{r}
-                                    \]</span></p>
-                                    <p>以上から、</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial V}{\partial x} = G
-                                    \frac{Mmx}{r^3}
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(y\)</span>も同様である。ここから運動方程式は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2x}{dt^2} &amp;=  -
-                                    \frac{\partial V}{\partial x} \\
-                                    m \frac{d^2y}{dt^2} &amp;=  -
-                                    \frac{\partial V}{\partial y}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>まず、地球の座標をベクトルで表そう。</p>
-                                    <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \nabla =
                                     \begin{pmatrix}
-                                    x \\ y
+                                    \frac{\partial}{\partial x} \\
+                                    \frac{\partial}{\partial y} \\
+                                    \frac{\partial}{\partial z}
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
+                                    <p>ナブラは成分に微分演算子が含まれているベクトルである。ベクトルであるから、スカラーに作用させるとベクトル量になる。</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
-                                    &amp;=  -G \frac{Mmx}{r^2}
-                                    \boldsymbol{r}
-                                    \end{aligned}
+                                    \nabla f =
+                                    \begin{pmatrix}
+                                    \frac{\partial f}{\partial x} \\
+                                    \frac{\partial f}{\partial y} \\
+                                    \frac{\partial f}{\partial z}
+                                    \end{pmatrix}
                                     \]</span></p>
-                                    <h1 id="座標変換">座標変換</h1>
-                                    <p>共変、反変について書く。</p>
+                                    <p>ここで、速度ベクトル</p>
+                                    <p><span class="math display">\[
+                                    \dot{\boldsymbol{r}} =
+                                    \begin{pmatrix}
+                                    \dot{x} \\
+                                    \dot{y} \\
+                                    \dot{z}
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>を定義すると、先程の<span
+                                    class="math inline">\(f\)</span>の時間微分は以下のように表記できる。</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{dt} = (\nabla f) \cdot
+                                    \dot{\boldsymbol{r}}
+                                    \]</span></p>
+                                    <p>このように<span
+                                    class="math inline">\(\nabla\)</span>はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。ただし、微分演算子を含むため、積の順番を交換することはできないことに注意。</p>
+                                    <p><span class="math display">\[
+                                    \nabla f \neq f \nabla.
+                                    \]</span></p>
                                     <h1 id="微分形式">微分形式</h1>
+                                    <h2
+                                    id="全微分と内積">全微分と内積</h2>
                                     <p>変数<span
                                     class="math inline">\(x\)</span>と<span
-                                    class="math inline">\(y\)</span>に依存する2変数関数<span
+                                    class="math inline">\(y\)</span>にのみ依存する2変数関数<span
                                     class="math inline">\(f(x,y)\)</span>を考える。<span
                                     class="math inline">\(x\)</span>と<span
                                     class="math inline">\(y\)</span>が時間<span
-                                    class="math inline">\(t\)</span>に依存している時、<span
+                                    class="math inline">\(t\)</span>に依存している時、すなわち<span
+                                    class="math inline">\(f(x(t),
+                                    y(t))\)</span>と書ける時、<span
                                     class="math inline">\(f\)</span>の時間微分は</p>
                                     <p><span class="math display">\[
                                     \frac{df}{dt} = \frac{\partial
@@ -628,7 +636,7 @@
                                     class="math inline">\(f(x,y)\)</span>という関数を、点<span
                                     class="math inline">\((x,y)\)</span>の周りでテイラー展開し、一次の項目だけ残す。</p>
                                     <p><span class="math display">\[
-                                    f(x+\delta x, y+\delta x) - f(x,y)
+                                    f(x+\delta x, y+\delta y) - f(x,y)
                                     \sim \frac{\partial f}{\partial x}
                                     \delta x +
                                     \frac{\partial f}{\partial y} \delta
@@ -692,7 +700,114 @@
                                     \alpha}{\partial \beta} =
                                     \delta_{\alpha, \beta}
                                     \]</span></p>
-                                    <p>が定義される。</p>
+                                    <p>が定義される。このように、<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>を縦ベクトル、<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>を横ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>が住む世界と<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>が住む世界は双対空間である。</p>
+                                    <p>偏微分をベクトルだと思う簡単な例として、太陽系を考えよう。太陽質量を<span
+                                    class="math inline">\(M\)</span>、地球の質量を<span
+                                    class="math inline">\(m\)</span>とし、地球の座標を<span
+                                    class="math inline">\((x,y)\)</span>とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2x}{dt^2} &amp;=  -G
+                                    \frac{Mmx}{r^3} \\
+                                    m \frac{d^2y}{dt^2} &amp;=  -G
+                                    \frac{Mmy}{r^3}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(r = \sqrt{x^2
+                                    +
+                                    y^2}\)</span>である。これをベクトルの言葉で書いていきたい。</p>
+                                    <p>まず、重力は保存力なので、ポテンシャルエネルギー<span
+                                    class="math inline">\(V(r)\)</span>を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    V(r) = -\frac{GMm}{r}
+                                    \]</span></p>
+                                    <p>これを<span
+                                    class="math inline">\(x\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial V}{\partial x} =
+                                    V&#39;(r) \frac{dr}{dx}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(dr/dx\)</span>をそのまま計算しても良いが、<span
+                                    class="math inline">\(r^2\)</span>の全微分を考えるのが楽である。</p>
+                                    <p><span class="math display">\[
+                                    r^2 = x^2 + y^2
+                                    \]</span></p>
+                                    <p>より、</p>
+                                    <p><span class="math display">\[
+                                    2r dr = 2xdx + 2ydy
+                                    \]</span></p>
+                                    <p>両辺<span
+                                    class="math inline">\(\partial_x\)</span>との内積をとると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial r}{\partial x} =
+                                    \frac{x}{r}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial V}{\partial x} = G
+                                    \frac{Mmx}{r^3}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(y\)</span>も同様である。ここから運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2x}{dt^2} &amp;=  -
+                                    \frac{\partial V}{\partial x} \\
+                                    m \frac{d^2y}{dt^2} &amp;=  -
+                                    \frac{\partial V}{\partial y}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さらに、地球の座標をベクトルで表そう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{r} =
+                                    \begin{pmatrix}
+                                    x \\ y
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
+                                    &amp;= - \nabla V
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺ともにベクトルで有ることに注意。</p>
+                                    <p><span
+                                    class="math inline">\(\nabla\)</span>を<span
+                                    class="math inline">\(d/
+                                    d\boldsymbol{r}\)</span>と書くと</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
+                                    &amp;= -\frac{d V}{d \boldsymbol{r}}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となり、一次元空間での運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 r}{dt^2} &amp;= -\frac{d
+                                    V}{d r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と同じ形になることがわかる。</p>
+                                    <h2 id="外積">外積</h2>
+                                    <p>微分形式では、<span
+                                    class="math inline">\(dx\)</span>や<span
+                                    class="math inline">\(dy\)</span>、<span
+                                    class="math inline">\(\partial_x\)</span>や<span
+                                    class="math inline">\(\partial_y\)</span>といった量をベクトルとして扱い、それらに内積を定義した。</p>
+                                    <p>TODO: 外積の定義</p>
+                                    <p>TODO: 極座標のヤコビアン</p>
                                     <h1
                                     id="余談ダッシュかプライムか">余談：ダッシュかプライムか</h1>
                                     <p>ラグランジュによる微分記法<span

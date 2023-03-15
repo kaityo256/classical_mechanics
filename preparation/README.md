@@ -162,13 +162,11 @@ $$
 (\boldsymbol{e}^i, \boldsymbol{e}_j) = \delta_{i,j}
 $$
 
-内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。
-
-基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。
+内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。
 
 一般に、あるベクトルと、内積をとる相手のベクトルの住む空間は異なる。自分が住む空間から見て、内積を取る相手が住む空間を **双対空間(dual space)** と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。
 
-ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で、内積を括弧で表現したが、ベクトルが住む空間と、相方の住む空間を区別する必要がない場合は、２つのベクトル$\boldsymbol{a} = {}^t(a_1, a_2, a_3)$と$\boldsymbol{b} = {}^t(b_1, b_2, b_3)$の内積を
+ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、２つの空間を区別する必要がない場合は２つのベクトル$\boldsymbol{a} = {}^t(a_1, a_2, a_3)$と$\boldsymbol{b} = {}^t(b_1, b_2, b_3)$の内積を
 
 $$
 \begin{aligned}
@@ -178,21 +176,9 @@ $$
 \end{aligned}
 $$
 
-と書く場合もある。適宜使い分けるので混乱しないようにして欲しい。
+とドット表記で書く場合もある。以後、内積の表記法としてドット表記$\boldsymbol{a} \cdot \boldsymbol{b}$と括弧表記$(\boldsymbol{a} , \boldsymbol{b})$の両方を使う。
 
-さて、ある基底$\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$で表現されたベクトル$\boldsymbol{r} = {}^t(r_1, r_2, r_3)$について、別の基底$\boldsymbol{e}'_1, \boldsymbol{e}'_2, \boldsymbol{e}'_3$で展開した時の表現$\boldsymbol{r} = {}^t(r'_1, r'_2, r'_3)$を求めたい。つまり、
-
-$$
-\boldsymbol{r} = r'_1 \boldsymbol{e}'_1  +r'_1 \boldsymbol{e}'_2+r'_3 \boldsymbol{e}'_3
-$$
-
-任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。つまり、
-
-$$
-\boldsymbol{r} = r_x \boldsymbol{e_x} + r_y \boldsymbol{e_y} + r_z \boldsymbol{e_z}
-$$
-
-という表記は
+さて、ある基底$\boldsymbol{e_i}$が正規直交基底であるとする。ベクトル$\boldsymbol{r}$と基底との内積が、
 
 $$
 \begin{aligned}
@@ -202,7 +188,43 @@ $$
 \end{aligned}
 $$
 
-ということを意味している。
+で与えられている時、この基底でベクトルが以下のように展開できる。
+
+$$
+\boldsymbol{r} = r_x \boldsymbol{e_x} + r_y \boldsymbol{e_y} + r_z \boldsymbol{e_z}
+$$
+
+なんとなく展開係数が先で、内積が後のように考えがちだが、物理においては特定の座標を特別視しないため、座標系に依存しないベクトルがまず存在し、必要に応じて座標系を定義してその展開係数を調べる、というイメージを持った方がよい場合がある。
+
+さて、ある基底$\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$で表現されたベクトル$\boldsymbol{r} = {}^t(r_1, r_2, r_3)$について、別の基底$\boldsymbol{e}'_1, \boldsymbol{e}'_2, \boldsymbol{e}'_3$で展開した時の表現$\boldsymbol{r} = {}^t(r'_1, r'_2, r'_3)$を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。
+
+$$
+\begin{aligned}
+\boldsymbol{r} &= r_1 \boldsymbol{e}_1  +r_1 \boldsymbol{e}_2+r_3 \boldsymbol{e}_3\\
+&= r'_1 \boldsymbol{e}'_1  +r'_1 \boldsymbol{e}'_2+r'_3 \boldsymbol{e}'_3\\
+\end{aligned}
+$$
+
+もし、それぞれの基底が正規直交基底であるならば、任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。
+
+例えば、基底ベクトル$\boldsymbol{e}'_1$に対する成分$r'_1$を知りたければ、$\boldsymbol{e}'_1$と$\boldsymbol{r}$との内積を取ればよい。
+
+$$
+r'_1 = \boldsymbol{e}'_1 \cdot \boldsymbol{r} 
+$$
+
+さて、$\boldsymbol{r}$を基底$\boldsymbol{e}_i$で展開しておき、左から別の基底$\boldsymbol{e}'_j$との内積を取ろう。
+
+$$
+\begin{aligned}
+r'_j &= \boldsymbol{e}'_j \cdot \boldsymbol{r}  \\
+&= \sum_i r_i \boldsymbol{e}'_j \cdot  \boldsymbol{e}_i 
+\end{aligned}
+$$
+
+この式は「あるベクトル$\boldsymbol{r}$について、ある基底$\boldsymbol{e}_i$での展開係数がわかっている場合、別の基底$\boldsymbol{e}'_j$での展開係数を知るには、基底同士の内積$\boldsymbol{e}'_j \cdot  \boldsymbol{e}_i $がわかっていればいれば良い」ということを意味する。
+
+このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。
 
 ### 関数空間とベクトル
 
@@ -339,119 +361,87 @@ $$
 
 と表記できる。関数を、その引数で微分する場合はラグランジュ記法が、時間に関する変数$x$の時間微分はニュートン記法が使われている。ややこしいようにも見えるが、慣れてしまえば表記が簡略化される分、読みやすくなる。
 
-次に、ベクトルが絡んだ微分について考えよう。質点の位置が$\boldsymbol{r} = (x,y,z)$で表されている。
+### 偏微分
 
-TODO: 続きを書く
-
-もう少し実際的な例を見てみよう。三次元空間に質点が2つあり、それぞれの座標が$\boldsymbol{r}_1 = (x_1, y_1, z_1)$, $\boldsymbol{r}_2 = (x_2, y_2, z_2)$で与えられているとする。この二点の距離$r$は
+関数の微分とは、現在の場所と、少しずれた場所との差の極限であった。関数が複数の変数に依存している場合、「どの方向に少しずれるのか」を指定する必要がある。例えば斜面に立っている時、どの方向に足を踏み出すかによって一歩でどれだけ高さが変化するかが変わるため、どの方向に足を踏み出すかを定義する必要がある。いま、２つの変数$x,y$に依存する関数$f(x,y)$があるとする。ここで$y$を固定して$x$だけをずらした時の微分係数を$x$に関する偏微分係数と呼び、以下のように定義する。
 
 $$
-\begin{aligned}
-r &= \sqrt{(\boldsymbol{r}_1-\boldsymbol{r}_2)^2} \\
-  &= \sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}
-\end{aligned}
+\frac{\partial f}{\partial x} \equiv \lim_{h \rightarrow 0}
+\frac{f(x + h , y) - f(x,y)}{h}
 $$
 
-で与えられる。いま、2つの質点の間に万有引力の法則が成り立つとすると、質点の間には距離$r$に依存する力$f(r)$が働くことになる。力学の問題を扱う場合、この$f(r)$の時間微分や、$x_1$による微分が現れる。面倒だが、このような計算がすらすらできないと今後の議論に全くついていけなくなるため、ここで真面目に計算しよう。
+$y$に関する偏微分係数も同様に定義する。以後、$x$に関する偏微分演算子$\partial/\partial_x$を、$\partial_x$のように略記することがある。
 
-まず、$f(r)$の時間微分を考える。合成関数の微分により
-
-$$
-\frac{df}{dt} = \frac{df}{dr} \frac{dr}{dt} = f'(r) \dot{r}
-$$
-
-となる。次は$r$の時間微分だが、$r$は$\boldsymbol{r}_1$と$\boldsymbol{r}_2$の関数であるから、
+偏微分する際、どの変数を固定しているのかを明示したい場合は、
 
 $$
-\dot{r} = \frac{\partial r}{\partial \boldsymbol{r}_1} \dot{\boldsymbol{r}_1} + \frac{\partial r}{\partial \boldsymbol{r}_2} \dot{\boldsymbol{r}_2}
+\left(\frac{\partial f}{\partial x}\right)_y
 $$
 
-TODO: 続きを書く。
+のように括弧の外に書く場合がある。熱力学ではどの変数を固定しているかが重要であるが、解析力学では自明であることが多いので本書では省略する。
 
 ## ベクトル解析
 
-多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、運動エネルギーやポテンシャルエネルギーといった量は、エネルギーであるからスカラーだが、引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。
+次に、ベクトルが絡んだ微分について考えよう。多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、ポテンシャルエネルギーはスカラー量であるが、位置の関数であるから引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。
 
-例として、太陽系を考えよう。太陽質量を$M$、地球の質量を$m$とし、地球の座標を$(x,y)$とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似することで(太陽質量は地球の33万倍なので、これは非常に良い近似となる)、この系の運動方程式は以下のようになる。
-
-$$
-\begin{aligned}
-m \frac{d^2x}{dt^2} &=  -G \frac{Mmx}{r^3} \\
-m \frac{d^2y}{dt^2} &=  -G \frac{Mmy}{r^3}
-\end{aligned}
-$$
-
-ただし、$r = \sqrt{x^2 + y^2}$である。これをベクトルの言葉で書いていきたい。
-
-まず、重力は保存力なので、ポテンシャルエネルギー$V(r)$を考えよう。
+質点の位置が$\boldsymbol{r} = {}^t(x,y,z)$で表されており、その位置に依存するスカラー関数$f(\boldsymbol{r})$があるとしよう。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。$f$は$(x,y,z)$に依存する関数であるから、$f(x,y,z)$であると考えて
 
 $$
-V(r) = -\frac{GMm}{r}
+\frac{df}{dt} = \frac{\partial f}{\partial x} \dot{x}
++\frac{\partial f}{\partial y} \dot{y}
++\frac{\partial f}{\partial z} \dot{z}
 $$
 
-これを$x$で偏微分すると
+三次元空間では、このように$x, y, z$座標での偏微分が頻繁に現れる。これらを毎回書くのは面倒であるので、以下のような$\nabla$(ナブラ)という演算子を定義する。
 
 $$
-\frac{\partial V}{\partial x} = V'(r) \frac{dr}{dx}
-$$
-
-$dr/dx$をそのまま計算しても良いが、$r^2$の全微分を考えるのが楽である。
-
-$$
-r^2 = x^2 + y^2
-$$
-
-より、
-
-$$
-2r dr = 2xdx + 2ydy
-$$
-
-ここから
-
-$$
-\frac{\partial r}{\partial x} = \frac{x}{r}
-$$
-
-以上から、
-
-$$
-\frac{\partial V}{\partial x} = G \frac{Mmx}{r^3}
-$$
-
-$y$も同様である。ここから運動方程式は
-
-$$
-\begin{aligned}
-m \frac{d^2x}{dt^2} &=  - \frac{\partial V}{\partial x} \\
-m \frac{d^2y}{dt^2} &=  - \frac{\partial V}{\partial y}
-\end{aligned}
-$$
-
-まず、地球の座標をベクトルで表そう。
-
-$$
-\boldsymbol{r} =
+\nabla = 
 \begin{pmatrix}
-x \\ y
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y} \\
+\frac{\partial}{\partial z}
 \end{pmatrix}
 $$
 
-すると、先程の運動方程式は以下のように一行にまとめられる。
+ナブラは成分に微分演算子が含まれているベクトルである。ベクトルであるから、スカラーに作用させるとベクトル量になる。
 
 $$
-\begin{aligned}
-m \frac{d^2 \boldsymbol{r}}{dt^2} &=  -G \frac{Mmx}{r^2} \boldsymbol{r}
-\end{aligned}
+\nabla f = 
+\begin{pmatrix}
+\frac{\partial f}{\partial x} \\
+\frac{\partial f}{\partial y} \\
+\frac{\partial f}{\partial z}
+\end{pmatrix}
 $$
 
-## 座標変換
+ここで、速度ベクトル
 
-共変、反変について書く。
+$$
+\dot{\boldsymbol{r}} = 
+\begin{pmatrix}
+\dot{x} \\
+\dot{y} \\
+\dot{z}
+\end{pmatrix}
+$$
+
+を定義すると、先程の$f$の時間微分は以下のように表記できる。
+
+$$
+\frac{df}{dt} = (\nabla f) \cdot \dot{\boldsymbol{r}}
+$$
+
+このように$\nabla$はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。ただし、微分演算子を含むため、積の順番を交換することはできないことに注意。
+
+$$
+\nabla f \neq f \nabla.
+$$
 
 ## 微分形式
 
-変数$x$と$y$に依存する2変数関数$f(x,y)$を考える。$x$と$y$が時間$t$に依存している時、$f$の時間微分は
+### 全微分と内積
+
+変数$x$と$y$にのみ依存する2変数関数$f(x,y)$を考える。$x$と$y$が時間$t$に依存している時、すなわち$f(x(t), y(t))$と書ける時、$f$の時間微分は
 
 $$
 \frac{df}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}
@@ -475,7 +465,7 @@ $$
 さて、この式の意味を考えよう。$f(x,y)$という関数を、点$(x,y)$の周りでテイラー展開し、一次の項目だけ残す。
 
 $$
-f(x+\delta x, y+\delta x) - f(x,y) \sim \frac{\partial f}{\partial x} \delta x +
+f(x+\delta x, y+\delta y) - f(x,y) \sim \frac{\partial f}{\partial x} \delta x +
 \frac{\partial f}{\partial y} \delta y
 $$
 
@@ -515,7 +505,108 @@ $$
 \left<d\alpha, \frac{\partial}{\partial \beta}\right> = \frac{\partial \alpha}{\partial \beta} = \delta_{\alpha, \beta}
 $$
 
-が定義される。
+が定義される。このように、$dx, dy$を縦ベクトル、$\partial_x, \partial_y$を横ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、$dx, dy$が住む世界と$\partial_x, \partial_y$が住む世界は双対空間である。
+
+偏微分をベクトルだと思う簡単な例として、太陽系を考えよう。太陽質量を$M$、地球の質量を$m$とし、地球の座標を$(x,y)$とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。
+
+$$
+\begin{aligned}
+m \frac{d^2x}{dt^2} &=  -G \frac{Mmx}{r^3} \\
+m \frac{d^2y}{dt^2} &=  -G \frac{Mmy}{r^3}
+\end{aligned}
+$$
+
+ただし、$r = \sqrt{x^2 + y^2}$である。これをベクトルの言葉で書いていきたい。
+
+まず、重力は保存力なので、ポテンシャルエネルギー$V(r)$を考えよう。
+
+$$
+V(r) = -\frac{GMm}{r}
+$$
+
+これを$x$で偏微分すると
+
+$$
+\frac{\partial V}{\partial x} = V'(r) \frac{dr}{dx}
+$$
+
+$dr/dx$をそのまま計算しても良いが、$r^2$の全微分を考えるのが楽である。
+
+$$
+r^2 = x^2 + y^2
+$$
+
+より、
+
+$$
+2r dr = 2xdx + 2ydy
+$$
+
+両辺$\partial_x$との内積をとると、
+
+$$
+\frac{\partial r}{\partial x} = \frac{x}{r}
+$$
+
+以上から、
+
+$$
+\frac{\partial V}{\partial x} = G \frac{Mmx}{r^3}
+$$
+
+$y$も同様である。ここから運動方程式は
+
+$$
+\begin{aligned}
+m \frac{d^2x}{dt^2} &=  - \frac{\partial V}{\partial x} \\
+m \frac{d^2y}{dt^2} &=  - \frac{\partial V}{\partial y}
+\end{aligned}
+$$
+
+さらに、地球の座標をベクトルで表そう。
+
+$$
+\boldsymbol{r} =
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+$$
+
+すると、先程の運動方程式は以下のように一行にまとめられる。
+
+$$
+\begin{aligned}
+m \frac{d^2 \boldsymbol{r}}{dt^2} &= - \nabla V
+\end{aligned}
+$$
+
+両辺ともにベクトルで有ることに注意。
+
+$\nabla$を$d/ d\boldsymbol{r}$と書くと
+
+$$
+\begin{aligned}
+m \frac{d^2 \boldsymbol{r}}{dt^2} &= -\frac{d V}{d \boldsymbol{r}}
+\end{aligned}
+$$
+
+となり、一次元空間での運動方程式
+
+$$
+\begin{aligned}
+m \frac{d^2 r}{dt^2} &= -\frac{d V}{d r}
+\end{aligned}
+$$
+
+と同じ形になることがわかる。
+
+### 外積
+
+微分形式では、$dx$や$dy$、$\partial_x$や$\partial_y$といった量をベクトルとして扱い、それらに内積を定義した。
+
+TODO: 外積の定義
+
+TODO: 極座標のヤコビアン
 
 ## 余談：ダッシュかプライムか
 
