@@ -2,7 +2,7 @@
 
 ## 本章の目的
 
-解析力学を学ぶ目的は、現象にたいして異なる見方を与えることである。その重要な例が「時間発展とは回転の一種である」と認識することだ。本章では、ポアソン括弧を定義し、リー代数という代数構造から自然に回転という概念が生まれる。さらにポアソン括弧は、
+解析力学を学ぶ目的は、現象に対して異なる見方を獲得することである。その重要な例が「時間発展とは回転の一種である」と認識することだ。本章では、ポアソン括弧を定義し、リー代数という代数構造から自然に回転という概念が生まれることを見る。物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は座標を用いない形を与える。
 
 * ポアソン括弧
 * Lie代数
@@ -22,14 +22,14 @@ $$
 この系は$q,p$という正準変数によって記述されており、この系の全ての物理量は$q,p$の関数として表現される。例えば運動エネルギーなら$K(q,p) = p^2/2m$である。ある物理量$A(q,p)$を考えよう。この物理量を時間微分すると、
 
 $$
-\frac{dA}{dt} = \frac{\partial A}{\partial q}\dot{q} + \frac{\partial A}{\partial p}\dot{p} 
+\frac{dA}{dt} = \frac{\partial A}{\partial q}\dot{q} + \frac{\partial A}{\partial p}\dot{p}
 $$
 
 正準方程式を使って$\dot{p}, \dot{q}$を消去すると、
 
 $$
 \begin{aligned}
-\frac{dA}{dt} &= \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q} 
+\frac{dA}{dt} &= \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q}
 \end{aligned}
 $$
 
@@ -50,7 +50,7 @@ $$
 $$
 \begin{aligned}
 \dot{p} &= \left\{p, H\right\} \\
-\dot{q} &= \left\{q, H\right\} 
+\dot{q} &= \left\{q, H\right\}
 \end{aligned}
 $$
 
@@ -63,7 +63,7 @@ $$
 まず、括弧に入れる変数を入れ替えると負符号がつく。
 
 $$
-\left\{X, Y\right\} = - \left\{Y, X\right\} 
+\left\{X, Y\right\} = - \left\{Y, X\right\}
 $$
 
 これを反対称性と呼ぶ。
@@ -123,3 +123,7 @@ $$
 \left\{Y , \left\{Z, X\right\}\right\} +
 \left\{Z , \left\{X, Y\right\}\right\} = 0
 $$
+
+TODO: Lie積によりLie環が定義されることを見る。
+TODO: 結合法則を満たさない事を見る
+TODO: 群と環の話を書く。
