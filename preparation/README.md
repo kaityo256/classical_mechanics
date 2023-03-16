@@ -210,7 +210,7 @@ $$
 例えば、基底ベクトル$\boldsymbol{e}'_1$に対する成分$r'_1$を知りたければ、$\boldsymbol{e}'_1$と$\boldsymbol{r}$との内積を取ればよい。
 
 $$
-r'_1 = \boldsymbol{e}'_1 \cdot \boldsymbol{r} 
+r'_1 = \boldsymbol{e}'_1 \cdot \boldsymbol{r}
 $$
 
 さて、$\boldsymbol{r}$を基底$\boldsymbol{e}_i$で展開しておき、左から別の基底$\boldsymbol{e}'_j$との内積を取ろう。
@@ -218,7 +218,7 @@ $$
 $$
 \begin{aligned}
 r'_j &= \boldsymbol{e}'_j \cdot \boldsymbol{r}  \\
-&= \sum_i r_i \boldsymbol{e}'_j \cdot  \boldsymbol{e}_i 
+&= \sum_i r_i \boldsymbol{e}'_j \cdot  \boldsymbol{e}_i
 \end{aligned}
 $$
 
@@ -284,6 +284,20 @@ a^1_3 & a^2_3 & a^3_3
 $$
 
 さて、多くの場合において、和の範囲は自明である。例えば$i$が軸に関するものであれば1から3までであろうし、$i$が粒子番号であれば$1$から$N$まで走るであろう。その場合にいちいち和記号$\Sigma$を書くのは面倒である。そこで、同じ添字が２つ現れたら、その添字について和を取る、という約束をする。これを **アインシュタイン規約(Einstein notation)** と呼ぶ。
+
+先程の式は、アインシュタイン規約を用いると以下のようにかける。
+
+$$
+\begin{aligned}
+A &=
+\begin{pmatrix}
+a^1_1 & a^2_1 & a^3_1 \\
+a^1_2 & a^2_2 & a^3_2 \\
+a^1_3 & a^2_3 & a^3_3
+\end{pmatrix}
+= a^i_j \boldsymbol{e}^i \otimes \boldsymbol{e}_j
+\end{aligned}
+$$
 
 ## 微分と偏微分
 
@@ -384,7 +398,7 @@ $$
 
 次に、ベクトルが絡んだ微分について考えよう。多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、ポテンシャルエネルギーはスカラー量であるが、位置の関数であるから引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。
 
-質点の位置が$\boldsymbol{r} = {}^t(x,y,z)$で表されており、その位置に依存するスカラー関数$f(\boldsymbol{r})$があるとしよう。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。$f$は$(x,y,z)$に依存する関数であるから、$f(x,y,z)$であると考えて
+質点の位置が$\boldsymbol{r} = {}^t(x,y,z)$で表されており、その位置に依存するスカラー関数$f(\boldsymbol{r})$があるとしよう。ただし、$f$は$t$には陽には依存しないとする。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。$f$は$x,y,z$に依存する関数であるから、
 
 $$
 \frac{df}{dt} = \frac{\partial f}{\partial x} \dot{x}
@@ -395,7 +409,7 @@ $$
 三次元空間では、このように$x, y, z$座標での偏微分が頻繁に現れる。これらを毎回書くのは面倒であるので、以下のような$\nabla$(ナブラ)という演算子を定義する。
 
 $$
-\nabla = 
+\nabla =
 \begin{pmatrix}
 \frac{\partial}{\partial x} \\
 \frac{\partial}{\partial y} \\
@@ -406,7 +420,7 @@ $$
 ナブラは成分に微分演算子が含まれているベクトルである。ベクトルであるから、スカラーに作用させるとベクトル量になる。
 
 $$
-\nabla f = 
+\nabla f =
 \begin{pmatrix}
 \frac{\partial f}{\partial x} \\
 \frac{\partial f}{\partial y} \\
@@ -417,7 +431,7 @@ $$
 ここで、速度ベクトル
 
 $$
-\dot{\boldsymbol{r}} = 
+\dot{\boldsymbol{r}} =
 \begin{pmatrix}
 \dot{x} \\
 \dot{y} \\
@@ -431,15 +445,128 @@ $$
 \frac{df}{dt} = (\nabla f) \cdot \dot{\boldsymbol{r}}
 $$
 
-このように$\nabla$はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。ただし、微分演算子を含むため、積の順番を交換することはできないことに注意。
+$\nabla$を使う簡単な例として太陽系を考えよう。太陽質量を$M$、地球の質量を$m$とし、地球の座標を$(x,y)$とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。
 
 $$
-\nabla f \neq f \nabla.
+\begin{aligned}
+m \frac{d^2x}{dt^2} &=  -G \frac{Mmx}{r^3} \\
+m \frac{d^2y}{dt^2} &=  -G \frac{Mmy}{r^3}
+\end{aligned}
+$$
+
+ただし、$r = \sqrt{x^2 + y^2}$である。これをベクトルの言葉で書いていきたい。
+
+まず、重力は保存力なので、ポテンシャルエネルギー$V(r)$を考えよう。
+
+$$
+V(r) = -\frac{GMm}{r}
+$$
+
+これを$x$で偏微分すると
+
+$$
+\frac{\partial V}{\partial x} = V'(r) \frac{\partial r}{\partial x}
+$$
+
+$$
+r^2 = x^2 + y^2
+$$
+
+の両辺を$x$で偏微分して、
+
+$$
+2r \frac{\partial r}{\partial x} = 2 x
+$$
+
+従って、
+
+$$
+\frac{\partial r}{\partial x} = \frac{x}{r}
+$$
+
+以上から、
+
+$$
+\frac{\partial V}{\partial x} = G \frac{Mmx}{r^3}
+$$
+
+$y$も同様である。ここから運動方程式は
+
+$$
+\begin{aligned}
+m \frac{d^2x}{dt^2} &=  - \frac{\partial V}{\partial x} \\
+m \frac{d^2y}{dt^2} &=  - \frac{\partial V}{\partial y}
+\end{aligned}
+$$
+
+さらに、地球の座標をベクトルで表そう。
+
+$$
+\boldsymbol{r} =
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+$$
+
+すると、先程の運動方程式は以下のように一行にまとめられる。
+
+$$
+\begin{aligned}
+m \frac{d^2 \boldsymbol{r}}{dt^2} &= - \nabla V
+\end{aligned}
+$$
+
+両辺ともにベクトルで有ることに注意。
+
+$\nabla$を$d/ d\boldsymbol{r}$と表現すれば
+
+$$
+\begin{aligned}
+m \frac{d^2 \boldsymbol{r}}{dt^2} &= -\frac{d V}{d \boldsymbol{r}}
+\end{aligned}
+$$
+
+となり、一次元空間での運動方程式
+
+$$
+\begin{aligned}
+m \frac{d^2 r}{dt^2} &= -\frac{d V}{d r}
+\end{aligned}
+$$
+
+と同じ形で表現できる。
+
+$\nabla$はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。
+
+先程見たように、スカラー場に$\nabla$を適用するとベクトル場を得る。これは勾配(gradient)と呼ばれ$\mathrm{grad}$で表記することがある。
+
+$$
+\mathrm{grad} f \equiv \nabla f
+$$
+
+$\nabla$とベクトル場と内積を取るとスカラー場になる。これは発散(divergence)と呼ばれ、$\mathrm{div}$で表記することがある。
+
+$$
+\mathrm{div} \boldsymbol{v} \equiv \nabla \cdot \boldsymbol{v}
+$$
+
+$\nabla$とベクトル場との外積をとるとベクトル場になる。これは回転(rotation)と呼ばれ、$\mathrm{rot}$で表記することがある。
+
+$$
+\mathrm{rot} \boldsymbol{v} \equiv \nabla \times \boldsymbol{v}
+$$
+
+これらがなぜ勾配、発散、回転と呼ばれているか、またその物理的な意味については位相空間の節で説明する。
+
+なお、$\nabla$は微分演算子であるから、積の順番を交換することはできないことに注意。
+
+$$
+\nabla fg \neq f \nabla g.
 $$
 
 ## 微分形式
 
-### 全微分と内積
+TODO: 別の場所に移す？
 
 変数$x$と$y$にのみ依存する2変数関数$f(x,y)$を考える。$x$と$y$が時間$t$に依存している時、すなわち$f(x(t), y(t))$と書ける時、$f$の時間微分は
 
@@ -506,99 +633,6 @@ $$
 $$
 
 が定義される。このように、$dx, dy$を縦ベクトル、$\partial_x, \partial_y$を横ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、$dx, dy$が住む世界と$\partial_x, \partial_y$が住む世界は双対空間である。
-
-偏微分をベクトルだと思う簡単な例として、太陽系を考えよう。太陽質量を$M$、地球の質量を$m$とし、地球の座標を$(x,y)$とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。
-
-$$
-\begin{aligned}
-m \frac{d^2x}{dt^2} &=  -G \frac{Mmx}{r^3} \\
-m \frac{d^2y}{dt^2} &=  -G \frac{Mmy}{r^3}
-\end{aligned}
-$$
-
-ただし、$r = \sqrt{x^2 + y^2}$である。これをベクトルの言葉で書いていきたい。
-
-まず、重力は保存力なので、ポテンシャルエネルギー$V(r)$を考えよう。
-
-$$
-V(r) = -\frac{GMm}{r}
-$$
-
-これを$x$で偏微分すると
-
-$$
-\frac{\partial V}{\partial x} = V'(r) \frac{dr}{dx}
-$$
-
-$dr/dx$をそのまま計算しても良いが、$r^2$の全微分を考えるのが楽である。
-
-$$
-r^2 = x^2 + y^2
-$$
-
-より、
-
-$$
-2r dr = 2xdx + 2ydy
-$$
-
-両辺$\partial_x$との内積をとると、
-
-$$
-\frac{\partial r}{\partial x} = \frac{x}{r}
-$$
-
-以上から、
-
-$$
-\frac{\partial V}{\partial x} = G \frac{Mmx}{r^3}
-$$
-
-$y$も同様である。ここから運動方程式は
-
-$$
-\begin{aligned}
-m \frac{d^2x}{dt^2} &=  - \frac{\partial V}{\partial x} \\
-m \frac{d^2y}{dt^2} &=  - \frac{\partial V}{\partial y}
-\end{aligned}
-$$
-
-さらに、地球の座標をベクトルで表そう。
-
-$$
-\boldsymbol{r} =
-\begin{pmatrix}
-x \\ y
-\end{pmatrix}
-$$
-
-すると、先程の運動方程式は以下のように一行にまとめられる。
-
-$$
-\begin{aligned}
-m \frac{d^2 \boldsymbol{r}}{dt^2} &= - \nabla V
-\end{aligned}
-$$
-
-両辺ともにベクトルで有ることに注意。
-
-$\nabla$を$d/ d\boldsymbol{r}$と書くと
-
-$$
-\begin{aligned}
-m \frac{d^2 \boldsymbol{r}}{dt^2} &= -\frac{d V}{d \boldsymbol{r}}
-\end{aligned}
-$$
-
-となり、一次元空間での運動方程式
-
-$$
-\begin{aligned}
-m \frac{d^2 r}{dt^2} &= -\frac{d V}{d r}
-\end{aligned}
-$$
-
-と同じ形になることがわかる。
 
 ### 外積
 

@@ -421,6 +421,19 @@
                                     class="math inline">\(\Sigma\)</span>を書くのは面倒である。そこで、同じ添字が２つ現れたら、その添字について和を取る、という約束をする。これを
                                     <strong>アインシュタイン規約(Einstein
                                     notation)</strong> と呼ぶ。</p>
+                                    <p>先程の式は、アインシュタイン規約を用いると以下のようにかける。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    A &amp;=
+                                    \begin{pmatrix}
+                                    a^1_1 &amp; a^2_1 &amp; a^3_1 \\
+                                    a^1_2 &amp; a^2_2 &amp; a^3_2 \\
+                                    a^1_3 &amp; a^2_3 &amp; a^3_3
+                                    \end{pmatrix}
+                                    = a^i_j \boldsymbol{e}^i \otimes
+                                    \boldsymbol{e}_j
+                                    \end{aligned}
+                                    \]</span></p>
                                     <h1
                                     id="微分と偏微分">微分と偏微分</h1>
                                     <p>力学は微分方程式を解く学問であるから、当然微積分が出てくる。特に合成関数の微分や、ベクトルによる微分などが現れるので、ここで簡単に確認しておこう。</p>
@@ -535,10 +548,11 @@
                                     class="math inline">\(\boldsymbol{r}
                                     =
                                     {}^t(x,y,z)\)</span>で表されており、その位置に依存するスカラー関数<span
-                                    class="math inline">\(f(\boldsymbol{r})\)</span>があるとしよう。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。<span
+                                    class="math inline">\(f(\boldsymbol{r})\)</span>があるとしよう。ただし、<span
                                     class="math inline">\(f\)</span>は<span
-                                    class="math inline">\((x,y,z)\)</span>に依存する関数であるから、<span
-                                    class="math inline">\(f(x,y,z)\)</span>であると考えて</p>
+                                    class="math inline">\(t\)</span>には陽には依存しないとする。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。<span
+                                    class="math inline">\(f\)</span>は<span
+                                    class="math inline">\(x,y,z\)</span>に依存する関数であるから、</p>
                                     <p><span class="math display">\[
                                     \frac{df}{dt} = \frac{\partial
                                     f}{\partial x} \dot{x}
@@ -583,14 +597,127 @@
                                     \frac{df}{dt} = (\nabla f) \cdot
                                     \dot{\boldsymbol{r}}
                                     \]</span></p>
-                                    <p>このように<span
-                                    class="math inline">\(\nabla\)</span>はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。ただし、微分演算子を含むため、積の順番を交換することはできないことに注意。</p>
+                                    <p><span
+                                    class="math inline">\(\nabla\)</span>を使う簡単な例として太陽系を考えよう。太陽質量を<span
+                                    class="math inline">\(M\)</span>、地球の質量を<span
+                                    class="math inline">\(m\)</span>とし、地球の座標を<span
+                                    class="math inline">\((x,y)\)</span>とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。</p>
                                     <p><span class="math display">\[
-                                    \nabla f \neq f \nabla.
+                                    \begin{aligned}
+                                    m \frac{d^2x}{dt^2} &amp;=  -G
+                                    \frac{Mmx}{r^3} \\
+                                    m \frac{d^2y}{dt^2} &amp;=  -G
+                                    \frac{Mmy}{r^3}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(r = \sqrt{x^2
+                                    +
+                                    y^2}\)</span>である。これをベクトルの言葉で書いていきたい。</p>
+                                    <p>まず、重力は保存力なので、ポテンシャルエネルギー<span
+                                    class="math inline">\(V(r)\)</span>を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    V(r) = -\frac{GMm}{r}
+                                    \]</span></p>
+                                    <p>これを<span
+                                    class="math inline">\(x\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial V}{\partial x} =
+                                    V&#39;(r) \frac{\partial r}{\partial
+                                    x}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    r^2 = x^2 + y^2
+                                    \]</span></p>
+                                    <p>の両辺を<span
+                                    class="math inline">\(x\)</span>で偏微分して、</p>
+                                    <p><span class="math display">\[
+                                    2r \frac{\partial r}{\partial x} = 2
+                                    x
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial r}{\partial x} =
+                                    \frac{x}{r}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial V}{\partial x} = G
+                                    \frac{Mmx}{r^3}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(y\)</span>も同様である。ここから運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2x}{dt^2} &amp;=  -
+                                    \frac{\partial V}{\partial x} \\
+                                    m \frac{d^2y}{dt^2} &amp;=  -
+                                    \frac{\partial V}{\partial y}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さらに、地球の座標をベクトルで表そう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{r} =
+                                    \begin{pmatrix}
+                                    x \\ y
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
+                                    &amp;= - \nabla V
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺ともにベクトルで有ることに注意。</p>
+                                    <p><span
+                                    class="math inline">\(\nabla\)</span>を<span
+                                    class="math inline">\(d/
+                                    d\boldsymbol{r}\)</span>と表現すれば</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
+                                    &amp;= -\frac{d V}{d \boldsymbol{r}}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となり、一次元空間での運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 r}{dt^2} &amp;= -\frac{d
+                                    V}{d r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と同じ形で表現できる。</p>
+                                    <p><span
+                                    class="math inline">\(\nabla\)</span>はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。</p>
+                                    <p>先程見たように、スカラー場に<span
+                                    class="math inline">\(\nabla\)</span>を適用するとベクトル場を得る。これは勾配(gradient)と呼ばれ<span
+                                    class="math inline">\(\mathrm{grad}\)</span>で表記することがある。</p>
+                                    <p><span class="math display">\[
+                                    \mathrm{grad} f \equiv \nabla f
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\nabla\)</span>とベクトル場と内積を取るとスカラー場になる。これは発散(divergence)と呼ばれ、<span
+                                    class="math inline">\(\mathrm{div}\)</span>で表記することがある。</p>
+                                    <p><span class="math display">\[
+                                    \mathrm{div} \boldsymbol{v} \equiv
+                                    \nabla \cdot \boldsymbol{v}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\nabla\)</span>とベクトル場との外積をとるとベクトル場になる。これは回転(rotation)と呼ばれ、<span
+                                    class="math inline">\(\mathrm{rot}\)</span>で表記することがある。</p>
+                                    <p><span class="math display">\[
+                                    \mathrm{rot} \boldsymbol{v} \equiv
+                                    \nabla \times \boldsymbol{v}
+                                    \]</span></p>
+                                    <p>これらがなぜ勾配、発散、回転と呼ばれているか、またその物理的な意味については位相空間の節で説明する。</p>
+                                    <p>なお、<span
+                                    class="math inline">\(\nabla\)</span>は微分演算子であるから、積の順番を交換することはできないことに注意。</p>
+                                    <p><span class="math display">\[
+                                    \nabla fg \neq f \nabla g.
                                     \]</span></p>
                                     <h1 id="微分形式">微分形式</h1>
-                                    <h2
-                                    id="全微分と内積">全微分と内積</h2>
+                                    <p>TODO: 別の場所に移す？</p>
                                     <p>変数<span
                                     class="math inline">\(x\)</span>と<span
                                     class="math inline">\(y\)</span>にのみ依存する2変数関数<span
@@ -709,97 +836,6 @@
                                     dy\)</span>が住む世界と<span
                                     class="math inline">\(\partial_x,
                                     \partial_y\)</span>が住む世界は双対空間である。</p>
-                                    <p>偏微分をベクトルだと思う簡単な例として、太陽系を考えよう。太陽質量を<span
-                                    class="math inline">\(M\)</span>、地球の質量を<span
-                                    class="math inline">\(m\)</span>とし、地球の座標を<span
-                                    class="math inline">\((x,y)\)</span>とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2x}{dt^2} &amp;=  -G
-                                    \frac{Mmx}{r^3} \\
-                                    m \frac{d^2y}{dt^2} &amp;=  -G
-                                    \frac{Mmy}{r^3}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>ただし、<span
-                                    class="math inline">\(r = \sqrt{x^2
-                                    +
-                                    y^2}\)</span>である。これをベクトルの言葉で書いていきたい。</p>
-                                    <p>まず、重力は保存力なので、ポテンシャルエネルギー<span
-                                    class="math inline">\(V(r)\)</span>を考えよう。</p>
-                                    <p><span class="math display">\[
-                                    V(r) = -\frac{GMm}{r}
-                                    \]</span></p>
-                                    <p>これを<span
-                                    class="math inline">\(x\)</span>で偏微分すると</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial V}{\partial x} =
-                                    V&#39;(r) \frac{dr}{dx}
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(dr/dx\)</span>をそのまま計算しても良いが、<span
-                                    class="math inline">\(r^2\)</span>の全微分を考えるのが楽である。</p>
-                                    <p><span class="math display">\[
-                                    r^2 = x^2 + y^2
-                                    \]</span></p>
-                                    <p>より、</p>
-                                    <p><span class="math display">\[
-                                    2r dr = 2xdx + 2ydy
-                                    \]</span></p>
-                                    <p>両辺<span
-                                    class="math inline">\(\partial_x\)</span>との内積をとると、</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial r}{\partial x} =
-                                    \frac{x}{r}
-                                    \]</span></p>
-                                    <p>以上から、</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial V}{\partial x} = G
-                                    \frac{Mmx}{r^3}
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(y\)</span>も同様である。ここから運動方程式は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2x}{dt^2} &amp;=  -
-                                    \frac{\partial V}{\partial x} \\
-                                    m \frac{d^2y}{dt^2} &amp;=  -
-                                    \frac{\partial V}{\partial y}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>さらに、地球の座標をベクトルで表そう。</p>
-                                    <p><span class="math display">\[
-                                    \boldsymbol{r} =
-                                    \begin{pmatrix}
-                                    x \\ y
-                                    \end{pmatrix}
-                                    \]</span></p>
-                                    <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
-                                    &amp;= - \nabla V
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>両辺ともにベクトルで有ることに注意。</p>
-                                    <p><span
-                                    class="math inline">\(\nabla\)</span>を<span
-                                    class="math inline">\(d/
-                                    d\boldsymbol{r}\)</span>と書くと</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
-                                    &amp;= -\frac{d V}{d \boldsymbol{r}}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>となり、一次元空間での運動方程式</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d^2 r}{dt^2} &amp;= -\frac{d
-                                    V}{d r}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>と同じ形になることがわかる。</p>
                                     <h2 id="外積">外積</h2>
                                     <p>微分形式では、<span
                                     class="math inline">\(dx\)</span>や<span
