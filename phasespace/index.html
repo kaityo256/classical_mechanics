@@ -64,7 +64,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{p} &amp;= - q \\
-                                    \dot{q} &amp;= p
+                                    \dot{q} &amp;= - p
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは二変数の一階微分方程式であるから、この運動は初期条件として<span
@@ -86,22 +86,25 @@
                                     class="math inline">\((p,q) =
                                     (1,0)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
                                     class="math inline">\((\dot{p},
-                                    \dot{q})=(0,1)\)</span>となる。これは、質点が原点にあるためにバネからの力はかかっておらず、したがって<span
+                                    \dot{q}) =
+                                    (0,1)\)</span>となる。これは、質点が原点にあるためにバネからの力はかかっておらず、したがって<span
                                     class="math inline">\(\dot{p}=0\)</span>であること、正の方向に速度<span
                                     class="math inline">\(1\)</span>を持っているため、次の瞬間に<span
-                                    class="math inline">\(q\)</span>が増加しようとしていることを表している。そこで位相空間の<span
-                                    class="math inline">\((1,0)\)</span>の場所に<span
+                                    class="math inline">\(q\)</span>が増加しようとしていることを表している。つまり、系の状態が<span
+                                    class="math inline">\((1,0)\)</span>である時、次の瞬間には<span
+                                    class="math inline">\((0,1)\)</span>の方向に移動するということを意味している。そこで位相空間の<span
+                                    class="math inline">\((1,0)\)</span>の場所に、移動の向きとして<span
                                     class="math inline">\((0,1)\)</span>のベクトルを書いておこう。</p>
                                     <p>次に、現在の状態が<span
                                     class="math inline">\((p,q) =
                                     (0,1)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
                                     class="math inline">\((\dot{p},
                                     \dot{q}) =
-                                    (-1,0)\)</span>となる。これはバネが伸び切って、速度がゼロである状態であるため、あとは縮む一方であることを意味する。先程と同様に、位相空間の<span
+                                    (-1,0)\)</span>となる。これはバネが伸び切って、速度がゼロである状態であるため、あとは縮む一方であることを意味する。そこで先程と同様に位相空間の<span
                                     class="math inline">\((0,1)\)</span>の点に、<span
                                     class="math inline">\((-1,
                                     0)\)</span>のベクトルを書いておこう。</p>
-                                    <p>どうような手続きで、<span
+                                    <p>同様な手続きで、<span
                                     class="math inline">\((-1,0)\)</span>の場所には<span
                                     class="math inline">\((0,-1)\)</span>のベクトルが、<span
                                     class="math inline">\((0,-1)\)</span>の場所には<span
@@ -186,6 +189,7 @@
                                     1 &amp; 0
                                     \end{pmatrix}
                                     \]</span></p>
+                                    <p>これは原点の周りを反時計回りに90度回転させる回転行列である。</p>
                     </article>
     </body>
 
