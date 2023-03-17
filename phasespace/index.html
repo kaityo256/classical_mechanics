@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>位相空間とリュービルの定理</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">位相空間とリュービルの定理</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1 id="本章の目的">本章の目的</h1>
+                                    <p>本章では位相空間を扱う。位相空間を考えることで、これまでの「物体の運動を追いかける」というラグランジュ的な描像から、「運動全体を流れ場として考える」というオイラー的描像に移り変わる。また、勾配や発散発散といったベクトル解析の言葉で運動が表現されるのも面白いところである。さらに、正準方程式に支配される運動が生み出す流れ場が非圧縮であるというリュービルの定理を導く。</p>
+                                    <h1 id="位相空間">位相空間</h1>
+                                    <p>一次元の調和振動子の運動を考えよう。簡単のため、質量やバネ定数を1とすると、正準方程式は以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{p} &amp;= - q \\
+                                    \dot{q} &amp;= p
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは二変数の一階微分方程式であるから、この運動は初期条件として<span
+                                    class="math inline">\((p,q)\)</span>の2つの変数を与えると、それ以後の運動が全て決まる。運動方程式を解くとは、<span
+                                    class="math inline">\(p(t),
+                                    q(t)\)</span>の時間発展を決めることだが、そこから<span
+                                    class="math inline">\(t\)</span>を消去すると、<span
+                                    class="math inline">\((p,q)\)</span>空間の曲線となる。これを運動の軌道と呼ぶ。自由度が1の系では、二次元空間を用意すれば過不足なく運動の軌道を記述できる。自由度が<span
+                                    class="math inline">\(N\)</span>の系なら<span
+                                    class="math inline">\(2N\)</span>次元の空間が必要である。例えば、3次元空間で<span
+                                    class="math inline">\(N\)</span>個の質点が相互作用しているような系は<span
+                                    class="math inline">\(6N\)</span>次元の空間が必要となる。この、運動を過不足無く記述できるような空間を
+                                    <strong>位相空間(phase
+                                    space)</strong>
+                                    と呼ぶ。一次元の調和振動子であれば、<span
+                                    class="math inline">\((p,q)\)</span>で表現される二次元空間が位相空間である。</p>
+                                    <p>この運動方程式が支配する運動について、特徴的な点についていくつか見てみよう。</p>
+                                    <p>まず、現在の状態が<span
+                                    class="math inline">\((p,q) =
+                                    (1,0)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
+                                    class="math inline">\((\dot{p},
+                                    \dot{q})=(0,1)\)</span>となる。これは、質点が原点にあるためにバネからの力はかかっておらず、したがって<span
+                                    class="math inline">\(\dot{p}=0\)</span>であること、正の方向に速度<span
+                                    class="math inline">\(1\)</span>を持っているため、次の瞬間に<span
+                                    class="math inline">\(q\)</span>が増加しようとしていることを表している。そこで位相空間の<span
+                                    class="math inline">\((1,0)\)</span>の場所に<span
+                                    class="math inline">\((0,1)\)</span>のベクトルを書いておこう。</p>
+                                    <p>次に、現在の状態が<span
+                                    class="math inline">\((p,q) =
+                                    (0,1)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
+                                    class="math inline">\((\dot{p},
+                                    \dot{q}) =
+                                    (-1,0)\)</span>となる。これはバネが伸び切って、速度がゼロである状態であるため、あとは縮む一方であることを意味する。先程と同様に、位相空間の<span
+                                    class="math inline">\((0,1)\)</span>の点に、<span
+                                    class="math inline">\((-1,
+                                    0)\)</span>のベクトルを書いておこう。</p>
+                                    <p>どうような手続きで、<span
+                                    class="math inline">\((-1,0)\)</span>の場所には<span
+                                    class="math inline">\((0,-1)\)</span>のベクトルが、<span
+                                    class="math inline">\((0,-1)\)</span>の場所には<span
+                                    class="math inline">\((1,0)\)</span>のベクトルを置くことになる。こうして<span
+                                    class="math inline">\((p,q)\)</span>空間の様々な場所に、その地点での<span
+                                    class="math inline">\((\dot{p},\dot{q})\)</span>の値をベクトルとして書き込んでいくと、全体で回転するようなベクトル場が得られる。すなわち、運動方程式は位相空間にベクトル場を定義する写像であると考えることができる。</p>
+                                    <p>もともとの運動方程式は二変数の連立一階微分方程式であるから、初期条件として<span
+                                    class="math inline">\((p,q)\)</span>の組を与えると、以後の運動が全てきまる。最初に<span
+                                    class="math inline">\((p,q)\)</span>の状態であった質点は、微小な時間<span
+                                    class="math inline">\(\delta
+                                    t\)</span>だけ経過すると、<span
+                                    class="math inline">\((p + \dot{p}
+                                    \delta t, q + \dot{q} \delta
+                                    t)\)</span>に移動するであろう。移動先を新たな初期条件と考えると、次はその場所でのベクトル<span
+                                    class="math inline">\((\dot{p},
+                                    \dot{q})\)</span>に従って進んでいく。こうして運動方程式は、位相空間という地図に、「次はどこに進むべきか」という情報を与えている。</p>
+                                    <h1
+                                    id="ラグランジュ描像とオイラー描像">ラグランジュ描像とオイラー描像</h1>
+                                    <p>運動方程式を「物体の運動を記述する」という見方から、「位相空間に速度場を定義する」という見方に変えることは、ラグランジュ描像からオイラー描像に移ったことに対応する。</p>
+                                    <p>今、流れる川の中に葉っぱが落ちたとしよう。その葉っぱをずっと追いかけると、その葉っぱは水から押されて右にいったり左にいったりしながら流れていく様子が見えるだろう。このように観測者が運動する物体に並走し、その物体の軌跡を観察するのがラグランジュ描像である。</p>
+                                    <p>一方、流れのある場では媒質の運動をおいかけるよりも、その場にとどまって流れがどう変化するかに興味があることが多い。例えば、天気予報においては風の向きが重要であるが、ある地点での空気が1時間後にどこに行くかよりも、ある地点での風向きが一時間後にどうなるかの方が重要である。このように観測者の場所を固定し、その場所での流れを観察し続けるのがオイラー描像である。オイラー描像では、例えば風向きを場の量として捉える。</p>
+                                    <p>場とは、物理量を空間や時間の関数として捉えることである。例えば等高線のある地図を考えよう。適当な座標(例えば緯度と経度)を指定すると、その場所での標高が決まる。この地図は、二次元座標<span
+                                    class="math inline">\((x,y)\)</span>を決めると、その場所での高さ<span
+                                    class="math inline">\(h(x,y)\)</span>を与えている。このように、座標を決めるとスカラー量が与えられるような場をスカラー場と呼ぶ。例えば温度はスカラー量であるから、様々な場所における温度分布を表すような温度場もスカラー場である。</p>
+                                    <p>同様に、場所を決めるとベクトルが決まるような場をベクトル場と呼ぶ。例えば流れるプールでは、場所が決まれば流れる向きが決まる。この流れの速度場はベクトル場である。正準方程式は、<span
+                                    class="math inline">\((p,q)\)</span>という位相空間に、<span
+                                    class="math inline">\((\dot{p},
+                                    \dot{q})\)</span>というベクトル場を対応させる写像であると考えることができる。</p>
+                                    <p>ベクトル場が定義された位相空間の一点にトレーサーを置こう。トレーサーはその場所のベクトルの向きに移動する。そして、移動先のベクトルの向きに動き……ということを繰り返す。川にインクを少量ずつたらしていくとそのインクにより流れ場が可視化されるように、トレーサーは位相空間における軌跡を可視化する。すなわち、位相空間におけるベクトル場とは、系の時間発展の流れを表す流れ場となっている。この流れ場の性質を調べるのが本章の目的である。</p>
+                                    <h1
+                                    id="リュービルの定理">リュービルの定理</h1>
+                                    <p>一自由度系のハミルトニアン<span
+                                    class="math inline">\(H(p,q)\)</span>に支配される正準方程式を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{p} &amp;= - \frac{\partial
+                                    H}{\partial q} \\
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを、<span
+                                    class="math inline">\((p,q)\)</span>で張られる位相空間に<span
+                                    class="math inline">\((\dot{p},
+                                    \dot{q})\)</span>という速度場を定義する式であると考える。場であることがわかりやすいように、位置ベクトルと速度ベクトルを定義しておこう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{r} =
+                                    \begin{pmatrix}
+                                    p\\
+                                    q
+                                    \end{pmatrix},
+                                    \boldsymbol{v} =
+                                    \begin{pmatrix}
+                                    \dot{p} \\
+                                    \dot{q}
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>ハミルトニアンに関して<span
+                                    class="math inline">\(p\)</span>や<span
+                                    class="math inline">\(q\)</span>の偏微分があるので、ハミルトニアンをスカラー場と思って<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>で微分してみよう。</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial H}{\partial
+                                    \boldsymbol{r}} \equiv \nabla H
+                                    =
+                                    \begin{pmatrix}
+                                    \partial_p H \\
+                                    \partial_q H
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>すると、正準方程式は以下のように表現できる。</p>
+                                    <p><span class="math display">\[
+                                    \dot{\boldsymbol{r}} = \Omega \nabla
+                                    H
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(\Omega\)</span>は以下のような2行2列の行列である。</p>
+                                    <p><span class="math display">\[
+                                    \Omega=
+                                    \begin{pmatrix}
+                                    0 &amp; -1\\
+                                    1 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                    </article>
+    </body>
+
+    </html>
