@@ -2,5 +2,15 @@ PREDEF:
   - preface.re
 
 CHAPS:
+  - preparation.re
+  - review.re
+  - virtual_work.re
+  - hamilton_principle.re
+  - lagrangian.re
+  - hamiltonian.re
+  - phasespace.re
+  - poisson.re
+
 POSTDEF:
+  - postface.re
 APPENDIX:
