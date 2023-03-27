@@ -8,8 +8,10 @@ CHAPS:
   - hamilton_principle.re
   - lagrangian.re
   - hamiltonian.re
-  - phasespace.re
+  - variational_principle.re
   - poisson.re
+  - phasespace.re
+  - canonical_transformation.re
 
 POSTDEF:
   - postface.re
