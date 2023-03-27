@@ -12,6 +12,7 @@ CHAPS:
   - poisson.re
   - phasespace.re
   - canonical_transformation.re
+  - quantum_mechanics.re
 
 POSTDEF:
   - postface.re
