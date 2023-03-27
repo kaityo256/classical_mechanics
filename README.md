@@ -85,7 +85,7 @@
 
 ## 対称性とネーターの定理
 
-## 解析力学から量子力学へ
+## [解析力学から量子力学へ](quantum_mechanics/README.md)
 
 ## [より深く学ぶために](references/README.md)
 
