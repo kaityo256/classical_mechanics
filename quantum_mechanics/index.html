@@ -41,6 +41,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
                         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
             type="text/css" />
@@ -51,7 +54,74 @@
                                     <header>
                 <h1 class="title">解析力学から量子力学へ</h1>
                                                             </header>
-                                    
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1 id="交換関係">交換関係</h1>
+                                    <h1 id="経路積分">経路積分</h1>
+                                    <h1
+                                    id="時間非依存シュレーディンガー方程式">時間非依存シュレーディンガー方程式</h1>
+                                    <p>波動関数を<span
+                                    class="math inline">\(\psi(x,t)\)</span>とする時、一次元シュレーディンガー方程式は以下のように表現された。</p>
+                                    <p><span class="math display">\[
+                                    i\hbar \frac{\partial \psi}{\partial
+                                    t}
+                                    = \left(
+                                    -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
+                                    x^2} + V \right) \psi
+                                    \]</span></p>
+                                    <p>今、ポテンシャル<span
+                                    class="math inline">\(V\)</span>が位置<span
+                                    class="math inline">\(x\)</span>のみに依存し、<span
+                                    class="math inline">\(t\)</span>には依存しないとしよう。すると、左辺には時間に関係する項のみが、右辺には空間に関係する項のみがあるから変数分離ができる。</p>
+                                    <p><span class="math display">\[
+                                    \psi(x,t) = X(x)T(t)
+                                    \]</span></p>
+                                    <p>両辺に代入すると、</p>
+                                    <p><span class="math display">\[
+                                    i\hbar X(x)T&#39;(t) = T(t) \left(
+                                    -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
+                                    x^2} + V \right) X(x)
+                                    \]</span></p>
+                                    <p>整理すると、</p>
+                                    <p><span class="math display">\[
+                                    i\hbar \frac{T&#39;(t)}{T(t)} =
+                                    \frac{1}{X(x)} \left(
+                                    -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
+                                    x^2} + V \right) X(x)
+                                    \]</span></p>
+                                    <p>左辺は<span
+                                    class="math inline">\(t\)</span>だけ、右辺は<span
+                                    class="math inline">\(x\)</span>だけの関数であるから、それが等式で結ばれるということは定数しかありえない。その定数を<span
+                                    class="math inline">\(E\)</span>とすると、</p>
+                                    <p><span class="math display">\[
+                                    i\hbar T&#39;(t) = E T(t)
+                                    \]</span></p>
+                                    <p>ここから、</p>
+                                    <p><span class="math display">\[
+                                    T(t) \propto \exp(-i Et/\hbar)
+                                    \]</span></p>
+                                    <p>また、<span
+                                    class="math inline">\(x\)</span>に関する項は</p>
+                                    <p><span class="math display">\[
+                                    \left(
+                                    -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
+                                    x^2} + V \right) X(x) = E X(x)
+                                    \]</span></p>
+                                    <p>改めて<span
+                                    class="math inline">\(X(x)\)</span>を<span
+                                    class="math inline">\(\psi(x)\)</span>と表記すると、</p>
+                                    <p><span class="math display">\[
+                                    \left(
+                                    -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
+                                    x^2} + V \right) \psi = E \psi
+                                    \]</span></p>
+                                    <p>左辺を<span
+                                    class="math inline">\(\hat{H}\)</span>で書けば</p>
+                                    <p><span class="math display">\[
+                                    \hat{H}\psi = E\psi
+                                    \]</span></p>
+                                    <p>これが時間非依存のシュレーディンガー方程式である。意味は、ハミルトニアンを演算子とした時、波動関数がその演算子の固有関数であり、固有値がエネルギーであることを意味している。</p>
                     </article>
     </body>
 
