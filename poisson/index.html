@@ -90,33 +90,45 @@
                                     class="math inline">\(\dot{p},
                                     \dot{q}\)</span>を消去すると、</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{dA}{dt} &amp;= \frac{\partial
+                                    \frac{dA}{dt} = \frac{\partial
                                     A}{\partial q}\frac{\partial
                                     H}{\partial p} -\frac{\partial
                                     A}{\partial p}\frac{\partial
                                     H}{\partial q}
-                                    \end{aligned}
                                     \]</span></p>
                                     <p>この式の右辺を見ると、<span
                                     class="math inline">\(p,q\)</span>や<span
                                     class="math inline">\(H,A\)</span>が対称な形で含まれていることがわかる。そこで、以下のような括弧式を定義する。</p>
                                     <p><span class="math display">\[
-                                    \left\{X, Y\right\} \equiv
+                                    \left\{X, Y\right\}_{p,q} \equiv
                                     \frac{\partial X}{\partial
                                     q}\frac{\partial Y}{\partial p} -
                                     \frac{\partial X}{\partial
                                     p}\frac{\partial Y}{\partial q}
                                     \]</span></p>
-                                    <p>これを用いると、物理量<span
+                                    <p>括弧の添字の<span
+                                    class="math inline">\(p,q\)</span>は、この変数で微分する、という意味である。これを用いると、物理量<span
                                     class="math inline">\(A\)</span>の時間微分は</p>
                                     <p><span class="math display">\[
-                                    \frac{dA}{dt} = \left\{A, H\right\}
+                                    \frac{dA}{dt} = \left\{A,
+                                    H\right\}_{p,q}
                                     \]</span></p>
                                     <p>と書くことができる。この括弧を
-                                    <strong>ポアッソン括弧(Poisson
-                                    bracket)</strong>
-                                    と呼ぶ。ポアッソン括弧を用いると、正準方程式は</p>
+                                    <strong>ポアソン括弧(Poisson
+                                    bracket)</strong> と呼ぶ。</p>
+                                    <p>さて、実はポアソン括弧は正準変数に対して不変である。すなわち、ある正準変数の組<span
+                                    class="math inline">\((p,q)\)</span>が、正準変換により別の正準変数の組<span
+                                    class="math inline">\((P,Q)\)</span>に変換される時、<span
+                                    class="math inline">\((p,q)\)</span>で定義したポアソン括弧式と、<span
+                                    class="math inline">\((P,Q)\)</span>で定義したポアソン括弧式は等しいことが証明できる。したがって、ポアソン括弧式は正準変換で移り変わることができるいかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。</p>
+                                    <p><span class="math display">\[
+                                    \left\{X, Y\right\}_{p,q} =
+                                    \left\{X, Y\right\}_{P,Q} =
+                                    \left\{X, Y\right\}
+                                    \]</span></p>
+                                    <p>TODO:
+                                    正準変換によりポアソン括弧式が不変であることを証明する？</p>
+                                    <p>ポアソン括弧を用いると、正準方程式は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{p} &amp;= \left\{p, H\right\}
@@ -124,21 +136,27 @@
                                     \dot{q} &amp;= \left\{q, H\right\}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>と書ける。<span
+                                    <p>と書くことができる。<span
                                     class="math inline">\(Y\)</span>という量から<span
                                     class="math inline">\(\{X,
                                     Y\}\)</span>という量を作ることを、「<span
                                     class="math inline">\(Y\)</span>の左から<span
-                                    class="math inline">\(X\)</span>とのポアッソン括弧をとる」と表現しよう。同様に<span
+                                    class="math inline">\(X\)</span>とのポアソン括弧をとる」と表現しよう。同様に<span
                                     class="math inline">\(\{Y,
                                     X\}\)</span>は<span
                                     class="math inline">\(Y\)</span>の右から<span
-                                    class="math inline">\(A\)</span>とのポアッソン括弧をとったものである。</p>
-                                    <p>すると、「ある物理量<span
+                                    class="math inline">\(A\)</span>とのポアソン括弧をとったものである。すると、「ある物理量<span
                                     class="math inline">\(A\)</span>について、右からハミルトニアン<span
-                                    class="math inline">\(H\)</span>とのポアッソン括弧をとること」が、「時間<span
-                                    class="math inline">\(t\)</span>で微分すること」に対応していることがわかる。ここでは時間微分からポアッソン括弧を定義したが、後に見るように、右からある物理量とのポアッソン括弧をとることは、その量と正準共役な量で微分することに対応する。つまり、ポアッソン括弧は時間微分よりも広い概念を含んでおり、それ故に様々なことがわかる。</p>
-                                    <p>さて、ポアッソン括弧の物理的な意味を見る前に、ポアッソン括弧が満たす性質を調べておこう。</p>
+                                    class="math inline">\(H\)</span>とのポアソン括弧をとること」が、「時間<span
+                                    class="math inline">\(t\)</span>で微分すること」に対応していることがわかる。</p>
+                                    <p>ポアソン括弧式が正準変換に対して不変である事実は重要である。前提として、物理法則は座標のとり方によって形を変えて欲しくない。より正確に言えば、座標を変換した時、物理量が全て同じ様に変換するため、変換前と後で同じ形の式が成立する時、その式は共変性を持つという。我々は既に正準方程式が正準変換に対して形を変えないことを見た。つまり、正準方程式は正準変換に対して共変である。であるならば、運動方程式を表現するのにどのような座標を採用するかは重要ではないのだから、座標を陽に書かない表現が好ましい。もう一度物理量の時間微分を見てみよう。</p>
+                                    <p><span class="math display">\[
+                                    \frac{dA}{dt} = \left\{A, H\right\}
+                                    \]</span></p>
+                                    <p>この式には、座標が陽に現れない。我々が正準変数として<span
+                                    class="math inline">\((p,q)\)</span>を選んでいようが<span
+                                    class="math inline">\((P,Q)\)</span>を選んでいようが、この式は形を変えないのだから、座標を気にしなくて良い。後に、この哲学をより押し進めた形の運動方程式を見る。</p>
+                                    <p>さて、ポアソン括弧の物理的な意味を見る前に、ポアソン括弧が満たす数学的な性質を調べておこう。</p>
                                     <p>まず、括弧に入れる変数を入れ替えると負符号がつく。</p>
                                     <p><span class="math display">\[
                                     \left\{X, Y\right\} = - \left\{Y,
@@ -180,7 +198,7 @@
                                     \frac{d}{dx} (fg) = f&#39;g +
                                     fg&#39;
                                     \]</span></p>
-                                    <p>ポアッソン括弧も微分を含むことから、括弧に関数の積を入れるとライプニッツ則により分解することができる。</p>
+                                    <p>ポアソン括弧も微分を含むことから、括弧に関数の積を入れるとライプニッツ則により分解することができる。</p>
                                     <p><span class="math display">\[
                                     \left\{XY , Z\right\} = X \left\{Y,
                                     Z\right\} + \left\{X, Z\right\} Y
@@ -206,7 +224,7 @@
                                     <li>ヤコビ恒等式</li>
                                     <li>ライプニッツルール</li>
                                     </ul>
-                                    <p>以下では、このポアソン括弧を積とみなすと、リー環という代数構造を作ることを見る。しかし、その前にリー環とは何か、そもそも代数構造とは何かというところから見ておこう。</p>
+                                    <p>このうち、最初の3つの性質(反対称性、双線型性、ヤコビ恒等式)を満たす代数をリー代数と呼ぶ。以下では、このポアソン括弧を積とみなすと、リー環という代数構造を作ることを見る。しかし、その前にリー環とは何か、そもそも代数構造とは何かというところから見ておこう。</p>
                                     <h1 id="群">群</h1>
                                     <p>数学は大きく分けると代数、幾何、解析の３つに分けることができる。幾何は広い意味での図形を扱う学問である。解析とは極限を扱う学問で、微分や積分などが含まれる。そして代数とは、広い意味での足し算や掛け算を調べる学問である。足し算や掛け算といった算法は演算として抽象化され、様々な演算が作る構造(これを代数的構造と呼ぶ)について調べるのが代数学である。先程出てきたポアソン括弧も、リー代数という代数構造を作る。リー代数がどういうものであるかを調べる前に、最も基本的な代数構造である群から見ていきたい。以下では数学的な厳密さはあまり気にせず、「だいたいこういうもの」という説明をするため、詳細な定義については専門書を参照されたい。以下、しばらく代数の話が続くが、そのうち解析力学に戻ってくるのでお付き合いいただきたい。</p>
                                     <p>先程出てきたリー環は、リー群という代数構造から自然に作ることができる。リー群は群の一種であり、群とは、何か操作の対象と操作の組があり、ある操作が後から打ち消せるものを言う。簡単な例として回転するツマミを考えよう。どこか基準となる向きを決め、そこから反時計回りに測った角度を、このツマミの状態としよう。例えばこのツマミの角度が<span
@@ -279,7 +297,7 @@
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>で表現しよう。すると、これを<span
-                                    class="math inline">\(\theta\)</span>だけ回転する演算<span
+                                    class="math inline">\(\phi\)</span>だけ回転する演算<span
                                     class="math inline">\(U(\phi)\)</span>は、以下の2行2列の回転行列で表すことができる。</p>
                                     <p><span class="math display">\[
                                     U(\phi) =
@@ -290,8 +308,7 @@
                                     \]</span></p>
                                     <p>これを群の表現行列と呼ぶ。</p>
                                     <h1 id="生成子">生成子</h1>
-                                    <p>さて、リー群は微分できるのが特徴であったから、微分してみよう。</p>
-                                    <p>ツマミの角度が<span
+                                    <p>さて、リー群は微分できるのが特徴であったから、微分してみよう。ツマミの角度が<span
                                     class="math inline">\(\theta\)</span>であったとして、それを微小角<span
                                     class="math inline">\(h\)</span>だけ回転する操作は以下のように表現できる。</p>
                                     <p><span class="math display">\[
@@ -299,7 +316,8 @@
                                     \]</span></p>
                                     <p>今、回転角<span
                                     class="math inline">\(h\)</span>が小さい(<span
-                                    class="math inline">\(|h|\ll
+                                    class="math inline">\(\lvert h
+                                    \rvert \ll
                                     1)\)</span>として、右辺をテイラー展開しよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -400,6 +418,85 @@
                                     class="math inline">\(i\mathcal{L}\)</span>を、回転を生成する演算子であるという意味で
                                     <strong>生成子(generator)</strong>
                                     と呼ぶ。</p>
+                                    <p>ここでは回転を例にとったが、何か連続的なパラメータを持つ対象に対して並進変換を引き起こす全ての演算子に対して同じ議論をすることができる。そのような例の代表が時間発展だ。</p>
+                                    <p>今、正準変数<span
+                                    class="math inline">\((p,q)\)</span>で記述できる世界を考えよう。この世界では全ての物理量を<span
+                                    class="math inline">\((p,q)\)</span>の関数として表現できる。そのような物理量として<span
+                                    class="math inline">\(A(p,q)\)</span>を考える。いま、運動方程式に従って<span
+                                    class="math inline">\((p(t),q(t))\)</span>が<span
+                                    class="math inline">\((p(t+h),
+                                    q(t+h))\)</span>に時間発展したとしよう。物理量<span
+                                    class="math inline">\(A\)</span>は<span
+                                    class="math inline">\(p,q\)</span>を通して時間発展を行うので、時刻<span
+                                    class="math inline">\(t\)</span>なら<span
+                                    class="math inline">\(A(p(t),q(t))\)</span>と書くべきだが、これを<span
+                                    class="math inline">\(A(t)\)</span>と表記する。回転の時と同様に、<span
+                                    class="math inline">\(A(t+h)\)</span>をテイラー展開することで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    A(t+ h) &amp;= A(t) + A&#39;(t)h+
+                                    A&#39;&#39;(t)\frac{h^2}{2} +
+                                    \cdots\\
+                                    &amp;= \sum_{k=0}^{\infty}
+                                    \frac{h^k}{k!} \frac{d^k}{dt^k}
+                                    A(t)\\
+                                    &amp;= \underbrace{\exp\left(h
+                                    \frac{d}{dt}\right)}_{\equiv U(h)}
+                                    A(t) \\
+                                    &amp;\equiv U(h) A(t)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(A\)</span>の時間微分は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dA}{dt} &amp;= \frac{\partial
+                                    A}{\partial q}\frac{\partial
+                                    H}{\partial p} -\frac{\partial
+                                    A}{\partial p}\frac{\partial
+                                    H}{\partial q} \\
+                                    &amp;= \left( \frac{\partial
+                                    H}{\partial p}\frac{\partial
+                                    }{\partial q} -\frac{\partial
+                                    H}{\partial q}\frac{\partial
+                                    }{\partial p}\right) A
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>時間発展に関する生成子<span
+                                    class="math inline">\(i\mathcal{L}\)</span>は、時間微分を引き起こす演算子であるから、</p>
+                                    <p><span class="math display">\[
+                                    \frac{dA}{dt} \equiv i\mathcal{L}A
+                                    \]</span></p>
+                                    <p>先程の式と見比べると、</p>
+                                    <p><span class="math display">\[
+                                    i\mathcal{L} = \left( \frac{\partial
+                                    H}{\partial p}\frac{\partial
+                                    }{\partial q} -\frac{\partial
+                                    H}{\partial q}\frac{\partial
+                                    }{\partial p}\right)
+                                    \]</span></p>
+                                    <p>であることがわかる。時間発展演算子の生成子を特に
+                                    <strong>リュービル演算子(Liouville
+                                    operator)</strong>
+                                    と呼ぶ。回転の時と同様な議論により、リュービル演算子を指数関数の肩に載せたものが時間発展演算子である。</p>
+                                    <p><span class="math display">\[
+                                    U(h) = \exp(ih\mathcal{L})
+                                    \]</span></p>
+                                    <p>ここまでの議論をまとめておこう。</p>
+                                    <ul>
+                                    <li>有限の連続的な変化を引き起こす演算子<span
+                                    class="math inline">\(U(h)\)</span>を考える</li>
+                                    <li>その演算子に引数にゼロを代入すると、変化させない、すなわち恒等演算子<span
+                                    class="math inline">\(U(0)\)</span>が定義できる</li>
+                                    <li>恒等演算子から少しだけ動かした時の、「動く方向」だけを定義する演算子<span
+                                    class="math inline">\(U&#39;(0)\)</span>を生成子と呼び、<span
+                                    class="math inline">\(i\mathcal{L}\)</span>で表現する</li>
+                                    <li>演算子<span
+                                    class="math inline">\(U(h)\)</span>と生成子<span
+                                    class="math inline">\(i\mathcal{L}\)</span>の間には<span
+                                    class="math inline">\(U(h) = \exp(ih
+                                    \mathcal{L})\)</span>の関係がある</li>
+                                    </ul>
                                     <h1
                                     id="三次元回転の生成子とリー環">三次元回転の生成子とリー環</h1>
                                     <p>リー群の表現行列<span

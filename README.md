@@ -65,6 +65,11 @@
 * ルジャンドル変換
 * 余談：双対変換
 
+## [正準変換](canonical_transformation/README.md)
+
+* 正準変換
+* 母関数
+
 ## [ポアソン括弧](poisson/README.md)
 
 * ポアソン括弧
@@ -75,11 +80,6 @@
 
 * 位相空間
 * リュービルの定理
-
-## [正準変換](canonical_transformation/README.md)
-
-* 正準変換
-* 母関数
 
 ## ハミルトン・ヤコビ形式
 
