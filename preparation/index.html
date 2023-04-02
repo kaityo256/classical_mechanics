@@ -57,10 +57,7 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。解析力学の美しさを実感するためには、長ったらしい計算を泥臭く最後まで完遂する腕力が必須である<a
-                                    href="#fn1" class="footnote-ref"
-                                    id="fnref1"
-                                    role="doc-noteref"><sup>1</sup></a>。以下、かなり当たり前な計算を延々と実行するが、面倒くさがらずについてきて欲しい。</p>
+                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。特に、数学の主要三分野である解析、代数、幾何の全てが現れるのが解析力学の難しいところであり、また面白いところでもある。解析力学の美しさを実感するためには、長ったらしい計算を泥臭く最後まで完遂する腕力が必須である。以下、かなり当たり前な定義や計算を延々と確認するが、面倒くさがらずについてきて欲しい。</p>
                                     <h1
                                     id="ベクトルとスカラー">ベクトルとスカラー</h1>
                                     <h2
@@ -368,13 +365,13 @@
                                     <h2 id="基底の変換">基底の変換</h2>
                                     <p>TODO: 書く</p>
                                     <h2 id="テンソル積">テンソル積</h2>
-                                    <p>解析力学において、(いわゆる行列の意味での)テンソル積はあまりでてこない。しかし、この後に学ぶ微分形式で必要となるので、簡単に紹介しておこう。</p>
+                                    <p>解析力学においては、いわゆる行列の意味でのテンソル積はあまりでてこない。しかし、後に学ぶ微分形式でその概念が必要となるので、簡単に紹介しておこう。</p>
                                     <p>基底<span
                                     class="math inline">\(\boldsymbol{e}_1\)</span>と、その相方とのテンソル積
                                     <span
                                     class="math inline">\(\boldsymbol{e}^1
                                     \otimes
-                                    \boldsymbol{e}_1\)</span>を以下のように作る。</p>
+                                    \boldsymbol{e}_1\)</span>を以下のように定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \boldsymbol{e}^1 \otimes
@@ -394,7 +391,7 @@
                                     0 &amp; 0 &amp; 0
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>これが3行3列の行列の1行目1列目の要素を表現する基底になっていることがわかる。全く同様に<span
+                                    <p>これが3行3列の行列の1行目1列目の要素を表現する基底になっていることがわかるであろう。全く同様に<span
                                     class="math inline">\(\boldsymbol{e}^j
                                     \otimes
                                     \boldsymbol{e}_i\)</span>を定義することができ、これが<span
@@ -404,12 +401,12 @@
                                     \begin{aligned}
                                     A &amp;=
                                     \begin{pmatrix}
-                                    a^1_1 &amp; a^2_1 &amp; a^3_1 \\
-                                    a^1_2 &amp; a^2_2 &amp; a^3_2 \\
-                                    a^1_3 &amp; a^2_3 &amp; a^3_3
+                                    A^1_1 &amp; A^2_1 &amp; A^3_1 \\
+                                    A^1_2 &amp; A^2_2 &amp; A^3_2 \\
+                                    A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
                                     = \sum_{i=1}^{3} \sum_{j=1}^{3}
-                                    a^i_j \boldsymbol{e}^i \otimes
+                                    A^i_j \boldsymbol{e}^i \otimes
                                     \boldsymbol{e}_j
                                     \end{aligned}
                                     \]</span></p>
@@ -426,14 +423,60 @@
                                     \begin{aligned}
                                     A &amp;=
                                     \begin{pmatrix}
-                                    a^1_1 &amp; a^2_1 &amp; a^3_1 \\
-                                    a^1_2 &amp; a^2_2 &amp; a^3_2 \\
-                                    a^1_3 &amp; a^2_3 &amp; a^3_3
+                                    A^1_1 &amp; A^2_1 &amp; A^3_1 \\
+                                    A^1_2 &amp; A^2_2 &amp; A^3_2 \\
+                                    A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
-                                    = a^i_j \boldsymbol{e}^i \otimes
+                                    = A^i_j \boldsymbol{e}^i \otimes
                                     \boldsymbol{e}_j
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>ベクトルや行列を要素表現した時の添字の数を「足」と呼ぶ。ベクトルのテンソル積を考えることで足を増やすことができる。ベクトルは足が1本であり、行列は足が2本である。ベクトルのテンソル積により作られた世界は、元になったベクトルよりも広い世界になっている。例えば3次元縦ベクトルと横ベクトルのテンソル積は、3行3列の行列、すなわち9次元の空間になっている。このベクトルや行列をまとめて
+                                    <strong>テンソル(Tensor)</strong>
+                                    と呼ぶ。足の本数、つまり添字の数をテンソルの階数と呼ぶ。ベクトルは1階のテンソル、行列は2階のテンソルである。テンソル積により、いくらでも高階のテンソルを考えることができる。</p>
+                                    <p>テンソルは様々なところに現れる。例えば連続体の力学では応力テンソルが重要な役割を果たす。一方、テンソルは抽象的な概念であり、なかなかイメージすることが難しい。まず、テンソルを内積を通じて理解しておくと良い。</p>
+                                    <p>縦ベクトル<span
+                                    class="math inline">\(\boldsymbol{a}\)</span>と、横ベクトル<span
+                                    class="math inline">\(\boldsymbol{b}\)</span>の内積を要素表現すると、</p>
+                                    <p><span class="math display">\[
+                                    (\boldsymbol{a}, \boldsymbol{b}) =
+                                    b^i a_i
+                                    \]</span></p>
+                                    <p>となる。ここでアインシュタイン規約を使っていることに注意。上下の足がつぶれて足のない数、すなわちスカラーになっている。</p>
+                                    <p>同様に、行列<span
+                                    class="math inline">\(A\)</span>と、縦ベクトルの基底<span
+                                    class="math inline">\(\boldsymbol{e}_k\)</span>の内積<span
+                                    class="math inline">\((A,
+                                    \boldsymbol{e}_k)\)</span>を考えよう。行列<span
+                                    class="math inline">\(A\)</span>は、縦ベクトルと横ベクトルのテンソル積で展開できるのであるから、</p>
+                                    <p><span class="math display">\[
+                                    (A, \boldsymbol{e}_k) = (A^i_j
+                                    \boldsymbol{e}^i \otimes
+                                    \boldsymbol{e}_j, \boldsymbol{e}_k)
+                                    \]</span></p>
+                                    <p>ここで、横ベクトルと縦ベクトルの内積が</p>
+                                    <p><span class="math display">\[
+                                    (\boldsymbol{e}^i, \boldsymbol{e}_k)
+                                    = \delta_{ik}
+                                    \]</span></p>
+                                    <p>を満たすことから、<span
+                                    class="math inline">\(i=k\)</span>のところだけが残り、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (A, \boldsymbol{e}_k) &amp;= (A^i_j
+                                    \boldsymbol{e}^i \otimes
+                                    \boldsymbol{e}_j,
+                                    \boldsymbol{e}_k)\\
+                                    &amp;= A^k_i \boldsymbol{e}^i
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。つまり、行列と縦ベクトルの内積をとると、行列を構成していた横ベクトルの成分と相殺して、縦ベクトルが残る、と解釈できる。同様に、行列と横ベクトルの内積を取ると、縦ベクトルの成分と相殺して横ベクトルが出てくる。</p>
+                                    <p>ここでは、2階のテンソルとして縦ベクトルと横ベクトルのテンソル積を考えたが、縦ベクトル2つのテンソル積を考えることもできる。その場合は添字が2つとも下付きとなる。</p>
+                                    <p><span class="math display">\[
+                                    A = A_{ij} \boldsymbol{e}_i \otimes
+                                    \boldsymbol{e}_j
+                                    \]</span></p>
+                                    <p>こうして作られたテンソルは、行列のように表現できないが、「横ベクトルと内積をとると横ベクトルとなり、さらに横ベクトルと内積をとるとスカラーになるもの」と理解できる。このように、テンソルがイメージできないうちは「上下の逆側の足を持つベクトルと内積をとると、その足が潰せるもの」と理解しておくと良い。</p>
                                     <h1
                                     id="微分と偏微分">微分と偏微分</h1>
                                     <p>力学は微分方程式を解く学問であるから、当然微積分が出てくる。特に合成関数の微分や、ベクトルによる微分などが現れるので、ここで簡単に確認しておこう。</p>
@@ -449,9 +492,9 @@
                                     <p>などと分数の形で表記する。この表記を
                                     <strong>ライプニッツ記法(Leibniz’s
                                     notation)</strong> と呼ぶ<a
-                                    href="#fn2" class="footnote-ref"
-                                    id="fnref2"
-                                    role="doc-noteref"><sup>2</sup></a>。</p>
+                                    href="#fn1" class="footnote-ref"
+                                    id="fnref1"
+                                    role="doc-noteref"><sup>1</sup></a>。</p>
                                     <p>ライプニッツ記法では、何を何で微分したかが明記されているため混乱が少ないが、式が複雑であるときに煩わしいことがある。そこで、本講義では適宜、別の記法も用いることにする。</p>
                                     <p>まず関数<span
                                     class="math inline">\(f(x)\)</span>を見ると、<span
@@ -474,9 +517,9 @@
                                     <p>とプライム記号を増やして表記する。このような表記を
                                     <strong>ラグランジュ記法(Lagrange’s
                                     notation)</strong> と呼ぶ<a
-                                    href="#fn3" class="footnote-ref"
-                                    id="fnref3"
-                                    role="doc-noteref"><sup>3</sup></a></p>
+                                    href="#fn2" class="footnote-ref"
+                                    id="fnref2"
+                                    role="doc-noteref"><sup>2</sup></a></p>
                                     <p>それ以上の高階微分や、<span
                                     class="math inline">\(n\)</span>階微分など微分回数が変数である場合は</p>
                                     <p><span class="math display">\[
@@ -500,9 +543,9 @@
                                     <p>これを
                                     <strong>ニュートン記法(Newton’s
                                     notation)</strong> と呼ぶ。<a
-                                    href="#fn4" class="footnote-ref"
-                                    id="fnref4"
-                                    role="doc-noteref"><sup>4</sup></a>
+                                    href="#fn3" class="footnote-ref"
+                                    id="fnref3"
+                                    role="doc-noteref"><sup>3</sup></a>
                                     高階数微分ではドットの上に数を書く表記もあるが、ほとんどの場合において二階微分までしか扱わないため、二重ドット表記まで覚えれば良い。</p>
                                     <p>これらの表記が複合する場合がある。例えば位置<span
                                     class="math inline">\(x\)</span>は時間の関数であり、力<span
@@ -873,24 +916,20 @@
                                     <hr />
                                     <ol>
                                     <li
-                                    id="fn1"><p>これは解析力学に限らない。どんなに美しく完成された学問でも、教科書を眺めているだけでは理解できない。途中に現れる泥臭い計算を地道に実行するのが、結局は理解の早道だ。まずは式の意味を理解しなくて良いから、何も見ず計算がすらすらとできるようにしよう。理解はその後についてくる。<a
+                                    id="fn1"><p>ゴッドフリート・ライプニッツ(Gottfried
+                                    Wilhelm Leibniz,
+                                    1646-1716)に因む。積分記号なども彼の発明である。<a
                                     href="#fnref1" class="footnote-back"
                                     role="doc-backlink">↩︎</a></p></li>
                                     <li
-                                    id="fn2"><p>ゴッドフリート・ライプニッツ(Gottfried
-                                    Wilhelm Leibniz,
-                                    1646-1716)に因む。積分記号なども彼の発明である。<a
+                                    id="fn2"><p>ジョセフ＝ルイ・ラグランジュ(Joseph-Louis
+                                    Lagrange,
+                                    1736-1813)に因む。解析力学の創始者の一人である。<a
                                     href="#fnref2" class="footnote-back"
                                     role="doc-backlink">↩︎</a></p></li>
                                     <li
-                                    id="fn3"><p>ジョセフ＝ルイ・ラグランジュ(Joseph-Louis
-                                    Lagrange,
-                                    1736-1813)に因む。解析力学の創始者の一人である。<a
+                                    id="fn3"><p>アイザック・ニュートン(1642–1727)に因む。ニュートン力学を構築した。微積分の研究、万有引力の法則や、光学の研究でも有名。<a
                                     href="#fnref3" class="footnote-back"
-                                    role="doc-backlink">↩︎</a></p></li>
-                                    <li
-                                    id="fn4"><p>アイザック・ニュートン(1642–1727)に因む。ニュートン力学を構築した。微積分の研究、万有引力の法則や、光学の研究でも有名。<a
-                                    href="#fnref4" class="footnote-back"
                                     role="doc-backlink">↩︎</a></p></li>
                                     </ol>
                                     </section>
