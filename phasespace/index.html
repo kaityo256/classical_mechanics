@@ -58,138 +58,337 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <h1 id="本章の目的">本章の目的</h1>
-                                    <p>本章では位相空間を扱う。位相空間を考えることで、これまでの「物体の運動を追いかける」というラグランジュ的な描像から、「運動全体を流れ場として考える」というオイラー的描像に移り変わる。また、勾配や発散発散といったベクトル解析の言葉で運動が表現されるのも面白いところである。さらに、正準方程式に支配される運動が生み出す流れ場が非圧縮であるというリュービルの定理を導く。</p>
+                                    <p>本章では位相空間を扱う。位相空間を考えることで、これまでの「物体の運動を追いかける」というラグランジュ的な描像から、「運動全体を流れ場として考える」というオイラー的描像に移り変わる。また、勾配や発散といったベクトル解析の言葉で運動が表現されるのも面白いところである。さらに、正準方程式に支配される運動が生み出す流れ場が非圧縮であるというリュービルの定理を導く。</p>
                                     <h1 id="位相空間">位相空間</h1>
-                                    <p>一次元の調和振動子の運動を考えよう。簡単のため、質量やバネ定数を1とすると、正準方程式は以下のようになる。</p>
+                                    <p>一次元調和振動子の運動を考えよう。簡単のため、質量やバネ定数を1とすると、正準方程式は以下のようになる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{p} &amp;= - q \\
-                                    \dot{q} &amp;= - p
+                                    \dot{q} &amp;= p \\
+                                    \dot{p} &amp;= - q
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは二変数の一階微分方程式であるから、この運動は初期条件として<span
-                                    class="math inline">\((p,q)\)</span>の2つの変数を与えると、それ以後の運動が全て決まる。運動方程式を解くとは、<span
-                                    class="math inline">\(p(t),
-                                    q(t)\)</span>の時間発展を決めることだが、そこから<span
+                                    class="math inline">\((q,p)\)</span>の2つの変数を与えると、それ以後の運動が全て決まる。運動方程式を解くとは、<span
+                                    class="math inline">\((q(t),
+                                    p(t))\)</span>の時間発展を決めることだが、そこから<span
                                     class="math inline">\(t\)</span>を消去すると、<span
-                                    class="math inline">\((p,q)\)</span>空間の曲線となる。これを運動の軌道と呼ぶ。自由度が1の系では、二次元空間を用意すれば過不足なく運動の軌道を記述できる。自由度が<span
-                                    class="math inline">\(N\)</span>の系なら<span
+                                    class="math inline">\((q,p)\)</span>空間の曲線となる。これを運動の軌道と呼ぶ。自由度が1の系では、二次元空間を用意すれば過不足なく運動の軌道を記述できる。自由度が<span
+                                    class="math inline">\(N\)</span>の系であれば<span
                                     class="math inline">\(2N\)</span>次元の空間が必要である。例えば、3次元空間で<span
                                     class="math inline">\(N\)</span>個の質点が相互作用しているような系は<span
-                                    class="math inline">\(6N\)</span>次元の空間が必要となる。この、運動を過不足無く記述できるような空間を
+                                    class="math inline">\(6N\)</span>次元の空間が必要となる。運動を過不足無く記述できるような空間を
                                     <strong>位相空間(phase
                                     space)</strong>
                                     と呼ぶ。一次元の調和振動子であれば、<span
-                                    class="math inline">\((p,q)\)</span>で表現される二次元空間が位相空間である。</p>
-                                    <p>この運動方程式が支配する運動について、特徴的な点についていくつか見てみよう。</p>
+                                    class="math inline">\((q,p)\)</span>で表現される二次元空間が位相空間である。なお、位相空間の座標のうち、<span
+                                    class="math inline">\(p\)</span>と<span
+                                    class="math inline">\(q\)</span>のどちらを最初の軸に選ぶかは教科書によって異なる。<span
+                                    class="math inline">\((q,p)\)</span>の座標を採用する教科書が多いが、本書では<span
+                                    class="math inline">\((q,p)\)</span>の座標を採用するので注意すること。回転方向や符号が他書と異なる場合がある。</p>
+                                    <p>さて、この運動方程式が支配する運動について、特徴的な点についていくつか見てみよう。</p>
                                     <p>まず、現在の状態が<span
-                                    class="math inline">\((p,q) =
+                                    class="math inline">\((q,p) =
                                     (1,0)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
-                                    class="math inline">\((\dot{p},
-                                    \dot{q}) =
-                                    (0,1)\)</span>となる。これは、質点が原点にあるためにバネからの力はかかっておらず、したがって<span
+                                    class="math inline">\((\dot{q},\dot{p})
+                                    =
+                                    (0,-1)\)</span>となる。これはバネが伸び切って、速度がゼロである状態であるため、あとは縮む一方であることを意味する。そこで先程と同様に位相空間の<span
+                                    class="math inline">\((1,0)\)</span>の点に、<span
+                                    class="math inline">\((0,-1)\)</span>のベクトルを書いておこう。</p>
+                                    <p>まず、現在の状態が<span
+                                    class="math inline">\((q,p) =
+                                    (0,1)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
+                                    class="math inline">\((\dot{q},\dot{p})
+                                    =
+                                    (1,0)\)</span>となる。これは、質点が原点にあるためにバネからの力はかかっておらず、したがって<span
                                     class="math inline">\(\dot{p}=0\)</span>であること、正の方向に速度<span
                                     class="math inline">\(1\)</span>を持っているため、次の瞬間に<span
                                     class="math inline">\(q\)</span>が増加しようとしていることを表している。つまり、系の状態が<span
-                                    class="math inline">\((1,0)\)</span>である時、次の瞬間には<span
-                                    class="math inline">\((0,1)\)</span>の方向に移動するということを意味している。そこで位相空間の<span
-                                    class="math inline">\((1,0)\)</span>の場所に、移動の向きとして<span
-                                    class="math inline">\((0,1)\)</span>のベクトルを書いておこう。</p>
-                                    <p>次に、現在の状態が<span
-                                    class="math inline">\((p,q) =
-                                    (0,1)\)</span>であるとしよう。この時の運動量と位置の時間微分は<span
-                                    class="math inline">\((\dot{p},
-                                    \dot{q}) =
-                                    (-1,0)\)</span>となる。これはバネが伸び切って、速度がゼロである状態であるため、あとは縮む一方であることを意味する。そこで先程と同様に位相空間の<span
-                                    class="math inline">\((0,1)\)</span>の点に、<span
-                                    class="math inline">\((-1,
-                                    0)\)</span>のベクトルを書いておこう。</p>
+                                    class="math inline">\((0,1)\)</span>である時、次の瞬間には<span
+                                    class="math inline">\((1,0)\)</span>の方向に移動するということを意味している。そこで位相空間の<span
+                                    class="math inline">\((0,1)\)</span>の場所に、移動の向きとして<span
+                                    class="math inline">\((1,0)\)</span>のベクトルを書いておこう。</p>
                                     <p>同様な手続きで、<span
-                                    class="math inline">\((-1,0)\)</span>の場所には<span
-                                    class="math inline">\((0,-1)\)</span>のベクトルが、<span
                                     class="math inline">\((0,-1)\)</span>の場所には<span
-                                    class="math inline">\((1,0)\)</span>のベクトルを置くことになる。こうして<span
-                                    class="math inline">\((p,q)\)</span>空間の様々な場所に、その地点での<span
-                                    class="math inline">\((\dot{p},\dot{q})\)</span>の値をベクトルとして書き込んでいくと、全体で回転するようなベクトル場が得られる。すなわち、運動方程式は位相空間にベクトル場を定義する写像であると考えることができる。</p>
+                                    class="math inline">\((-1,0)\)</span>のベクトルが、<span
+                                    class="math inline">\((-1,0)\)</span>の場所には<span
+                                    class="math inline">\((0,1)\)</span>のベクトルを置くことになる。こうして<span
+                                    class="math inline">\((q,p)\)</span>空間の様々な場所に、その地点での<span
+                                    class="math inline">\((\dot{q},\dot{p})\)</span>の値をベクトルとして書き込んでいくと、全体で回転するようなベクトル場が得られる。すなわち、運動方程式は位相空間にベクトル場を定義する写像であると考えることができる。</p>
                                     <p>もともとの運動方程式は二変数の連立一階微分方程式であるから、初期条件として<span
-                                    class="math inline">\((p,q)\)</span>の組を与えると、以後の運動が全てきまる。最初に<span
-                                    class="math inline">\((p,q)\)</span>の状態であった質点は、微小な時間<span
+                                    class="math inline">\((q,p)\)</span>の組を与えると、以後の運動が全てきまる。最初に<span
+                                    class="math inline">\((q,p)\)</span>の状態であった質点は、微小な時間<span
                                     class="math inline">\(\delta
                                     t\)</span>だけ経過すると、<span
                                     class="math inline">\((p + \dot{p}
                                     \delta t, q + \dot{q} \delta
                                     t)\)</span>に移動するであろう。移動先を新たな初期条件と考えると、次はその場所でのベクトル<span
                                     class="math inline">\((\dot{p},
-                                    \dot{q})\)</span>に従って進んでいく。こうして運動方程式は、位相空間という地図に、「次はどこに進むべきか」という情報を与えている。</p>
+                                    \dot{q})\)</span>に従って進んでいく。運動方程式は、位相空間という地図に、「次はどこに進むべきか」という情報を与えている。</p>
                                     <h1
                                     id="ラグランジュ描像とオイラー描像">ラグランジュ描像とオイラー描像</h1>
                                     <p>運動方程式を「物体の運動を記述する」という見方から、「位相空間に速度場を定義する」という見方に変えることは、ラグランジュ描像からオイラー描像に移ったことに対応する。</p>
                                     <p>今、流れる川の中に葉っぱが落ちたとしよう。その葉っぱをずっと追いかけると、その葉っぱは水から押されて右にいったり左にいったりしながら流れていく様子が見えるだろう。このように観測者が運動する物体に並走し、その物体の軌跡を観察するのがラグランジュ描像である。</p>
-                                    <p>一方、流れのある場では媒質の運動をおいかけるよりも、その場にとどまって流れがどう変化するかに興味があることが多い。例えば、天気予報においては風の向きが重要であるが、ある地点での空気が1時間後にどこに行くかよりも、ある地点での風向きが一時間後にどうなるかの方が重要である。このように観測者の場所を固定し、その場所での流れを観察し続けるのがオイラー描像である。オイラー描像では、例えば風向きを場の量として捉える。</p>
-                                    <p>場とは、物理量を空間や時間の関数として捉えることである。例えば等高線のある地図を考えよう。適当な座標(例えば緯度と経度)を指定すると、その場所での標高が決まる。この地図は、二次元座標<span
+                                    <p>一方、流れに関しては、媒質の運動をおいかけるよりも、その場にとどまって、その場所での流れがどのように変化していくかに興味があることが多い。例えば天気予報においては、ある特定の雲の運動を追いかけるよりも、ある地点において雲がどう入ってきてどう出ていくかの方が重要である。このように観測者の場所を固定し、その場所での流れを観察し続けるのがオイラー描像である。</p>
+                                    <p>オイラー描像では、物理量を場の量として捉える。<strong>場(field)</strong>
+                                    とは、物理量を空間や時間の関数として捉えることである。例えば等高線のある地図を考えよう。例えば緯度と経度のような適当な座標を指定すると、その場所での標高が決まる。この地図は、二次元座標<span
                                     class="math inline">\((x,y)\)</span>を決めると、その場所での高さ<span
-                                    class="math inline">\(h(x,y)\)</span>を与えている。このように、座標を決めるとスカラー量が与えられるような場をスカラー場と呼ぶ。例えば温度はスカラー量であるから、様々な場所における温度分布を表すような温度場もスカラー場である。</p>
+                                    class="math inline">\(h(x,y)\)</span>を与えている。このように、座標を決めるとスカラー量が与えられるような場をスカラー場と呼ぶ。例えば温度や密度はスカラー量であるから、温度場や密度場はスカラー場である。</p>
                                     <p>同様に、場所を決めるとベクトルが決まるような場をベクトル場と呼ぶ。例えば流れるプールでは、場所が決まれば流れる向きが決まる。この流れの速度場はベクトル場である。正準方程式は、<span
-                                    class="math inline">\((p,q)\)</span>という位相空間に、<span
+                                    class="math inline">\((q,p)\)</span>という位相空間に、<span
                                     class="math inline">\((\dot{p},
-                                    \dot{q})\)</span>というベクトル場を対応させる写像であると考えることができる。</p>
-                                    <p>ベクトル場が定義された位相空間の一点にトレーサーを置こう。トレーサーはその場所のベクトルの向きに移動する。そして、移動先のベクトルの向きに動き……ということを繰り返す。川にインクを少量ずつたらしていくとそのインクにより流れ場が可視化されるように、トレーサーは位相空間における軌跡を可視化する。すなわち、位相空間におけるベクトル場とは、系の時間発展の流れを表す流れ場となっている。この流れ場の性質を調べるのが本章の目的である。</p>
+                                    \dot{q})\)</span>というベクトル場を対応させる写像であると考えることができる。この講義では扱わないが、場所を指定すると、そこに住むテンソルを返すテンソル場も定義できる。材料力学などで重要となる応力場などもテンソル場である。</p>
+                                    <p>さて、ベクトル場が定義された位相空間の一点にトレーサーを置こう。トレーサーはその場所のベクトルの向きに移動する。そして、移動先のベクトルの向きに動き……ということを繰り返す。川にインクを少量ずつたらしていくとそのインクにより流れ場が可視化されるように、トレーサーは位相空間における軌跡を可視化する。すなわち、位相空間におけるベクトル場とは、系の時間発展の流れを表す流れ場となっている。この流れ場の性質を調べるのが本章の目的である。</p>
                                     <h1
                                     id="リュービルの定理">リュービルの定理</h1>
                                     <p>一自由度系のハミルトニアン<span
-                                    class="math inline">\(H(p,q)\)</span>に支配される正準方程式を考えよう。</p>
+                                    class="math inline">\(H(q,p)\)</span>に支配される正準方程式を考えよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{p} &amp;= - \frac{\partial
-                                    H}{\partial q} \\
                                     \dot{q} &amp;= \frac{\partial
-                                    H}{\partial p}
+                                    H}{\partial p} \\
+                                    \dot{p} &amp;= - \frac{\partial
+                                    H}{\partial q}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを、<span
-                                    class="math inline">\((p,q)\)</span>で張られる位相空間に<span
+                                    class="math inline">\((q,p)\)</span>で張られる位相空間に<span
                                     class="math inline">\((\dot{p},
-                                    \dot{q})\)</span>という速度場を定義する式であると考える。場であることがわかりやすいように、位置ベクトルと速度ベクトルを定義しておこう。</p>
+                                    \dot{q})\)</span>という速度場を定義する式であると考える。位相空間の座標をまとめて<span
+                                    class="math inline">\(\boldsymbol{z}\)</span>で表そう。すなわち、</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \boldsymbol{z} =
                                     \begin{pmatrix}
-                                    p\\
-                                    q
+                                    q\\
+                                    p
                                     \end{pmatrix},
-                                    \boldsymbol{v} =
+                                    \dot{\boldsymbol{z}} =
                                     \begin{pmatrix}
-                                    \dot{p} \\
-                                    \dot{q}
+                                    \dot{q} \\
+                                    \dot{p}
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>ハミルトニアンに関して<span
                                     class="math inline">\(p\)</span>や<span
                                     class="math inline">\(q\)</span>の偏微分があるので、ハミルトニアンをスカラー場と思って<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>で微分してみよう。</p>
+                                    class="math inline">\(\boldsymbol{z}\)</span>で微分してみよう。</p>
                                     <p><span class="math display">\[
                                     \frac{\partial H}{\partial
-                                    \boldsymbol{r}} \equiv \nabla H
+                                    \boldsymbol{z}} \equiv \nabla H
                                     =
                                     \begin{pmatrix}
-                                    \partial_p H \\
-                                    \partial_q H
+                                    \partial_q H \\
+                                    \partial_p H
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>ベクトル<span
+                                    class="math inline">\(\nabla
+                                    H\)</span>の要素を見ると、正準方程式に現れる偏微分と上下が逆で、かつ片方に負符号がついていることがわかる。そこで、正準方程式に合うように変換するために、以下のような行列を導入しよう。</p>
+                                    <p><span class="math display">\[
+                                    \Omega=
+                                    \begin{pmatrix}
+                                    0 &amp; 1\\
+                                    -1 &amp; 0
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>すると、正準方程式は以下のように表現できる。</p>
                                     <p><span class="math display">\[
-                                    \dot{\boldsymbol{r}} = \Omega \nabla
+                                    \dot{\boldsymbol{z}} = \Omega \nabla
                                     H
                                     \]</span></p>
-                                    <p>ただし、<span
-                                    class="math inline">\(\Omega\)</span>は以下のような2行2列の行列である。</p>
+                                    <p>これは、位相空間にハミルトニアンが作るベクトル場であるため、
+                                    <strong>ハミルトニアンベクトル場(Hamiltonian
+                                    vector field)</strong>
+                                    と呼ばれる。この式の幾何学的な意味を考えていこう。右辺の一番左から順番に考えていく。</p>
+                                    <p>TODO: 図解</p>
+                                    <p><span
+                                    class="math inline">\(H(q,p)\)</span>はスカラー場である。つまり、場所を指定するとスカラーが返ってくる。ハミルトニアンは系の全エネルギーであるから、<span
+                                    class="math inline">\(H(q,p)\)</span>は、位相空間上の点<span
+                                    class="math inline">\((q,p)\)</span>におけるエネルギーを表している。同じエネルギーの場所をつないでいくと、エネルギーに関する等高線を描くことができる。</p>
+                                    <p>次に、<span
+                                    class="math inline">\(\nabla
+                                    H\)</span>は、スカラー場<span
+                                    class="math inline">\(H(q,p)\)</span>から作られるベクトル場である。ベクトル場であるから、場所を指定するとベクトル量が返ってくる。このベクトルは、最もエネルギーが高くなる方向を向き、かつエネルギー勾配が急であればあるほど絶対値が大きくなるという性質を持っている。それを簡単に説明しておこう。</p>
+                                    <p>あるスカラー関数<span
+                                    class="math inline">\(f(x,y)\)</span>があるとする。この地点<span
+                                    class="math inline">\((x,y)\)</span>から、微小距離
+                                    <span
+                                    class="math inline">\(\varepsilon
+                                    &gt;
+                                    0\)</span>だけ移動するという条件で、最も<span
+                                    class="math inline">\(f\)</span>の値を大きくする場所を探したい。これは、<span
+                                    class="math inline">\(\varepsilon^2
+                                    =
+                                    \varepsilon_x^2+\varepsilon_y^2\)</span>という条件の下、<span
+                                    class="math inline">\(f(x+\varepsilon_x,
+                                    y+\varepsilon_y) -
+                                    f(x,y)\)</span>を最大化するような方向ベクトル<span
+                                    class="math inline">\((\varepsilon_x,
+                                    \varepsilon_y)\)</span>を探しなさい、という問題になっている。テイラー展開により、</p>
                                     <p><span class="math display">\[
-                                    \Omega=
+                                    \begin{aligned}
+                                    f(x+\varepsilon_x, y+\varepsilon_y)
+                                    - f(x,y) &amp;= \frac{\partial
+                                    f}{\partial x} \varepsilon_x +
+                                    \frac{\partial f}{\partial y}
+                                    \varepsilon_y +
+                                    O(\varepsilon_x^2)+O(\varepsilon_y^2)\\
+                                    &amp;=
                                     \begin{pmatrix}
-                                    0 &amp; -1\\
-                                    1 &amp; 0
+                                    \partial_x f \\
+                                    \partial_y f
                                     \end{pmatrix}
+                                    \cdot
+                                    \begin{pmatrix}
+                                    \varepsilon_x \\
+                                    \varepsilon_y
+                                    \end{pmatrix}
+                                    +O(\varepsilon_x^2)+O(\varepsilon_y^2)
+                                    \end{aligned}
                                     \]</span></p>
-                                    <p>これは原点の周りを反時計回りに90度回転させる回転行列である。</p>
+                                    <p>いま、方向ベクトル<span
+                                    class="math inline">\((\varepsilon_x,
+                                    \varepsilon_y)\)</span>の大きさを固定したまま、左辺を最大化するためには、内積を最大化する必要がある。つまり、方向ベクトルは<span
+                                    class="math inline">\((\partial_x
+                                    f,\partial_y
+                                    f)\)</span>と平行でなければならない。逆に、<span
+                                    class="math inline">\(\nabla f
+                                    \equiv (\partial_x f,\partial_y
+                                    f)\)</span>は、スカラー場<span
+                                    class="math inline">\(f\)</span>の最大傾斜の方向を表すベクトルとなっている。以上から、<span
+                                    class="math inline">\(\nabla
+                                    f\)</span>はスカラー場の勾配(gradient)を表すため、<span
+                                    class="math inline">\(\mathrm{grad}
+                                    f\)</span>とも表す。</p>
+                                    <p>さて、<span
+                                    class="math inline">\(\nabla
+                                    H\)</span>が位相空間におけるエネルギー勾配ベクトル場を表すことがわかった。それに行列<span
+                                    class="math inline">\(\Omega\)</span>をかけたものが運動方程式となる。行列<span
+                                    class="math inline">\(\Omega\)</span>は、時計回りに90度回転させる回転行列となっている。以上をまとめると、ハミルトニアンベクトルは以下のようにして作られる。</p>
+                                    <ol type="1">
+                                    <li>ハミルトニアン<span
+                                    class="math inline">\(H\)</span>により位相空間にエネルギー場が定義される</li>
+                                    <li><span
+                                    class="math inline">\(\nabla
+                                    H\)</span>により、エネルギーの勾配ベクトル場が定義される</li>
+                                    <li><span
+                                    class="math inline">\(\Omega \nabla
+                                    H\)</span>により、勾配ベクトル場を反時計回りに90度回転させたものがハミルトニアンベクトル場である</li>
+                                    </ol>
+                                    <p>我々の目的は運動方程式を解くことであった。運動方程式の解は、位相空間上ではハミルトニアンベクトル場に沿って「流れて」いく流線に対応しており、これを解曲線と呼ぶ。ハミルトニアンベクトル場が、エネルギーの勾配ベクトルと直交していることから、解曲線は<span
+                                    class="math inline">\(H(q,p)\)</span>の等高線上を運動する。すなわち、運動によりエネルギーが保存する。ハミルトニアンベクトル場は、「なぜ運動によりエネルギーが保存するか？」という問いに対して「位相空間上での運動の方向が、エネルギーが変化する向きと常に直交しているから」という答えを用意する。</p>
+                                    <p>ハミルトニアンベクトル場には、もう一つ重要な性質がある。ハミルトニアンベクトル場が作る速度場<span
+                                    class="math inline">\(\dot{\boldsymbol{z}}\)</span>を考えよう。この速度場と<span
+                                    class="math inline">\(\nabla\)</span>の内積を考える。ベクトル同士の内積であるから、結果はスカラー量になる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \nabla \dot{\boldsymbol{z}} &amp;=
+                                    \begin{pmatrix}
+                                    \partial_q\\
+                                    \partial_p
+                                    \end{pmatrix}
+                                    \cdot
+                                    \begin{pmatrix}
+                                    \dot{q}\\
+                                    \dot{p}
+                                    \end{pmatrix}
+                                    \\
+                                    &amp;=
+                                    \begin{pmatrix}
+                                    \partial_q\\
+                                    \partial_p
+                                    \end{pmatrix}
+                                    \cdot
+                                    \begin{pmatrix}
+                                    \partial_p H\\
+                                    -\partial_q H
+                                    \end{pmatrix}\\
+                                    &amp;= \frac{\partial^2 H }{\partial
+                                    p \partial q}
+                                    - \frac{\partial^2 H }{\partial p
+                                    \partial q}\\
+                                    &amp;=0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、ハミルトニアンベクトル場と<span
+                                    class="math inline">\(\nabla\)</span>との内積は常にゼロとなる。この、<span
+                                    class="math inline">\(\nabla
+                                    \dot{\boldsymbol{z}}=0\)</span>の幾何学的な意味を考えてみよう。</p>
+                                    <p>簡単のため、一次元系を考える。位置<span
+                                    class="math inline">\(x\)</span>において、密度場<span
+                                    class="math inline">\(\rho(x)\)</span>と速度場<span
+                                    class="math inline">\(v(x)\)</span>が定義されている。この時、ある微小区間<span
+                                    class="math inline">\(x\)</span>から<span
+                                    class="math inline">\(x+h\)</span>の物質の出入りを考えよう。速度については右側を正にとる。</p>
+                                    <p>TODO: 図解</p>
+                                    <p>左から流入してくる単位時間あたりの物質量は、密度と速度の積であるから<span
+                                    class="math inline">\(\rho(x)v(x)\)</span>である。同様に、右から流出する物質量は<span
+                                    class="math inline">\(\rho(x+h)v(x)\)</span>である。微小区間の物質量の単位時間あたりの変化量は</p>
+                                    <p><span class="math display">\[
+                                    h\rho(x) = \rho(x)v(x) -
+                                    \rho(x+h)v(x+h)
+                                    \]</span></p>
+                                    <p>両辺を<span
+                                    class="math inline">\(h\)</span>で割って<span
+                                    class="math inline">\(h \rightarrow
+                                    0\)</span>の極限をとると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial \rho}{\partial t}
+                                    &amp;= - \lim_{h \rightarrow
+                                    0}\frac{\rho(x+h)v(x+h) -
+                                    \rho(x)v(x)}{h} \\
+                                    &amp;= - \frac{\partial}{\partial
+                                    x}\left(\rho v \right) \\
+                                    &amp;=
+                                    -v\frac{\partial\rho}{\partial x} -
+                                    \rho \frac{\partial v}{\partial x}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、以下の物質微分を定義する。</p>
+                                    <p><span class="math display">\[
+                                    \frac{D}{Dt} \equiv
+                                    \frac{\partial}{\partial t} + v
+                                    \frac{\partial}{\partial x}
+                                    \]</span></p>
+                                    <p>物質微分とは、流れに沿って物理量の変化を追いかけた時の変化量である。すると、先程の式は以下のようにまとめられる。</p>
+                                    <p><span class="math display">\[
+                                    \frac{D \rho}{D t} = -\rho
+                                    \frac{\partial v}{\partial x}
+                                    \]</span></p>
+                                    <p>ここまでは一次元で表現したが、三次元の場合でも(さらに高次元の場合でも)全く同様に、物質微分を</p>
+                                    <p><span class="math display">\[
+                                    \frac{D}{D t} \equiv
+                                    \frac{\partial}{\partial t} +
+                                    \boldsymbol{v} \cdot \nabla
+                                    \]</span></p>
+                                    <p>として、</p>
+                                    <p><span class="math display">\[
+                                    \frac{D \rho}{D t} = -\rho (\nabla
+                                    \cdot \boldsymbol{v})
+                                    \]</span></p>
+                                    <p>を導くことができる。</p>
+                                    <p>ここで、右辺の意味を考えよう。速度場<span
+                                    class="math inline">\(\boldsymbol{v}\)</span>の位置による微分が正である時、流入速度よりも、流出速度の方が大きいことになる。これは、そこに何か湧き出していることを意味する。逆に、微分が負であるならば、流入速度より流出速度の方が小さく、これはそこに吸い込みがあることを意味する。以上から、速度場の空間微分<span
+                                    class="math inline">\((\nabla \cdot
+                                    \boldsymbol{v})\)</span>を
+                                    <strong>発散(divergence)</strong>
+                                    と呼び、<span
+                                    class="math inline">\(\mathrm{div}
+                                    \boldsymbol{v}\)</span>とも書く。</p>
+                                    <p>さて、速度場の発散がゼロ、つまり</p>
+                                    <p><span class="math display">\[
+                                    \nabla \boldsymbol{v}
+                                    \]</span></p>
+                                    <p>としよう。この時、密度の物質微分がゼロ、すなわち流れに追いかけた場合の密度変化がゼロとなる。この流体は流れに対して密度が変わらない。このような流体を非圧縮流体と呼ぶ。</p>
+                                    <p>ハミルトニアンベクトル場に話を戻そう。ハミルトニアンベクトル場は、位相空間上に<span
+                                    class="math inline">\(\dot{\boldsymbol{z}}\)</span>という速度場を作る。既に見たように、その発散がゼロ、すなわち</p>
+                                    <p><span class="math display">\[
+                                    \nabla \cdot \dot{\boldsymbol{z}} =0
+                                    \]</span></p>
+                                    <p>であるから、この速度場が作る流れは非圧縮流体となる。位相空間の流れ場は、適当な場所にトレーサーを置くと、そのトレーサーの軌跡が運動を表すのであった。いま、位相空間の微小な領域に多数のトレーサーを置いて、その時間発展を追うことにしよう。これは、水の流れに墨汁を1滴垂らすようなイメージである。流れに沿って墨汁は流れていくが、流体が非圧縮であるならば、その面積は変わらない。同様に、ハミルトニアンベクトル場は、位相空間の微小体積要素を変化させない。これを
+                                    <strong>リュービルの定理(Liouville’s
+                                    theorem)</strong>
+                                    と呼ぶ。これは、位相空間における流れが本質的に回転であり、流体が圧縮されたり膨張されることはないことを表している。</p>
                     </article>
     </body>
 
