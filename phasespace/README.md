@@ -164,15 +164,25 @@ $$
 
 すなわち、ハミルトニアンベクトル場と$\nabla$との内積は常にゼロとなる。この、$\nabla \dot{\boldsymbol{z}}=0$の幾何学的な意味を考えてみよう。
 
-簡単のため、一次元系を考える。位置$x$において、密度場$\rho(x)$と速度場$v(x)$が定義されている。この時、ある微小区間$x$から$x+h$の物質の出入りを考えよう。速度については右側を正にとる。
+TODO: 以下を一次元で書いていたが、わかりにくいので二次元に書き直す。
+
+二次元の流れを考える。位置$\boldsymbol{r}=(x,y)$において、密度場$\rho(x,y)$と速度場$\boldsymbol{v}=(v_x(\boldsymbol{r}), v_y(\boldsymbol{r}))$が定義されている。この時、$\boldsymbol{r}$近傍の微小区間における物質の収支を考えよう。右方向を$x$軸に、上方向を$y$軸にとる。
 
 TODO: 図解
 
-左から流入してくる単位時間あたりの物質量は、密度と速度の積であるから$\rho(x)v(x)$である。同様に、右から流出する物質量は$\rho(x+h)v(x)$である。微小区間の物質量の単位時間あたりの変化量は
+この微小区間左から流入してくる単位時間あたりの物質量は、密度と速度の積であるから$\rho(x,y)v_x(x,y)h$である。同様に、右から流出する物質量は$\rho(x+h, y)v_x(x,y)h$である。したがって、単位時間あたりの$x$軸方向の収支は
+$$
+\begin{aligned}
+\rho(x,y)v_x(x,y)h - \rho(x+h, y)v_x(x+h,y)h &= - \rho(x,y)v_x(x,y)h - 
+\left(\rho(x,y) + h\frac{\partial \rho}{\partial x}\right)
+\left(v_x(x,y) + h\frac{\partial v_x}{\partial x}\right)h + O(h^2) \\
+&= -h^2 v_x \frac{\partial \rho}{\partial x} + \rho \frac{\partial x}{}
+\end{aligned}
+$$
 
-$$
-h\rho(x) = \rho(x)v(x) - \rho(x+h)v(x+h)
-$$
+上下方向も同様に考えると、微小区間の物質量の単位時間あたりの変化量は
+
+TODO: 書きかけ。続きを書くこと。
 
 両辺を$h$で割って$h \rightarrow 0$の極限をとると、
 
@@ -183,6 +193,8 @@ $$
 &= -v\frac{\partial\rho}{\partial x} - \rho \frac{\partial v}{\partial x}
 \end{aligned}
 $$
+
+TODO: 物質微分の説明もする。
 
 ここで、以下の物質微分を定義する。
 
