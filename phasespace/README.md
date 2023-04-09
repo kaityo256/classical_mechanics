@@ -11,7 +11,7 @@
 $$
 \begin{aligned}
 \dot{q} &= p \\
-\dot{p} &= - q 
+\dot{p} &= - q
 \end{aligned}
 $$
 
@@ -50,7 +50,7 @@ $$
 $$
 \begin{aligned}
 \dot{q} &= \frac{\partial H}{\partial p} \\
-\dot{p} &= - \frac{\partial H}{\partial q} 
+\dot{p} &= - \frac{\partial H}{\partial q}
 \end{aligned}
 $$
 
@@ -61,7 +61,7 @@ $$
 \begin{pmatrix}
 q\\
 p
-\end{pmatrix}, 
+\end{pmatrix},
 \dot{\boldsymbol{z}} =
 \begin{pmatrix}
 \dot{q} \\
@@ -112,7 +112,7 @@ f(x+\varepsilon_x, y+\varepsilon_y) - f(x,y) &= \frac{\partial f}{\partial x} \v
 &=
 \begin{pmatrix}
 \partial_x f \\
-\partial_y f 
+\partial_y f
 \end{pmatrix}
 \cdot
 \begin{pmatrix}
@@ -166,45 +166,33 @@ $$
 
 すなわち、ハミルトニアンベクトル場と$\nabla$との内積は常にゼロとなる。この、$\nabla \dot{\boldsymbol{z}}=0$の幾何学的な意味を考えてみよう。
 
-TODO: 以下を一次元で書いていたが、わかりにくいので二次元に書き直す。
+一次元の流れを考える。位置$x$において、密度場$\rho(x)$と速度場$v(x)$が定義されている。この時、位置$x$近傍の微小区間における物質の収支を考えよう。$x$軸を右方向にとる。
 
-二次元の流れを考える。位置$\boldsymbol{r}=(x,y)$において、密度場$\rho(x,y)$と速度場$\boldsymbol{v}=(v_x(\boldsymbol{r}), v_y(\boldsymbol{r}))$が定義されている。この時、$\boldsymbol{r}$近傍の微小区間における物質の収支を考えよう。右方向を$x$軸に、上方向を$y$軸にとる。
+![流入の収支](fig/flow_balance.png)
 
-TODO: 図解
+この微小区間左から流入してくる単位時間あたりの物質量は、密度と速度の積であるから$\rho(x)v(x)$である。同様に、右から流出する物質量は$\rho(x+h)v(x+h)$である。時刻$t$における位置$x$の物質量は$h\rho(x)$であるから、単位時間あたりの変化量は$h \partial_t \rho(x)$である。
 
-この微小区間左から流入してくる単位時間あたりの物質量は、密度と速度の積であるから$\rho(x,y)v_x(x,y)h$である。同様に、右から流出する物質量は$\rho(x+h, y)v_x(x,y)h$である。したがって、単位時間あたりの$x$軸方向の収支は
-$$
-\begin{aligned}
-\rho(x,y)v_x(x,y)h - \rho(x+h, y)v_x(x+h,y)h &= - \rho(x,y)v_x(x,y)h - 
-\left(\rho(x,y) + h\frac{\partial \rho}{\partial x}\right)
-\left(v_x(x,y) + h\frac{\partial v_x}{\partial x}\right)h + O(h^2) \\
-&= -h^2 v_x \frac{\partial \rho}{\partial x} + \rho \frac{\partial x}{}
-\end{aligned}
-$$
-
-上下方向も同様に考えると、微小区間の物質量の単位時間あたりの変化量は
-
-TODO: 書きかけ。続きを書くこと。
-
-両辺を$h$で割って$h \rightarrow 0$の極限をとると、
+以上から、単位時間あたりの$x$軸方向の収支は
 
 $$
 \begin{aligned}
-\frac{\partial \rho}{\partial t} &= - \lim_{h \rightarrow 0}\frac{\rho(x+h)v(x+h) - \rho(x)v(x)}{h} \\
-&= - \frac{\partial}{\partial x}\left(\rho v \right) \\
-&= -v\frac{\partial\rho}{\partial x} - \rho \frac{\partial v}{\partial x}
+\frac{\partial \rho}{\partial t} &= \frac{\rho(x)v(x) - \rho(x+h)v(x+h)}{h} \\
+&= \frac{\partial}{\partial x}\left(\rho v \right) + O(h^2)\\
+&= v \frac{\partial \rho}{\partial x} + \rho \frac{\partial v}{\partial x}
 \end{aligned}
 $$
 
-TODO: 物質微分の説明もする。
-
-ここで、以下の物質微分を定義する。
+ここで、以下の **物質微分(material derivative)** を定義する。
 
 $$
 \frac{D}{Dt} \equiv \frac{\partial}{\partial t} + v \frac{\partial}{\partial x}
 $$
 
-物質微分とは、流れに沿って物理量の変化を追いかけた時の変化量である。すると、先程の式は以下のようにまとめられる。
+物質微分とは、流れに沿って物理量の変化を追いかけた時の変化量、すなわちラグランジュ描像に立った微分であるから、ラグランジュ微分とも呼ばれる。
+
+![物質微分](fig/material_derivative.png)
+
+ラグランジュ微分を使うと、先程の式は以下のようにまとめられる。
 
 $$
 \frac{D \rho}{D t} = -\rho \frac{\partial v}{\partial x}
@@ -241,3 +229,11 @@ $$
 $$
 
 であるから、この速度場が作る流れは非圧縮流体となる。位相空間の流れ場は、適当な場所にトレーサーを置くと、そのトレーサーの軌跡が運動を表すのであった。いま、位相空間の微小な領域に多数のトレーサーを置いて、その時間発展を追うことにしよう。これは、水の流れに墨汁を1滴垂らすようなイメージである。流れに沿って墨汁は流れていくが、流体が非圧縮であるならば、その面積は変わらない。同様に、ハミルトニアンベクトル場は、位相空間の微小体積要素を変化させない。これを **リュービルの定理(Liouville's theorem)** と呼ぶ。これは、位相空間における流れが本質的に回転であり、流体が圧縮されたり膨張されることはないことを表している。
+
+運動方程式は、初期条件を与えると、以後の運動を記述するのであった。それに対して、位相空間は、運動方程式が記述するすべての運動をまとめて表現している。位相空間の微小な領域に多数のトレーサーを置き、それらの運動を追いかけることを考えよう。非常に多くの同じ物理系を用意し、それらに少しずつ違う初期条件を与えて時間発展させる。そして、しばらくたった後に無作為に一つ選び、状態を観測しよう。この時、どんな状態になっているだろうか？
+
+これは、最初にデルタ関数的な状態の確率分布を与えておき、その確率分布がどのように時間発展するかを調べていることに対応する。位相空間における密度場とは、この確率分布に対応する。流れ場が非圧縮ということは、密度場が流れに沿って時間変化しない、ということを表すから、系が十分に混合的であるならば、長時間たてば可能なすべての状態に至るであろう。すると、与えた初期エネルギーにより許されるすべての状態が等確率で観測されることになる。
+
+これは、一つの系を十分長時間観測し、物理量を時間平均した結果と、少しずつ初期条件を変えた(しかしエネルギーなどのマクロな物理量は同じにした)系を多数用意し、十分に時間がたったあとにそれらの平均(アンサンブル平均)をとった結果が等しい、ということを示唆する。このような性質をエルゴード性と呼ぶ。
+
+エルゴード性については様々な議論があり、ここで深くは触れない。しかし、運動方程式は一つの運動を個別的に追いかけていたのに対して、位相空間を考えると運動全体の集合をまとめて扱っていること、運動とは位相空間における回転であること、回転であるから、流れが非圧縮となることなどは覚えて欲しい。

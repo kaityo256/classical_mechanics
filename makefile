@@ -9,7 +9,7 @@ index.md: README.md
 	sed 's/README.md/index.html/' $< > $@
 
 index.html: index.md
-	pandoc -s $< -o $@ $(PANDOC_HTMLOPT) --shift-heading-level-by=1 
+	pandoc -s $< -o $@ $(PANDOC_HTMLOPT) --shift-heading-level-by=-1 
 	rm -f index.md 
 
 %/index.md: %/README.md
