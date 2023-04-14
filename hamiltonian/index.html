@@ -62,12 +62,385 @@
                                     <p>ここではラグランジアンをルジャンドル変換することにより、ハミルトニアンという新しい量が得られること、これがエネルギーに対応していること、さらにハミルトン形式の力学が得られることを見る。</p>
                                     <h1
                                     id="一般化運動量とハミルトニアン">一般化運動量とハミルトニアン</h1>
+                                    <p>ニュートンの運動方程式を、ラグランジアンを使ってオイラー・ラグランジュの式で書いてやると、ニュートンの運動方程式よりも広い変数変換に対して運動方程式が不変となることを見た。これにより変数変換が楽になる。しかし、オイラー・ラグランジュの式で許される変換は座標のみを対象としたものであり、例えば運動量と座標を混ぜるような変換に対しては形を変えてしまう。そこで、ラグランジアンを変数変換することで、より広い変数変換について形を変えないような運動方程式を作ることにしよう。</p>
+                                    <p>系のラグランジアンが<span
+                                    class="math inline">\(L(q,
+                                    \dot{q})\)</span>で与えられている。この時、ラグランジアンを速度<span
+                                    class="math inline">\(\dot{q}\)</span>で偏微分したものを<span
+                                    class="math inline">\(p\)</span>とする。</p>
+                                    <p><span class="math display">\[
+                                    p \equiv \frac{\partial L}{\partial
+                                    \dot{q}}
+                                    \]</span></p>
+                                    <p>ラグランジアンはエネルギーの次元を持っているため、もし一般化座標<span
+                                    class="math inline">\(q\)</span>が長さの次元を持っていれば、<span
+                                    class="math inline">\(p\)</span>は運動量の次元を持つことがわかる。そこで、<span
+                                    class="math inline">\(p\)</span>を一般化運動量と呼ぶ。ラグランジアンの自由変数を<span
+                                    class="math inline">\(\dot{q}\)</span>から<span
+                                    class="math inline">\(p\)</span>に取り直すため、以下のような量を考える。</p>
+                                    <p><span class="math display">\[
+                                    H = \dot{q}p - L
+                                    \]</span></p>
+                                    <p>この量を
+                                    <strong>ハミルトニアン(Hamiltonian)</strong>
+                                    と呼ぶ。</p>
+                                    <p>両辺の全微分をとって見よう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dH &amp;= p d\dot{q} + \dot{q} dp -
+                                    dL \\
+                                    &amp;= p d\dot{q} + \dot{q} dp -
+                                    \underbrace{\frac{\partial
+                                    L}{\partial q}}_{\dot{p}}dq -
+                                    \underbrace{\frac{\partial
+                                    L}{\partial \dot{q}}}_{p}d\dot{q} \\
+                                    &amp;= \cancel{p d\dot{q}} + \dot{q}
+                                    dp  - \dot{p}dq -
+                                    \cancel{pd\dot{q}}\\
+                                    &amp;= \dot{q} dp - \dot{p}dq
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、途中でオイラー・ラグランジュの方程式から</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial L}{\partial q} =
+                                    \frac{d}{dt}
+                                    \underbrace{\left(\frac{\partial
+                                    L}{\partial \dot{q}}\right)}_{p} =
+                                    \dot{p}
+                                    \]</span></p>
+                                    <p>であることを使った。<span
+                                    class="math inline">\(H(q,p)\)</span>を全微分すると、</p>
+                                    <p><span class="math display">\[
+                                    dH = \frac{\partial H}{\partial q}
+                                    dq + \frac{\partial H}{\partial p}
+                                    dp
+                                    \]</span></p>
+                                    <p>これと、</p>
+                                    <p><span class="math display">\[
+                                    dH = \dot{q} dp - \dot{p}dq
+                                    \]</span></p>
+                                    <p>を見比べることで、以下の運動方程式が得られる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p} \\
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを<strong>ハミルトンの運動方程式(Hamilton’s
+                                    equation)</strong>、もしくは
+                                    <strong>正準方程式(canonical
+                                    equation)</strong>
+                                    と呼ぶ。多変数の場合も全く同様な議論から以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q}_i &amp;= \frac{\partial
+                                    H}{\partial p_i} \\
+                                    \dot{p}_i &amp;= -\frac{\partial
+                                    H}{\partial q_i} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>つまり、<span
+                                    class="math inline">\(q_i\)</span>と<span
+                                    class="math inline">\(p_i\)</span>は互いにペアになっており、自分の時間微分は、ハミルトニアンを相手で偏微分することで得られる。ただし、運動量は負符号がつくことに注意。オイラー・ラグランジュ方程式に比べて、方程式が対称性の良い形になっていることがわかるであろう。この運動方程式を用いて運動を議論する形式をハミルトン形式と呼ぶ。また、<span
+                                    class="math inline">\(q_i\)</span>と<span
+                                    class="math inline">\(p_i\)</span>の関係を正準共役、もしくは単に共役と呼ぶ。</p>
                                     <h1
                                     id="ルジャンドル変換">ルジャンドル変換</h1>
+                                    <p>ラグランジアン<span
+                                    class="math inline">\(L(q,\dot{q})\)</span>からハミルトニアン<span
+                                    class="math inline">\(H(q,p)\)</span>への変換は、自由変数を<span
+                                    class="math inline">\(\dot{q}\)</span>から<span
+                                    class="math inline">\(p\)</span>に取り直すものであり、これは
+                                    <strong>ルジャンドル変換(Legendre
+                                    transformation)</strong>
+                                    と呼ばれるものの一種である。ルジャンドル変換は双対変換の一種であり、双対変換とは「2回行うと元に戻る操作」のことである。元に戻せるのであるから、ルジャンドル変換により情報は増えたり減ったりしない。しかし、ルジャンドル変換により目的に応じて自由変数を取り直すことで、見通しがよくなったり計算が楽になったりする。ルジャンドル変換は特に熱力学において主要な役割を果たすが、なかなかその直感的な意味を理解しづらい。以下ではルジャンドル変換の意味について様々な角度から見てみよう。</p>
+                                    <h2
+                                    id="全微分とルジャンドル変換">全微分とルジャンドル変換</h2>
+                                    <p>まず、自由変数を取り直す、ということの意味について考える。もともとラグランジアンは<span
+                                    class="math inline">\(q\)</span>と<span
+                                    class="math inline">\(\dot{q}\)</span>の関数であり、<span
+                                    class="math inline">\(L(q,\dot{q})\)</span>と書けた。従って、その全微分は</p>
+                                    <p><span class="math display">\[
+                                    dL = \frac{\partial L}{\partial q}
+                                    dq + \frac{\partial L}{\partial
+                                    \dot{q}} d\dot{q}
+                                    \]</span></p>
+                                    <p>と書ける。ここでは変数を省略して書いたが、実際には微分係数は「どこにおける微分係数であるか」の情報が必要である。ここでは、点<span
+                                    class="math inline">\((q_0,
+                                    \dot{q}_0)\)</span>での微分を考えたことにしよう。変数を省略せずに書くと、</p>
+                                    <p><span class="math display">\[
+                                    dL(q_0, \dot{q}_0)
+                                    =\left.\frac{\partial L}{\partial
+                                    q}\right|_{q=q_0,\dot{q}=\dot{q}_0}
+                                    dq + \left.L \frac{\partial
+                                    L}{\partial
+                                    \dot{q}}\right|_{q=q_0,\dot{q}=\dot{q}_0}
+                                    d\dot{q}
+                                    \]</span></p>
+                                    <p>これは、<span
+                                    class="math inline">\(L(q,\dot{q})\)</span>で表現される二次元局面において、<span
+                                    class="math inline">\((q_0,
+                                    \dot{q}_0)\)</span>点での接平面を考えていることに対応する。接平面は平面であるから、基底が二つあれば全ての点を表現できる。この基底にあたるのが<span
+                                    class="math inline">\(dq\)</span>と<span
+                                    class="math inline">\(d\dot{q}\)</span>である。つまり、先程の式は</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{a} = a_1
+                                    \boldsymbol{e}_1 + a_2
+                                    \boldsymbol{e}_2
+                                    \]</span></p>
+                                    <p>のような、基底によるベクトルの展開に他ならない。</p>
+                                    <p>TODO: 図解</p>
+                                    <p>さて、ルジャンドル変換とは、基底と展開係数の入れ替えに対応している。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{a} = a_1
+                                    \boldsymbol{e}_1 + a_2
+                                    \boldsymbol{e}_2
+                                    \]</span></p>
+                                    <p>と書けている時、例えば<span
+                                    class="math inline">\(\boldsymbol{e}_2\)</span>の代わりに<span
+                                    class="math inline">\(a_2\)</span>を基底として扱うのがルジャンドル変換である。そのために、先程のラグランジアンの全微分をもう一度見てみよう。</p>
+                                    <p><span class="math display">\[
+                                    dL = \frac{\partial L}{\partial q}
+                                    dq + \frac{\partial L}{\partial
+                                    \dot{q}} d\dot{q}
+                                    \]</span></p>
+                                    <p>このうち、右辺第二項の<span
+                                    class="math inline">\(\partial_{\dot{q}}
+                                    L\)</span>と<span
+                                    class="math inline">\(d\dot{q}\)</span>を入れ替えたい。そのために<span
+                                    class="math inline">\(p=\partial_{\dot{q}}
+                                    L\)</span>とすると、として、<span
+                                    class="math inline">\(p
+                                    \dot{q}\)</span>の全微分を考える。</p>
+                                    <p><span class="math display">\[
+                                    d(p \dot{q}) = \dot{q}dp + p
+                                    d\dot{q}
+                                    \]</span></p>
+                                    <p>従って<span
+                                    class="math inline">\(d(p \dot{q}) -
+                                    dL\)</span>を計算すると、</p>
+                                    <p><span class="math display">\[
+                                    d(p \dot{q} - L) = \dot{q}dp +
+                                    \cancel{p d\dot{q}} - \frac{\partial
+                                    L}{\partial q} dq - \cancel{p
+                                    d\dot{q}} = \dot{q}dp -
+                                    \frac{\partial L}{\partial q} dq
+                                    \]</span></p>
+                                    <p>ようするに、<span
+                                    class="math inline">\(L\)</span>を全微分して出てくる<span
+                                    class="math inline">\(d\dot{q}\)</span>を消して<span
+                                    class="math inline">\(dp\)</span>を足すために、その積<span
+                                    class="math inline">\(p\dot{q}\)</span>の全微分<span
+                                    class="math inline">\(d(p\dot{q})\)</span>から<span
+                                    class="math inline">\(dL\)</span>を引いているだけである。<span
+                                    class="math inline">\(p \dot{q} -
+                                    L\)</span>をあらためて<span
+                                    class="math inline">\(H\)</span>という名前をつけると、<span
+                                    class="math inline">\((q,
+                                    \dot{q})\)</span>の関数であった<span
+                                    class="math inline">\(L\)</span>が、<span
+                                    class="math inline">\((q,p)\)</span>の関数である<span
+                                    class="math inline">\(H\)</span>に変わったことがわかる。</p>
+                                    <h2
+                                    id="ルジャンドル変換の幾何学な意味">ルジャンドル変換の幾何学な意味</h2>
+                                    <p>ルジャンドル変換の説明には、接線型と面積型の二種類がある。好きな方で理解して良いが、逆変換の符号が異なるので注意して欲しい。</p>
+                                    <p><span
+                                    class="math inline">\((x,y)\)</span>平面における曲線を考える。二次元平面における曲線とは、点<span
+                                    class="math inline">\((x,y)\)</span>の一次元的な集合のことである。多価関数を考えなければ、座標のどちらか一方の値を決めれば、もう一方の値が定まる。例えば<span
+                                    class="math inline">\(x\)</span>を自由変数とすると、曲線は<span
+                                    class="math inline">\(x\)</span>の関数<span
+                                    class="math inline">\(f(x)\)</span>を使って、<span
+                                    class="math inline">\(y=f(x)\)</span>と表現できる。これを<span
+                                    class="math inline">\(y\)</span>と<span
+                                    class="math inline">\(f\)</span>を同一視して、<span
+                                    class="math inline">\(y=y(x)\)</span>と書くことにしよう。</p>
+                                    <figure>
+                                    <img src="fig/legendre_tangent.png"
+                                    alt="ルジャンドル変換の接線による解釈" />
+                                    <figcaption
+                                    aria-hidden="true">ルジャンドル変換の接線による解釈</figcaption>
+                                    </figure>
+                                    <p>曲線上の点<span
+                                    class="math inline">\((x,y)\)</span>における接線を考える。この接線を表す式を</p>
+                                    <p><span class="math display">\[
+                                    y = X x + Y
+                                    \]</span></p>
+                                    <p>と書こう。これは傾き<span
+                                    class="math inline">\(X\)</span>、切片<span
+                                    class="math inline">\(Y\)</span>の直線を表している。接線の定義からすぐに</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    X &amp;= \frac{dy}{dx} \\
+                                    Y &amp;= y - x\frac{dy}{dx} = y - xX
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>であることがわかる。これは<span
+                                    class="math inline">\((x,y)\)</span>から<span
+                                    class="math inline">\((X,Y)\)</span>へのルジャンドル変換になっており、自由変数を<span
+                                    class="math inline">\(x\)</span>から<span
+                                    class="math inline">\(X\)</span>に取り直したことで、<span
+                                    class="math inline">\(x\)</span>の関数<span
+                                    class="math inline">\(y\)</span>ではなく、<span
+                                    class="math inline">\(X\)</span>の関数<span
+                                    class="math inline">\(Y\)</span>を考えるように変えたことを意味する。幾何学的には、点<span
+                                    class="math inline">\((x,y)\)</span>の集合として表現されていた曲線を、<span
+                                    class="math inline">\((X,Y)\)</span>で表現される直線の集合で表現する、すなわち「点」と「線」を入れ替えたことに対応している。</p>
+                                    <p>さて、ルジャンドル変換は本質的に入れ替えであるから、もう一度変換すると元に戻る。<span
+                                    class="math inline">\((X,Y)\)</span>は直線の傾きと切片を表していたが、これを<span
+                                    class="math inline">\((X,Y)\)</span>空間における点の集合、すなわち曲線だと思って、もう一度ルジャンドル変換をしてみよう。<span
+                                    class="math inline">\(Y =
+                                    Y(X)\)</span>として、点<span
+                                    class="math inline">\((X,Y)\)</span>での接線の傾きと切片をそれぞれ考えると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dY}{dX} &amp;= \frac{dY}{dx}
+                                    \frac{dx}{dX} \\
+                                    &amp;= \left(\cancel{\frac{dy}{dx}}
+                                    -  \cancel{\frac{dy}{dx}} - x
+                                    \cancel{\frac{d^2y}{dx^2}}\right)
+                                    \frac{1}{\cancel{\frac{dX}{dx}}} \\
+                                    &amp;= -x
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Y - X \frac{dY}{dX} &amp;= y -
+                                    \cancel{xX} -\cancel{Xx} \\
+                                    &amp;=y
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これがルジャンドル逆変換を与える。ルジャンドル変換と逆変換を並べて書くと、</p>
+                                    <p><span class="math display">\[
+                                    \left\{
+                                    \begin{matrix}
+                                    X &amp; = &amp;
+                                    \displaystyle\frac{dy}{dx} \\
+                                    Y &amp; = &amp;y - xX
+                                    \end{matrix}
+                                    \right. ,
+                                    \left\{
+                                    \begin{matrix}
+                                    x &amp; = &amp; -
+                                    \displaystyle\frac{dY}{dX} \\
+                                    y &amp; = &amp;Y - xX
+                                    \end{matrix}
+                                    \right.
+                                    \]</span></p>
+                                    <p>と、<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(X\)</span>の間の変換と逆変換で負符号がつく。これを嫌って、接線の切片に負符号をつけて、</p>
+                                    <p><span class="math display">\[
+                                    y = xX -Y
+                                    \]</span></p>
+                                    <p>とする流儀もある。すると、</p>
+                                    <p><span class="math display">\[
+                                    \left\{
+                                    \begin{matrix}
+                                    X &amp; = &amp;
+                                    \displaystyle\frac{dy}{dx} \\
+                                    Y &amp; = &amp;xX -y
+                                    \end{matrix}
+                                    \right. ,
+                                    \left\{
+                                    \begin{matrix}
+                                    x &amp; = &amp;
+                                    \displaystyle\frac{dY}{dX} \\
+                                    y &amp; = &amp;xX -Y
+                                    \end{matrix}
+                                    \right.
+                                    \]</span></p>
+                                    <p>と、変換と逆変換が対称性の良い形になる。これはフーリエ変換において、<span
+                                    class="math inline">\(2\pi\)</span>の因子をどのように定義するかと同様、変換と逆変換が無矛盾であればどちらの流儀を採用してもかまわない。</p>
+                                    <p>ルジャンドル変換には、面積を用いた説明もある。いま、<span
+                                    class="math inline">\((x,y)\)</span>の変数の組をルジャンドル変換により<span
+                                    class="math inline">\((X,Y)\)</span>に変換することを考える。自由変数はそれぞれ<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(X\)</span>としよう。この時、二つの自由変数<span
+                                    class="math inline">\((x,X)\)</span>で張られる空間を考え、その空間における曲線を考える。<span
+                                    class="math inline">\(x\)</span>を自由変数にとる時、この曲線が<span
+                                    class="math inline">\(X=X(x)\)</span>と表現され、<span
+                                    class="math inline">\(X\)</span>を自由変数にとる時、この曲線が<span
+                                    class="math inline">\(x=x(X)\)</span>と表現できるとする。<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(X\)</span>は、片方を自由変数にとると、もう片方は関数となり、<span
+                                    class="math inline">\(x(X)\)</span>と<span
+                                    class="math inline">\(X(x)\)</span>は互いに逆関数の関係にある。</p>
+                                    <p>ここで、<span
+                                    class="math inline">\(X(x)\)</span>を積分したものを<span
+                                    class="math inline">\(y\)</span>、<span
+                                    class="math inline">\(x(X)\)</span>を積分したものを<span
+                                    class="math inline">\(Y\)</span>と定義する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    y &amp;= \int_0^x X(x)dx\\
+                                    Y &amp;= \int_0^X x(X)dX
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺を微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dy}{dx} &amp;= X\\
+                                    \frac{dY}{dX} &amp;= x
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <figure>
+                                    <img src="fig/legendre_area.png"
+                                    alt="ルジャンドル変換の面積による解釈" />
+                                    <figcaption
+                                    aria-hidden="true">ルジャンドル変換の面積による解釈</figcaption>
+                                    </figure>
+                                    <p>また、図から明らかに</p>
+                                    <p><span class="math display">\[
+                                    y+Y = xX
+                                    \]</span></p>
+                                    <p>が成り立つ。ここから、<span
+                                    class="math inline">\((x,y)\)</span>と<span
+                                    class="math inline">\((X,Y)\)</span>の間のルジャンドル変換、ルジャンドル逆変換の関係式、</p>
+                                    <p><span class="math display">\[
+                                    \left\{
+                                    \begin{matrix}
+                                    X &amp; = &amp;
+                                    \displaystyle\frac{dy}{dx} \\
+                                    Y &amp; = &amp;xX -y
+                                    \end{matrix}
+                                    \right. ,
+                                    \left\{
+                                    \begin{matrix}
+                                    x &amp; = &amp;
+                                    \displaystyle\frac{dY}{dX} \\
+                                    y &amp; = &amp;xX -Y
+                                    \end{matrix}
+                                    \right.
+                                    \]</span></p>
+                                    <p>が得られる。</p>
+                                    <p>以上、<span
+                                    class="math inline">\((x,y)\)</span>の変数の組から<span
+                                    class="math inline">\((X,Y)\)</span>への変数の組へのルジャンドル変換について、接線表式と面積表式のそれぞれの導出を見た。ラグランジアンからハミルトニアンへのルジャンドル変換では、<span
+                                    class="math inline">\(q\)</span>を無視すれば<span
+                                    class="math inline">\((\dot{q},
+                                    L)\)</span>の組から<span
+                                    class="math inline">\((p,
+                                    H)\)</span>の組への変換になっていることから、その変換公式が以下で与えられることが理解できたであろう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial L}{d
+                                    \dot{q}} \\
+                                    H &amp;= p\dot{q} - L
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>面積表式では、自然に変換が対称となること、<span
+                                    class="math inline">\((x,y)\)</span>と<span
+                                    class="math inline">\((X,Y)\)</span>が満たす関係式<span
+                                    class="math inline">\(y+Y=xX\)</span>の解釈がわかりやすいというメリットがある。一方、我々が知りたい物理量は<span
+                                    class="math inline">\((x,y)\)</span>平面もしくは<span
+                                    class="math inline">\((X,Y)\)</span>平面上に表現されることが多いため、<span
+                                    class="math inline">\((x,X)\)</span>平面を考える面積表式ではイメージがつかみにくいかもしれない。どちらでも好きな方で理解すれば良い。</p>
                                     <h1
                                     id="余談双対変換">余談：双対変換</h1>
                                     <p>双対変換とは要するに「2回行うと元にもどる変換」のことである。例えば鏡に映る自分は左右が逆になるが、もう一度鏡に映すと元にもどる。すなわち鏡映変換は双対変換である。こういった双対変換の中で興味深いのは、正多面体の双対性である。</p>
-                                    <p>正多面体とは、同じ正多角形だけで構成された凸多面体のことである。正多面体は、ある頂点にどんな多角形が何個接しているかで特徴づけることができる。そこで、それぞれの頂点に正<span
+                                    <p>正多面体は、ある頂点にどんな多角形が何個接しているかで特徴づけることができる。そこで、それぞれの頂点に正<span
                                     class="math inline">\(m\)</span>角形が<span
                                     class="math inline">\(n\)</span>個接している正多面体を<span
                                     class="math inline">\((m,n)\)</span>と表記してみよう。例えば立方体は、一つの頂点に正方形が3つ接しているから<span
@@ -89,11 +462,16 @@
                                     class="math inline">\((3,5)\)</span>、<span
                                     class="math inline">\((4,3)\)</span>、<span
                                     class="math inline">\((5,3)\)</span>の5種類しかなく、それが正多面体が5種類しかないことに対応する。</p>
-                                    <p>TODO:図解</p>
-                                    <p>さて、立方体を思い浮かべて欲しい。立方体には面が6枚あるが、それぞれの面の重心を結んでみると、正八面体になる。これを<span
+                                    <figure>
+                                    <img src="fig/dual.png"
+                                    alt="正多面体の双対" />
+                                    <figcaption
+                                    aria-hidden="true">正多面体の双対</figcaption>
+                                    </figure>
+                                    <p>さて、立方体には面が6枚あるが、それぞれの面の重心を結んでみると正八面体になる。これを<span
                                     class="math inline">\((m,n)\)</span>の言葉で書くと、<span
                                     class="math inline">\((4,3)\)</span>が<span
-                                    class="math inline">\((3,4)\)</span>になっている。正八面体の面の重心を結ぶと立方体に戻る。すなわち、面と点を入れ替える変換は双対変換になっており、これは<span
+                                    class="math inline">\((3,4)\)</span>になっている。逆に正八面体の面の重心を結ぶと立方体に戻る。すなわち、面と点を入れ替える変換は双対変換になっており、これは<span
                                     class="math inline">\((m,n)\)</span>の<span
                                     class="math inline">\(m\)</span>と<span
                                     class="math inline">\(n\)</span>を入れ替える変換になっている。これにより、立方体<span
