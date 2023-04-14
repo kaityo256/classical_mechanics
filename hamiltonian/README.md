@@ -6,7 +6,206 @@
 
 ## 一般化運動量とハミルトニアン
 
+ニュートンの運動方程式を、ラグランジアンを使ってオイラー・ラグランジュの式で書いてやると、ニュートンの運動方程式よりも広い変数変換に対して運動方程式が不変となることを見た。これにより変数変換が楽になる。しかし、オイラー・ラグランジュの式で許される変換は座標のみを対象としたものであり、例えば運動量と座標を混ぜるような変換に対しては形を変えてしまう。そこで、ラグランジアンを変数変換することで、より広い変数変換について形を変えないような運動方程式を作ることにしよう。
+
+系のラグランジアンが$L(q, \dot{q})$で与えられている。この時、ラグランジアンを速度$\dot{q}$で偏微分したものを$p$とする。
+
+$$
+p \equiv \frac{\partial L}{\partial \dot{q}}
+$$
+
+ラグランジアンはエネルギーの次元を持っているため、もし一般化座標$q$が長さの次元を持っていれば、$p$は運動量の次元を持つことがわかる。そこで、$p$を一般化運動量と呼ぶ。ラグランジアンの自由変数を$\dot{q}$から$p$に取り直すため、以下のような量を考える。
+
+$$
+H = \dot{q}p - L
+$$
+
+この量を **ハミルトニアン(Hamiltonian)** と呼ぶ。
+
+両辺の全微分をとって見よう。
+
+$$
+\begin{aligned}
+dH &= p d\dot{q} + \dot{q} dp - dL \\
+&= p d\dot{q} + \dot{q} dp - \underbrace{\frac{\partial L}{\partial q}}_{\dot{p}}dq - \underbrace{\frac{\partial L}{\partial \dot{q}}}_{p}d\dot{q} \\
+&= \cancel{p d\dot{q}} + \dot{q} dp  - \dot{p}dq - \cancel{pd\dot{q}}\\
+&= \dot{q} dp - \dot{p}dq
+\end{aligned}
+$$
+
+ただし、途中でオイラー・ラグランジュの方程式から
+
+$$
+\frac{\partial L}{\partial q} = \frac{d}{dt} \underbrace{\left(\frac{\partial L}{\partial \dot{q}}\right)}_{p} = \dot{p}
+$$
+
+であることを使った。$H(q,p)$を全微分すると、
+
+$$
+dH = \frac{\partial H}{\partial q} dq + \frac{\partial H}{\partial p} dp
+$$
+
+これと、
+
+$$
+dH = \dot{q} dp - \dot{p}dq
+$$
+
+を見比べることで、以下の運動方程式が得られる。
+
+$$
+\begin{aligned}
+\dot{q} &= \frac{\partial H}{\partial p} \\
+\dot{p} &= -\frac{\partial H}{\partial q} \\
+\end{aligned}
+$$
+
+これを**ハミルトンの運動方程式(Hamilton's equation)**、もしくは **正準方程式(canonical equation)** と呼ぶ。多変数の場合も全く同様な議論から以下のように書ける。
+
+$$
+\begin{aligned}
+\dot{q}_i &= \frac{\partial H}{\partial p_i} \\
+\dot{p}_i &= -\frac{\partial H}{\partial q_i} \\
+\end{aligned}
+$$
+
+つまり、$q_i$と$p_i$は互いにペアになっており、自分の時間微分は、ハミルトニアンを相手で偏微分することで得られる。ただし、運動量は負符号がつくことに注意。オイラー・ラグランジュ方程式に比べて、方程式が対称性の良い形になっていることがわかるであろう。この運動方程式を用いて運動を議論する形式をハミルトン形式と呼ぶ。また、$q_i$と$p_i$の関係を正準共役、もしくは単に共役と呼ぶ。
+
 ## ルジャンドル変換
+
+ラグランジアン$L(q,\dot{q})$からハミルトニアン$H(q,p)$への変換は、自由変数を$\dot{q}$から$p$に取り直すものであり、これは **ルジャンドル変換(Legendre transformation)** と呼ばれるものの一種である。ルジャンドル変換は双対変換の一種であり、双対変換とは「2回行うと元に戻る操作」のことである。元に戻せるのであるから、ルジャンドル変換により情報は増えたり減ったりしない。しかし、ルジャンドル変換により目的に応じて自由変数を取り直すことで、見通しがよくなったり計算が楽になったりする。ルジャンドル変換は特に熱力学において主要な役割を果たすが、なかなかその直感的な意味を理解しづらい。以下ではルジャンドル変換の意味について様々な角度から見てみよう。
+
+### 全微分とルジャンドル変換
+
+まず、自由変数を取り直す、ということの意味について考える。もともとラグランジアンは$q$と$\dot{q}$の関数であり、$L(q,\dot{q})$と書けた。従って、その全微分は
+
+$$
+dL = \frac{\partial L}{\partial q} dq + \frac{\partial L}{\partial \dot{q}} d\dot{q}
+$$
+
+と書ける。ここでは変数を省略して書いたが、実際には微分係数は「どこにおける微分係数であるか」の情報が必要である。ここでは、点$(q_0, \dot{q}_0)$での微分を考えたことにしよう。変数を省略せずに書くと、
+
+$$
+dL(q_0, \dot{q}_0) =\left.\frac{\partial L}{\partial q}\right|_{q=q_0,\dot{q}=\dot{q}_0} dq + \left.L \frac{\partial L}{\partial \dot{q}}\right|_{q=q_0,\dot{q}=\dot{q}_0} d\dot{q}
+$$
+
+これは、$L(q,\dot{q})$で表現される二次元局面において、$(q_0, \dot{q}_0)$点での接平面を考えていることに対応する。接平面は平面であるから、基底が二つあれば全ての点を表現できる。この基底にあたるのが$dq$と$d\dot{q}$である。つまり、先程の式は
+
+$$
+\boldsymbol{a} = a_1 \boldsymbol{e}_1 + a_2 \boldsymbol{e}_2
+$$
+
+のような、基底によるベクトルの展開に他ならない。
+
+TODO: 図解
+
+さて、ルジャンドル変換とは、基底と展開係数の入れ替えに対応している。すなわち、
+
+$$
+\boldsymbol{a} = a_1 \boldsymbol{e}_1 + a_2 \boldsymbol{e}_2
+$$
+
+と書けている時、例えば$\boldsymbol{e}_2$の代わりに$a_2$を基底として扱うのがルジャンドル変換である。そのために、先程のラグランジアンの全微分をもう一度見てみよう。
+
+$$
+dL = \frac{\partial L}{\partial q} dq + \frac{\partial L}{\partial \dot{q}} d\dot{q}
+$$
+
+このうち、右辺第二項の$\partial_{\dot{q}} L$と$d\dot{q}$を入れ替えたい。そのために$p=\partial_{\dot{q}} L$とすると、として、$p \dot{q}$の全微分を考える。
+
+$$
+d(p \dot{q}) = \dot{q}dp + p d\dot{q}
+$$
+
+従って$d(p \dot{q}) - dL$を計算すると、
+
+$$
+d(p \dot{q} - L) = \dot{q}dp + \cancel{p d\dot{q}} - \frac{\partial L}{\partial q} dq - \cancel{p d\dot{q}} = \dot{q}dp - \frac{\partial L}{\partial q} dq
+$$
+
+ようするに、$L$を全微分して出てくる$d\dot{q}$を消して$dp$を足すために、その積$p\dot{q}$の全微分$d(p\dot{q})$から$dL$を引いているだけである。$p \dot{q} - L$をあらためて$H$という名前をつけると、$(q, \dot{q})$の関数であった$L$が、$(q,p)$の関数である$H$に変わったことがわかる。
+
+### ルジャンドル変換の幾何学な意味
+
+ルジャンドル変換の説明には、接線型と面積型の二種類がある。好きな方で理解して良いが、逆変換の符号が異なるので注意して欲しい。
+
+$(x,y)$平面における曲線を考える。二次元平面における曲線とは、点$(x,y)$の一次元的な集合のことである。多価関数を考えなければ、座標のどちらか一方の値を決めれば、もう一方の値が定まる。例えば$x$を自由変数とすると、曲線は$x$の関数$f(x)$を使って、$y=f(x)$と表現できる。これを$y$と$f$を同一視して、$y=y(x)$と書くことにしよう。
+
+曲線上の点$(x,y)$における接線を考える。この接線を表す式を
+
+$$
+y = X x + Y
+$$
+
+と書こう。これは傾き$X$、切片$Y$の直線を表している。接線の定義からすぐに
+
+$$
+\begin{aligned}
+X &= \frac{dy}{dx} \\
+Y &= y - x\frac{dy}{dx} = y - xX 
+\end{aligned}
+$$
+
+であることがわかる。これは$(x,y)$から$(X,Y)$へのルジャンドル変換になっており、自由変数を$x$から$X$に取り直したことで、$x$の関数$y$ではなく、$X$の関数$Y$を考えるように変えたことを意味する。幾何学的には、点$(x,y)$の集合として表現されていた曲線を、$(X,Y)$で表現される直線の集合で表現する、すなわち「点」と「線」を入れ替えたことに対応している。
+
+さて、ルジャンドル変換は本質的に入れ替えであるから、もう一度変換すると元に戻る。$(X,Y)$は直線の傾きと切片を表していたが、これを$(X,Y)$空間における点の集合、すなわち曲線だと思って、もう一度ルジャンドル変換をしてみよう。$Y = Y(X)$として、点$(X,Y)$での接線の傾きと切片をそれぞれ考えると、
+
+$$
+\begin{aligned}
+\frac{dY}{dX} &= \frac{dY}{dx} \frac{dx}{dX} \\
+&= \left(\cancel{\frac{dy}{dx}} -  \cancel{\frac{dy}{dx}} - x \cancel{\frac{d^2y}{dx^2}}\right) \frac{1}{\cancel{\frac{dX}{dx}}} \\
+&= -x
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y - X \frac{dY}{dX} &= y - \cancel{xX} -\cancel{Xx} \\
+&=y
+\end{aligned}
+$$
+
+これがルジャンドル逆変換を与える。ルジャンドル変換と逆変換を並べて書くと、
+
+$$
+\left\{
+\begin{matrix}
+X & = & \displaystyle\frac{dy}{dx} \\
+Y & = &y - xX
+\end{matrix}
+\right. ,
+\left\{
+\begin{matrix}
+x & = & - \displaystyle\frac{dY}{dX} \\
+y & = &Y - xX
+\end{matrix}
+\right.
+$$
+
+と、$x$と$X$の間の変換と逆変換で負符号がつく。これを嫌って、接線の切片に負符号をつけて、
+
+$$
+y = xX -Y
+$$
+
+とする流儀もある。すると、
+
+$$
+\left\{
+\begin{matrix}
+X & = & \displaystyle\frac{dy}{dx} \\
+Y & = &xX -y
+\end{matrix}
+\right. ,
+\left\{
+\begin{matrix}
+x & = & \displaystyle\frac{dY}{dX} \\
+y & = &xX -Y
+\end{matrix}
+\right.
+$$
+
+と対称性の良い形になる。
 
 ## 余談：双対変換
 
