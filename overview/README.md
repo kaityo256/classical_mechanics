@@ -185,7 +185,7 @@ $$
 $$
 \begin{aligned}
 \left[\hat{x}, \hat{p}\right] &\equiv \hat{x}\hat{p} - \hat{p}\hat{x} = i\hbar \\
-\left[\hat{x}, \hat{x}\right] &\equiv \hat{p}\hat{p} - \hat{x}\hat{x} = 0\\
+\left[\hat{x}, \hat{x}\right] &\equiv \hat{x}\hat{x} - \hat{x}\hat{x} = 0\\
 \left[\hat{p}, \hat{p}\right] &\equiv \hat{p}\hat{p} - \hat{p}\hat{p} = 0
 \end{aligned}
 $$
