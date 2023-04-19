@@ -1,12 +1,18 @@
 TARGET=classical_mechanics.pdf
 RE=preface.re preparation.re review.re virtual_work.re hamilton_principle.re lagrangian.re hamiltonian.re variational_principle.re phasespace.re poisson.re canonical_transformation.re quantum_mechanics.re postface.re
 
+DIRS=$(RE:.re=)
+
 all: $(TARGET)
 
+PHONY: imgcopy
+
 imgcopy:
-	mkdir -p images/vcs;cp ../vcs/fig/*.png images/vcs
-	mkdir -p images/term;cp ../term/fig/*.png images/term
-	mkdir -p images/command;cp ../command/fig/*.png images/command
+	for dir in $(DIRS);\
+                do mkdir -p images/$$dir;\
+                cp ../$$dir/fig/*.png images/$$dir 2>/dev/null;\
+                done
+
 
 %.re: ../%/README.md
 	ruby md2re.rb $< > $@
