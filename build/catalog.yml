@@ -2,16 +2,17 @@ PREDEF:
   - preface.re
 
 CHAPS:
+  - overview.re
   - preparation.re
   - review.re
   - virtual_work.re
   - hamilton_principle.re
+  - variational_principle.re
   - lagrangian.re
   - hamiltonian.re
-  - variational_principle.re
+  - canonical_transformation.re
   - poisson.re
   - phasespace.re
-  - canonical_transformation.re
   - quantum_mechanics.re
 
 POSTDEF:
