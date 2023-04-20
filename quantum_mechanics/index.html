@@ -125,7 +125,20 @@
                                     と呼ばれる。平面波は、波数ベクトル<span
                                     class="math inline">\(\boldsymbol{k}\)</span>の方向に速度<span
                                     class="math inline">\(v =
-                                    \omega/|\boldsymbol{k}|\)</span>で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。</p>
+                                    \omega/|\boldsymbol{k}|\)</span>で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を<span
+                                    class="math inline">\(-i\left(\boldsymbol{k}
+                                    \cdot\boldsymbol{r} - \omega t
+                                    \right)\)</span>ではなく、<span
+                                    class="math inline">\(i\left(\boldsymbol{k}
+                                    \cdot\boldsymbol{r} - \omega t
+                                    \right)\)</span>としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \psi(x,t) = \int \tilde{\psi}(k)
+                                    \mathrm{e}^{i(kx-\omega t)} dk
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、符号を入れ替えておく。</p>
                                     <p>さて、波束は空間的に局在しているので位置が決まり、その運動を追いかけると粒子のように見える。一方、平面波の重ね合わせとして表現されているため、波としての性質も持つ。これで、粒子と波動の両方の性質を持つ「何か」を作ることができた。</p>
                                     <p>量子力学を作るために、次に表現すべきは確率的な振る舞いである。観測事実から、量子力学に従う系は観測結果が確率的に振る舞うことがわかっている。そこで、先程定義した波束<span
                                     class="math inline">\(\psi(x)\)</span>について、その絶対値の二乗が、その位置に粒子が観測される確率に比例するものであると解釈しよう。</p>
@@ -165,12 +178,106 @@
                                     p(x,t) = |\psi(x,t)^2| = \psi(x,t)^*
                                     \psi(x,t)
                                     \]</span></p>
-                                    <p>で表される。ただし、波動関数は</p>
+                                    <p>で表される。</p>
+                                    <h1
+                                    id="物理量と演算子">物理量と演算子</h1>
+                                    <p>波動関数が定義できたところで、波動関数と物理量の関係を調べよう。系のエネルギーが位置と時刻に依存しており、<span
+                                    class="math inline">\(E(x,t)\)</span>と表現されるとする。粒子が時刻<span
+                                    class="math inline">\(t\)</span>において位置<span
+                                    class="math inline">\(x\)</span>に存在する確率が<span
+                                    class="math inline">\(p(x,t)\)</span>である時、エネルギーの期待値<span
+                                    class="math inline">\(\bar{E}(t)\)</span>は</p>
                                     <p><span class="math display">\[
-                                    \psi(x,t) = \int \tilde{\psi}(k)
-                                    \mathrm{e}^{-i(kx-\omega t)} dk
+                                    \bar{E}(t) = \int E(x,t) p(x,t) dx
                                     \]</span></p>
-                                    <p>と平面波展開されているものとする。</p>
+                                    <p>で与えられる。</p>
+                                    <p>さて、<span
+                                    class="math inline">\(p(x,t) =
+                                    |\psi(x,t)^2|\)</span>であったから、</p>
+                                    <p><span class="math display">\[
+                                    \bar{E}(t) = \int \psi^*(x,t) E
+                                    \psi(x,t)  dx
+                                    \]</span></p>
+                                    <p>後のために、<span
+                                    class="math inline">\(E\)</span>を波動関数で挟んで表記していることに注意。</p>
+                                    <p>さて、波動関数の平面波展開は以下のように書けた。</p>
+                                    <p><span class="math display">\[
+                                    \psi(x, t) = \int \tilde{\psi}(k)
+                                    \mathrm{e}^{i(kx-\omega t)} dk
+                                    \]</span></p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    E &amp;= \hbar \omega \\
+                                    p &amp;= \hbar k
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>TODO:
+                                    それぞれ説明すること(ド・ブロイ波)</p>
+                                    <p>であったから、平面波展開は以下のように書き直すことができる。</p>
+                                    <p><span class="math display">\[
+                                    \psi(x, t) = \int \tilde{\psi}(k)
+                                    \mathrm{e}^{i(px-Et)/\hbar} dk
+                                    \]</span></p>
+                                    <p>一般には<span
+                                    class="math inline">\(E\)</span>は<span
+                                    class="math inline">\(k\)</span>依存性を持つが、ここでは定数として扱おう。この両辺を時間で偏微分すると、以下の関係が得られる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial}{\partial t} \psi(x,
+                                    t) &amp;= -\frac{iE}{\hbar}\int
+                                    \tilde{\psi}(k)
+                                    \mathrm{e}^{i(px-Et)/\hbar} dk \\
+                                    &amp;= -\frac{iE}{\hbar} \psi(x,t)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>整理すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{i}{\hbar}\frac{\partial}{\partial
+                                    t} \psi = E \psi
+                                    \]</span></p>
+                                    <p>これを見ると、エネルギーを</p>
+                                    <p><span class="math display">\[
+                                    \hat{E} \equiv
+                                    \frac{i}{\hbar}\frac{\partial}{\partial
+                                    t}
+                                    \]</span></p>
+                                    <p>という演算子とみなすのが自然であることがわかる。すると、</p>
+                                    <p><span class="math display">\[
+                                    \hat{E} \psi = E \psi
+                                    \]</span></p>
+                                    <p>であるから、波動関数はエネルギー演算子の固有関数であり、その固有値がエネルギーであることがわかる。</p>
+                                    <p>エネルギーの期待値の式を、エネルギー演算子を使って書き直そう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \bar{E}(t) &amp;= \int \psi^*(x,t) E
+                                    \psi(x,t)  dx \\
+                                    &amp;= \int \psi^*(x,t) \hat{E}
+                                    \psi(x,t)  dx
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、関数の内積を以下のように定義する(以後、時間に関しては表記を省略する)。</p>
+                                    <p><span class="math display">\[
+                                    (\phi, \psi) \equiv \int \phi^*(x)
+                                    \psi(x) dx
+                                    \]</span></p>
+                                    <p>すると、先程のエネルギーの期待値は以下のように表現できる。</p>
+                                    <p><span class="math display">\[
+                                    \bar{E} = (\psi, \hat{E}\psi)
+                                    \]</span></p>
+                                    <p>すなわち、エネルギーを演算子とみなしたものを波動関数に演算したものと、波動関数自身との内積がエネルギーの期待値を与えている。</p>
+                                    <p>波動関数がベクトルであることを強調するため、Diracが考案したブラベクトルとケットベクトルを導入しよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \left|\psi\right&gt; &amp;\equiv
+                                    \psi(x) \\
+                                    \left&lt;\psi\right| &amp;\equiv
+                                    \psi(x)^* \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは、括弧(bracket)の左側<span
+                                    class="math inline">\(&lt;\)</span>をブラ$$</p>
+                                    <p>ブラベクトルと</p>
                                     <h1 id="交換関係">交換関係</h1>
                                     <h1 id="経路積分">経路積分</h1>
                                     <h1

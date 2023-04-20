@@ -47,7 +47,15 @@ $$
 \phi(\boldsymbol{r}, t) = \exp\left[ i\left(\boldsymbol{k} \cdot\boldsymbol{r} - \omega t \right) \right]
 $$
 
-は、 **平面波(plain wave)** と呼ばれる。平面波は、波数ベクトル$\boldsymbol{k}$の方向に速度$v = \omega/|\boldsymbol{k}|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。
+は、 **平面波(plain wave)** と呼ばれる。平面波は、波数ベクトル$\boldsymbol{k}$の方向に速度$v = \omega/|\boldsymbol{k}|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\boldsymbol{k} \cdot\boldsymbol{r} - \omega t \right)$ではなく、$i\left(\boldsymbol{k} \cdot\boldsymbol{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
+
+$$
+\begin{aligned}
+\psi(x,t) = \int \tilde{\psi}(k) \mathrm{e}^{i(kx-\omega t)} dk
+\end{aligned}
+$$
+
+と、符号を入れ替えておく。
 
 さて、波束は空間的に局在しているので位置が決まり、その運動を追いかけると粒子のように見える。一方、平面波の重ね合わせとして表現されているため、波としての性質も持つ。これで、粒子と波動の両方の性質を持つ「何か」を作ることができた。
 
@@ -85,13 +93,113 @@ $$
 p(x,t) = |\psi(x,t)^2| = \psi(x,t)^* \psi(x,t)
 $$
 
-で表される。ただし、波動関数は
+で表される。
+
+## 物理量と演算子
+
+波動関数が定義できたところで、波動関数と物理量の関係を調べよう。系のエネルギーが位置と時刻に依存しており、$E(x,t)$と表現されるとする。粒子が時刻$t$において位置$x$に存在する確率が$p(x,t)$である時、エネルギーの期待値$\bar{E}(t)$は
 
 $$
-\psi(x,t) = \int \tilde{\psi}(k) \mathrm{e}^{-i(kx-\omega t)} dk
+\bar{E}(t) = \int E(x,t) p(x,t) dx
 $$
 
-と平面波展開されているものとする。
+で与えられる。
+
+さて、$p(x,t) = |\psi(x,t)^2|$であったから、
+
+$$
+\bar{E}(t) = \int \psi^*(x,t) E \psi(x,t)  dx
+$$
+
+後のために、$E$を波動関数で挟んで表記していることに注意。
+
+さて、波動関数の平面波展開は以下のように書けた。
+
+$$
+\psi(x, t) = \int \tilde{\psi}(k) \mathrm{e}^{i(kx-\omega t)} dk
+$$
+
+ここで、
+
+$$
+\begin{aligned}
+E &= \hbar \omega \\
+p &= \hbar k
+\end{aligned}
+$$
+
+TODO: それぞれ説明すること(ド・ブロイ波)
+
+であったから、平面波展開は以下のように書き直すことができる。
+
+$$
+\psi(x, t) = \int \tilde{\psi}(k) \mathrm{e}^{i(px-Et)/\hbar} dk
+$$
+
+一般には$E$は$k$依存性を持つが、ここでは定数として扱おう。この両辺を時間で偏微分すると、以下の関係が得られる。
+
+$$
+\begin{aligned}
+\frac{\partial}{\partial t} \psi(x, t) &= -\frac{iE}{\hbar}\int \tilde{\psi}(k) \mathrm{e}^{i(px-Et)/\hbar} dk \\
+&= -\frac{iE}{\hbar} \psi(x,t)
+\end{aligned}
+$$
+
+整理すると、
+
+$$
+\frac{i}{\hbar}\frac{\partial}{\partial t} \psi = E \psi
+$$
+
+これを見ると、エネルギーを
+
+$$
+\hat{E} \equiv \frac{i}{\hbar}\frac{\partial}{\partial t} 
+$$
+
+という演算子とみなすのが自然であることがわかる。すると、
+
+$$
+\hat{E} \psi = E \psi
+$$
+
+であるから、波動関数はエネルギー演算子の固有関数であり、その固有値がエネルギーであることがわかる。
+
+エネルギーの期待値の式を、エネルギー演算子を使って書き直そう。
+
+$$
+\begin{aligned}
+\bar{E}(t) &= \int \psi^*(x,t) E \psi(x,t)  dx \\
+&= \int \psi^*(x,t) \hat{E} \psi(x,t)  dx
+\end{aligned}
+$$
+
+ここで、関数の内積を以下のように定義する(以後、時間に関しては表記を省略する)。
+
+$$
+(\phi, \psi) \equiv \int \phi^*(x) \psi(x) dx
+$$
+
+すると、先程のエネルギーの期待値は以下のように表現できる。
+
+$$
+\bar{E} = (\psi, \hat{E}\psi)
+$$
+
+すなわち、エネルギーを演算子とみなしたものを波動関数に演算したものと、波動関数自身との内積がエネルギーの期待値を与えている。
+
+波動関数がベクトルであることを強調するため、Diracが考案したブラベクトルとケットベクトルを導入しよう。
+
+$$
+\begin{aligned}
+\left|\psi\right> &\equiv \psi(x) \\
+\left<\psi\right| &\equiv \psi(x)^* \\
+\end{aligned}
+$$
+
+これは、括弧(bracket)の左側$<$をブラ$$
+
+ブラベクトルと
 
 ## 交換関係
 
