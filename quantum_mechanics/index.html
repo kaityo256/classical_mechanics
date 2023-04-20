@@ -68,6 +68,109 @@
                                     <h2 id="黒体輻射">黒体輻射</h2>
                                     <h2
                                     id="二重スリット実験">二重スリット実験</h2>
+                                    <h1 id="波動関数">波動関数</h1>
+                                    <p>以上から、光子や電子などのミクロな粒子は粒子と波動の両方の性質を持ち、さらに確率的に振る舞うことがわかった。物理は観測事実を説明する義務を負っているから、これらの性質を全て表現する表式を作らなければならない。まず、粒子と波動の両方の性質を説明するため、ガウス波束というものを作ろう。</p>
+                                    <p><span class="math display">\[
+                                    \psi(x) = \int \tilde{\psi}(k)
+                                    \mathrm{e}^{-ikx} dk
+                                    \]</span></p>
+                                    <p>ただし<span
+                                    class="math inline">\(\tilde{\psi}(k)\)</span>は、以下のガウス分布とする。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\psi}(k) = \frac{1}{\sqrt{2
+                                    \pi
+                                    \sigma_k^2}}\exp\left(-\frac{k^2}{2\sigma_k^2}
+                                    \right)
+                                    \]</span></p>
+                                    <p>これは、ある場所<span
+                                    class="math inline">\(x\)</span>に局在する塊を表している。この塊が、速度<span
+                                    class="math inline">\(v\)</span>で<span
+                                    class="math inline">\(x\)</span>の正の方向に運動しているとしよう。そのような波は<span
+                                    class="math inline">\(\psi(x
+                                    -vt)\)</span>で表現できるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \psi(x-vt) &amp;= \int
+                                    \tilde{\psi}(k)
+                                    \mathrm{e}^{-ik(x-vt)} dk \\
+                                    &amp;= \int \tilde{\psi}(k)
+                                    \mathrm{e}^{-i(kx-\omega t)} dk
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(\omega =
+                                    kv\)</span>により角振動数を定義した。この式は、ある位置に局在する波が、速度<span
+                                    class="math inline">\(v\)</span>で進行していく様子を表現しており、<strong>波束(wave
+                                    packet)</strong>
+                                    と呼ばれている。特に局在の形をガウス分布とする波束を
+                                    <strong>ガウス波束 (Gaussian wave
+                                    packets)</strong>
+                                    と呼び、性質が良いので物理でよく用いられる。</p>
+                                    <p>波束の定義の積分の中に現れる<span
+                                    class="math inline">\(\mathrm{e}^{-i(kx-\omega
+                                    t)}\)</span>は、<span
+                                    class="math inline">\(k\)</span>と<span
+                                    class="math inline">\(\omega\)</span>が正であれば<span
+                                    class="math inline">\(x\)</span>の正の方向に一定速度<span
+                                    class="math inline">\(v =
+                                    \omega/k\)</span>で進む波を表している。これを三次元に拡張した</p>
+                                    <p><span class="math display">\[
+                                    \phi(\boldsymbol{r}, t) = \exp\left[
+                                    i\left(\boldsymbol{k}
+                                    \cdot\boldsymbol{r} - \omega t
+                                    \right) \right]
+                                    \]</span></p>
+                                    <p>は、 <strong>平面波(plain
+                                    wave)</strong>
+                                    と呼ばれる。平面波は、波数ベクトル<span
+                                    class="math inline">\(\boldsymbol{k}\)</span>の方向に速度<span
+                                    class="math inline">\(v =
+                                    \omega/|\boldsymbol{k}|\)</span>で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。</p>
+                                    <p>さて、波束は空間的に局在しているので位置が決まり、その運動を追いかけると粒子のように見える。一方、平面波の重ね合わせとして表現されているため、波としての性質も持つ。これで、粒子と波動の両方の性質を持つ「何か」を作ることができた。</p>
+                                    <p>量子力学を作るために、次に表現すべきは確率的な振る舞いである。観測事実から、量子力学に従う系は観測結果が確率的に振る舞うことがわかっている。そこで、先程定義した波束<span
+                                    class="math inline">\(\psi(x)\)</span>について、その絶対値の二乗が、その位置に粒子が観測される確率に比例するものであると解釈しよう。</p>
+                                    <p><span class="math display">\[
+                                    p(x) \propto |\psi(x)^2| = \psi(x)^*
+                                    \psi(x)
+                                    \]</span></p>
+                                    <p>ただし<span
+                                    class="math inline">\(\psi(x)^*\)</span>は<span
+                                    class="math inline">\(\psi(x)\)</span>の複素共役を表す。このように、絶対値の自乗が、そのパラメータが観測される確率を表すものを
+                                    <strong>波動関数 (wave
+                                    function)</strong>
+                                    と呼ぶ。ここではパラメータとして位置<span
+                                    class="math inline">\(x\)</span>を採用したが、スピンの状態や運動量など、系を表すパラメータであればなんでも良い。とにかく何か物理量に対応するパラメータを持っており、絶対値の二乗がその物理量を観測する確率を与えるものが波動関数である。波動関数は一般に複素数であるため、絶対値の二乗は複素共役との積で与えられる。</p>
+                                    <p>確率は、全ての可能な状態について和をとると1になる必要があるから、</p>
+                                    <p><span class="math display">\[
+                                    \int_{-\infty}^\infty p(x)dx = 1
+                                    \]</span></p>
+                                    <p>である。これは、観測するたびに粒子の位置は確率的に揺らぐが、どこかには必ずある、ということを意味している。そこで、波動関数も適当な定数をかけて、その絶対値の二乗を全空間で積分したら1になるようにしておこう。</p>
+                                    <p><span class="math display">\[
+                                    \int_{-\infty}^\infty |\psi(x)^2|dx
+                                    = 1
+                                    \]</span></p>
+                                    <p>これを規格化と呼ぶ。以後、波動関数は規格化されていると約束する。これにより、位置<span
+                                    class="math inline">\(x\)</span>に粒子が観測される確率は</p>
+                                    <p><span class="math display">\[
+                                    p(x) = |\psi(x)^2| = \psi(x)^*
+                                    \psi(x)
+                                    \]</span></p>
+                                    <p>と波動関数の絶対値の二乗と等式で結ばれる。</p>
+                                    <p>ここまで時間非依存の波動関数を用いてきたが、時間に依存する場合も全く同様に議論できる。すなわち、時刻<span
+                                    class="math inline">\(t\)</span>に位置<span
+                                    class="math inline">\(x\)</span>に粒子を観測する確率<span
+                                    class="math inline">\(p(x,t)\)</span>は、時間依存する波動関数<span
+                                    class="math inline">\(\psi(x,t)\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    p(x,t) = |\psi(x,t)^2| = \psi(x,t)^*
+                                    \psi(x,t)
+                                    \]</span></p>
+                                    <p>で表される。ただし、波動関数は</p>
+                                    <p><span class="math display">\[
+                                    \psi(x,t) = \int \tilde{\psi}(k)
+                                    \mathrm{e}^{-i(kx-\omega t)} dk
+                                    \]</span></p>
+                                    <p>と平面波展開されているものとする。</p>
                                     <h1 id="交換関係">交換関係</h1>
                                     <h1 id="経路積分">経路積分</h1>
                                     <h1
