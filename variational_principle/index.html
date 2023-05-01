@@ -41,6 +41,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
                         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link rel="icon" href="https://kaityo256.github.io/classical_mechanics/favicon.ico">
         <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
@@ -63,6 +66,70 @@
                                     <li>懸垂線</li>
                                     <li>測地線</li>
                                     </ul>
+                                    <p>ニュートン力学では、ニュートンの運動方程式が出発点であり、「その運動方程式はどこから来たか」に答えることができなかった。しかし、解析力学では、最小作用の原理から運動方程式を導く。これにより、運動方程式よりも一歩引いた立場から運動を記述、理解できるようになる。最小作用の原理は、変分原理と呼ばれるものの一種である。以下では、変分原理の例としてスネルの法則、最速降下曲線、懸垂線について紹介し、これらを一般的に扱うために汎関数微分を導入する。</p>
+                                    <h1
+                                    id="スネルの法則">スネルの法則</h1>
+                                    <p>TODO: 図解</p>
+                                    <p>まずは簡単な例からはじめよう。図のA地点からB地点まで行きたい。ただし、A地点は草原で歩きやすく、B地点は歩きにくい沼地にある。草原と沼地が直線で接している時、最短経路はどのようになるか？</p>
+                                    <p>草原の中、沼地の中など、歩きやすさが同じところでは、経路は直線となるであろう。また、なるべく草原を多く歩いたほうが得だが、沼地を歩く距離を最小化すると、全体としての経路が伸びてしまうために時間もかかる。どこかにちょうどよい点があるはずである。</p>
+                                    <p>この問題を考えるため、A地点から境界までを<span
+                                    class="math inline">\(l_A\)</span>、B地点から境界までを<span
+                                    class="math inline">\(l_B\)</span>とし、A地点とB地点の水平方向の距離を<span
+                                    class="math inline">\(L\)</span>としよう。A地点が<span
+                                    class="math inline">\(y\)</span>軸上に、境目が<span
+                                    class="math inline">\(x\)</span>軸となるような座標系を採用する。するとA地点の座標は<span
+                                    class="math inline">\((0,-l_A)\)</span>、B地点の座標は(<span
+                                    class="math inline">\(L\)</span>,
+                                    <span
+                                    class="math inline">\(l_B\)</span>)となる。草原を歩く時の速度は<span
+                                    class="math inline">\(v_A\)</span>、沼地を歩く時の速度を<span
+                                    class="math inline">\(v_B\)</span>とする(<span
+                                    class="math inline">\(v_A&gt;v_B\)</span>)。A地点から草原と沼地の境目の点<span
+                                    class="math inline">\(X(x,0)\)</span>までまっすぐ歩き、そこからB地点までまっすぐ歩くことにする。AXの距離は<span
+                                    class="math inline">\(\sqrt{x^2+l_A^2}\)</span>、XBの距離は<span
+                                    class="math inline">\(\sqrt{(L-x)^2+l_B^2}\)</span>であり、それぞれ<span
+                                    class="math inline">\(v_A\)</span>、<span
+                                    class="math inline">\(v_B\)</span>の速度で歩くのであるから、全体を歩くのにかかる時間<span
+                                    class="math inline">\(T(x)\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    T(x) =
+                                    \frac{\sqrt{x^2+l_A^2}}{v_A}+\frac{\sqrt{(L-x)^2+l_B^2}}{v_B}
+                                    \]</span></p>
+                                    <p>これを最小化する<span
+                                    class="math inline">\(x\)</span>は<span
+                                    class="math inline">\(T&#39;(x) =
+                                    0\)</span>を満たすはずであるから、</p>
+                                    <p><span class="math display">\[
+                                    \frac{x}{v_A\sqrt{x^2+l_A^2}} -
+                                    \frac{L-x}{v_B\sqrt{(L-x)^2+l_B^2}}
+                                    = 0
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(x\)</span>軸に対して直線AX、XBのなす角をそれぞれ<span
+                                    class="math inline">\(\theta_A\)</span>、<span
+                                    class="math inline">\(\theta_B\)</span>とすると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \sin \theta_A &amp;=
+                                    \frac{x}{\sqrt{x^2+l_A^2}} \\
+                                    \sin \theta_B &amp;=
+                                    \frac{L-x}{\sqrt{(L-x)^2+l_B^2}} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>先程の式を書き直すと、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\sin \theta_A}{v_A} =
+                                    \frac{\sin \theta_B}{v_B}
+                                    \]</span></p>
+                                    <p>これは、光線が平面に入射した場合、入射角と出射角(屈折角)と、その媒質中における光速との関係を表すスネルの法則にほかならない。</p>
+                                    <p>TODO:
+                                    変分原理とホイヘンスの原理図解？</p>
+                                    <p>スネルの法則は、ホイヘンスの原理によっても説明できる。ホイヘンスの原理は、波の波面から二次波とよばれる新しい波が生じ、それらが強めあうところが次の波面となる、というもので、こちらはミクロな立場から屈折を説明する。</p>
+                                    <p>一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、これは変分原理の最も簡単な例となっている。当然、光には意思はないため、異なる媒質に入射する前に「最も到達時間が短くなるように経路を選ぼう」などとは思っていない。しかし、最終的に光が通った経路を見ると、それは始点と終点を決めた時に、もっとも到達時間が短くなるように選ばれている。そこで、何か経路から決まる量(今回は到達時間)について、それが最も小さくなるように経路が決まると主張するのが変分原理である。ホイヘンスの原理が、ある瞬間の光の振る舞いに着目し、次の瞬間の光の位置を次々と決めていく形であるのに対して、変分原理は光の経路全体を見渡し、経路を一度に決めてしまう。このように、変分原理は全体を俯瞰する立場から振る舞いを決定する手法である。</p>
+                                    <h1
+                                    id="最速降下曲線">最速降下曲線</h1>
+                                    <p>TODO: 図解</p>
+                                    <p>変分原理の有名な例として、最速降下曲線を考えよう。斜面に質点をそっと置いて離し、重力により滑らせる。ただし、摩擦は無視できるものとする。質点は斜面から離れることなく、なめらかに滑るとしよう。スタート地点とゴール地点を固定する時、もっとも早くゴールするような斜面はどのような形状であるか求めよ、というものが最速降下曲線の問題である。この問題はベルヌーイが解いて、数学者への挑戦という形で出題された。しばらく誰も解くことができなかったが、ニュートンがこれを一晩で解いて返送し、ベルヌーイが悔しがった、というのは有名な話である。</p>
                     </article>
     </body>
 
