@@ -61,6 +61,33 @@
                                     <p>これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。</p>
                                     <h1
                                     id="座標変換とベクトル">座標変換とベクトル</h1>
+                                    <p>解析力学とは、座標変換の学問である。そこで、座標変換について簡単にまとめておこう。</p>
+                                    <p>いま、あるベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>が正規直交基底<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>により、以下のように成分表示されているとしよう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = u^i
+                                    \boldsymbol{e}_i
+                                    \]</span></p>
+                                    <p>同じ記号が現れた場合(今回は<span
+                                    class="math inline">\(i\)</span>)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な線形変換<span
+                                    class="math inline">\(T\)</span>を用いて、基底が<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>から、別の正規直交基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>に変更されたとしよう。成分で書くとこうなる。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}_i = T^i_{\,k}
+                                    \boldsymbol{e}_i
+                                    \]</span></p>
+                                    <p>ベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>を新しい基底<span
+                                    class="math inline">\(\{\boldsymbol{e}&#39;_i\}\)</span>で</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = \tilde{u}^i
+                                    \tilde{\boldsymbol{e}}_i
+                                    \]</span></p>
+                                    <p>と展開した時、<span
+                                    class="math inline">\(\tilde{u}^i\)</span>と<span
+                                    class="math inline">\(u^i\)</span>の関係を調べよう。</p>
                                     <h1
                                     id="ニュートンの運動方程式の共変性">ニュートンの運動方程式の共変性</h1>
                                     <h2

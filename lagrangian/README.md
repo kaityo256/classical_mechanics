@@ -4,6 +4,28 @@
 
 ## 座標変換とベクトル
 
+解析力学とは、座標変換の学問である。そこで、座標変換について簡単にまとめておこう。
+
+いま、あるベクトル$\boldsymbol{u}$が正規直交基底$\{\boldsymbol{e}_i\}$により、以下のように成分表示されているとしよう。
+
+$$
+\boldsymbol{u} = u^i \boldsymbol{e}_i
+$$
+
+同じ記号が現れた場合(今回は$i$)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な線形変換$T$を用いて、基底が$\{\boldsymbol{e}_i\}$から、別の正規直交基底$\{\tilde{\boldsymbol{e}}_i\}$に変更されたとしよう。成分で書くとこうなる。
+
+$$
+\tilde{\boldsymbol{e}}_i = T^i_{\,k} \boldsymbol{e}_i
+$$
+
+ベクトル$\boldsymbol{u}$を新しい基底$\{\boldsymbol{e}'_i\}$で
+
+$$
+\boldsymbol{u} = \tilde{u}^i \tilde{\boldsymbol{e}}_i
+$$
+
+と展開した時、$\tilde{u}^i$と$u^i$の関係を調べよう。
+
 ## ニュートンの運動方程式の共変性
 
 ### ガリレイ変換
