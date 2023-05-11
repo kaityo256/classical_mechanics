@@ -4,33 +4,150 @@
 
 ## 座標変換とベクトル
 
-解析力学とは、座標変換の学問である。そこで、座標変換について簡単にまとめておこう。
+解析力学とは、座標変換の学問である。そこで、座標変換について簡単にまとめておこう。一般に、ベクトルは適当な基底を選ぶことで成分表示できる。同じベクトルでも、別の基底を選ぶと成分が変わる。この成分の変化のし方により、ベクトルは反変ベクトルと共変ベクトルに分類される。
 
-いま、あるベクトル$\boldsymbol{u}$が正規直交基底$\{\boldsymbol{e}_i\}$により、以下のように成分表示されているとしよう。
+![反変ベクトル](fig/contravariant_vector.png)
+
+例を挙げよう。基底$\{\boldsymbol{e}_1, \boldsymbol{e}_2\}$で張られる二次元空間があり、あるベクトル$\boldsymbol{u}$がこの基底により
+
+$$
+\boldsymbol{u} = 6 \boldsymbol{e}_1 + 4 \boldsymbol{e}_2
+$$
+
+と展開されているとしよう。この時、ベクトルの成分表示は$\boldsymbol{u} = (6,4)$となる。さて、基底の長さを2倍にしてみよう。
+
+$$
+\begin{aligned}
+\tilde{\boldsymbol{e}}_1 &= 2 \boldsymbol{e}_1 \\
+\tilde{\boldsymbol{e}}_2 &= 2 \boldsymbol{e}_2
+\end{aligned}
+$$
+
+新しい基底$\{\tilde{\boldsymbol{e}}_1, \tilde{\boldsymbol{e}}_2\}$で$\boldsymbol{u}$を展開すると、
+
+$$
+\boldsymbol{u} = 3 \tilde{\boldsymbol{e}}_1 + 2 \tilde{\boldsymbol{e}}_2
+$$
+
+となる。この時、ベクトルの成分表示は$\boldsymbol{u} = (3,2)$と、元の半分になる。このように、基底の長さを2倍にした時、成分が半分となるようなベクトルを、基底と反対向きの変換を受けるという意味で **反変ベクトル(contravariant vector)** と呼ぶ。
+
+この事実を一般化しておこう。いま、あるベクトル$\boldsymbol{u}$が正規直交基底$\{\boldsymbol{e}_i\}$により、以下のように成分表示されているとしよう。
 
 $$
 \boldsymbol{u} = u^i \boldsymbol{e}_i
 $$
 
-同じ記号が現れた場合(今回は$i$)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な線形変換$T$を用いて、基底が$\{\boldsymbol{e}_i\}$から、別の正規直交基底$\{\tilde{\boldsymbol{e}}_i\}$に変更されたとしよう。成分で書くとこうなる。
+同じ記号が現れた場合(今回は$i$)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列$T$を用いて、基底が$\{\boldsymbol{e}_i\}$から、別の正規直交基底$\{\tilde{\boldsymbol{e}}_i\}$に以下のように変換されたとする。
 
 $$
-\tilde{\boldsymbol{e}}_i = T^i_{\,k} \boldsymbol{e}_i
+\tilde{\boldsymbol{e}}_i = T^k_{\,i} \boldsymbol{e}_k
 $$
 
-ベクトル$\boldsymbol{u}$を新しい基底$\{\boldsymbol{e}'_i\}$で
+ベクトル$\boldsymbol{u}$を新しい基底$\{\tilde{\boldsymbol{e}}_i\}$で展開すると、
 
 $$
-\boldsymbol{u} = \tilde{u}^i \tilde{\boldsymbol{e}}_i
+\begin{aligned}
+\boldsymbol{u} &= \tilde{u}^k \tilde{\boldsymbol{e}}_k \\
+&= \tilde{u}^k T^j_{\,k} \boldsymbol{e}_j
+\end{aligned}
 $$
 
-と展開した時、$\tilde{u}^i$と$u^i$の関係を調べよう。
+両辺について$\boldsymbol{e}^i$と内積をとると、
 
-![反変ベクトル](fig/contravariant_vector.png)
+$$
+\begin{aligned}
+u^i &= \tilde{u}^k T^j_{\,k} (\boldsymbol{e}^i,\boldsymbol{e}_j),\\
+&= \tilde{u}^k T^j_{\,k} \delta^i_{\,j}, \\
+&= T^i_{\,k} \tilde{u}^k.
+\end{aligned}
+$$
 
-これは、基底が2倍の長さになったら、その基底で表現されるベクトルの成分が半分になる、と言っているに過ぎない。例えばセンチメートルで測って200であったら、メートルで測れば2になる。単位が100倍になれば、同じ量は1/100になるように、基準となる量が大きくなったら、その量で測ったものは小さくなる。このように、通常のベクトルの成分は基底の変換と反対向きの変換を受けるため、 **反変ベクトル(contravariant vector)** と呼ぶ。同様に、基底の変換と同様な変換を受けるベクトルを **共変ベクトル(covariant vector)** と呼ぶ。
+基底の変換と並べてみると、
 
-TODO: 微分形式の基底について少し触れる
+$$
+\begin{aligned}
+\tilde{\boldsymbol{e}}_i &= T^k_{\,i} \boldsymbol{e}_k \\
+u^i &= T^i_{\,k} \tilde{u}^k
+\end{aligned}
+$$
+
+チルダが現れる項が左右逆になっていることがわかる。これが反変ベクトルの定義である。
+
+反変ベクトルは逆に、チルダが同じ側に現れるのが共変ベクトルである。先程のベクトルを縦ベクトルとすると、横ベクトルが共変ベクトルとなる。$\{\boldsymbol{e}_i\}$や$\{\tilde{\boldsymbol{e}}_i\}$が張っていた縦ベクトルの空間と共役な空間を張る、横ベクトルの基底$\{\boldsymbol{e}^i\}$や$\{\tilde{\boldsymbol{e}}^i\}$を考えよう。以下のように、共役なベクトルとの直交性を課す。
+
+$$
+\begin{aligned}
+(\boldsymbol{e}^j,\boldsymbol{e}_i) &= \delta^j_{\,i} \\
+(\tilde{\boldsymbol{e}}^j,\tilde{\boldsymbol{e}}_i) &= \delta^j_{\,i} \\
+\end{aligned}
+$$
+
+さて、縦ベクトルが$\tilde{\boldsymbol{e}}_i = T^k_{\,i} \boldsymbol{e}_k$と変換される時、横ベクトルがどのように変換されるか見てみよう。チルダ付きの横ベクトルが、チルダの無い横ベクトルで
+
+$$
+\tilde{\boldsymbol{e}}^i = M^i_{\,k} \boldsymbol{e}^k
+$$
+
+と展開できるとする。両辺、$\boldsymbol{e}_j$との内積を取ると、
+
+$$
+\begin{aligned}
+(\tilde{\boldsymbol{e}}^i, \boldsymbol{e}_j) &= M^i_{\,k} (\boldsymbol{e}^k, \boldsymbol{e}_j)
+&= M^i_{\,k} \delta^k_{\,j} \\
+&= M^i_{\,j}
+\end{aligned}
+$$
+
+縦ベクトルのチルダ付きとチルダ無しの関係を考える。
+
+$$
+\tilde{\boldsymbol{e}}_i = T^k_{\,i} \boldsymbol{e}_k.
+$$
+
+$\tilde{\boldsymbol{e}}^j$と内積をとると、左辺は直交性から
+
+$$
+(\tilde{\boldsymbol{e}}^j, \tilde{\boldsymbol{e}}_i) = \delta^j_{\,i}.
+$$
+
+右辺は、先程求めた$(\tilde{\boldsymbol{e}}^i, \boldsymbol{e}_j) = M^i_{\,j}$を代入することで
+
+$$
+T^k_{\,i} (\tilde{\boldsymbol{e}}^j, \boldsymbol{e}_k) =   M^j_{\,k} T^k_{\,i} 
+$$
+
+以上から、
+
+$$
+M^j_{\,k} T^k_{\,i} = \delta^j_{\,i}
+$$
+
+これは、行列$M$と$T$が互いに逆行列の関係にあることを意味する。
+
+さて、横ベクトル$\boldsymbol{v}$が、横ベクトルの基底で
+
+$$
+\boldsymbol{v} = v_i \boldsymbol{e}^i = \tilde{v}_i \boldsymbol{e}^i 
+$$
+
+と展開されているとしよう。縦ベクトルと同様な議論から、
+
+$$
+v^i = M^i_{\,k} \tilde{v}^k
+$$
+
+が成立する。両辺に行列$T$をかけると、
+
+縦ベクトルの基底の変換の式と並べると、
+
+$$
+\begin{aligned}
+\tilde{\boldsymbol{e}}_i &= T^k_{\,i} \boldsymbol{e}_k \\
+\tilde{v}^k &= T^k_{\,i }v^i
+\end{aligned}
+$$
+
+のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。
 
 ## ニュートンの運動方程式の共変性
 

@@ -61,33 +61,7 @@
                                     <p>これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。</p>
                                     <h1
                                     id="座標変換とベクトル">座標変換とベクトル</h1>
-                                    <p>解析力学とは、座標変換の学問である。そこで、座標変換について簡単にまとめておこう。</p>
-                                    <p>いま、あるベクトル<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>が正規直交基底<span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>により、以下のように成分表示されているとしよう。</p>
-                                    <p><span class="math display">\[
-                                    \boldsymbol{u} = u^i
-                                    \boldsymbol{e}_i
-                                    \]</span></p>
-                                    <p>同じ記号が現れた場合(今回は<span
-                                    class="math inline">\(i\)</span>)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な線形変換<span
-                                    class="math inline">\(T\)</span>を用いて、基底が<span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>から、別の正規直交基底<span
-                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>に変更されたとしよう。成分で書くとこうなる。</p>
-                                    <p><span class="math display">\[
-                                    \tilde{\boldsymbol{e}}_i = T^i_{\,k}
-                                    \boldsymbol{e}_i
-                                    \]</span></p>
-                                    <p>ベクトル<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>を新しい基底<span
-                                    class="math inline">\(\{\boldsymbol{e}&#39;_i\}\)</span>で</p>
-                                    <p><span class="math display">\[
-                                    \boldsymbol{u} = \tilde{u}^i
-                                    \tilde{\boldsymbol{e}}_i
-                                    \]</span></p>
-                                    <p>と展開した時、<span
-                                    class="math inline">\(\tilde{u}^i\)</span>と<span
-                                    class="math inline">\(u^i\)</span>の関係を調べよう。</p>
+                                    <p>解析力学とは、座標変換の学問である。そこで、座標変換について簡単にまとめておこう。一般に、ベクトルは適当な基底を選ぶことで成分表示できる。同じベクトルでも、別の基底を選ぶと成分が変わる。この成分の変化のし方により、ベクトルは反変ベクトルと共変ベクトルに分類される。</p>
                                     <figure>
                                     <img
                                     src="fig/contravariant_vector.png"
@@ -95,14 +69,170 @@
                                     <figcaption
                                     aria-hidden="true">反変ベクトル</figcaption>
                                     </figure>
-                                    <p>これは、基底が2倍の長さになったら、その基底で表現されるベクトルの成分が半分になる、と言っているに過ぎない。例えばセンチメートルで測って200であったら、メートルで測れば2になる。単位が100倍になれば、同じ量は1/100になるように、基準となる量が大きくなったら、その量で測ったものは小さくなる。このように、通常のベクトルの成分は基底の変換と反対向きの変換を受けるため、
+                                    <p>例を挙げよう。基底<span
+                                    class="math inline">\(\{\boldsymbol{e}_1,
+                                    \boldsymbol{e}_2\}\)</span>で張られる二次元空間があり、あるベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>がこの基底により</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = 6 \boldsymbol{e}_1
+                                    + 4 \boldsymbol{e}_2
+                                    \]</span></p>
+                                    <p>と展開されているとしよう。この時、ベクトルの成分表示は<span
+                                    class="math inline">\(\boldsymbol{u}
+                                    =
+                                    (6,4)\)</span>となる。さて、基底の長さを2倍にしてみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tilde{\boldsymbol{e}}_1 &amp;= 2
+                                    \boldsymbol{e}_1 \\
+                                    \tilde{\boldsymbol{e}}_2 &amp;= 2
+                                    \boldsymbol{e}_2
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>新しい基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_1,
+                                    \tilde{\boldsymbol{e}}_2\}\)</span>で<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>を展開すると、</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = 3
+                                    \tilde{\boldsymbol{e}}_1 + 2
+                                    \tilde{\boldsymbol{e}}_2
+                                    \]</span></p>
+                                    <p>となる。この時、ベクトルの成分表示は<span
+                                    class="math inline">\(\boldsymbol{u}
+                                    =
+                                    (3,2)\)</span>と、元の半分になる。このように、基底の長さを2倍にした時、成分が半分となるようなベクトルを、基底と反対向きの変換を受けるという意味で
                                     <strong>反変ベクトル(contravariant
-                                    vector)</strong>
-                                    と呼ぶ。同様に、基底の変換と同様な変換を受けるベクトルを
-                                    <strong>共変ベクトル(covariant
                                     vector)</strong> と呼ぶ。</p>
-                                    <p>TODO:
-                                    微分形式の基底について少し触れる</p>
+                                    <p>この事実を一般化しておこう。いま、あるベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>が正規直交基底<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>により、以下のように成分表示されているとしよう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = u^i
+                                    \boldsymbol{e}_i
+                                    \]</span></p>
+                                    <p>同じ記号が現れた場合(今回は<span
+                                    class="math inline">\(i\)</span>)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列<span
+                                    class="math inline">\(T\)</span>を用いて、基底が<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>から、別の正規直交基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>に以下のように変換されたとする。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}_i = T^k_{\,i}
+                                    \boldsymbol{e}_k
+                                    \]</span></p>
+                                    <p>ベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>を新しい基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>で展開すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \boldsymbol{u} &amp;= \tilde{u}^k
+                                    \tilde{\boldsymbol{e}}_k \\
+                                    &amp;= \tilde{u}^k T^j_{\,k}
+                                    \boldsymbol{e}_j
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺について<span
+                                    class="math inline">\(\boldsymbol{e}^i\)</span>と内積をとると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    u^i &amp;= \tilde{u}^k T^j_{\,k}
+                                    (\boldsymbol{e}^i,\boldsymbol{e}_j),\\
+                                    &amp;= \tilde{u}^k T^j_{\,k}
+                                    \delta^i_{\,j}, \\
+                                    &amp;= T^i_{\,k} \tilde{u}^k.
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>基底の変換と並べてみると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tilde{\boldsymbol{e}}_i &amp;=
+                                    T^k_{\,i} \boldsymbol{e}_k \\
+                                    u^i &amp;= T^i_{\,k} \tilde{u}^k
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>チルダが現れる項が左右逆になっていることがわかる。これが反変ベクトルの定義である。</p>
+                                    <p>反変ベクトルは逆に、チルダが同じ側に現れるのが共変ベクトルである。先程のベクトルを縦ベクトルとすると、横ベクトルが共変ベクトルとなる。<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>や<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>が張っていた縦ベクトルの空間と共役な空間を張る、横ベクトルの基底<span
+                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>や<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}^i\}\)</span>を考えよう。以下のように、共役なベクトルとの直交性を課す。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\boldsymbol{e}^j,\boldsymbol{e}_i)
+                                    &amp;= \delta^j_{\,i} \\
+                                    (\tilde{\boldsymbol{e}}^j,\tilde{\boldsymbol{e}}_i)
+                                    &amp;= \delta^j_{\,i} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さて、縦ベクトルが<span
+                                    class="math inline">\(\tilde{\boldsymbol{e}}_i
+                                    = T^k_{\,i}
+                                    \boldsymbol{e}_k\)</span>と変換される時、横ベクトルがどのように変換されるか見てみよう。チルダ付きの横ベクトルが、チルダの無い横ベクトルで</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}^i = M^i_{\,k}
+                                    \boldsymbol{e}^k
+                                    \]</span></p>
+                                    <p>と展開できるとする。両辺、<span
+                                    class="math inline">\(\boldsymbol{e}_j\)</span>との内積を取ると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\tilde{\boldsymbol{e}}^i,
+                                    \boldsymbol{e}_j) &amp;= M^i_{\,k}
+                                    (\boldsymbol{e}^k, \boldsymbol{e}_j)
+                                    &amp;= M^i_{\,k} \delta^k_{\,j} \\
+                                    &amp;= M^i_{\,j}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>縦ベクトルのチルダ付きとチルダ無しの関係を考える。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}_i = T^k_{\,i}
+                                    \boldsymbol{e}_k.
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\tilde{\boldsymbol{e}}^j\)</span>と内積をとると、左辺は直交性から</p>
+                                    <p><span class="math display">\[
+                                    (\tilde{\boldsymbol{e}}^j,
+                                    \tilde{\boldsymbol{e}}_i) =
+                                    \delta^j_{\,i}.
+                                    \]</span></p>
+                                    <p>右辺は、先程求めた<span
+                                    class="math inline">\((\tilde{\boldsymbol{e}}^i,
+                                    \boldsymbol{e}_j) =
+                                    M^i_{\,j}\)</span>を代入することで</p>
+                                    <p><span class="math display">\[
+                                    T^k_{\,i} (\tilde{\boldsymbol{e}}^j,
+                                    \boldsymbol{e}_k) =   M^j_{\,k}
+                                    T^k_{\,i}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    M^j_{\,k} T^k_{\,i} = \delta^j_{\,i}
+                                    \]</span></p>
+                                    <p>これは、行列<span
+                                    class="math inline">\(M\)</span>と<span
+                                    class="math inline">\(T\)</span>が互いに逆行列の関係にあることを意味する。</p>
+                                    <p>さて、横ベクトル<span
+                                    class="math inline">\(\boldsymbol{v}\)</span>が、横ベクトルの基底で</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{v} = v_i
+                                    \boldsymbol{e}^i = \tilde{v}_i
+                                    \boldsymbol{e}^i
+                                    \]</span></p>
+                                    <p>と展開されているとしよう。縦ベクトルと同様な議論から、</p>
+                                    <p><span class="math display">\[
+                                    v^i = M^i_{\,k} \tilde{v}^k
+                                    \]</span></p>
+                                    <p>が成立する。両辺に行列<span
+                                    class="math inline">\(T\)</span>をかけると、</p>
+                                    <p>縦ベクトルの基底の変換の式と並べると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tilde{\boldsymbol{e}}_i &amp;=
+                                    T^k_{\,i} \boldsymbol{e}_k \\
+                                    \tilde{v}^k &amp;= T^k_{\,i }v^i
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。</p>
                                     <h1
                                     id="ニュートンの運動方程式の共変性">ニュートンの運動方程式の共変性</h1>
                                     <h2
