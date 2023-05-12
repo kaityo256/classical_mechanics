@@ -233,6 +233,123 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。</p>
+                                    <p>解析力学においては、線形でない基底変換も考慮する。その典型例がデカルト座標から極座標への変換だ。例えば<span
+                                    class="math inline">\((x,y)\)</span>と<span
+                                    class="math inline">\((r,\theta)\)</span>の変換を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r \cos\theta \\
+                                    y &amp;= r \sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この変換は非線形だが、全微分を考えるとベクトルとみなすことができる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx &amp;= \cos \theta dr - r \sin
+                                    \theta d\theta \\
+                                    dy &amp;= \sin \theta dr + r \cos
+                                    \theta d\theta \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは、基底<span
+                                    class="math inline">\(\{dr,
+                                    d\theta\}\)</span>から、<span
+                                    class="math inline">\(\{dx,
+                                    dy\}\)</span>への線形変換と見ることができる。後で見やすいように、<span
+                                    class="math inline">\((r,\theta)\)</span>を<span
+                                    class="math inline">\((q_1,q_2)\)</span>、<span
+                                    class="math inline">\((x,y)\)</span>を<span
+                                    class="math inline">\(\tilde{q}_1,
+                                    \tilde{q}_2\)</span>と表記すると、先程の全微分の式は、</p>
+                                    <p><span class="math display">\[
+                                    d\tilde{q}_i = \frac{\partial
+                                    \tilde{q}_i}{\partial q_k} dq_k
+                                    \]</span></p>
+                                    <p>とまとめることができる。例えば</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \tilde{q}_1}{\partial
+                                    q_2} \equiv \frac{\partial
+                                    x}{\partial \theta}
+                                    \]</span></p>
+                                    <p>である。</p>
+                                    <p>これまでの縦ベクトルでの表記と合わせるため、<span
+                                    class="math inline">\(\{dr,
+                                    d\theta\}\)</span>を<span
+                                    class="math inline">\(\{\boldsymbol{e}_1,
+                                    \boldsymbol{e}_2\}\)</span>, <span
+                                    class="math inline">\(\{dx,
+                                    dy\}\)</span>を<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_1,
+                                    \tilde{\boldsymbol{e}}_2\}\)</span>と表記すると、以下のようにも書ける。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}_i =
+                                    \frac{\partial
+                                    \tilde{\boldsymbol{e}}_i}{\partial
+                                    \boldsymbol{e}_k} \boldsymbol{e}_k
+                                    \]</span></p>
+                                    <p>このように、左辺にチルダのある量を持ってきた時、右辺の偏微分の「分子」にチルダのある量が来る変換を受ける反変ベクトルと呼ぶ。座標の微分<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>や<span
+                                    class="math inline">\(dr,
+                                    d\theta\)</span>は自然に反変ベクトルとなる。この変換が線形変換を特殊な場合として含んでいることに注意すること。</p>
+                                    <p>数学的準備の章にて、<span
+                                    class="math inline">\(dx\)</span>を縦ベクトルとみなすと、<span
+                                    class="math inline">\(\partial_x\)</span>が自然な双対基底であり、横ベクトルとみなせることを見た。従って、<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>は共変ベクトルとなることが期待される。</p>
+                                    <p>いま、<span
+                                    class="math inline">\((q_1,
+                                    q_2)\)</span>で張られる空間に、スカラー関数<span
+                                    class="math inline">\(f(q_1,
+                                    q_2)\)</span>があるとしよう。この関数の勾配(gradient)が、変数変換<span
+                                    class="math inline">\((q_1, q_2)
+                                    \rightarrow (\tilde{q}_1,
+                                    \tilde{q}_2)\)</span>でどのように変換されるか見てみよう。合成関数の偏微分の公式から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial f}{\partial
+                                    \tilde{q}_1} &amp;=
+                                    \frac{\partial f}{\partial q_1}
+                                    \frac{\partial q_1}{\partial
+                                    \tilde{q}_1}+
+                                    \frac{\partial f}{\partial q_2}
+                                    \frac{\partial q_2}{\partial
+                                    \tilde{q}_1}\\
+                                    \frac{\partial f}{\partial
+                                    \tilde{q}_2} &amp;=
+                                    \frac{\partial f}{\partial q_1}
+                                    \frac{\partial q_1}{\partial
+                                    \tilde{q}_2}+
+                                    \frac{\partial f}{\partial q_2}
+                                    \frac{\partial q_2}{\partial
+                                    \tilde{q}_2}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これが任意の<span
+                                    class="math inline">\(f\)</span>について成り立つので、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\partial}_i = \frac{\partial
+                                    q_k}{\partial \tilde{q}_i}
+                                    \partial_k
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(\partial_i
+                                    \equiv
+                                    \partial_{q_i}\)</span>、<span
+                                    class="math inline">\(\tilde{\partial}_i
+                                    \equiv
+                                    \partial_{\tilde{q}_i}\)</span>という表記を用いた。今度は、右辺に現れる偏微分の分母にチルダのある量が現れていることがわかる。このような変換を受けるベクトルを共変ベクトルと呼ぶ。</p>
+                                    <p>二つ並べると共変性、反変性がわかりやすい。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    d\tilde{q}_i &amp;= \frac{\partial
+                                    \tilde{q}_i}{\partial q_k} dq_k\\
+                                    \tilde{\partial}_i &amp;=
+                                    \frac{\partial q_k}{\partial
+                                    \tilde{q}_i} \partial_k
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>チルダなしの量からチルダ付きの量に変換した時、偏微分の上下どちらにチルダが現れるかが逆になっていることがわかる。</p>
                                     <h1
                                     id="ニュートンの運動方程式の共変性">ニュートンの運動方程式の共変性</h1>
                                     <h2

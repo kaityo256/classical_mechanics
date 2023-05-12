@@ -149,6 +149,80 @@ $$
 
 のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。
 
+解析力学においては、線形でない基底変換も考慮する。その典型例がデカルト座標から極座標への変換だ。例えば$(x,y)$と$(r,\theta)$の変換を考えよう。
+
+$$
+\begin{aligned}
+x &= r \cos\theta \\
+y &= r \sin \theta
+\end{aligned}
+$$
+
+この変換は非線形だが、全微分を考えるとベクトルとみなすことができる。
+
+$$
+\begin{aligned}
+dx &= \cos \theta dr - r \sin \theta d\theta \\
+dy &= \sin \theta dr + r \cos \theta d\theta \\
+\end{aligned}
+$$
+
+これは、基底$\{dr, d\theta\}$から、$\{dx, dy\}$への線形変換と見ることができる。後で見やすいように、$(r,\theta)$を$(q_1,q_2)$、$(x,y)$を$\tilde{q}_1, \tilde{q}_2$と表記すると、先程の全微分の式は、
+
+$$
+d\tilde{q}_i = \frac{\partial \tilde{q}_i}{\partial q_k} dq_k
+$$
+
+とまとめることができる。例えば
+
+$$
+\frac{\partial \tilde{q}_1}{\partial q_2} \equiv \frac{\partial x}{\partial \theta}
+$$
+
+である。
+
+これまでの縦ベクトルでの表記と合わせるため、$\{dr, d\theta\}$を$\{\boldsymbol{e}_1, \boldsymbol{e}_2\}$, $\{dx, dy\}$を$\{\tilde{\boldsymbol{e}}_1, \tilde{\boldsymbol{e}}_2\}$と表記すると、以下のようにも書ける。
+
+$$
+\tilde{\boldsymbol{e}}_i = \frac{\partial \tilde{\boldsymbol{e}}_i}{\partial \boldsymbol{e}_k} \boldsymbol{e}_k
+$$
+
+このように、左辺にチルダのある量を持ってきた時、右辺の偏微分の「分子」にチルダのある量が来る変換を受ける反変ベクトルと呼ぶ。座標の微分$dx, dy$や$dr, d\theta$は自然に反変ベクトルとなる。この変換が線形変換を特殊な場合として含んでいることに注意すること。
+
+数学的準備の章にて、$dx$を縦ベクトルとみなすと、$\partial_x$が自然な双対基底であり、横ベクトルとみなせることを見た。従って、$\partial_x, \partial_y$は共変ベクトルとなることが期待される。
+
+いま、$(q_1, q_2)$で張られる空間に、スカラー関数$f(q_1, q_2)$があるとしよう。この関数の勾配(gradient)が、変数変換$(q_1, q_2) \rightarrow (\tilde{q}_1, \tilde{q}_2)$でどのように変換されるか見てみよう。合成関数の偏微分の公式から、
+
+$$
+\begin{aligned}
+\frac{\partial f}{\partial \tilde{q}_1} &= 
+\frac{\partial f}{\partial q_1} \frac{\partial q_1}{\partial \tilde{q}_1}+ 
+\frac{\partial f}{\partial q_2} \frac{\partial q_2}{\partial \tilde{q}_1}\\
+\frac{\partial f}{\partial \tilde{q}_2} &= 
+\frac{\partial f}{\partial q_1} \frac{\partial q_1}{\partial \tilde{q}_2}+ 
+\frac{\partial f}{\partial q_2} \frac{\partial q_2}{\partial \tilde{q}_2}\\
+\end{aligned}
+$$
+
+これが任意の$f$について成り立つので、
+
+$$
+\tilde{\partial}_i = \frac{\partial q_k}{\partial \tilde{q}_i} \partial_k
+$$
+
+ここで、$\partial_i \equiv \partial_{q_i}$、$\tilde{\partial}_i \equiv \partial_{\tilde{q}_i}$という表記を用いた。今度は、右辺に現れる偏微分の分母にチルダのある量が現れていることがわかる。このような変換を受けるベクトルを共変ベクトルと呼ぶ。
+
+二つ並べると共変性、反変性がわかりやすい。
+
+$$
+\begin{aligned}
+d\tilde{q}_i &= \frac{\partial \tilde{q}_i}{\partial q_k} dq_k\\
+\tilde{\partial}_i &= \frac{\partial q_k}{\partial \tilde{q}_i} \partial_k
+\end{aligned}
+$$
+
+チルダなしの量からチルダ付きの量に変換した時、偏微分の上下どちらにチルダが現れるかが逆になっていることがわかる。
+
 ## ニュートンの運動方程式の共変性
 
 ### ガリレイ変換
