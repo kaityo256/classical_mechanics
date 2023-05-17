@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="generator" content="pandoc">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-                                <title>力学の復習</title>
+                                <title>ニュートンの運動方程式</title>
 
         <style>
             .btn-square {
@@ -53,13 +53,13 @@
     <body>
         <article class="markdown-body">
                                     <header>
-                <h1 class="title">力学の復習</h1>
+                <h1 class="title">ニュートンの運動方程式</h1>
                                                             </header>
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="ニュートン力学">ニュートン力学</h1>
+                                    <p>解析力学を学ぶ前に、ニュートンの運動方程式がどのような性質を持っているかを確認しよう。まず、ニュートン力学について復習し、次にニュートンの運動方程式がガリレイ変換に対する共変性を持っていることを確認する。そのために、反変ベクトル、共変ベクトルの区別について学び、その後、座標変換に対する運動方程式の共変性について調べる。</p>
+                                    <h1 id="力学の復習">力学の復習</h1>
                                     <h2 id="原理と法則">原理と法則</h2>
                                     <p>これまでに力学を学んだはずである。これから学ぶ解析力学と区別するため、これまでに学んだ力学をニュートン力学と呼ぼう。ニュートン力学は「慣性の法則」「運動の法則」「作用・反作用の法則」の、運動の三法則を原理とする。「法則を原理とする」という言葉により、この三法則は原理なのか法則なのか混乱するかもしれない。ここで法則と原理について定義しておこう。</p>
                                     <p>まず、物理において <strong>法則
@@ -111,8 +111,468 @@
                                     力の方向に、力に比例、質量に反比例する加速度を持つ」となる。加速度運動を定義するためには、静止した座標系が必要となる。第一法則は、その静止した座標系が定義できることを主張する。</p>
                                     <p>ここで、静止した座標系と書いたが、実際には、ある静止した座標系に対して等速直線運動をしているような座標系もやはり慣性系となるため、こちらを「静止している」とみなすこともできる。ニュートンは絶対静止空間を考えたが、現在では特別な慣性系は存在せず、無数にある慣性系の中から計算に便利な慣性系を選んで採用していると解釈する。</p>
                                     <p>第三法則は、力は必ずペアで、大きさが同じで、かつ逆向きに発生することを主張する。これは観測事実であり、なぜそうであるかは説明してくれない。今、第三法則を破る物体があるとしよう。たとえば同じ符号の電荷のように互いに反発するが、一方から一方への力が、逆向きに働く力よりも強いとする。すると、一方に力を加え、もう一方を間接的に動かすと、加えた力以上の力が得られることになる。これを利用して仕事を取り出すことが可能であるから永久機関を作ることができる(第一種永久機関)。第三法則はこのようなことができないことを主張する。</p>
+                                    <h1
+                                    id="座標変換と運動方程式の共変性">座標変換と運動方程式の共変性</h1>
+                                    <p>同じ物体の運動を別の人が観測しているとする。それぞれの観測者は異なる座標から物体の運動を観測している。この時、観測者によって物理法則が異なるように見えては困る。そこで、どの観測者から見ても成立するような法則を物理法則と呼ぶことにする。これは、どこかに絶対的な代表がいて、その人にとっての運動法則だけが正しいわけではなく、全ての観測者は相対的であり、誰にとっても運動法則は同じように見えて欲しい、という要請である。この要請を相対性原理と呼ぶ。</p>
+                                    <p>力学は空間の中の物体の軌跡を追いかける学問であり、異なる座標系を用いれば、軌跡も異なって見える。その中で何が形を変えないものが物理法則である。そこで、座標変換によって物理法則がどのように変換されるかを知る必要がある。その準備として、座標変換によりスカラーやベクトルがどのように変換を受けるかを調べ、改めてスカラー、ベクトルを定義しよう。</p>
+                                    <h2 id="スカラー">スカラー</h2>
+                                    <p>地図を思い浮かべて欲しい。地図には等高線が書いてあり、その場所での標高がわかるようになっている。この地図を使って、現在自分がいる地点の標高を調べたとしよう。さて、目的地に向かうため、道の方向に合わせて地図を向きを回転させたとしよう。これは座標変換したことに対応するが、座標変換しても現時点の高さは変わらない。このように、座標変換により変換を受けない量を
+                                    <strong>スカラー(scolar)</strong>
+                                    と定義する。</p>
+                                    <p>地図の例でいえば、座標<span
+                                    class="math inline">\((x,y)\)</span>に対して、高さ<span
+                                    class="math inline">\(h(x,y)\)</span>が定義されており、変数変換<span
+                                    class="math inline">\((x,y)\rightarrow
+                                    (\tilde{x},
+                                    \tilde{y})\)</span>をしても、そこが同じ場所であるならば高さの値<span
+                                    class="math inline">\(h(\tilde{x},
+                                    \tilde{y})\)</span>は変わらないことを意味する。</p>
+                                    <h2 id="ベクトル">ベクトル</h2>
+                                    <p>座標変換により値が変わらないのがスカラーであった。一方、座標変換で値が変わるのがベクトルである。一般に、ベクトルは適当な基底を選ぶことで成分表示できる。同じベクトルでも、別の基底を選ぶと成分が変わる。この成分の変化のし方により、ベクトルは反変ベクトルと共変ベクトルに分類される。</p>
+                                    <figure>
+                                    <img
+                                    src="fig/contravariant_vector.png"
+                                    alt="反変ベクトル" />
+                                    <figcaption
+                                    aria-hidden="true">反変ベクトル</figcaption>
+                                    </figure>
+                                    <p>例を挙げよう。基底<span
+                                    class="math inline">\(\{\boldsymbol{e}_1,
+                                    \boldsymbol{e}_2\}\)</span>で張られる二次元空間があり、あるベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>がこの基底により</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = 6 \boldsymbol{e}_1
+                                    + 4 \boldsymbol{e}_2
+                                    \]</span></p>
+                                    <p>と展開されているとしよう。この時、ベクトルの成分表示は<span
+                                    class="math inline">\(\boldsymbol{u}
+                                    =
+                                    (6,4)\)</span>となる。さて、基底の長さを2倍にしてみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tilde{\boldsymbol{e}}_1 &amp;= 2
+                                    \boldsymbol{e}_1 \\
+                                    \tilde{\boldsymbol{e}}_2 &amp;= 2
+                                    \boldsymbol{e}_2
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>新しい基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_1,
+                                    \tilde{\boldsymbol{e}}_2\}\)</span>で<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>を展開すると、</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = 3
+                                    \tilde{\boldsymbol{e}}_1 + 2
+                                    \tilde{\boldsymbol{e}}_2
+                                    \]</span></p>
+                                    <p>となる。この時、ベクトルの成分表示は<span
+                                    class="math inline">\(\boldsymbol{u}
+                                    =
+                                    (3,2)\)</span>と、元の半分になる。このように、基底の長さを2倍にした時、成分が半分となるようなベクトルを、基底と反対向きの変換を受けるという意味で
+                                    <strong>反変ベクトル(contravariant
+                                    vector)</strong>
+                                    と呼ぶ。このように、基底で展開した成分は反変ベクトルとなる。反変ベクトルの正確な定義は後に与える。</p>
+                                    <p>この事実を一般化しておこう。いま、あるベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>が正規直交基底<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>により、以下のように成分表示されているとしよう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{u} = u^i
+                                    \boldsymbol{e}_i
+                                    \]</span></p>
+                                    <p>ここで、後の都合のためにベクトルの成分の添字を上付きにしている。さらに、同じ記号が現れた場合(今回は<span
+                                    class="math inline">\(i\)</span>)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列<span
+                                    class="math inline">\(T\)</span>を用いて、基底が<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>から、別の正規直交基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>に以下のように変換されたとする。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}_i = T^k_{\,i}
+                                    \boldsymbol{e}_k
+                                    \]</span></p>
+                                    <p>ベクトル<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>を新しい基底<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>で展開すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \boldsymbol{u} &amp;= \tilde{u}^k
+                                    \tilde{\boldsymbol{e}}_k \\
+                                    &amp;= \tilde{u}^k T^j_{\,k}
+                                    \boldsymbol{e}_j
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺について<span
+                                    class="math inline">\(\boldsymbol{e}^i\)</span>と内積をとると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    u^i &amp;= \tilde{u}^k T^j_{\,k}
+                                    (\boldsymbol{e}^i,\boldsymbol{e}_j),\\
+                                    &amp;= \tilde{u}^k T^j_{\,k}
+                                    \delta^i_{\,j}, \\
+                                    &amp;= T^i_{\,k} \tilde{u}^k.
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>基底の変換と並べてみると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tilde{\boldsymbol{e}}_i &amp;=
+                                    T^k_{\,i} \boldsymbol{e}_k \\
+                                    u^i &amp;= T^i_{\,k} \tilde{u}^k
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>チルダが現れる項が左右逆になっていることがわかる。<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>は基底の変換と反対の変換を受けるから反変ベクトルである。</p>
+                                    <p>逆に、基底と同じ形の変換を受けるベクトル、すなわちチルダが同じ側に現れるのが共変ベクトルである。定義から、基底自身は共変ベクトルとなる。さらに、先程、反変ベクトルであることがわかった成分ベクトルを縦ベクトルとすると、その双対である横ベクトルは共変ベクトルとなる。</p>
+                                    <p><span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>や<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>が張っていた空間と双対な空間を張る基底<span
+                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>や<span
+                                    class="math inline">\(\{\tilde{\boldsymbol{e}}^i\}\)</span>を考えよう。<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>で張られる空間のベクトルを縦ベクトルとするので、<span
+                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>と添字が下についている基底を縦ベクトルの基底と呼ぼう。すると、その双対ベクトル<span
+                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>で展開されるベクトルは横ベクトルとなるため、<span
+                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>と上付きの添字を持つ基底を横ベクトルの基底と呼ぶことにする。</p>
+                                    <p>以下のように、共役なベクトルとの直交性を課す。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\boldsymbol{e}^j,\boldsymbol{e}_i)
+                                    &amp;= \delta^j_{\,i} \\
+                                    (\tilde{\boldsymbol{e}}^j,\tilde{\boldsymbol{e}}_i)
+                                    &amp;= \delta^j_{\,i} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さて、縦ベクトルの基底が<span
+                                    class="math inline">\(\tilde{\boldsymbol{e}}_i
+                                    = T^k_{\,i}
+                                    \boldsymbol{e}_k\)</span>と変換される時、横ベクトルの基底がどのように変換されるか見てみよう。変換の前後で</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}^i = M^i_{\,k}
+                                    \boldsymbol{e}^k
+                                    \]</span></p>
+                                    <p>と展開できるとする。両辺、<span
+                                    class="math inline">\(\boldsymbol{e}_j\)</span>との内積を取ると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\tilde{\boldsymbol{e}}^i,
+                                    \boldsymbol{e}_j) &amp;= M^i_{\,k}
+                                    (\boldsymbol{e}^k, \boldsymbol{e}_j)
+                                    &amp;= M^i_{\,k} \delta^k_{\,j} \\
+                                    &amp;= M^i_{\,j}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>縦ベクトルの基底の変換は以下で与えられているとする。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{e}}_i = T^k_{\,i}
+                                    \boldsymbol{e}_k.
+                                    \]</span></p>
+                                    <p>両辺、<span
+                                    class="math inline">\(\tilde{\boldsymbol{e}}^j\)</span>と内積をとると、左辺は直交性から</p>
+                                    <p><span class="math display">\[
+                                    (\tilde{\boldsymbol{e}}^j,
+                                    \tilde{\boldsymbol{e}}_i) =
+                                    \delta^j_{\,i}.
+                                    \]</span></p>
+                                    <p>右辺は、先程求めた<span
+                                    class="math inline">\((\tilde{\boldsymbol{e}}^i,
+                                    \boldsymbol{e}_j) =
+                                    M^i_{\,j}\)</span>を代入することで</p>
+                                    <p><span class="math display">\[
+                                    T^k_{\,i} (\tilde{\boldsymbol{e}}^j,
+                                    \boldsymbol{e}_k) =   M^j_{\,k}
+                                    T^k_{\,i}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    M^j_{\,k} T^k_{\,i} = \delta^j_{\,i}
+                                    \]</span></p>
+                                    <p>これは、行列表示すれば<span
+                                    class="math inline">\(MT =
+                                    I\)</span>、すなわち行列<span
+                                    class="math inline">\(M\)</span>と<span
+                                    class="math inline">\(T\)</span>が互いに逆行列の関係にあることを意味する。</p>
+                                    <p>さて、横ベクトル<span
+                                    class="math inline">\(\boldsymbol{v}\)</span>が、横ベクトルの基底で</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{v} = v_i
+                                    \boldsymbol{e}^i = \tilde{v}_i
+                                    \boldsymbol{e}^i
+                                    \]</span></p>
+                                    <p>と展開されているとしよう。縦ベクトルと同様な議論から、</p>
+                                    <p><span class="math display">\[
+                                    v^i = M^i_{\,k} \tilde{v}^k
+                                    \]</span></p>
+                                    <p>が成立する。両辺に行列<span
+                                    class="math inline">\(T\)</span>をかけると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    T^j_{\,i} v^i &amp;= T^j_{\,j}
+                                    M^j_{\,k} \tilde{v}^k \\
+                                    &amp;= \delta^j_{\,k} \tilde{v}^k \\
+                                    &amp;= \tilde{v}^j
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>縦ベクトルの基底の変換の式と並べると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tilde{\boldsymbol{e}}_i &amp;=
+                                    T^k_{\,i} \boldsymbol{e}_k \\
+                                    \tilde{v}^k &amp;= T^k_{\,i }v^i
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。</p>
+                                    <p>解析力学においては線形でない基底変換も考慮するが、非線形な変換であってもある点の近傍で展開すれば線形変換とみなすことができる。</p>
+                                    <p>TODO:
+                                    極座標において、ある点近傍で線形変換になることを図解</p>
+                                    <p>一般に、<span
+                                    class="math inline">\(\{x^i\}\)</span>から<span
+                                    class="math inline">\(\{\tilde{x}^i\}\)</span>への座標変換において、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{A}^i = \frac{\partial
+                                    \tilde{x}^i}{\partial x^j} A^j
+                                    \]</span></p>
+                                    <p>のように変換を受けるベクトル<span
+                                    class="math inline">\(\boldsymbol{A}\)</span>を反変ベクトルと定義し、添字を右上につける。ここで、</p>
+                                    <p>チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。ここで、座標の変換行列を偏微分で表現したが、この変換が先程の線形変換を特殊な場合として含んでいることに注意すること。</p>
+                                    <p>逆に、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{B}_i = \frac{\partial
+                                    x^i}{\partial \tilde{x}^j} B_j
+                                    \]</span></p>
+                                    <p>のように変換を受けるベクトル<span
+                                    class="math inline">\(\boldsymbol{B}\)</span>を
+                                    <strong>共変ベクトル (covariant
+                                    vector)</strong>
+                                    と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。</p>
+                                    <p>非線形な座標変換の典型例がデカルト座標から極座標への変換である。例えば<span
+                                    class="math inline">\((x,y)\)</span>と<span
+                                    class="math inline">\((r,\theta)\)</span>の変換を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r \cos\theta \\
+                                    y &amp;= r \sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この変換は非線形だが、全微分を考えるとベクトルとみなすことができる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx &amp;= \cos \theta dr - r \sin
+                                    \theta d\theta \\
+                                    dy &amp;= \sin \theta dr + r \cos
+                                    \theta d\theta \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは、基底<span
+                                    class="math inline">\(\{dr,
+                                    d\theta\}\)</span>から、<span
+                                    class="math inline">\(\{dx,
+                                    dy\}\)</span>への線形変換と見ることができる。後で見やすいように、<span
+                                    class="math inline">\((r,\theta)\)</span>を<span
+                                    class="math inline">\((x^1,x^2)\)</span>、<span
+                                    class="math inline">\((x,y)\)</span>を<span
+                                    class="math inline">\(\tilde{x}^1,
+                                    \tilde{x}^2\)</span>と表記すると、先程の全微分の式は、</p>
+                                    <p><span class="math display">\[
+                                    d\tilde{x}^i = \frac{\partial
+                                    \tilde{x}^i}{\partial x^k} dx^k
+                                    \]</span></p>
+                                    <p>とまとめることができる。例えば</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \tilde{x}_1}{\partial
+                                    x_2} \equiv \frac{\partial
+                                    x}{\partial \theta}
+                                    \]</span></p>
+                                    <p>である。このように、座標の微分<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>や<span
+                                    class="math inline">\(dr,
+                                    d\theta\)</span>は自然に反変ベクトルとなる。</p>
+                                    <p>数学的準備の章にて、<span
+                                    class="math inline">\(dx\)</span>を縦ベクトルとみなすと、<span
+                                    class="math inline">\(\partial_x\)</span>が自然な双対基底であり、横ベクトルとみなせることを見た。従って、<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>は共変ベクトルとなることが期待される。</p>
+                                    <p>いま、<span
+                                    class="math inline">\((x^1,
+                                    x^2)\)</span>で張られる空間に、スカラー関数<span
+                                    class="math inline">\(f(x^1,
+                                    x^2)\)</span>があるとしよう。この関数の勾配(gradient)が、変数変換<span
+                                    class="math inline">\((x^1, x^2)
+                                    \rightarrow (\tilde{x}^1,
+                                    \tilde{x}^2)\)</span>でどのように変換されるか見てみよう。合成関数の偏微分の公式から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial f}{\partial
+                                    \tilde{x}^1} &amp;=
+                                    \frac{\partial f}{\partial x^1}
+                                    \frac{\partial x^1}{\partial
+                                    \tilde{x}^1}+
+                                    \frac{\partial f}{\partial x^2}
+                                    \frac{\partial x^2}{\partial
+                                    \tilde{x}^1}\\
+                                    \frac{\partial f}{\partial
+                                    \tilde{x}^2} &amp;=
+                                    \frac{\partial f}{\partial x^1}
+                                    \frac{\partial x^1}{\partial
+                                    \tilde{x}^2}+
+                                    \frac{\partial f}{\partial x^2}
+                                    \frac{\partial x^2}{\partial
+                                    \tilde{x}^2}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これが任意の<span
+                                    class="math inline">\(f\)</span>について成り立つので、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\partial}_i = \frac{\partial
+                                    x^k}{\partial \tilde{x}^i}
+                                    \partial_k
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(\partial_i
+                                    \equiv
+                                    \partial_{q_i}\)</span>、<span
+                                    class="math inline">\(\tilde{\partial}_i
+                                    \equiv
+                                    \partial_{\tilde{q}_i}\)</span>という表記を用いた。右辺に現れる偏微分の分母にチルダのある量が現れているため、<span
+                                    class="math inline">\(\{\partial_i\}\)</span>は共変ベクトルであることがわかる(そのため、添字を下に書いている)。</p>
+                                    <p>二つ並べると共変性、反変性がわかりやすい。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    d\tilde{x}^i &amp;= \frac{\partial
+                                    \tilde{x}^i}{\partial x^k} dx^k\\
+                                    \tilde{\partial}_i &amp;=
+                                    \frac{\partial x^k}{\partial
+                                    \tilde{x}^i} \partial_k
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>チルダなしの量からチルダ付きの量に変換した時、偏微分の上下どちらにチルダが現れるかが逆になっていることがわかる。このように、座標変換により変換を受ける量を一般に
+                                    <strong>ベクトル (vector)</strong>
+                                    と呼ぶ。</p>
+                                    <p>一方、座標変換により変換を受けない量を
+                                    <strong>スカラー(scolar)</strong>
+                                    と呼ぶ。例えば二次元平面 <span
+                                    class="math inline">\((x^1,
+                                    x^2)\)</span>で定義された関数<span
+                                    class="math inline">\(f(x^1,x^2)\)</span>は、座標変換<span
+                                    class="math inline">\((x^1, x^2)
+                                    \rightarrow (\tilde{x}^1,
+                                    \tilde{x}^2)\)</span>により値が変わらない。これは、例えば座標を変えても、今立っている場所の標高が変わらないのと同様である。一方、座標のスケールをメートルからキロメートルに変えると、勾配の大きさは変わる。メートルで勾配を測っている時には「メートルあたりどれだけ高さが変化するか」であったが、キロメートルで測ると「キロメートルあたりどれだけ高さが変化するか」となるため、勾配ベクトルは大きくなる。従って、勾配は共変ベクトルである。</p>
+                                    <p>反変ベクトルと共変ベクトルは、スカラーを掛けたり割ったりしても反変性や共変性は変わらない。また、反変ベクトルと共変ベクトルは内積を取ることでスカラー量となる。また、ベクトルが等式で結ばれている時、片方が反変ベクトルであるなら、もう片方も反変ベクトルでなければならない。</p>
+                                    <h2
+                                    id="ニュートンの運動方程式の共変性">ニュートンの運動方程式の共変性</h2>
+                                    <p>物理学は自然法則を記述する学問である。何かの現象を記述する際、どのような座標系を選ぶかは任意であるから、物理法則が座標系に依存してはならない。一般に速度や位置はベクトル量であるから座標変換によりその値を変えるが、その関係を示す運動法則は変わってはならない。このような性質を
+                                    <strong>共変性(covariance)</strong>
+                                    と呼ぶ。以下では、ニュートンの運動方程式が座標変換に対してどのように変換を受けるか見てみよう。</p>
+                                    <p>ニュートンの運動方程式は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    m\frac{d \boldsymbol{v}}{dt} =
+                                    \boldsymbol{F}
+                                    \]</span></p>
+                                    <p>上記では質量は一定としたが、燃料を消費しながら飛ぶロケットなど、運動に従って質量が変化する場合もあるため、質量と速度をまとめた運動量を導入しよう。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{p} = m \boldsymbol{v}
+                                    \]</span></p>
+                                    <p>するとニュートンの運動方程式は、運動量の時間変化が、加えられた力と一致する、という意味となる。</p>
+                                    <p><span class="math display">\[
+                                    \dot{\boldsymbol{p}} =
+                                    \boldsymbol{F}
+                                    \]</span></p>
+                                    <p>さて、このベクトルを成分表示にあたり、<span
+                                    class="math inline">\(\boldsymbol{p}\)</span>や<span
+                                    class="math inline">\(\boldsymbol{F}\)</span>が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトルは反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル<span
+                                    class="math inline">\(\boldsymbol{F}\)</span>も反変ベクトルとなる。</p>
+                                    <p>さて、運動量も力も反変ベクトルであることがわかったので、上付きの添字で成分表示しよう。</p>
+                                    <p><span class="math display">\[
+                                    \dot{p}^i = F^i
+                                    \]</span></p>
+                                    <p>となる。今、座標変換<span
+                                    class="math inline">\((x^1,
+                                    x^2,x^3)\rightarrow
+                                    (\tilde{x}^1,\tilde{x}^2,\tilde{x}^3)\)</span>により、<span
+                                    class="math inline">\(\boldsymbol{p}
+                                    \rightarrow
+                                    \tilde{\boldsymbol{p}}\)</span>に変換されたとしよう。反変ベクトルの定義から、変換則は</p>
+                                    <p><span class="math display">\[
+                                    \tilde{p}^i = \frac{\partial
+                                    \tilde{x}^i}{\partial x^k} p^k
+                                    \]</span></p>
+                                    <p>で与えられる。ここで、成分が</p>
+                                    <p><span class="math display">\[
+                                    T^i_{\,k} \equiv \frac{\partial
+                                    \tilde{x}^i}{\partial x^k}
+                                    \]</span></p>
+                                    <p>で与えられる行列<span
+                                    class="math inline">\(T\)</span>を用意すると、運動量ベクトルは以下のように変換される。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{p}} = T
+                                    \boldsymbol{p}
+                                    \]</span></p>
+                                    <p>力ベクトル<span
+                                    class="math inline">\(\boldsymbol{F}\)</span>も同様な変換を受ける。以上から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{\tilde{p}^i} - \tilde{F}^i
+                                    &amp;= T (\dot{p}^i - F^i) \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。もともとのニュートンの運動方程式から<span
+                                    class="math inline">\(\dot{p}^i -
+                                    F^i =
+                                    0\)</span>であるから右辺がゼロとなるため、左辺もゼロとなる。すなわち、運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \dot{p}^i = F^i
+                                    \]</span></p>
+                                    <p>が成立している時、変換後の成分においても</p>
+                                    <p><span class="math display">\[
+                                    \dot{\tilde{p}^i} =\tilde{F}^i
+                                    \]</span></p>
+                                    <p>が成り立つ。すなわち、ニュートンの運動方程式は座標の線形変換に対して形を変えない。このような事実を「ニュートンの方程式は、座標の線形変換に対して
+                                    <strong>共変(covariant)</strong>
+                                    である」と表現する。このように、右辺がゼロとなるような形で運動方程式を書いておき、新しい座標系で運動方程式を書いて、元の座標系で運動方程式が成り立つ(ゼロになる)から、新しい座標系でも運動方程式が成り立つ(ゼロになる)という証明の仕方は今後も出てくるので覚えておいてほしい。</p>
+                                    <p>ここで、
+                                    <strong>共変性(covaiance)</strong>
+                                    は
+                                    <strong>不変性(invariance)</strong>
+                                    とは異なることに注意したい。例えばスカラー量は座標変換で値そのものを変えないので不変(invariant)である。一方、運動方程式は、座標変換によりベクトルの値は変更を受けるが、形を変えない。従って、線形変換で移ることができる異なる座標系に住む人にとって、同じ形の法則が成り立つ。これを共変(covariant)であると呼ぶ。</p>
+                                    <p>同様に、ニュートンの運動方程式はある座標に対して等速直線運動する座標系から見ても形を変えない。これは、以下の座標変換に対応する。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{x}} =
+                                    \boldsymbol{x} + \boldsymbol{u}t +
+                                    \boldsymbol{c}
+                                    \]</span></p>
+                                    <p>ただし<span
+                                    class="math inline">\(\boldsymbol{u}\)</span>は定ベクトルである。この変換を等速度推進、もしくはガリレイ・ブースト(Galilei
+                                    boost)と呼ぶ。</p>
+                                    <p>両辺を時間微分すると</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\boldsymbol{v}} =
+                                    \boldsymbol{v} + \boldsymbol{u}
+                                    \]</span></p>
+                                    <p>両辺に質量<span
+                                    class="math inline">\(m\)</span>をかけて、さらに時間微分すると</p>
+                                    <p><span class="math display">\[
+                                    \dot{\tilde{\boldsymbol{p}}} =
+                                    \dot{\boldsymbol{p}}
+                                    \]</span></p>
+                                    <p>運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。</p>
+                                    <p>ニュートンの運動方程式は座標の一般の線形変換に対して共変であるが、系のスケールを変える変換はエネルギースケールを変えてしまうため、スケール変換を伴わない線形変換のみを考慮することが多い。スケール変換を伴わない線形変換は、回転と鏡映変換に分離できる。この、回転、鏡映変換、平行移動、等速度推進の変換をまとめて
+                                    <strong>ガリレイ変換(Galilean
+                                    transformation)</strong>
+                                    と呼ぶ。ニュートンの運動方程式は、ガリレイ変換に対して共変である。</p>
+                                    <p>ガリレイ変換は、ある慣性系に対して加速度を持たない別の慣性系への座標変換を表現している。ニュートンの運動方程式がガリレイ変換により共変であるとは、ニュートンの運動方程式がすべての慣性系において同じ形をしていることを意味する。これは逆に、「どの慣性系から見ても同じ運動法則が成り立つようにニュートンの運動方程式が構成されている」と考えることもできる。「どの慣性系から見ても同じ運動法則が成り立つ」という要請をガリレイの相対性原理と呼ぶ。一方、電磁場の基礎方程式であるマクスウェルの方程式は、ガリレイ変換に対して共変ではないが、ローレンツ変換に対して共変性を持つ。ローレンツ変換において、物体の速度が光速に対して無視できるという近似をするとガリレイ変換に帰着する。アインシュタインは運動方程式やマクスウェル方程式を含む全ての物理法則が、あらゆる慣性系から同じように見えなければならないという原理を要請することで、特殊相対性理論を用いた。この要請を特殊相対性原理と呼ぶ。</p>
+                                    <p>一般に、物理法則を記述する支配方程式がどのような変換に対して共変であるかを議論するのは重要である。例えば二次元空間を<span
+                                    class="math inline">\((x^1,
+                                    x^2)\)</span>を考えた時、座標変換<span
+                                    class="math inline">\((x^1, x^2)
+                                    \rightarrow (\tilde{x}^1,
+                                    \tilde{x}^2)\)</span>がガリレイ変換であれば、変換後の座標においてもニュートンの運動方程式の形は変わらない。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \frac{d^2 \tilde{x}^1}{dt^2}
+                                    &amp;= - \frac{d U}{d y}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>今後、ラグランジュ形式の力学、ハミルトン形式の力学においても、その方程式がどのような変換に対して共変であるかを議論していく。</p>
                                     <h1 id="保存則">保存則</h1>
-                                    <p>ニュートンの運動方程式から得られる帰結として、いくつかの保存則を導いておこう。</p>
+                                    <p>ニュートンの運動方程式から得られる帰結として、いくつかの保存則を発見法的に導いておこう。</p>
                                     <h2
                                     id="エネルギー保存則">エネルギー保存則</h2>
                                     <p>バネでつながれた質点の運動方程式を考えよう。</p>
@@ -291,285 +751,6 @@
                                     <h2
                                     id="保存則のまとめ">保存則のまとめ</h2>
                                     <p>運動エネルギー、運動量、角運動量は、特定の条件を満たすような運動方程式における時間不変量であった。それらが保存することを導く際、両辺に速度をかけたり、ゼロとなる量を足したり引いたりした上に、式をじっと眺めて時間微分の形に持っていくなど、発見法的な方法に頼っていた。もっとシステマティックに保存量を見つけることはできないだろうか？また、保存量が存在するような特定の条件とはどのようなものであろうか？これらに答えを与えるのがこれから学ぶ解析力学である。</p>
-                                    <h1 id="次元解析">次元解析</h1>
-                                    <p>物理において最も重要なことは、全ての量に単位があるということである。単位は、例えば長さ(メートル)だったり、重さ(キログラム)だったりするであろう。このような単位を、物理では
-                                    <strong>次元 (dimension)</strong>
-                                    と呼ぶ。解析力学とは直接関係ないが、次元の概念は力学を学ぶ際に重要であるので、ここで簡単に触れておこう。</p>
-                                    <p>次元の異なる量を足したり引いたりすることはできない。1メートルのものと3キログラムのものを足す、という操作は全くのナンセンスである。次元の異なる量の加減算をしないように気をつけるだけで、計算ミスをかなり減らすことができる。また、次元の異なる量の加減算はできないが、それらを掛けたり割ったりすることはできる。その場合、結果の次元も、元の物理量の次元を掛けたり割ったりしたものになる。</p>
-                                    <p>一般に、次元は基本となる量を組み合わせて作る。例えば速度を考えよう。速度とは、単位時間あたりに進む距離、すなわち、ある距離を進むのにかかった時間で割ったものであるから、距離の単位をメートル<span
-                                    class="math inline">\([m]\)</span>、時間の単位を秒<span
-                                    class="math inline">\([s]\)</span>に選べば、速度の次元はメートル毎秒<span
-                                    class="math inline">\([m/s]\)</span>となる。このように、物理の単位や次元は角括弧<span
-                                    class="math inline">\([]\)</span>で囲んで表現する。速度の次元は、基本となる量である距離と時間の組み合わせで作ることができる。</p>
-                                    <p>さて、ここでは長さの単位としてメートルを選んだが、キロメートルを採用した方が便利であることもあるだろう。または、国によっては長さの単位としてフィートを使いたいかもしれない。国によって基本となる量の定義が異なると不便であるため、国際的に基本となる量が定められている。それが国際単位系(International
-                                    System of Units, SI)<a href="#fn1"
-                                    class="footnote-ref" id="fnref1"
-                                    role="doc-noteref"><sup>1</sup></a>であり、時間、長さ、質量、電流、温度、物質量、光度の7種類が基本となる量として採用し、これらを基本単位と呼ぶ。この基本単位の組み合わせから作られる単位系をSI単位系と呼ぶ。</p>
-                                    <p>さて、SI単位系では、長さの基本単位はメートル、時間の基本単位は秒であるが、宇宙空間を考える場合は、長さの単位として天文単位(太陽から地球までの距離、1億5000万キロメートル)や、光年(光が一年に進む距離、約9.5兆キロメートル)を採用したほうが便利かもしれない。また、時間も、秒や時間、年など、様々な単位を使う可能性がある。しかし、速度という概念が「距離割る時間」の次元を持っていることは共通である。そこで、長さの次元を代表する記号として<span
-                                    class="math inline">\(L\)</span>を、時間の次元を代表する記号として<span
-                                    class="math inline">\(T\)</span>を採用する。<span
-                                    class="math inline">\(L\)</span>はメートルかもしれないし、キロメートルかもしれないが、とにかく長さの次元を持つなにかである。この表記を用いると、速度の次元は
-                                    <span
-                                    class="math inline">\([L/T]\)</span>
-                                    と表すことができる。</p>
-                                    <p>SI単位系において、基本単位は7種類あるが、力学において現れる基本単位は主に長さ、時間、質量である。そこで、質量の次元を代表する記号として<span
-                                    class="math inline">\(M\)</span>を採用する。力学に現れる量、例えば力やエネルギー、力積などは、全てこの3つの基本単位、長さ<span
-                                    class="math inline">\([L]\)</span>、時間<span
-                                    class="math inline">\([T]\)</span>、質量<span
-                                    class="math inline">\([M]\)</span>の組み合わせで表現できる。</p>
-                                    <p>物理量の次元に注目して解析することを
-                                    <strong>次元解析 (Dimensional
-                                    Analysis)</strong>
-                                    と呼ぶ。異なる次元の量を足したり引いたりすることはできないため、次元を見ると計算ミスに気づくことができる。これも次元解析の一種だが、より高度な解析もできる。</p>
-                                    <h2
-                                    id="次元解析の例一次元調和振動子">次元解析の例：一次元調和振動子</h2>
-                                    <p>例を挙げよう。バネ定数<span
-                                    class="math inline">\(k\)</span>に繋がれた質量<span
-                                    class="math inline">\(m\)</span>の物質が、つりあいの位置から長さ<span
-                                    class="math inline">\(x\)</span>だけずれているとする。この物質にかかる力<span
-                                    class="math inline">\(F\)</span>は</p>
-                                    <p><span class="math display">\[
-                                    F = -kx
-                                    \]</span></p>
-                                    <p>である。このバネは単振動をするので、その周期<span
-                                    class="math inline">\(T\)</span>を求めてみよう。</p>
-                                    <p>釣り合いの位置を原点、初期位置を<span
-                                    class="math inline">\(x_0\)</span>とする時、時刻<span
-                                    class="math inline">\(t\)</span>における位置<span
-                                    class="math inline">\(x(t)\)</span>として、以下の形を仮定する。</p>
-                                    <p><span class="math display">\[
-                                    x(t) = x_0 \cos(\omega t)
-                                    \]</span></p>
-                                    <p>運動方程式は</p>
-                                    <p><span class="math display">\[
-                                    m\frac{d^2x}{dt^2} = - kx
-                                    \]</span></p>
-                                    <p>であるから、先程の解を代入して整理すると</p>
-                                    <p><span class="math display">\[
-                                    -m\omega^2 = k
-                                    \]</span></p>
-                                    <p>つまり</p>
-                                    <p><span class="math display">\[
-                                    \omega = \sqrt{\frac{k}{m}}
-                                    \]</span></p>
-                                    <p>である。周期<span
-                                    class="math inline">\(T =
-                                    2\pi/\omega\)</span>であるから、周期は</p>
-                                    <p><span class="math display">\[
-                                    T = \frac{2\pi}{\omega}  = 2\pi
-                                    \sqrt{\frac{m}{k}}
-                                    \]</span></p>
-                                    <p>と求められる。この周期の振る舞いを、運動方程式を解くことなく推定しよう。まず、バネ定数<span
-                                    class="math inline">\(k\)</span>の次元を求める。バネ定数が含まれる式は</p>
-                                    <p><span class="math display">\[
-                                    F = -kx
-                                    \]</span></p>
-                                    <p>であった。長さ<span
-                                    class="math inline">\(x\)</span>の次元は<span
-                                    class="math inline">\([L]\)</span>であるから、力の次元がわかれば、バネ定数の次元もわかる。力の次元は、ニュートンの運動方程式、</p>
-                                    <p><span class="math display">\[
-                                    F = ma
-                                    \]</span></p>
-                                    <p>からわかる。加速度は時間あたりの速度の変化量であるから、その次元は<span
-                                    class="math inline">\([L/T^2]\)</span>である。質量は基本単位であり、次元は<span
-                                    class="math inline">\([M]\)</span>である。以上から、力の次元は</p>
-                                    <p><span class="math display">\[
-                                    \frac{L}{T^2} \times M =
-                                    \frac{LM}{T^2}
-                                    \]</span></p>
-                                    <p>とわかる。先程の<span
-                                    class="math inline">\(F=-kx\)</span>の<span
-                                    class="math inline">\(F\)</span>と<span
-                                    class="math inline">\(x\)</span>にそれぞれの次元を代入すると</p>
-                                    <p><span class="math display">\[
-                                    \frac{LM}{T^2} = k L
-                                    \]</span></p>
-                                    <p>であるから、バネ定数の次元は<span
-                                    class="math inline">\([M/T^2]\)</span>であることがわかる。さて、周期<span
-                                    class="math inline">\(T\)</span>はバネ定数と質量に依存するであろう。その依存の仕方がベキ的であるとして</p>
-                                    <p><span class="math display">\[
-                                    T \propto k^\alpha m^\beta
-                                    \]</span></p>
-                                    <p>という形を仮定する。この式において、左辺と右辺の次元は一致していなければならない。時間、ばね定数、質量の次元それぞれを代入すると、</p>
-                                    <p><span class="math display">\[
-                                    [T] =
-                                    \left[\frac{M^\alpha}{T^{2\alpha}}\right]
-                                    \left[M^{\beta}\right]
-                                    = \left[M^{\alpha+\beta}
-                                    T^{-2\alpha}\right]
-                                    \]</span></p>
-                                    <p>両辺を見比べると</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \alpha + \beta &amp;= 0 \\
-                                    -2\alpha &amp;= 1
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>より、<span
-                                    class="math inline">\(\alpha = -1/2,
-                                    \beta =
-                                    1/2\)</span>と求まる。以上から<span
-                                    class="math inline">\(T\)</span>の<span
-                                    class="math inline">\(k\)</span>,<span
-                                    class="math inline">\(m\)</span>依存性が</p>
-                                    <p><span class="math display">\[
-                                    T \propto \sqrt{\frac{m}{k}}
-                                    \]</span></p>
-                                    <p>と求められる。これは先程求めた厳密解と定数倍を除いて一致する。</p>
-                                    <p>以上のように次元解析を用いれば、運動方程式を解かずとも、「フックの法則に従うバネにつながれた物質の振動の周期は、重さの平方根に比例、ばね定数の平方根に反比例する」ということがわかる。</p>
-                                    <h2
-                                    id="次元解析の例一次元調和振動子の別の見方">次元解析の例：一次元調和振動子の別の見方</h2>
-                                    <p>次元を持つ変数を用いると計算ミスなどに気づきやすいという利点はあるが、式が複雑になったり、変数変換が面倒であったりといったデメリットもある。そこで、系に特徴的な長さや時間を使って変数を無次元化することがよく行われる。</p>
-                                    <p>先程の質点に繋がれたバネの運動をもう一度考えよう。</p>
-                                    <p><span class="math display">\[
-                                    m\frac{d^2x}{dt^2} = - kx
-                                    \]</span></p>
-                                    <p>この式に現れる<span
-                                    class="math inline">\(m\)</span>や<span
-                                    class="math inline">\(x\)</span>、<span
-                                    class="math inline">\(t\)</span>といった物理量は、全て次元を持つ量である。例えば長さはメートルかもしれないし、ヤードかもしれない。質量の単位もキログラムかもしれないし、ポンドかもしれない。いちいちそれを意識するのは面倒であるため、基準となる量を決め、その量を使ってこの方程式に現れる変数を全て次元を持たない量にしよう。</p>
-                                    <p>まず、長さの基準として<span
-                                    class="math inline">\(l_0\)</span>、重さの基準として<span
-                                    class="math inline">\(m_0\)</span>、時間の基準として<span
-                                    class="math inline">\(t_0\)</span>を決めよう。MKSA単位系を採用するなら、<span
-                                    class="math inline">\(l_0\)</span>は1メートルを、<span
-                                    class="math inline">\(m_0\)</span>は1キログラムを、<span
-                                    class="math inline">\(t_0\)</span>は1秒を表す。これらを使って無次元化した変数にチルダをつけて表す。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \tilde{x} &amp;= \frac{x}{l_0} \\
-                                    \tilde{t} &amp;= \frac{t}{t_0} \\
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>それぞれ、次元を持つ量を同じ次元の物理量で割っているため、無次元量となっている。なお、時間微分も<span
-                                    class="math inline">\(t\)</span>ではなく<span
-                                    class="math inline">\(\tilde{t}\)</span>による微分になるため注意が必要である。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{d^2 \tilde{x}}{d \tilde{t}^2}
-                                    &amp;=  \frac{1}{l_0} \frac{d^2 x}{d
-                                    \tilde{t}^2} \\
-                                    &amp;= \frac{1}{l_0} \frac{d^2 x}{d
-                                    t^2} \frac{dt^2}{d \tilde{t}^2} \\
-                                    &amp;= \frac{t_0^2}{l_0} \frac{d^2
-                                    x}{d t^2}.
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>例えば<span
-                                    class="math inline">\(x=l_0
-                                    \tilde{x}\)</span>などとして、先程の運動方程式に代入すると、<span
-                                    class="math inline">\(\tilde{x}\)</span>と<span
-                                    class="math inline">\(\tilde{t}\)</span>に関する運動方程式が得られる。</p>
-                                    <p><span class="math display">\[
-                                    m_0 \tilde{m}  \frac{t_0^2}{l_0}
-                                    \frac{d^2 \tilde{x}}{d \tilde{t}^2}
-                                    = -k l_0 \tilde{x}
-                                    \]</span></p>
-                                    <p>整理すると、</p>
-                                    <p><span class="math display">\[
-                                    \tilde{m}  \frac{d^2 \tilde{x}}{d
-                                    \tilde{t}^2} = - \frac{t_0^2}{m_0} k
-                                    \tilde{x}
-                                    \]</span></p>
-                                    <p>左辺も、<span
-                                    class="math inline">\(\tilde{x}\)</span>も無次元量であるから、右辺の係数<span
-                                    class="math inline">\(t_0^2
-                                    k/m_0\)</span>は無次元量でなくてはならない。これを改めて無次元化されたバネ定数<span
-                                    class="math inline">\(\tilde{k}\)</span>とすると、</p>
-                                    <p><span class="math display">\[
-                                    \tilde{m}  \frac{d^2 \tilde{x}}{d
-                                    \tilde{t}^2} = - \tilde{k} \tilde{x}
-                                    \]</span></p>
-                                    <p>と、運動方程式が元の形に戻った。これを微分方程式の無次元化と呼ぶ。物理の問題を解くために微分方程式を数値的に解くことが多いが、この時に現れる微分方程式は全て同様な手続きにより無次元化されていると約束することが多い。したがって、数値計算結果を解釈し、現実の値に戻す際には、自分がどのような基準量を用いるかを決めなくてはならない。</p>
-                                    <p>なお、無次元化されたバネ定数は</p>
-                                    <p><span class="math display">\[
-                                    \tilde{k} = \frac{t_0^2}{m_0} k
-                                    \]</span></p>
-                                    <p>であった。これは、先程求めたようにバネ定数<span
-                                    class="math inline">\(k\)</span>の次元が<span
-                                    class="math inline">\([M/T^2]\)</span>であることと整合する。</p>
-                                    <h2
-                                    id="特徴的な物理量">特徴的な物理量</h2>
-                                    <p>次元についてもう少し補足しておこう。異なる次元の量を加減算してはならないということから、指数関数や対数といった初頭超越関数の引数は無次元でなければならないという制限がつく。例えば、三角関数は以下のようにテイラー展開される。</p>
-                                    <p><span class="math display">\[
-                                    \sin(x) = x - \frac{x^3}{6} + \cdots
-                                    \]</span></p>
-                                    <p>もし<span
-                                    class="math inline">\(x\)</span>が長さの次元をもつ場合、右辺第一項は<span
-                                    class="math inline">\([L]\)</span>の、第二項は<span
-                                    class="math inline">\([L^3]\)</span>の次元を持つため、足し算が定義できない。したがって、三角関数の引数は無次元でなければならない。指数関数、対数関数も同様である。</p>
-                                    <p>これにより、初頭超越関数の引数に次元を持つ量を入れる場合、必ずそれを打ち消す量とセットで入れなければならない。先程の単振動の解をもう一度見てみよう。</p>
-                                    <p><span class="math display">\[
-                                    x(t) = x_0 \cos(\omega t)
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(\cos\)</span>の引数として時間の次元を持つ量<span
-                                    class="math inline">\(t\)</span>が入っているが、時間の逆数の次元を持つ量である<span
-                                    class="math inline">\(\omega\)</span>とセットになっており、合わせて<span
-                                    class="math inline">\(\omega
-                                    t\)</span>は無次元量となっている。周期で書くと、次元を打ち消していることがわかりやすい。</p>
-                                    <p><span class="math display">\[
-                                    x(t) = x_0 \cos\left(\frac{2\pi
-                                    t}{T}\right)
-                                    \]</span></p>
-                                    <p>例えば、速度と質量に比例する摩擦がかかる系を考えよう。運動方程式は</p>
-                                    <p><span class="math display">\[
-                                    F = -\gamma m v
-                                    \]</span></p>
-                                    <p>となる。この運動方程式の解は</p>
-                                    <p><span class="math display">\[
-                                    v(t) = v(0)\exp(-\gamma t)
-                                    \]</span></p>
-                                    <p>となる。次元解析から<span
-                                    class="math inline">\(\gamma\)</span>が<span
-                                    class="math inline">\([T^{-1}]\)</span>の次元を持っており、<span
-                                    class="math inline">\(t\)</span>の次元をキャンセルしていることがわかるであろう。<span
-                                    class="math inline">\(\gamma\)</span>の逆数を<span
-                                    class="math inline">\(\tau\)</span>と書くと</p>
-                                    <p><span class="math display">\[
-                                    v(t) = v(0)\exp(-t/\tau)
-                                    \]</span></p>
-                                    <p>となる。この<span
-                                    class="math inline">\(\tau\)</span>は緩和時間と呼ばれ、系の特徴的の時間スケールを決めている。同様に、<span
-                                    class="math inline">\(\exp(-x/\lambda)\)</span>のような形をしている場合、<span
-                                    class="math inline">\(\lambda\)</span>は相関長と呼ばれ、系の特徴的な長さスケールを表している。</p>
-                                    <p>以上のように、初頭超越関数の引数は無次元量でなくてはならないという制約から、次元を持つ量を入れる場合には必ずその次元を打ち消す量とセットとなるが、これは単に次元を打ち消すという役目だけでなく、その系の特徴的な長さや時間などを表すことが多い。これも、運動方程式を解くことなく推定が可能である。例えば、摩擦の運動方程式において<span
-                                    class="math inline">\(\gamma\)</span>は時間の逆数の次元を持つことから、その逆数<span
-                                    class="math inline">\(\tau =
-                                    1/\gamma\)</span>が時間の次元を持ち、これが系に特徴的な時間スケールを決めていそうだな、ということが、式を見ただけで推定できる。</p>
-                                    <p>一般に運動方程式は厳密な解を得ることが難しい。しかし、運動方程式をよく見ると、微分方程式を解かなくても、解の性質がある程度わかることがある。運動エネルギー保存則や、運動量保存則がその代表例である。系の性質から微分方程式を解くことなく解の性質を推定するのは、解析力学の主要な目的の一つである。</p>
-                                    <h2
-                                    id="次元解析のまとめ">次元解析のまとめ</h2>
-                                    <ul>
-                                    <li>物理量はすべてなんらかの単位を持っており、それを次元と呼ぶ。</li>
-                                    <li>異なる次元を持つ量は、加減算ができない。</li>
-                                    <li>異なる次元を持つ量の乗除算はできる。この際、新しくできる量の次元は、元の量の次元の積や商となる。</li>
-                                    <li>指数関数や三角関数、対数関数といった初頭超越関数の引数は、必ず無次元量でなくてはならない。次元のある量を入れる場合は、必ずその次元をキャンセルする量とセットとなり、その量は系に特徴的なスケールを決める。</li>
-                                    </ul>
-                                    <h1
-                                    id="余談独り歩きする格言たち">余談：独り歩きする格言たち</h1>
-                                    <p>物体の運動を記述する時、我々は適当な座標系を考える。普通、座標軸は直交するように選ぶが、このような座標系を直交座標系、もしくは提案者であるルネ・デカルトの名前をとってデカルト座標系(Cartesian
-                                    coordinates)と呼ぶ。デカルトは書籍「方法序説」において座標の概念を確立した。方法序説は「我思う故に我あり」の出典として有名である。</p>
-                                    <p>さて、ある大学の式辞で、ある人が方法序説を引用しておおよそ以下のようなことを言ったそうだ。曰く、「方法序説には『優れた人がこの世にいるとしたら、彼らのためにできることは、
-                                    必要とする実験の費用を負担し、かつ自由に時間を使えるようにすること以外にはない』とある。つまり、研究者の人材育成のためには、自由な研究時間と研究費の確保が重要である。デカルトが数百年も前に明確に指摘していることが、今持ってまったく色あせていない。我々は歴史に学ぶべし。云々」つまり、デカルトが「優秀な人には時間とお金を与えて放って置くのが良い」と言ったことを受けて、人材育成のためには時間と研究費が必要なのだという主張である。後段の結論には全く同意するのであるが、デカルトが言ったという前段には違和感がある。</p>
-                                    <p>方法序説は、デカルトがどのようにして科学を考えるべきかといった哲学的な考察をつらつらと書いた、エッセイのようなものであった。当該文章はその第六部にかかれている。方法序説の第六部とは、大雑把にいえばデカルトが、なぜ自分が方法序説の出版に至ったかを語るところである。この文章の前には、真理を探求するのに人の力を借りるのは多くの場合無駄である、と書いてある。
-                                    そして該当文章の直後には「私は自分がそんな『特別優秀な人間である』と思うほどには自惚れていない」といったことが書かれている。原文ではさらに「しかし自分が全く無価値であるということを受け入れられるような魂も持っていない」とある。要するに「自分の考えを出版すべきである(＝自分は優秀な人間である)」とも思えないが「自分の考えなど出版するに値しない(＝自分は無価値な人間である)」とも思えない、という葛藤の表現のように思える。さらにその次のパラグラフには「そんなことを考えてたので三年間出版をためらっていた」的なことが書いてある。</p>
-                                    <p>ここまで来て、また引用された部分を読み返すと「本当に優秀な人であればお金と暇だけ与えて放っておけば良いが、自分はそこまで優秀な人間ではない」という、一種の謙遜表現であることわかる。少なくともデカルトはここで「優秀な人はお金と暇だけを与えて放っておけば良いのに、多くの場合無駄な義務を課して邪魔するばかりである」ということは主張していないように読める。</p>
-                                    <p>僕は「だからこの引用は間違っている」と主張したいわけではない。ほとんどの格言は、本来それが生まれた時代背景に強く依存しているはずだが、その文脈から切り離されて語り継がれるようになった際、異なる意味を持つようになるのは自然なことだ。こうして格言は、それぞれの時代、場所、人にあった解釈がなされ、元の意図を離れて独立した「なにか」として生き続けるのであろう。</p>
-                                    <section id="footnotes"
-                                    class="footnotes footnotes-end-of-document"
-                                    role="doc-endnotes">
-                                    <hr />
-                                    <ol>
-                                    <li
-                                    id="fn1"><p>英語表記ではInternational
-                                    System of
-                                    Unitsと、素直に略すとISUであるにも関わらず、SIと略すのは、フランス語のSystème
-                                    International d’unitésに由来する。<a
-                                    href="#fnref1" class="footnote-back"
-                                    role="doc-backlink">↩︎</a></p></li>
-                                    </ol>
-                                    </section>
                     </article>
     </body>
 
