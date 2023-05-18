@@ -417,8 +417,103 @@ m \frac{d^2 \tilde{x}^1}{dt^2} &= - \frac{d U}{d y}
 \end{aligned}
 $$
 
+しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面における等速直線運動という簡単な例でそれを見ておこう。物体に力が働いていない場合、運動方程式は以下のように書ける。
 
-今後、ラグランジュ形式の力学、ハミルトン形式の力学においても、その方程式がどのような変換に対して共変であるかを議論していく。
+$$
+\begin{aligned}
+m\ddot{x} &= 0\\
+m\ddot{y} &= 0\\
+\end{aligned}
+$$
+
+ここで、極座標への変換$(x,y) \rightarrow (r, \theta)$を考える。もしもニュートンの運動方程式がこの変換で共変であれば、新しい座標系で運動方程式は以下のように書けるはずだ。
+
+$$
+\begin{aligned}
+m\ddot{r} &= 0\\
+m\ddot{\theta} &= 0\\
+\end{aligned}
+$$
+
+しかし、明らかに上の式は誤りである。では、$\ddot{r}$や$\ddot{\theta}$がどのような式を満たすべきか導出してみよう。以下の計算を追う必要は全くないが、「面倒そうだな」と思えば良い。
+
+極座標変換の定義から始める。
+
+$$
+\begin{aligned}
+x &= r \cos \theta \\
+y &= r \sin \theta
+\end{aligned}
+$$
+
+両辺を時間で微分しよう。
+
+$$
+\begin{aligned}
+\dot{x} &= \dot{r} \cos \theta - r \dot{\theta} \sin \theta \\
+\dot{y} &= \dot{r} \sin \theta + r \dot{\theta} \cos \theta
+\end{aligned}
+$$
+
+両辺を自乗して足すと、以下の関係式を得る。
+
+$$
+\dot{x}^2 + \dot{y}^2 = \dot{r}^2 + r^2 \dot{\theta}^2
+$$
+
+次に、$x^2 + y^2 = r^2$の関係式を用いて、この両辺を2回時間微分する。
+
+$$
+\begin{aligned}
+x \dot{x} + y \dot{y} = r \dot{r} \\
+\dot{x}^2 + \dot{y}^2 = r \ddot{r} + \dot{r}^2
+\end{aligned}
+$$
+
+ただし、途中で$\ddot{x} = \ddot{y} = 0$を用いた。先程求めた$\dot{x}^2 + \dot{y}^2 = \dot{r}^2 + r^2 \dot{\theta}^2$を代入して整理すると、
+
+$$
+\ddot{r} = r \dot{\theta}^2
+$$
+
+先程もとめた関係式$\dot{x}^2 + \dot{y}^2 = \dot{r}^2 + r^2 \dot{\theta}^2$を、さらに両辺時間微分しよう。左辺は
+
+左辺は$\ddot{x} = \ddot{y} = 0$よりゼロとなる。右辺は
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left( \dot{r}^2 + r^2 \dot{\theta}^2 \right) &= 
+2 \dot{r} \underbrace{\ddot{r}}_{r \dot{\theta}^2} + 2 r \dot{r} \dot{\theta}^2 + 2 r^2 \dot{\theta} \ddot{\theta} \\
+&= 4 r \dot{r} \dot{\theta}^2 + 2 r^2 \dot{\theta} \ddot{\theta}
+\end{aligned}
+$$
+
+以上から
+
+$$
+2 r \dot{r} \dot{\theta}^2 + r^2 \dot{\theta} \ddot{\theta} = 0
+$$
+
+後の便利のために整理すると、
+
+$$
+\frac{d}{dt} \left(r^2 \dot{\theta}^2 \right) = 0
+$$
+
+以上から、$(r, \theta)$で表示した運動方程式は以下のようになる。
+
+$$
+\begin{aligned}
+m \ddot{r} &= m r \dot{\theta}^2 \\
+m \frac{d}{dt} \left(r^2 \dot{\theta}^2 \right) &= 0
+\end{aligned}
+$$
+
+ただし、運動方程式であることがわかりやすいように、両辺に質量$m$をかけて、運動量の時間微分の次元に揃えた。
+
+二次元の、しかも力が働いていない系においてこれだけ面倒な計算が要求されるのであれば、一般の座標変換で、力も働く系では如何に面倒であるか想像できるであろう。例えば3次元空間において中心力が働くような系(ケプラー問題)を3次元極座標で表示するなどが典型例である。
+
+異なる座標系に移るのは、その方が便利であるからだ。中心力が働く系であれば、極座標で表示した方が式が簡略化される。しかし、座標変換に伴い、いちいち運動方程式を発見法的に変形するのは面倒である。そこで、なるべく広い座標変換に対して形を変えない運動方程式の表式があれば便利だ。今後学ぶラグランジュ形式の力学、ハミルトン形式の力学は、ニュートンの運動方程式よりも広いタイプの座標変換に対して共変であることを見ていく。
 
 ## 保存則
 
