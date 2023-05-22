@@ -318,30 +318,7 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。</p>
-                                    <p>解析力学においては線形でない基底変換も考慮するが、非線形な変換であってもある点の近傍で展開すれば線形変換とみなすことができる。</p>
-                                    <p>TODO:
-                                    極座標において、ある点近傍で線形変換になることを図解</p>
-                                    <p>一般に、<span
-                                    class="math inline">\(\{x^i\}\)</span>から<span
-                                    class="math inline">\(\{\tilde{x}^i\}\)</span>への座標変換において、</p>
-                                    <p><span class="math display">\[
-                                    \tilde{A}^i = \frac{\partial
-                                    \tilde{x}^i}{\partial x^j} A^j
-                                    \]</span></p>
-                                    <p>のように変換を受けるベクトル<span
-                                    class="math inline">\(\boldsymbol{A}\)</span>を反変ベクトルと定義し、添字を右上につける。ここで、</p>
-                                    <p>チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。ここで、座標の変換行列を偏微分で表現したが、この変換が先程の線形変換を特殊な場合として含んでいることに注意すること。</p>
-                                    <p>逆に、</p>
-                                    <p><span class="math display">\[
-                                    \tilde{B}_i = \frac{\partial
-                                    x^i}{\partial \tilde{x}^j} B_j
-                                    \]</span></p>
-                                    <p>のように変換を受けるベクトル<span
-                                    class="math inline">\(\boldsymbol{B}\)</span>を
-                                    <strong>共変ベクトル (covariant
-                                    vector)</strong>
-                                    と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。</p>
-                                    <p>非線形な座標変換の典型例がデカルト座標から極座標への変換である。例えば<span
+                                    <p>解析力学においては線形でない基底変換も考慮するが、非線形な変換であってもある点の近傍で展開すれば線形変換とみなすことができる。非線形な座標変換の典型例がデカルト座標から極座標への変換である。例えば<span
                                     class="math inline">\((x,y)\)</span>と<span
                                     class="math inline">\((r,\theta)\)</span>の変換を考えよう。</p>
                                     <p><span class="math display">\[
@@ -384,6 +361,85 @@
                                     dy\)</span>や<span
                                     class="math inline">\(dr,
                                     d\theta\)</span>は自然に反変ベクトルとなる。</p>
+                                    <figure>
+                                    <img src="fig/linear.png"
+                                    alt="linear.png" />
+                                    <figcaption
+                                    aria-hidden="true">linear.png</figcaption>
+                                    </figure>
+                                    <p>この変換がどのような幾何学的な意味を持つか見てみよう。二次元平面上の点<span
+                                    class="math inline">\(P(\sqrt{3}/2,
+                                    1/2)\)</span>を考える。この点における極座標変換を考えよう。点<span
+                                    class="math inline">\(P\)</span>における値を添え字<span
+                                    class="math inline">\(P\)</span>で表すと</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx &amp;= \left(\frac{\partial
+                                    x}{\partial r}\right)_P dr
+                                    +\left(\frac{\partial x}{\partial
+                                    \theta}\right)_P dr  \\
+                                    dy &amp;= \left(\frac{\partial
+                                    y}{\partial r}\right)_P dr
+                                    +\left(\frac{\partial y}{\partial
+                                    \theta}\right)_P dr  
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>点<span
+                                    class="math inline">\(P\)</span>において<span
+                                    class="math inline">\((r, \theta) =
+                                    (1, \pi/3)\)</span>であるので、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \left(\frac{\partial x}{\partial
+                                    r}\right)_P &amp;= (\cos \theta)_P =
+                                    \frac{\sqrt{3}}{2} \\
+                                    \left(\frac{\partial x}{\partial
+                                    \theta}\right)_P &amp;= (-r \sin
+                                    \theta)_P = -\frac{1}{2}\\
+                                    \left(\frac{\partial y}{\partial
+                                    r}\right)_P &amp;= (\sin \theta)_P =
+                                    \frac{\sqrt{1}}{2} \\
+                                    \left(\frac{\partial y}{\partial
+                                    \theta}\right)_P &amp;= (r \cos
+                                    \theta)_P = \frac{\sqrt{3}}{2}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上を行列形式でまとめると</p>
+                                    <p><span class="math display">\[
+                                    \begin{pmatrix}
+                                    dx\\dy
+                                    \end{pmatrix}
+                                    =
+                                    \begin{pmatrix}
+                                    \sqrt{3}/2 &amp; -1/2 \\
+                                    1/2 &amp; \sqrt{3}/2
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>これは、点<span
+                                    class="math inline">\(P\)</span>における<span
+                                    class="math inline">\((-\theta)\)</span>回転に他ならない。このように、どのような非線形変換であっても、適当な点の近傍で展開することで線形変換にすることができる。</p>
+                                    <p>一般に、<span
+                                    class="math inline">\(\{x^i\}\)</span>から<span
+                                    class="math inline">\(\{\tilde{x}^i\}\)</span>への座標変換において、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{A}^i = \frac{\partial
+                                    \tilde{x}^i}{\partial x^j} A^j
+                                    \]</span></p>
+                                    <p>のように変換を受けるベクトル<span
+                                    class="math inline">\(\boldsymbol{A}\)</span>を反変ベクトルと定義し、添字を右上につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。</p>
+                                    <p>逆に、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{B}_i = \frac{\partial
+                                    x^i}{\partial \tilde{x}^j} B_j
+                                    \]</span></p>
+                                    <p>のように変換を受けるベクトル<span
+                                    class="math inline">\(\boldsymbol{B}\)</span>を
+                                    <strong>共変ベクトル (covariant
+                                    vector)</strong>
+                                    と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。</p>
                                     <p>数学的準備の章にて、<span
                                     class="math inline">\(dx\)</span>を縦ベクトルとみなすと、<span
                                     class="math inline">\(\partial_x\)</span>が自然な双対基底であり、横ベクトルとみなせることを見た。従って、<span
@@ -442,19 +498,8 @@
                                     \tilde{x}^i} \partial_k
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>チルダなしの量からチルダ付きの量に変換した時、偏微分の上下どちらにチルダが現れるかが逆になっていることがわかる。このように、座標変換により変換を受ける量を一般に
-                                    <strong>ベクトル (vector)</strong>
-                                    と呼ぶ。</p>
-                                    <p>一方、座標変換により変換を受けない量を
-                                    <strong>スカラー(scolar)</strong>
-                                    と呼ぶ。例えば二次元平面 <span
-                                    class="math inline">\((x^1,
-                                    x^2)\)</span>で定義された関数<span
-                                    class="math inline">\(f(x^1,x^2)\)</span>は、座標変換<span
-                                    class="math inline">\((x^1, x^2)
-                                    \rightarrow (\tilde{x}^1,
-                                    \tilde{x}^2)\)</span>により値が変わらない。これは、例えば座標を変えても、今立っている場所の標高が変わらないのと同様である。一方、座標のスケールをメートルからキロメートルに変えると、勾配の大きさは変わる。メートルで勾配を測っている時には「メートルあたりどれだけ高さが変化するか」であったが、キロメートルで測ると「キロメートルあたりどれだけ高さが変化するか」となるため、勾配ベクトルは大きくなる。従って、勾配は共変ベクトルである。</p>
-                                    <p>反変ベクトルと共変ベクトルは、スカラーを掛けたり割ったりしても反変性や共変性は変わらない。また、反変ベクトルと共変ベクトルは内積を取ることでスカラー量となる。また、ベクトルが等式で結ばれている時、片方が反変ベクトルであるなら、もう片方も反変ベクトルでなければならない。</p>
+                                    <p>チルダなしの量からチルダ付きの量に変換した時、偏微分の上下どちらにチルダが現れるかが逆になっていることがわかる。このように、座標変換により変換を受ける量を一般にベクトル、変換を受けない(値が変わらない)量をスカラーと呼ぶ。</p>
+                                    <p>反変ベクトルと共変ベクトルは、スカラーを掛けたり割ったりしても反変性や共変性は変わらない。微分は割り算の極限として定義されるから、スカラーによる微分でも反変性や共変性は変わらない。また、反変ベクトルと共変ベクトルは内積を取ることでスカラー量となる。また、ベクトルが等式で結ばれている時、片方が反変ベクトルであるなら、もう片方も反変ベクトルでなければならない。</p>
                                     <h2
                                     id="ニュートンの運動方程式の共変性">ニュートンの運動方程式の共変性</h2>
                                     <p>物理学は自然法則を記述する学問である。何かの現象を記述する際、どのような座標系を選ぶかは任意であるから、物理法則が座標系に依存してはならない。一般に速度や位置はベクトル量であるから座標変換によりその値を変えるが、その関係を示す運動法則は変わってはならない。このような性質を
