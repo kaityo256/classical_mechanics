@@ -58,8 +58,14 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <p>ここまで長い間準備をしてきたが、いよいよ解析力学に入る。解析力学の目的は、同じ現象を一歩ひいた観点から記述することだ。その第一歩が仮想仕事の原理である。ニュートン力学では、力という直接目に見えるものを、ポテンシャルという目に見えないものから導出されるものとして記述した。仮想仕事の原理では、力の釣り合いという静力学を仮想仕事という観点から記述する。これは後にダランベールの原理を用いて動力学へ拡張され、変分原理によりラグランジュ形式の力学へと繋がっていく。</p>
                                     <h1 id="仕事">仕事</h1>
-                                    <p>仮想仕事について学ぶ前に、仕事について復習しておこう。仕事とは「力と距離の積」であり、物体が受けた仕事の分だけエネルギーを得る。以下ではそれを見てみよう。</p>
+                                    <p>仮想仕事について学ぶ前に、仕事について復習しておこう。物体に力<span
+                                    class="math inline">\(F\)</span>が働き、力と同じ方向に距離<span
+                                    class="math inline">\(x\)</span>だけ移動したとする。この時、その積<span
+                                    class="math inline">\(W=Fx\)</span>を
+                                    <strong>仕事(work)</strong>
+                                    と呼ぶ。物体は、受けた仕事の分だけエネルギーを得る。以下ではそれを見てみよう。</p>
                                     <p>保存力のみが働いている系では、エネルギーが保存しているのであった。今、保存力<span
                                     class="math inline">\(F\)</span>の他に、外部からの力<span
                                     class="math inline">\(F_\mathrm{ex}\)</span>が働いているとする。運動方程式は以下のように書ける。</p>
@@ -129,7 +135,7 @@
                                     class="math inline">\(\Delta
                                     E\)</span>は、物体にかかる外力の距離に関する積分<span
                                     class="math inline">\(W\)</span>だけ変化する。この<span
-                                    class="math inline">\(W\)</span>を仕事と呼ぶのであった。</p>
+                                    class="math inline">\(W\)</span>が仕事と呼ぶ。</p>
                                     <p>2つほど簡単な例を挙げよう。</p>
                                     <p>TODO:図解</p>
                                     <p>まず、物体が平面上に静止した状態から、一定の力<span
@@ -186,40 +192,108 @@
                                     <p>要するに、与えられた仕事が位置エネルギーに変換されたことがわかる。</p>
                                     <p>ここまで「当たり前だ」と思うかもしれないが、我々は運動方程式しか使っていないことに注意してほしい。運動方程式を出発として、等式変形しているだけであるから、ここで得られた情報は全ては運動方程式にもともと含まれている。しかし、運動方程式を変形することでエネルギーや仕事という概念を作り出すことができた。これにより、微分方程式を直接解くことなく運動をより直感的かつ平易に扱うことができる。また、運動方程式は一般にベクトルを扱う必要があるが、エネルギーや仕事はスカラー量であるために、より扱いやすいという利点もある。</p>
                                     <h1
-                                    id="拘束力と仮想変位">拘束力と仮想変位</h1>
-                                    <p>TODO: 書く</p>
-                                    <h1 id="仮想仕事">仮想仕事</h1>
+                                    id="仮想仕事の原理-1">仮想仕事の原理</h1>
                                     <p>物体に働く力が釣り合っている状態を考える。力が位置の関数<span
-                                    class="math inline">\(F(x)\)</span>として与えられているとしよう。例えば、バネにぶら下げられた物体において、バネによる上向きの力と重力による下向きの力が釣り合っている状態を考える。すると、</p>
+                                    class="math inline">\(F(x)\)</span>として与えられているとしよう。例えば、バネにぶら下げられた物体において、バネによる上向きの力と重力による下向きの力が釣り合っている状態を考える。この釣り合いの位置を<span
+                                    class="math inline">\(x_0\)</span>すると、</p>
                                     <p><span class="math display">\[
-                                    F(x) = 0
+                                    F(x_0) = 0
                                     \]</span></p>
-                                    <p>である。一般に、釣り合いの位置からずれたら、力はゼロではなくなる。その時、以下の3つの可能性がある。</p>
-                                    <ol type="1">
-                                    <li>釣り合いの位置からずれた時、釣り合いの位置に戻そうとする力が働く</li>
-                                    <li>釣り合いの位置からずれた時、釣り合いの位置からより遠ざけようとする力が働く</li>
-                                    <li>釣り合いの位置からずれた時、釣り合いの位置に戻そうとするか遠ざけるかは、ずれる方向に依存する</li>
-                                    </ol>
-                                    <p>TODO: 図解</p>
-                                    <p>この時、1の条件を「安定な釣り合い」、2の条件を「不安定な釣り合い」と呼ぶ。3の条件については後述する。簡単のため、以下では安定な釣り合いのみを考える。</p>
-                                    <p>釣り合いが安定である時、安定な位置から正の方向にずらすと負の方向に力が働き、負の方向にずらすと正の方向に力が働くため、以下のようになる。</p>
-                                    <p>TODO: 図解</p>
-                                    <p>仮想仕事の原理は、数学的には</p>
+                                    <p>である。この力を表すポテンシャルを<span
+                                    class="math inline">\(U(x)\)</span>としよう。ポテンシャル関数を微分し、負符号をつけたものが力であった。</p>
                                     <p><span class="math display">\[
-                                    F(x) \equiv - U&#39;(x) = 0
+                                    F(x) = -U&#39;(x)
                                     \]</span></p>
-                                    <p>であるという条件を</p>
+                                    <p>釣り合いの位置近傍において、ポテンシャル関数をテイラー展開しよう。</p>
                                     <p><span class="math display">\[
-                                    U(x + \delta x) = U(x) +
-                                    \underbrace{U&#39;(x)\delta
-                                    x}_{=-W=0} + O(\delta x^2)
+                                    U(x_0+\delta x) = U(x_0) +
+                                    U&#39;(x_0)\delta x
+                                    +U&#39;&#39;(x)\frac{\delta x^2}{2}
+                                    + O(\delta x^3)
                                     \]</span></p>
-                                    <p>と読み替えているにすぎない。ここで<span
+                                    <p>釣り合いの位置では力がゼロであるから、</p>
+                                    <p><span class="math display">\[
+                                    U&#39;(x_0)\delta x = -F(x_0) \delta
+                                    x = 0
+                                    \]</span></p>
+                                    <p>となる。ここで、<span
+                                    class="math inline">\(F(x_0) \delta
+                                    x\)</span>は力と距離の積であるから、仕事の次元を持っている。そこで、</p>
+                                    <p><span class="math display">\[
+                                    W = F(x_0) \delta x
+                                    \]</span></p>
+                                    <p>とし、<span
+                                    class="math inline">\(W\)</span>を
+                                    <strong>仮想仕事(virtual
+                                    work)</strong> 、<span
                                     class="math inline">\(\delta
-                                    x\)</span>が仮想変位、<span
-                                    class="math inline">\(W=
-                                    -U&#39;(x)\delta
-                                    x\)</span>が仮想仕事である。しかし、この原理の意味するところは大きい、</p>
+                                    x\)</span>を
+                                    <strong>仮想変位(virtual
+                                    displacement</strong>
+                                    と呼ぶ。定義から、力の釣り合いの近傍では仮想仕事はゼロとなる。ここまでは、単に力の釣り合い近傍では、対応するポテンシャルの一次微分がゼロである、ということを言っているにすぎない。</p>
+                                    <p>TODO: 図解</p>
+                                    <p>次に、系に束縛条件がある場合を考える。束縛条件とは、系の運動を制限するような条件のことである。例えば、摩擦のない斜面にバネでぶら下がって静止している質量<span
+                                    class="math inline">\(m\)</span>の物体を考えよう。この物体に働く力は、バネからの力<span
+                                    class="math inline">\(F\)</span>、重力<span
+                                    class="math inline">\(mg\)</span>、そして斜面からの抗力<span
+                                    class="math inline">\(N\)</span>である。抗力<span
+                                    class="math inline">\(N\)</span>は、物体を斜面上に制限するように働くため、束縛力の一種である。</p>
+                                    <p>この物体に働く力の関係を、まずは仮想仕事を使わずに求めてみよう。斜面の角度を<span
+                                    class="math inline">\(\theta\)</span>とし、鉛直方向を<span
+                                    class="math inline">\(y\)</span>軸、水平方向を<span
+                                    class="math inline">\(x\)</span>軸にとると、運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m\ddot{x} &amp;= F \cos \theta -
+                                    N\sin \theta \\
+                                    m\ddot{y} &amp;= F \sin \theta + N
+                                    \cos \theta - mg
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>静止状態であれば<span
+                                    class="math inline">\(\ddot{x} =
+                                    \ddot{y} =
+                                    0\)</span>である。これらの式から<span
+                                    class="math inline">\(N\)</span>を消去すると、</p>
+                                    <p><span class="math display">\[
+                                    F = mg \sin \theta
+                                    \]</span></p>
+                                    <p>という関係式が求まる。</p>
+                                    <p>次に、この式を仮想変位の観点から考えてみよう。物体は斜面をすべることしかできないから、その方向に<span
+                                    class="math inline">\(x\)</span>軸をとる。系は一次元的に運動するから、<span
+                                    class="math inline">\(y\)</span>軸は考える必要はない。</p>
+                                    <p>いま、物体を釣り合いの状態から斜面を登る方向に<span
+                                    class="math inline">\(\delta
+                                    x\)</span>だけ仮想的に動かしたとする。すると、バネが物体にする仕事が<span
+                                    class="math inline">\(F\delta
+                                    x\)</span>、重力の方向に下るため、重力が物体にする仕事は<span
+                                    class="math inline">\(-mg \sin
+                                    \theta \delta
+                                    x\)</span>。従って、この物体にされる仮想仕事<span
+                                    class="math inline">\(W\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    W &amp;= F \delta x - mg \sin \theta
+                                    \delta x \\
+                                    &amp;= (F - mg \sin \theta) \delta x
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これがゼロであることから、ただちに</p>
+                                    <p><span class="math display">\[
+                                    F = mg \sin \theta
+                                    \]</span></p>
+                                    <p>という関係式が求まった。先程の運動方程式を経由する方法に比べて、抗力<span
+                                    class="math inline">\(N\)</span>が全く現れなかったことに注意したい。一般に、束縛力は仕事をしない。そして仮想変位は束縛条件を破らない方向にとるため、その向きは必ず束縛力と直交する。これにより、仮想仕事について考えれば、どうせ後で消去する束縛力を考慮せずに済む。</p>
+                                    <p>以上の話を一般化しよう。三次元空間中にある質点に力<span
+                                    class="math inline">\(\boldsymbol{F}\)</span>が働いている。質点の位置を<span
+                                    class="math inline">\(\boldsymbol{r}\)</span>とすると、運動方程式は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{\boldsymbol{r}} =
+                                    \boldsymbol{F}
+                                    \]</span></p>
+                                    <p>TODO:続きを書く。</p>
+                                    <p>TODO:
+                                    拘束条件、自由度、一般化座標について書く。</p>
                                     <p>例えば、光が屈折率の異なる媒質に入射すると屈折するという観測事実がスネルの法則である。この法則をミクロな立場から、波面の重ね合わせで説明するのがホイヘンスの原理である。しかし、光線の始点と終点を与えた時、光線は最も光路長が短くなる経路を選ぶという説明がフェルマーの原理である。どちらも同じ現象を説明する原理であるが、後者は、まるで光がこれから進もうとする世界を全て知った上で計画的に経路を選んでいるかのように解釈する。</p>
                                     <p>仮想仕事の原理も同様であり、力という量に対して、それを位置で積分したポテンシャルという量を考え、「釣り合いの位置にいる」という条件を「力がゼロであるような位置にいる」という条件から「ポテンシャルを最小にするような位置にいる」という条件に読み替える。すると、物体が感じているのはその場における力だけであるにも関わらず、位置の関数であるポテンシャルをより広い範囲で「知って」おり、その最小値を取るような場所を選んでいるかのように扱う。この立場をさらに発展させ、動力学に拡張したのが次回で学ぶハミルトンの原理である。</p>
                                     <h1
