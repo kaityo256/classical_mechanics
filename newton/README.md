@@ -565,7 +565,7 @@ $$
 m \dot{x} \ddot{x} = - k x \dot{x}
 $$
 
-この式の左辺を眺めると、$m\dot{x}^2/2$を時間微分したものであることがわかる。同様に右辺も$-kx^2/2$を時間微分したものである。そこで、
+この式の左辺を眺めると、 $m\dot{x}^2/2$ を時間微分したものであることがわかる。同様に右辺も$-kx^2/2$を時間微分したものである。そこで、
 
 $$
 \frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2 \right) = - \frac{d}{dt}\left( \frac{1}{2} k x^2\right)
@@ -686,7 +686,7 @@ $$
 m y \ddot{x} - m x \ddot{y} = 0
 $$
 
-$m\dot{x} \dot{y} - m\dot{x} \dot{y} $を足すと、
+両辺に $m\dot{x} \dot{y} - m\dot{x} \dot{y}$を足すと、
 
 $$
 m \left(y \ddot{x} + m\dot{x} \dot{y} - \dot{x} \dot{y} - x \ddot{y}\right) = 0
