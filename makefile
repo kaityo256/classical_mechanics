@@ -27,6 +27,8 @@ index.html: index.md
 %/README.pdf: %/README.md
 	cd $(dir $@);pandoc $(notdir $<) -s -o $(notdir $@) $(PANDOC_TEXOPT)
 
+copy-pdf:
+	cp overview/README.pdf ./classical_mechanics01.pdf
 
 clean:
 	rm -f $(TARGET) index.html
