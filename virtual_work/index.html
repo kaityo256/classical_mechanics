@@ -315,8 +315,8 @@
                                     x^2 + y^2 &amp;=l^2 \\
                                     (x-X)^2 + (y-Y)^2 &amp;=l^2
                                     \end{aligned}
-                                    \]</span> 　
-                                    という二つの拘束条件が課せられる。もともと2次元に2つの質点があったから自由度は4であったが、拘束条件が2つあるから実質的な自由度は<span
+                                    \]</span></p>
+                                    <p>という二つの拘束条件が課せられる。もともと2次元に2つの質点があったから自由度は4であったが、拘束条件が2つあるから実質的な自由度は<span
                                     class="math inline">\(4-2=2\)</span>となる。一般に、<span
                                     class="math inline">\(N\)</span>個の座標で表現される系に、
                                     <span class="math display">\[
@@ -444,9 +444,181 @@
                                     \]</span></p>
                                     <p>いま、拘束を破らないような仮想変位<span
                                     class="math inline">\(\delta
-                                    \boldsymbol{r}\)</span>を考える。</p>
-                                    <p>TODO:続きを書く。</p>
-                                    <p>TODO:いくつか例を挙げる(てこや動滑車、リンクなど)</p>
+                                    \boldsymbol{r}\)</span>を考え、両辺内積を取る。</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{F} \cdot \delta
+                                    \boldsymbol{r} + \boldsymbol{N}
+                                    \cdot \delta \boldsymbol{r} = 0
+                                    \]</span></p>
+                                    <p>拘束力<span
+                                    class="math inline">\(N\)</span>は、拘束条件を破らないように働く力であるから、拘束条件を満たすように選ばれた仮想変位<span
+                                    class="math inline">\(\delta
+                                    \boldsymbol{r}\)</span>とは直交している。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{N} \cdot \delta
+                                    \boldsymbol{r} = 0
+                                    \]</span></p>
+                                    <p>である。以上から、</p>
+                                    <p><span class="math display">\[
+                                    \boldsymbol{F} \cdot \delta
+                                    \boldsymbol{r} = 0
+                                    \]</span></p>
+                                    <p>が成り立つ。この式は「静止している質点系において、拘束条件を破らないような変位(仮想変位)を考えた時、その変位に対する仕事(仮想仕事)はゼロとなる」ことを主張する。また逆に、仮想変位に伴う仮想仕事がゼロである時、この質点系に働く力は釣り合ってる。ここで、条件式に拘束力が登場しないことに注意したい。拘束条件を破らない限り拘束力は仕事をしないため、拘束力を陽に考えなくても良い。これが拘束条件のある系における仮想仕事の原理である。</p>
+                                    <h1
+                                    id="仮想仕事の例">仮想仕事の例</h1>
+                                    <p>仮想仕事の原理を用いる例をいくつか挙げよう。</p>
+                                    <p>簡単な例の一つはてこである。今、重さが無視できる棒の左端に質量<span
+                                    class="math inline">\(M\)</span>、右端に質量<span
+                                    class="math inline">\(m\)</span>の質点がぶら下げられている。支点は、左端から<span
+                                    class="math inline">\(a\)</span>、右端から<span
+                                    class="math inline">\(b\)</span>の距離にある。重力加速度を<span
+                                    class="math inline">\(g\)</span>として、この系が釣り合う条件を求めたい。</p>
+                                    <p>まずはモーメントの定義から、ただちに</p>
+                                    <p><span class="math display">\[
+                                    Mga = mgb
+                                    \]</span></p>
+                                    <p>したがって、<span
+                                    class="math inline">\(Ma =
+                                    mb\)</span>
+                                    が求める条件である。これを仮想仕事の原理で求めよう。そのためには、拘束条件を満たすような変位を考えなくてはならない。この系における拘束条件とは、てこが支点に支えられており、そこを中心に回転することしかできない、という制約である。そこで、その回転角を
+                                    <span class="math inline">\(\delta
+                                    \theta\)</span>
+                                    としよう。回転を反時計回りの方向を正に取ると、左端の質点は<span
+                                    class="math inline">\(a \delta
+                                    \theta\)</span> だけ下がる。<span
+                                    class="math inline">\(-Mg a \delta
+                                    \theta\)</span>
+                                    だけ仕事をされる。重力と同じ向きに動いたから仕事が負になっている。逆に、右端の質点は重力に逆らって
+                                    <span class="math inline">\(mg\delta
+                                    \theta\)</span>
+                                    だけ上がるから、<span
+                                    class="math inline">\(mg b\delta
+                                    \theta\)</span>
+                                    だけ仕事をされる。</p>
+                                    <p>系が釣り合っているのであれば、仮想仕事はゼロでなければならないので、</p>
+                                    <p><span class="math display">\[
+                                    W = -Mg a \delta \theta + mg\delta
+                                    \theta = 0
+                                    \]</span></p>
+                                    <p>ここから先程と同じ条件式 <span
+                                    class="math inline">\(Ma =
+                                    mb\)</span>が結論される。</p>
+                                    <figure>
+                                    <img src="fig/movable_pulley.png"
+                                    alt="動滑車" />
+                                    <figcaption
+                                    aria-hidden="true">動滑車</figcaption>
+                                    </figure>
+                                    <p>てこの原理は簡単過ぎたので、拘束力を消去する例として動滑車を考えよう。図のように動滑車と定滑車を組み合わせ、動滑車に質量<span
+                                    class="math inline">\(M\)</span>、定滑車に質量<span
+                                    class="math inline">\(m\)</span>のおもりが吊り下げられいる。滑車や紐の重さを無視できる時、釣り合いの条件を求めたい。</p>
+                                    <p>この系における拘束条件は紐の長さが変わらないことであり、拘束力は紐の張力<span
+                                    class="math inline">\(T\)</span>である。それぞれの重りについての力の釣り合いを考えると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    2T &amp;= Mg\\
+                                    T &amp;= mg
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上から、<span
+                                    class="math inline">\(M =
+                                    2m\)</span>
+                                    が結論される。仮想仕事の原理を用いると、
+                                    <span
+                                    class="math inline">\(m\)</span>
+                                    の重りを<span
+                                    class="math inline">\(\delta
+                                    l\)</span>だけ引っ張ると、<span
+                                    class="math inline">\(M\)</span>
+                                    の重りが <span
+                                    class="math inline">\(\delta l
+                                    /2\)</span>だけ上に動く。ここで、ひっぱることで紐の長さを変えない、すなわち拘束条件を破らないように仮想変位を選んでいることに注意。仮想仕事がゼロであることから</p>
+                                    <p><span class="math display">\[
+                                    W = Mg \frac{\delta l}{2} - mg
+                                    \delta l = 0
+                                    \]</span></p>
+                                    <p>ここからやはり <span
+                                    class="math inline">\(M=2m\)</span>
+                                    が結論される。ここで、式に<span
+                                    class="math inline">\(T\)</span>が現れなかったことに注意したい。拘束力は仕事をしないので、拘束条件を満たすような変位を考えれば、拘束力は現れない。滑車やてこが複雑に組み合わされたような系では、張力を考えると計算が極めて面倒になる。最初から仮想仕事の原理を考えた方が早い。なお、中学受験などで、滑車の問題で横に線をひいて、横切った紐の数を数える方法を教わった人もいるであろう。実はこれは仮想仕事の原理を使っている。中学や高校で「そういうものだ」と教わった事実やテクニックの裏付けが、大学でようやくなされることが多い。</p>
+                                    <figure>
+                                    <img src="fig/stick.png"
+                                    alt="stick" />
+                                    <figcaption
+                                    aria-hidden="true">stick</figcaption>
+                                    </figure>
+                                    <p>もう少し非自明な例として、壁に立てかけられた棒の釣り合いを考えよう。摩擦が無視できる壁に、質量
+                                    <span
+                                    class="math inline">\(m\)</span>
+                                    、長さ <span
+                                    class="math inline">\(L\)</span>
+                                    の一様な棒が床からの角度<span
+                                    class="math inline">\(\theta\)</span>
+                                    で立てかけられている。この棒の下端を力
+                                    <span
+                                    class="math inline">\(F\)</span>
+                                    で水平に押すことで倒れないように支える時、<span
+                                    class="math inline">\(F\)</span>の大きさを求めたい。</p>
+                                    <p>棒が床に接している座標を <span
+                                    class="math inline">\((x,0)\)</span>、壁に接している座標を<span
+                                    class="math inline">\((0,
+                                    y)\)</span>としよう。拘束条件は</p>
+                                    <p><span class="math display">\[
+                                    L^2 = x^2 + y^2
+                                    \]</span></p>
+                                    <p>で与えられる。両辺微分すると、</p>
+                                    <p><span class="math display">\[
+                                    L \delta L = x \delta x + y \delta y
+                                    \]</span></p>
+                                    <p>ここで、棒の長さは変わらないので<span
+                                    class="math inline">\(\delta L =
+                                    0\)</span>であるから</p>
+                                    <p><span class="math display">\[
+                                    \delta y = - \frac{x}{y}\delta x
+                                    \]</span></p>
+                                    <p>いま、力<span
+                                    class="math inline">\(F\)</span>で<span
+                                    class="math inline">\(\delta
+                                    x\)</span>だけ棒を押すと、その分だけ<span
+                                    class="math inline">\(x\)</span>は減り、<span
+                                    class="math inline">\(y\)</span>は
+                                    <span class="math inline">\(\delta
+                                    y\)</span>だけ増える。棒の中心は
+                                    <span class="math inline">\((x/2,
+                                    y/2)\)</span>であるから、これにより棒の重心は重力に逆らって
+                                    <span class="math inline">\(\delta
+                                    y/2\)</span>だけ上に動く。棒になされる仕事全体は</p>
+                                    <p><span class="math display">\[
+                                    W = - F \delta x + mg \frac{\delta
+                                    y}{2}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\delta
+                                    x\)</span>と<span
+                                    class="math inline">\(\delta
+                                    y\)</span>の関係式用いて<span
+                                    class="math inline">\(\delta
+                                    y\)</span>を消去すると</p>
+                                    <p><span class="math display">\[
+                                    W = \left(-F + mg \frac{x}{2y}
+                                    \right) \delta x
+                                    \]</span></p>
+                                    <p>これがゼロとなるのであるから</p>
+                                    <p><span class="math display">\[
+                                    F = \frac{mgx}{2y}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\theta\)</span>
+                                    を用いると、</p>
+                                    <p><span class="math display">\[
+                                    F = \frac{mg}{2 \tan \theta}
+                                    \]</span></p>
+                                    <p>これが求めたい関係式であった。ここでは仮想仕事の原理を用いたが、力の釣り合いだけで計算しようとすると、床や壁からの抗力を考える必要がある。これらの力は最終的に消去するのであるから、最初から現れない形で計算したほうが楽である。</p>
+                                    <h1
+                                    id="仮想仕事の原理のまとめ">仮想仕事の原理のまとめ</h1>
+                                    <p>仮想仕事の原理とは、言ってしまえばエネルギーの保存則に過ぎない。力が釣り合っているのであれば、釣り合いの位置から少し動いた時、それぞれの力がする仕事はキャンセルする。仮想仕事の原理を用いるメリットは、力はベクトルであるのに対して仕事はスカラー量であるから計算が楽になること、拘束力が陽に現れないことである。仮想仕事の原理は、複雑な拘束を扱う構造力学において特に威力を発揮する。</p>
+                                    <p>しかし、本書では仮想仕事の原理の計算上のメリットよりも、その意義を重視する。仮想仕事の原理は、「力が釣り合う点が釣り合いの点である」という局所的な視点から、「ポテンシャル関数の底を与えるような点が釣り合いの点である」という大域的な視点へ、物の見方を変えている。</p>
+                                    <p>もちろん物体は、予めポテンシャル関数の概形を見て「ここがポテンシャルの底だから、その場所にいよう」と考えて釣り合いの位置に移動しているわけではない。しかし、解析力学では、物体があたかもそのような意思をもって釣り合いの位置を探しているかのような考え方をする。この考え方は、後にダランベールの原理を通じて動力学へと拡張され、変分原理へと繋がっていく。</p>
                                     <h1
                                     id="余談雑草の名前">余談：雑草の名前</h1>
                                     <p>「世の中に雑草という名の草はない」という言葉がある。NHK朝の連続ドラマ「らんまん」のモデルとなった植物学者、牧野富太郎の言葉とされる。歩いてると、ふと道端にある雑草が目に止まったとしよう。普段気にもかけていなかったが、小さく可愛らしい青い花が気になり、スマートフォンで画像検索し、それが「オオイヌノフグリ」という名前の外来種であることを知る。牧野富太郎が、在来種のイヌノフグリに似ており、より大きいことから名付けた和名だそうだ。そして、「イヌノフグリ」が「犬の陰嚢」であることを知って、なんでこんな可愛らしい花にそんな名前をつけたのか、と思うかもしれない。さらに調べてみると、そもそもイヌノフグリは江戸時代の植物図鑑「草木図説」に記載がある、由緒正しい名前である。このように、道端の草一つとっても、そこにはストーリーがある。別に全ての雑草の名前を知る必要はない。ただ、オオイヌノフグリを知ったことで、他の雑草にも名前があり、それぞれになんらかの由来があるということが想像できるであろう。</p>
