@@ -44,8 +44,8 @@
 ## [ハミルトンの原理](hamilton_principle/README.md)
 
 * ダランベールの原理
-* ハミルトンの原理
-* 静力学と動力学
+* ラグランジアンとハミルトンの原理
+* ラグランジアンと運動方程式
 
 ## [変分原理](variational_principle/README.md)
 
