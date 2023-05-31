@@ -60,9 +60,11 @@
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <h1
                                     id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>ニュートン力学では、ニュートンの運動方程式が出発点であり、「その運動方程式はどこから来たか」に答えることができなかった。しかし、解析力学では、最小作用の原理から運動方程式を導く。これにより、運動方程式よりも一歩引いた立場から運動を記述、理解できるようになる。最小作用の原理は、変分原理と呼ばれるものの一種である。以下では、変分原理の例としてスネルの法則、最速降下曲線、懸垂線について紹介し、これらを一般的に扱うために汎関数微分を導入する。</p>
-                                    <h1
-                                    id="スネルの法則">スネルの法則</h1>
+                                    <p>ニュートン力学では、ニュートンの運動方程式が出発点であり、「その運動方程式はどこから来たか」に答えることができなかった。しかし、解析力学では、最小作用の原理から運動方程式を導く。これにより、運動方程式よりも一歩引いた立場から運動を記述、理解できるようになる。最小作用の原理は、変分原理と呼ばれるものの一種である。以下では、変分原理の例としてスネルの法則、最速降下曲線、懸垂線について紹介し、これらを一般的に扱うために汎関数微分を導入する。特に、関数の微分を含む汎関数の汎関数微分が解析力学のキモとなるので、しっかり理解して欲しい。</p>
+                                    <h1 id="変分問題">変分問題</h1>
+                                    <p>我々は、何らかの制約のなかで、何かを最小化したり最大化したりしたいことがよくある。例えばレストランでご飯を注文する際、許される予算、およびカロリー上限の中で、もっとも食べたいものを選ぶであろう。このような問題を最適化問題と呼ぶ。最適化問題には様々なものがあるが、その中に「選べる選択肢が連続的な場合」がある。山を登る時、山の入口から山頂まで様々な道がある。傾きがきつい道ほど疲れやすいが登山時間は短くて済み、傾きが緩い道は楽だが登山時間が長くなる。この時、もっとも疲れずに登るためのルートはどのように決めれば良いか、といった問題が典型例である。この時、我々は「疲労度」という実数値を最小化するように「登山ルート」という連続的な経路を決める必要がある。このように連続的な自由度についての最適化問題を変分問題、変分問題を解く方法を変分法と呼ぶ。以下では、変分問題とその解法について説明する。</p>
+                                    <h2
+                                    id="スネルの法則">スネルの法則</h2>
                                     <figure>
                                     <img src="fig/snell.png"
                                     alt="スネルの法則" />
@@ -143,7 +145,7 @@
                                     aria-hidden="true">ホイヘンス</figcaption>
                                     </figure>
                                     <p>スネルの法則は、ホイヘンスの原理によっても説明できる。ホイヘンスの原理は、波の波面から二次波とよばれる新しい波が生じ、それらが強めあうところが次の波面となる、というもので、こちらはミクロな立場から屈折を説明する。</p>
-                                    <p>一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、これは変分原理の最も簡単な例となっている。光の場合、到達時間ではなく光路長を考えるのが一般的である。媒質中の光は真空中よりも速度が遅くなる。そこで、真空中での光速を媒質中の光速で割ったものを、その媒質の屈折率と呼ぶ。真空中での光速を<span
+                                    <p>一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、これは変分問題の最も簡単な例となっている。光の場合、到達時間ではなく光路長を考えるのが一般的である。媒質中の光は真空中よりも速度が遅くなる。そこで、真空中での光速を媒質中の光速で割ったものを、その媒質の屈折率と呼ぶ。真空中での光速を<span
                                     class="math inline">\(c\)</span>とすると、屈折率<span
                                     class="math inline">\(n_A\)</span>を持つ媒質Aの中での速度<span
                                     class="math inline">\(v_A\)</span>は、屈折率の定義から</p>
@@ -159,7 +161,11 @@
                                     class="math inline">\(l_A\)</span>に対して、光が感じる実効的な長さは<span
                                     class="math inline">\(n_A
                                     l_A\)</span>となっている。屈折率が大きい媒質であるほど光の速度は遅くなるため、光にとってその媒質は「進みにくい」物質となる。つまり、屈折率が大きいほど、光は実際の長さよりも長く感じることになる。この、実際の長さに屈折率をかけたものを光路長と呼び、光は光路長の総和を最小(停留)にするような経路を進む。これをフェルマーの原理と呼ぶ。</p>
-                                    <p>もちろん光には意思はないため、異なる媒質に入射する前に「なるべく光路長を短くする経路を選ぼう」などとは思っていない。しかし、最終的に光が通った経路を見ると、それは始点と終点を決めた時に、もっとも光路長が短くなるように選ばれている。このように、何かの総和が最も小さくなるように経路などが決まると主張するのが変分原理である。ホイヘンスの原理が、ある瞬間の光の振る舞いに着目し、次の瞬間の光の位置を逐次的に決めていく形であるのに対して、変分原理は全体を見渡し、光の経路を一度に決めてしまう。このように、変分原理は全体を俯瞰する立場から振る舞いを決定する見方を与える。</p>
+                                    <p>もちろん光には意思はないため、異なる媒質に入射する前に「なるべく光路長を短くする経路を選ぼう」などとは思っていない。しかし、最終的に光が通った経路を見ると、それは始点と終点を決めた時に、もっとも光路長が短くなるように選ばれている。これを原理として採用し、何かの総和が最も小さくなるように運動の経路が決まると主張するのが
+                                    <strong>変分原理(variational
+                                    principle)</strong>
+                                    である。フェルマーの原理は変分原理の一種である。</p>
+                                    <p>ホイヘンスの原理が、ある瞬間の光の振る舞いに着目し、次の瞬間の光の位置を逐次的に決めていく、いわば局所的な原理であるのに対して、フェルマーの原理は全体を見渡し、光の経路を一度に決めてしまう大域的な原理である。このように、変分原理は全体を俯瞰する立場から振る舞いを決定する見方を与える。</p>
                                     <h1
                                     id="最速降下曲線">最速降下曲線</h1>
                                     <p>変分原理の有名な例として、最速降下曲線を考えよう。斜面に質点をそっと置いて離し、重力により滑らせる。ただし、摩擦は無視できるものとする。質点は斜面から離れることなく、なめらかに滑るとしよう。スタート地点とゴール地点を固定する時、もっとも早くゴールするような斜面はどのような形状であるか求めよ、というものが最速降下曲線の問題である。この問題はベルヌーイが解いて、数学者への挑戦という形で出題された。しばらく誰も解くことができなかったが、ニュートンがこれを一晩で解いて返送し、ベルヌーイが悔しがった、というのは有名な話である。</p>
@@ -333,11 +339,388 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これはサイクロイド曲線を表現している。</p>
-                                    <h1 id="懸垂線">懸垂線</h1>
-                                    <p>変分原理の題材のもう一つの例として、懸垂線を挙げよう。一様な重力下で紐の両端を持ち、少し緩める。この時、紐はどのような形になるであろうか。</p>
-                                    <p>TODO: 力の釣り合い</p>
-                                    <p>これは電信柱の間の電線が作る形状でもある。</p>
                                     <h1 id="汎関数微分">汎関数微分</h1>
+                                    <p>ある関数<span
+                                    class="math inline">\(f(x)\)</span>を考える。引数である<span
+                                    class="math inline">\(x\)</span>は複素数でもベクトルでもよいが、簡単のためスカラーで実数であるものとする。関数<span
+                                    class="math inline">\(f(x)\)</span>とは、実数<span
+                                    class="math inline">\(x\)</span>を入力すると、対応する実数<span
+                                    class="math inline">\(f(x)\)</span>を返してくれるものだ。すなわち、実数に実数を対応付ける写像になっている。一方、関数に実数を対応づける写像を
+                                    <strong>汎関数(functional)</strong>
+                                    と呼ぶ。様々な汎関数があり得るが、力学においては以下のような定積分として現れる。</p>
+                                    <p><span class="math display">\[
+                                    I[f] = \int_a^b f(x) dx
+                                    \]</span></p>
+                                    <p>積分範囲 <span
+                                    class="math inline">\((a,b)\)</span>
+                                    を固定すると、<span
+                                    class="math inline">\(F\)</span>は関数に実数を対応付けるため汎関数になっていることがわかる。例えば引数として<span
+                                    class="math inline">\(f(x) =
+                                    x\)</span>を代入すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    I[x] &amp;= \int_a^b x dx\\
+                                    &amp;=
+                                    \left[\frac{x^2}{2}\right]_a^b\\
+                                    &amp;= \frac{b^2-a^2}{2}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となるし、<span
+                                    class="math inline">\(f(x) =
+                                    \exp(x)\)</span>とすると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    I[\exp(x)] &amp;= \int_a^b
+                                    \mathrm{e}^x dx\\
+                                    &amp;= \left[ \mathrm{e}^x
+                                    \right]_a^b \\
+                                    &amp;= \mathrm{e}^b - \mathrm{e}^a
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。このように汎関数とは、何かしら関数を放り込むと、対応する実数を返してくれるものだ。</p>
+                                    <p>さて、関数では、引数である実数が変化すると値が変化するのであった。汎関数では、関数の形が変わると値が変わる。関数の形がほんの少しだけ変化したとき、値がどのように変化するかを調べるのが汎関数微分である。</p>
+                                    <p>まず、通常の微分について考えよう。関数<span
+                                    class="math inline">\(f(x)\)</span>が、微小量<span
+                                    class="math inline">\(\varepsilon\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    f(x+\varepsilon) = f(x) +
+                                    \frac{df}{dx} \varepsilon +
+                                    O(\varepsilon^2)
+                                    \]</span></p>
+                                    <p>のように表すことができる時、<span
+                                    class="math inline">\(df/dx\)</span>を<span
+                                    class="math inline">\(f(x)\)</span>の微分と呼ぶのであった。</p>
+                                    <p>同様に、汎関数の微分について考えよう。関数<span
+                                    class="math inline">\(f(x)\)</span>に対して、何か適当な関数<span
+                                    class="math inline">\(\phi(x)\)</span>を考える。ただし関数<span
+                                    class="math inline">\(\phi(x)\)</span>は、積分の端点でゼロ、すなわち<span
+                                    class="math inline">\(\phi(a) =
+                                    \phi(b) =
+                                    0\)</span>を満たすように選ぶ。その理由は後に説明する。<span
+                                    class="math inline">\(\varepsilon\)</span>を微小量として</p>
+                                    <p><span class="math display">\[
+                                    I[f+\varepsilon \phi] = I[f]
+                                    +  \varepsilon \int_a^b \frac{\delta
+                                    I}{\delta f}  \phi(x) dx  +
+                                    O(\varepsilon^2)
+                                    \]</span></p>
+                                    <p>と表せる時、<span
+                                    class="math inline">\(\delta
+                                    I/\delta f\)</span>を、<span
+                                    class="math inline">\(I\)</span>の
+                                    <strong>汎関数微分(functional
+                                    derivative)</strong>
+                                    、もしくは第一変分と呼ぶ。</p>
+                                    <p>解析力学では、汎関数の積分の中に関数の関数、すなわち合成関数が入ることが多い。そこで、以下のような式を考える。</p>
+                                    <p><span class="math display">\[
+                                    I[f] = \int_a^b F(f(x)) dx
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(F(x)\)</span>は普通の関数である。例えば
+                                    <span class="math inline">\(F(x) =
+                                    x^2\)</span>であるならば、<span
+                                    class="math inline">\(I[f]\)</span>は、「関数<span
+                                    class="math inline">\(f(x)\)</span>の自乗を<span
+                                    class="math inline">\(a &lt; x &lt;
+                                    b\)</span>で積分した値を返しなさい」という意味になる。ここで、関数
+                                    <span
+                                    class="math inline">\(f(x)\)</span>を微小量<span
+                                    class="math inline">\(\varepsilon\)</span>
+                                    を用いて <span
+                                    class="math inline">\(f(x) +
+                                    \varepsilon
+                                    \phi(x)\)</span>と変化させた時、<span
+                                    class="math inline">\(I\)</span>がどのように変化するか見てみよう。</p>
+                                    <p><span class="math display">\[
+                                    I[f + \varepsilon \phi] = \int_a^b
+                                    F(f(x)+ \varepsilon \phi(x) ) dx
+                                    \]</span></p>
+                                    <p>ここで、ある<span
+                                    class="math inline">\(x\)</span>を固定すると、<span
+                                    class="math inline">\(f(x)\)</span>や<span
+                                    class="math inline">\(\phi(x)\)</span>は単なる値になるから
+                                    <span
+                                    class="math inline">\(\varepsilon
+                                    \phi(x)\)</span>をまとめて微小量とみなして良い。そこで</p>
+                                    <p><span class="math display">\[
+                                    F(f(x) + \varepsilon \phi(x)) =
+                                    F(f(x)) + F&#39;(f(x)) \varepsilon
+                                    \phi(x) + O(\varepsilon^2)
+                                    \]</span></p>
+                                    <p>とできる。元の積分に代入すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    I[f + \varepsilon \phi] &amp;=
+                                    \int_a^b F(f(x)+ \varepsilon \phi(x)
+                                    ) dx \\
+                                    &amp;= \underbrace{\int_a^b F[f(x)]
+                                    dx}_{I[f]} + \varepsilon \int_a^b
+                                    F&#39;[f(x)]\phi(x) dx
+                                    +O(\varepsilon^2) \\
+                                    &amp;= I[f] + \varepsilon \int_a^b
+                                    F&#39;[f(x)]\phi(x) dx
+                                    +O(\varepsilon^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>汎関数微分の定義から、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\delta I}{\delta f} =
+                                    F&#39;[f(x)]
+                                    \]</span></p>
+                                    <p>となる。<span
+                                    class="math inline">\(\varepsilon
+                                    \phi(x)\)</span>を、改めて <span
+                                    class="math inline">\(\delta
+                                    f(x)\)</span>と表記しよう。ここで、これは<span
+                                    class="math inline">\(\delta\)</span>と<span
+                                    class="math inline">\(f(x)\)</span>の積ではなく、<span
+                                    class="math inline">\(\delta
+                                    f\)</span>という一つの関数であることに注意。すると、</p>
+                                    <p><span class="math display">\[
+                                    \underbrace{I[f + \delta f]  -
+                                    I[f]}_{\delta I} = \int_a^b
+                                    F&#39;[f(x)]\delta f dx +
+                                    O(\varepsilon^2)
+                                    \]</span></p>
+                                    <p>ここで左辺を<span
+                                    class="math inline">\(\delta
+                                    I\)</span>と書いて、<span
+                                    class="math inline">\(\varepsilon^2\)</span>のオーダーの項を無視すると、以下のように表記できる。</p>
+                                    <p><span class="math display">\[
+                                    \delta I = \int_a^b
+                                    F&#39;[f(x)]\delta f dx
+                                    \]</span></p>
+                                    <p>これは、関数の全微分</p>
+                                    <p><span class="math display">\[
+                                    df = f&#39; dx
+                                    \]</span></p>
+                                    <p>の汎関数版である。</p>
+                                    <p>要するに汎関数微分とは、積分の中の合成関数<span
+                                    class="math inline">\(F[f]\)</span>を、<span
+                                    class="math inline">\(f\)</span>を変数とみなして微分しろ、ということである。</p>
+                                    <p>さて、解析力学では汎関数の中の積分の合成関数<span
+                                    class="math inline">\(F\)</span>が、関数<span
+                                    class="math inline">\(f(x)\)</span>と、その微分<span
+                                    class="math inline">\(f&#39;(x)\)</span>に依存することが多い。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    I[f] = \int_a^b F(f(x), f&#39;(x))
+                                    dx
+                                    \]</span></p>
+                                    <p>という形を考えることが多い。その場合に汎関数微分がどうなるかを見ておこう。解析力学は変分原理に立脚しており、その変分原理の心臓部分が関数の微分を含む汎関数の微分であるため、ここが解析力学で最も重要なパートである。しっかりついてきて欲しい。</p>
+                                    <p>まず、二変数関数<span
+                                    class="math inline">\(F(f,g)\)</span>を考える。関数$Fの全微分は</p>
+                                    <p><span class="math display">\[
+                                    dF = \frac{\partial F}{\partial f}
+                                    df +\frac{\partial F}{\partial g} dg
+                                    \]</span></p>
+                                    <p>で与えられる。</p>
+                                    <p>さて、この引数<span
+                                    class="math inline">\(f\)</span>、<span
+                                    class="math inline">\(g\)</span>がそれぞれ<span
+                                    class="math inline">\(x\)</span>の関数であるとしよう。この関数<span
+                                    class="math inline">\(F\)</span>を<span
+                                    class="math inline">\(a &lt; x &lt;
+                                    b\)</span>の範囲で積分した量を<span
+                                    class="math inline">\(I\)</span>とすると</p>
+                                    <p><span class="math display">\[
+                                    I = \int_a^b F(f(x), g(x)) dx
+                                    \]</span></p>
+                                    <p>である。ここで、汎関数微分を行おう。<span
+                                    class="math inline">\(f \rightarrow
+                                    f + \delta f\)</span>、<span
+                                    class="math inline">\(g \rightarrow
+                                    g + \delta
+                                    g\)</span>と変化した時、<span
+                                    class="math inline">\(I \rightarrow
+                                    I + \delta
+                                    I\)</span>と変化したならば、</p>
+                                    <p><span class="math display">\[
+                                    \delta I = \int_a^b
+                                    \left(\frac{\partial F}{\partial f}
+                                    \delta f(x) +  \frac{\partial
+                                    F}{\partial g} \delta g(x)   \right)
+                                    dx
+                                    \]</span></p>
+                                    <p>ここまでは、二変数関数<span
+                                    class="math inline">\(F(f,
+                                    g)\)</span>における汎関数微分の一般論である。さて、ここで<span
+                                    class="math inline">\(f\)</span>と<span
+                                    class="math inline">\(g\)</span>が常に</p>
+                                    <p><span class="math display">\[
+                                    \frac{d f}{dx} = g
+                                    \]</span></p>
+                                    <p>という関係を満たすことを要請しよう。この関係を満たしつつ、<span
+                                    class="math inline">\(f \rightarrow
+                                    f + \delta
+                                    f\)</span>と変化し、その結果<span
+                                    class="math inline">\(g \rightarrow
+                                    g + \delta
+                                    g\)</span>と変化したとする。ただし、それぞれ積分範囲の端点でゼロ、すなわち<span
+                                    class="math inline">\(\delta f(a)
+                                    =\delta f(b) = \delta g(a) = \delta
+                                    g(b)=0\)</span>を満たすように変化させる。変化後も微分の関係を満たさなければならないのだから、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dx} (f + \delta f) = g +
+                                    \delta g
+                                    \]</span></p>
+                                    <p>もともと<span
+                                    class="math inline">\(g(x) =
+                                    f&#39;(x)\)</span>であったから、両辺から引くと</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dx} (\delta f) = \delta g
+                                    \]</span></p>
+                                    <p>となる。これを先程の汎関数微分の式に代入すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta I &amp;= \int_a^b
+                                    \left(\frac{\partial F}{\partial f}
+                                    \delta f +  \frac{\partial
+                                    F}{\partial g} \frac{d}{dx}(\delta
+                                    f)   \right) dx \\
+                                    &amp;= \int_a^b \frac{\partial
+                                    F}{\partial f} \delta f dx
+                                    + \left[\frac{\partial F}{\partial
+                                    g} \delta f \right]_a^b
+                                    - \int_a^b
+                                    \frac{d}{dx}\left(\frac{\partial
+                                    F}{\partial g}\right) \delta f dx\\
+                                    &amp;= \int_a^b \left(
+                                    \frac{\partial F}{\partial f} -
+                                    \frac{d}{dx} \left(\frac{\partial
+                                    F}{\partial g} \right)\right) \delta
+                                    f dx
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>最後に、<span
+                                    class="math inline">\(g=f&#39;\)</span>であるから、<span
+                                    class="math inline">\(g\)</span>での偏微分を<span
+                                    class="math inline">\(f&#39;\)</span>での偏微分で表すと</p>
+                                    <p><span class="math display">\[
+                                    \delta I = \int_a^b \left(
+                                    \frac{\partial F}{\partial f} -
+                                    \frac{d}{dx} \left(\frac{\partial
+                                    F}{\partial f&#39;} \right)\right)
+                                    \delta f dx
+                                    \]</span></p>
+                                    <p>これが、関数と関数の導関数に依存する汎関数</p>
+                                    <p><span class="math display">\[
+                                    I[f] = \int_a^b F(f(x), f&#39;(x))
+                                    dx
+                                    \]</span></p>
+                                    <p>の汎関数微分となる。後の便利のために</p>
+                                    <p><span class="math display">\[
+                                    \delta F \equiv  \frac{\partial
+                                    F}{\partial f} - \frac{d}{dx}
+                                    \left(\frac{\partial F}{\partial
+                                    f&#39;} \right)
+                                    \]</span></p>
+                                    <p>と表記すると、</p>
+                                    <p><span class="math display">\[
+                                    \delta I = \int_a^b \delta F \delta
+                                    x
+                                    \]</span></p>
+                                    <p>と表すことができる。</p>
+                                    <h1 id="変分法">変分法</h1>
+                                    <h2
+                                    id="最速降下曲線再び">最速降下曲線再び</h2>
+                                    <p>汎関数微分の導入が終わったので、これを用いて最速降下曲線の問題をもう一度考えよう。我々は、関数<span
+                                    class="math inline">\(y(x)\)</span>を与えると、通過時間<span
+                                    class="math inline">\(T\)</span>を与える以下の関係式を得たのであった。</p>
+                                    <p><span class="math display">\[
+                                    T[y] = \int_0^L
+                                    \frac{\sqrt{1+y&#39;^2}}{\sqrt{2gy}}
+                                    dx
+                                    \]</span></p>
+                                    <p>積分の中身を、<span
+                                    class="math inline">\(y(x)\)</span>と<span
+                                    class="math inline">\(y&#39;(x)\)</span>の関数<span
+                                    class="math inline">\(F(y,
+                                    y&#39;)\)</span>とみなすと、</p>
+                                    <p><span class="math display">\[
+                                    T[y] = \int_0^L F(y,y&#39;) dx
+                                    \]</span></p>
+                                    <p>と書くことができる。この時、</p>
+                                    <p><span class="math display">\[
+                                    F(y,y&#39;) =
+                                    \frac{\sqrt{1+y&#39;^2}}{\sqrt{2gy}}
+                                    \]</span></p>
+                                    <p>である。</p>
+                                    <p>この<span
+                                    class="math inline">\(T\)</span>を最小化するような<span
+                                    class="math inline">\(y(x)\)</span>を求めなさい、というのが変分問題である。これは汎関数の問題であるが、まずは関数で考えてみよう。</p>
+                                    <p>ある関数<span
+                                    class="math inline">\(y(x)\)</span>があり、その最小値を与えるような<span
+                                    class="math inline">\(x_0\)</span>を探したいとする。もしそのような<span
+                                    class="math inline">\(x_0\)</span>を見つけたならば、そこからどのようにずれても<span
+                                    class="math inline">\(f(x)\)</span>の値は増えるはずだ。従って、関数<span
+                                    class="math inline">\(f(x)\)</span>は<span
+                                    class="math inline">\(x=x_0\)</span>で極値を取る。いま、<span
+                                    class="math inline">\(x_0\)</span>から少しずれた値<span
+                                    class="math inline">\(x_0 + \delta
+                                    x\)</span>に変化させた場合、<span
+                                    class="math inline">\(f(x)\)</span>の値が<span
+                                    class="math inline">\(\delta
+                                    f\)</span>だけ変化したとすると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta f &amp;\equiv f(x_0+\delta x)
+                                    - f(x_0) \\
+                                    &amp;= \frac{df}{dx} \delta x  +
+                                    O(\delta x^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(f(x)\)</span>は<span
+                                    class="math inline">\(x=x_0\)</span>で極値を取るのであるから、<span
+                                    class="math inline">\(df/dx=0\)</span>でなくてはならない。これは、どのような微小量<span
+                                    class="math inline">\(\delta
+                                    x\)</span>をとってきても、その一次のオーダーで<span
+                                    class="math inline">\(f(x)\)</span>の値が変わらないことを意味する。</p>
+                                    <p>同様な議論を汎関数微分で考えよう。いま、<span
+                                    class="math inline">\(T\)</span>を最小にするような<span
+                                    class="math inline">\(y(x)\)</span>が選ばれたとしよう。すると、そこからどのように<span
+                                    class="math inline">\(y(x)\)</span>を変化させても、<span
+                                    class="math inline">\(T\)</span>は増えるはずだ。すなわち、<span
+                                    class="math inline">\(y \rightarrow
+                                    y + \delta
+                                    y\)</span>という変化に対して、<span
+                                    class="math inline">\(T \rightarrow
+                                    T+ \delta
+                                    T\)</span>と変化するなら、</p>
+                                    <p><span class="math display">\[
+                                    \delta T = \int_0^a \delta F \delta
+                                    y  + O(\delta y^2)
+                                    \]</span></p>
+                                    <p>どのような<span
+                                    class="math inline">\(\delta
+                                    y\)</span>に対しても一次のオーダーで<span
+                                    class="math inline">\(T\)</span>が変わらない、すなわち<span
+                                    class="math inline">\(\delta T
+                                    =0\)</span>になるのであるから、</p>
+                                    <p><span class="math display">\[
+                                    \delta F = 0
+                                    \]</span></p>
+                                    <p>が成り立たなければならない。<span
+                                    class="math inline">\(F\)</span>が<span
+                                    class="math inline">\(y\)</span>と<span
+                                    class="math inline">\(y&#39;\)</span>の関数である時、</p>
+                                    <p><span class="math display">\[
+                                    \delta F \equiv \frac{\partial
+                                    F}{\partial y} - \frac{d}{dx}
+                                    \left(\frac{\partial F}{\partial
+                                    y&#39;} \right)
+                                    \]</span></p>
+                                    <p>が成り立つのであるから、<span
+                                    class="math inline">\(F(y,y&#39;) =
+                                    \sqrt{1+y&#39;^2}/\sqrt{2gy}\)</span>
+                                    を代入して整理すると、計算は面倒だが最終的に幾何学的な考察から得られた微分方程式、</p>
+                                    <p><span class="math display">\[
+                                    \frac{dy}{dx} = - \sqrt{\frac{2a -
+                                    y}{y}}
+                                    \]</span></p>
+                                    <p>を得る。あとは同じである。</p>
+                                    <p>以下は覚える必要はないが、参考のために導出方法を記載しておく。</p>
+                                    <p>TODO:ベルトラミの公式を使う</p>
                                     <h2 id="停留条件">停留条件</h2>
                                     <p>いま、静止している物体に働く力が釣り合っているとする。すなわち、その物体の位置<span
                                     class="math inline">\(x\)</span>において、力<span
@@ -376,6 +759,10 @@
                                     class="math inline">\(f&#39;(x) =
                                     0\)</span>となるのは、極小値と極大値を取る点のみである。</p>
                                     <h1 id="変分原理-1">変分原理</h1>
+                                    <h1 id="懸垂線">懸垂線</h1>
+                                    <p>変分原理の題材のもう一つの例として、懸垂線を挙げよう。一様な重力下で紐の両端を持ち、少し緩める。この時、紐はどのような形になるであろうか。</p>
+                                    <p>TODO: 力の釣り合い</p>
+                                    <p>これは電信柱の間の電線が作る形状でもある。</p>
                                     <h1
                                     id="オイラーラグランジュ方程式">オイラー・ラグランジュ方程式</h1>
                     </article>
