@@ -417,7 +417,7 @@ $$
 と表記すると、
 
 $$
-\delta I = \int_a^b \frac{\delta F}{\delta f} \delta f dx 
+\delta I = \int_a^b \frac{\delta F}{\delta f} \delta f dx
 $$
 
 と表すことができる。

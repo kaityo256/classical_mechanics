@@ -41,6 +41,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
                         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link rel="icon" href="https://kaityo256.github.io/classical_mechanics/favicon.ico">
         <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
@@ -59,6 +62,213 @@
                                     <li>正準変換</li>
                                     <li>母関数</li>
                                     </ul>
+                                    <h1
+                                    id="本章で学ぶこと">本章で学ぶこと</h1>
+                                    <p>ハミルトンの運動方程式を共変に保つような変数変換を正準変換と呼ぶ。以下では正準変換を様々な角度から考察する。</p>
+                                    <h1 id="正準変換-1">正準変換</h1>
+                                    <p>オイラー・ラグランジュ方程式は任意の点変換について共変であった。ハミルトンの運動方程式は、<span
+                                    class="math inline">\(p\)</span>
+                                    と<span
+                                    class="math inline">\(q\)</span>
+                                    を混ぜるような、より広い範囲の変換について共変であるが、自由に変換可能というわけではなく、その変換規則には制限がつく。いま、変数変換
+                                    <span class="math inline">\((q,p)
+                                    \rightarrow (Q, P)\)</span>
+                                    により、ハミルトンの運動方程式が共変に保たれるためには、どのような条件が必要であるかを調べてみよう。</p>
+                                    <p>新たな変数<span
+                                    class="math inline">\((Q,
+                                    P)\)</span>は、元の変数 <span
+                                    class="math inline">\((q,p)\)</span>の関数である。例えば、関数<span
+                                    class="math inline">\(f,g\)</span>
+                                    を用いて</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= f(q,p) \\
+                                    P &amp;= g(q,p)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>などと表せる時、この<span
+                                    class="math inline">\(f,
+                                    g\)</span>を<span
+                                    class="math inline">\(Q,
+                                    P\)</span>と同一視し、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= Q(q,p) \\
+                                    P &amp;= P(q,p)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と同じ記号を使って書く。<span
+                                    class="math inline">\(P\)</span>
+                                    は新たな変数でもあるし、変換を表す関数でもある。また、<span
+                                    class="math inline">\((p,q)
+                                    \rightarrow (P,Q)\)</span> の逆変換
+                                    <span class="math inline">\((P,Q)
+                                    \rightarrow (p,q)\)</span>
+                                    を考える。やはりこの場合も関数<span
+                                    class="math inline">\(F,G\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    q &amp;= F(Q,P) \\
+                                    p &amp;= G(Q,P)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と書ける時に、<span
+                                    class="math inline">\(F,G\)</span>を<span
+                                    class="math inline">\(q,p\)</span>と同一視する。</p>
+                                    <p>このような記号の節約が混乱しがちなのは、同じ関数を別の変数で表現したときだ。例えば
+                                    <span
+                                    class="math inline">\((q,p)\)</span>で表されたハミルトニアン
+                                    <span
+                                    class="math inline">\(H(q,p)\)</span>を考える。このハミルトニアンを<span
+                                    class="math inline">\((Q,P)\)</span>を使って書き直すには、<span
+                                    class="math inline">\(q = F(Q,P),
+                                    p=G(Q,P)\)</span>を使って<span
+                                    class="math inline">\(q,p\)</span>に代入し</p>
+                                    <p><span class="math display">\[
+                                    H(p,q) = H(F(Q,P), G(Q,P))
+                                    \]</span></p>
+                                    <p>と書ける。右辺は変数 <span
+                                    class="math inline">\((Q,P)\)</span>の関数であるから、</p>
+                                    <p><span class="math display">\[
+                                    H(q,p) = H(Q，P)
+                                    \]</span></p>
+                                    <p>と略記する。このような記号の節約は混乱を招くこともあるが、記号を区別すると式が煩雑になるので、「これは変数であるから、関数であるか」を意識しながら計算を追って欲しい。</p>
+                                    <p>我々が調べたいことは、元の変数
+                                    <span
+                                    class="math inline">\((p,q)\)</span>がハミルトンの運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p} \\
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を満たす時、新たな変数 <span
+                                    class="math inline">\((P,Q)\)</span>
+                                    が同じ形の運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{Q} &amp;= \frac{\partial
+                                    H}{\partial P} \\
+                                    \dot{P} &amp;= -\frac{\partial
+                                    H}{\partial Q} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を満たすための条件である。まず、ハミルトニアンを<span
+                                    class="math inline">\((Q,P)\)</span>で書いておく。そして<span
+                                    class="math inline">\((Q,P)\)</span>を<span
+                                    class="math inline">\((q,p)\)</span>の関数だと思って偏微分しよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p} \\
+                                    &amp;= \frac{\partial
+                                    H(Q(q,p),P(q,p))}{\partial p} \\
+                                    &amp;= \frac{\partial H}{\partial
+                                    Q}\frac{\partial Q}{\partial p}
+                                    + \frac{\partial H}{\partial
+                                    P}\frac{\partial P}{\partial p}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>同様に、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q} \\
+                                    &amp;= -\frac{\partial H}{\partial
+                                    Q}\frac{\partial Q}{\partial q}
+                                    - \frac{\partial H}{\partial
+                                    P}\frac{\partial P}{\partial q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>次に、新たな変数<span
+                                    class="math inline">\(Q\)</span>の時間微分を考えよう。計算がごちゃごちゃしがちなので、丁寧に計算する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{Q} &amp;= \frac{d}{dt} Q(q,p)
+                                    \\
+                                    &amp;= \frac{\partial Q}{\partial
+                                    q}\dot{q} +\frac{\partial
+                                    Q}{\partial p} \dot{p} \\
+                                    &amp;= \frac{\partial Q}{\partial q}
+                                    \underbrace{\left( \frac{\partial
+                                    H}{\partial Q}\frac{\partial
+                                    Q}{\partial p}
+                                    + \frac{\partial H}{\partial
+                                    P}\frac{\partial P}{\partial p}
+                                    \right)}_{\dot{q}} \\
+                                    &amp;- \frac{\partial Q}{\partial p}
+                                    \underbrace{\left( \frac{\partial
+                                    H}{\partial Q}\frac{\partial
+                                    Q}{\partial q} + \frac{\partial
+                                    H}{\partial P}\frac{\partial
+                                    P}{\partial q} \right)}_{\dot{p}}\\
+                                    &amp;=\cancel{\frac{\partial
+                                    Q}{\partial q} \frac{\partial
+                                    H}{\partial Q}\frac{\partial
+                                    Q}{\partial p}} + \frac{\partial
+                                    Q}{\partial q}\frac{\partial
+                                    H}{\partial P}\frac{\partial
+                                    P}{\partial p} \\
+                                    &amp;- \cancel{\frac{\partial
+                                    Q}{\partial p}\frac{\partial
+                                    H}{\partial Q}\frac{\partial
+                                    Q}{\partial q}} - \frac{\partial
+                                    Q}{\partial p}\frac{\partial
+                                    H}{\partial P}\frac{\partial
+                                    P}{\partial q} \\
+                                    &amp;= \frac{\partial H}{\partial
+                                    P}\left(\frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p} -
+                                    \frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial
+                                    q}   \right)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>詳細は省略するが<span
+                                    class="math inline">\(\dot{P}\)</span>も全く同様に計算できる。合わせて書くと、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{Q} &amp;=\frac{\partial
+                                    H}{\partial P}\left(\frac{\partial
+                                    Q}{\partial q}\frac{\partial
+                                    P}{\partial p} - \frac{\partial
+                                    Q}{\partial p}\frac{\partial
+                                    P}{\partial q} \right) \\
+                                    \dot{P} &amp;= -\frac{\partial
+                                    H}{\partial Q}\left(\frac{\partial
+                                    Q}{\partial q}\frac{\partial
+                                    P}{\partial p} - \frac{\partial
+                                    Q}{\partial p}\frac{\partial
+                                    P}{\partial q} \right)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>したがって、変数変換<span
+                                    class="math inline">\((p,q)
+                                    \rightarrow
+                                    (P,Q)\)</span>により、ハミルトンの運動方程式が共変であるためには、この変数変換が以下の条件を満たす必要がある。</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p} -
+                                    \frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial q} = 1
+                                    \]</span></p>
+                                    <p>この条件を満たす変数変換を
+                                    <strong>正準変換(canonical
+                                    transform)</strong>
+                                    と呼ぶ。先程の条件は、行列式の形にまとめることができる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{vmatrix}
+                                    \partial_q Q &amp; \partial_p Q \\
+                                    \partial_q P &amp; \partial_p P
+                                    \end{vmatrix}
+                                    =1
+                                    \]</span></p>
+                                    <p>これは、変換<span
+                                    class="math inline">\((p,q)
+                                    \rightarrow
+                                    (P,Q)\)</span>のヤコビアンに他ならない。すなわち、正準変換とは、変換のヤコビアンが1となるような変換のことである。逆に言えば、ヤコビアンが1でありさえすれば、どのような変換を行おうとハミルトンの運動方程式は共変である。点変換しか許容しなかったラグランジアンに比べて、変換の幅が広がったことがわかる。</p>
                     </article>
     </body>
 
