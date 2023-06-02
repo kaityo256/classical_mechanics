@@ -134,3 +134,48 @@ $$
 $$
 
 これは、変換$(p,q) \rightarrow (P,Q)$のヤコビアンに他ならない。すなわち、正準変換とは、変換のヤコビアンが1となるような変換のことである。逆に言えば、ヤコビアンが1でありさえすれば、どのような変換を行おうとハミルトンの運動方程式は共変である。点変換しか許容しなかったラグランジアンに比べて、変換の幅が広がったことがわかる。
+
+いくつか正準変換の例を挙げよう。まずは座標を$Q=Q(q)$と変換する点変換を考えよう。もともとの系がラグランジアン$L(q, \dot{q})$に従っていたとすると、運動量の定義から
+
+$$
+p = \frac{\partial L}{\partial \dot{q}}
+$$
+
+である。ここで、$Q=Q(q)$を$Q$について解いて$q=q(Q)$とする。$\dot{q}$を計算すると
+
+$$
+\begin{aligned}
+\dot{q} &= \frac{d q(Q)}{dt} \\
+&= \frac{dq}{dQ}\dot{Q}
+\end{aligned}
+$$
+
+$dq/dQ$は$Q$の関数であるから、$\dot{q}$は$Q$と$\dot{Q}$の両方に依存している。したがって、$\dot{q}(Q,\dot{Q})$と書ける。以上から、もとのラグランジアンを$(Q,\dot{Q})$の関数として表現すると、$L(q(Q), \dot{q}(Q,\dot{Q})$と書ける。
+
+新たな運動量$P$は
+
+$$
+\begin{aligned}
+P &= \frac{\partial}{\partial \dot{Q}} L(q(Q), \dot{q}(Q,\dot{Q}) \\
+&= \underbrace{\frac{\partial L}{\partial \dot{q}}}_{=p}  \underbrace{\frac{d \dot{q}}{d \dot{Q}}}_{dq/dQ} \\
+&= \frac{p}{Q'}
+\end{aligned}
+$$
+
+と書ける。
+
+$P$と$Q$の $(q,p)$依存性がわかったのでヤコビアンを計算してみよう。
+
+$$
+\begin{vmatrix}
+\partial_q Q & \partial_p Q \\
+\partial_q P & \partial_p P
+\end{vmatrix} =
+\begin{vmatrix}
+Q' & 0 \\
+\partial_q P & 1/Q'
+\end{vmatrix}
+=1
+$$
+
+すなわち、点変換は正準変換である。

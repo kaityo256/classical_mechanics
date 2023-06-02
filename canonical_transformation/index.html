@@ -269,6 +269,67 @@
                                     class="math inline">\((p,q)
                                     \rightarrow
                                     (P,Q)\)</span>のヤコビアンに他ならない。すなわち、正準変換とは、変換のヤコビアンが1となるような変換のことである。逆に言えば、ヤコビアンが1でありさえすれば、どのような変換を行おうとハミルトンの運動方程式は共変である。点変換しか許容しなかったラグランジアンに比べて、変換の幅が広がったことがわかる。</p>
+                                    <p>いくつか正準変換の例を挙げよう。まずは座標を<span
+                                    class="math inline">\(Q=Q(q)\)</span>と変換する点変換を考えよう。もともとの系がラグランジアン<span
+                                    class="math inline">\(L(q,
+                                    \dot{q})\)</span>に従っていたとすると、運動量の定義から</p>
+                                    <p><span class="math display">\[
+                                    p = \frac{\partial L}{\partial
+                                    \dot{q}}
+                                    \]</span></p>
+                                    <p>である。ここで、<span
+                                    class="math inline">\(Q=Q(q)\)</span>を<span
+                                    class="math inline">\(Q\)</span>について解いて<span
+                                    class="math inline">\(q=q(Q)\)</span>とする。<span
+                                    class="math inline">\(\dot{q}\)</span>を計算すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{d q(Q)}{dt} \\
+                                    &amp;= \frac{dq}{dQ}\dot{Q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(dq/dQ\)</span>は<span
+                                    class="math inline">\(Q\)</span>の関数であるから、<span
+                                    class="math inline">\(\dot{q}\)</span>は<span
+                                    class="math inline">\(Q\)</span>と<span
+                                    class="math inline">\(\dot{Q}\)</span>の両方に依存している。したがって、<span
+                                    class="math inline">\(\dot{q}(Q,\dot{Q})\)</span>と書ける。以上から、もとのラグランジアンを<span
+                                    class="math inline">\((Q,\dot{Q})\)</span>の関数として表現すると、<span
+                                    class="math inline">\(L(q(Q),
+                                    \dot{q}(Q,\dot{Q})\)</span>と書ける。</p>
+                                    <p>新たな運動量<span
+                                    class="math inline">\(P\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    P &amp;= \frac{\partial}{\partial
+                                    \dot{Q}} L(q(Q), \dot{q}(Q,\dot{Q})
+                                    \\
+                                    &amp;= \underbrace{\frac{\partial
+                                    L}{\partial
+                                    \dot{q}}}_{=p}  \underbrace{\frac{d
+                                    \dot{q}}{d \dot{Q}}}_{dq/dQ} \\
+                                    &amp;= \frac{p}{Q&#39;}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と書ける。</p>
+                                    <p><span
+                                    class="math inline">\(P\)</span>と<span
+                                    class="math inline">\(Q\)</span>の
+                                    <span
+                                    class="math inline">\((q,p)\)</span>依存性がわかったのでヤコビアンを計算してみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{vmatrix}
+                                    \partial_q Q &amp; \partial_p Q \\
+                                    \partial_q P &amp; \partial_p P
+                                    \end{vmatrix} =
+                                    \begin{vmatrix}
+                                    Q&#39; &amp; 0 \\
+                                    \partial_q P &amp; 1/Q&#39;
+                                    \end{vmatrix}
+                                    =1
+                                    \]</span></p>
+                                    <p>すなわち、点変換は正準変換である。</p>
                     </article>
     </body>
 
