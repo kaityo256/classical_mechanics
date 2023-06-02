@@ -330,6 +330,52 @@
                                     =1
                                     \]</span></p>
                                     <p>すなわち、点変換は正準変換である。</p>
+                                    <p>次に以下の変換を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= p \\
+                                    P &amp;= -q
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは座標と運動量を入れ替えて、片方に負符号をつけたものだ。ヤコビアンは簡単に計算できて、</p>
+                                    <p><span class="math display">\[
+                                    \begin{vmatrix}
+                                    \partial_q Q &amp; \partial_p Q \\
+                                    \partial_q P &amp; \partial_p P
+                                    \end{vmatrix} =
+                                    \begin{vmatrix}
+                                    0 &amp; 1 \\
+                                    -1 &amp; 0
+                                    \end{vmatrix}
+                                    =1
+                                    \]</span></p>
+                                    <p>となるから、これは正準変換である。</p>
+                                    <p>もともと</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p} \\
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>が成り立っている時、<span
+                                    class="math inline">\(\dot{Q},
+                                    \dot{P}\)</span>を計算すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{Q} &amp;= \dot{p} =
+                                    -\frac{\partial H}{\partial q} =
+                                    \frac{\partial H}{\partial P} \\
+                                    \dot{P} &amp;= -\dot{q} = -
+                                    \frac{\partial H}{\partial p} =-
+                                    \frac{\partial H}{\partial Q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、新たな変数 <span
+                                    class="math inline">\((Q,P)\)</span>も、ハミルトンの運動方程式に従うことがわかる。このように、正準変換は座標と運動量が入れ替わるような変換を許容する。</p>
+                                    <p>より一般に、座標と運動量を混ぜるような変換を考えよう。</p>
+                                    <p>TODO: p,qからr, 。</p>
                     </article>
     </body>
 

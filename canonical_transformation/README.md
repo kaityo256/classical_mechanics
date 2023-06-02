@@ -179,3 +179,52 @@ Q' & 0 \\
 $$
 
 すなわち、点変換は正準変換である。
+
+次に以下の変換を考えよう。
+
+$$
+\begin{aligned}
+Q &= p \\
+P &= -q
+\end{aligned}
+$$
+
+これは座標と運動量を入れ替えて、片方に負符号をつけたものだ。ヤコビアンは簡単に計算できて、
+
+$$
+\begin{vmatrix}
+\partial_q Q & \partial_p Q \\
+\partial_q P & \partial_p P
+\end{vmatrix} =
+\begin{vmatrix}
+0 & 1 \\
+-1 & 0
+\end{vmatrix}
+=1
+$$
+
+となるから、これは正準変換である。
+
+もともと
+
+$$
+\begin{aligned}
+\dot{q} &= \frac{\partial H}{\partial p} \\
+\dot{p} &= -\frac{\partial H}{\partial q}
+\end{aligned}
+$$
+
+が成り立っている時、$\dot{Q}, \dot{P}$を計算すると、
+
+$$
+\begin{aligned}
+\dot{Q} &= \dot{p} = -\frac{\partial H}{\partial q} = \frac{\partial H}{\partial P} \\
+\dot{P} &= -\dot{q} = - \frac{\partial H}{\partial p} =- \frac{\partial H}{\partial Q}
+\end{aligned}
+$$
+
+と、新たな変数 $(Q,P)$も、ハミルトンの運動方程式に従うことがわかる。このように、正準変換は座標と運動量が入れ替わるような変換を許容する。
+
+より一般に、座標と運動量を混ぜるような変換を考えよう。
+
+TODO: p,qからr, \thetaへの変換。
