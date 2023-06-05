@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>演習問題</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="icon" href="https://kaityo256.github.io/classical_mechanics/favicon.ico">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">演習問題</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1
+                                    id="ニュートンの運動方程式">ニュートンの運動方程式</h1>
+                                    <h2 id="問題">問題</h2>
+                                    <p>二次元平面上に、質量<span
+                                    class="math inline">\(m\)</span>の質点が中心力<span
+                                    class="math inline">\(U(r)\)</span>を受けて運動している(ただし<span
+                                    class="math inline">\(r=\sqrt{x^2+y^2})\)</span>。この時、角運動量<span
+                                    class="math inline">\(L=m(\dot{x} y
+                                    - \dot{y}
+                                    x)\)</span>が保存量であることを示せ。</p>
+                                    <h2 id="解答例">解答例</h2>
+                                    <p><span class="math display">\[
+                                    r = \sqrt{x^2+y^2}
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial r}{\partial x} &amp;
+                                    = \frac{x}{r} \\
+                                    \frac{\partial r}{\partial y} &amp;
+                                    = \frac{y}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを用いると、運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= - \partial_x U(r)
+                                    = -U&#39;(r) \frac{\partial
+                                    r}{\partial x}= - U&#39;(r)
+                                    \frac{x}{r} \\
+                                    m \ddot{y} &amp;= - \partial_y U(r)
+                                    = -U&#39;(r) \frac{\partial
+                                    r}{\partial y}= - U&#39;(r)
+                                    \frac{y}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    m \dot{x} y - m\ddot{y} x = 0
+                                    \]</span></p>
+                                    <p>角運動量の時間微分<span
+                                    class="math inline">\(\dot{L}\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{L} &amp;= m \frac{d}{dt}
+                                    (\dot{x} y - \dot{y} x) \\
+                                    &amp;= m (\ddot{x} y +
+                                    \cancel{\dot{x}\dot{y}} - \ddot{y}x
+                                    - \cancel{\dot{y}\dot{x}}) \\
+                                    &amp;= m \ddot{x} y - m \ddot{y} x
+                                    \\
+                                    &amp;=0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上から、角運動量<span
+                                    class="math inline">\(L\)</span>が保存量であることが示された。</p>
+                    </article>
+    </body>
+
+    </html>
