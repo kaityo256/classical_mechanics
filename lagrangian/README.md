@@ -8,7 +8,7 @@
 
 ## 点変換とラグランジアンの共変性
 
-ラグランジアンを一般化座標$q$と一般化速度$\dot{q}$の関数、$L(\dot{q},q)$で書いておくと、オイラー・ラグランジュの運動方程式
+ラグランジアンを一般化座標$q$と一般化速度$\dot{q}$の関数、$L(q,\dot{q})$で書いておくと、オイラー・ラグランジュの運動方程式
 
 $$
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0
@@ -16,7 +16,13 @@ $$
 
 が変数変換によって形を変えない。ラグランジアンの共変性は多変数の時にこそ活きるが、かなり式変形がややこしくなるので、まずは一変数の場合について見てみよう。
 
-ある変数$q$について、変数変換$Q = f(q)$を考える。$q$がオイラー・ラグランジュの運動方程式を満たす時、変数変換後の変数$Q$についてもオイラー・ラグランジュの運動方程式
+ある変数$q$について、変数変換$Q = f(q)$を考える。$q$がオイラー・ラグランジュの運動方程式
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0
+$$
+
+を満たす時、変数変換後の変数$Q$についてもオイラー・ラグランジュの運動方程式
 
 $$
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}} \right) - \frac{\partial L}{\partial Q} = 0
@@ -25,41 +31,75 @@ $$
 を満たす、というのが証明したいことである。
 
 そのために、まず$Q = f(q)$を$Q$について逆に解いて
+
 $$
 q = f^{-1}(Q)
 $$
-と書く。ここで、$f^{-1}$を$q$と同一視し、以後は$q(Q)$と書く。すると、$\dot{q}$は、
-$$
-\dot{q} = \frac{dq}{dQ} \dot{Q}
-$$
-と書ける。ここで$dq/dQ$は$Q$の関数であることから、$\dot{q}$は$Q$と$\dot{Q}$両方の関数である。
 
-以上から、変数変換後のラグランジアンの$Q$、$\dot{Q}$依存性を明示すると
+と書く。ここで、$f^{-1}$を$q$と同一視し、以後は$q(Q)$と書く。すると、$\dot{q}$は、
+
+$$   
+\dot{q} \equiv \frac{d}{dt}q(Q) =  \frac{dq}{dQ} \dot{Q}
+$$
+
+と書ける。ここで$dq/dQ$は$Q$の関数であるから、$\dot{q}$は$Q$と$\dot{Q}$両方の関数である。そこで、$\dot{q} = \dot{q}(Q,\dot{Q})$と表現する。後のために、いくつか関係式を導出しておく。$\dot{q}$は$Q$及び$\dot{Q}$の関数であるから、それらが独立だと思って$Q$や$\dot{Q}$で偏微分する。まず、$\dot{q}$を$Q$で偏微分すると、
+
+$$
+\frac{\partial \dot{q}}{\partial Q} = \frac{d^2q}{dQ^2} \dot{Q}
+$$
+
+次に、$\dot{q}$を$\dot{Q}$で偏微分すると、
+
+$$
+\frac{\partial \dot{q}}{\partial \dot{Q}} = \frac{dq}{dQ}
+$$
+
+更に時間微分すると、
+
+$$
+\frac{d}{dt}\left(\frac{\partial \dot{q}}{\partial \dot{Q}}\right) = \frac{d^2q}{dQ^2} \dot{Q}
+$$
+
+従って、
+
+$$
+\frac{d}{dt}\left(\frac{\partial \dot{q}}{\partial \dot{Q}}\right) = \frac{\partial \dot{q}}{\partial Q}
+$$
+
+が証明された。さて、ラグランジアンの$Q, \dot{Q}$依存性をあらわに書くと
 
 $$
 L(\dot{q}, q) = L(\dot{q}(\dot{Q},Q), q(Q))
 $$
-となる。
 
-さて、このラグランジアン$L$の$Q$や$\dot{Q}$による偏微分を考えよう。$Q$依存性は、$\dot{q}$、$q$の両方の箇所に入っているから、
+このラグランジアン$L$の$\dot{Q}$による偏微分を考えよう。$\dot{Q}$は$\dot{q}$の場所にしか現れないため
+
+$$
+\frac{\partial L}{\partial \dot{Q}}  = \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial \dot{Q}}
+$$
+
+ただし、先程導いた関係式 $\partial \dot{q}/\partial \dot{Q} = dq/dQ$を用いた。$Q, \dot{Q}$に関するオイラー・ラグランジュ方程式を作りたいので、さらに時間で微分すると、
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}} \right) &= 
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \frac{\partial \dot{q}}{\partial \dot{Q}} + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt}\left( \frac{\partial \dot{q}}{\partial \dot{Q}} \right) \\
+&= \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \frac{dq}{dQ}
++ \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}
+\end{aligned}
+$$
+
+次にラグランジアンの$Q$偏微分を考える。$\dot{q}$、$q$は両方とも$Q$依存性を持つため、
+
 $$
 \frac{\partial L}{\partial Q} =
-\frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dQ}
+\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}
 +
 \frac{\partial L}{\partial q} \frac{dq}{dQ}
 $$
 
-一方、$\dot{Q}$は$\dot{q}$の場所にしか現れないので、
+一方、
 
-$$
-\frac{\partial L}{\partial \dot{Q}}  = \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{d\dot{Q}}.
-$$
-
-ここで、合成関数の微分公式から
-
-$$
-\frac{d\dot{q}}{d\dot{Q}} = \frac{dq}{dt}\frac{dt}{dQ} = \frac{dq}{dQ}.
-$$
 
 以上より、
 
@@ -67,11 +107,16 @@ $$
 \frac{\partial L}{\partial \dot{Q}} = \frac{\partial L}{\partial \dot{q}}\frac{dq}{dQ}
 $$
 
-オイラー・ラグランジュの運動方程式を作るためにこれを時間で微分すると、
+オイラー・ラグランジュ方程式を作るため、上記を時間微分すると、
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}}\right) =
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) \frac{dq}{dQ} + \frac{\partial L}{\partial \dot{q}} \frac{d \dot{q}}{dQ}
+\begin{aligned}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{Q}}\right) &= 
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}}  \right) \frac{dq}{dQ}
++ \frac{\partial L}{\partial \dot{q}} \frac{d}{dt} \left(\frac{dq}{dQ} \right) \\
+&= \left( \frac{\partial L}{\partial \dot{q}}  \right) \frac{dq}{dQ} +
+\frac{d^2 q}{d Q^2} \dot{Q}
+\end{aligned}
 $$
 
 以上から、
