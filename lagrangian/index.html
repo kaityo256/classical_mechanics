@@ -59,15 +59,15 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <p>これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。</p>
-                                    <h1
-                                    id="極座標とニュートンの運動方程式">極座標とニュートンの運動方程式</h1>
-                                    <p>簡単のため、</p>
+                                    <h1 id="極座標の例">極座標の例</h1>
+                                    <p>TODO:
+                                    極座標の運動方程式をニュートンの運動方程式から導く</p>
                                     <h1
                                     id="点変換とラグランジアンの共変性">点変換とラグランジアンの共変性</h1>
                                     <p>ラグランジアンを一般化座標<span
                                     class="math inline">\(q\)</span>と一般化速度<span
                                     class="math inline">\(\dot{q}\)</span>の関数、<span
-                                    class="math inline">\(L(\dot{q},q)\)</span>で書いておくと、オイラー・ラグランジュの運動方程式</p>
+                                    class="math inline">\(L(q,\dot{q})\)</span>で書いておくと、オイラー・ラグランジュの運動方程式</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left(\frac{\partial
                                     L}{\partial \dot{q}} \right) -
@@ -78,7 +78,13 @@
                                     class="math inline">\(q\)</span>について、変数変換<span
                                     class="math inline">\(Q =
                                     f(q)\)</span>を考える。<span
-                                    class="math inline">\(q\)</span>がオイラー・ラグランジュの運動方程式を満たす時、変数変換後の変数<span
+                                    class="math inline">\(q\)</span>がオイラー・ラグランジュの運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{q}} \right) -
+                                    \frac{\partial L}{\partial q} = 0
+                                    \]</span></p>
+                                    <p>を満たす時、変数変換後の変数<span
                                     class="math inline">\(Q\)</span>についてもオイラー・ラグランジュの運動方程式</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left(\frac{\partial
@@ -89,74 +95,137 @@
                                     <p>そのために、まず<span
                                     class="math inline">\(Q =
                                     f(q)\)</span>を<span
-                                    class="math inline">\(Q\)</span>について逆に解いて
-                                    <span class="math display">\[
+                                    class="math inline">\(Q\)</span>について逆に解いて</p>
+                                    <p><span class="math display">\[
                                     q = f^{-1}(Q)
-                                    \]</span> と書く。ここで、<span
+                                    \]</span></p>
+                                    <p>と書く。ここで、<span
                                     class="math inline">\(f^{-1}\)</span>を<span
                                     class="math inline">\(q\)</span>と同一視し、以後は<span
                                     class="math inline">\(q(Q)\)</span>と書く。すると、<span
-                                    class="math inline">\(\dot{q}\)</span>は、
-                                    <span class="math display">\[
-                                    \dot{q} = \frac{dq}{dQ} \dot{Q}
-                                    \]</span> と書ける。ここで<span
+                                    class="math inline">\(\dot{q}\)</span>は、</p>
+                                    <p><span class="math display">\[
+                                    \dot{q} \equiv \frac{d}{dt}q(Q)
+                                    =  \frac{dq}{dQ} \dot{Q}
+                                    \]</span></p>
+                                    <p>と書ける。ここで<span
                                     class="math inline">\(dq/dQ\)</span>は<span
-                                    class="math inline">\(Q\)</span>の関数であることから、<span
+                                    class="math inline">\(Q\)</span>の関数であるから、<span
                                     class="math inline">\(\dot{q}\)</span>は<span
                                     class="math inline">\(Q\)</span>と<span
-                                    class="math inline">\(\dot{Q}\)</span>両方の関数である。</p>
-                                    <p>以上から、変数変換後のラグランジアンの<span
-                                    class="math inline">\(Q\)</span>、<span
-                                    class="math inline">\(\dot{Q}\)</span>依存性を明示すると</p>
+                                    class="math inline">\(\dot{Q}\)</span>両方の関数である。そこで、<span
+                                    class="math inline">\(\dot{q} =
+                                    \dot{q}(Q,\dot{Q})\)</span>と表現する。後のために、いくつか関係式を導出しておく。<span
+                                    class="math inline">\(\dot{q}\)</span>は<span
+                                    class="math inline">\(Q\)</span>及び<span
+                                    class="math inline">\(\dot{Q}\)</span>の関数であるから、それらが独立だと思って<span
+                                    class="math inline">\(Q\)</span>や<span
+                                    class="math inline">\(\dot{Q}\)</span>で偏微分する。まず、<span
+                                    class="math inline">\(\dot{q}\)</span>を<span
+                                    class="math inline">\(Q\)</span>で偏微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \dot{q}}{\partial Q}
+                                    = \frac{d^2q}{dQ^2} \dot{Q}
+                                    \]</span></p>
+                                    <p>次に、<span
+                                    class="math inline">\(\dot{q}\)</span>を<span
+                                    class="math inline">\(\dot{Q}\)</span>で偏微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \dot{q}}{\partial
+                                    \dot{Q}} = \frac{dq}{dQ}
+                                    \]</span></p>
+                                    <p>更に時間微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    \dot{q}}{\partial \dot{Q}}\right) =
+                                    \frac{d^2q}{dQ^2} \dot{Q}
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    \dot{q}}{\partial \dot{Q}}\right) =
+                                    \frac{\partial \dot{q}}{\partial Q}
+                                    \]</span></p>
+                                    <p>が証明された。さて、ラグランジアンの<span
+                                    class="math inline">\(Q,
+                                    \dot{Q}\)</span>依存性をあらわに書くと</p>
                                     <p><span class="math display">\[
                                     L(\dot{q}, q) =
                                     L(\dot{q}(\dot{Q},Q), q(Q))
-                                    \]</span> となる。</p>
-                                    <p>さて、このラグランジアン<span
+                                    \]</span></p>
+                                    <p>このラグランジアン<span
                                     class="math inline">\(L\)</span>の<span
-                                    class="math inline">\(Q\)</span>や<span
                                     class="math inline">\(\dot{Q}\)</span>による偏微分を考えよう。<span
-                                    class="math inline">\(Q\)</span>依存性は、<span
+                                    class="math inline">\(\dot{Q}\)</span>は<span
+                                    class="math inline">\(\dot{q}\)</span>の場所にしか現れないため</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial L}{\partial
+                                    \dot{Q}}  = \frac{\partial
+                                    L}{\partial \dot{q}} \frac{\partial
+                                    \dot{q}}{\partial \dot{Q}}
+                                    \]</span></p>
+                                    <p>ただし、先程導いた関係式 <span
+                                    class="math inline">\(\partial
+                                    \dot{q}/\partial \dot{Q} =
+                                    dq/dQ\)</span>を用いた。<span
+                                    class="math inline">\(Q,
+                                    \dot{Q}\)</span>に関するオイラー・ラグランジュ方程式を作りたいので、さらに時間で微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{d}{dt}\left( \frac{\partial
+                                    L}{\partial \dot{Q}} \right) &amp;=
+                                    \frac{d}{dt}\left( \frac{\partial
+                                    L}{\partial \dot{q}} \right)
+                                    \frac{\partial \dot{q}}{\partial
+                                    \dot{Q}} + \frac{\partial
+                                    L}{\partial \dot{q}}
+                                    \frac{d}{dt}\left( \frac{\partial
+                                    \dot{q}}{\partial \dot{Q}} \right)
+                                    \\
+                                    &amp;= \frac{d}{dt}\left(
+                                    \frac{\partial L}{\partial \dot{q}}
+                                    \right) \frac{dq}{dQ}
+                                    + \frac{\partial L}{\partial
+                                    \dot{q}} \frac{\partial
+                                    \dot{q}}{\partial Q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>次にラグランジアンの<span
+                                    class="math inline">\(Q\)</span>偏微分を考える。<span
                                     class="math inline">\(\dot{q}\)</span>、<span
-                                    class="math inline">\(q\)</span>の両方の箇所に入っているから、
-                                    <span class="math display">\[
+                                    class="math inline">\(q\)</span>は両方とも<span
+                                    class="math inline">\(Q\)</span>依存性を持つため、</p>
+                                    <p><span class="math display">\[
                                     \frac{\partial L}{\partial Q} =
                                     \frac{\partial L}{\partial \dot{q}}
-                                    \frac{d\dot{q}}{dQ}
+                                    \frac{\partial \dot{q}}{\partial Q}
                                     +
                                     \frac{\partial L}{\partial q}
                                     \frac{dq}{dQ}
                                     \]</span></p>
-                                    <p>一方、<span
-                                    class="math inline">\(\dot{Q}\)</span>は<span
-                                    class="math inline">\(\dot{q}\)</span>の場所にしか現れないので、</p>
-                                    <p><span class="math display">\[
-                                    \frac{\partial L}{\partial
-                                    \dot{Q}}  = \frac{\partial
-                                    L}{\partial \dot{q}}
-                                    \frac{d\dot{q}}{d\dot{Q}}.
-                                    \]</span></p>
-                                    <p>ここで、合成関数の微分公式から</p>
-                                    <p><span class="math display">\[
-                                    \frac{d\dot{q}}{d\dot{Q}} =
-                                    \frac{dq}{dt}\frac{dt}{dQ} =
-                                    \frac{dq}{dQ}.
-                                    \]</span></p>
+                                    <p>一方、</p>
                                     <p>以上より、</p>
                                     <p><span class="math display">\[
                                     \frac{\partial L}{\partial \dot{Q}}
                                     = \frac{\partial L}{\partial
                                     \dot{q}}\frac{dq}{dQ}
                                     \]</span></p>
-                                    <p>オイラー・ラグランジュの運動方程式を作るためにこれを時間で微分すると、</p>
+                                    <p>オイラー・ラグランジュ方程式を作るため、上記を時間微分すると、</p>
                                     <p><span class="math display">\[
-                                    \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{Q}}\right) =
-                                    \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{q}}\right)
-                                    \frac{dq}{dQ} + \frac{\partial
-                                    L}{\partial \dot{q}} \frac{d
-                                    \dot{q}}{dQ}
+                                    \begin{aligned}
+                                    \frac{d}{dt} \left( \frac{\partial
+                                    L}{\partial \dot{Q}}\right) &amp;=
+                                    \frac{d}{dt} \left( \frac{\partial
+                                    L}{\partial \dot{q}}  \right)
+                                    \frac{dq}{dQ}
+                                    + \frac{\partial L}{\partial
+                                    \dot{q}} \frac{d}{dt}
+                                    \left(\frac{dq}{dQ} \right) \\
+                                    &amp;= \left( \frac{\partial
+                                    L}{\partial \dot{q}}  \right)
+                                    \frac{dq}{dQ} +
+                                    \frac{d^2 q}{d Q^2} \dot{Q}
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>以上から、</p>
                                     <p><span class="math display">\[

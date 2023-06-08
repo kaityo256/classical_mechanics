@@ -2,9 +2,9 @@
 
 これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。
 
-## 極座標とニュートンの運動方程式
+## 極座標の例
 
-簡単のため、
+TODO: 極座標の運動方程式をニュートンの運動方程式から導く
 
 ## 点変換とラグランジアンの共変性
 
@@ -38,7 +38,7 @@ $$
 
 と書く。ここで、$f^{-1}$を$q$と同一視し、以後は$q(Q)$と書く。すると、$\dot{q}$は、
 
-$$   
+$$
 \dot{q} \equiv \frac{d}{dt}q(Q) =  \frac{dq}{dQ} \dot{Q}
 $$
 
@@ -82,7 +82,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}} \right) &= 
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}} \right) &=
 \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \frac{\partial \dot{q}}{\partial \dot{Q}} + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt}\left( \frac{\partial \dot{q}}{\partial \dot{Q}} \right) \\
 &= \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \frac{dq}{dQ}
 + \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}
@@ -100,7 +100,6 @@ $$
 
 一方、
 
-
 以上より、
 
 $$
@@ -111,7 +110,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{Q}}\right) &= 
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{Q}}\right) &=
 \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}}  \right) \frac{dq}{dQ}
 + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt} \left(\frac{dq}{dQ} \right) \\
 &= \left( \frac{\partial L}{\partial \dot{q}}  \right) \frac{dq}{dQ} +
