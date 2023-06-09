@@ -34,7 +34,7 @@
 * 保存則
 * 余談：リンゴに働く力
 
-## [仮想仕事の原理](virtual_work/README.mdmd)
+## [仮想仕事の原理](virtual_work/README.md)
 
 * 仕事
 * 拘束力と仮想変位
