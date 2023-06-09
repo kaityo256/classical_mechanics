@@ -367,7 +367,7 @@ f'''(x) &\equiv \frac{d^3f}{dx^3}\\
 \end{aligned}
 $$
 
-とプライム記号を増やして表記する。このような表記を **ラグランジュ記法(Lagrange's notation)** と呼ぶ[^lagrange]
+とプライム記号を増やして表記する。このような表記を **ラグランジュ記法(Lagrange's notation)** と呼ぶ。[^lagrange]
 
 [^lagrange]: ジョセフ＝ルイ・ラグランジュ(Joseph-Louis Lagrange, 1736-1813)に因む。解析力学の創始者の一人である。
 
