@@ -31,6 +31,7 @@ copy-pdf:
 	cp overview/README.pdf ./classical_mechanics01.pdf
 	cp preparation/README.pdf ./classical_mechanics02.pdf
 	cp newton/README.pdf ./classical_mechanics03.pdf
+	cp virtual_work/README.pdf ./classical_mechanics04.pdf
 
 clean:
 	rm -f $(TARGET) index.html
