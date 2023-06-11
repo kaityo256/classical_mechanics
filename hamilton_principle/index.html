@@ -69,6 +69,76 @@
                                     class="math inline">\(K-U\)</span>なのか疑問に思う人も多いだろう。簡単にいえば「部分積分により負符号が出るから」なのだが、その物理的な意義は奥が深く、すぐに理解することは難しいかもしれない。以下では仮想仕事の原理と比較しながらラグランジアンの導出を行うことで、少なくとも数式上ではどのように<span
                                     class="math inline">\(K-U\)</span>が出てくるかを理解する。また、多自由度系の運動方程式がただ一つのラグランジアンから導出されることを見る。</p>
                                     <h1
+                                    id="ラグランジアン">ラグランジアン</h1>
+                                    <p>まず、ラグランジアンを発見法的に導出しておこう。3次元空間に、運動がポテンシャル<span
+                                    class="math inline">\(U(x,y,z)\)</span>に支配される質点があるとする。この質点の質量を<span
+                                    class="math inline">\(m\)</span>とすると、運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \dot{v_x} &amp;= -\frac{\partial
+                                    U}{\partial x}\\
+                                    m \dot{v_y} &amp;= -\frac{\partial
+                                    U}{\partial y}\\
+                                    m \dot{v_z} &amp;= -\frac{\partial
+                                    U}{\partial z}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>という形に書ける。ここで、運動方程式の右辺が全てポテンシャルエネルギーの位置による偏微分になっていることに注目する。左辺も同様にポテンシャルを用意して、自由度で偏微分する形にすると運動方程式がきれいに書けそうである。運動において全エネルギーが保存しており、全エネルギーとは運動エネルギーと位置エネルギーの和であり、右辺に位置エネルギーが来ているなら、左辺には運動エネルギーが来るのが自然であろう。そこで、以下のような運動エネルギーを考える。</p>
+                                    <p><span class="math display">\[
+                                    K(v_x,v_y,v_z) =
+                                    \frac{1}{2}m(v_x^2+v_y^2+v_z^2)
+                                    \]</span></p>
+                                    <p>ポテンシャルエネルギーと同様に、自由度で偏微分してみよう。</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial K}{\partial v_x} = m
+                                    v_x
+                                    \]</span></p>
+                                    <p>運動方程式と見比べると、両辺を時間微分したくなる</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    K}{\partial v_x}\right) = m
+                                    \dot{v_x}
+                                    \]</span></p>
+                                    <p>これは運動方程式の左辺である。以上から、運動方程式を以下のようにまとめることができた。</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    K}{\partial v_x}\right)
+                                    = -\frac{\partial U}{\partial x}
+                                    \]</span></p>
+                                    <p>ポテンシャルエネルギーが運動方程式の右辺を作っており、運動エネルギーが左辺を作っていることがわかる。</p>
+                                    <p><span class="math inline">\(v_x =
+                                    \dot{x}\)</span>と書くと、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    K}{\partial \dot{x}}\right)
+                                    = -\frac{\partial U}{\partial x}
+                                    \]</span></p>
+                                    <p>と、左右が同じ自由度<span
+                                    class="math inline">\(x\)</span>に関するものであることが強調される。</p>
+                                    <p>さて、どうせ偏微分すると結果は同じであるから、<span
+                                    class="math inline">\(K\)</span>と<span
+                                    class="math inline">\(U\)</span>をまとめてしまおう。</p>
+                                    <p><span class="math display">\[
+                                    L(x,y,z,\dot{x},\dot{y},\dot{z}) =
+                                    K(\dot{x},\dot{y},\dot{z})
+                                    - U(x,y,z)
+                                    \]</span></p>
+                                    <p>により運動全体のポテンシャル<span
+                                    class="math inline">\(L\)</span>を定義すると、運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{x}}\right)
+                                    = \frac{\partial L}{\partial x}
+                                    \]</span></p>
+                                    <p>のように、ただ一つのスカラー関数から記述できるようになる。これを
+                                    <strong>ラグランジアン
+                                    (Lagrangian)</strong>
+                                    と呼ぶ。この関数<span
+                                    class="math inline">\(L\)</span>は運動方程式全体のポテンシャルになっていることから、運動ポテンシャルと呼ばれることもある。</p>
+                                    <p>ここで、<span
+                                    class="math inline">\(L = K -
+                                    U\)</span>と、運動エネルギーとポテンシャルエネルギーの差で表現した。なぜ和ではなく差なのかを理解するのが本章の目的である。</p>
+                                    <h1
                                     id="ダランベールの原理">ダランベールの原理</h1>
                                     <p>仮想仕事の原理は、力が釣り合っており物体が静止している場合、すなわち静力学に適用する原理であった。これを動力学に応用するため、まずダランベールの原理について述べる。</p>
                                     <p>ニュートンの運動方程式から始めよう。</p>
@@ -308,9 +378,7 @@
                                     <strong>作用
                                     (action)</strong>、この積分を作用積分と呼び、作用積分を与えるような被積分関数<span
                                     class="math inline">\(L\)</span>を
-                                    <strong>ラグランジアン
-                                    (Lagrangian)</strong>
-                                    と呼ぶ。あるラグランジアンが与えられた時、物体の軌道<span
+                                    ラグランジアンと呼ぶ。あるラグランジアンが与えられた時、物体の軌道<span
                                     class="math inline">\(x(t)\)</span>は、この作用積分を最小にするように決まる。これを
                                     <strong>ハミルトンの原理 (Hamilton’s
                                     principle)</strong> もしくは
@@ -319,14 +387,14 @@
                                     と呼ぶ。保存力に対するポテンシャル関数と対比し、ラグランジアンを運動ポテンシャルと呼ぶこともある。</p>
                                     <h1
                                     id="ラグランジアンと運動方程式">ラグランジアンと運動方程式</h1>
-                                    <p>ラグランジアンとニュートンの運動方程式の関係を確認しておこう。簡単のため、一体かつ一次元の問題を考える。ポテンシャル力<span
+                                    <p>運動方程式から、ダランベールの原理を用いてラグランジアンを導いた。逆に、ラグランジアンから運動方程式を作ることができる。一体かつ一次元の問題を考える。ポテンシャル力<span
                                     class="math inline">\(U(x)\)</span>に支配された運動のラグランジアンは</p>
                                     <p><span class="math display">\[
-                                    L(v, x) = \frac{1}{2}mv^2 - U(x)
+                                    L(x, v) = \frac{1}{2}mv^2 - U(x)
                                     \]</span></p>
                                     <p>であった。これを<span
-                                    class="math inline">\(v\)</span>、<span
-                                    class="math inline">\(x\)</span>の独立な関数とみなして、まずは<span
+                                    class="math inline">\(x\)</span>、<span
+                                    class="math inline">\(v\)</span>の独立な関数とみなして、まずは<span
                                     class="math inline">\(x\)</span>で偏微分しよう。</p>
                                     <p><span class="math display">\[
                                     \frac{\partial L}{\partial x} = -
@@ -356,75 +424,49 @@
                                     <p>これを、<strong>オイラー・ラグランジュ(Euler-Lagrange)の式</strong>と呼ぶ。ニュートンの運動方程式を変形しただけであるから、本質的にはニュートンの運動方程式と等価な式であるが、後で見るようにこの形式で書いておくと変数変換が非常にやりやすくなる。</p>
                                     <p>ここでは発見法的にラグランジアンと運動方程式の関係を導いたが、これはユークリッド座標でない場合には適用できない。一般の座標については、変分原理を用いて定式化される。変分原理については次章で扱う。</p>
                                     <h1
-                                    id="多変数のラグランジアン">多変数のラグランジアン</h1>
-                                    <p>運動方程式から、ダランベールの原理を用いてラグランジアンを導いた。逆に、ラグランジアンから運動方程式を作ることができる。その前に多自由度系における運動方程式とラグランジアンの関係を見ておこう。</p>
-                                    <p>二次元空間において、質量<span
-                                    class="math inline">\(m\)</span>の質点がポテンシャル<span
-                                    class="math inline">\(U(x,y)\)</span>の影響を受けて運動しているとしよう。運動方程式は、</p>
+                                    id="多自由度系のラグランジアン">多自由度系のラグランジアン</h1>
+                                    <p>本質的に一自由度系と同じことであるが、多自由度系におけるラグランジアンと運動方程式の関係も見ておこう。</p>
+                                    <p>三次元系におけるラグランジアンが以下のように与えられているとする。</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d \dot{x}}{dt} &amp;=
-                                    -\frac{\partial U}{\partial x} \\
-                                    m \frac{d \dot{y}}{dt} &amp;=
-                                    -\frac{\partial U}{\partial y}
-                                    \end{aligned}
+                                    L(x,y,z,\dot{x},\dot{y},\dot{z}) =
+                                    K(\dot{x},\dot{y},\dot{z})
+                                    - U(x,y,z)
                                     \]</span></p>
-                                    <p>で記述できる。ここで、2つの自由度<span
-                                    class="math inline">\(x,y\)</span>方向にかかる力が、ただ一つのスカラー関数<span
-                                    class="math inline">\(U\)</span>で記述できていることに注意しよう。右辺が同じスカラー関数から導出できてるのだから、左辺も一緒に導出したくなる。そのために、運動エネルギーの「ポテンシャル」を考えよう。この系の運動エネルギーは</p>
+                                    <p>ただし<span
+                                    class="math inline">\(K\)</span>は運動エネルギーであり、</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    K(\dot{x}, \dot{y}) &amp;=
-                                    \frac{1}{2}m(\dot{x}^2+\dot{y}^2)
-                                    \end{aligned}
+                                    K(\dot{x}, \dot{y}, \dot{z}) =
+                                    \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)
                                     \]</span></p>
-                                    <p>で与えられ、これが運動方程式の左辺を導くポテンシャルの役割を果たす。運動エネルギー<span
-                                    class="math inline">\(K\)</span>と、ポテンシャルエネルギーの差から</p>
-                                    <p><span class="math display">\[
-                                    L(x, y, \dot{x}, \dot{y}) =
-                                    \frac{1}{2}m(\dot{x}^2+\dot{y}^2) -
-                                    U(x,y)
-                                    \]</span></p>
-                                    <p>によってラグランジアンを定義する。ここで<span
-                                    class="math inline">\(x, y, \dot{x},
-                                    \dot{y}\)</span>が全て独立だと思って、<span
-                                    class="math inline">\(x\)</span>や<span
-                                    class="math inline">\(\dot{x}\)</span>でラグランジアンを偏微分しよう。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{\partial L}{\partial x} &amp;=
-                                    -\frac{\partial U}{\partial x} \\
-                                    \frac{\partial L}{\partial \dot{x}}
-                                    &amp;= m \dot{x} \\
-                                    \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{x}} \right) &amp;=
-                                    m \frac{d \dot{x}}{dt}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>以上から、以下の二式は等価である。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \frac{d \dot{x}}{dt} &amp;=
-                                    -\frac{\partial U}{\partial x} \\
-                                    \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{x}} \right) &amp;=
-                                    \frac{\partial L}{\partial x}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>全く同様にして、自由度<span
-                                    class="math inline">\(y\)</span>についての運動方程式も</p>
+                                    <p>で与えられるものとする。この系の自由度は<span
+                                    class="math inline">\(3\)</span>、すなわち配位空間は3次元であり、その空間は<span
+                                    class="math inline">\(x,y,z\)</span>で張られている。自由度<span
+                                    class="math inline">\(x\)</span>に対応する速度は<span
+                                    class="math inline">\(\dot{x}\)</span>であることを考え、ラグランジアンを<span
+                                    class="math inline">\(\dot{x}\)</span>で偏微分してから時間微分したものを左辺に、<span
+                                    class="math inline">\(x\)</span>で偏微分したものを右辺に配置すると、自由度<span
+                                    class="math inline">\(x\)</span>に関する運動方程式を得る。</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{y}} \right) =
-                                    \frac{\partial L}{\partial y}
+                                    L}{\partial \dot{x}}\right)
+                                    = \frac{\partial L}{\partial x}
                                     \]</span></p>
-                                    <p>で与えられ、これは<span
-                                    class="math inline">\(y\)</span>座標が従うニュートンの運動方程式と等価である。こうして、2つの自由度<span
-                                    class="math inline">\(x,y\)</span>が従う2本の運動方程式が、ただ1つのスカラー関数<span
-                                    class="math inline">\(L(x, y,
+                                    <p><span
+                                    class="math inline">\(L\)</span>の中身を代入すると、以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    m \frac{d \dot{x}}{dt} = -
+                                    \frac{\partial U}{\partial x}
+                                    \]</span></p>
+                                    <p>これは、ユークリッド空間において、自由な質点がポテンシャル<span
+                                    class="math inline">\(U\)</span>に起因する保存力に従って運動する様子を表現している。すなわち、先程のラグランジアンはそのような運動を表現していた。</p>
+                                    <p>全く同様な手続きで、自由度<span
+                                    class="math inline">\(y\)</span>や<span
+                                    class="math inline">\(z\)</span>についての運動方程式も求めることができる。すなわち、3つの自由度<span
+                                    class="math inline">\(x,y,z\)</span>が従う3本の運動方程式が、ただ1つのスカラー関数<span
+                                    class="math inline">\(L(x, y,z,
                                     \dot{x},
-                                    \dot{y})\)</span>から導かれた。</p>
-                                    <p>以上の議論を一般化し、<span
+                                    \dot{y},\dot{z})\)</span>から導かれた。</p>
+                                    <p>一般に、<span
                                     class="math inline">\(N\)</span>自由度系を考える。この系の配位空間は、<span
                                     class="math inline">\(N\)</span>個の一般化座標<span
                                     class="math inline">\(q^1, q^2,
@@ -443,6 +485,7 @@
                                     \]</span></p>
                                     <p>で与えられる。すなわち、たった一つのスカラー関数に<span
                                     class="math inline">\(N\)</span>本の運動方程式の情報が含まれている。</p>
+                                    <p>ここでは、ユークリッド空間における自由な質点の運動を記述したが、拘束条件があったり、極座標のような一般の座標でも全く同様に、ラグランジアン一つから必要な数の運動方程式を生み出すことができる。</p>
                                     <h1
                                     id="ハミルトンの原理のまとめ">ハミルトンの原理のまとめ</h1>
                                     <p>仮想仕事の原理では、位置の関数である力についてその原始関数であるポテンシャル関数を考え、そのポテンシャル関数が最小になるような点として釣り合いの点が決まると考えて定式化した。これを動力学に拡張するため、まずにより慣性項と力を同一視し、そこに仮想仕事の原理を適用した(ダランベールの原理)。しかし、一般に力は位置だけの関数であることが多いが、慣性項のポテンシャルに対応する運動エネルギーは一般に速度の関数となる。そこで、両者が依存する時間に対して積分した量をポテンシャルとして考え、それを最小にするように運動が決まると考える。この時、位置も速度も変化するが、速度が位置の時間微分であるという条件から部分積分することで、動力学におけるポテンシャルであるラグランジアンを導出した。ラグランジアンを(適切な境界条件のもと)時間積分したものが最小になるように運動が決まる、という主張がハミルトンの原理であり、そこから導出された運動方程式がオイラー・ラグランジュ方程式である。ラグランジアンはポテンシャルエネルギーを発展させた概念であり、運動エネルギーも含むことで多自由度系の運動方程式の情報をただ一つのスカラー関数に押し込めることができてる。これにより、変数変換や近似の見通しがよくなる。しかし、このような実用的な側面よりも、どんなに多自由度であっても、(そのようなラグランジアンを見つけることができれば)ただ一つのスカラー関数が運動を支配しているという不思議な事実を知ることが解析力学の醍醐味であろう。</p>
