@@ -4,7 +4,107 @@
 
 ## 極座標の例
 
-TODO: 極座標の運動方程式をニュートンの運動方程式から導く
+毎度の例で恐縮だが、極座標における運動を考えよう。以下のような二次元の極座標系を考える。
+
+$$
+\begin{aligned}
+x &= r\cos\theta \\
+y &= r\sin \theta
+\end{aligned}
+$$
+
+この系がポテンシャル$U(x,y)$による保存力により運動しているとしよう。ユークリッド座標で記述した運動方程式は、
+
+$$
+\begin{aligned}
+m \ddot{x} &= F_x = -\frac{\partial U}{\partial x} \\
+m \ddot{y} &= F_y = -\frac{\partial U}{\partial y} \\
+\end{aligned}
+$$
+
+ここで、$r$方向にかかる力を$F_r$とすると、極座標の定義から
+
+$$
+F_r = F_x \cos \theta + F_y \sin \theta
+$$
+
+ここで、$\cos \theta = x/r, \sin \theta = y/r$ であるから、
+
+$$
+\begin{aligned}
+F_r &= F_x \cos \theta + F_y \sin \theta \\
+&= F_x \frac{x}{r} + F_y \frac{y}{r}\\
+&= -\frac{\partial U}{\partial x}\frac{x}{r} - \frac{\partial U}{\partial y}\frac{y}{r}
+\end{aligned}
+$$
+
+ここで、$U$の変数変換の意味を考えておこう。もともと$U$は$x,y$の関数$U(x,y)$であった。しかし、$x,y$を$r, \theta$の関数として表したので、$U$は$x,y$を通じて$U(x(r,\theta), y(r, \theta))$という形で$r, \theta$依存性が入る。合成関数の偏微分から
+
+$$
+\begin{aligned}
+\frac{\partial U}{\partial r} &= \frac{\partial U}{\partial x} \frac{\partial x}{\partial r}
++ \frac{\partial U}{\partial y} \frac{\partial y}{\partial r} \\
+&= \frac{\partial U}{\partial x}\frac{x}{r} + \frac{\partial U}{\partial y}\frac{y}{r}
+\end{aligned}
+$$
+
+以上から、
+
+$$
+F_r = \frac{\partial U}{\partial r}
+$$
+
+これが、スカラー関数でポテンシャルを書いておくと、変数変換に強いという意味であった。
+
+同様に、
+
+$$
+F_\theta = - F_x \sin \theta + F_y \cos \theta
+$$
+
+となるが、
+
+$$
+\begin{aligned}
+\frac{\partial x}{\partial \theta} &= - r\sin \theta \\
+\frac{\partial y}{\partial \theta} &=  r\cos \theta \\
+\end{aligned}
+$$
+
+を代入すると、
+
+$$
+\begin{aligned}
+F_\theta &= - r \frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta}
+- r\frac{\partial U}{\partial y} \frac{\partial y}{\partial \theta} \\
+&= -r \frac{\partial U}{\partial \theta} 
+\end{aligned}
+$$
+
+$\theta$方向の加速度は、力と同様に(非常に面倒な計算により)以下のように求まる。
+
+$$
+-\ddot{x}  \cos \theta + \ddot{y} \cos \theta = mr\frac{d}{dt} \left(r^2 \dot{\theta} \right)
+$$
+
+加速度と力を等値すると、
+
+$$
+m\frac{d}{dt} \left(r^2 \dot{\theta} \right) = \frac{\partial U}{\partial \theta} 
+$$
+
+以上から、最終的に$r, \theta$に関する運動方程式
+
+$$
+\begin{aligned}
+m (\ddot{r} - r \dot{\theta}^2) &= - \frac{\partial U}{\partial r} \\
+m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= - \frac{\partial U}{\partial \theta} 
+\end{aligned}
+$$
+
+を得る。
+
+TODO: ラグランジアンから導出。
 
 ## 点変換とラグランジアンの共変性
 

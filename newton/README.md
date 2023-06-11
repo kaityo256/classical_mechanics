@@ -532,7 +532,7 @@ $$
 後の便利のために整理すると、
 
 $$
-\frac{d}{dt} \left(r^2 \dot{\theta}^2 \right) = 0
+\frac{d}{dt} \left(r^2 \dot{\theta} \right) = 0
 $$
 
 以上から、$(r, \theta)$で表示した運動方程式は以下のようになる。
@@ -540,7 +540,7 @@ $$
 $$
 \begin{aligned}
 m \left( \ddot{r} - r \dot{\theta}^2\right) &= 0 \\
-m \frac{d}{dt} \left(r^2 \dot{\theta}^2 \right) &= 0
+m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= 0
 \end{aligned}
 $$
 

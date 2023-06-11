@@ -60,8 +60,133 @@
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <p>これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。</p>
                                     <h1 id="極座標の例">極座標の例</h1>
+                                    <p>毎度の例で恐縮だが、極座標における運動を考えよう。以下のような二次元の極座標系を考える。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r\cos\theta \\
+                                    y &amp;= r\sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この系がポテンシャル<span
+                                    class="math inline">\(U(x,y)\)</span>による保存力により運動しているとしよう。ユークリッド座標で記述した運動方程式は、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= F_x =
+                                    -\frac{\partial U}{\partial x} \\
+                                    m \ddot{y} &amp;= F_y =
+                                    -\frac{\partial U}{\partial y} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(r\)</span>方向にかかる力を<span
+                                    class="math inline">\(F_r\)</span>とすると、極座標の定義から</p>
+                                    <p><span class="math display">\[
+                                    F_r = F_x \cos \theta + F_y \sin
+                                    \theta
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(\cos \theta =
+                                    x/r, \sin \theta = y/r\)</span>
+                                    であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    F_r &amp;= F_x \cos \theta + F_y
+                                    \sin \theta \\
+                                    &amp;= F_x \frac{x}{r} + F_y
+                                    \frac{y}{r}\\
+                                    &amp;= -\frac{\partial U}{\partial
+                                    x}\frac{x}{r} - \frac{\partial
+                                    U}{\partial y}\frac{y}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(U\)</span>の変数変換の意味を考えておこう。もともと<span
+                                    class="math inline">\(U\)</span>は<span
+                                    class="math inline">\(x,y\)</span>の関数<span
+                                    class="math inline">\(U(x,y)\)</span>であった。しかし、<span
+                                    class="math inline">\(x,y\)</span>を<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>の関数として表したので、<span
+                                    class="math inline">\(U\)</span>は<span
+                                    class="math inline">\(x,y\)</span>を通じて<span
+                                    class="math inline">\(U(x(r,\theta),
+                                    y(r,
+                                    \theta))\)</span>という形で<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>依存性が入る。合成関数の偏微分から</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial U}{\partial r} &amp;=
+                                    \frac{\partial U}{\partial x}
+                                    \frac{\partial x}{\partial r}
+                                    + \frac{\partial U}{\partial y}
+                                    \frac{\partial y}{\partial r} \\
+                                    &amp;= \frac{\partial U}{\partial
+                                    x}\frac{x}{r} + \frac{\partial
+                                    U}{\partial y}\frac{y}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    F_r = \frac{\partial U}{\partial r}
+                                    \]</span></p>
+                                    <p>これが、スカラー関数でポテンシャルを書いておくと、変数変換に強いという意味であった。</p>
+                                    <p>同様に、</p>
+                                    <p><span class="math display">\[
+                                    F_\theta = - F_x \sin \theta + F_y
+                                    \cos \theta
+                                    \]</span></p>
+                                    <p>となるが、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial x}{\partial \theta}
+                                    &amp;= - r\sin \theta \\
+                                    \frac{\partial y}{\partial \theta}
+                                    &amp;=  r\cos \theta \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を代入すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    F_\theta &amp;= - r \frac{\partial
+                                    U}{\partial x} \frac{\partial
+                                    x}{\partial \theta}
+                                    - r\frac{\partial U}{\partial y}
+                                    \frac{\partial y}{\partial \theta}
+                                    \\
+                                    &amp;= -r \frac{\partial U}{\partial
+                                    \theta}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\theta\)</span>方向の加速度は、力と同様に(非常に面倒な計算により)以下のように求まる。</p>
+                                    <p><span class="math display">\[
+                                    -\ddot{x}  \cos \theta + \ddot{y}
+                                    \cos \theta = mr\frac{d}{dt}
+                                    \left(r^2 \dot{\theta} \right)
+                                    \]</span></p>
+                                    <p>加速度と力を等値すると、</p>
+                                    <p><span class="math display">\[
+                                    m\frac{d}{dt} \left(r^2 \dot{\theta}
+                                    \right) = \frac{\partial U}{\partial
+                                    \theta}
+                                    \]</span></p>
+                                    <p>以上から、最終的に<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>に関する運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m (\ddot{r} - r \dot{\theta}^2)
+                                    &amp;= - \frac{\partial U}{\partial
+                                    r} \\
+                                    m \frac{d}{dt} \left(r^2
+                                    \dot{\theta} \right) &amp;= -
+                                    \frac{\partial U}{\partial \theta}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を得る。</p>
                                     <p>TODO:
-                                    極座標の運動方程式をニュートンの運動方程式から導く</p>
+                                    ラグランジアンから導出。</p>
                                     <h1
                                     id="点変換とラグランジアンの共変性">点変換とラグランジアンの共変性</h1>
                                     <p>ラグランジアンを一般化座標<span
