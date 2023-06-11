@@ -1,6 +1,6 @@
 # ラグランジュ形式の力学
 
-これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。
+これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。まずは、ラグランジュ形式の力学が、ニュートン力学よりも広いタイプの変数変換に対して共変であることを見てみよう。
 
 ## 極座標の例
 
@@ -84,9 +84,9 @@ $$
 
 $$
 \begin{aligned}
-F_\theta &= - r \frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta}
-- r\frac{\partial U}{\partial y} \frac{\partial y}{\partial \theta} \\
-&= -r \frac{\partial U}{\partial \theta}
+F_\theta &= - \frac{1}{r}\frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta}
+- \frac{1}{r}\frac{\partial U}{\partial y} \frac{\partial y}{\partial \theta} \\
+&= -\frac{1}{r} \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
 
@@ -108,21 +108,36 @@ $$
 \end{aligned}
 $$
 
-TODO: 続き
-
-$\theta$方向の加速度は、力と同様に(非常に面倒な計算により)以下のように求まる。
+さらにもう一度微分する。
 
 $$
--\ddot{x}  \cos \theta + \ddot{y} \cos \theta = mr\frac{d}{dt} \left(r^2 \dot{\theta} \right)
+\begin{aligned}
+\ddot{x} &= \ddot{r} \cos \theta - 2\dot{r} \dot{\theta} \sin \theta - r\ddot{\theta} \sin \theta- r \dot{\theta}^2 \cos \theta \\
+\ddot{y} &= \ddot{r} \sin \theta + 2\dot{r} \dot{\theta} \cos \theta + r\ddot{\theta} \sin \theta- r \dot{\theta}^2 \sin \theta
+\end{aligned}
 $$
 
-加速度と力を等値すると、
+これで$a_r$が計算できる。
 
 $$
-m\frac{d}{dt} \left(r^2 \dot{\theta} \right) = \frac{\partial U}{\partial \theta}
+\begin{aligned}
+a_r &= \ddot{x} \cos \theta + \ddot{y} \sin \theta\\
+&= \ddot{r} - r \dot{\theta}^2
+\end{aligned}
 $$
 
-以上から、最終的に$r, \theta$に関する運動方程式
+次は$a_\theta$を計算しよう。
+
+$$
+\begin{aligned}
+a_\theta &= -\ddot{x} \sin \theta + \ddot{y} \cos \theta \\
+&= 2 \dot{r}\dot{\theta} + r \ddot{\theta} \\
+&= \frac{1}{r}(2 r\dot{r}\dot{\theta} + r^2 \ddot{\theta})\\
+&= \frac{1}{r}\frac{d}{dt}(r^2\dot{\theta})
+\end{aligned}
+$$
+
+以上をまとめると、最終的に$r, \theta$に関する運動方程式
 
 $$
 \begin{aligned}
@@ -131,19 +146,69 @@ m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= - \frac{\partial U}{\partial \t
 \end{aligned}
 $$
 
-を得る。
+を得る。非常に面倒であったことがわかるであろう。
 
-TODO: ラグランジアンから導出。
+では、ラグランジアンから導出しよう。運動エネルギーを$r, \theta$で書くと、
+
+$$
+K = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2)
+$$
+
+であるから、極座標のラグランジアンは
+
+$$
+L(r, \theta, \dot{r},\dot{\theta}) = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U(r, \theta)
+$$
+
+自由度$r$に関するオイラー・ラグランジュ方程式は、
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right)
+- \frac{\partial L}{\partial r} &= m \ddot{r}
+- mr \dot{\theta}^2 + \frac{\partial U}{\partial r} \\
+&= 0
+\end{aligned}
+$$
+
+自由度$\theta$に関するオイラー・ラグランジュ方程式は、
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)
+- \frac{\partial L}{\partial \theta} &= m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial r} \\
+&= 0
+\end{aligned}
+$$
+
+それぞれ整理すると、先程得られた式と全く同じ運動方程式が得られる。
+
+$$
+\begin{aligned}
+m (\ddot{r} - r \dot{\theta}^2) &= - \frac{\partial U}{\partial r} \\
+m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= - \frac{\partial U}{\partial \theta}
+\end{aligned}
+$$
+
+このように、一度ラグランジアンを書いてしまえば、ラグランジアンだけを変数変換することで、後はオイラー・ラグランジュの方程式を書き下すだけで新しい変数が従う運動方程式が得られる。3次元の極座標や、より一般の変数変換をニュートンの運動方程式で扱うのは極めて面倒だが、ラグランジアンを用いればかなり見通しよく計算ができる。以下では、オイラー・ラグランジュ方程式が任意の点変換に対して共変であることを証明しよう。
 
 ## 点変換とラグランジアンの共変性
 
-ラグランジアンを一般化座標$q$と一般化速度$\dot{q}$の関数、$L(q,\dot{q})$で書いておくと、オイラー・ラグランジュの運動方程式
+これから証明したいことは、一般の変数変換$(q^1, q^2, \cdots, q^N) \rightarrow (Q^1, Q^2, \cdots, Q^N)$において、元の変数がオイラー・ラグランジュ方程式
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}^i} \right) -
+\frac{\partial L}{\partial q^i} = 0 \quad (i = 1,2,\cdots, N)
 $$
 
-が変数変換によって形を変えない。ラグランジアンの共変性は多変数の時にこそ活きるが、かなり式変形がややこしくなるので、まずは一変数の場合について見てみよう。
+に従うならば、新しい変数も
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}^i} \right) -
+\frac{\partial L}{\partial Q^i} = 0 \quad (i = 1,2,\cdots, N)
+$$
+
+に従う、という命題である。このような変換を **点変換(point transformation)** と呼ぶ。オイラー・ラグランジュ方程式は任意の点変換に対して共変である。しかし、この導出はかなり複雑であるため、まずは一自由度系で証明しよう。
 
 ある変数$q$について、変数変換$Q = f(q)$を考える。$q$がオイラー・ラグランジュの運動方程式
 
@@ -267,6 +332,10 @@ $$
 
 $q$を$Q(q)$に変数変換した場合、$q$がオイラー・ラグランジュの運動方程式に従うのであれば、$Q$も全く同じ形の式に従うことが証明された。
 
+以上の変換を図解しておこう。
+
+![点変換](fig/point_transformation.png)
+
 ## 多変数の場合
 
 これまで、なるべく1自由度系で議論を構築してきた。しかし、ほとんどの場合、我々の興味ある系は複数の自由度を持つ。例えば3次元空間に$n$個粒子がいれば、座標を指定するだけで$3n$個の変数が必要である。そこで、系の状態が$N$個の一般化座標$q_1, q_2, \cdots, q_N$で指定されていると考えよう。単振り子なら$N=1$、二重振り子なら$N=2$、3次元$n$粒子系なら$N=3n$だ。このような多自由度系のラグランジアンの変数変換について扱おう。
@@ -296,6 +365,8 @@ $$
 
 が全ての$i$で成立することを証明したい。やることは1自由度系とほとんど同様だが、偏微分などがややこしくなる。
 
+TODO: 続きを書く
+
 ## 記号の節約表記について
 
 ここで、ラグランジアンを扱う際にどの変数を独立とみなし、どの変数が独立でないのかがよくわからなくなることが多い。これは主に表記において記号の節約を行うことに起因する。例えば、ある関数$f$を使って$Q = f(q)$と変換する時、$Q$の時間微分は
@@ -311,3 +382,7 @@ $$
 $$
 
 と書かれる。さらに、ラグランジアンにおいて$L(\dot{q}, q)$とし、$\dot{q}$と$q$は独立だとみなすが、ラグランジアンを時間積分する際には$q$と$\dot{q}$には$\dot{q} = dq/dt$の関係がある。これを記号の節約をせずにきちんと書くなら、ラグランジアンを$L(v, x)$と異なる記号で書いておけば独立であることがわかりやすく、これを時間積分する際には積分路が$s(t)$で指定されるとして、$x = s(t)$、$v = \dot{s}(t)$と表記することにすれば、$x$と$v$がどのような関係があるのかがわかりやすい。媒介変数であることがわかりやすいように$\xi$や$\eta$といった記号を使う流儀もある。しかし、このように表記すると記号が増え、かえって本質が見えづらいと感じる人もいるであろう。大多数の読者は深く考えず、なんとなく「そういうものだ」と納得するであろうし、今はそれで良いと思う。もし将来、真面目に計算して何が独立で何がそうでないか混乱した時に、混乱の原因が変数の節約にあるかもしれないと思い至ればそれで良い。どうせ解析力学をきちんと理解するのは時間がかかる。まずはざっと式変形の地図を頭にイメージできるようにして、あとで「あれ？」と思ったら別の書籍を調べて正確な理解を目指せば良い。
+
+## まとめ
+
+ニュートンの運動方程式がガリレイ変換という限られた座標変換でのみ共変であったのに対して、オイラー・ラグランジュ方程式は、任意の非線形変換を含む点変換に対して共変であることが証明された。点変換の典型例は極座標表示である。二次元でもかなり面倒であるのだが、三次元の極座標が従う運動方程式を、ニュートン力学から導出するのは極めて面倒である(少なくとも私はやりたくない)。ラグランジアンを使ってもまだ面倒であるが、それでもかなり労力を減らすことができる。これは、単に計算が楽になるというだけでなく、系に内在する性質を見やすくするという、運動の本質をえぐり出すことにも繋がる。ここでは、座標を任意に混ぜる変換を考えた。次は運動量と座標も混ぜるような変換にたいして共変であるような運動方程式の表式が欲しくなる。それがハミルトンの運動方程式である。
