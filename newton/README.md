@@ -47,7 +47,6 @@
 
 第三法則は、力は必ずペアで、大きさが同じで、かつ逆向きに発生することを主張する。これは観測事実であり、なぜそうであるかは説明してくれない。今、第三法則を破る物体があるとしよう。たとえば同じ符号の電荷のように互いに反発するが、一方から一方への力が、逆向きに働く力よりも強いとする。すると、一方に力を加え、もう一方を間接的に動かすと、加えた力以上の力が得られることになる。これを利用して仕事を取り出すことが可能であるから永久機関を作ることができる(第一種永久機関)。第三法則はこのようなことができないことを主張する。
 
-
 ## 座標変換と運動方程式の共変性
 
 同じ物体の運動を別の人が観測しているとする。それぞれの観測者は異なる座標から物体の運動を観測している。この時、観測者によって物理法則が異なるように見えては困る。そこで、どの観測者から見ても成立するような法則を物理法則と呼ぶことにする。これは、どこかに絶対的な代表がいて、その人にとっての運動法則だけが正しいわけではなく、全ての観測者は相対的であり、誰にとっても運動法則は同じように見えて欲しい、という要請である。この要請を相対性原理と呼ぶ。
@@ -175,7 +174,7 @@ $$
 右辺は、先程求めた$(\tilde{\boldsymbol{e}}^i, \boldsymbol{e}_j) = M^i_{\,j}$を代入することで
 
 $$
-T^k_{\,i} (\tilde{\boldsymbol{e}}^j, \boldsymbol{e}_k) =   M^j_{\,k} T^k_{\,i} 
+T^k_{\,i} (\tilde{\boldsymbol{e}}^j, \boldsymbol{e}_k) =   M^j_{\,k} T^k_{\,i}
 $$
 
 以上から、
@@ -189,7 +188,7 @@ $$
 さて、横ベクトル$\boldsymbol{v}$が、横ベクトルの基底で
 
 $$
-\boldsymbol{v} = v_i \boldsymbol{e}^i = \tilde{v}_i \boldsymbol{e}^i 
+\boldsymbol{v} = v_i \boldsymbol{e}^i = \tilde{v}_i \boldsymbol{e}^i
 $$
 
 と展開されているとしよう。縦ベクトルと同様な議論から、
@@ -279,7 +278,7 @@ $$
 \begin{pmatrix}
 dx\\dy
 \end{pmatrix}
-= 
+=
 \begin{pmatrix}
 \sqrt{3}/2 & -1/2 \\
 1/2 & \sqrt{3}/2
@@ -313,11 +312,11 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial f}{\partial \tilde{x}^1} &= 
-\frac{\partial f}{\partial x^1} \frac{\partial x^1}{\partial \tilde{x}^1}+ 
+\frac{\partial f}{\partial \tilde{x}^1} &=
+\frac{\partial f}{\partial x^1} \frac{\partial x^1}{\partial \tilde{x}^1}+
 \frac{\partial f}{\partial x^2} \frac{\partial x^2}{\partial \tilde{x}^1}\\
-\frac{\partial f}{\partial \tilde{x}^2} &= 
-\frac{\partial f}{\partial x^1} \frac{\partial x^1}{\partial \tilde{x}^2}+ 
+\frac{\partial f}{\partial \tilde{x}^2} &=
+\frac{\partial f}{\partial x^1} \frac{\partial x^1}{\partial \tilde{x}^2}+
 \frac{\partial f}{\partial x^2} \frac{\partial x^2}{\partial \tilde{x}^2}\\
 \end{aligned}
 $$
@@ -449,12 +448,21 @@ m \frac{d^2 \tilde{x}^1}{dt^2} &= - \frac{\partial U}{\partial \tilde{x}_1}
 \end{aligned}
 $$
 
-しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面における等速直線運動という簡単な例でそれを見ておこう。物体に力が働いていない場合、運動方程式は以下のように書ける。
+しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面中の質点の運動方程式を考えよう。ユークリッド座標の場合は
 
 $$
 \begin{aligned}
-m\ddot{x} &= 0\\
-m\ddot{y} &= 0\\
+m\ddot{x} &= F_x\\
+m\ddot{y} &= F_y\\
+\end{aligned}
+$$
+
+と書ける。いま、力が保存力である場合、ポテンシャル$U(x,y)$が存在し、運動方程式は以下のように書ける。
+
+$$
+\begin{aligned}
+m\ddot{x} &= -\frac{\partial U}{\partial x}\\
+m\ddot{y} &= -\frac{\partial U}{\partial y}
 \end{aligned}
 $$
 
@@ -462,91 +470,21 @@ $$
 
 $$
 \begin{aligned}
-m\ddot{r} &= 0\\
-m\ddot{\theta} &= 0\\
+m\ddot{r} &= - \frac{\partial U}{\partial r}\\
+m\ddot{\theta} &- \frac{\partial U}{\partial \theta}\\
 \end{aligned}
 $$
 
-しかし、明らかに上の式は誤りである。では、$\ddot{r}$や$\ddot{\theta}$がどのような式を満たすべきか導出してみよう。以下の計算を追う必要は全くないが、「面倒そうだな」と思えば良い。
-
-極座標変換の定義から始める。
+しかし、残念ながら上記の式は成り立たない。実際には、後に導出するように、以下の様な式となる。
 
 $$
 \begin{aligned}
-x &= r \cos \theta \\
-y &= r \sin \theta
+m(\ddot{r} -r\dot{\theta}^2)&= - \frac{\partial U}{\partial r}\\
+m\frac{d}{dt}(r^2 \dot{\theta}) &- r \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
 
-両辺を時間で微分しよう。
-
-$$
-\begin{aligned}
-\dot{x} &= \dot{r} \cos \theta - r \dot{\theta} \sin \theta \\
-\dot{y} &= \dot{r} \sin \theta + r \dot{\theta} \cos \theta
-\end{aligned}
-$$
-
-両辺を自乗して足すと、以下の関係式を得る。
-
-$$
-\dot{x}^2 + \dot{y}^2 = \dot{r}^2 + r^2 \dot{\theta}^2
-$$
-
-次に、$x^2 + y^2 = r^2$の関係式を用いて、この両辺を2回時間微分する。
-
-$$
-\begin{aligned}
-x \dot{x} + y \dot{y} = r \dot{r} \\
-\dot{x}^2 + \dot{y}^2 = r \ddot{r} + \dot{r}^2
-\end{aligned}
-$$
-
-ただし、途中で$\ddot{x} = \ddot{y} = 0$を用いた。先程求めた$\dot{x}^2 + \dot{y}^2 = \dot{r}^2 + r^2 \dot{\theta}^2$を代入して整理すると、
-
-$$
-\ddot{r} = r \dot{\theta}^2
-$$
-
-これで$\ddot{r}$の式が得られた。
-
-次は$\ddot{\theta}$の式を求めるため、先程もとめた関係式$\dot{x}^2 + \dot{y}^2 = \dot{r}^2 + r^2 \dot{\theta}^2$を両辺時間で微分しよう。左辺は
-
-左辺は$\ddot{x} = \ddot{y} = 0$よりゼロとなる。右辺は
-
-$$
-\begin{aligned}
-\frac{d}{dt}\left( \dot{r}^2 + r^2 \dot{\theta}^2 \right) &= 
-2 \dot{r} \underbrace{\ddot{r}}_{r \dot{\theta}^2} + 2 r \dot{r} \dot{\theta}^2 + 2 r^2 \dot{\theta} \ddot{\theta} \\
-&= 4 r \dot{r} \dot{\theta}^2 + 2 r^2 \dot{\theta} \ddot{\theta} \\
-&= 0
-\end{aligned}
-$$
-
-$\dot{\theta} \neq 0$として整理すると、
-
-$$
-2 r \dot{r} \dot{\theta} + r^2 \ddot{\theta} = 0
-$$
-
-後の便利のために整理すると、
-
-$$
-\frac{d}{dt} \left(r^2 \dot{\theta} \right) = 0
-$$
-
-以上から、$(r, \theta)$で表示した運動方程式は以下のようになる。
-
-$$
-\begin{aligned}
-m \left( \ddot{r} - r \dot{\theta}^2\right) &= 0 \\
-m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= 0
-\end{aligned}
-$$
-
-ただし、運動方程式であることがわかりやすいように、両辺に質量$m$をかけて、運動量の時間微分の次元に揃えた。
-
-二次元の、しかも力が働いていない系においてこれだけ面倒な計算が要求されるのであれば、一般の座標変換で、力も働く系では如何に面倒であるか想像できるであろう。例えば3次元空間において中心力が働くような系(ケプラー問題)を3次元極座標で表示するなどが典型例である。
+この運動方程式をユークリッド座標の運動方程式から導出するのは面倒だ。
 
 異なる座標系に移るのは、その方が便利であるからだ。中心力が働く系であれば、極座標で表示した方が式が簡略化される。しかし、座標変換に伴い、いちいち運動方程式を発見法的に変形するのは面倒である。そこで、なるべく広い座標変換に対して形を変えない運動方程式の表式があれば便利だ。今後学ぶラグランジュ形式の力学、ハミルトン形式の力学は、ニュートンの運動方程式よりも広いタイプの座標変換に対して共変であることを見ていく。
 

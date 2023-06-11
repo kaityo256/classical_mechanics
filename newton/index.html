@@ -616,11 +616,21 @@
                                     \tilde{x}_1}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面における等速直線運動という簡単な例でそれを見ておこう。物体に力が働いていない場合、運動方程式は以下のように書ける。</p>
+                                    <p>しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面中の質点の運動方程式を考えよう。ユークリッド座標の場合は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m\ddot{x} &amp;= 0\\
-                                    m\ddot{y} &amp;= 0\\
+                                    m\ddot{x} &amp;= F_x\\
+                                    m\ddot{y} &amp;= F_y\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と書ける。いま、力が保存力である場合、ポテンシャル<span
+                                    class="math inline">\(U(x,y)\)</span>が存在し、運動方程式は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m\ddot{x} &amp;= -\frac{\partial
+                                    U}{\partial x}\\
+                                    m\ddot{y} &amp;= -\frac{\partial
+                                    U}{\partial y}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで、極座標への変換<span
@@ -629,105 +639,23 @@
                                     \theta)\)</span>を考える。もしもニュートンの運動方程式がこの変換で共変であれば、新しい座標系で運動方程式は以下のように書けるはずだ。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m\ddot{r} &amp;= 0\\
-                                    m\ddot{\theta} &amp;= 0\\
+                                    m\ddot{r} &amp;= - \frac{\partial
+                                    U}{\partial r}\\
+                                    m\ddot{\theta} &amp;- \frac{\partial
+                                    U}{\partial \theta}\\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>しかし、明らかに上の式は誤りである。では、<span
-                                    class="math inline">\(\ddot{r}\)</span>や<span
-                                    class="math inline">\(\ddot{\theta}\)</span>がどのような式を満たすべきか導出してみよう。以下の計算を追う必要は全くないが、「面倒そうだな」と思えば良い。</p>
-                                    <p>極座標変換の定義から始める。</p>
+                                    <p>しかし、残念ながら上記の式は成り立たない。実際には、後に導出するように、以下の様な式となる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x &amp;= r \cos \theta \\
-                                    y &amp;= r \sin \theta
+                                    m(\ddot{r} -r\dot{\theta}^2)&amp;= -
+                                    \frac{\partial U}{\partial r}\\
+                                    m\frac{d}{dt}(r^2 \dot{\theta})
+                                    &amp;- r \frac{\partial U}{\partial
+                                    \theta}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>両辺を時間で微分しよう。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \dot{x} &amp;= \dot{r} \cos \theta -
-                                    r \dot{\theta} \sin \theta \\
-                                    \dot{y} &amp;= \dot{r} \sin \theta +
-                                    r \dot{\theta} \cos \theta
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>両辺を自乗して足すと、以下の関係式を得る。</p>
-                                    <p><span class="math display">\[
-                                    \dot{x}^2 + \dot{y}^2 = \dot{r}^2 +
-                                    r^2 \dot{\theta}^2
-                                    \]</span></p>
-                                    <p>次に、<span
-                                    class="math inline">\(x^2 + y^2 =
-                                    r^2\)</span>の関係式を用いて、この両辺を2回時間微分する。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    x \dot{x} + y \dot{y} = r \dot{r} \\
-                                    \dot{x}^2 + \dot{y}^2 = r \ddot{r} +
-                                    \dot{r}^2
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>ただし、途中で<span
-                                    class="math inline">\(\ddot{x} =
-                                    \ddot{y} =
-                                    0\)</span>を用いた。先程求めた<span
-                                    class="math inline">\(\dot{x}^2 +
-                                    \dot{y}^2 = \dot{r}^2 + r^2
-                                    \dot{\theta}^2\)</span>を代入して整理すると、</p>
-                                    <p><span class="math display">\[
-                                    \ddot{r} = r \dot{\theta}^2
-                                    \]</span></p>
-                                    <p>これで<span
-                                    class="math inline">\(\ddot{r}\)</span>の式が得られた。</p>
-                                    <p>次は<span
-                                    class="math inline">\(\ddot{\theta}\)</span>の式を求めるため、先程もとめた関係式<span
-                                    class="math inline">\(\dot{x}^2 +
-                                    \dot{y}^2 = \dot{r}^2 + r^2
-                                    \dot{\theta}^2\)</span>を両辺時間で微分しよう。左辺は</p>
-                                    <p>左辺は<span
-                                    class="math inline">\(\ddot{x} =
-                                    \ddot{y} =
-                                    0\)</span>よりゼロとなる。右辺は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{d}{dt}\left( \dot{r}^2 + r^2
-                                    \dot{\theta}^2 \right) &amp;=
-                                    2 \dot{r} \underbrace{\ddot{r}}_{r
-                                    \dot{\theta}^2} + 2 r \dot{r}
-                                    \dot{\theta}^2 + 2 r^2 \dot{\theta}
-                                    \ddot{\theta} \\
-                                    &amp;= 4 r \dot{r} \dot{\theta}^2 +
-                                    2 r^2 \dot{\theta} \ddot{\theta} \\
-                                    &amp;= 0
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(\dot{\theta}
-                                    \neq
-                                    0\)</span>として整理すると、</p>
-                                    <p><span class="math display">\[
-                                    2 r \dot{r} \dot{\theta} + r^2
-                                    \ddot{\theta} = 0
-                                    \]</span></p>
-                                    <p>後の便利のために整理すると、</p>
-                                    <p><span class="math display">\[
-                                    \frac{d}{dt} \left(r^2 \dot{\theta}
-                                    \right) = 0
-                                    \]</span></p>
-                                    <p>以上から、<span
-                                    class="math inline">\((r,
-                                    \theta)\)</span>で表示した運動方程式は以下のようになる。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \left( \ddot{r} - r
-                                    \dot{\theta}^2\right) &amp;= 0 \\
-                                    m \frac{d}{dt} \left(r^2
-                                    \dot{\theta} \right) &amp;= 0
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>ただし、運動方程式であることがわかりやすいように、両辺に質量<span
-                                    class="math inline">\(m\)</span>をかけて、運動量の時間微分の次元に揃えた。</p>
-                                    <p>二次元の、しかも力が働いていない系においてこれだけ面倒な計算が要求されるのであれば、一般の座標変換で、力も働く系では如何に面倒であるか想像できるであろう。例えば3次元空間において中心力が働くような系(ケプラー問題)を3次元極座標で表示するなどが典型例である。</p>
+                                    <p>この運動方程式をユークリッド座標の運動方程式から導出するのは面倒だ。</p>
                                     <p>異なる座標系に移るのは、その方が便利であるからだ。中心力が働く系であれば、極座標で表示した方が式が簡略化される。しかし、座標変換に伴い、いちいち運動方程式を発見法的に変形するのは面倒である。そこで、なるべく広い座標変換に対して形を変えない運動方程式の表式があれば便利だ。今後学ぶラグランジュ形式の力学、ハミルトン形式の力学は、ニュートンの運動方程式よりも広いタイプの座標変換に対して共変であることを見ていく。</p>
                                     <h1 id="保存則">保存則</h1>
                                     <p>ニュートンの運動方程式から得られる帰結として、いくつかの保存則を発見法的に導いておこう。</p>
