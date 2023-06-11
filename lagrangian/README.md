@@ -4,7 +4,7 @@
 
 ## 極座標の例
 
-毎度の例で恐縮だが、極座標における運動を考えよう。以下のような二次元の極座標系を考える。
+極座標における運動を考えよう。以下のような二次元の極座標系を考える。
 
 $$
 \begin{aligned}
@@ -21,6 +21,10 @@ m \ddot{x} &= F_x = -\frac{\partial U}{\partial x} \\
 m \ddot{y} &= F_y = -\frac{\partial U}{\partial y} \\
 \end{aligned}
 $$
+
+$r$方向の加速度$a_r$、$\theta$方向の加速度$a_\theta$、$r$方向の力$F_r$、$\theta$方向の力$F_\theta$を用いると、ニュートンの運動方程式は
+
+TODO:つづきを書く
 
 ここで、$r$方向にかかる力を$F_r$とすると、極座標の定義から
 
@@ -77,7 +81,7 @@ $$
 \begin{aligned}
 F_\theta &= - r \frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta}
 - r\frac{\partial U}{\partial y} \frac{\partial y}{\partial \theta} \\
-&= -r \frac{\partial U}{\partial \theta} 
+&= -r \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
 
@@ -90,7 +94,7 @@ $$
 加速度と力を等値すると、
 
 $$
-m\frac{d}{dt} \left(r^2 \dot{\theta} \right) = \frac{\partial U}{\partial \theta} 
+m\frac{d}{dt} \left(r^2 \dot{\theta} \right) = \frac{\partial U}{\partial \theta}
 $$
 
 以上から、最終的に$r, \theta$に関する運動方程式
@@ -98,7 +102,7 @@ $$
 $$
 \begin{aligned}
 m (\ddot{r} - r \dot{\theta}^2) &= - \frac{\partial U}{\partial r} \\
-m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= - \frac{\partial U}{\partial \theta} 
+m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= - \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
 
