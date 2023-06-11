@@ -539,7 +539,7 @@ $$
 
 $$
 \begin{aligned}
-m \left( \ddot{r} - m r \dot{\theta}^2\right) &= 0 \\
+m \left( \ddot{r} - r \dot{\theta}^2\right) &= 0 \\
 m \frac{d}{dt} \left(r^2 \dot{\theta}^2 \right) &= 0
 \end{aligned}
 $$
