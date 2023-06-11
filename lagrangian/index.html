@@ -60,7 +60,7 @@
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <p>これから、解析力学の解析力学らしいところ、すなわち変数変換に対する運動方程式の変換について扱う。解析力学はニュートン力学を再定式化したものであるから、本質的には同じ問題を別の表示に書き換えているのに過ぎない。しかし、別の形式で書き直した方が見通しがよくなるし、ニュートン力学では見えなかった世界が見えてくる。これからニュートン力学からラグランジュ形式の力学、そしてハミルトン形式の力学へと続いていくが、その前にニュートン力学のままだと変数変換が面倒であることを見ておこう。</p>
                                     <h1 id="極座標の例">極座標の例</h1>
-                                    <p>毎度の例で恐縮だが、極座標における運動を考えよう。以下のような二次元の極座標系を考える。</p>
+                                    <p>極座標における運動を考えよう。以下のような二次元の極座標系を考える。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     x &amp;= r\cos\theta \\
@@ -77,9 +77,25 @@
                                     -\frac{\partial U}{\partial y} \\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>ここで、<span
-                                    class="math inline">\(r\)</span>方向にかかる力を<span
-                                    class="math inline">\(F_r\)</span>とすると、極座標の定義から</p>
+                                    <p><span
+                                    class="math inline">\(r\)</span>方向の加速度<span
+                                    class="math inline">\(a_r\)</span>、<span
+                                    class="math inline">\(\theta\)</span>方向の加速度<span
+                                    class="math inline">\(a_\theta\)</span>、<span
+                                    class="math inline">\(r\)</span>方向の力<span
+                                    class="math inline">\(F_r\)</span>、<span
+                                    class="math inline">\(\theta\)</span>方向の力<span
+                                    class="math inline">\(F_\theta\)</span>を用いると、ニュートンの運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m a_r &amp;= F_r \\
+                                    m a_\theta &amp;= F_\theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。この式を<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>で書き下すのが目的である。まず、力について考えよう。力の<span
+                                    class="math inline">\(r\)</span>方向の向きの成分を考えると、</p>
                                     <p><span class="math display">\[
                                     F_r = F_x \cos \theta + F_y \sin
                                     \theta
@@ -130,13 +146,14 @@
                                     <p><span class="math display">\[
                                     F_r = \frac{\partial U}{\partial r}
                                     \]</span></p>
-                                    <p>これが、スカラー関数でポテンシャルを書いておくと、変数変換に強いという意味であった。</p>
-                                    <p>同様に、</p>
+                                    <p>すなわち、変数変換しても力の形が変わっていない。これがスカラー関数で書いておくと変数変換が楽になる、という実例である。</p>
+                                    <p>同様に、<span
+                                    class="math inline">\(\theta\)</span>方向の力についての成分を考えると</p>
                                     <p><span class="math display">\[
                                     F_\theta = - F_x \sin \theta + F_y
                                     \cos \theta
                                     \]</span></p>
-                                    <p>となるが、</p>
+                                    <p>となる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \frac{\partial x}{\partial \theta}
@@ -158,6 +175,25 @@
                                     \theta}
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>これで運動方程式の右辺が求まった。次は左辺である。加速度の成分も力と同様に、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    a_r &amp;= \ddot{x} \cos \theta +
+                                    \ddot{y} \sin \theta \\
+                                    a_\theta &amp;= -\ddot{x} \sin
+                                    \theta + \ddot{y} \cos \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを求めるために、極座標の定義を時間微分する。まず一回微分。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{x} = \dot{r} \cos \theta - r
+                                    \dot{\theta} \sin \theta \\
+                                    \dot{y} = \dot{r} \sin \theta + r
+                                    \dot{\theta} \cos \theta \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>TODO: 続き</p>
                                     <p><span
                                     class="math inline">\(\theta\)</span>方向の加速度は、力と同様に(非常に面倒な計算により)以下のように求まる。</p>
                                     <p><span class="math display">\[

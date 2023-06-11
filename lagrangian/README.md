@@ -24,9 +24,14 @@ $$
 
 $r$方向の加速度$a_r$、$\theta$方向の加速度$a_\theta$、$r$方向の力$F_r$、$\theta$方向の力$F_\theta$を用いると、ニュートンの運動方程式は
 
-TODO:つづきを書く
+$$
+\begin{aligned}
+m a_r &= F_r \\
+m a_\theta &= F_\theta
+\end{aligned}
+$$
 
-ここで、$r$方向にかかる力を$F_r$とすると、極座標の定義から
+となる。この式を$r, \theta$で書き下すのが目的である。まず、力について考えよう。力の$r$方向の向きの成分を考えると、
 
 $$
 F_r = F_x \cos \theta + F_y \sin \theta
@@ -58,15 +63,15 @@ $$
 F_r = \frac{\partial U}{\partial r}
 $$
 
-これが、スカラー関数でポテンシャルを書いておくと、変数変換に強いという意味であった。
+すなわち、変数変換しても力の形が変わっていない。これがスカラー関数で書いておくと変数変換が楽になる、という実例である。
 
-同様に、
+同様に、$\theta$方向の力についての成分を考えると
 
 $$
 F_\theta = - F_x \sin \theta + F_y \cos \theta
 $$
 
-となるが、
+となる。
 
 $$
 \begin{aligned}
@@ -84,6 +89,26 @@ F_\theta &= - r \frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta}
 &= -r \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
+
+これで運動方程式の右辺が求まった。次は左辺である。加速度の成分も力と同様に、
+
+$$
+\begin{aligned}
+a_r &= \ddot{x} \cos \theta + \ddot{y} \sin \theta \\
+a_\theta &= -\ddot{x} \sin \theta + \ddot{y} \cos \theta
+\end{aligned}
+$$
+
+これを求めるために、極座標の定義を時間微分する。まず一回微分。
+
+$$
+\begin{aligned}
+\dot{x} = \dot{r} \cos \theta - r \dot{\theta} \sin \theta \\
+\dot{y} = \dot{r} \sin \theta + r \dot{\theta} \cos \theta \\
+\end{aligned}
+$$
+
+TODO: 続き
 
 $\theta$方向の加速度は、力と同様に(非常に面倒な計算により)以下のように求まる。
 
