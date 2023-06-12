@@ -297,16 +297,16 @@
                                     \]</span></p>
                                     <p>と展開されているとしよう。縦ベクトルと同様な議論から、</p>
                                     <p><span class="math display">\[
-                                    v^i = M^i_{\,k} \tilde{v}^k
+                                    v_k = M^j_{\,k} \tilde{v}_j
                                     \]</span></p>
                                     <p>が成立する。両辺に行列<span
                                     class="math inline">\(T\)</span>をかけると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    T^j_{\,i} v^i &amp;= T^j_{\,j}
-                                    M^j_{\,k} \tilde{v}^k \\
-                                    &amp;= \delta^j_{\,k} \tilde{v}^k \\
-                                    &amp;= \tilde{v}^j
+                                    T^k_{\,i} v_k &amp;= T^k_{\,i}
+                                    M^j_{\,k} \tilde{v}_j \\
+                                    &amp;= \delta^j_{\,i} \tilde{v}_j \\
+                                    &amp;= \tilde{v}_i
                                     \end{aligned}
                                     \]</span></p>
                                     <p>縦ベクトルの基底の変換の式と並べると、</p>
@@ -314,7 +314,7 @@
                                     \begin{aligned}
                                     \tilde{\boldsymbol{e}}_i &amp;=
                                     T^k_{\,i} \boldsymbol{e}_k \\
-                                    \tilde{v}^k &amp;= T^k_{\,i }v^i
+                                    \tilde{v}_i &amp;= T^k_{\,i }v_k
                                     \end{aligned}
                                     \]</span></p>
                                     <p>のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。</p>

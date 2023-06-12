@@ -115,26 +115,122 @@
                                     <p>以上から、角運動量<span
                                     class="math inline">\(L\)</span>が保存量であることが示された。</p>
                                     <h1
-                                    id="ラグランジアン">ラグランジアン</h1>
-                                    <h2 id="振り子">振り子</h2>
+                                    id="振り子の運動">振り子の運動</h1>
+                                    <h2 id="問題-1">問題</h2>
                                     <p>二次元平面の原点に長さ<span
                                     class="math inline">\(l\)</span>の棒に繋がれた質量<span
                                     class="math inline">\(m\)</span>の質点がある。棒は原点を中心として摩擦なく自由に回転できる。また、棒は質量が無視でき、かつ運動により長さが変化しないものとする。棒が鉛直下方向からなす角度を<span
                                     class="math inline">\(\theta\)</span>、重力加速度を<span
                                     class="math inline">\(g\)</span>とする。この時、以下の問にこたえよ。</p>
-                                    <h3 id="section">(1)</h3>
+                                    <h2 id="section">(1)</h2>
                                     <p>角速度が<span
                                     class="math inline">\(\dot{\theta}\)</span>である時、この系の運動エネルギーを求めよ。</p>
-                                    <h3 id="section-1">(2)</h3>
+                                    <h2 id="section-1">(2)</h2>
                                     <p><span
                                     class="math inline">\(\theta=0\)</span>の状態を基準とした時のこの系のポテンシャルエネルギーを求めよ。</p>
-                                    <h3 id="section-2">(3)</h3>
-                                    <p>この系のラグランジアンを求め、オイラー・ラグランジュの式から運動方程式を導出せよ。ただし、結果は</p>
+                                    <h2 id="section-2">(3)</h2>
+                                    <p>この系のラグランジアンを<span
+                                    class="math inline">\(\theta,
+                                    \dot{\theta}\)</span>の関数として求め、オイラー・ラグランジュの式から運動方程式を導出せよ。ただし、結果は</p>
                                     <p><span class="math display">\[
                                     \ddot{\theta} =
                                     \]</span></p>
                                     <p>の形に整理すること。</p>
                                     <h2 id="解答例-1">解答例</h2>
+                                    <ol type="1">
+                                    <li>速度が<span
+                                    class="math inline">\(l\dot{\theta}\)</span>であるから、運動エネルギーは以下で与えられる。</li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    K= \frac{1}{2}m l^2 \dot{\theta}^2
+                                    \]</span></p>
+                                    <ol start="2" type="1">
+                                    <li>角度<span
+                                    class="math inline">\(\theta\)</span>の時、<span
+                                    class="math inline">\(\theta=0\)</span>の時に比べて高さが<span
+                                    class="math inline">\(l(1-\cos\theta)\)</span>だけ高くなるため、ポテンシャルエネルギーは以下で与えられる。</li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    U = mgl (1- \cos \theta)
+                                    \]</span></p>
+                                    <ol start="3" type="1">
+                                    <li>ラグランジアンは<span
+                                    class="math inline">\(L=K-U\)</span>で与えられるため、</li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    L(\theta, \dot{\theta}) =
+                                    \frac{1}{2}m l^2 \dot{\theta}^2 -
+                                    mlg (1- \cos \theta)
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial L}{\partial
+                                    \dot{\theta}} &amp;= ml^2
+                                    \dot{\theta} \\
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{\theta}}\right)
+                                    &amp;= ml^2 \ddot{\theta} \\
+                                    \frac{\partial L}{\partial \theta}
+                                    &amp;= - mlg\sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>オイラー・ラグランジュ方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{\theta}}\right)  -
+                                    \frac{\partial L}{\partial \theta}
+                                    &amp;= ml^2 \ddot{\theta} + mlg\sin
+                                    \theta \\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>整理すると、以下の運動方程式を得る。</p>
+                                    <p><span class="math display">\[
+                                    \ddot{\theta} = -\frac{g}{l} \sin
+                                    \theta
+                                    \]</span></p>
+                                    <h1
+                                    id="中心力による運動">中心力による運動</h1>
+                                    <h2 id="問題-2">問題</h2>
+                                    <p>二次元空間において、質量<span
+                                    class="math inline">\(m\)</span>の質点が中心力<span
+                                    class="math inline">\(U(r)\)</span>を受けて運動をしている。ただし、質点の位置を<span
+                                    class="math inline">\((x,y)\)</span>とした時、<span
+                                    class="math inline">\(r=\sqrt{x^2+y^2}\)</span>である。この質点の運動を、以下の極座標表示で表したい。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r\cos \theta\\
+                                    y &amp;= r\sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この時、以下の問に答えよ。</p>
+                                    <h2 id="section-3">(1)</h2>
+                                    <p>この系の運動エネルギー<span
+                                    class="math inline">\(K\)</span>を、<span
+                                    class="math inline">\(r, \theta,
+                                    \dot{r},
+                                    \dot{\theta}\)</span>の関数として求めよ。</p>
+                                    <h2 id="解答例-2">解答例</h2>
+                                    <ol type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>極座標表示を時間微分する</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{x} &amp;= \dot{r}\cos \theta -
+                                    r \dot{\theta} \sin \theta\\
+                                    \dot{y} &amp;= \dot{r}\sin \theta +
+                                    r \dot{\theta} \cos \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この系の運動エネルギーは<span
+                                    class="math inline">\(m(\dot{x}^2 +
+                                    \dot{y}^2)/2\)</span>であることから、</p>
+                                    <p><span class="math display">\[
+                                    K = m(\dot{r}^2 + r^2
+                                    \dot{\theta}^2)
+                                    \]</span></p>
                     </article>
     </body>
 

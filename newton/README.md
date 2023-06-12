@@ -194,16 +194,16 @@ $$
 と展開されているとしよう。縦ベクトルと同様な議論から、
 
 $$
-v^i = M^i_{\,k} \tilde{v}^k
+v_k = M^j_{\,k} \tilde{v}_j
 $$
 
 が成立する。両辺に行列$T$をかけると、
 
 $$
 \begin{aligned}
-T^j_{\,i} v^i &= T^j_{\,j} M^j_{\,k} \tilde{v}^k \\
-&= \delta^j_{\,k} \tilde{v}^k \\
-&= \tilde{v}^j
+T^k_{\,i} v_k &= T^k_{\,i} M^j_{\,k} \tilde{v}_j \\
+&= \delta^j_{\,i} \tilde{v}_j \\
+&= \tilde{v}_i
 \end{aligned}
 $$
 
@@ -212,7 +212,7 @@ $$
 $$
 \begin{aligned}
 \tilde{\boldsymbol{e}}_i &= T^k_{\,i} \boldsymbol{e}_k \\
-\tilde{v}^k &= T^k_{\,i }v^i
+\tilde{v}_i &= T^k_{\,i }v_k
 \end{aligned}
 $$
 
