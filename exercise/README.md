@@ -137,6 +137,14 @@ $$
 
 この系の運動エネルギー$K$を、$r, \theta, \dot{r}, \dot{\theta}$の関数として求めよ。
 
+### (2)
+
+この系のラグランジアンを求めよ。
+
+### (3)
+
+この系の運動を記述するオイラー・ラグランジュの方程式を書き下し、$r, \theta$が従う運動方程式を求めよ。
+
 ### 解答例
 
 (1) 
@@ -153,5 +161,50 @@ $$
 この系の運動エネルギーは$m(\dot{x}^2 + \dot{y}^2)/2$であることから、
 
 $$
-K = m(\dot{r}^2 + r^2 \dot{\theta}^2)
+K = \frac{1}{2}m(\dot{r}^2 + r^2 \dot{\theta}^2)
+$$
+
+(2)
+
+$$
+\begin{aligned}
+L &= K - U \\
+&= \frac{1}{2}m(\dot{r}^2 + r^2 \dot{\theta}^2) - U(r)
+\end{aligned}
+$$
+
+(3)
+
+$r$に関するオイラー・ラグランジュ方程式は、
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right) - \frac{\partial L}{\partial r}
+&= m \ddot{r} - mr\dot{\theta}^2 + \frac{\partial U}{\partial r}\\
+&= 0
+\end{aligned}
+$$
+
+整理すると、
+
+$$
+m(\ddot{r} - r \dot{\theta}^2)= -\frac{\partial U}{\partial r}
+$$
+
+同様に、$\theta$に関するオイラー・ラグランジュ方程式は、
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} &= \frac{d}{dt}(r^2\dot{\theta}) \\
+&= 0
+\end{aligned}
+$$
+
+以上をまとめると、運動方程式は
+
+$$
+\begin{aligned}
+m(\ddot{r} - r \dot{\theta}^2) &= -\frac{\partial U}{\partial r} \\
+\frac{d}{dt}(r^2\dot{\theta}) &= 0
+\end{aligned}
 $$
