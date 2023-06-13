@@ -738,111 +738,169 @@
                                     <p>ここで、エネルギーは運動方程式から発見法的に求められた保存量であったが、解析力学ではこの量を積極的に使って理論を構築する。</p>
                                     <h2
                                     id="運動量保存則">運動量保存則</h2>
-                                    <p>2つの物体が、お互いに距離に依存する力により相互作用をする系を考えよう。簡単のために、一次元系を考えよう。例えば、摩擦のないレールに固定された電荷の運動を考えればよい。2つの物体に<span
-                                    class="math inline">\(1\)</span>、<span
-                                    class="math inline">\(2\)</span>と番号をつけ、それぞれの位置を<span
-                                    class="math inline">\(x_1\)</span>、<span
-                                    class="math inline">\(x_2\)</span>としよう。物体<span
-                                    class="math inline">\(1\)</span>から物体<span
-                                    class="math inline">\(2\)</span>に働く力を<span
-                                    class="math inline">\(F_{12}\)</span>、物体<span
-                                    class="math inline">\(2\)</span>から物体<span
-                                    class="math inline">\(1\)</span>に働く力を<span
-                                    class="math inline">\(F_{21}\)</span>とすると、運動方程式は</p>
+                                    <p>3次元空間に質量<span
+                                    class="math inline">\(m\)</span>の質点A,
+                                    Bがある。これらの質点の座標をそれぞれ<span
+                                    class="math inline">\(\boldsymbol{r}_A
+                                    = (x_A,y_A,z_A), \boldsymbol{r}_B =
+                                    (x_B,y_B,z_B)\)</span>とする時、これらが相対距離<span
+                                    class="math inline">\(r\)</span>に依存するポテンシャル<span
+                                    class="math inline">\(U(r)\)</span>により相互作用をしているとしよう。ただし<span
+                                    class="math inline">\(r\)</span>は以下のように定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \ddot{x}_1 &amp;= F_{21} \\
-                                    m \ddot{x}_2 &amp;= F_{12}
+                                    r &amp;= \sqrt{(\boldsymbol{r}_A
+                                    -\boldsymbol{r}_B})^2\\
+                                    &amp;=
+                                    \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>作用反作用の法則から<span
-                                    class="math inline">\(F_{21} = -
-                                    F_{12}\)</span>である。したがって、両辺を加えると、</p>
+                                    <p>この時、質点Aの運動方程式は、</p>
                                     <p><span class="math display">\[
-                                    m (\ddot{x}_1 + \ddot{x_2}) = 0
+                                    m \ddot{x}_A = - \frac{\partial
+                                    U(r)}{\partial x_A} = -
+                                    \frac{dU}{dr} \frac{\partial
+                                    r}{\partial x_A}
                                     \]</span></p>
-                                    <p>ここから、</p>
+                                    <p>で与えられる。従って、<span
+                                    class="math inline">\(r\)</span>を<span
+                                    class="math inline">\(x_A\)</span>で偏微分した結果が欲しい。</p>
                                     <p><span class="math display">\[
-                                    \frac{d}{dt}\left( m\dot{x}_1 + m
-                                    \dot{x}_2\right) = 0
+                                    r^2 =
+                                    (x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2
                                     \]</span></p>
-                                    <p>が導かれる。質量と速度の積<span
-                                    class="math inline">\(m
-                                    \dot{x}_1\)</span>を運動量と呼び、その総和の時間変化がゼロである、すなわち保存量となっていることを運動量保存則と呼ぶ。</p>
-                                    <p>ここでは一次元系でのみ示したが、一般に作用反作用が成り立ち、外力がない系では、<span
-                                    class="math inline">\(x\)</span>,<span
-                                    class="math inline">\(y\)</span>,<span
-                                    class="math inline">\(z\)</span>の全方向でそれぞれ運動量が保存する。例えば<span
-                                    class="math inline">\(z\)</span>方向に重力のような外力がかかっている場合は、<span
-                                    class="math inline">\(z\)</span>方向には運動量は保存しないが、<span
-                                    class="math inline">\(x\)</span>、<span
-                                    class="math inline">\(y\)</span>方向には保存する。</p>
+                                    <p>であったから、両辺を<span
+                                    class="math inline">\(x_A\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial r}{\partial x_A} =
+                                    \frac{(x_A-x_B)}{r}
+                                    \]</span></p>
+                                    <p>以上から、質点Aの運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{x}_A = - U&#39;
+                                    \frac{(x_A-x_B)}{r}
+                                    \]</span></p>
+                                    <p>全く同様に、<span
+                                    class="math inline">\(r\)</span>の<span
+                                    class="math inline">\(x_B\)</span>偏微分は</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial r}{\partial x_A} = -
+                                    \frac{(x_A-x_B)}{r}
+                                    \]</span></p>
+                                    <p>となるので(負符号がつくことに注意)、質点Bの運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{x}_B = U&#39;
+                                    \frac{(x_A-x_B)}{r}
+                                    \]</span></p>
+                                    <p>となる。<span
+                                    class="math inline">\(y,
+                                    z\)</span>方向も同様である。従って、質点AB間に働く力は、大きさは同じで向きは逆向きとなり、作用・反作用の法則が成り立っていることがわかる。このように、相対座標のみに依存するポテンシャルによる相互作用は、作用・反作用の法則を自動的に満たす。</p>
+                                    <p>さて、力の大きさが同じで、向きが逆向きであるから、それぞれの運動方程式の和をとると、</p>
+                                    <p><span class="math display">\[
+                                    m (\ddot{x}_A+\ddot{x}_B) = 0
+                                    \]</span></p>
+                                    <p>となる。この系の<span
+                                    class="math inline">\(x\)</span>方向の重心位置<span
+                                    class="math inline">\(x_G = (x_A -
+                                    x_B)/2\)</span>を定義すると、重心速度は<span
+                                    class="math inline">\(\dot{x}_G\)</span>であり、重心の運動量<span
+                                    class="math inline">\(p_x = m
+                                    \dot{x}_G\)</span>を定義すると、<span
+                                    class="math inline">\(\dot{p}_x =
+                                    0\)</span>であることがわかる。<span
+                                    class="math inline">\(y,z\)</span>方向も同様であり、重心の運動量が保存することがわかる。</p>
                                     <h2
                                     id="角運動量保存則">角運動量保存則</h2>
-                                    <p>地球と太陽の間には万有引力が働いている。万有引力は、距離の自乗に反比例する力であった。太陽は地球に対して十分に重いために静止していると考え、地球の公転運動のみ考えよう。地球の質量を<span
-                                    class="math inline">\(m\)</span>、太陽の質量を<span
-                                    class="math inline">\(M\)</span>、万有引力定数を<span
-                                    class="math inline">\(G\)</span>とする。</p>
-                                    <p>公転面を<span
-                                    class="math inline">\(xy\)</span>平面にとり、太陽を原点とし、地球の座標を<span
-                                    class="math inline">\((x,y\)</span>)とすると、地球の運動方程式は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \ddot{x} &amp;= \frac{mMG}{r^2}
-                                    \frac{x}{r}\\
-                                    m \ddot{y} &amp;= \frac{mMG}{r^2}
-                                    \frac{y}{r}\\
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>ただし、<span
+                                    <p>3次元空間に質点があり、その座標を<span
+                                    class="math inline">\((x,y,z)\)</span>とする。原点からの距離<span
                                     class="math inline">\(r =
-                                    \sqrt{x^2+y^2}\)</span>は地球と太陽の距離である。</p>
-                                    <p>さて、<span
-                                    class="math inline">\(x\)</span>成分の運動方程式の両辺に<span
-                                    class="math inline">\(y\)</span>を、<span
-                                    class="math inline">\(y\)</span>成分の運動方程式の両辺に<span
-                                    class="math inline">\(x\)</span>をかける。</p>
+                                    \sqrt{x^2+y^2+z^2}\)</span>にのみ依存するポテンシャル<span
+                                    class="math inline">\(U(r)\)</span>に従って運動している時、角運動量が保存することを示そう。</p>
+                                    <p>まず、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m y\ddot{x} &amp;= \frac{mMG}{r^2}
-                                    \frac{xy}{r}\\
-                                    m x\ddot{y} &amp;= \frac{mMG}{r^2}
-                                    \frac{xy}{r}\\
+                                    \frac{\partial r}{\partial x} &amp;=
+                                    \frac{x}{r} \\
+                                    \frac{\partial r}{\partial y} &amp;=
+                                    \frac{y}{r} \\
+                                    \frac{\partial r}{\partial z} &amp;=
+                                    \frac{z}{r}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>両辺引くと、右辺は等しいから、</p>
+                                    <p>であることに注意する。この系の運動方程式は</p>
                                     <p><span class="math display">\[
-                                    m y \ddot{x} - m x \ddot{y} = 0
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= - U&#39;(r)
+                                    \frac{x}{r} \\
+                                    m \ddot{y} &amp;= - U&#39;(r)
+                                    \frac{y}{r} \\
+                                    m \ddot{z} &amp;= - U&#39;(r)
+                                    \frac{z}{r}
+                                    \end{aligned}
                                     \]</span></p>
-                                    <p>両辺に <span
+                                    <p><span class="math inline">\(m
+                                    x\ddot{y} - m y
+                                    \ddot{x}\)</span>を計算すると、右辺が消えて、</p>
+                                    <p><span class="math display">\[
+                                    m x\ddot{y} - m y \ddot{x}= 0
+                                    \]</span></p>
+                                    <p><span
                                     class="math inline">\(m\dot{x}
                                     \dot{y} - m\dot{x}
                                     \dot{y}\)</span>を足すと、</p>
                                     <p><span class="math display">\[
-                                    m \left(y \ddot{x} + m\dot{x}
-                                    \dot{y} - \dot{x} \dot{y} - x
-                                    \ddot{y}\right) = 0
+                                    m \left(m x\ddot{y}  m\dot{x}
+                                    \dot{y} - m\dot{x} \dot{y} - m y
+                                    \ddot{x}\right) = 0
                                     \]</span></p>
                                     <p>この式をじっと眺めると</p>
                                     <p><span class="math display">\[
-                                    m \frac{d}{dt}\left( y\dot{x} - x
-                                    \dot{y} \right) =0
+                                    m \frac{d}{dt}\left( x\dot{y} - y
+                                    \dot{x} \right) =0
                                     \]</span></p>
-                                    <p>ここで、位置ベクトルとして</p>
+                                    <p>ここで、<span
+                                    class="math inline">\(x-y\)</span>平面における角運動量</p>
+                                    <p><span class="math display">\[
+                                    L_z = m (x \dot{y} - y\dot{x})
+                                    \]</span></p>
+                                    <p>を定義すると、</p>
+                                    <p><span class="math display">\[
+                                    \dot{L}_z = 0
+                                    \]</span></p>
+                                    <p>であるから、<span
+                                    class="math inline">\(L_z\)</span>が保存量になることがわかる。同様に、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    L_x &amp;=  m (y \dot{z} -
+                                    z\dot{y})\\
+                                    L_y &amp;=  m (z \dot{x} -
+                                    x\dot{z})\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>も保存量となる。ここで、位置ベクトルと運動量ベクトル、角運動量ベクトルをそれぞれ</p>
                                     <p><span class="math display">\[
                                     \boldsymbol{r} =
                                     \begin{pmatrix}
-                                    x \\y
+                                    x \\ y \\ z
+                                    \end{pmatrix}
+                                    ,
+                                    \boldsymbol{p} =
+                                    m
+                                    \begin{pmatrix}
+                                    \dot{x} \\ \dot{y} \\ \dot{z}
+                                    \end{pmatrix}
+                                    ,
+                                    \boldsymbol{L} =
+                                    \begin{pmatrix}
+                                    L_x \\ L_y \\ L_z
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>を導入すると、</p>
+                                    <p>と定義すると、角運動量ベクトルは</p>
                                     <p><span class="math display">\[
-                                    \frac{d}{dt}\left( \boldsymbol{r}
-                                    \times m\dot{\boldsymbol{r}} \right)
-                                    =0
+                                    \boldsymbol{L} = \boldsymbol{r}
+                                    \times \boldsymbol{p}
                                     \]</span></p>
-                                    <p>ここで、<span
-                                    class="math inline">\(m\dot{\boldsymbol{r}}\)</span>は運動量ベクトルである。すなわち、位置ベクトルと運動量ベクトルの外積は時間不変量になっている。この量を角運動量と呼び、角運動量が保存することを角運動量保存則と呼ぶ。一般に中心力が働く系においては角運動量が保存量となる。</p>
+                                    <p>と表すことができる。</p>
                                     <h1
                                     id="ニュートンの運動方程式のまとめ">ニュートンの運動方程式のまとめ</h1>
                                     <p>本章では、ニュートンの運動方程式について復習した。物理学の使命は観測事実を説明することである。そのために観測結果から経験事実である法則を導き、その法則を導出できるような原理を発見し、逆に原理から理論を構築し、まだ見ぬ結果を予測する、というサイクルを繰り返していく。そうして生まれた理論の一つがニュートン力学である。ニュートン力学の根幹はニュートンの運動方程式であり、ニュートンの運動方程式はガリレイ変換に対して共変であったが、より一般の座標変換、たとえば極座標への変換では共変ではなかった。また、運動エネルギー、運動量、角運動量は、特定の条件を満たすような運動方程式における時間不変量であった。それらが保存することを導く際、両辺に速度をかけたり、ゼロとなる量を足したり引いたりした上に、式をじっと眺めて時間微分の形に持っていくなど、発見法的な方法に頼っていた。もっとシステマティックに保存量を見つけることはできないだろうか？また、保存量が存在するような特定の条件とはどのようなものであろうか？これらに答えを与えるのがこれから学ぶ解析力学である。</p>

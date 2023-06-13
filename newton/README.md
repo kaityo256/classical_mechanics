@@ -572,89 +572,151 @@ $$
 
 ### 運動量保存則
 
-2つの物体が、お互いに距離に依存する力により相互作用をする系を考えよう。簡単のために、一次元系を考えよう。例えば、摩擦のないレールに固定された電荷の運動を考えればよい。2つの物体に$1$、$2$と番号をつけ、それぞれの位置を$x_1$、$x_2$としよう。物体$1$から物体$2$に働く力を$F_{12}$、物体$2$から物体$1$に働く力を$F_{21}$とすると、運動方程式は
+3次元空間に質量$m$の質点A, Bがある。これらの質点の座標をそれぞれ$\boldsymbol{r}_A = (x_A,y_A,z_A), \boldsymbol{r}_B = (x_B,y_B,z_B)$とする時、これらが相対距離$r$に依存するポテンシャル$U(r)$により相互作用をしているとしよう。ただし$r$は以下のように定義する。
 
 $$
 \begin{aligned}
-m \ddot{x}_1 &= F_{21} \\
-m \ddot{x}_2 &= F_{12}
+r &= \sqrt{(\boldsymbol{r}_A -\boldsymbol{r}_B})^2\\
+&= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
 \end{aligned}
 $$
 
-作用反作用の法則から$F_{21} = - F_{12}$である。したがって、両辺を加えると、
+この時、質点Aの運動方程式は、
 
 $$
-m (\ddot{x}_1 + \ddot{x_2}) = 0
+m \ddot{x}_A = - \frac{\partial U(r)}{\partial x_A} = - \frac{dU}{dr} \frac{\partial r}{\partial x_A}
 $$
 
-ここから、
+で与えられる。従って、$r$を$x_A$で偏微分した結果が欲しい。
 
 $$
-\frac{d}{dt}\left( m\dot{x}_1 + m \dot{x}_2\right) = 0
+r^2 = (x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2
 $$
 
-が導かれる。質量と速度の積$m \dot{x}_1$を運動量と呼び、その総和の時間変化がゼロである、すなわち保存量となっていることを運動量保存則と呼ぶ。
+であったから、両辺を$x_A$で偏微分すると
 
-ここでは一次元系でのみ示したが、一般に作用反作用が成り立ち、外力がない系では、$x$,$y$,$z$の全方向でそれぞれ運動量が保存する。例えば$z$方向に重力のような外力がかかっている場合は、$z$方向には運動量は保存しないが、$x$、$y$方向には保存する。
+$$
+\frac{\partial r}{\partial x_A} = \frac{(x_A-x_B)}{r}
+$$
+
+以上から、質点Aの運動方程式は
+
+$$
+m \ddot{x}_A = - U' \frac{(x_A-x_B)}{r}
+$$
+
+全く同様に、$r$の$x_B$偏微分は
+
+$$
+\frac{\partial r}{\partial x_A} = - \frac{(x_A-x_B)}{r}
+$$
+
+となるので(負符号がつくことに注意)、質点Bの運動方程式は
+
+$$
+m \ddot{x}_B = U' \frac{(x_A-x_B)}{r}
+$$
+
+となる。$y, z$方向も同様である。従って、質点AB間に働く力は、大きさは同じで向きは逆向きとなり、作用・反作用の法則が成り立っていることがわかる。このように、相対座標のみに依存するポテンシャルによる相互作用は、作用・反作用の法則を自動的に満たす。
+
+さて、力の大きさが同じで、向きが逆向きであるから、それぞれの運動方程式の和をとると、
+
+$$
+m (\ddot{x}_A+\ddot{x}_B) = 0
+$$
+
+となる。この系の$x$方向の重心位置$x_G = (x_A - x_B)/2$を定義すると、重心速度は$\dot{x}_G$であり、重心の運動量$p_x = m \dot{x}_G$を定義すると、$\dot{p}_x = 0$であることがわかる。$y,z$方向も同様であり、重心の運動量が保存することがわかる。
 
 ### 角運動量保存則
 
-地球と太陽の間には万有引力が働いている。万有引力は、距離の自乗に反比例する力であった。太陽は地球に対して十分に重いために静止していると考え、地球の公転運動のみ考えよう。地球の質量を$m$、太陽の質量を$M$、万有引力定数を$G$とする。
+3次元空間に質点があり、その座標を$(x,y,z)$とする。原点からの距離$r = \sqrt{x^2+y^2+z^2}$にのみ依存するポテンシャル$U(r)$に従って運動している時、角運動量が保存することを示そう。
 
-公転面を$xy$平面にとり、太陽を原点とし、地球の座標を$(x,y$)とすると、地球の運動方程式は
-
-$$
-\begin{aligned}
-m \ddot{x} &= \frac{mMG}{r^2} \frac{x}{r}\\
-m \ddot{y} &= \frac{mMG}{r^2} \frac{y}{r}\\
-\end{aligned}
-$$
-
-ただし、$r = \sqrt{x^2+y^2}$は地球と太陽の距離である。
-
-さて、$x$成分の運動方程式の両辺に$y$を、$y$成分の運動方程式の両辺に$x$をかける。
+まず、
 
 $$
 \begin{aligned}
-m y\ddot{x} &= \frac{mMG}{r^2} \frac{xy}{r}\\
-m x\ddot{y} &= \frac{mMG}{r^2} \frac{xy}{r}\\
+\frac{\partial r}{\partial x} &= \frac{x}{r} \\
+\frac{\partial r}{\partial y} &= \frac{y}{r} \\
+\frac{\partial r}{\partial z} &= \frac{z}{r} 
 \end{aligned}
 $$
 
-両辺引くと、右辺は等しいから、
+であることに注意する。この系の運動方程式は
 
 $$
-m y \ddot{x} - m x \ddot{y} = 0
+\begin{aligned}
+m \ddot{x} &= - U'(r) \frac{x}{r} \\
+m \ddot{y} &= - U'(r) \frac{y}{r} \\
+m \ddot{z} &= - U'(r) \frac{z}{r}
+\end{aligned}
 $$
 
-両辺に $m\dot{x} \dot{y} - m\dot{x} \dot{y}$を足すと、
+$m x\ddot{y} - m y \ddot{x}$を計算すると、右辺が消えて、
 
 $$
-m \left(y \ddot{x} + m\dot{x} \dot{y} - \dot{x} \dot{y} - x \ddot{y}\right) = 0
+m x\ddot{y} - m y \ddot{x}= 0
+$$
+
+$m\dot{x} \dot{y} - m\dot{x} \dot{y}$を足すと、
+
+$$
+m \left(m x\ddot{y}  m\dot{x} \dot{y} - m\dot{x} \dot{y} - m y \ddot{x}\right) = 0
 $$
 
 この式をじっと眺めると
 
 $$
-m \frac{d}{dt}\left( y\dot{x} - x \dot{y} \right) =0
+m \frac{d}{dt}\left( x\dot{y} - y \dot{x} \right) =0
 $$
 
-ここで、位置ベクトルとして
+ここで、$x-y$平面における角運動量
+
+$$
+L_z = m (x \dot{y} - y\dot{x})
+$$
+
+を定義すると、
+
+$$
+\dot{L}_z = 0
+$$
+
+であるから、$L_z$が保存量になることがわかる。同様に、
+
+$$
+\begin{aligned}
+L_x &=  m (y \dot{z} - z\dot{y})\\
+L_y &=  m (z \dot{x} - x\dot{z})\\
+\end{aligned}
+$$
+
+も保存量となる。ここで、位置ベクトルと運動量ベクトル、角運動量ベクトルをそれぞれ
 
 $$
 \boldsymbol{r} =
 \begin{pmatrix}
-x \\y
+x \\ y \\ z
+\end{pmatrix}
+,
+\boldsymbol{p} =
+m
+\begin{pmatrix}
+\dot{x} \\ \dot{y} \\ \dot{z}
+\end{pmatrix}
+,
+\boldsymbol{L} =
+\begin{pmatrix}
+L_x \\ L_y \\ L_z
 \end{pmatrix}
 $$
 
-を導入すると、
+と定義すると、角運動量ベクトルは
 
 $$
-\frac{d}{dt}\left( \boldsymbol{r} \times m\dot{\boldsymbol{r}} \right) =0
+\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p} 
 $$
 
-ここで、$m\dot{\boldsymbol{r}}$は運動量ベクトルである。すなわち、位置ベクトルと運動量ベクトルの外積は時間不変量になっている。この量を角運動量と呼び、角運動量が保存することを角運動量保存則と呼ぶ。一般に中心力が働く系においては角運動量が保存量となる。
+と表すことができる。
 
 ## ニュートンの運動方程式のまとめ
 

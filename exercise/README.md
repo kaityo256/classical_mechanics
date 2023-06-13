@@ -118,6 +118,101 @@ $$
 \ddot{\theta} = -\frac{g}{l} \sin \theta
 $$
 
+## 二体相互作用
+
+### 問題
+
+3次元空間に2つの質点A, Bがある。これらの質点の座標をそれぞれ$\boldsymbol{r}_A = (x_A,y_A,z_A), \boldsymbol{r}_B = (x_B,y_B,z_B)$とする時、これらが相対距離$r$に依存するポテンシャル$U(r)$により相互作用をしている。ただし$r$は以下のように定義する。
+
+$$
+\begin{aligned}
+r &= \sqrt{(\boldsymbol{r}_A -\boldsymbol{r}_B})^2\\
+&= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
+\end{aligned}
+$$
+
+質点の質量をどちらも$m$とする時、以下の問いに答えよ。
+
+### (1)
+
+2つの物体に働く力が、作用・反作用の法則を満たすことを示せ($x$成分のみ示せば良い)。
+
+### (2)
+
+この系の$x$方向の重心の運動量
+
+$$
+p_x = m(\dot{x}_1 + \dot{x}_1) 
+$$
+
+が運動により保存することを示せ。
+
+### 解答例
+
+(1) 
+
+$$
+r^2 = (x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2
+$$
+
+であることから、
+
+$$
+\frac{\partial r}{\partial x_A} = \frac{(x_A-x_B)}{r}
+$$
+
+同様に、$r$の$x_B$による偏微分は
+
+$$
+\frac{\partial r}{\partial x_B} = -\frac{(x_A-x_B)}{r}
+$$
+
+以上を用いると、物体Aの$x$成分の運動方程式は
+
+$$
+\begin{aligned}
+m \ddot{x}_A &= - \frac{\partial U(r)}{\partial x_A} \\
+&=- \frac{d U(r)}{d r} \frac{\partial r}{\partial x_A} \\
+&= -U' \frac{(x_A-x_B)}{r}
+\end{aligned}
+$$
+
+同様に、物体Bに働く$x$成分の運動方程式は
+
+$$
+m \ddot{x}_B = U'\frac{(x_A-x_B)}{r}
+$$
+
+以上から、物体AB間に働く力は、大きさは同じで向きが逆である、すなわち作用・反作用の法則が成り立つことがわかる。
+
+(2)
+
+物体A,Bの運動方程式は
+
+$$
+\begin{aligned}
+m\ddot{x}_A &= -U' \frac{x_A - x_B}{r}\\
+m\ddot{x}_B &= U' \frac{x_A - x_B}{r}\\
+\end{aligned}
+$$
+
+両辺の和を取ると、
+
+$$
+m (\ddot{x}_A + \ddot{x}_B) = 0
+$$
+
+ここで、$p_x$の時間微分を計算すると、
+
+$$
+\begin{aligned}
+\dot{p}_x &= m (\ddot{x}_A+\ddot{x}_B) \\
+&= 0
+\end{aligned}
+$$
+
+以上から、$p_x$は保存量となる。
+
 ## 中心力による運動
 
 ### 問題
