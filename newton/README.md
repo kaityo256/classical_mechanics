@@ -608,7 +608,7 @@ $$
 全く同様に、$r$の$x_B$偏微分は
 
 $$
-\frac{\partial r}{\partial x_A} = - \frac{(x_A-x_B)}{r}
+\frac{\partial r}{\partial x_B} = - \frac{(x_A-x_B)}{r}
 $$
 
 となるので(負符号がつくことに注意)、質点Bの運動方程式は
@@ -625,7 +625,7 @@ $$
 m (\ddot{x}_A+\ddot{x}_B) = 0
 $$
 
-となる。この系の$x$方向の重心位置$x_G = (x_A - x_B)/2$を定義すると、重心速度は$\dot{x}_G$であり、重心の運動量$p_x = m \dot{x}_G$を定義すると、$\dot{p}_x = 0$であることがわかる。$y,z$方向も同様であり、重心の運動量が保存することがわかる。
+となる。この系の$x$方向の重心位置$x_G = (x_A + x_B)/2$を定義すると、重心速度は$\dot{x}_G$であり、重心の運動量$p_x = m \dot{x}_G$を定義すると、$\dot{p}_x = 0$であることがわかる。$y,z$方向も同様であり、重心の運動量が保存することがわかる。
 
 ### 角運動量保存則
 
@@ -637,7 +637,7 @@ $$
 \begin{aligned}
 \frac{\partial r}{\partial x} &= \frac{x}{r} \\
 \frac{\partial r}{\partial y} &= \frac{y}{r} \\
-\frac{\partial r}{\partial z} &= \frac{z}{r} 
+\frac{\partial r}{\partial z} &= \frac{z}{r}
 \end{aligned}
 $$
 
@@ -660,7 +660,7 @@ $$
 $m\dot{x} \dot{y} - m\dot{x} \dot{y}$を足すと、
 
 $$
-m \left(m x\ddot{y}  m\dot{x} \dot{y} - m\dot{x} \dot{y} - m y \ddot{x}\right) = 0
+m \left(m x\ddot{y}  + m\dot{x} \dot{y} - m\dot{x} \dot{y} - m y \ddot{x}\right) = 0
 $$
 
 この式をじっと眺めると
@@ -713,7 +713,7 @@ $$
 と定義すると、角運動量ベクトルは
 
 $$
-\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p} 
+\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}
 $$
 
 と表すことができる。
