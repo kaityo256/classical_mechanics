@@ -227,7 +227,7 @@ y &= r \sin \theta
 \end{aligned}
 $$
 
-この変換は非線形だが、全微分を考えるとベクトルとみなすことができる。
+この変換は非線形だが、全微分を考えると線形変換とみなすことができる。
 
 $$
 \begin{aligned}
@@ -327,7 +327,7 @@ $$
 \tilde{\partial}_i = \frac{\partial x^k}{\partial \tilde{x}^i} \partial_k
 $$
 
-ここで、$\partial_i \equiv \partial_{q_i}$、$\tilde{\partial}_i \equiv \partial_{\tilde{q}_i}$という表記を用いた。右辺に現れる偏微分の分母にチルダのある量が現れているため、$\{\partial_i\}$は共変ベクトルであることがわかる(そのため、添字を下に書いている)。
+ここで、$\partial_i \equiv \partial_{x_i}$、$\tilde{\partial}_i \equiv \partial_{\tilde{x}_i}$という表記を用いた。右辺に現れる偏微分の分母にチルダのある量が現れているため、$\{\partial_i\}$は共変ベクトルであることがわかる(そのため、添字を下に書いている)。
 
 二つ並べると共変性、反変性がわかりやすい。
 
