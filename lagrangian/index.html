@@ -540,40 +540,51 @@
                                     q_N)\)</span>が与えられており、以下のオイラー・ラグランジュの式が成り立つとしよう。</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left( \frac{\partial
-                                    L}{\partial \dot{q}_i}\right) -
-                                    \frac{\partial L}{\partial q_i} = 0
+                                    L}{\partial \dot{q}^i}\right) -
+                                    \frac{\partial L}{\partial q^i} = 0
                                     \]</span></p>
                                     <p>ただし<span
                                     class="math inline">\(i\)</span>は<span
                                     class="math inline">\(1\)</span>から<span
                                     class="math inline">\(N\)</span>までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、<span
-                                    class="math inline">\((q_1, q_2,
-                                    \cdots, q_N)\)</span>から<span
-                                    class="math inline">\((Q_1, Q_2,
+                                    class="math inline">\((q^1, q^2,
+                                    \cdots, q^N)\)</span>から<span
+                                    class="math inline">\((Q^1, Q^2,
                                     \cdots,
-                                    Q_N)\)</span>への変換を考える。具体的には<span
+                                    Q^N)\)</span>への変換を考える。具体的には<span
                                     class="math inline">\(N\)</span>本の関数<span
                                     class="math inline">\(f_i\)</span>を使って、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    Q_1 &amp;= f_1(q_1, q_2, \cdots,
-                                    q_N) \\
-                                    Q_2 &amp;= f_2(q_1, q_2, \cdots,
-                                    q_N) \\
+                                    Q^1 &amp;= Q^1(q^1, q^2, \cdots,
+                                    q^N) \\
+                                    Q^2 &amp;= Q_2(q^1, q^2, \cdots,
+                                    q^N) \\
                                     &amp;\cdots \\
-                                    Q_N &amp;= f_N(q_1, q_2, \cdots,
-                                    q_N)
+                                    Q^N &amp;= Q_N(q^1, q^2, \cdots,
+                                    q^N)
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>と変換が与えられたとする。この時、新しい変数においても</p>
+                                    <p>と変換が与えられたとする(変数と変換の関数を同一視していることに注意)。この時、新しい変数においても</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left( \frac{\partial
-                                    L}{\partial \dot{Q}_i}\right) -
-                                    \frac{\partial L}{\partial Q_i} = 0
+                                    L}{\partial \dot{Q}^i}\right) -
+                                    \frac{\partial L}{\partial Q^i} = 0
                                     \]</span></p>
                                     <p>が全ての<span
-                                    class="math inline">\(i\)</span>で成立することを証明したい。やることは1自由度系とほとんど同様だが、偏微分などがややこしくなる。</p>
-                                    <p>TODO: 続きを書く</p>
+                                    class="math inline">\(i\)</span>で成立することを証明したい。やることは一自由度系とほとんど同様だが、偏微分などがややこしくなる。</p>
+                                    <p>まず、変数変換<span
+                                    class="math inline">\(\{q^i\}
+                                    \rightarrow
+                                    \{Q^i\}\)</span>を逆に解いて</p>
+                                    <p><span class="math display">\[
+                                    q^i = q^i(Q^1, Q^2, \cdots, Q^N)
+                                    \quad (i = 1,2,\cdots, N)
+                                    \]</span></p>
+                                    <p>という関係が得られたとしよう。これを時間微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \dot{q}^i =
+                                    \]</span></p>
                                     <h1
                                     id="記号の節約表記について">記号の節約表記について</h1>
                                     <p>ここで、ラグランジアンを扱う際にどの変数を独立とみなし、どの変数が独立でないのかがよくわからなくなることが多い。これは主に表記において記号の節約を行うことに起因する。例えば、ある関数<span

@@ -188,7 +188,7 @@ $$
 さて、横ベクトル$\boldsymbol{v}$が、横ベクトルの基底で
 
 $$
-\boldsymbol{v} = v_i \boldsymbol{e}^i = \tilde{v}_i \boldsymbol{e}^i
+\boldsymbol{v} = v_i \boldsymbol{e}^i = \tilde{v}_i \tilde{\boldsymbol{e}}^i
 $$
 
 と展開されているとしよう。縦ベクトルと同様な議論から、

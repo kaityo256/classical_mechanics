@@ -345,29 +345,39 @@ $q$を$Q(q)$に変数変換した場合、$q$がオイラー・ラグランジ�
 この$N$自由度系において、ラグランジアン$L(\dot{q}_1, \dot{q}_2, \cdots, \dot{q}_N, q_1, q_2, \cdots, q_N)$が与えられており、以下のオイラー・ラグランジュの式が成り立つとしよう。
 
 $$
-\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}^i}\right) - \frac{\partial L}{\partial q^i} = 0
 $$
 
-ただし$i$は$1$から$N$までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、$(q_1, q_2, \cdots, q_N)$から$(Q_1, Q_2, \cdots, Q_N)$への変換を考える。具体的には$N$本の関数$f_i$を使って、
+ただし$i$は$1$から$N$までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、$(q^1, q^2, \cdots, q^N)$から$(Q^1, Q^2, \cdots, Q^N)$への変換を考える。具体的には$N$本の関数$f_i$を使って、
 
 $$
 \begin{aligned}
-Q_1 &= f_1(q_1, q_2, \cdots, q_N) \\
-Q_2 &= f_2(q_1, q_2, \cdots, q_N) \\
+Q^1 &= Q^1(q^1, q^2, \cdots, q^N) \\
+Q^2 &= Q_2(q^1, q^2, \cdots, q^N) \\
 &\cdots \\
-Q_N &= f_N(q_1, q_2, \cdots, q_N)
+Q^N &= Q_N(q^1, q^2, \cdots, q^N)
 \end{aligned}
 $$
 
-と変換が与えられたとする。この時、新しい変数においても
+と変換が与えられたとする(変数と変換の関数を同一視していることに注意)。この時、新しい変数においても
 
 $$
-\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}_i}\right) - \frac{\partial L}{\partial Q_i} = 0
+\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}^i}\right) - \frac{\partial L}{\partial Q^i} = 0
 $$
 
-が全ての$i$で成立することを証明したい。やることは1自由度系とほとんど同様だが、偏微分などがややこしくなる。
+が全ての$i$で成立することを証明したい。やることは一自由度系とほとんど同様だが、偏微分などがややこしくなる。
 
-TODO: 続きを書く
+まず、変数変換$\{q^i\} \rightarrow \{Q^i\}$を逆に解いて
+
+$$
+q^i = q^i(Q^1, Q^2, \cdots, Q^N) \quad (i = 1,2,\cdots, N)
+$$
+
+という関係が得られたとしよう。これを時間微分すると、
+
+$$
+\dot{q}^i =
+$$
 
 ## 記号の節約表記について
 
