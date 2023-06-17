@@ -508,7 +508,7 @@
                                     \]</span></p>
                                     <p>という形を考えることが多い。なぜなら、力学は位置と速度で表現されており、速度は位置の時間微分であるためだ(現在の議論における変数<span
                                     class="math inline">\(x\)</span>が、力学では時間<span
-                                    class="math inline">\(t\)</span>にあたることに注意)。その場合に汎関数微分がどうなるかを見ておこう。</p>
+                                    class="math inline">\(t\)</span>にあたることに注意)。このような場合に汎関数微分がどうなるかを見ておこう。</p>
                                     <p>まず、二変数関数<span
                                     class="math inline">\(F(f,g)\)</span>を考える。関数$Fの全微分は</p>
                                     <p><span class="math display">\[
@@ -613,23 +613,24 @@
                                     <p><span class="math display">\[
                                     \delta I \equiv I[f+\delta f]
                                     -I[f]  = \int_a^b \frac{\delta
-                                    I}{\delta f}  \delta f dx  +
+                                    F}{\delta f}  \delta f dx  +
                                     O(\delta f^2)
                                     \]</span></p>
-                                    <p>後の便利のために</p>
+                                    <p>であったから、</p>
                                     <p><span class="math display">\[
-                                    \frac{\delta F}{\delta f}
-                                    \equiv  \left( \frac{\partial
+                                    \frac{\delta F}{\delta f} =
+                                    \frac{\partial F}{\partial f} -
+                                    \frac{d}{dx} \left(\frac{\partial
+                                    F}{\partial f&#39;} \right)
+                                    \]</span></p>
+                                    <p>である。形式的に分母を払った</p>
+                                    <p><span class="math display">\[
+                                    \delta F = \left(\frac{\partial
                                     F}{\partial f} - \frac{d}{dx}
                                     \left(\frac{\partial F}{\partial
-                                    f&#39;} \right) \right) \delta x
+                                    f&#39;} \right)\right) \delta f
                                     \]</span></p>
-                                    <p>と表記すると、</p>
-                                    <p><span class="math display">\[
-                                    \delta I = \int_a^b \frac{\delta
-                                    F}{\delta f} \delta f dx
-                                    \]</span></p>
-                                    <p>と表すことができる。</p>
+                                    <p>という形で書くことも多い。</p>
                                     <h1 id="変分法">変分法</h1>
                                     <h2
                                     id="最速降下曲線-1">最速降下曲線</h2>
@@ -657,36 +658,7 @@
                                     <p>である。</p>
                                     <p>この<span
                                     class="math inline">\(T\)</span>を最小化するような<span
-                                    class="math inline">\(y(x)\)</span>を求めなさい、というのが変分問題である。これは汎関数の問題であるが、まずは関数で考えてみよう。</p>
-                                    <p>ある関数<span
-                                    class="math inline">\(y(x)\)</span>があり、その最小値を与えるような<span
-                                    class="math inline">\(x_0\)</span>を探したいとする。もしそのような<span
-                                    class="math inline">\(x_0\)</span>を見つけたならば、そこからどのようにずれても<span
-                                    class="math inline">\(f(x)\)</span>の値は増えるはずだ。従って、関数<span
-                                    class="math inline">\(f(x)\)</span>は<span
-                                    class="math inline">\(x=x_0\)</span>で極値を取る。いま、<span
-                                    class="math inline">\(x_0\)</span>から少しずれた値<span
-                                    class="math inline">\(x_0 + \delta
-                                    x\)</span>に変化させた場合、<span
-                                    class="math inline">\(f(x)\)</span>の値が<span
-                                    class="math inline">\(\delta
-                                    f\)</span>だけ変化したとすると、</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \delta f &amp;\equiv f(x_0+\delta x)
-                                    - f(x_0) \\
-                                    &amp;= \frac{df}{dx} \delta x  +
-                                    O(\delta x^2)
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(f(x)\)</span>は<span
-                                    class="math inline">\(x=x_0\)</span>で極値を取るのであるから、<span
-                                    class="math inline">\(df/dx=0\)</span>でなくてはならない。これは、どのような微小量<span
-                                    class="math inline">\(\delta
-                                    x\)</span>をとってきても、その一次のオーダーで<span
-                                    class="math inline">\(f(x)\)</span>の値が変わらないことを意味する。</p>
-                                    <p>同様な議論を汎関数微分で考えよう。いま、<span
+                                    class="math inline">\(y(x)\)</span>を求めなさい、というのが変分問題である。いま、<span
                                     class="math inline">\(T\)</span>を最小にするような<span
                                     class="math inline">\(y(x)\)</span>が選ばれたとしよう。すると、そこからどのように<span
                                     class="math inline">\(y(x)\)</span>を変化させても、<span
@@ -741,10 +713,6 @@
                                     class="math inline">\(F\)</span>の変化分<span
                                     class="math inline">\(\delta
                                     F\)</span>を計算することを「変分をとる」と呼ぶことが多い。</p>
-                                    <h2 id="懸垂線">懸垂線</h2>
-                                    <p>変分原理の題材のもう一つの例として、懸垂線を挙げよう。一様な重力下で紐の両端を持ち、少し緩める。この時、紐はどのような形になるであろうか。</p>
-                                    <p>TODO: 力の釣り合い</p>
-                                    <p>これは電信柱の間の電線が作る形状でもある。</p>
                                     <h1
                                     id="オイラーラグランジュ方程式">オイラー・ラグランジュ方程式</h1>
                                     <p>さて、解析力学に戻ろう。位置と速度の関数としてラグランジアン<span
@@ -781,25 +749,50 @@
                                     <strong>オイラー・ラグランジュ方程式(Euler-Laglange
                                     equation)</strong>
                                     と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動法定式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。</p>
-                                    <p>TODO:
-                                    最小作用の原理の直感的な説明</p>
                                     <h1 id="停留条件">停留条件</h1>
                                     <p>これまで「力の釣り合いを与える座標は、ポテンシャル関数<span
-                                    class="math inline">\(U(x)\)</span>を最小にするように決まる」「」などと「最小」という言葉を雑に使ってきた。</p>
+                                    class="math inline">\(U(x)\)</span>を最小にするように決まる」「運動方程式の解は、作用を最小にするように決まる」などと「最小」という言葉を雑に使ってきた。しかし、実際に我々が要請しているのは、求めたい解(釣り合いの位置や運動方程式の解)に対して、ポテンシャルの変化分が一次のオーダーでゼロであるということだけであり、その点が最小であるとは限らない。</p>
                                     <p>いま、静止している物体に働く力が釣り合っているとする。すなわち、その物体の位置<span
                                     class="math inline">\(x\)</span>において、力<span
                                     class="math inline">\(F(x)=0\)</span>である。この時、物体の位置<span
                                     class="math inline">\(x\)</span>を少しずらした時にどうなるかは、<span
                                     class="math inline">\(x\)</span>まわりの<span
-                                    class="math inline">\(F(x)\)</span>の関数系による。</p>
-                                    <p>TODO: 磁石の絵</p>
-                                    <p>例えば、磁石のS極とN極の間に、小さな磁石があり、力が釣り合っているとしよう。</p>
-                                    <p>TODO: 関数の図解</p>
-                                    <p>$ 0 x
-                                    $で定義された以下の関数を考える。</p>
+                                    class="math inline">\(F(x)\)</span>の関数形による。</p>
+                                    <figure>
+                                    <img src="fig/magnet.png"
+                                    alt="磁石" />
+                                    <figcaption
+                                    aria-hidden="true">磁石</figcaption>
+                                    </figure>
+                                    <p>例えば、磁石のS極とN極の間に、小さな磁石があり、力が釣り合っているとしよう。両側が反発するように配置した場合、釣り合いの位置からずらしたら、元に戻るような力が働く。すなわち、釣り合いの位置はポテンシャルの最小値を与える。</p>
+                                    <p>一方、引力がつりあうように磁石を配置すると、釣り合いの位置から少しでもずれたら力の均衡が崩れ、どちらかの磁石にくっついてしまうであろう。この場合、釣り合いの位置はポテンシャルの最大値を与える。</p>
+                                    <p>また、微分がゼロであるような点は最大値、最小値を与えるとも限らない。例えば、<span
+                                    class="math inline">\(0 \le x \le
+                                    1\)</span>で定義された以下の関数を考える。</p>
                                     <p><span class="math display">\[
                                     f(x) = 6 x^3 - 9x^2 + 4x
                                     \]</span></p>
+                                    <p>微分すると、</p>
+                                    <p><span class="math display">\[
+                                    f&#39;(x) = 18 x^2 - 18 x +4 =
+                                    2(3x-1)(3x-2)
+                                    \]</span></p>
+                                    <p>すなわち、この関数は<span
+                                    class="math inline">\(x=1/3,
+                                    2/3\)</span>で微分がゼロとなる。しかし、図示してみるとわかるように、この関数は微分がゼロとなる点で最大値も最小値も与えない。</p>
+                                    <figure>
+                                    <img src="fig/stationary.png"
+                                    alt="停留" />
+                                    <figcaption
+                                    aria-hidden="true">停留</figcaption>
+                                    </figure>
+                                    <p>この関数の<span
+                                    class="math inline">\(x=1/3\)</span>の点のように、微分がゼロとなる点の近傍では最大値となるような点を
+                                    <strong>極大(local maximum)</strong>
+                                    と呼ぶ。同様に、<span
+                                    class="math inline">\(x=2/3\)</span>のように、その点の近傍では最小となる点を
+                                    <strong>極小(local minimum)</strong>
+                                    と呼ぶ。</p>
                                     <p>この関数は以下の点において最大値、最小値、極大値、極小値を取る。</p>
                                     <ul>
                                     <li><span
@@ -819,10 +812,7 @@
                                     において最大値 <span
                                     class="math inline">\(f(1)=0\)</span></li>
                                     </ul>
-                                    <p>このうち、<span
-                                    class="math inline">\(f&#39;(x) =
-                                    0\)</span>となる<span
-                                    class="math inline">\(x\)</span>は極小値もしくは極大値を与えるが、最大値も最小値も与えない。また、<span
+                                    <p>また、<span
                                     class="math inline">\(f(x) =
                                     x^3\)</span>という関数を考えると、<span
                                     class="math inline">\(f&#39;(x) =
@@ -831,12 +821,14 @@
                                     class="math inline">\(f(x,y) = x^2 -
                                     y^2\)</span>は、原点で<span
                                     class="math inline">\(x\)</span>,<span
-                                    class="math inline">\(y\)</span>による偏微分がいずれもゼロとなるが、極大値も極小値も与えない。このような点を鞍点と呼ぶ。このような、微分がゼロとなる点をまとめて停留点と呼ぶ。</p>
-                                    <p>作用積分においても、変分がゼロとなるような関数が必ずしも作用を最小にするとは限らない。多くの場合、極小値を取るので極小作用の法則と呼ぶこともあるが、例えば調和振動子などは作用積分が極小値を与えない。そういう意味で「停留作用の法則」と呼ぶのが最も正確である。しかし、本書では以後、最小作用の法則と呼び、あたかも運動方程式の解が作用を最小にするかのように説明する。</p>
+                                    class="math inline">\(y\)</span>による偏微分がいずれもゼロとなるが、極大値も極小値も与えない。このような点を
+                                    <strong>鞍点 (saddle point)</strong>
+                                    と呼ぶ。このように、微分がゼロとなる点をまとめて　<strong>停留点(stationary
+                                    point)</strong> と呼ぶ。</p>
+                                    <p>作用積分においても、変分がゼロとなるような関数が必ずしも作用を最小にするとは限らない。極小値となることが多いので「極小作用の法則」と呼ぶこともあるが、例えば調和振動子などは作用積分が極小値を与えない。そういう意味で「停留作用の法則」と呼ぶのが最も正確である。しかし、本書では以後、最小作用の法則と呼び、あたかも運動方程式の解が作用を最小にするかのように説明する。</p>
                                     <h1
                                     id="変分原理のまとめ">変分原理のまとめ</h1>
-                                    <p>運動方程式から出発し、ダランベールの原理からラグランジアンという量を考え、ラグランジアンの積分を作用と呼ぶと、運動方程式の解が作用積分を最小にするように決まるということを見た。この考えをおし進めると、まず世の中にラグランジアンというものがあり、それを最小にするようにすべてが決まるように見えてくる。これが変分原理である。変分原理は原理であるから、そこに理由を求めることはできない。数式的には「最小作用の法則から運動方程式が求まるようにラグランジアンを見つけた」だけに過ぎない。しかし</p>
-                                    <p>TODO: まとめの続きを書く</p>
+                                    <p>運動方程式から出発し、ダランベールの原理からラグランジアンという量を考え、ラグランジアンの積分を作用と呼ぶと、運動方程式の解が作用積分を最小にするように決まるということを見た。この流れを逆に考え、まず世の中にラグランジアンというものがあり、その積分を作用と呼び、作用を最小にするように運動が決まっていると要請するのが変分原理(ハミルトンの原理)である。変分原理は原理であるから、そこに理由を求めることはできない。したがって、最小作用の原理を「自然は無駄を嫌う」のように理屈をつけるのはナンセンスである。しかし、意思を持たぬはずの物体が、何かのコストを最小にしようとしているかのように見えるのこと自体は興味く、なぜ世界がそのように記述されているのか考えてみるのは有益であろう。</p>
                     </article>
     </body>
 
