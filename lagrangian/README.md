@@ -348,7 +348,7 @@ $$
 \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}^i}\right) - \frac{\partial L}{\partial q^i} = 0
 $$
 
-ただし$i$は$1$から$N$までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、$(q^1, q^2, \cdots, q^N)$から$(Q^1, Q^2, \cdots, Q^N)$への変換を考える。具体的には$N$本の関数$f_i$を使って、
+ただし$i$は$1$から$N$までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、一般的な点変換$(q^1, q^2, \cdots, q^N) \rightarrow (Q^1, Q^2, \cdots, Q^N)$を考える。具体的には$N$本の関数$f_i$を使って、
 
 $$
 \begin{aligned}
@@ -365,7 +365,7 @@ $$
 \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}^i}\right) - \frac{\partial L}{\partial Q^i} = 0
 $$
 
-が全ての$i$で成立することを証明したい。やることは一自由度系とほとんど同様だが、偏微分などがややこしくなる。
+が全ての$i$で成立する。すなわち、オイラー・ラグランジュ方程式は多自由度系の一般の点変換において共変である。以後、参考のために多自由度系における証明を記載するが、この証明を追う必要はない。証明の流れは一自由度系とほとんど同様だが、偏微分などがややこしくなるだけである。
 
 まず、変数変換$\{q^i\} \rightarrow \{Q^i\}$を逆に解いて
 
@@ -376,8 +376,73 @@ $$
 という関係が得られたとしよう。これを時間微分すると、
 
 $$
-\dot{q}^i =
+\dot{q}^i = \frac{\partial q^i}{\partial Q^k} \dot{Q}^k
 $$
+
+となる。ここで、アインシュタイン規約を使っており、実際には$k$について和を取っていることに注意。これを$\dot{Q}^k$で偏微分すると、和のうち$k$のインデックスに関するものだけが残るため、
+
+$$
+\frac{\partial \dot{q}^i}{\partial \dot{Q}^k} = \frac{\partial q^i}{\partial Q^k}
+$$
+
+を得る。これをさらに時間微分すると、
+
+$$
+\frac{d}{dt}\left(\frac{\partial \dot{q}^i}{\partial \dot{Q}^k}\right) = \frac{\partial^2 q^i}{\partial Q^k \partial Q^j} \dot{Q}^j
+$$
+
+となる。ここで、また$\dot{q}^i$の表式に戻る。ただし、後の都合のために和を$j$で取っておく。
+
+$$
+\dot{q}^i = \frac{\partial q^i}{\partial Q^j} \dot{Q}^j
+$$
+
+これを$Q^k$で偏微分すると、
+
+$$
+\frac{\partial \dot{q}^i}{\partial Q^k} = \frac{\partial^2 \dot{q}^i}{\partial Q^j\partial Q^k} \dot{Q}^j
+$$
+
+先程得た式と比べることで、
+
+$$
+\frac{d}{dt}\left(\frac{\partial \dot{q}^i}{\partial \dot{Q}^k}\right) = \frac{\partial \dot{q}^i}{\partial Q^k} 
+$$
+
+を得た。さて、ラグランジアンを新しい変数で偏微分していこう。適宜、途中で得た関係式を代入している。
+
+$$
+\frac{\partial L}{\partial \dot{Q}^k} = \frac{\partial L}{\partial \dot{q}^i}\frac{\partial \dot{q}^i}{\partial \dot{Q}^k}
+$$
+
+さらにこれを時間微分すると、
+
+$$
+\begin{aligned}
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right) &= 
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right) \frac{\partial \dot{q}^i}{\partial \dot{Q}^k}
++ \frac{\partial L}{\partial \dot{q}^i} \frac{d}{dt} \left( \frac{\partial \dot{q}^i}{\partial \dot{Q}^k} \right) \\
+&= \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  \frac{\partial q^i}{\partial Q^k} + \frac{\partial L}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial Q^k}
+\end{aligned}
+$$
+
+一方、$L$を$Q^k$で偏微分すると、
+
+$$
+\begin{aligned}
+\frac{\partial L}{\partial Q^k} &= \frac{\partial L}{\partial q^i}\frac{\partial q^i}{\partial Q^k}
++ \frac{\partial L}{\partial \dot{q}^i}\frac{\partial \dot{q}^i}{\partial Q^k}
+\end{aligned}
+$$
+
+先程求めた式と差を取ると、
+
+$$
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right)
+- \frac{\partial L}{\partial Q^k} = \underbrace{\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  - \frac{\partial L}{\partial \dot{q}^i}\right)}_{=0} \frac{\partial q^i}{\partial Q^k}
+$$
+
+以上から、元の変数でオイラー・ラグランジュ方程式が成り立つと、新しい変数でもオイラー・ラグランジュ方程式が成り立つ、すなわち、オイラー・ラグランジュ方程式が任意の点変換において共変であることが示された。
 
 ## 記号の節約表記について
 

@@ -546,12 +546,11 @@
                                     <p>ただし<span
                                     class="math inline">\(i\)</span>は<span
                                     class="math inline">\(1\)</span>から<span
-                                    class="math inline">\(N\)</span>までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、<span
+                                    class="math inline">\(N\)</span>までの値をとり、そのすべてにおいてこの式が成立しているとする。ここで、一般的な点変換<span
                                     class="math inline">\((q^1, q^2,
-                                    \cdots, q^N)\)</span>から<span
-                                    class="math inline">\((Q^1, Q^2,
+                                    \cdots, q^N) \rightarrow (Q^1, Q^2,
                                     \cdots,
-                                    Q^N)\)</span>への変換を考える。具体的には<span
+                                    Q^N)\)</span>を考える。具体的には<span
                                     class="math inline">\(N\)</span>本の関数<span
                                     class="math inline">\(f_i\)</span>を使って、</p>
                                     <p><span class="math display">\[
@@ -572,7 +571,7 @@
                                     \frac{\partial L}{\partial Q^i} = 0
                                     \]</span></p>
                                     <p>が全ての<span
-                                    class="math inline">\(i\)</span>で成立することを証明したい。やることは一自由度系とほとんど同様だが、偏微分などがややこしくなる。</p>
+                                    class="math inline">\(i\)</span>で成立する。すなわち、オイラー・ラグランジュ方程式は多自由度系の一般の点変換において共変である。以後、参考のために多自由度系における証明を記載するが、この証明を追う必要はない。証明の流れは一自由度系とほとんど同様だが、偏微分などがややこしくなるだけである。</p>
                                     <p>まず、変数変換<span
                                     class="math inline">\(\{q^i\}
                                     \rightarrow
@@ -583,8 +582,103 @@
                                     \]</span></p>
                                     <p>という関係が得られたとしよう。これを時間微分すると、</p>
                                     <p><span class="math display">\[
-                                    \dot{q}^i =
+                                    \dot{q}^i = \frac{\partial
+                                    q^i}{\partial Q^k} \dot{Q}^k
                                     \]</span></p>
+                                    <p>となる。ここで、アインシュタイン規約を使っており、実際には<span
+                                    class="math inline">\(k\)</span>について和を取っていることに注意。これを<span
+                                    class="math inline">\(\dot{Q}^k\)</span>で偏微分すると、和のうち<span
+                                    class="math inline">\(k\)</span>のインデックスに関するものだけが残るため、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \dot{q}^i}{\partial
+                                    \dot{Q}^k} = \frac{\partial
+                                    q^i}{\partial Q^k}
+                                    \]</span></p>
+                                    <p>を得る。これをさらに時間微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    \dot{q}^i}{\partial
+                                    \dot{Q}^k}\right) = \frac{\partial^2
+                                    q^i}{\partial Q^k \partial Q^j}
+                                    \dot{Q}^j
+                                    \]</span></p>
+                                    <p>となる。ここで、また<span
+                                    class="math inline">\(\dot{q}^i\)</span>の表式に戻る。ただし、後の都合のために和を<span
+                                    class="math inline">\(j\)</span>で取っておく。</p>
+                                    <p><span class="math display">\[
+                                    \dot{q}^i = \frac{\partial
+                                    q^i}{\partial Q^j} \dot{Q}^j
+                                    \]</span></p>
+                                    <p>これを<span
+                                    class="math inline">\(Q^k\)</span>で偏微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \dot{q}^i}{\partial
+                                    Q^k} = \frac{\partial^2
+                                    \dot{q}^i}{\partial Q^j\partial Q^k}
+                                    \dot{Q}^j
+                                    \]</span></p>
+                                    <p>先程得た式と比べることで、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    \dot{q}^i}{\partial
+                                    \dot{Q}^k}\right) = \frac{\partial
+                                    \dot{q}^i}{\partial Q^k}
+                                    \]</span></p>
+                                    <p>を得た。さて、ラグランジアンを新しい変数で偏微分していこう。適宜、途中で得た関係式を代入している。</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial L}{\partial
+                                    \dot{Q}^k} = \frac{\partial
+                                    L}{\partial \dot{q}^i}\frac{\partial
+                                    \dot{q}^i}{\partial \dot{Q}^k}
+                                    \]</span></p>
+                                    <p>さらにこれを時間微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{d}{dt} \left(\frac{\partial
+                                    L}{\partial \dot{Q}^k}\right) &amp;=
+                                    \frac{d}{dt} \left(\frac{\partial
+                                    L}{\partial \dot{q}^i}\right)
+                                    \frac{\partial \dot{q}^i}{\partial
+                                    \dot{Q}^k}
+                                    + \frac{\partial L}{\partial
+                                    \dot{q}^i} \frac{d}{dt} \left(
+                                    \frac{\partial \dot{q}^i}{\partial
+                                    \dot{Q}^k} \right) \\
+                                    &amp;= \frac{d}{dt}
+                                    \left(\frac{\partial L}{\partial
+                                    \dot{q}^i}\right)  \frac{\partial
+                                    q^i}{\partial Q^k} + \frac{\partial
+                                    L}{\partial \dot{q}^i}
+                                    \frac{\partial \dot{q}^i}{\partial
+                                    Q^k}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>一方、<span
+                                    class="math inline">\(L\)</span>を<span
+                                    class="math inline">\(Q^k\)</span>で偏微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial L}{\partial Q^k}
+                                    &amp;= \frac{\partial L}{\partial
+                                    q^i}\frac{\partial q^i}{\partial
+                                    Q^k}
+                                    + \frac{\partial L}{\partial
+                                    \dot{q}^i}\frac{\partial
+                                    \dot{q}^i}{\partial Q^k}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>先程求めた式と差を取ると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt} \left(\frac{\partial
+                                    L}{\partial \dot{Q}^k}\right)
+                                    - \frac{\partial L}{\partial Q^k} =
+                                    \underbrace{\left(\frac{d}{dt}
+                                    \left(\frac{\partial L}{\partial
+                                    \dot{q}^i}\right)  - \frac{\partial
+                                    L}{\partial \dot{q}^i}\right)}_{=0}
+                                    \frac{\partial q^i}{\partial Q^k}
+                                    \]</span></p>
+                                    <p>以上から、元の変数でオイラー・ラグランジュ方程式が成り立つと、新しい変数でもオイラー・ラグランジュ方程式が成り立つ、すなわち、オイラー・ラグランジュ方程式が任意の点変換において共変であることが示された。</p>
                                     <h1
                                     id="記号の節約表記について">記号の節約表記について</h1>
                                     <p>ここで、ラグランジアンを扱う際にどの変数を独立とみなし、どの変数が独立でないのかがよくわからなくなることが多い。これは主に表記において記号の節約を行うことに起因する。例えば、ある関数<span
