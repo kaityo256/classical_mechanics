@@ -59,140 +59,8 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <h1
-                                    id="ニュートンの運動方程式">ニュートンの運動方程式</h1>
+                                    id="ニュートンの運動方程式運動量保存則">ニュートンの運動方程式：運動量保存則</h1>
                                     <h2 id="問題">問題</h2>
-                                    <p>二次元平面上に、質量<span
-                                    class="math inline">\(m\)</span>の質点が中心力<span
-                                    class="math inline">\(U(r)\)</span>を受けて運動している(ただし<span
-                                    class="math inline">\(r=\sqrt{x^2+y^2})\)</span>。この時、角運動量<span
-                                    class="math inline">\(L=m(\dot{x} y
-                                    - \dot{y}
-                                    x)\)</span>が保存量であることを示せ。</p>
-                                    <h2 id="解答例">解答例</h2>
-                                    <p><span class="math display">\[
-                                    r = \sqrt{x^2+y^2}
-                                    \]</span></p>
-                                    <p>であるから、</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{\partial r}{\partial x} &amp;
-                                    = \frac{x}{r} \\
-                                    \frac{\partial r}{\partial y} &amp;
-                                    = \frac{y}{r}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>これを用いると、運動方程式は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \ddot{x} &amp;= - \partial_x U(r)
-                                    = -U&#39;(r) \frac{\partial
-                                    r}{\partial x}= - U&#39;(r)
-                                    \frac{x}{r} \\
-                                    m \ddot{y} &amp;= - \partial_y U(r)
-                                    = -U&#39;(r) \frac{\partial
-                                    r}{\partial y}= - U&#39;(r)
-                                    \frac{y}{r}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>従って、</p>
-                                    <p><span class="math display">\[
-                                    m \dot{x} y - m\ddot{y} x = 0
-                                    \]</span></p>
-                                    <p>角運動量の時間微分<span
-                                    class="math inline">\(\dot{L}\)</span>は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \dot{L} &amp;= m \frac{d}{dt}
-                                    (\dot{x} y - \dot{y} x) \\
-                                    &amp;= m (\ddot{x} y +
-                                    \cancel{\dot{x}\dot{y}} - \ddot{y}x
-                                    - \cancel{\dot{y}\dot{x}}) \\
-                                    &amp;= m \ddot{x} y - m \ddot{y} x
-                                    \\
-                                    &amp;=0
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>以上から、角運動量<span
-                                    class="math inline">\(L\)</span>が保存量であることが示された。</p>
-                                    <h1
-                                    id="振り子の運動">振り子の運動</h1>
-                                    <h2 id="問題-1">問題</h2>
-                                    <p>二次元平面の原点に長さ<span
-                                    class="math inline">\(l\)</span>の棒に繋がれた質量<span
-                                    class="math inline">\(m\)</span>の質点がある。棒は原点を中心として摩擦なく自由に回転できる。また、棒は質量が無視でき、かつ運動により長さが変化しないものとする。棒が鉛直下方向からなす角度を<span
-                                    class="math inline">\(\theta\)</span>、重力加速度を<span
-                                    class="math inline">\(g\)</span>とする。この時、以下の問にこたえよ。</p>
-                                    <h2 id="section">(1)</h2>
-                                    <p>角速度が<span
-                                    class="math inline">\(\dot{\theta}\)</span>である時、この系の運動エネルギーを求めよ。</p>
-                                    <h2 id="section-1">(2)</h2>
-                                    <p><span
-                                    class="math inline">\(\theta=0\)</span>の状態を基準とした時のこの系のポテンシャルエネルギーを求めよ。</p>
-                                    <h2 id="section-2">(3)</h2>
-                                    <p>この系のラグランジアンを<span
-                                    class="math inline">\(\theta,
-                                    \dot{\theta}\)</span>の関数として求め、オイラー・ラグランジュの式から運動方程式を導出せよ。ただし、結果は</p>
-                                    <p><span class="math display">\[
-                                    \ddot{\theta} =
-                                    \]</span></p>
-                                    <p>の形に整理すること。</p>
-                                    <h2 id="解答例-1">解答例</h2>
-                                    <ol type="1">
-                                    <li>速度が<span
-                                    class="math inline">\(l\dot{\theta}\)</span>であるから、運動エネルギーは以下で与えられる。</li>
-                                    </ol>
-                                    <p><span class="math display">\[
-                                    K= \frac{1}{2}m l^2 \dot{\theta}^2
-                                    \]</span></p>
-                                    <ol start="2" type="1">
-                                    <li>角度<span
-                                    class="math inline">\(\theta\)</span>の時、<span
-                                    class="math inline">\(\theta=0\)</span>の時に比べて高さが<span
-                                    class="math inline">\(l(1-\cos\theta)\)</span>だけ高くなるため、ポテンシャルエネルギーは以下で与えられる。</li>
-                                    </ol>
-                                    <p><span class="math display">\[
-                                    U = mgl (1- \cos \theta)
-                                    \]</span></p>
-                                    <ol start="3" type="1">
-                                    <li>ラグランジアンは<span
-                                    class="math inline">\(L=K-U\)</span>で与えられるため、</li>
-                                    </ol>
-                                    <p><span class="math display">\[
-                                    L(\theta, \dot{\theta}) =
-                                    \frac{1}{2}m l^2 \dot{\theta}^2 -
-                                    mlg (1- \cos \theta)
-                                    \]</span></p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{\partial L}{\partial
-                                    \dot{\theta}} &amp;= ml^2
-                                    \dot{\theta} \\
-                                    \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{\theta}}\right)
-                                    &amp;= ml^2 \ddot{\theta} \\
-                                    \frac{\partial L}{\partial \theta}
-                                    &amp;= - mlg\sin \theta
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>オイラー・ラグランジュ方程式は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{d}{dt}\left(\frac{\partial
-                                    L}{\partial \dot{\theta}}\right)  -
-                                    \frac{\partial L}{\partial \theta}
-                                    &amp;= ml^2 \ddot{\theta} + mlg\sin
-                                    \theta \\
-                                    &amp;= 0
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>整理すると、以下の運動方程式を得る。</p>
-                                    <p><span class="math display">\[
-                                    \ddot{\theta} = -\frac{g}{l} \sin
-                                    \theta
-                                    \]</span></p>
-                                    <h1
-                                    id="二体相互作用">二体相互作用</h1>
-                                    <h2 id="問題-2">問題</h2>
                                     <p>3次元空間に2つの質点A,
                                     Bがある。これらの質点の座標をそれぞれ<span
                                     class="math inline">\(\boldsymbol{r}_A
@@ -211,17 +79,17 @@
                                     \]</span></p>
                                     <p>質点の質量をどちらも<span
                                     class="math inline">\(m\)</span>とする時、以下の問いに答えよ。</p>
-                                    <h2 id="section-3">(1)</h2>
+                                    <h2 id="section">(1)</h2>
                                     <p>2つの物体に働く力が、作用・反作用の法則を満たすことを示せ(<span
                                     class="math inline">\(x\)</span>成分のみ示せば良い)。</p>
-                                    <h2 id="section-4">(2)</h2>
+                                    <h2 id="section-1">(2)</h2>
                                     <p>この系の<span
                                     class="math inline">\(x\)</span>方向の重心の運動量</p>
                                     <p><span class="math display">\[
                                     p_x = m(\dot{x}_1 + \dot{x}_1)
                                     \]</span></p>
                                     <p>が運動により保存することを示せ。</p>
-                                    <h2 id="解答例-2">解答例</h2>
+                                    <h2 id="解答例">解答例</h2>
                                     <ol type="1">
                                     <li></li>
                                     </ol>
@@ -287,8 +155,237 @@
                                     <p>以上から、<span
                                     class="math inline">\(p_x\)</span>は保存量となる。</p>
                                     <h1
-                                    id="中心力による運動">中心力による運動</h1>
+                                    id="ニュートンの運動方程式角運動量保存則">ニュートンの運動方程式：角運動量保存則</h1>
+                                    <h2 id="問題-1">問題</h2>
+                                    <p>二次元平面上に、質量<span
+                                    class="math inline">\(m\)</span>の質点が中心力<span
+                                    class="math inline">\(U(r)\)</span>を受けて運動している(ただし<span
+                                    class="math inline">\(r=\sqrt{x^2+y^2})\)</span>。この時、角運動量<span
+                                    class="math inline">\(L=m(y\dot{x} -
+                                    x\dot{y})\)</span>が保存量であることを示せ。</p>
+                                    <h2 id="解答例-1">解答例</h2>
+                                    <p><span class="math display">\[
+                                    r = \sqrt{x^2+y^2}
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial r}{\partial x} &amp;
+                                    = \frac{x}{r} \\
+                                    \frac{\partial r}{\partial y} &amp;
+                                    = \frac{y}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを用いると、運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= - \partial_x U(r)
+                                    = -U&#39;(r) \frac{\partial
+                                    r}{\partial x}= - U&#39;(r)
+                                    \frac{x}{r} \\
+                                    m \ddot{y} &amp;= - \partial_y U(r)
+                                    = -U&#39;(r) \frac{\partial
+                                    r}{\partial y}= - U&#39;(r)
+                                    \frac{y}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    m \dot{x} y - m\ddot{y} x = 0
+                                    \]</span></p>
+                                    <p>角運動量の時間微分<span
+                                    class="math inline">\(\dot{L}\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{L} &amp;= m \frac{d}{dt}
+                                    (\dot{x} y - \dot{y} x) \\
+                                    &amp;= m (\ddot{x} y +
+                                    \cancel{\dot{x}\dot{y}} - \ddot{y}x
+                                    - \cancel{\dot{y}\dot{x}}) \\
+                                    &amp;= m \ddot{x} y - m \ddot{y} x
+                                    \\
+                                    &amp;=0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上から、角運動量<span
+                                    class="math inline">\(L\)</span>が保存量であることが示された。</p>
+                                    <h1
+                                    id="仮想仕事の原理">仮想仕事の原理</h1>
+                                    <h2 id="問題-2">問題</h2>
+                                    <figure>
+                                    <img src="fig/slope.png"
+                                    alt="斜面" />
+                                    <figcaption
+                                    aria-hidden="true">斜面</figcaption>
+                                    </figure>
+                                    <p>図のように、摩擦の無い角度<span
+                                    class="math inline">\(\theta\)</span>の斜面上に質量<span
+                                    class="math inline">\(M\)</span>の物体があり、その質点と滑車を通じて質量<span
+                                    class="math inline">\(m\)</span>の物体が紐で繋がれてぶら下がっている。この2つの物体に働く力が釣り合っているとき、2つの質量の間に成り立つ条件を仮想仕事の原理を用いて求めよ。ただし紐は滑車によりなめらかに動くことができ、紐の重さは無視できるものとする。重力加速度は<span
+                                    class="math inline">\(g\)</span>とする。</p>
+                                    <h2 id="解答例-2">解答例</h2>
+                                    <p>質量<span
+                                    class="math inline">\(m\)</span>の物体を<span
+                                    class="math inline">\(\delta
+                                    l\)</span>だけ仮想的に下に動かすことを考える。物体<span
+                                    class="math inline">\(m\)</span>には下方向に重力による力<span
+                                    class="math inline">\(mg\)</span>がかかっているため、<span
+                                    class="math inline">\(m\)</span>が受ける仕事は<span
+                                    class="math inline">\(-mg \delta
+                                    l\)</span>となる。</p>
+                                    <p>一方、斜面の上の物体は<span
+                                    class="math inline">\(\delta
+                                    l\)</span>だけ斜面を登る。物体<span
+                                    class="math inline">\(M\)</span>には斜面を下る方向に<span
+                                    class="math inline">\(Mg \sin
+                                    \theta\)</span>の力が加わっており、それに逆らう方向に動くから、<span
+                                    class="math inline">\(M\)</span>が受ける仕事は<span
+                                    class="math inline">\(Mg \sin \theta
+                                    \delta l\)</span>である。</p>
+                                    <p>仮想仕事の原理より、釣り合いの位置からの仮想変位による仕事はゼロであるから、</p>
+                                    <p><span class="math display">\[
+                                    -mg \delta l + Mg \sin \theta \delta
+                                    l = 0
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    m = M\sin \theta
+                                    \]</span></p>
+                                    <h1
+                                    id="変分原理ベルトラミの公式">変分原理：ベルトラミの公式</h1>
                                     <h2 id="問題-3">問題</h2>
+                                    <p>関数<span
+                                    class="math inline">\(f(x)\)</span>及びその微分<span
+                                    class="math inline">\(f&#39;(x)\)</span>に依存する関数<span
+                                    class="math inline">\(F(f(x),
+                                    f&#39;(x))\)</span>を考える。ただし、<span
+                                    class="math inline">\(F\)</span>は<span
+                                    class="math inline">\(x\)</span>には陽に依存しない、すなわち</p>
+                                    <p><span class="math display">\[
+                                    \partial F/\partial x = 0
+                                    \]</span></p>
+                                    <p>であるとする。この関数<span
+                                    class="math inline">\(F\)</span>についてオイラー・ラグランジュ方程式</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt} \left(\frac{\partial
+                                    L}{\partial f&#39;} \right)
+                                    - \frac{\partial F}{\partial f} = 0
+                                    \]</span></p>
+                                    <p>が成り立っているとき、以下の量</p>
+                                    <p><span class="math display">\[
+                                    B = F - f&#39; \frac{\partial
+                                    F}{\partial f&#39;}
+                                    \]</span></p>
+                                    <p>が時間に対して不変になる、すなわち</p>
+                                    <p><span class="math display">\[
+                                    \frac{dB}{dt} = 0
+                                    \]</span></p>
+                                    <p>となることを示せ(ベルトラミの公式)。</p>
+                                    <h2 id="解答例-3">解答例</h2>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dB}{dt} &amp;= \frac{d}{dt}
+                                    \left( F - f&#39; \frac{\partial
+                                    F}{\partial f&#39;}\right) \\
+                                    &amp;= \frac{dF}{dt} - f&#39;&#39;
+                                    \frac{\partial F}{\partial f&#39;}
+                                    -  f&#39;
+                                    \underbrace{\frac{d}{dt}\left(\frac{\partial
+                                    F}{\partial
+                                    f&#39;}\right)}_{=\partial
+                                    L/\partial f}\\
+                                    &amp;= \frac{\partial F}{\partial
+                                    f}f&#39; + \frac{\partial
+                                    F}{\partial f&#39;}f&#39;&#39;
+                                    - f&#39;&#39; \frac{\partial
+                                    F}{\partial f&#39;} - f&#39;
+                                    \frac{\partial F}{\partial f}\\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上から、<span
+                                    class="math inline">\(dB/dt =
+                                    0\)</span>が示された。</p>
+                                    <h1
+                                    id="ラグランジアン-振り子の運動">ラグランジアン:
+                                    振り子の運動</h1>
+                                    <h2 id="問題-4">問題</h2>
+                                    <p>二次元平面の原点に長さ<span
+                                    class="math inline">\(l\)</span>の棒に繋がれた質量<span
+                                    class="math inline">\(m\)</span>の質点がある。棒は原点を中心として摩擦なく自由に回転できる。また、棒は質量が無視でき、かつ運動により長さが変化しないものとする。棒が鉛直下方向からなす角度を<span
+                                    class="math inline">\(\theta\)</span>、重力加速度を<span
+                                    class="math inline">\(g\)</span>とする。この時、以下の問にこたえよ。</p>
+                                    <h2 id="section-2">(1)</h2>
+                                    <p>角速度が<span
+                                    class="math inline">\(\dot{\theta}\)</span>である時、この系の運動エネルギーを求めよ。</p>
+                                    <h2 id="section-3">(2)</h2>
+                                    <p><span
+                                    class="math inline">\(\theta=0\)</span>の状態を基準とした時のこの系のポテンシャルエネルギーを求めよ。</p>
+                                    <h2 id="section-4">(3)</h2>
+                                    <p>この系のラグランジアンを<span
+                                    class="math inline">\(\theta,
+                                    \dot{\theta}\)</span>の関数として求め、オイラー・ラグランジュの式から運動方程式を導出せよ。ただし、結果は</p>
+                                    <p><span class="math display">\[
+                                    \ddot{\theta} =
+                                    \]</span></p>
+                                    <p>の形に整理すること。</p>
+                                    <h2 id="解答例-4">解答例</h2>
+                                    <ol type="1">
+                                    <li>速度が<span
+                                    class="math inline">\(l\dot{\theta}\)</span>であるから、運動エネルギーは以下で与えられる。</li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    K= \frac{1}{2}m l^2 \dot{\theta}^2
+                                    \]</span></p>
+                                    <ol start="2" type="1">
+                                    <li>角度<span
+                                    class="math inline">\(\theta\)</span>の時、<span
+                                    class="math inline">\(\theta=0\)</span>の時に比べて高さが<span
+                                    class="math inline">\(l(1-\cos\theta)\)</span>だけ高くなるため、ポテンシャルエネルギーは以下で与えられる。</li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    U = mgl (1- \cos \theta)
+                                    \]</span></p>
+                                    <ol start="3" type="1">
+                                    <li>ラグランジアンは<span
+                                    class="math inline">\(L=K-U\)</span>で与えられるため、</li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    L(\theta, \dot{\theta}) =
+                                    \frac{1}{2}m l^2 \dot{\theta}^2 -
+                                    mlg (1- \cos \theta)
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial L}{\partial
+                                    \dot{\theta}} &amp;= ml^2
+                                    \dot{\theta} \\
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{\theta}}\right)
+                                    &amp;= ml^2 \ddot{\theta} \\
+                                    \frac{\partial L}{\partial \theta}
+                                    &amp;= - mlg\sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>オイラー・ラグランジュ方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{\theta}}\right)  -
+                                    \frac{\partial L}{\partial \theta}
+                                    &amp;= ml^2 \ddot{\theta} + mlg\sin
+                                    \theta \\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>整理すると、以下の運動方程式を得る。</p>
+                                    <p><span class="math display">\[
+                                    \ddot{\theta} = -\frac{g}{l} \sin
+                                    \theta
+                                    \]</span></p>
+                                    <h1
+                                    id="ラグランジアン中心力による運動">ラグランジアン：中心力による運動</h1>
+                                    <h2 id="問題-5">問題</h2>
                                     <p>二次元空間において、質量<span
                                     class="math inline">\(m\)</span>の質点が中心力<span
                                     class="math inline">\(U(r)\)</span>を受けて運動をしている。ただし、質点の位置を<span
@@ -313,7 +410,7 @@
                                     <p>この系の運動を記述するオイラー・ラグランジュの方程式を書き下し、<span
                                     class="math inline">\(r,
                                     \theta\)</span>が従う運動方程式を求めよ。</p>
-                                    <h2 id="解答例-3">解答例</h2>
+                                    <h2 id="解答例-5">解答例</h2>
                                     <ol type="1">
                                     <li></li>
                                     </ol>
