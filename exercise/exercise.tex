@@ -4,13 +4,16 @@
 \usepackage[dvipdfmx]{graphics}
 \usepackage{here}
 \usepackage[margin=20truemm]{geometry}
+\usepackage{enumitem}
 \renewcommand{\labelenumi}{【\arabic{enumi}】}
 \renewcommand{\labelenumii}{(\arabic{enumii})}
+\setlist[enumerate]{itemsep=10pt}
+
 
 \begin{document}
 
 \begin{center}
-    {\huge 数理物理 予想問題集}\\
+    {\huge 数理物理中間試験 予想問題集}\\
 \end{center}
 
 \begin{enumerate}
@@ -38,24 +41,18 @@
               \includegraphics{fig/slope.png}
           \end{figure}
     \item 関数$f(x)$及びその微分$f'(x)$に依存する関数$F(f(x), f'(x))$を考える。ただし、$F$は$x$には陽に依存しない、すなわち $\partial F/\partial x = 0$ を満たすとする。この関数$F$についてオイラー・ラグランジュ方程式
-
           $$
-              \frac{d}{dt} \left(\frac{\partial L}{\partial f'} \right)
+              \frac{d}{dt} \left(\frac{\partial F}{\partial f'} \right)
               - \frac{\partial F}{\partial f} = 0
           $$
-
           が成り立っているとき、以下の量
-
           $$
               B = F - f' \frac{\partial F}{\partial f'}
           $$
-
           が時間に対して不変になる、すなわち
-
           $$
               \frac{dB}{dt} = 0
           $$
-
           となることを示せ(ベルトラミの公式)。
 
           \newpage
@@ -82,7 +79,6 @@
               \item この系の運動エネルギー$K$を、$r, \theta, \dot{r}, \dot{\theta}$の関数として求めよ。
               \item この系のラグランジアンを求めよ。
               \item この系の運動を記述するオイラー・ラグランジュの方程式を書き下し、$r, \theta$が従う運動方程式を求めよ。
-
           \end{enumerate}
 
 \end{enumerate}
