@@ -33,6 +33,7 @@ copy-pdf:
 	cp newton/README.pdf ./classical_mechanics03.pdf
 	cp virtual_work/README.pdf ./classical_mechanics04.pdf
 	cp hamilton_principle/README.pdf ./classical_mechanics05.pdf
+	cp lagrangian/README.pdf ./classical_mechanics06.pdf
 
 clean:
 	rm -f $(TARGET) index.html
