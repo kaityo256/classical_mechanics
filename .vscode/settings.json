@@ -5,5 +5,12 @@
         "strings": "on",
         "other": "on"
     }
+  },
+  "[tex]":{
+  "editor.tabSize": 2
+  },
+"[latex]":{
+  "editor.tabSize": 2
   }
+
 }
