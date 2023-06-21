@@ -99,6 +99,127 @@
           \end{aligned}
         $$
         以上から、角運動量$L$が保存量であることが示された。
+  \item 質量$m$の物体を$\delta l$だけ仮想的に下に動かすことを考える。物体$m$には下方向に重力による力$mg$がかかっているため、$m$が受ける仕事は$-mg \delta l$となる。
+
+        一方、斜面の上の物体は$\delta l$だけ斜面を登る。物体$M$には斜面を下る方向に$Mg \sin \theta$の力が加わっており、それに逆らう方向に動くから、$M$が受ける仕事は$Mg \sin \theta \delta l$である。
+
+        仮想仕事の原理より、釣り合いの位置からの仮想変位による仕事はゼロであるから、
+
+        $$
+          -mg \delta l + Mg \sin \theta \delta l = 0
+        $$
+
+        以上から、
+
+        $$
+          m = M\sin \theta
+        $$
+  \item
+        $$
+          \begin{aligned}
+            \frac{dB}{dt} & = \frac{d}{dt} \left( F - f' \frac{\partial F}{\partial f'}\right)                  \\
+                          & = \frac{dF}{dt} - f'' \frac{\partial F}{\partial f'}
+            -  f' \underbrace{\frac{d}{dt}\left(\frac{\partial F}{\partial f'}\right)}_{=\partial L/\partial f} \\
+                          & = \frac{\partial F}{\partial f}f' + \frac{\partial F}{\partial f'}f''
+            - f'' \frac{\partial F}{\partial f'} - f' \frac{\partial F}{\partial f}                             \\
+                          & = 0
+          \end{aligned}
+        $$
+
+        以上から、$dB/dt = 0$が示された。
+  \item
+        \begin{enumerate}
+          \item 速度が$l\dot{\theta}$であるから、運動エネルギーは以下で与えられる。
+
+                $$
+                  K= \frac{1}{2}m l^2 \dot{\theta}^2
+                $$
+          \item 角度$\theta$の時、$\theta=0$の時に比べて高さが$l(1-\cos\theta)$だけ高くなるため、ポテンシャルエネルギーは以下で与えられる。
+
+                $$
+                  U = mgl (1- \cos \theta)
+                $$
+
+          \item ラグランジアンは$L=K-U$で与えられるため、この系のラグランジアンは以下で与えられる。
+                $$
+                  L(\theta, \dot{\theta}) = \frac{1}{2}m l^2 \dot{\theta}^2 - mlg (1- \cos \theta)
+                $$
+                ここからオイラー・ラグランジュ方程式を求めると、
+                $$
+                  \begin{aligned}
+                    \frac{\partial L}{\partial \dot{\theta}}                          & = ml^2 \dot{\theta}  \\
+                    \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) & = ml^2 \ddot{\theta} \\
+                    \frac{\partial L}{\partial \theta}                                & = - mlg\sin \theta
+                  \end{aligned}
+                $$
+                以上から、オイラー・ラグランジュ方程式は
+                $$
+                  \begin{aligned}
+                    \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)  - \frac{\partial L}{\partial \theta}
+                     & = ml^2 \ddot{\theta} + mlg\sin \theta \\
+                     & = 0
+                  \end{aligned}
+                $$
+                これを整理すると、以下の運動方程式を得る。
+                $$
+                  \ddot{\theta} = -\frac{g}{l} \sin \theta
+                $$
+        \end{enumerate}
+  \item
+        \begin{enumerate}
+          \item 極座標表示を時間微分する
+                $$
+                  \begin{aligned}
+                    \dot{x} & = \dot{r}\cos \theta - r \dot{\theta} \sin \theta \\
+                    \dot{y} & = \dot{r}\sin \theta + r \dot{\theta} \cos \theta
+                  \end{aligned}
+                $$
+                この系の運動エネルギーは$m(\dot{x}^2 + \dot{y}^2)/2$であることから、
+                $$
+                  K = \frac{1}{2}m(\dot{r}^2 + r^2 \dot{\theta}^2)
+                $$
+          \item $$
+                  \begin{aligned}
+                    L & = K - U                                               \\
+                      & = \frac{1}{2}m(\dot{r}^2 + r^2 \dot{\theta}^2) - U(r)
+                  \end{aligned}
+                $$
+          \item $r$に関するオイラー・ラグランジュ方程式は、
+
+                $$
+                  \begin{aligned}
+                    \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right) - \frac{\partial L}{\partial r}
+                     & = m \ddot{r} - mr\dot{\theta}^2 + \frac{\partial U}{\partial r} \\
+                     & = 0
+                  \end{aligned}
+                $$
+
+                整理すると、
+
+                $$
+                  m(\ddot{r} - r \dot{\theta}^2)= -\frac{\partial U}{\partial r}
+                $$
+
+                同様に、$\theta$に関するオイラー・ラグランジュ方程式は、
+
+                $$
+                  \begin{aligned}
+                    \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} & = \frac{d}{dt}(r^2\dot{\theta}) \\
+                                                                                                                           & = 0
+                  \end{aligned}
+                $$
+
+                以上をまとめると、運動方程式は
+
+                $$
+                  \begin{aligned}
+                    m(\ddot{r} - r \dot{\theta}^2) & = -\frac{\partial U}{\partial r} \\
+                    \frac{d}{dt}(r^2\dot{\theta})  & = 0
+                  \end{aligned}
+                $$
+
+
+        \end{enumerate}
 \end{enumerate}
 
 
