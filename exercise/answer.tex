@@ -46,7 +46,11 @@
                 $$
 
                 以上から、物体AB間に働く力は、大きさは同じで向きが逆である、すなわち作用・反作用の法則が成り立つことがわかる。
-          \item 物体A,Bの運動方程式は
+          \item $p_x$の時間微分を計算すると、
+                $$
+                  \dot{p}_x = m(\ddot{x}_A + \ddot{x}_B)
+                $$
+                ここで、物体A,Bの運動方程式は
 
                 $$
                   \begin{aligned}
@@ -54,20 +58,21 @@
                     m\ddot{x}_B & = U' \frac{x_A - x_B}{r}  \\
                   \end{aligned}
                 $$
-                両辺の和を取ると、
+                であるから、両辺の和を取ると、
                 $$
                   m (\ddot{x}_A + \ddot{x}_B) = 0
                 $$
-                ここで、$p_x$の時間微分を計算すると、
-                $$
-                  \begin{aligned}
-                    \dot{p}_x & = m (\ddot{x}_A+\ddot{x}_B) \\
-                              & = 0
-                  \end{aligned}
-                $$
-                以上から、$p_x$は保存量となる。
+                以上から、$\dot{p}_x=0$となるため、$p_x$は保存量となる。
         \end{enumerate}
-  \item
+  \item 角運動量の時間微分は
+        $$
+          \begin{aligned}
+            \dot{L} & = m \frac{d}{dt} (\dot{x} y - \dot{y} x)                                         \\
+                    & = m (\ddot{x} y + \cancel{\dot{x}\dot{y}} - \ddot{y}x - \cancel{\dot{y}\dot{x}}) \\
+                    & = m \ddot{x} y - m \ddot{y} x                                                    \\
+          \end{aligned}
+        $$
+        また、
         $$
           r = \sqrt{x^2+y^2}
         $$
@@ -89,16 +94,7 @@
         $$
           m \dot{x} y - m\ddot{y} x = 0
         $$
-        角運動量の時間微分$\dot{L}$は
-        $$
-          \begin{aligned}
-            \dot{L} & = m \frac{d}{dt} (\dot{x} y - \dot{y} x)                                         \\
-                    & = m (\ddot{x} y + \cancel{\dot{x}\dot{y}} - \ddot{y}x - \cancel{\dot{y}\dot{x}}) \\
-                    & = m \ddot{x} y - m \ddot{y} x                                                    \\
-                    & =0
-          \end{aligned}
-        $$
-        以上から、角運動量$L$が保存量であることが示された。
+        以上から、$\dot{L}=0$であるから、$L$が保存量であることが示された。
   \item 質量$m$の物体を$\delta l$だけ仮想的に下に動かすことを考える。物体$m$には下方向に重力による力$mg$がかかっているため、$m$が受ける仕事は$-mg \delta l$となる。
 
         一方、斜面の上の物体は$\delta l$だけ斜面を登る。物体$M$には斜面を下る方向に$Mg \sin \theta$の力が加わっており、それに逆らう方向に動くから、$M$が受ける仕事は$Mg \sin \theta \delta l$である。
@@ -117,16 +113,16 @@
   \item
         $$
           \begin{aligned}
-            \frac{dB}{dt} & = \frac{d}{dt} \left( F - f' \frac{\partial F}{\partial f'}\right)                  \\
-                          & = \frac{dF}{dt} - f'' \frac{\partial F}{\partial f'}
-            -  f' \underbrace{\frac{d}{dt}\left(\frac{\partial F}{\partial f'}\right)}_{=\partial L/\partial f} \\
+            \frac{dB}{dx} & = \frac{d}{dx} \left( F - f' \frac{\partial F}{\partial f'}\right)                  \\
+                          & = \frac{dF}{dx} - f'' \frac{\partial F}{\partial f'}
+            -  f' \underbrace{\frac{d}{dx}\left(\frac{\partial F}{\partial f'}\right)}_{=\partial L/\partial f} \\
                           & = \frac{\partial F}{\partial f}f' + \frac{\partial F}{\partial f'}f''
             - f'' \frac{\partial F}{\partial f'} - f' \frac{\partial F}{\partial f}                             \\
                           & = 0
           \end{aligned}
         $$
 
-        以上から、$dB/dt = 0$が示された。
+        以上から、$dB/dx = 0$が示された。
   \item
         \begin{enumerate}
           \item 速度が$l\dot{\theta}$であるから、運動エネルギーは以下で与えられる。
