@@ -465,7 +465,7 @@ $$
 $$
 
 が成り立たなければならない。$F$が$y$と$y'$の関数である時、
-
+ 
 $$
 \frac{\delta F}{\delta y} \equiv \frac{\partial F}{\partial y} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'} \right)
 $$
