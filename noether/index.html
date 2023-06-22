@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>対称性とネーターの定理</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="icon" href="https://kaityo256.github.io/classical_mechanics/favicon.ico">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">対称性とネーターの定理</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1
+                                    id="ハミルトニアンと対称性">ハミルトニアンと対称性</h1>
+                                    <p>ニュートンの運動方程式では、発見法的に保存則を見つけていた。しかし、全ての運動方程式がただひとつのハミルトニアンから導出されるのであるから、系に存在する保存量の情報もハミルトニアンに含まれるはずである。それを見ていこう。</p>
+                                    <p>まず、二次元空間中の質点の自由運動を考えよう。質点の質量を<span
+                                    class="math inline">\(m\)</span>とし、座標を<span
+                                    class="math inline">\((q^x,
+                                    q^y)\)</span>、運動量を<span
+                                    class="math inline">\((p_x,
+                                    p_y)\)</span>とすると、ハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    H = \frac{1}{2m}(p_x^2+p_y^2)
+                                    \]</span></p>
+                                    <p>となる。さて、ハミルトンの運動方程式より</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{p}_x &amp;= -\frac{\partial
+                                    H}{\partial q^x} = 0 \\
+                                    \dot{p}_y &amp;= -\frac{\partial
+                                    H}{\partial q^y} = 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、<span
+                                    class="math inline">\(p_x\)</span>および<span
+                                    class="math inline">\(p_y\)</span>が保存されることがわかる。運動量の時間微分は、ハミルトニアンを共役な座標で偏微分することで得られるから、ハミルトニアンに座標が陽に含まれない場合はただちに保存量となることがわかる。このように、ハミルトニアンに陽に含まれない座標を
+                                    <strong>循環座標(cyclic
+                                    coordinate)</strong>
+                                    と呼び、その共役な運動量が保存量となる。</p>
+                                    <p>与えられたハミルトニアンに循環座標が含まれない場合でも、変数変換により循環座標が現れる場合がある。一次元空間中に質量<span
+                                    class="math inline">\(m\)</span>の質点AとBがあり、相対距離だけに依存するポテンシャルで相互作用しているとしよう。質点A、Bの座標を<span
+                                    class="math inline">\(q^A,
+                                    q^B\)</span>、運動量を<span
+                                    class="math inline">\(p_A,
+                                    p_B\)</span>とすると、この系のハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    H(q^A, q^B, p_A, p_B) =
+                                    \frac{1}{2m}(p_A^2+p_A^2) +
+                                    U(q^A-q^B)
+                                    \]</span></p>
+                                    <p>で表すことができる。このハミルトニアンは、座標<span
+                                    class="math inline">\(q_A,
+                                    q_B\)</span>の両方を含むため、循環座標は存在しない。ここで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q^1 &amp;= \frac{q^A + q^B}{2}\\
+                                    Q^2 &amp;= \frac{q^A - q^B}{2}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>という変換を考えよう。<span
+                                    class="math inline">\(Q^1\)</span>は重心座標である。対応する運動量が</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    P_1 &amp;= p_A+p_B \\
+                                    P_2 &amp;= p_A-p_B \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>になることに注意すると、新しいハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    H(Q^1, Q^2, P_1, P_2) =
+                                    \frac{1}{4m}(P_1^2+P_2^2) + U(Q^2)
+                                    \]</span></p>
+                                    <p>となり、ハミルトニアンは<span
+                                    class="math inline">\(Q^1\)</span>を含まなくなる。そこから直ちに共役な運動量である<span
+                                    class="math inline">\(P^1\)</span>の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量が保存量となることを示す。</p>
+                                    <p>角運動量保存についても同様である。二次元空間<span
+                                    class="math inline">\((x,y)\)</span>において、原点からの距離<span
+                                    class="math inline">\(r=\sqrt{x^2+y^2}\)</span>にのみ依存するポテンシャルに支配された運動を考える。</p>
+                    </article>
+    </body>
+
+    </html>
