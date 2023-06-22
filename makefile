@@ -37,3 +37,6 @@ copy-pdf:
 
 clean:
 	rm -f $(TARGET) index.html
+
+clean-pdf:
+	rm -f $(PDF) classical_mechanics*.pdf
