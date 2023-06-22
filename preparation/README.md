@@ -9,7 +9,7 @@
 我々は3次元空間に住んでいるため、力学でも3次元空間中の運動を扱うことが多い。3次元空間中では、質点の位置を指定したり、速度や力を指定したりするのに3つの数字の組が必要になる。例えば、ある質点の座標が$(r_x,r_y,r_z)$である時、
 
 $$
-\boldsymbol{r} =
+\mathbf{r} =
 \begin{pmatrix}
 r_x\\
 r_y\\
@@ -17,16 +17,16 @@ r_z
 \end{pmatrix}
 $$
 
-とまとめて表記する。このように、いくつかの数字の組で表現される量を **ベクトル(vector)** と呼ぶ。特に、$\boldsymbol{r}$ は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本講義ノートでは$\boldsymbol{r}$のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。
+とまとめて表記する。このように、いくつかの数字の組で表現される量を **ベクトル(vector)** と呼ぶ。特に、$\mathbf{r}$ は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本講義ノートでは$\mathbf{r}$のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。
 
-一方、ベクトルではない普通の数を **スカラー(scalar)** と呼ぶ。スカラーの定義は追って与える。また、板書では縦ベクトルは縦に書くが、講義ノートでは紙面の都合から横に書きたいことがある。その場合は$\boldsymbol{r} = {}^t(r_x, r_y, r_z)$のように、ベクトルの最初に$t$をつけて表す。この$t$は転置を表し、横ベクトルを転置することで、縦ベクトルであることを表現している。
+一方、ベクトルではない普通の数を **スカラー(scalar)** と呼ぶ。スカラーの定義は追って与える。また、板書では縦ベクトルは縦に書くが、講義ノートでは紙面の都合から横に書きたいことがある。その場合は$\mathbf{r} = {}^t(r_x, r_y, r_z)$のように、ベクトルの最初に$t$をつけて表す。この$t$は転置を表し、横ベクトルを転置することで、縦ベクトルであることを表現している。
 
 ### 基底ベクトルと内積
 
 力学におけるベクトルで重要な点は、座標変換によるベクトルの変換である。先程のベクトル表記では、数を3つ縦に並べた。これは、以下のように書き直すことができる。
 
 $$
-\boldsymbol{r} =
+\mathbf{r} =
 r_x
 \begin{pmatrix}
 1\\
@@ -49,28 +49,28 @@ r_y
 \end{pmatrix}
 $$
 
-3つの基本的なベクトルの和にわけることができた。この基本的なベクトルを$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$と書こう。すると、
+3つの基本的なベクトルの和にわけることができた。この基本的なベクトルを$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$と書こう。すると、
 
 $$
-\boldsymbol{r} = r_x \boldsymbol{e_x} + r_y \boldsymbol{e_y} + r_z \boldsymbol{e_z}
+\mathbf{r} = r_x \mathbf{e_x} + r_y \mathbf{e_y} + r_z \mathbf{e_z}
 $$
 
-と表記できる。この時、$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ。特に、
+と表記できる。この時、$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ。特に、
 
 $$
-\boldsymbol{e}_x =
+\mathbf{e}_x =
 \begin{pmatrix}
 1\\
 0\\
 0
 \end{pmatrix},
-\boldsymbol{e}_y =
+\mathbf{e}_y =
 \begin{pmatrix}
 0\\
 1\\
 0
 \end{pmatrix},
-\boldsymbol{e}_z =
+\mathbf{e}_z =
 \begin{pmatrix}
 0\\
 0\\
@@ -81,38 +81,38 @@ $$
 の形をとる基底を標準基底と呼ぶ。
 
 $$
-\boldsymbol{r} =
+\mathbf{r} =
 \begin{pmatrix}
 r_x\\
 r_y\\
 r_z
 \end{pmatrix}
 $$
-という表記は、標準基底ベクトル$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$を採用した時のベクトル$\boldsymbol{r}$の展開表現である。
+という表記は、標準基底ベクトル$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$を採用した時のベクトル$\mathbf{r}$の展開表現である。
 
 すなわち、本来なら
 
 $$
-\boldsymbol{r} = r_x \boldsymbol{e_x} + r_y \boldsymbol{e_y} + r_z \boldsymbol{e_z}
+\mathbf{r} = r_x \mathbf{e_x} + r_y \mathbf{e_y} + r_z \mathbf{e_z}
 $$
 
-と書くべきところを、基底ベクトルを$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$と暗黙に仮定した上で括弧で略記した記法である。
+と書くべきところを、基底ベクトルを$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$と暗黙に仮定した上で括弧で略記した記法である。
 
-さて、今は$\boldsymbol{e}_x$などが簡単な形をしているため、$\boldsymbol{r}$を$\boldsymbol{e}_x$などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。
+さて、今は$\mathbf{e}_x$などが簡単な形をしているため、$\mathbf{r}$を$\mathbf{e}_x$などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。
 
-基底ベクトル$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$は、要素が縦に並んでいる縦ベクトルであった。これらの対になるベクトルとして、以下の横ベクトルを定義する。
+基底ベクトル$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$は、要素が縦に並んでいる縦ベクトルであった。これらの対になるベクトルとして、以下の横ベクトルを定義する。
 
 $$
 \begin{aligned}
-\boldsymbol{e}^x =
+\mathbf{e}^x =
 \begin{pmatrix}
 1 & 0 & 0
 \end{pmatrix} \\
-\boldsymbol{e}^y =
+\mathbf{e}^y =
 \begin{pmatrix}
 0 & 1 & 0
 \end{pmatrix} \\
-\boldsymbol{e}^z =
+\mathbf{e}^z =
 \begin{pmatrix}
 0 & 0 & 1
 \end{pmatrix}
@@ -121,10 +121,10 @@ $$
 
 縦ベクトルの添字を下に、横ベクトルの添字を上につけている。縦ベクトルと横ベクトルの間には内積を定義することができる。
 
-例えば、$\boldsymbol{e}^x$と$\boldsymbol{e}_x$の内積を取ると
+例えば、$\mathbf{e}^x$と$\mathbf{e}_x$の内積を取ると
 
 $$
-(\boldsymbol{e}^x, \boldsymbol{e}_x) =
+(\mathbf{e}^x, \mathbf{e}_x) =
 \begin{pmatrix}
 1 & 0 & 0
 \end{pmatrix}
@@ -136,10 +136,10 @@ $$
 = 1
 $$
 
-同様に、$\boldsymbol{e}^x$と$\boldsymbol{e}_y$の内積を取ると
+同様に、$\mathbf{e}^x$と$\mathbf{e}_y$の内積を取ると
 
 $$
-(\boldsymbol{e}^x, \boldsymbol{e}_y) =
+(\mathbf{e}^x, \mathbf{e}_y) =
 \begin{pmatrix}
 1 & 0 & 0
 \end{pmatrix}
@@ -152,73 +152,73 @@ $$
 $$
 つまり、添字が同じであれば1に、異なれば0になる。
 
-いちいち座標を$x,y,z$と書いていると、特に和を取る時に不便なので、以下$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$を、それぞれ$\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3$と表記しよう。相方となる基底$\boldsymbol{e}^1,\boldsymbol{e}^2,\boldsymbol{e}^3$も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。
+いちいち座標を$x,y,z$と書いていると、特に和を取る時に不便なので、以下$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$を、それぞれ$\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$と表記しよう。相方となる基底$\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3$も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。
 
 $$
-(\boldsymbol{e}^i, \boldsymbol{e}_j) = \delta_{i,j}
+(\mathbf{e}^i, \mathbf{e}_j) = \delta_{i,j}
 $$
 
 内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。
 
 一般に、あるベクトルと、内積をとる相手のベクトルの住む空間は異なる。自分が住む空間から見て、内積を取る相手が住む空間を **双対空間(dual space)** と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。
 
-ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、２つの空間を区別する必要がない場合は２つのベクトル$\boldsymbol{a} = {}^t(a_1, a_2, a_3)$と$\boldsymbol{b} = {}^t(b_1, b_2, b_3)$の内積を
+ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、２つの空間を区別する必要がない場合は２つのベクトル$\mathbf{a} = {}^t(a_1, a_2, a_3)$と$\mathbf{b} = {}^t(b_1, b_2, b_3)$の内積を
 
 $$
 \begin{aligned}
-\boldsymbol{a} \cdot \boldsymbol{b} &\equiv ({}^t \boldsymbol{a}, \boldsymbol{b}) \\
+\mathbf{a} \cdot \mathbf{b} &\equiv ({}^t \mathbf{a}, \mathbf{b}) \\
 &= a_1 b_1 + a_2 b_2 + a_3 b_3 \\
 &= \sum_i^{3} a_i b_j
 \end{aligned}
 $$
 
-とドット表記で書く場合もある。以後、内積の表記法としてドット表記$\boldsymbol{a} \cdot \boldsymbol{b}$と括弧表記$(\boldsymbol{a} , \boldsymbol{b})$の両方を使う。
+とドット表記で書く場合もある。以後、内積の表記法としてドット表記$\mathbf{a} \cdot \mathbf{b}$と括弧表記$(\mathbf{a} , \mathbf{b})$の両方を使う。
 
-さて、ある基底$\boldsymbol{e_i}$が正規直交基底であるとする。ベクトル$\boldsymbol{r}$と基底との内積が、
+さて、ある基底$\mathbf{e_i}$が正規直交基底であるとする。ベクトル$\mathbf{r}$と基底との内積が、
 
 $$
 \begin{aligned}
-\boldsymbol{r} \cdot \boldsymbol{e_x} &= r_x \\
-\boldsymbol{r} \cdot \boldsymbol{e_y} &= r_y \\
-\boldsymbol{r} \cdot \boldsymbol{e_z} &= r_z
+\mathbf{r} \cdot \mathbf{e_x} &= r_x \\
+\mathbf{r} \cdot \mathbf{e_y} &= r_y \\
+\mathbf{r} \cdot \mathbf{e_z} &= r_z
 \end{aligned}
 $$
 
 で与えられている時、この基底でベクトルが以下のように展開できる。
 
 $$
-\boldsymbol{r} = r_x \boldsymbol{e_x} + r_y \boldsymbol{e_y} + r_z \boldsymbol{e_z}
+\mathbf{r} = r_x \mathbf{e_x} + r_y \mathbf{e_y} + r_z \mathbf{e_z}
 $$
 
 なんとなく展開係数が先で、内積が後のように考えがちだが、物理においては特定の座標を特別視しないため、座標系に依存しないベクトルがまず存在し、必要に応じて座標系を定義してその展開係数を調べる、というイメージを持った方がよい場合がある。
 
-さて、ある基底$\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$で表現されたベクトル$\boldsymbol{r} = {}^t(r_1, r_2, r_3)$について、別の基底$\boldsymbol{e}'_1, \boldsymbol{e}'_2, \boldsymbol{e}'_3$で展開した時の表現$\boldsymbol{r} = {}^t(r'_1, r'_2, r'_3)$を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。
+さて、ある基底$\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$で表現されたベクトル$\mathbf{r} = {}^t(r_1, r_2, r_3)$について、別の基底$\mathbf{e}'_1, \mathbf{e}'_2, \mathbf{e}'_3$で展開した時の表現$\mathbf{r} = {}^t(r'_1, r'_2, r'_3)$を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。
 
 $$
 \begin{aligned}
-\boldsymbol{r} &= r_1 \boldsymbol{e}_1  +r_1 \boldsymbol{e}_2+r_3 \boldsymbol{e}_3\\
-&= r'_1 \boldsymbol{e}'_1  +r'_1 \boldsymbol{e}'_2+r'_3 \boldsymbol{e}'_3\\
+\mathbf{r} &= r_1 \mathbf{e}_1  +r_1 \mathbf{e}_2+r_3 \mathbf{e}_3\\
+&= r'_1 \mathbf{e}'_1  +r'_1 \mathbf{e}'_2+r'_3 \mathbf{e}'_3\\
 \end{aligned}
 $$
 
 もし、それぞれの基底が正規直交基底であるならば、任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。
 
-例えば、基底ベクトル$\boldsymbol{e}'_1$に対する成分$r'_1$を知りたければ、$\boldsymbol{e}'_1$と$\boldsymbol{r}$との内積を取ればよい。
+例えば、基底ベクトル$\mathbf{e}'_1$に対する成分$r'_1$を知りたければ、$\mathbf{e}'_1$と$\mathbf{r}$との内積を取ればよい。
 
 $$
-r'_1 = \boldsymbol{e}'_1 \cdot \boldsymbol{r}
+r'_1 = \mathbf{e}'_1 \cdot \mathbf{r}
 $$
 
-さて、$\boldsymbol{r}$を基底$\boldsymbol{e}_i$で展開しておき、左から別の基底$\boldsymbol{e}'_j$との内積を取ろう。
+さて、$\mathbf{r}$を基底$\mathbf{e}_i$で展開しておき、左から別の基底$\mathbf{e}'_j$との内積を取ろう。
 
 $$
 \begin{aligned}
-r'_j &= \boldsymbol{e}'_j \cdot \boldsymbol{r}  \\
-&= \sum_i r_i \boldsymbol{e}'_j \cdot  \boldsymbol{e}_i
+r'_j &= \mathbf{e}'_j \cdot \mathbf{r}  \\
+&= \sum_i r_i \mathbf{e}'_j \cdot  \mathbf{e}_i
 \end{aligned}
 $$
 
-この式は「あるベクトル$\boldsymbol{r}$について、ある基底$\boldsymbol{e}_i$での展開係数がわかっている場合、別の基底$\boldsymbol{e}'_j$での展開係数を知るには、基底同士の内積 $\boldsymbol{e}'_j \cdot  \boldsymbol{e}_i$ がわかっていればいれば良い」ということを意味する。
+この式は「あるベクトル$\mathbf{r}$について、ある基底$\mathbf{e}_i$での展開係数がわかっている場合、別の基底$\mathbf{e}'_j$での展開係数を知るには、基底同士の内積 $\mathbf{e}'_j \cdot  \mathbf{e}_i$ がわかっていればいれば良い」ということを意味する。
 
 このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。
 
@@ -240,11 +240,11 @@ $$
 
 解析力学においては、いわゆる行列の意味でのテンソル積はあまりでてこない。しかし、後に学ぶ微分形式でその概念が必要となるので、簡単に紹介しておこう。
 
-基底$\boldsymbol{e}_1$と、その相方とのテンソル積 $\boldsymbol{e}^1 \otimes \boldsymbol{e}_1$を以下のように定義する。
+基底$\mathbf{e}_1$と、その相方とのテンソル積 $\mathbf{e}^1 \otimes \mathbf{e}_1$を以下のように定義する。
 
 $$
 \begin{aligned}
-\boldsymbol{e}^1 \otimes \boldsymbol{e}_1 &=
+\mathbf{e}^1 \otimes \mathbf{e}_1 &=
 \begin{pmatrix}
 1 & 0 & 0
 \end{pmatrix}
@@ -261,7 +261,7 @@ $$
 \end{pmatrix}
 $$
 
-これが3行3列の行列の1行目1列目の要素を表現する基底になっていることがわかるであろう。全く同様に$\boldsymbol{e}^j \otimes \boldsymbol{e}_i$を定義することができ、これが$i$行目の$j$列目の要素を表現する。これらにより3行3列の行列を展開できる。
+これが3行3列の行列の1行目1列目の要素を表現する基底になっていることがわかるであろう。全く同様に$\mathbf{e}^j \otimes \mathbf{e}_i$を定義することができ、これが$i$行目の$j$列目の要素を表現する。これらにより3行3列の行列を展開できる。
 
 $$
 \begin{aligned}
@@ -271,7 +271,7 @@ A^1_1 & A^2_1 & A^3_1 \\
 A^1_2 & A^2_2 & A^3_2 \\
 A^1_3 & A^2_3 & A^3_3
 \end{pmatrix}
-= \sum_{i=1}^{3} \sum_{j=1}^{3} A^i_j \boldsymbol{e}^i \otimes \boldsymbol{e}_j
+= \sum_{i=1}^{3} \sum_{j=1}^{3} A^i_j \mathbf{e}^i \otimes \mathbf{e}_j
 \end{aligned}
 $$
 
@@ -287,7 +287,7 @@ A^1_1 & A^2_1 & A^3_1 \\
 A^1_2 & A^2_2 & A^3_2 \\
 A^1_3 & A^2_3 & A^3_3
 \end{pmatrix}
-= A^i_j \boldsymbol{e}^i \otimes \boldsymbol{e}_j
+= A^i_j \mathbf{e}^i \otimes \mathbf{e}_j
 \end{aligned}
 $$
 
@@ -295,32 +295,32 @@ $$
 
 テンソルは様々なところに現れる。例えば連続体の力学では応力テンソルが重要な役割を果たす。一方、テンソルは抽象的な概念であり、なかなかイメージすることが難しい。まず、テンソルを内積を通じて理解しておくと良い。
 
-縦ベクトル$\boldsymbol{a}$と、横ベクトル$\boldsymbol{b}$の内積を要素表現すると、
+縦ベクトル$\mathbf{a}$と、横ベクトル$\mathbf{b}$の内積を要素表現すると、
 
 $$
-(\boldsymbol{a}, \boldsymbol{b}) = b^i a_i
+(\mathbf{a}, \mathbf{b}) = b^i a_i
 $$
 
 となる。ここでアインシュタイン規約を使っていることに注意。上下の足がつぶれて足のない数、すなわちスカラーになっている。
 
-同様に、行列$A$と、縦ベクトルの基底$\boldsymbol{e}_k$の内積$(A, \boldsymbol{e}_k)$を考えよう。行列$A$は、縦ベクトルと横ベクトルのテンソル積で展開できるのであるから、
+同様に、行列$A$と、縦ベクトルの基底$\mathbf{e}_k$の内積$(A, \mathbf{e}_k)$を考えよう。行列$A$は、縦ベクトルと横ベクトルのテンソル積で展開できるのであるから、
 
 $$
-(A, \boldsymbol{e}_k) = (A^i_j \boldsymbol{e}^i \otimes \boldsymbol{e}_j, \boldsymbol{e}_k)
+(A, \mathbf{e}_k) = (A^i_j \mathbf{e}^i \otimes \mathbf{e}_j, \mathbf{e}_k)
 $$
 
 ここで、横ベクトルと縦ベクトルの内積が
 
 $$
-(\boldsymbol{e}^i, \boldsymbol{e}_k) = \delta_{ik}
+(\mathbf{e}^i, \mathbf{e}_k) = \delta_{ik}
 $$
 
 を満たすことから、$i=k$のところだけが残り、
 
 $$
 \begin{aligned}
-(A, \boldsymbol{e}_k) &= (A^i_j \boldsymbol{e}^i \otimes \boldsymbol{e}_j, \boldsymbol{e}_k)\\
-&= A^k_i \boldsymbol{e}^i
+(A, \mathbf{e}_k) &= (A^i_j \mathbf{e}^i \otimes \mathbf{e}_j, \mathbf{e}_k)\\
+&= A^k_i \mathbf{e}^i
 \end{aligned}
 $$
 
@@ -329,7 +329,7 @@ $$
 ここでは、2階のテンソルとして縦ベクトルと横ベクトルのテンソル積を考えたが、縦ベクトル2つのテンソル積を考えることもできる。その場合は添字が2つとも下付きとなる。
 
 $$
-A = A_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j
+A = A_{ij} \mathbf{e}_i \otimes \mathbf{e}_j
 $$
 
 こうして作られたテンソルは、行列のように表現できないが、「横ベクトルと内積をとると横ベクトルとなり、さらに横ベクトルと内積をとるとスカラーになるもの」と理解できる。このように、テンソルがイメージできないうちは「上下の逆側の足を持つベクトルと内積をとると、その足が潰せるもの」と理解しておくと良い。
@@ -433,7 +433,7 @@ $$
 
 次に、ベクトルが絡んだ微分について考えよう。多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、ポテンシャルエネルギーはスカラー量であるが、位置の関数であるから引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。
 
-質点の位置が$\boldsymbol{r} = {}^t(x,y,z)$で表されており、その位置に依存するスカラー関数$f(\boldsymbol{r})$があるとしよう。ただし、$f$は$t$には陽には依存しないとする。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。$f$は$x,y,z$に依存する関数であるから、
+質点の位置が$\mathbf{r} = {}^t(x,y,z)$で表されており、その位置に依存するスカラー関数$f(\mathbf{r})$があるとしよう。ただし、$f$は$t$には陽には依存しないとする。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。$f$は$x,y,z$に依存する関数であるから、
 
 $$
 \frac{df}{dt} = \frac{\partial f}{\partial x} \dot{x}
@@ -466,7 +466,7 @@ $$
 ここで、速度ベクトル
 
 $$
-\dot{\boldsymbol{r}} =
+\dot{\mathbf{r}} =
 \begin{pmatrix}
 \dot{x} \\
 \dot{y} \\
@@ -477,7 +477,7 @@ $$
 を定義すると、先程の$f$の時間微分は以下のように表記できる。
 
 $$
-\frac{df}{dt} = (\nabla f) \cdot \dot{\boldsymbol{r}}
+\frac{df}{dt} = (\nabla f) \cdot \dot{\mathbf{r}}
 $$
 
 $\nabla$を使う簡単な例として太陽系を考えよう。太陽質量を$M$、地球の質量を$m$とし、地球の座標を$(x,y)$とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。
@@ -537,7 +537,7 @@ $$
 さらに、地球の座標をベクトルで表そう。
 
 $$
-\boldsymbol{r} =
+\mathbf{r} =
 \begin{pmatrix}
 x \\ y
 \end{pmatrix}
@@ -547,17 +547,17 @@ $$
 
 $$
 \begin{aligned}
-m \frac{d^2 \boldsymbol{r}}{dt^2} &= - \nabla V
+m \frac{d^2 \mathbf{r}}{dt^2} &= - \nabla V
 \end{aligned}
 $$
 
 両辺ともにベクトルで有ることに注意。
 
-$\nabla$を$d/ d\boldsymbol{r}$と表現すれば
+$\nabla$を$d/ d\mathbf{r}$と表現すれば
 
 $$
 \begin{aligned}
-m \frac{d^2 \boldsymbol{r}}{dt^2} &= -\frac{d V}{d \boldsymbol{r}}
+m \frac{d^2 \mathbf{r}}{dt^2} &= -\frac{d V}{d \mathbf{r}}
 \end{aligned}
 $$
 
@@ -582,13 +582,13 @@ $$
 $\nabla$とベクトル場と内積を取るとスカラー場になる。これは発散(divergence)と呼ばれ、$\mathrm{div}$で表記することがある。
 
 $$
-\mathrm{div} \boldsymbol{v} \equiv \nabla \cdot \boldsymbol{v}
+\mathrm{div} \mathbf{v} \equiv \nabla \cdot \mathbf{v}
 $$
 
 $\nabla$とベクトル場との外積をとるとベクトル場になる。これは回転(rotation)と呼ばれ、$\mathrm{rot}$で表記することがある。
 
 $$
-\mathrm{rot} \boldsymbol{v} \equiv \nabla \times \boldsymbol{v}
+\mathrm{rot} \mathbf{v} \equiv \nabla \times \mathbf{v}
 $$
 
 これらがなぜ勾配、発散、回転と呼ばれているか、またその物理的な意味については位相空間の節で説明する。
@@ -649,14 +649,14 @@ $$
 すると、これがまるでベクトルを基底で展開しているかのように見える。
 
 $$
-\boldsymbol{f} = \frac{\partial f}{\partial x} \boldsymbol{e}_x +
-\frac{\partial f}{\partial y} \boldsymbol{e}_y
+\mathbf{f} = \frac{\partial f}{\partial x} \mathbf{e}_x +
+\frac{\partial f}{\partial y} \mathbf{e}_y
 $$
 
-両辺、$\boldsymbol{e}_x$の相方である$\boldsymbol{e}^x$との内積を取ると、
+両辺、$\mathbf{e}_x$の相方である$\mathbf{e}^x$との内積を取ると、
 
 $$
-(\boldsymbol{e}^x, \boldsymbol{f}) = \frac{\partial f}{\partial x}
+(\mathbf{e}^x, \mathbf{f}) = \frac{\partial f}{\partial x}
 $$
 
 となる。以上から、$df$をベクトル、$dx$や$dy$を基底のように扱うことができることがわかる。さらに、$dx$をベクトルと見た時、その相方となるベクトルが$\partial_x$であることもわかる。すなわち、$dx, dy, dz$と$\partial_x, \partial_y, \partial_z$の間には、自然な内積、
