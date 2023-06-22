@@ -66,7 +66,7 @@
                                     <p>我々は3次元空間に住んでいるため、力学でも3次元空間中の運動を扱うことが多い。3次元空間中では、質点の位置を指定したり、速度や力を指定したりするのに3つの数字の組が必要になる。例えば、ある質点の座標が<span
                                     class="math inline">\((r_x,r_y,r_z)\)</span>である時、</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \mathbf{r} =
                                     \begin{pmatrix}
                                     r_x\\
                                     r_y\\
@@ -76,14 +76,14 @@
                                     <p>とまとめて表記する。このように、いくつかの数字の組で表現される量を
                                     <strong>ベクトル(vector)</strong>
                                     と呼ぶ。特に、<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>
+                                    class="math inline">\(\mathbf{r}\)</span>
                                     は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本講義ノートでは<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。</p>
+                                    class="math inline">\(\mathbf{r}\)</span>のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。</p>
                                     <p>一方、ベクトルではない普通の数を
                                     <strong>スカラー(scalar)</strong>
                                     と呼ぶ。スカラーの定義は追って与える。また、板書では縦ベクトルは縦に書くが、講義ノートでは紙面の都合から横に書きたいことがある。その場合は<span
-                                    class="math inline">\(\boldsymbol{r}
-                                    = {}^t(r_x, r_y,
+                                    class="math inline">\(\mathbf{r} =
+                                    {}^t(r_x, r_y,
                                     r_z)\)</span>のように、ベクトルの最初に<span
                                     class="math inline">\(t\)</span>をつけて表す。この<span
                                     class="math inline">\(t\)</span>は転置を表し、横ベクトルを転置することで、縦ベクトルであることを表現している。</p>
@@ -91,7 +91,7 @@
                                     id="基底ベクトルと内積">基底ベクトルと内積</h2>
                                     <p>力学におけるベクトルで重要な点は、座標変換によるベクトルの変換である。先程のベクトル表記では、数を3つ縦に並べた。これは、以下のように書き直すことができる。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \mathbf{r} =
                                     r_x
                                     \begin{pmatrix}
                                     1\\
@@ -114,29 +114,27 @@
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>3つの基本的なベクトルの和にわけることができた。この基本的なベクトルを<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>と書こう。すると、</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と書こう。すると、</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} = r_x
-                                    \boldsymbol{e_x} + r_y
-                                    \boldsymbol{e_y} + r_z
-                                    \boldsymbol{e_z}
+                                    \mathbf{r} = r_x \mathbf{e_x} + r_y
+                                    \mathbf{e_y} + r_z \mathbf{e_z}
                                     \]</span></p>
                                     <p>と表記できる。この時、<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ。特に、</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ。特に、</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{e}_x =
+                                    \mathbf{e}_x =
                                     \begin{pmatrix}
                                     1\\
                                     0\\
                                     0
                                     \end{pmatrix},
-                                    \boldsymbol{e}_y =
+                                    \mathbf{e}_y =
                                     \begin{pmatrix}
                                     0\\
                                     1\\
                                     0
                                     \end{pmatrix},
-                                    \boldsymbol{e}_z =
+                                    \mathbf{e}_z =
                                     \begin{pmatrix}
                                     0\\
                                     0\\
@@ -145,7 +143,7 @@
                                     \]</span></p>
                                     <p>の形をとる基底を標準基底と呼ぶ。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \mathbf{r} =
                                     \begin{pmatrix}
                                     r_x\\
                                     r_y\\
@@ -153,34 +151,32 @@
                                     \end{pmatrix}
                                     \]</span>
                                     という表記は、標準基底ベクトル<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を採用した時のベクトル<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>の展開表現である。</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を採用した時のベクトル<span
+                                    class="math inline">\(\mathbf{r}\)</span>の展開表現である。</p>
                                     <p>すなわち、本来なら</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} = r_x
-                                    \boldsymbol{e_x} + r_y
-                                    \boldsymbol{e_y} + r_z
-                                    \boldsymbol{e_z}
+                                    \mathbf{r} = r_x \mathbf{e_x} + r_y
+                                    \mathbf{e_y} + r_z \mathbf{e_z}
                                     \]</span></p>
                                     <p>と書くべきところを、基底ベクトルを<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>と暗黙に仮定した上で括弧で略記した記法である。</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と暗黙に仮定した上で括弧で略記した記法である。</p>
                                     <p>さて、今は<span
-                                    class="math inline">\(\boldsymbol{e}_x\)</span>などが簡単な形をしているため、<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>を<span
-                                    class="math inline">\(\boldsymbol{e}_x\)</span>などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。</p>
+                                    class="math inline">\(\mathbf{e}_x\)</span>などが簡単な形をしているため、<span
+                                    class="math inline">\(\mathbf{r}\)</span>を<span
+                                    class="math inline">\(\mathbf{e}_x\)</span>などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。</p>
                                     <p>基底ベクトル<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>は、要素が縦に並んでいる縦ベクトルであった。これらの対になるベクトルとして、以下の横ベクトルを定義する。</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>は、要素が縦に並んでいる縦ベクトルであった。これらの対になるベクトルとして、以下の横ベクトルを定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{e}^x =
+                                    \mathbf{e}^x =
                                     \begin{pmatrix}
                                     1 &amp; 0 &amp; 0
                                     \end{pmatrix} \\
-                                    \boldsymbol{e}^y =
+                                    \mathbf{e}^y =
                                     \begin{pmatrix}
                                     0 &amp; 1 &amp; 0
                                     \end{pmatrix} \\
-                                    \boldsymbol{e}^z =
+                                    \mathbf{e}^z =
                                     \begin{pmatrix}
                                     0 &amp; 0 &amp; 1
                                     \end{pmatrix}
@@ -188,11 +184,10 @@
                                     \]</span></p>
                                     <p>縦ベクトルの添字を下に、横ベクトルの添字を上につけている。縦ベクトルと横ベクトルの間には内積を定義することができる。</p>
                                     <p>例えば、<span
-                                    class="math inline">\(\boldsymbol{e}^x\)</span>と<span
-                                    class="math inline">\(\boldsymbol{e}_x\)</span>の内積を取ると</p>
+                                    class="math inline">\(\mathbf{e}^x\)</span>と<span
+                                    class="math inline">\(\mathbf{e}_x\)</span>の内積を取ると</p>
                                     <p><span class="math display">\[
-                                    (\boldsymbol{e}^x, \boldsymbol{e}_x)
-                                    =
+                                    (\mathbf{e}^x, \mathbf{e}_x) =
                                     \begin{pmatrix}
                                     1 &amp; 0 &amp; 0
                                     \end{pmatrix}
@@ -204,11 +199,10 @@
                                     = 1
                                     \]</span></p>
                                     <p>同様に、<span
-                                    class="math inline">\(\boldsymbol{e}^x\)</span>と<span
-                                    class="math inline">\(\boldsymbol{e}_y\)</span>の内積を取ると</p>
+                                    class="math inline">\(\mathbf{e}^x\)</span>と<span
+                                    class="math inline">\(\mathbf{e}_y\)</span>の内積を取ると</p>
                                     <p><span class="math display">\[
-                                    (\boldsymbol{e}^x, \boldsymbol{e}_y)
-                                    =
+                                    (\mathbf{e}^x, \mathbf{e}_y) =
                                     \begin{pmatrix}
                                     1 &amp; 0 &amp; 0
                                     \end{pmatrix}
@@ -222,12 +216,12 @@
                                     つまり、添字が同じであれば1に、異なれば0になる。</p>
                                     <p>いちいち座標を<span
                                     class="math inline">\(x,y,z\)</span>と書いていると、特に和を取る時に不便なので、以下<span
-                                    class="math inline">\(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\)</span>を、それぞれ<span
-                                    class="math inline">\(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3\)</span>と表記しよう。相方となる基底<span
-                                    class="math inline">\(\boldsymbol{e}^1,\boldsymbol{e}^2,\boldsymbol{e}^3\)</span>も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を、それぞれ<span
+                                    class="math inline">\(\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3\)</span>と表記しよう。相方となる基底<span
+                                    class="math inline">\(\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3\)</span>も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。</p>
                                     <p><span class="math display">\[
-                                    (\boldsymbol{e}^i, \boldsymbol{e}_j)
-                                    = \delta_{i,j}
+                                    (\mathbf{e}^i, \mathbf{e}_j) =
+                                    \delta_{i,j}
                                     \]</span></p>
                                     <p>内積がゼロであることを直交していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を直交基底と呼ぶ。さらに相方との内積が1に規格化されている基底を正規直交基底と呼ぶ。基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。</p>
                                     <p>一般に、あるベクトルと、内積をとる相手のベクトルの住む空間は異なる。自分が住む空間から見て、内積を取る相手が住む空間を
@@ -235,106 +229,99 @@
                                     space)</strong>
                                     と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。</p>
                                     <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、２つの空間を区別する必要がない場合は２つのベクトル<span
-                                    class="math inline">\(\boldsymbol{a}
-                                    = {}^t(a_1, a_2,
-                                    a_3)\)</span>と<span
-                                    class="math inline">\(\boldsymbol{b}
-                                    = {}^t(b_1, b_2,
+                                    class="math inline">\(\mathbf{a} =
+                                    {}^t(a_1, a_2, a_3)\)</span>と<span
+                                    class="math inline">\(\mathbf{b} =
+                                    {}^t(b_1, b_2,
                                     b_3)\)</span>の内積を</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{a} \cdot \boldsymbol{b}
-                                    &amp;\equiv ({}^t \boldsymbol{a},
-                                    \boldsymbol{b}) \\
+                                    \mathbf{a} \cdot \mathbf{b}
+                                    &amp;\equiv ({}^t \mathbf{a},
+                                    \mathbf{b}) \\
                                     &amp;= a_1 b_1 + a_2 b_2 + a_3 b_3
                                     \\
                                     &amp;= \sum_i^{3} a_i b_j
                                     \end{aligned}
                                     \]</span></p>
                                     <p>とドット表記で書く場合もある。以後、内積の表記法としてドット表記<span
-                                    class="math inline">\(\boldsymbol{a}
+                                    class="math inline">\(\mathbf{a}
                                     \cdot
-                                    \boldsymbol{b}\)</span>と括弧表記<span
-                                    class="math inline">\((\boldsymbol{a}
-                                    ,
-                                    \boldsymbol{b})\)</span>の両方を使う。</p>
+                                    \mathbf{b}\)</span>と括弧表記<span
+                                    class="math inline">\((\mathbf{a} ,
+                                    \mathbf{b})\)</span>の両方を使う。</p>
                                     <p>さて、ある基底<span
-                                    class="math inline">\(\boldsymbol{e_i}\)</span>が正規直交基底であるとする。ベクトル<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>と基底との内積が、</p>
+                                    class="math inline">\(\mathbf{e_i}\)</span>が正規直交基底であるとする。ベクトル<span
+                                    class="math inline">\(\mathbf{r}\)</span>と基底との内積が、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{r} \cdot
-                                    \boldsymbol{e_x} &amp;= r_x \\
-                                    \boldsymbol{r} \cdot
-                                    \boldsymbol{e_y} &amp;= r_y \\
-                                    \boldsymbol{r} \cdot
-                                    \boldsymbol{e_z} &amp;= r_z
+                                    \mathbf{r} \cdot \mathbf{e_x} &amp;=
+                                    r_x \\
+                                    \mathbf{r} \cdot \mathbf{e_y} &amp;=
+                                    r_y \\
+                                    \mathbf{r} \cdot \mathbf{e_z} &amp;=
+                                    r_z
                                     \end{aligned}
                                     \]</span></p>
                                     <p>で与えられている時、この基底でベクトルが以下のように展開できる。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} = r_x
-                                    \boldsymbol{e_x} + r_y
-                                    \boldsymbol{e_y} + r_z
-                                    \boldsymbol{e_z}
+                                    \mathbf{r} = r_x \mathbf{e_x} + r_y
+                                    \mathbf{e_y} + r_z \mathbf{e_z}
                                     \]</span></p>
                                     <p>なんとなく展開係数が先で、内積が後のように考えがちだが、物理においては特定の座標を特別視しないため、座標系に依存しないベクトルがまず存在し、必要に応じて座標系を定義してその展開係数を調べる、というイメージを持った方がよい場合がある。</p>
                                     <p>さて、ある基底<span
-                                    class="math inline">\(\boldsymbol{e}_1,
-                                    \boldsymbol{e}_2,
-                                    \boldsymbol{e}_3\)</span>で表現されたベクトル<span
-                                    class="math inline">\(\boldsymbol{r}
-                                    = {}^t(r_1, r_2,
+                                    class="math inline">\(\mathbf{e}_1,
+                                    \mathbf{e}_2,
+                                    \mathbf{e}_3\)</span>で表現されたベクトル<span
+                                    class="math inline">\(\mathbf{r} =
+                                    {}^t(r_1, r_2,
                                     r_3)\)</span>について、別の基底<span
-                                    class="math inline">\(\boldsymbol{e}&#39;_1,
-                                    \boldsymbol{e}&#39;_2,
-                                    \boldsymbol{e}&#39;_3\)</span>で展開した時の表現<span
-                                    class="math inline">\(\boldsymbol{r}
-                                    = {}^t(r&#39;_1, r&#39;_2,
+                                    class="math inline">\(\mathbf{e}&#39;_1,
+                                    \mathbf{e}&#39;_2,
+                                    \mathbf{e}&#39;_3\)</span>で展開した時の表現<span
+                                    class="math inline">\(\mathbf{r} =
+                                    {}^t(r&#39;_1, r&#39;_2,
                                     r&#39;_3)\)</span>を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{r} &amp;= r_1
-                                    \boldsymbol{e}_1  +r_1
-                                    \boldsymbol{e}_2+r_3
-                                    \boldsymbol{e}_3\\
+                                    \mathbf{r} &amp;= r_1
+                                    \mathbf{e}_1  +r_1 \mathbf{e}_2+r_3
+                                    \mathbf{e}_3\\
                                     &amp;= r&#39;_1
-                                    \boldsymbol{e}&#39;_1  +r&#39;_1
-                                    \boldsymbol{e}&#39;_2+r&#39;_3
-                                    \boldsymbol{e}&#39;_3\\
+                                    \mathbf{e}&#39;_1  +r&#39;_1
+                                    \mathbf{e}&#39;_2+r&#39;_3
+                                    \mathbf{e}&#39;_3\\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>もし、それぞれの基底が正規直交基底であるならば、任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。</p>
                                     <p>例えば、基底ベクトル<span
-                                    class="math inline">\(\boldsymbol{e}&#39;_1\)</span>に対する成分<span
+                                    class="math inline">\(\mathbf{e}&#39;_1\)</span>に対する成分<span
                                     class="math inline">\(r&#39;_1\)</span>を知りたければ、<span
-                                    class="math inline">\(\boldsymbol{e}&#39;_1\)</span>と<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>との内積を取ればよい。</p>
+                                    class="math inline">\(\mathbf{e}&#39;_1\)</span>と<span
+                                    class="math inline">\(\mathbf{r}\)</span>との内積を取ればよい。</p>
                                     <p><span class="math display">\[
-                                    r&#39;_1 = \boldsymbol{e}&#39;_1
-                                    \cdot \boldsymbol{r}
+                                    r&#39;_1 = \mathbf{e}&#39;_1 \cdot
+                                    \mathbf{r}
                                     \]</span></p>
                                     <p>さて、<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>を基底<span
-                                    class="math inline">\(\boldsymbol{e}_i\)</span>で展開しておき、左から別の基底<span
-                                    class="math inline">\(\boldsymbol{e}&#39;_j\)</span>との内積を取ろう。</p>
+                                    class="math inline">\(\mathbf{r}\)</span>を基底<span
+                                    class="math inline">\(\mathbf{e}_i\)</span>で展開しておき、左から別の基底<span
+                                    class="math inline">\(\mathbf{e}&#39;_j\)</span>との内積を取ろう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    r&#39;_j &amp;=
-                                    \boldsymbol{e}&#39;_j \cdot
-                                    \boldsymbol{r}  \\
-                                    &amp;= \sum_i r_i
-                                    \boldsymbol{e}&#39;_j
-                                    \cdot  \boldsymbol{e}_i
+                                    r&#39;_j &amp;= \mathbf{e}&#39;_j
+                                    \cdot \mathbf{r}  \\
+                                    &amp;= \sum_i r_i \mathbf{e}&#39;_j
+                                    \cdot  \mathbf{e}_i
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この式は「あるベクトル<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>について、ある基底<span
-                                    class="math inline">\(\boldsymbol{e}_i\)</span>での展開係数がわかっている場合、別の基底<span
-                                    class="math inline">\(\boldsymbol{e}&#39;_j\)</span>での展開係数を知るには、基底同士の内積
+                                    class="math inline">\(\mathbf{r}\)</span>について、ある基底<span
+                                    class="math inline">\(\mathbf{e}_i\)</span>での展開係数がわかっている場合、別の基底<span
+                                    class="math inline">\(\mathbf{e}&#39;_j\)</span>での展開係数を知るには、基底同士の内積
                                     <span
-                                    class="math inline">\(\boldsymbol{e}&#39;_j
-                                    \cdot \boldsymbol{e}_i\)</span>
+                                    class="math inline">\(\mathbf{e}&#39;_j
+                                    \cdot \mathbf{e}_i\)</span>
                                     がわかっていればいれば良い」ということを意味する。</p>
                                     <p>このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。</p>
                                     <h2
@@ -367,15 +354,15 @@
                                     <h2 id="テンソル積">テンソル積</h2>
                                     <p>解析力学においては、いわゆる行列の意味でのテンソル積はあまりでてこない。しかし、後に学ぶ微分形式でその概念が必要となるので、簡単に紹介しておこう。</p>
                                     <p>基底<span
-                                    class="math inline">\(\boldsymbol{e}_1\)</span>と、その相方とのテンソル積
+                                    class="math inline">\(\mathbf{e}_1\)</span>と、その相方とのテンソル積
                                     <span
-                                    class="math inline">\(\boldsymbol{e}^1
+                                    class="math inline">\(\mathbf{e}^1
                                     \otimes
-                                    \boldsymbol{e}_1\)</span>を以下のように定義する。</p>
+                                    \mathbf{e}_1\)</span>を以下のように定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{e}^1 \otimes
-                                    \boldsymbol{e}_1 &amp;=
+                                    \mathbf{e}^1 \otimes \mathbf{e}_1
+                                    &amp;=
                                     \begin{pmatrix}
                                     1 &amp; 0 &amp; 0
                                     \end{pmatrix}
@@ -392,9 +379,9 @@
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>これが3行3列の行列の1行目1列目の要素を表現する基底になっていることがわかるであろう。全く同様に<span
-                                    class="math inline">\(\boldsymbol{e}^j
+                                    class="math inline">\(\mathbf{e}^j
                                     \otimes
-                                    \boldsymbol{e}_i\)</span>を定義することができ、これが<span
+                                    \mathbf{e}_i\)</span>を定義することができ、これが<span
                                     class="math inline">\(i\)</span>行目の<span
                                     class="math inline">\(j\)</span>列目の要素を表現する。これらにより3行3列の行列を展開できる。</p>
                                     <p><span class="math display">\[
@@ -406,8 +393,8 @@
                                     A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
                                     = \sum_{i=1}^{3} \sum_{j=1}^{3}
-                                    A^i_j \boldsymbol{e}^i \otimes
-                                    \boldsymbol{e}_j
+                                    A^i_j \mathbf{e}^i \otimes
+                                    \mathbf{e}_j
                                     \end{aligned}
                                     \]</span></p>
                                     <p>さて、多くの場合において、和の範囲は自明である。例えば<span
@@ -427,8 +414,8 @@
                                     A^1_2 &amp; A^2_2 &amp; A^3_2 \\
                                     A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
-                                    = A^i_j \boldsymbol{e}^i \otimes
-                                    \boldsymbol{e}_j
+                                    = A^i_j \mathbf{e}^i \otimes
+                                    \mathbf{e}_j
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ベクトルや行列を要素表現した時の添字の数を「足」と呼ぶ。ベクトルのテンソル積を考えることで足を増やすことができる。ベクトルは足が1本であり、行列は足が2本である。ベクトルのテンソル積により作られた世界は、元になったベクトルよりも広い世界になっている。例えば3次元縦ベクトルと横ベクトルのテンソル積は、3行3列の行列、すなわち9次元の空間になっている。このベクトルや行列をまとめて
@@ -436,45 +423,43 @@
                                     と呼ぶ。足の本数、つまり添字の数をテンソルの階数と呼ぶ。ベクトルは1階のテンソル、行列は2階のテンソルである。テンソル積により、いくらでも高階のテンソルを考えることができる。</p>
                                     <p>テンソルは様々なところに現れる。例えば連続体の力学では応力テンソルが重要な役割を果たす。一方、テンソルは抽象的な概念であり、なかなかイメージすることが難しい。まず、テンソルを内積を通じて理解しておくと良い。</p>
                                     <p>縦ベクトル<span
-                                    class="math inline">\(\boldsymbol{a}\)</span>と、横ベクトル<span
-                                    class="math inline">\(\boldsymbol{b}\)</span>の内積を要素表現すると、</p>
+                                    class="math inline">\(\mathbf{a}\)</span>と、横ベクトル<span
+                                    class="math inline">\(\mathbf{b}\)</span>の内積を要素表現すると、</p>
                                     <p><span class="math display">\[
-                                    (\boldsymbol{a}, \boldsymbol{b}) =
-                                    b^i a_i
+                                    (\mathbf{a}, \mathbf{b}) = b^i a_i
                                     \]</span></p>
                                     <p>となる。ここでアインシュタイン規約を使っていることに注意。上下の足がつぶれて足のない数、すなわちスカラーになっている。</p>
                                     <p>同様に、行列<span
                                     class="math inline">\(A\)</span>と、縦ベクトルの基底<span
-                                    class="math inline">\(\boldsymbol{e}_k\)</span>の内積<span
+                                    class="math inline">\(\mathbf{e}_k\)</span>の内積<span
                                     class="math inline">\((A,
-                                    \boldsymbol{e}_k)\)</span>を考えよう。行列<span
+                                    \mathbf{e}_k)\)</span>を考えよう。行列<span
                                     class="math inline">\(A\)</span>は、縦ベクトルと横ベクトルのテンソル積で展開できるのであるから、</p>
                                     <p><span class="math display">\[
-                                    (A, \boldsymbol{e}_k) = (A^i_j
-                                    \boldsymbol{e}^i \otimes
-                                    \boldsymbol{e}_j, \boldsymbol{e}_k)
+                                    (A, \mathbf{e}_k) = (A^i_j
+                                    \mathbf{e}^i \otimes \mathbf{e}_j,
+                                    \mathbf{e}_k)
                                     \]</span></p>
                                     <p>ここで、横ベクトルと縦ベクトルの内積が</p>
                                     <p><span class="math display">\[
-                                    (\boldsymbol{e}^i, \boldsymbol{e}_k)
-                                    = \delta_{ik}
+                                    (\mathbf{e}^i, \mathbf{e}_k) =
+                                    \delta_{ik}
                                     \]</span></p>
                                     <p>を満たすことから、<span
                                     class="math inline">\(i=k\)</span>のところだけが残り、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    (A, \boldsymbol{e}_k) &amp;= (A^i_j
-                                    \boldsymbol{e}^i \otimes
-                                    \boldsymbol{e}_j,
-                                    \boldsymbol{e}_k)\\
-                                    &amp;= A^k_i \boldsymbol{e}^i
+                                    (A, \mathbf{e}_k) &amp;= (A^i_j
+                                    \mathbf{e}^i \otimes \mathbf{e}_j,
+                                    \mathbf{e}_k)\\
+                                    &amp;= A^k_i \mathbf{e}^i
                                     \end{aligned}
                                     \]</span></p>
                                     <p>となる。つまり、行列と縦ベクトルの内積をとると、行列を構成していた横ベクトルの成分と相殺して、縦ベクトルが残る、と解釈できる。同様に、行列と横ベクトルの内積を取ると、縦ベクトルの成分と相殺して横ベクトルが出てくる。</p>
                                     <p>ここでは、2階のテンソルとして縦ベクトルと横ベクトルのテンソル積を考えたが、縦ベクトル2つのテンソル積を考えることもできる。その場合は添字が2つとも下付きとなる。</p>
                                     <p><span class="math display">\[
-                                    A = A_{ij} \boldsymbol{e}_i \otimes
-                                    \boldsymbol{e}_j
+                                    A = A_{ij} \mathbf{e}_i \otimes
+                                    \mathbf{e}_j
                                     \]</span></p>
                                     <p>こうして作られたテンソルは、行列のように表現できないが、「横ベクトルと内積をとると横ベクトルとなり、さらに横ベクトルと内積をとるとスカラーになるもの」と理解できる。このように、テンソルがイメージできないうちは「上下の逆側の足を持つベクトルと内積をとると、その足が潰せるもの」と理解しておくと良い。</p>
                                     <h1
@@ -588,10 +573,9 @@
                                     id="ベクトル解析">ベクトル解析</h1>
                                     <p>次に、ベクトルが絡んだ微分について考えよう。多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、ポテンシャルエネルギーはスカラー量であるが、位置の関数であるから引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。</p>
                                     <p>質点の位置が<span
-                                    class="math inline">\(\boldsymbol{r}
-                                    =
+                                    class="math inline">\(\mathbf{r} =
                                     {}^t(x,y,z)\)</span>で表されており、その位置に依存するスカラー関数<span
-                                    class="math inline">\(f(\boldsymbol{r})\)</span>があるとしよう。ただし、<span
+                                    class="math inline">\(f(\mathbf{r})\)</span>があるとしよう。ただし、<span
                                     class="math inline">\(f\)</span>は<span
                                     class="math inline">\(t\)</span>には陽には依存しないとする。この関数は、ベクトルを食わせるとスカラーを返す関数である。たとえば場所に依存する温度のようなものを想像すれば良い。この量の微分を考える。<span
                                     class="math inline">\(f\)</span>は<span
@@ -627,7 +611,7 @@
                                     \]</span></p>
                                     <p>ここで、速度ベクトル</p>
                                     <p><span class="math display">\[
-                                    \dot{\boldsymbol{r}} =
+                                    \dot{\mathbf{r}} =
                                     \begin{pmatrix}
                                     \dot{x} \\
                                     \dot{y} \\
@@ -638,7 +622,7 @@
                                     class="math inline">\(f\)</span>の時間微分は以下のように表記できる。</p>
                                     <p><span class="math display">\[
                                     \frac{df}{dt} = (\nabla f) \cdot
-                                    \dot{\boldsymbol{r}}
+                                    \dot{\mathbf{r}}
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(\nabla\)</span>を使う簡単な例として太陽系を考えよう。太陽質量を<span
@@ -700,7 +684,7 @@
                                     \]</span></p>
                                     <p>さらに、地球の座標をベクトルで表そう。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \mathbf{r} =
                                     \begin{pmatrix}
                                     x \\ y
                                     \end{pmatrix}
@@ -708,19 +692,19 @@
                                     <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
-                                    &amp;= - \nabla V
+                                    m \frac{d^2 \mathbf{r}}{dt^2} &amp;=
+                                    - \nabla V
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺ともにベクトルで有ることに注意。</p>
                                     <p><span
                                     class="math inline">\(\nabla\)</span>を<span
                                     class="math inline">\(d/
-                                    d\boldsymbol{r}\)</span>と表現すれば</p>
+                                    d\mathbf{r}\)</span>と表現すれば</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \frac{d^2 \boldsymbol{r}}{dt^2}
-                                    &amp;= -\frac{d V}{d \boldsymbol{r}}
+                                    m \frac{d^2 \mathbf{r}}{dt^2} &amp;=
+                                    -\frac{d V}{d \mathbf{r}}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>となり、一次元空間での運動方程式</p>
@@ -743,15 +727,15 @@
                                     class="math inline">\(\nabla\)</span>とベクトル場と内積を取るとスカラー場になる。これは発散(divergence)と呼ばれ、<span
                                     class="math inline">\(\mathrm{div}\)</span>で表記することがある。</p>
                                     <p><span class="math display">\[
-                                    \mathrm{div} \boldsymbol{v} \equiv
-                                    \nabla \cdot \boldsymbol{v}
+                                    \mathrm{div} \mathbf{v} \equiv
+                                    \nabla \cdot \mathbf{v}
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(\nabla\)</span>とベクトル場との外積をとるとベクトル場になる。これは回転(rotation)と呼ばれ、<span
                                     class="math inline">\(\mathrm{rot}\)</span>で表記することがある。</p>
                                     <p><span class="math display">\[
-                                    \mathrm{rot} \boldsymbol{v} \equiv
-                                    \nabla \times \boldsymbol{v}
+                                    \mathrm{rot} \mathbf{v} \equiv
+                                    \nabla \times \mathbf{v}
                                     \]</span></p>
                                     <p>これらがなぜ勾配、発散、回転と呼ばれているか、またその物理的な意味については位相空間の節で説明する。</p>
                                     <p>なお、<span
@@ -840,16 +824,16 @@
                                     \]</span></p>
                                     <p>すると、これがまるでベクトルを基底で展開しているかのように見える。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{f} = \frac{\partial
-                                    f}{\partial x} \boldsymbol{e}_x +
+                                    \mathbf{f} = \frac{\partial
+                                    f}{\partial x} \mathbf{e}_x +
                                     \frac{\partial f}{\partial y}
-                                    \boldsymbol{e}_y
+                                    \mathbf{e}_y
                                     \]</span></p>
                                     <p>両辺、<span
-                                    class="math inline">\(\boldsymbol{e}_x\)</span>の相方である<span
-                                    class="math inline">\(\boldsymbol{e}^x\)</span>との内積を取ると、</p>
+                                    class="math inline">\(\mathbf{e}_x\)</span>の相方である<span
+                                    class="math inline">\(\mathbf{e}^x\)</span>との内積を取ると、</p>
                                     <p><span class="math display">\[
-                                    (\boldsymbol{e}^x, \boldsymbol{f}) =
+                                    (\mathbf{e}^x, \mathbf{f}) =
                                     \frac{\partial f}{\partial x}
                                     \]</span></p>
                                     <p>となる。以上から、<span

@@ -137,74 +137,70 @@
                                     aria-hidden="true">反変ベクトル</figcaption>
                                     </figure>
                                     <p>例を挙げよう。基底<span
-                                    class="math inline">\(\{\boldsymbol{e}_1,
-                                    \boldsymbol{e}_2\}\)</span>で張られる二次元空間があり、あるベクトル<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>がこの基底により</p>
+                                    class="math inline">\(\{\mathbf{e}_1,
+                                    \mathbf{e}_2\}\)</span>で張られる二次元空間があり、あるベクトル<span
+                                    class="math inline">\(\mathbf{u}\)</span>がこの基底により</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{u} = 6 \boldsymbol{e}_1
-                                    + 4 \boldsymbol{e}_2
+                                    \mathbf{u} = 6 \mathbf{e}_1 + 4
+                                    \mathbf{e}_2
                                     \]</span></p>
                                     <p>と展開されているとしよう。この時、ベクトルの成分表示は<span
-                                    class="math inline">\(\boldsymbol{u}
-                                    =
+                                    class="math inline">\(\mathbf{u} =
                                     (6,4)\)</span>となる。さて、基底の長さを2倍にしてみよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \tilde{\boldsymbol{e}}_1 &amp;= 2
-                                    \boldsymbol{e}_1 \\
-                                    \tilde{\boldsymbol{e}}_2 &amp;= 2
-                                    \boldsymbol{e}_2
+                                    \tilde{\mathbf{e}}_1 &amp;= 2
+                                    \mathbf{e}_1 \\
+                                    \tilde{\mathbf{e}}_2 &amp;= 2
+                                    \mathbf{e}_2
                                     \end{aligned}
                                     \]</span></p>
                                     <p>新しい基底<span
-                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_1,
-                                    \tilde{\boldsymbol{e}}_2\}\)</span>で<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>を展開すると、</p>
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_1,
+                                    \tilde{\mathbf{e}}_2\}\)</span>で<span
+                                    class="math inline">\(\mathbf{u}\)</span>を展開すると、</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{u} = 3
-                                    \tilde{\boldsymbol{e}}_1 + 2
-                                    \tilde{\boldsymbol{e}}_2
+                                    \mathbf{u} = 3 \tilde{\mathbf{e}}_1
+                                    + 2 \tilde{\mathbf{e}}_2
                                     \]</span></p>
                                     <p>となる。この時、ベクトルの成分表示は<span
-                                    class="math inline">\(\boldsymbol{u}
-                                    =
+                                    class="math inline">\(\mathbf{u} =
                                     (3,2)\)</span>と、元の半分になる。このように、基底の長さを2倍にした時、成分が半分となるようなベクトルを、基底と反対向きの変換を受けるという意味で
                                     <strong>反変ベクトル(contravariant
                                     vector)</strong>
                                     と呼ぶ。このように、基底で展開した成分は反変ベクトルとなる。反変ベクトルの正確な定義は後に与える。</p>
                                     <p>この事実を一般化しておこう。いま、あるベクトル<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>が正規直交基底<span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>により、以下のように成分表示されているとしよう。</p>
+                                    class="math inline">\(\mathbf{u}\)</span>が正規直交基底<span
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>により、以下のように成分表示されているとしよう。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{u} = u^i
-                                    \boldsymbol{e}_i
+                                    \mathbf{u} = u^i \mathbf{e}_i
                                     \]</span></p>
                                     <p>ここで、後の都合のためにベクトルの成分の添字を上付きにしている。さらに、同じ記号が現れた場合(今回は<span
                                     class="math inline">\(i\)</span>)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列<span
                                     class="math inline">\(T\)</span>を用いて、基底が<span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>から、別の正規直交基底<span
-                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>に以下のように変換されたとする。</p>
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>から、別の正規直交基底<span
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>に以下のように変換されたとする。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\boldsymbol{e}}_i = T^k_{\,i}
-                                    \boldsymbol{e}_k
+                                    \tilde{\mathbf{e}}_i = T^k_{\,i}
+                                    \mathbf{e}_k
                                     \]</span></p>
                                     <p>ベクトル<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>を新しい基底<span
-                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>で展開すると、</p>
+                                    class="math inline">\(\mathbf{u}\)</span>を新しい基底<span
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>で展開すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \boldsymbol{u} &amp;= \tilde{u}^k
-                                    \tilde{\boldsymbol{e}}_k \\
+                                    \mathbf{u} &amp;= \tilde{u}^k
+                                    \tilde{\mathbf{e}}_k \\
                                     &amp;= \tilde{u}^k T^j_{\,k}
-                                    \boldsymbol{e}_j
+                                    \mathbf{e}_j
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺について<span
-                                    class="math inline">\(\boldsymbol{e}^i\)</span>と内積をとると、</p>
+                                    class="math inline">\(\mathbf{e}^i\)</span>と内積をとると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     u^i &amp;= \tilde{u}^k T^j_{\,k}
-                                    (\boldsymbol{e}^i,\boldsymbol{e}_j),\\
+                                    (\mathbf{e}^i,\mathbf{e}_j),\\
                                     &amp;= \tilde{u}^k T^j_{\,k}
                                     \delta^i_{\,j}, \\
                                     &amp;= T^i_{\,k} \tilde{u}^k.
@@ -213,70 +209,70 @@
                                     <p>基底の変換と並べてみると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \tilde{\boldsymbol{e}}_i &amp;=
-                                    T^k_{\,i} \boldsymbol{e}_k \\
+                                    \tilde{\mathbf{e}}_i &amp;=
+                                    T^k_{\,i} \mathbf{e}_k \\
                                     u^i &amp;= T^i_{\,k} \tilde{u}^k
                                     \end{aligned}
                                     \]</span></p>
                                     <p>チルダが現れる項が左右逆になっていることがわかる。<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>は基底の変換と反対の変換を受けるから反変ベクトルである。</p>
+                                    class="math inline">\(\mathbf{u}\)</span>は基底の変換と反対の変換を受けるから反変ベクトルである。</p>
                                     <p>逆に、基底と同じ形の変換を受けるベクトル、すなわちチルダが同じ側に現れるのが共変ベクトルである。定義から、基底自身は共変ベクトルとなる。さらに、先程、反変ベクトルであることがわかった成分ベクトルを縦ベクトルとすると、その双対である横ベクトルは共変ベクトルとなる。</p>
                                     <p><span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>や<span
-                                    class="math inline">\(\{\tilde{\boldsymbol{e}}_i\}\)</span>が張っていた空間と双対な空間を張る基底<span
-                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>や<span
-                                    class="math inline">\(\{\tilde{\boldsymbol{e}}^i\}\)</span>を考えよう。<span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>で張られる空間のベクトルを縦ベクトルとするので、<span
-                                    class="math inline">\(\{\boldsymbol{e}_i\}\)</span>と添字が下についている基底を縦ベクトルの基底と呼ぼう。すると、その双対ベクトル<span
-                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>で展開されるベクトルは横ベクトルとなるため、<span
-                                    class="math inline">\(\{\boldsymbol{e}^i\}\)</span>と上付きの添字を持つ基底を横ベクトルの基底と呼ぶことにする。</p>
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>や<span
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>が張っていた空間と双対な空間を張る基底<span
+                                    class="math inline">\(\{\mathbf{e}^i\}\)</span>や<span
+                                    class="math inline">\(\{\tilde{\mathbf{e}}^i\}\)</span>を考えよう。<span
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>で張られる空間のベクトルを縦ベクトルとするので、<span
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>と添字が下についている基底を縦ベクトルの基底と呼ぼう。すると、その双対ベクトル<span
+                                    class="math inline">\(\{\mathbf{e}^i\}\)</span>で展開されるベクトルは横ベクトルとなるため、<span
+                                    class="math inline">\(\{\mathbf{e}^i\}\)</span>と上付きの添字を持つ基底を横ベクトルの基底と呼ぶことにする。</p>
                                     <p>以下のように、共役なベクトルとの直交性を課す。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    (\boldsymbol{e}^j,\boldsymbol{e}_i)
-                                    &amp;= \delta^j_{\,i} \\
-                                    (\tilde{\boldsymbol{e}}^j,\tilde{\boldsymbol{e}}_i)
+                                    (\mathbf{e}^j,\mathbf{e}_i) &amp;=
+                                    \delta^j_{\,i} \\
+                                    (\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i)
                                     &amp;= \delta^j_{\,i} \\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>さて、縦ベクトルの基底が<span
-                                    class="math inline">\(\tilde{\boldsymbol{e}}_i
+                                    class="math inline">\(\tilde{\mathbf{e}}_i
                                     = T^k_{\,i}
-                                    \boldsymbol{e}_k\)</span>と変換される時、横ベクトルの基底がどのように変換されるか見てみよう。変換の前後で</p>
+                                    \mathbf{e}_k\)</span>と変換される時、横ベクトルの基底がどのように変換されるか見てみよう。変換の前後で</p>
                                     <p><span class="math display">\[
-                                    \tilde{\boldsymbol{e}}^i = M^i_{\,k}
-                                    \boldsymbol{e}^k
+                                    \tilde{\mathbf{e}}^i = M^i_{\,k}
+                                    \mathbf{e}^k
                                     \]</span></p>
                                     <p>と展開できるとする。両辺、<span
-                                    class="math inline">\(\boldsymbol{e}_j\)</span>との内積を取ると、</p>
+                                    class="math inline">\(\mathbf{e}_j\)</span>との内積を取ると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    (\tilde{\boldsymbol{e}}^i,
-                                    \boldsymbol{e}_j) &amp;= M^i_{\,k}
-                                    (\boldsymbol{e}^k, \boldsymbol{e}_j)
+                                    (\tilde{\mathbf{e}}^i, \mathbf{e}_j)
+                                    &amp;= M^i_{\,k} (\mathbf{e}^k,
+                                    \mathbf{e}_j)
                                     &amp;= M^i_{\,k} \delta^k_{\,j} \\
                                     &amp;= M^i_{\,j}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>縦ベクトルの基底の変換は以下で与えられているとする。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\boldsymbol{e}}_i = T^k_{\,i}
-                                    \boldsymbol{e}_k.
+                                    \tilde{\mathbf{e}}_i = T^k_{\,i}
+                                    \mathbf{e}_k.
                                     \]</span></p>
                                     <p>両辺、<span
-                                    class="math inline">\(\tilde{\boldsymbol{e}}^j\)</span>と内積をとると、左辺は直交性から</p>
+                                    class="math inline">\(\tilde{\mathbf{e}}^j\)</span>と内積をとると、左辺は直交性から</p>
                                     <p><span class="math display">\[
-                                    (\tilde{\boldsymbol{e}}^j,
-                                    \tilde{\boldsymbol{e}}_i) =
+                                    (\tilde{\mathbf{e}}^j,
+                                    \tilde{\mathbf{e}}_i) =
                                     \delta^j_{\,i}.
                                     \]</span></p>
                                     <p>右辺は、先程求めた<span
-                                    class="math inline">\((\tilde{\boldsymbol{e}}^i,
-                                    \boldsymbol{e}_j) =
+                                    class="math inline">\((\tilde{\mathbf{e}}^i,
+                                    \mathbf{e}_j) =
                                     M^i_{\,j}\)</span>を代入することで</p>
                                     <p><span class="math display">\[
-                                    T^k_{\,i} (\tilde{\boldsymbol{e}}^j,
-                                    \boldsymbol{e}_k) =   M^j_{\,k}
+                                    T^k_{\,i} (\tilde{\mathbf{e}}^j,
+                                    \mathbf{e}_k) =   M^j_{\,k}
                                     T^k_{\,i}
                                     \]</span></p>
                                     <p>以上から、</p>
@@ -289,11 +285,10 @@
                                     class="math inline">\(M\)</span>と<span
                                     class="math inline">\(T\)</span>が互いに逆行列の関係にあることを意味する。</p>
                                     <p>さて、横ベクトル<span
-                                    class="math inline">\(\boldsymbol{v}\)</span>が、横ベクトルの基底で</p>
+                                    class="math inline">\(\mathbf{v}\)</span>が、横ベクトルの基底で</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{v} = v_i
-                                    \boldsymbol{e}^i = \tilde{v}_i
-                                    \tilde{\boldsymbol{e}}^i
+                                    \mathbf{v} = v_i \mathbf{e}^i =
+                                    \tilde{v}_i \tilde{\mathbf{e}}^i
                                     \]</span></p>
                                     <p>と展開されているとしよう。縦ベクトルと同様な議論から、</p>
                                     <p><span class="math display">\[
@@ -312,8 +307,8 @@
                                     <p>縦ベクトルの基底の変換の式と並べると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \tilde{\boldsymbol{e}}_i &amp;=
-                                    T^k_{\,i} \boldsymbol{e}_k \\
+                                    \tilde{\mathbf{e}}_i &amp;=
+                                    T^k_{\,i} \mathbf{e}_k \\
                                     \tilde{v}_i &amp;= T^k_{\,i }v_k
                                     \end{aligned}
                                     \]</span></p>
@@ -429,14 +424,14 @@
                                     \tilde{x}^i}{\partial x^j} A^j
                                     \]</span></p>
                                     <p>のように変換を受けるベクトル<span
-                                    class="math inline">\(\boldsymbol{A}\)</span>を反変ベクトルと定義し、添字を右上につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。</p>
+                                    class="math inline">\(\mathbf{A}\)</span>を反変ベクトルと定義し、添字を右上につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。</p>
                                     <p>逆に、</p>
                                     <p><span class="math display">\[
                                     \tilde{B}_i = \frac{\partial
                                     x^i}{\partial \tilde{x}^j} B_j
                                     \]</span></p>
                                     <p>のように変換を受けるベクトル<span
-                                    class="math inline">\(\boldsymbol{B}\)</span>を
+                                    class="math inline">\(\mathbf{B}\)</span>を
                                     <strong>共変ベクトル (covariant
                                     vector)</strong>
                                     と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。</p>
@@ -507,23 +502,22 @@
                                     と呼ぶ。以下では、ニュートンの運動方程式が座標変換に対してどのように変換を受けるか見てみよう。</p>
                                     <p>ニュートンの運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    m\frac{d \boldsymbol{v}}{dt} =
-                                    \boldsymbol{F}
+                                    m\frac{d \mathbf{v}}{dt} =
+                                    \mathbf{F}
                                     \]</span></p>
                                     <p>上記では質量は一定としたが、燃料を消費しながら飛ぶロケットなど、運動に従って質量が変化する場合もあるため、質量と速度をまとめた運動量を導入しよう。</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{p} = m \boldsymbol{v}
+                                    \mathbf{p} = m \mathbf{v}
                                     \]</span></p>
                                     <p>するとニュートンの運動方程式は、運動量の時間変化が、加えられた力と一致する、という意味となる。</p>
                                     <p><span class="math display">\[
-                                    \dot{\boldsymbol{p}} =
-                                    \boldsymbol{F}
+                                    \dot{\mathbf{p}} = \mathbf{F}
                                     \]</span></p>
                                     <p>さて、このベクトルを成分表示にあたり、<span
-                                    class="math inline">\(\boldsymbol{p}\)</span>や<span
-                                    class="math inline">\(\boldsymbol{F}\)</span>が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル<span
-                                    class="math inline">\(\boldsymbol{r}\)</span>は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトルは反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル<span
-                                    class="math inline">\(\boldsymbol{F}\)</span>も反変ベクトルとなる。</p>
+                                    class="math inline">\(\mathbf{p}\)</span>や<span
+                                    class="math inline">\(\mathbf{F}\)</span>が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル<span
+                                    class="math inline">\(\mathbf{r}\)</span>は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトルは反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル<span
+                                    class="math inline">\(\mathbf{F}\)</span>も反変ベクトルとなる。</p>
                                     <p>さて、運動量も力も反変ベクトルであることがわかったので、上付きの添字で成分表示しよう。</p>
                                     <p><span class="math display">\[
                                     \dot{p}^i = F^i
@@ -532,9 +526,9 @@
                                     class="math inline">\((x^1,
                                     x^2,x^3)\rightarrow
                                     (\tilde{x}^1,\tilde{x}^2,\tilde{x}^3)\)</span>により、<span
-                                    class="math inline">\(\boldsymbol{p}
+                                    class="math inline">\(\mathbf{p}
                                     \rightarrow
-                                    \tilde{\boldsymbol{p}}\)</span>に変換されたとしよう。反変ベクトルの定義から、変換則は</p>
+                                    \tilde{\mathbf{p}}\)</span>に変換されたとしよう。反変ベクトルの定義から、変換則は</p>
                                     <p><span class="math display">\[
                                     \tilde{p}^i = \frac{\partial
                                     \tilde{x}^i}{\partial x^k} p^k
@@ -547,11 +541,10 @@
                                     <p>で与えられる行列<span
                                     class="math inline">\(T\)</span>を用意すると、運動量ベクトルは以下のように変換される。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\boldsymbol{p}} = T
-                                    \boldsymbol{p}
+                                    \tilde{\mathbf{p}} = T \mathbf{p}
                                     \]</span></p>
                                     <p>力ベクトル<span
-                                    class="math inline">\(\boldsymbol{F}\)</span>も同様な変換を受ける。以上から、</p>
+                                    class="math inline">\(\mathbf{F}\)</span>も同様な変換を受ける。以上から、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{\tilde{p}^i} - \tilde{F}^i
@@ -579,23 +572,22 @@
                                     とは異なることに注意したい。例えばスカラー量は座標変換で値そのものを変えないので不変(invariant)である。一方、運動方程式は、座標変換によりベクトルの値は変更を受けるが、形を変えない。従って、線形変換で移ることができる異なる座標系に住む人にとって、同じ形の法則が成り立つ。これを共変(covariant)であると呼ぶ。</p>
                                     <p>同様に、ニュートンの運動方程式はある座標に対して等速直線運動する座標系から見ても形を変えない。これは、以下の座標変換に対応する。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\boldsymbol{x}} =
-                                    \boldsymbol{x} + \boldsymbol{u}t +
-                                    \boldsymbol{c}
+                                    \tilde{\mathbf{x}} = \mathbf{x} +
+                                    \mathbf{u}t + \mathbf{c}
                                     \]</span></p>
                                     <p>ただし<span
-                                    class="math inline">\(\boldsymbol{u}\)</span>は定ベクトルである。この変換を等速度推進、もしくはガリレイ・ブースト(Galilei
+                                    class="math inline">\(\mathbf{u}\)</span>は定ベクトルである。この変換を等速度推進、もしくはガリレイ・ブースト(Galilei
                                     boost)と呼ぶ。</p>
                                     <p>両辺を時間微分すると</p>
                                     <p><span class="math display">\[
-                                    \tilde{\boldsymbol{v}} =
-                                    \boldsymbol{v} + \boldsymbol{u}
+                                    \tilde{\mathbf{v}} = \mathbf{v} +
+                                    \mathbf{u}
                                     \]</span></p>
                                     <p>両辺に質量<span
                                     class="math inline">\(m\)</span>をかけて、さらに時間微分すると</p>
                                     <p><span class="math display">\[
-                                    \dot{\tilde{\boldsymbol{p}}} =
-                                    \dot{\boldsymbol{p}}
+                                    \dot{\tilde{\mathbf{p}}} =
+                                    \dot{\mathbf{p}}
                                     \]</span></p>
                                     <p>運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。</p>
                                     <p>ニュートンの運動方程式は座標の一般の線形変換に対して共変であるが、系のスケールを変える変換はエネルギースケールを変えてしまうため、スケール変換を伴わない線形変換のみを考慮することが多い。スケール変換を伴わない線形変換は、回転と鏡映変換に分離できる。この、回転、鏡映変換、平行移動、等速度推進の変換をまとめて
@@ -741,16 +733,16 @@
                                     <p>3次元空間に質量<span
                                     class="math inline">\(m\)</span>の質点A,
                                     Bがある。これらの質点の座標をそれぞれ<span
-                                    class="math inline">\(\boldsymbol{r}_A
-                                    = (x_A,y_A,z_A), \boldsymbol{r}_B =
+                                    class="math inline">\(\mathbf{r}_A =
+                                    (x_A,y_A,z_A), \mathbf{r}_B =
                                     (x_B,y_B,z_B)\)</span>とする時、これらが相対距離<span
                                     class="math inline">\(r\)</span>に依存するポテンシャル<span
                                     class="math inline">\(U(r)\)</span>により相互作用をしているとしよう。ただし<span
                                     class="math inline">\(r\)</span>は以下のように定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    r &amp;= \sqrt{(\boldsymbol{r}_A
-                                    -\boldsymbol{r}_B})^2\\
+                                    r &amp;= \sqrt{(\mathbf{r}_A
+                                    -\mathbf{r}_B})^2\\
                                     &amp;=
                                     \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
                                     \end{aligned}
@@ -879,26 +871,26 @@
                                     \]</span></p>
                                     <p>も保存量となる。ここで、位置ベクトルと運動量ベクトル、角運動量ベクトルをそれぞれ</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{r} =
+                                    \mathbf{r} =
                                     \begin{pmatrix}
                                     x \\ y \\ z
                                     \end{pmatrix}
                                     ,
-                                    \boldsymbol{p} =
+                                    \mathbf{p} =
                                     m
                                     \begin{pmatrix}
                                     \dot{x} \\ \dot{y} \\ \dot{z}
                                     \end{pmatrix}
                                     ,
-                                    \boldsymbol{L} =
+                                    \mathbf{L} =
                                     \begin{pmatrix}
                                     L_x \\ L_y \\ L_z
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>と定義すると、角運動量ベクトルは</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{L} = \boldsymbol{r}
-                                    \times \boldsymbol{p}
+                                    \mathbf{L} = \mathbf{r} \times
+                                    \mathbf{p}
                                     \]</span></p>
                                     <p>と表すことができる。</p>
                                     <h1

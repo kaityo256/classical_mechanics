@@ -161,14 +161,14 @@
                                     class="math inline">\((q,p)\)</span>で張られる位相空間に<span
                                     class="math inline">\((\dot{p},
                                     \dot{q})\)</span>という速度場を定義する式であると考える。位相空間の座標をまとめて<span
-                                    class="math inline">\(\boldsymbol{z}\)</span>で表そう。すなわち、</p>
+                                    class="math inline">\(\mathbf{z}\)</span>で表そう。すなわち、</p>
                                     <p><span class="math display">\[
-                                    \boldsymbol{z} =
+                                    \mathbf{z} =
                                     \begin{pmatrix}
                                     q\\
                                     p
                                     \end{pmatrix},
-                                    \dot{\boldsymbol{z}} =
+                                    \dot{\mathbf{z}} =
                                     \begin{pmatrix}
                                     \dot{q} \\
                                     \dot{p}
@@ -177,10 +177,10 @@
                                     <p>ハミルトニアンに関して<span
                                     class="math inline">\(p\)</span>や<span
                                     class="math inline">\(q\)</span>の偏微分があるので、ハミルトニアンをスカラー場と思って<span
-                                    class="math inline">\(\boldsymbol{z}\)</span>で微分してみよう。</p>
+                                    class="math inline">\(\mathbf{z}\)</span>で微分してみよう。</p>
                                     <p><span class="math display">\[
                                     \frac{\partial H}{\partial
-                                    \boldsymbol{z}} \equiv \nabla H
+                                    \mathbf{z}} \equiv \nabla H
                                     =
                                     \begin{pmatrix}
                                     \partial_q H \\
@@ -199,8 +199,7 @@
                                     \]</span></p>
                                     <p>すると、正準方程式は以下のように表現できる。</p>
                                     <p><span class="math display">\[
-                                    \dot{\boldsymbol{z}} = \Omega \nabla
-                                    H
+                                    \dot{\mathbf{z}} = \Omega \nabla H
                                     \]</span></p>
                                     <p>これは、位相空間にハミルトニアンが作るベクトル場であるため、
                                     <strong>ハミルトニアンベクトル場(Hamiltonian
@@ -289,11 +288,11 @@
                                     <p>我々の目的は運動方程式を解くことであった。運動方程式の解は、位相空間上ではハミルトニアンベクトル場に沿って「流れて」いく流線に対応しており、これを解曲線と呼ぶ。ハミルトニアンベクトル場が、エネルギーの勾配ベクトルと直交していることから、解曲線は<span
                                     class="math inline">\(H(q,p)\)</span>の等高線上を運動する。すなわち、運動によりエネルギーが保存する。ハミルトニアンベクトル場は、「なぜ運動によりエネルギーが保存するか？」という問いに対して「位相空間上での運動の方向が、エネルギーが変化する向きと常に直交しているから」という答えを用意する。</p>
                                     <p>ハミルトニアンベクトル場には、もう一つ重要な性質がある。ハミルトニアンベクトル場が作る速度場<span
-                                    class="math inline">\(\dot{\boldsymbol{z}}\)</span>を考えよう。この速度場と<span
+                                    class="math inline">\(\dot{\mathbf{z}}\)</span>を考えよう。この速度場と<span
                                     class="math inline">\(\nabla\)</span>の内積を考える。ベクトル同士の内積であるから、結果はスカラー量になる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \nabla \dot{\boldsymbol{z}} &amp;=
+                                    \nabla \dot{\mathbf{z}} &amp;=
                                     \begin{pmatrix}
                                     \partial_q\\
                                     \partial_p
@@ -324,7 +323,7 @@
                                     <p>すなわち、ハミルトニアンベクトル場と<span
                                     class="math inline">\(\nabla\)</span>との内積は常にゼロとなる。この、<span
                                     class="math inline">\(\nabla
-                                    \dot{\boldsymbol{z}}=0\)</span>の幾何学的な意味を考えてみよう。</p>
+                                    \dot{\mathbf{z}}=0\)</span>の幾何学的な意味を考えてみよう。</p>
                                     <p>一次元の流れを考える。位置<span
                                     class="math inline">\(x\)</span>において、密度場<span
                                     class="math inline">\(\rho(x)\)</span>と速度場<span
@@ -385,31 +384,31 @@
                                     <p><span class="math display">\[
                                     \frac{D}{D t} \equiv
                                     \frac{\partial}{\partial t} +
-                                    \boldsymbol{v} \cdot \nabla
+                                    \mathbf{v} \cdot \nabla
                                     \]</span></p>
                                     <p>として、</p>
                                     <p><span class="math display">\[
                                     \frac{D \rho}{D t} = -\rho (\nabla
-                                    \cdot \boldsymbol{v})
+                                    \cdot \mathbf{v})
                                     \]</span></p>
                                     <p>を導くことができる。</p>
                                     <p>ここで、右辺の意味を考えよう。速度場<span
-                                    class="math inline">\(\boldsymbol{v}\)</span>の位置による微分が正である時、流入速度よりも、流出速度の方が大きいことになる。これは、そこに何か湧き出していることを意味する。逆に、微分が負であるならば、流入速度より流出速度の方が小さく、これはそこに吸い込みがあることを意味する。以上から、速度場の空間微分<span
+                                    class="math inline">\(\mathbf{v}\)</span>の位置による微分が正である時、流入速度よりも、流出速度の方が大きいことになる。これは、そこに何か湧き出していることを意味する。逆に、微分が負であるならば、流入速度より流出速度の方が小さく、これはそこに吸い込みがあることを意味する。以上から、速度場の空間微分<span
                                     class="math inline">\((\nabla \cdot
-                                    \boldsymbol{v})\)</span>を
+                                    \mathbf{v})\)</span>を
                                     <strong>発散(divergence)</strong>
                                     と呼び、<span
                                     class="math inline">\(\mathrm{div}
-                                    \boldsymbol{v}\)</span>とも書く。</p>
+                                    \mathbf{v}\)</span>とも書く。</p>
                                     <p>さて、速度場の発散がゼロ、つまり</p>
                                     <p><span class="math display">\[
-                                    \nabla \boldsymbol{v}
+                                    \nabla \mathbf{v}
                                     \]</span></p>
                                     <p>としよう。この時、密度の物質微分がゼロ、すなわち流れに追いかけた場合の密度変化がゼロとなる。この流体は流れに対して密度が変わらない。このような流体を非圧縮流体と呼ぶ。</p>
                                     <p>ハミルトニアンベクトル場に話を戻そう。ハミルトニアンベクトル場は、位相空間上に<span
-                                    class="math inline">\(\dot{\boldsymbol{z}}\)</span>という速度場を作る。既に見たように、その発散がゼロ、すなわち</p>
+                                    class="math inline">\(\dot{\mathbf{z}}\)</span>という速度場を作る。既に見たように、その発散がゼロ、すなわち</p>
                                     <p><span class="math display">\[
-                                    \nabla \cdot \dot{\boldsymbol{z}} =0
+                                    \nabla \cdot \dot{\mathbf{z}} =0
                                     \]</span></p>
                                     <p>であるから、この速度場が作る流れは非圧縮流体となる。位相空間の流れ場は、適当な場所にトレーサーを置くと、そのトレーサーの軌跡が運動を表すのであった。いま、位相空間の微小な領域に多数のトレーサーを置いて、その時間発展を追うことにしよう。これは、水の流れに墨汁を1滴垂らすようなイメージである。流れに沿って墨汁は流れていくが、流体が非圧縮であるならば、その面積は変わらない。同様に、ハミルトニアンベクトル場は、位相空間の微小体積要素を変化させない。これを
                                     <strong>リュービルの定理(Liouville’s

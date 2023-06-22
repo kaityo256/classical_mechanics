@@ -62,7 +62,7 @@
                                     id="本章で学ぶこと">本章で学ぶこと</h1>
                                     <p>ニュートン力学では、ニュートンの運動方程式が出発点であり、「その運動方程式はどこから来たか」に答えることができなかった。しかし、解析力学では、最小作用の原理から運動方程式を導く。これにより、運動方程式よりも一歩引いた立場から運動を記述、理解できるようになる。最小作用の原理は、変分原理と呼ばれるものの一種である。以下では、変分原理の例としてスネルの法則、最速降下曲線、懸垂線について紹介し、これらを一般的に扱うために汎関数微分を導入する。特に、関数の微分に依存する汎関数微分を扱う。解析力学は変分原理に立脚しており、その変分原理の心臓部分が関数の微分を含む汎関数の微分であるため、ここが解析力学で最も重要なパートである。</p>
                                     <h1 id="変分問題">変分問題</h1>
-                                    <p>我々は、何らかの制約のなかで、何かを最小化したり最大化したりしたいことがよくある。例えばレストランでご飯を注文する際、許される予算、およびカロリー上限の中で、もっとも食べたいものを選ぶであろう。このような問題を最適化問題と呼ぶ。最適化問題には様々なものがあるが、その中に選べる選択肢が連続的な場合がある。山を登る時、山の入口から山頂まで様々な道がある。傾きがきつい道ほど疲れやすいが登山時間は短くて済み、傾きが緩い道は楽だが登山時間が長くなる。この時、もっとも疲れずに登るためのルートはどのように決めれば良いか、といった問題が典型例である。この時、我々は「疲労度」という実数値を最小化するように「登山ルート」という連続的な経路を決める必要がある。このように連続的な自由度についての最適化問題を変分問題、変分問題を解く方法を変分法と呼ぶ。以下では、変分問題とその解法について説明する。</p>
+                                    <p>我々は、何らかの制約のなかで、何かを最小化したり最大化したりしたいことがよくある。例えばレストランでご飯を注文する際、許される予算、およびカロリー上限の中で、もっとも食べたいものを選ぶであろう。このような問題を最適化問題と呼ぶ。最適化問題には様々なものがあるが、その中に選べる選択肢が連続的な場合がある。山を登る時、山の入口から山頂まで様々な道がある。傾きがきつい道ほど疲れやすいが登山時間は短くて済み、傾きが緩い道は楽だが登山時間が長くなる。この時、もっとも疲れずに登るためのルートはどのように決めれば良いか、といった問題が典型例である。この時、我々は「疲労度」という実数値を最小化するように「登山ルート」という連続的な経路を決める必要がある。このように連続的な自由度についての最適化問題を変分問題、変分問題を解く方法を変分法と呼ぶ。以下では、変分問題とその解法について説明する。以下、ややこしい計算を実施するが、計算の詳細は気にしなくて良い。</p>
                                     <h2
                                     id="スネルの法則">スネルの法則</h2>
                                     <figure>
@@ -701,7 +701,89 @@
                                     \frac{dy}{dx} = - \sqrt{\frac{2a -
                                     y}{y}}
                                     \]</span></p>
-                                    <p>を得る。このように、何か連続的な経路(この場合は斜面の形を表す関数<span
+                                    <p>を得る。しかし、今回のようなケースではベルトラミの公式を使うと計算が楽なので、解析力学の本筋からは外れてしまうが、参考までに紹介しておこう。<span
+                                    class="math inline">\(f(x)\)</span>および<span
+                                    class="math inline">\(f&#39;(x)\)</span>に依存する関数<span
+                                    class="math inline">\(F(f,f&#39;)\)</span>がオイラー・ラグランジュの方程式</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    F}{\partial f&#39;}\right) -
+                                    \frac{\partial F}{\partial f} = 0
+                                    \]</span></p>
+                                    <p>を満たし、かつ<span
+                                    class="math inline">\(F\)</span>が<span
+                                    class="math inline">\(x\)</span>に陽に依存しない、すなわち</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial F}{\partial x} = 0
+                                    \]</span></p>
+                                    <p>が成り立つとき、以下の量の<span
+                                    class="math inline">\(x\)</span>微分がゼロとなる。</p>
+                                    <p><span class="math display">\[
+                                    B = F - f&#39; \frac{\partial
+                                    F}{\partial f&#39;}
+                                    \]</span></p>
+                                    <p>証明は簡単で、<span
+                                    class="math inline">\(dB/dx\)</span>を計算すれば良い。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dB}{dx} &amp;= \frac{\partial
+                                    F}{\partial f} f&#39;
+                                    +  \frac{\partial F}{\partial
+                                    f&#39;} f&#39;&#39; - f&#39;&#39;
+                                    \frac{\partial F}{\partial f&#39;} -
+                                    f&#39;
+                                    \underbrace{\frac{d}{dx}\left(\frac{\partial
+                                    F}{\partial f&#39;}
+                                    \right)}_{=\partial x F} \\
+                                    &amp;= \frac{\partial F}{\partial f}
+                                    f&#39; +  \frac{\partial F}{\partial
+                                    f&#39;} f&#39;&#39; - f&#39;&#39;
+                                    \frac{\partial F}{\partial f&#39;} -
+                                    f&#39; \frac{\partial F}{\partial x}
+                                    \\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、ある定数<span
+                                    class="math inline">\(C\)</span>を用いて<span
+                                    class="math inline">\(B(f,f&#39;)=C\)</span>と表現できる。</p>
+                                    <p>これを先程の<span
+                                    class="math inline">\(F(y,y&#39;) =
+                                    \sqrt{1+y&#39;^2}/\sqrt{2gy}\)</span>に適用すると、ある定数<span
+                                    class="math inline">\(C\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    F - y&#39; \frac{\partial
+                                    F}{\partial y&#39;} = C
+                                    \]</span></p>
+                                    <p>が成り立つから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    F - y&#39; \frac{\partial
+                                    F}{\partial y&#39;} &amp;=
+                                    \frac{\sqrt{1+y&#39;^2}}{\sqrt{2gy}}
+                                    -
+                                    \frac{y&#39;^2}{\sqrt{2gy}\sqrt{1+y&#39;^2}}
+                                    \\
+                                    &amp;=
+                                    \frac{1}{\sqrt{2gy}\sqrt{1+y&#39;^2}}
+                                    \\
+                                    &amp;= C
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(y&#39;\)</span>について整理すると(複号は負符号を採用した)、</p>
+                                    <p><span class="math display">\[
+                                    y&#39; = - \sqrt{\frac{1
+                                    -2gC^2y}{2gC^2y}}
+                                    \]</span></p>
+                                    <p><span class="math inline">\(2gC^2
+                                    =
+                                    1/2a\)</span>とすると、以下の微分方程式を得る。</p>
+                                    <p><span class="math display">\[
+                                    \frac{dy}{dx} = -\sqrt{\frac{2a -
+                                    y}{y}}
+                                    \]</span></p>
+                                    <p>このように、何か連続的な経路(この場合は斜面の形を表す関数<span
                                     class="math inline">\(y(x)\)</span>)を与えると実数(この場合は通過時間)が決まるような問題は汎関数の最小化問題として定式化できることが多い。このような問題を変分問題と呼ぶ。被積分関数は、目的となる関数<span
                                     class="math inline">\(f(x)\)</span>とその導関数の関数<span
                                     class="math inline">\(F(f,f&#39;)\)</span>であることが多い。この時、最小化したい汎関数<span
@@ -716,7 +798,10 @@
                                     <h1
                                     id="オイラーラグランジュ方程式">オイラー・ラグランジュ方程式</h1>
                                     <p>さて、解析力学に戻ろう。位置と速度の関数としてラグランジアン<span
-                                    class="math inline">\(L(x,v)\)</span>が与えられたとする。ただし<span
+                                    class="math inline">\(L(x(t),v(t))\)</span>が与えられたとする。先程までの議論とは異なり、積分変数が<span
+                                    class="math inline">\(x\)</span>から<span
+                                    class="math inline">\(t\)</span>となり、<span
+                                    class="math inline">\(x(t)\)</span>は時間の関数となることに注意。ここで、<span
                                     class="math inline">\(\dot{x} =
                                     v\)</span>であるので、以後は<span
                                     class="math inline">\(L(x,\dot{x})\)</span>と書こう。このラグランジアンを、適当な期間<span
@@ -729,7 +814,7 @@
                                     <p>この量<span
                                     class="math inline">\(I\)</span>を作用、この積分を作用積分と呼ぶ。ここで、運動の軌道<span
                                     class="math inline">\(x(t)\)</span>はこの作用が最小になるように決まることを要請するのが最小作用の原理であった。そのような軌道は汎関数微分がゼロとなるはずであるから、被積分関数である<span
-                                    class="math inline">\(L\)</span>について変分を取ると</p>
+                                    class="math inline">\(L\)</span>について変分を取ると、先程前の議論から</p>
                                     <p><span class="math display">\[
                                     \delta L = \left( \frac{\partial
                                     L}{\partial x} -
