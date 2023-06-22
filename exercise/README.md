@@ -4,11 +4,11 @@
 
 ### 問題
 
-3次元空間に2つの質点A, Bがある。これらの質点の座標をそれぞれ$\boldsymbol{r}_A = (x_A,y_A,z_A), \boldsymbol{r}_B = (x_B,y_B,z_B)$とする時、これらが相対距離$r$に依存するポテンシャル$U(r)$により相互作用をしている。ただし$r$は以下のように定義する。
+3次元空間に2つの質点A, Bがある。これらの質点の座標をそれぞれ$\mathbf{r}_A = (x_A,y_A,z_A), \mathbf{r}_B = (x_B,y_B,z_B)$とする時、これらが相対距離$r$に依存するポテンシャル$U(r)$により相互作用をしている。ただし$r$は以下のように定義する。
 
 $$
 \begin{aligned}
-r &= \sqrt{(\boldsymbol{r}_A -\boldsymbol{r}_B})^2\\
+r &= \sqrt{(\mathbf{r}_A -\mathbf{r}_B})^2\\
 &= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
 \end{aligned}
 $$

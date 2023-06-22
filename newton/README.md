@@ -65,55 +65,55 @@
 
 ![反変ベクトル](fig/contravariant_vector.png)
 
-例を挙げよう。基底$\{\boldsymbol{e}_1, \boldsymbol{e}_2\}$で張られる二次元空間があり、あるベクトル$\boldsymbol{u}$がこの基底により
+例を挙げよう。基底$\{\mathbf{e}_1, \mathbf{e}_2\}$で張られる二次元空間があり、あるベクトル$\mathbf{u}$がこの基底により
 
 $$
-\boldsymbol{u} = 6 \boldsymbol{e}_1 + 4 \boldsymbol{e}_2
+\mathbf{u} = 6 \mathbf{e}_1 + 4 \mathbf{e}_2
 $$
 
-と展開されているとしよう。この時、ベクトルの成分表示は$\boldsymbol{u} = (6,4)$となる。さて、基底の長さを2倍にしてみよう。
+と展開されているとしよう。この時、ベクトルの成分表示は$\mathbf{u} = (6,4)$となる。さて、基底の長さを2倍にしてみよう。
 
 $$
 \begin{aligned}
-\tilde{\boldsymbol{e}}_1 &= 2 \boldsymbol{e}_1 \\
-\tilde{\boldsymbol{e}}_2 &= 2 \boldsymbol{e}_2
+\tilde{\mathbf{e}}_1 &= 2 \mathbf{e}_1 \\
+\tilde{\mathbf{e}}_2 &= 2 \mathbf{e}_2
 \end{aligned}
 $$
 
-新しい基底$\{\tilde{\boldsymbol{e}}_1, \tilde{\boldsymbol{e}}_2\}$で$\boldsymbol{u}$を展開すると、
+新しい基底$\{\tilde{\mathbf{e}}_1, \tilde{\mathbf{e}}_2\}$で$\mathbf{u}$を展開すると、
 
 $$
-\boldsymbol{u} = 3 \tilde{\boldsymbol{e}}_1 + 2 \tilde{\boldsymbol{e}}_2
+\mathbf{u} = 3 \tilde{\mathbf{e}}_1 + 2 \tilde{\mathbf{e}}_2
 $$
 
-となる。この時、ベクトルの成分表示は$\boldsymbol{u} = (3,2)$と、元の半分になる。このように、基底の長さを2倍にした時、成分が半分となるようなベクトルを、基底と反対向きの変換を受けるという意味で **反変ベクトル(contravariant vector)** と呼ぶ。このように、基底で展開した成分は反変ベクトルとなる。反変ベクトルの正確な定義は後に与える。
+となる。この時、ベクトルの成分表示は$\mathbf{u} = (3,2)$と、元の半分になる。このように、基底の長さを2倍にした時、成分が半分となるようなベクトルを、基底と反対向きの変換を受けるという意味で **反変ベクトル(contravariant vector)** と呼ぶ。このように、基底で展開した成分は反変ベクトルとなる。反変ベクトルの正確な定義は後に与える。
 
-この事実を一般化しておこう。いま、あるベクトル$\boldsymbol{u}$が正規直交基底$\{\boldsymbol{e}_i\}$により、以下のように成分表示されているとしよう。
-
-$$
-\boldsymbol{u} = u^i \boldsymbol{e}_i
-$$
-
-ここで、後の都合のためにベクトルの成分の添字を上付きにしている。さらに、同じ記号が現れた場合(今回は$i$)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列$T$を用いて、基底が$\{\boldsymbol{e}_i\}$から、別の正規直交基底$\{\tilde{\boldsymbol{e}}_i\}$に以下のように変換されたとする。
+この事実を一般化しておこう。いま、あるベクトル$\mathbf{u}$が正規直交基底$\{\mathbf{e}_i\}$により、以下のように成分表示されているとしよう。
 
 $$
-\tilde{\boldsymbol{e}}_i = T^k_{\,i} \boldsymbol{e}_k
+\mathbf{u} = u^i \mathbf{e}_i
 $$
 
-ベクトル$\boldsymbol{u}$を新しい基底$\{\tilde{\boldsymbol{e}}_i\}$で展開すると、
+ここで、後の都合のためにベクトルの成分の添字を上付きにしている。さらに、同じ記号が現れた場合(今回は$i$)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列$T$を用いて、基底が$\{\mathbf{e}_i\}$から、別の正規直交基底$\{\tilde{\mathbf{e}}_i\}$に以下のように変換されたとする。
+
+$$
+\tilde{\mathbf{e}}_i = T^k_{\,i} \mathbf{e}_k
+$$
+
+ベクトル$\mathbf{u}$を新しい基底$\{\tilde{\mathbf{e}}_i\}$で展開すると、
 
 $$
 \begin{aligned}
-\boldsymbol{u} &= \tilde{u}^k \tilde{\boldsymbol{e}}_k \\
-&= \tilde{u}^k T^j_{\,k} \boldsymbol{e}_j
+\mathbf{u} &= \tilde{u}^k \tilde{\mathbf{e}}_k \\
+&= \tilde{u}^k T^j_{\,k} \mathbf{e}_j
 \end{aligned}
 $$
 
-両辺について$\boldsymbol{e}^i$と内積をとると、
+両辺について$\mathbf{e}^i$と内積をとると、
 
 $$
 \begin{aligned}
-u^i &= \tilde{u}^k T^j_{\,k} (\boldsymbol{e}^i,\boldsymbol{e}_j),\\
+u^i &= \tilde{u}^k T^j_{\,k} (\mathbf{e}^i,\mathbf{e}_j),\\
 &= \tilde{u}^k T^j_{\,k} \delta^i_{\,j}, \\
 &= T^i_{\,k} \tilde{u}^k.
 \end{aligned}
@@ -123,37 +123,37 @@ $$
 
 $$
 \begin{aligned}
-\tilde{\boldsymbol{e}}_i &= T^k_{\,i} \boldsymbol{e}_k \\
+\tilde{\mathbf{e}}_i &= T^k_{\,i} \mathbf{e}_k \\
 u^i &= T^i_{\,k} \tilde{u}^k
 \end{aligned}
 $$
 
-チルダが現れる項が左右逆になっていることがわかる。$\boldsymbol{u}$は基底の変換と反対の変換を受けるから反変ベクトルである。
+チルダが現れる項が左右逆になっていることがわかる。$\mathbf{u}$は基底の変換と反対の変換を受けるから反変ベクトルである。
 
 逆に、基底と同じ形の変換を受けるベクトル、すなわちチルダが同じ側に現れるのが共変ベクトルである。定義から、基底自身は共変ベクトルとなる。さらに、先程、反変ベクトルであることがわかった成分ベクトルを縦ベクトルとすると、その双対である横ベクトルは共変ベクトルとなる。
 
-$\{\boldsymbol{e}_i\}$や$\{\tilde{\boldsymbol{e}}_i\}$が張っていた空間と双対な空間を張る基底$\{\boldsymbol{e}^i\}$や$\{\tilde{\boldsymbol{e}}^i\}$を考えよう。$\{\boldsymbol{e}_i\}$で張られる空間のベクトルを縦ベクトルとするので、$\{\boldsymbol{e}_i\}$と添字が下についている基底を縦ベクトルの基底と呼ぼう。すると、その双対ベクトル$\{\boldsymbol{e}^i\}$で展開されるベクトルは横ベクトルとなるため、$\{\boldsymbol{e}^i\}$と上付きの添字を持つ基底を横ベクトルの基底と呼ぶことにする。
+$\{\mathbf{e}_i\}$や$\{\tilde{\mathbf{e}}_i\}$が張っていた空間と双対な空間を張る基底$\{\mathbf{e}^i\}$や$\{\tilde{\mathbf{e}}^i\}$を考えよう。$\{\mathbf{e}_i\}$で張られる空間のベクトルを縦ベクトルとするので、$\{\mathbf{e}_i\}$と添字が下についている基底を縦ベクトルの基底と呼ぼう。すると、その双対ベクトル$\{\mathbf{e}^i\}$で展開されるベクトルは横ベクトルとなるため、$\{\mathbf{e}^i\}$と上付きの添字を持つ基底を横ベクトルの基底と呼ぶことにする。
 
 以下のように、共役なベクトルとの直交性を課す。
 
 $$
 \begin{aligned}
-(\boldsymbol{e}^j,\boldsymbol{e}_i) &= \delta^j_{\,i} \\
-(\tilde{\boldsymbol{e}}^j,\tilde{\boldsymbol{e}}_i) &= \delta^j_{\,i} \\
+(\mathbf{e}^j,\mathbf{e}_i) &= \delta^j_{\,i} \\
+(\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i) &= \delta^j_{\,i} \\
 \end{aligned}
 $$
 
-さて、縦ベクトルの基底が$\tilde{\boldsymbol{e}}_i = T^k_{\,i} \boldsymbol{e}_k$と変換される時、横ベクトルの基底がどのように変換されるか見てみよう。変換の前後で
+さて、縦ベクトルの基底が$\tilde{\mathbf{e}}_i = T^k_{\,i} \mathbf{e}_k$と変換される時、横ベクトルの基底がどのように変換されるか見てみよう。変換の前後で
 
 $$
-\tilde{\boldsymbol{e}}^i = M^i_{\,k} \boldsymbol{e}^k
+\tilde{\mathbf{e}}^i = M^i_{\,k} \mathbf{e}^k
 $$
 
-と展開できるとする。両辺、$\boldsymbol{e}_j$との内積を取ると、
+と展開できるとする。両辺、$\mathbf{e}_j$との内積を取ると、
 
 $$
 \begin{aligned}
-(\tilde{\boldsymbol{e}}^i, \boldsymbol{e}_j) &= M^i_{\,k} (\boldsymbol{e}^k, \boldsymbol{e}_j)
+(\tilde{\mathbf{e}}^i, \mathbf{e}_j) &= M^i_{\,k} (\mathbf{e}^k, \mathbf{e}_j)
 &= M^i_{\,k} \delta^k_{\,j} \\
 &= M^i_{\,j}
 \end{aligned}
@@ -162,19 +162,19 @@ $$
 縦ベクトルの基底の変換は以下で与えられているとする。
 
 $$
-\tilde{\boldsymbol{e}}_i = T^k_{\,i} \boldsymbol{e}_k.
+\tilde{\mathbf{e}}_i = T^k_{\,i} \mathbf{e}_k.
 $$
 
-両辺、$\tilde{\boldsymbol{e}}^j$と内積をとると、左辺は直交性から
+両辺、$\tilde{\mathbf{e}}^j$と内積をとると、左辺は直交性から
 
 $$
-(\tilde{\boldsymbol{e}}^j, \tilde{\boldsymbol{e}}_i) = \delta^j_{\,i}.
+(\tilde{\mathbf{e}}^j, \tilde{\mathbf{e}}_i) = \delta^j_{\,i}.
 $$
 
-右辺は、先程求めた$(\tilde{\boldsymbol{e}}^i, \boldsymbol{e}_j) = M^i_{\,j}$を代入することで
+右辺は、先程求めた$(\tilde{\mathbf{e}}^i, \mathbf{e}_j) = M^i_{\,j}$を代入することで
 
 $$
-T^k_{\,i} (\tilde{\boldsymbol{e}}^j, \boldsymbol{e}_k) =   M^j_{\,k} T^k_{\,i}
+T^k_{\,i} (\tilde{\mathbf{e}}^j, \mathbf{e}_k) =   M^j_{\,k} T^k_{\,i}
 $$
 
 以上から、
@@ -185,10 +185,10 @@ $$
 
 これは、行列表示すれば$MT = I$、すなわち行列$M$と$T$が互いに逆行列の関係にあることを意味する。
 
-さて、横ベクトル$\boldsymbol{v}$が、横ベクトルの基底で
+さて、横ベクトル$\mathbf{v}$が、横ベクトルの基底で
 
 $$
-\boldsymbol{v} = v_i \boldsymbol{e}^i = \tilde{v}_i \tilde{\boldsymbol{e}}^i
+\mathbf{v} = v_i \mathbf{e}^i = \tilde{v}_i \tilde{\mathbf{e}}^i
 $$
 
 と展開されているとしよう。縦ベクトルと同様な議論から、
@@ -211,7 +211,7 @@ $$
 
 $$
 \begin{aligned}
-\tilde{\boldsymbol{e}}_i &= T^k_{\,i} \boldsymbol{e}_k \\
+\tilde{\mathbf{e}}_i &= T^k_{\,i} \mathbf{e}_k \\
 \tilde{v}_i &= T^k_{\,i }v_k
 \end{aligned}
 $$
@@ -296,7 +296,7 @@ $$
 \tilde{A}^i = \frac{\partial \tilde{x}^i}{\partial x^j} A^j
 $$
 
-のように変換を受けるベクトル$\boldsymbol{A}$を反変ベクトルと定義し、添字を右上につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。
+のように変換を受けるベクトル$\mathbf{A}$を反変ベクトルと定義し、添字を右上につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分子にチルダが現れるのが反変ベクトルである。この変換公式が反変ベクトルの定義を与える。
 
 逆に、
 
@@ -304,7 +304,7 @@ $$
 \tilde{B}_i = \frac{\partial x^i}{\partial \tilde{x}^j} B_j
 $$
 
-のように変換を受けるベクトル$\boldsymbol{B}$を **共変ベクトル (covariant vector)** と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。
+のように変換を受けるベクトル$\mathbf{B}$を **共変ベクトル (covariant vector)** と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。
 
 数学的準備の章にて、$dx$を縦ベクトルとみなすと、$\partial_x$が自然な双対基底であり、横ベクトルとみなせることを見た。従って、$\partial_x, \partial_y$は共変ベクトルとなることが期待される。
 
@@ -349,22 +349,22 @@ $$
 ニュートンの運動方程式は以下のように書ける。
 
 $$
-m\frac{d \boldsymbol{v}}{dt} = \boldsymbol{F}
+m\frac{d \mathbf{v}}{dt} = \mathbf{F}
 $$
 
 上記では質量は一定としたが、燃料を消費しながら飛ぶロケットなど、運動に従って質量が変化する場合もあるため、質量と速度をまとめた運動量を導入しよう。
 
 $$
-\boldsymbol{p} = m \boldsymbol{v}
+\mathbf{p} = m \mathbf{v}
 $$
 
 するとニュートンの運動方程式は、運動量の時間変化が、加えられた力と一致する、という意味となる。
 
 $$
-\dot{\boldsymbol{p}} = \boldsymbol{F}
+\dot{\mathbf{p}} = \mathbf{F}
 $$
 
-さて、このベクトルを成分表示にあたり、$\boldsymbol{p}$や$\boldsymbol{F}$が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル$\boldsymbol{r}$は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトルは反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル$\boldsymbol{F}$も反変ベクトルとなる。
+さて、このベクトルを成分表示にあたり、$\mathbf{p}$や$\mathbf{F}$が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル$\mathbf{r}$は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトルは反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル$\mathbf{F}$も反変ベクトルとなる。
 
 さて、運動量も力も反変ベクトルであることがわかったので、上付きの添字で成分表示しよう。
 
@@ -372,7 +372,7 @@ $$
 \dot{p}^i = F^i
 $$
 
-となる。今、座標変換$(x^1, x^2,x^3)\rightarrow (\tilde{x}^1,\tilde{x}^2,\tilde{x}^3)$により、$\boldsymbol{p} \rightarrow \tilde{\boldsymbol{p}}$に変換されたとしよう。反変ベクトルの定義から、変換則は
+となる。今、座標変換$(x^1, x^2,x^3)\rightarrow (\tilde{x}^1,\tilde{x}^2,\tilde{x}^3)$により、$\mathbf{p} \rightarrow \tilde{\mathbf{p}}$に変換されたとしよう。反変ベクトルの定義から、変換則は
 
 $$
 \tilde{p}^i = \frac{\partial \tilde{x}^i}{\partial x^k} p^k
@@ -387,10 +387,10 @@ $$
 で与えられる行列$T$を用意すると、運動量ベクトルは以下のように変換される。
 
 $$
-\tilde{\boldsymbol{p}} = T \boldsymbol{p}
+\tilde{\mathbf{p}} = T \mathbf{p}
 $$
 
-力ベクトル$\boldsymbol{F}$も同様な変換を受ける。以上から、
+力ベクトル$\mathbf{F}$も同様な変換を受ける。以上から、
 
 $$
 \begin{aligned}
@@ -417,21 +417,21 @@ $$
 同様に、ニュートンの運動方程式はある座標に対して等速直線運動する座標系から見ても形を変えない。これは、以下の座標変換に対応する。
 
 $$
-\tilde{\boldsymbol{x}} = \boldsymbol{x} + \boldsymbol{u}t + \boldsymbol{c}
+\tilde{\mathbf{x}} = \mathbf{x} + \mathbf{u}t + \mathbf{c}
 $$
 
-ただし$\boldsymbol{u}$は定ベクトルである。この変換を等速度推進、もしくはガリレイ・ブースト(Galilei boost)と呼ぶ。
+ただし$\mathbf{u}$は定ベクトルである。この変換を等速度推進、もしくはガリレイ・ブースト(Galilei boost)と呼ぶ。
 
 両辺を時間微分すると
 
 $$
-\tilde{\boldsymbol{v}} = \boldsymbol{v} + \boldsymbol{u}
+\tilde{\mathbf{v}} = \mathbf{v} + \mathbf{u}
 $$
 
 両辺に質量$m$をかけて、さらに時間微分すると
 
 $$
-\dot{\tilde{\boldsymbol{p}}} = \dot{\boldsymbol{p}}
+\dot{\tilde{\mathbf{p}}} = \dot{\mathbf{p}}
 $$
 
 運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。
@@ -572,11 +572,11 @@ $$
 
 ### 運動量保存則
 
-3次元空間に質量$m$の質点A, Bがある。これらの質点の座標をそれぞれ$\boldsymbol{r}_A = (x_A,y_A,z_A), \boldsymbol{r}_B = (x_B,y_B,z_B)$とする時、これらが相対距離$r$に依存するポテンシャル$U(r)$により相互作用をしているとしよう。ただし$r$は以下のように定義する。
+3次元空間に質量$m$の質点A, Bがある。これらの質点の座標をそれぞれ$\mathbf{r}_A = (x_A,y_A,z_A), \mathbf{r}_B = (x_B,y_B,z_B)$とする時、これらが相対距離$r$に依存するポテンシャル$U(r)$により相互作用をしているとしよう。ただし$r$は以下のように定義する。
 
 $$
 \begin{aligned}
-r &= \sqrt{(\boldsymbol{r}_A -\boldsymbol{r}_B})^2\\
+r &= \sqrt{(\mathbf{r}_A -\mathbf{r}_B})^2\\
 &= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
 \end{aligned}
 $$
@@ -693,18 +693,18 @@ $$
 も保存量となる。ここで、位置ベクトルと運動量ベクトル、角運動量ベクトルをそれぞれ
 
 $$
-\boldsymbol{r} =
+\mathbf{r} =
 \begin{pmatrix}
 x \\ y \\ z
 \end{pmatrix}
 ,
-\boldsymbol{p} =
+\mathbf{p} =
 m
 \begin{pmatrix}
 \dot{x} \\ \dot{y} \\ \dot{z}
 \end{pmatrix}
 ,
-\boldsymbol{L} =
+\mathbf{L} =
 \begin{pmatrix}
 L_x \\ L_y \\ L_z
 \end{pmatrix}
@@ -713,7 +713,7 @@ $$
 と定義すると、角運動量ベクトルは
 
 $$
-\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}
+\mathbf{L} = \mathbf{r} \times \mathbf{p}
 $$
 
 と表すことができる。

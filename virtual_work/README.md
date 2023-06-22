@@ -284,40 +284,40 @@ $$
 
 という関係式が求まった。先程の運動方程式を経由する方法に比べて、抗力$N$が全く現れなかったことに注意したい。一般に、束縛力は仕事をしない。そして仮想変位は束縛条件を破らない方向にとるため、その向きは必ず束縛力と直交する。これにより、仮想仕事について考えれば、どうせ後で消去する束縛力を考慮せずに済む。
 
-以上の話を一般化しよう。三次元空間中にある質点に力$\boldsymbol{F}_\mathrm{all}$が働いている。この質点の運動には何らかの拘束条件があるものとする。質点の位置を$\boldsymbol{r}$とすると、運動方程式は以下のように書ける。
+以上の話を一般化しよう。三次元空間中にある質点に力$\mathbf{F}_\mathrm{all}$が働いている。この質点の運動には何らかの拘束条件があるものとする。質点の位置を$\mathbf{r}$とすると、運動方程式は以下のように書ける。
 
 $$
-m \ddot{\boldsymbol{r}} = \boldsymbol{F}_\mathrm{all}
+m \ddot{\mathbf{r}} = \mathbf{F}_\mathrm{all}
 $$
 
-今、力を拘束力$\boldsymbol{N}$と、それ以外の力$\boldsymbol{F}$に分けることができたとしよう。すると、
+今、力を拘束力$\mathbf{N}$と、それ以外の力$\mathbf{F}$に分けることができたとしよう。すると、
 
 $$
-m \ddot{\boldsymbol{r}} = \boldsymbol{F}+ \boldsymbol{N}
+m \ddot{\mathbf{r}} = \mathbf{F}+ \mathbf{N}
 $$
 
 さて、物体が静止しているとしよう。すると、力は釣り合っていなければならないから、
 
 $$
-\boldsymbol{F}+ \boldsymbol{N} = 0
+\mathbf{F}+ \mathbf{N} = 0
 $$
 
-いま、拘束を破らないような仮想変位$\delta \boldsymbol{r}$を考え、両辺内積を取る。
+いま、拘束を破らないような仮想変位$\delta \mathbf{r}$を考え、両辺内積を取る。
 
 $$
-\boldsymbol{F} \cdot \delta \boldsymbol{r} + \boldsymbol{N} \cdot \delta \boldsymbol{r} = 0
+\mathbf{F} \cdot \delta \mathbf{r} + \mathbf{N} \cdot \delta \mathbf{r} = 0
 $$
 
-拘束力$N$は、拘束条件を破らないように働く力であるから、拘束条件を満たすように選ばれた仮想変位$\delta \boldsymbol{r}$とは直交している。すなわち、
+拘束力$N$は、拘束条件を破らないように働く力であるから、拘束条件を満たすように選ばれた仮想変位$\delta \mathbf{r}$とは直交している。すなわち、
 
 $$
-\boldsymbol{N} \cdot \delta \boldsymbol{r} = 0
+\mathbf{N} \cdot \delta \mathbf{r} = 0
 $$
 
 である。以上から、
 
 $$
-\boldsymbol{F} \cdot \delta \boldsymbol{r} = 0
+\mathbf{F} \cdot \delta \mathbf{r} = 0
 $$
 
 が成り立つ。この式は「静止している質点系において、拘束条件を破らないような変位(仮想変位)を考えた時、その変位に対する仕事(仮想仕事)はゼロとなる」ことを主張する。また逆に、仮想変位に伴う仮想仕事がゼロである時、この質点系に働く力は釣り合ってる。ここで、条件式に拘束力が登場しないことに注意したい。拘束条件を破らない限り拘束力は仕事をしないため、拘束力を陽に考えなくても良い。これが拘束条件のある系における仮想仕事の原理である。

@@ -44,10 +44,10 @@ $$
 波束の定義の積分の中に現れる$\mathrm{e}^{-i(kx-\omega t)}$は、$k$と$\omega$が正であれば$x$の正の方向に一定速度$v = \omega/k$で進む波を表している。これを三次元に拡張した
 
 $$
-\phi(\boldsymbol{r}, t) = \exp\left[ i\left(\boldsymbol{k} \cdot\boldsymbol{r} - \omega t \right) \right]
+\phi(\mathbf{r}, t) = \exp\left[ i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right) \right]
 $$
 
-は、 **平面波(plain wave)** と呼ばれる。平面波は、波数ベクトル$\boldsymbol{k}$の方向に速度$v = \omega/|\boldsymbol{k}|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\boldsymbol{k} \cdot\boldsymbol{r} - \omega t \right)$ではなく、$i\left(\boldsymbol{k} \cdot\boldsymbol{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
+は、 **平面波(plain wave)** と呼ばれる。平面波は、波数ベクトル$\mathbf{k}$の方向に速度$v = \omega/|\mathbf{k}|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$ではなく、$i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
 
 $$
 \begin{aligned}
@@ -206,7 +206,7 @@ $$
 行列と固有ベクトルの表記と比較してみよう。
 
 $$
-A \boldsymbol{x} = \lambda \boldsymbol{x}
+A \mathbf{x} = \lambda \mathbf{x}
 $$
 
 ケットベクトルは、対応するブラベクトルを作ることができる。
