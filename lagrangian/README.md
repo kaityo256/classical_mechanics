@@ -444,6 +444,174 @@ $$
 
 以上から、元の変数でオイラー・ラグランジュ方程式が成り立つと、新しい変数でもオイラー・ラグランジュ方程式が成り立つ、すなわち、オイラー・ラグランジュ方程式が任意の点変換において共変であることが示された。繰り返しになるが、この証明を追う必要はない。しかし「面倒ではあるが、基本的な微分の公式だけで証明できる」ということは頭に入れておいて欲しい。
 
+## 電磁場中の粒子の運動
+
+電磁場中を荷電粒子が運動すると、電磁場からの力を受ける。いま、電荷$q$の粒子が、電場$\mathbf{E}$、磁束密度$\mathbf{B}$の中を速度$\mathbf{v}$で運動すると、
+
+$$
+\mathbf{F} = q(\mathbf{E} + \mathbf{v}\times\mathbf{B})
+$$
+
+の力を受ける。これをラグランジアンから導出しよう。
+
+まず、電場$\mathbf{E}$のみを考える。スカラーポテンシャル$\phi(x,y,z)$を用いて
+
+$$
+\mathbf{E} = - \nabla \phi
+$$
+
+と書けているとしよう。ポテンシャルエネルギーを
+
+$$
+U = q \phi
+$$
+
+で定義すると、この系のラグランジアンは
+
+$$
+L = \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) + q \phi(x,y,z)
+$$
+
+となる。$x$成分についてオイラー・ラグランジュ方程式を作ってみよう。
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}} \right) + \frac{\partial L}{\partial x}
+&= m\ddot{x} +q \frac{\partial \phi}{\partial x} \\
+&= 0
+\end{aligned}
+$$
+
+$y, z$成分も同様であるから、
+
+$$
+\begin{aligned}
+m\ddot{x} &= -q \frac{\partial \phi}{\partial x} \\
+m\ddot{y} &= -q \frac{\partial \phi}{\partial y} \\
+m\ddot{z} &= -q \frac{\partial \phi}{\partial z} 
+\end{aligned}
+$$
+
+したがって、位置ベクトル
+
+$$
+\mathbf{r} =
+\begin{pmatrix}
+x \\ y \\z
+\end{pmatrix}
+$$
+
+を用いると、
+
+$$
+m \ddot{\mathbf{r}} =  - q \nabla \phi = q \mathbf{E}
+$$
+
+となる。
+
+次に、磁束密度$\textbf{B}$のみがある中での運動を考える。磁束密度が時間非依存のベクトルポテンシャル$\mathbf{A}$を用いて
+
+$$
+\textbf{B} = \nabla \times \textbf{A}
+$$
+
+と書こう。後のために成分を書き下しておく。
+
+$$
+\begin{aligned}
+B_x &= \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\
+B_y &= \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\
+B_z &= \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \\
+\end{aligned}
+$$
+
+この時、ポテンシャルエネルギーを
+
+$$
+\begin{aligned}
+U &= - q \mathbf{A} \cdot \dot{\mathbf{r}} \\
+&= -q (A_x \dot{x} +  A_y \dot{x} + A_z \dot{x} )
+\end{aligned}
+$$
+
+で定義する。今度はポテンシャルに速度成分が含まれるため、計算がややこしくなる。運動エネルギーを$K$、ポテンシャルを$K$とすると、ラグランジアンは$L=K-U$であるから、オイラー・ラグランジュ方程式
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - \frac{\partial L}{\partial x} =0
+$$
+
+が成り立つ時、
+
+$$
+\frac{d}{dt}\left(\frac{\partial K}{\partial \dot{x}}\right) - \frac{\partial K}{\partial x} =
+\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x} 
+$$
+
+が成り立つ。明らかに左辺は$m\ddot{x}$であるので、右辺を考えよう。
+
+まず$U$を$\dot{x}$で偏微分すると、
+
+$$
+\frac{\partial U}{\partial \dot{x}} = -q A_x
+$$
+
+$A_x$が$A_x(x,y,z)$と座標に依存し、座標が時間に依存することを考慮して
+
+$$
+\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) = -q \left(
+\frac{\partial A_x}{\partial x}\dot{x}
++\frac{\partial A_x}{\partial y}\dot{y}
++\frac{\partial A_x}{\partial z}\dot{z}
+\right)
+$$
+
+$U$を$x$で偏微分すると
+
+$$
+\frac{\partial U}{\partial x} = -q \left(
+\frac{\partial A_x}{\partial x} \dot{x}
++\frac{\partial A_y}{\partial x} \dot{y}
++\frac{\partial A_z}{\partial x} \dot{z}
+\right)
+$$
+
+以上から、
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
+&= q \left(
+    \dot{y} \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}  \right)  
+    + \dot{z} \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}  \right)     
+    \right)\\
+    &= q (\dot{y} B_z + \dot{z} B_y)
+\end{aligned}
+$$
+
+運動エネルギーの項と合わせて運動方程式は
+
+$$
+\begin{aligned}
+m \ddot{x} &= q (\dot{y} B_z + \dot{z} B_y) \\
+m \ddot{y} &= q (\dot{z} B_y + \dot{x} B_z) \\
+m \ddot{z} &= q (\dot{x} B_x + \dot{y} B_x) 
+\end{aligned}
+$$
+
+ベクトル表記すると、
+
+$$
+m \ddot{\mathbf{r}} = q \dot{\mathbf{r}} \times \mathbf{B}
+$$
+
+以上から、電磁場中を荷電粒子が運動する際、その荷電粒子が感じるポテンシャルエネルギーは
+
+$$
+U(\textbf{r}, \dot{\textbf{r}}) = q (\phi - \dot{\mathrm{r}}\times \mathbf{A})
+$$
+
+であることがわかった。このエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。
+
 ## 記号の節約表記について
 
 ここで、ラグランジアンを扱う際にどの変数を独立とみなし、どの変数が独立でないのかがよくわからなくなることが多い。これは主に表記において記号の節約を行うことに起因する。例えば、ある関数$f$を使って$Q = f(q)$と変換する時、$Q$の時間微分は

@@ -680,6 +680,198 @@
                                     \]</span></p>
                                     <p>以上から、元の変数でオイラー・ラグランジュ方程式が成り立つと、新しい変数でもオイラー・ラグランジュ方程式が成り立つ、すなわち、オイラー・ラグランジュ方程式が任意の点変換において共変であることが示された。繰り返しになるが、この証明を追う必要はない。しかし「面倒ではあるが、基本的な微分の公式だけで証明できる」ということは頭に入れておいて欲しい。</p>
                                     <h1
+                                    id="電磁場中の粒子の運動">電磁場中の粒子の運動</h1>
+                                    <p>電磁場中を荷電粒子が運動すると、電磁場からの力を受ける。いま、電荷<span
+                                    class="math inline">\(q\)</span>の粒子が、電場<span
+                                    class="math inline">\(\mathbf{E}\)</span>、磁束密度<span
+                                    class="math inline">\(\mathbf{B}\)</span>の中を速度<span
+                                    class="math inline">\(\mathbf{v}\)</span>で運動すると、</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{F} = q(\mathbf{E} +
+                                    \mathbf{v}\times\mathbf{B})
+                                    \]</span></p>
+                                    <p>の力を受ける。これをラグランジアンから導出しよう。</p>
+                                    <p>まず、電場<span
+                                    class="math inline">\(\mathbf{E}\)</span>のみを考える。スカラーポテンシャル<span
+                                    class="math inline">\(\phi(x,y,z)\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{E} = - \nabla \phi
+                                    \]</span></p>
+                                    <p>と書けているとしよう。ポテンシャルエネルギーを</p>
+                                    <p><span class="math display">\[
+                                    U = q \phi
+                                    \]</span></p>
+                                    <p>で定義すると、この系のラグランジアンは</p>
+                                    <p><span class="math display">\[
+                                    L =
+                                    \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+                                    + q \phi(x,y,z)
+                                    \]</span></p>
+                                    <p>となる。<span
+                                    class="math inline">\(x\)</span>成分についてオイラー・ラグランジュ方程式を作ってみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{x}} \right) +
+                                    \frac{\partial L}{\partial x}
+                                    &amp;= m\ddot{x} +q \frac{\partial
+                                    \phi}{\partial x} \\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span class="math inline">\(y,
+                                    z\)</span>成分も同様であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m\ddot{x} &amp;= -q \frac{\partial
+                                    \phi}{\partial x} \\
+                                    m\ddot{y} &amp;= -q \frac{\partial
+                                    \phi}{\partial y} \\
+                                    m\ddot{z} &amp;= -q \frac{\partial
+                                    \phi}{\partial z}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>したがって、位置ベクトル</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{r} =
+                                    \begin{pmatrix}
+                                    x \\ y \\z
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>を用いると、</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{\mathbf{r}} =  - q \nabla
+                                    \phi = q \mathbf{E}
+                                    \]</span></p>
+                                    <p>となる。</p>
+                                    <p>次に、磁束密度<span
+                                    class="math inline">\(\textbf{B}\)</span>のみがある中での運動を考える。磁束密度が時間非依存のベクトルポテンシャル<span
+                                    class="math inline">\(\mathbf{A}\)</span>を用いて</p>
+                                    <p><span class="math display">\[
+                                    \textbf{B} = \nabla \times
+                                    \textbf{A}
+                                    \]</span></p>
+                                    <p>と書こう。後のために成分を書き下しておく。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    B_x &amp;= \frac{\partial
+                                    A_z}{\partial y} - \frac{\partial
+                                    A_y}{\partial z} \\
+                                    B_y &amp;= \frac{\partial
+                                    A_x}{\partial z} - \frac{\partial
+                                    A_z}{\partial x} \\
+                                    B_z &amp;= \frac{\partial
+                                    A_y}{\partial x} - \frac{\partial
+                                    A_x}{\partial y} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この時、ポテンシャルエネルギーを</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    U &amp;= - q \mathbf{A} \cdot
+                                    \dot{\mathbf{r}} \\
+                                    &amp;= -q (A_x \dot{x} +  A_y
+                                    \dot{x} + A_z \dot{x} )
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>で定義する。今度はポテンシャルに速度成分が含まれるため、計算がややこしくなる。運動エネルギーを<span
+                                    class="math inline">\(K\)</span>、ポテンシャルを<span
+                                    class="math inline">\(K\)</span>とすると、ラグランジアンは<span
+                                    class="math inline">\(L=K-U\)</span>であるから、オイラー・ラグランジュ方程式</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{x}}\right) -
+                                    \frac{\partial L}{\partial x} =0
+                                    \]</span></p>
+                                    <p>が成り立つ時、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    K}{\partial \dot{x}}\right) -
+                                    \frac{\partial K}{\partial x} =
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    U}{\partial \dot{x}}\right) -
+                                    \frac{\partial U}{\partial x}
+                                    \]</span></p>
+                                    <p>が成り立つ。明らかに左辺は<span
+                                    class="math inline">\(m\ddot{x}\)</span>であるので、右辺を考えよう。</p>
+                                    <p>まず<span
+                                    class="math inline">\(U\)</span>を<span
+                                    class="math inline">\(\dot{x}\)</span>で偏微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial U}{\partial \dot{x}}
+                                    = -q A_x
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(A_x\)</span>が<span
+                                    class="math inline">\(A_x(x,y,z)\)</span>と座標に依存し、座標が時間に依存することを考慮して</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    U}{\partial \dot{x}}\right) = -q
+                                    \left(
+                                    \frac{\partial A_x}{\partial
+                                    x}\dot{x}
+                                    +\frac{\partial A_x}{\partial
+                                    y}\dot{y}
+                                    +\frac{\partial A_x}{\partial
+                                    z}\dot{z}
+                                    \right)
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(U\)</span>を<span
+                                    class="math inline">\(x\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial U}{\partial x} = -q
+                                    \left(
+                                    \frac{\partial A_x}{\partial x}
+                                    \dot{x}
+                                    +\frac{\partial A_y}{\partial x}
+                                    \dot{y}
+                                    +\frac{\partial A_z}{\partial x}
+                                    \dot{z}
+                                    \right)
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    U}{\partial \dot{x}}\right) -
+                                    \frac{\partial U}{\partial x}
+                                    &amp;= q \left(
+                                        \dot{y} \left(\frac{\partial
+                                    A_y}{\partial x} - \frac{\partial
+                                    A_x}{\partial y}  \right)  
+                                        + \dot{z} \left(\frac{\partial
+                                    A_x}{\partial z} - \frac{\partial
+                                    A_z}{\partial x}  \right)     
+                                        \right)\\
+                                        &amp;= q (\dot{y} B_z + \dot{z}
+                                    B_y)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>運動エネルギーの項と合わせて運動方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= q (\dot{y} B_z +
+                                    \dot{z} B_y) \\
+                                    m \ddot{y} &amp;= q (\dot{z} B_y +
+                                    \dot{x} B_z) \\
+                                    m \ddot{z} &amp;= q (\dot{x} B_x +
+                                    \dot{y} B_x)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ベクトル表記すると、</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{\mathbf{r}} = q
+                                    \dot{\mathbf{r}} \times \mathbf{B}
+                                    \]</span></p>
+                                    <p>以上から、電磁場中を荷電粒子が運動する際、その荷電粒子が感じるポテンシャルエネルギーは</p>
+                                    <p><span class="math display">\[
+                                    U(\textbf{r}, \dot{\textbf{r}}) = q
+                                    (\phi - \dot{\mathrm{r}}\times
+                                    \mathbf{A})
+                                    \]</span></p>
+                                    <p>であることがわかった。このエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。</p>
+                                    <h1
                                     id="記号の節約表記について">記号の節約表記について</h1>
                                     <p>ここで、ラグランジアンを扱う際にどの変数を独立とみなし、どの変数が独立でないのかがよくわからなくなることが多い。これは主に表記において記号の節約を行うことに起因する。例えば、ある関数<span
                                     class="math inline">\(f\)</span>を使って<span
