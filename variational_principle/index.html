@@ -224,19 +224,23 @@
                                     x^2)\)</span>を用いた。</p>
                                     <p>かかる時間の総和は</p>
                                     <p><span class="math display">\[
-                                    T = \sum_{k=0}^{N-1}
-                                    \frac{l(x_k)}{v(x_k)} \Delta x
+                                    \begin{aligned}
+                                    T &amp;= \sum_{k=0}^{N-1}
+                                    \frac{l(x_k)}{v(x_k)} \\
+                                    &amp;= \frac{\sqrt{1 +
+                                    (y&#39;_k)^2}}{\sqrt{2gy_k}} \Delta
+                                    x
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>であるから、<span
-                                    class="math inline">\(N\)</span>に関して連続極限をとれば、</p>
+                                    class="math inline">\(L =
+                                    N\Delta\)</span>を固定したまま<span
+                                    class="math inline">\(N\rightarrow
+                                    \infty\)</span>として連続極限をとると</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    T &amp;= \int_0^L \frac{l(x)}{v(x)}
-                                    dx \\
-                                    &amp;= \int_0^L
+                                    T= \int_0^L
                                     \frac{\sqrt{1+y&#39;^2}}{\sqrt{2gy}}
                                     dx
-                                    \end{aligned}
                                     \]</span></p>
                                     <p>関数<span
                                     class="math inline">\(y(x)\)</span>は、スカラー量を入力とし、スカラー量を返すものであった。先程の<span

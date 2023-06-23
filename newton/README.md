@@ -394,11 +394,11 @@ $$
 
 $$
 \begin{aligned}
-\dot{\tilde{p}^i} - \tilde{F}^i &= T (\dot{p}^i - F^i) \\
+\dot{\tilde{\mathbf{p}}} - \tilde{\mathbf{F}} &= T (\dot{\mathbf{p}} - \mathbf{F}) \\
 \end{aligned}
 $$
 
-となる。もともとのニュートンの運動方程式から$\dot{p}^i - F^i = 0$であるから右辺がゼロとなるため、左辺もゼロとなる。すなわち、運動方程式
+となる。もともとのニュートンの運動方程式から右辺がゼロであるため、左辺もゼロとなる。すなわち、運動方程式
 
 $$
 \dot{p}^i = F^i

@@ -171,7 +171,7 @@ $$
 W = F(x_0) \delta x
 $$
 
-とし、$W$を **仮想仕事(virtual work)** 、$\delta x$を **仮想変位(virtual displacement** と呼ぶ。定義から、力の釣り合いの近傍では仮想変位によりなされる仕事はゼロとなる。これを **仮想仕事の原理 (principle of virtual work)** と呼ぶ。
+とし、$W$を **仮想仕事(virtual work)** 、$\delta x$を **仮想変位(virtual displacement)** と呼ぶ。定義から、力の釣り合いの近傍では仮想変位によりなされる仕事はゼロとなる。これを **仮想仕事の原理 (principle of virtual work)** と呼ぶ。
 
 ![potential](fig/potential.png)
 
