@@ -436,6 +436,78 @@
                                     class="math inline">\((X,Y)\)</span>平面上に表現されることが多いため、<span
                                     class="math inline">\((x,X)\)</span>平面を考える面積表式ではイメージがつかみにくいかもしれない。どちらでも好きな方で理解すれば良い。</p>
                                     <h1
+                                    id="ハミルトニアンと変分原理">ハミルトニアンと変分原理</h1>
+                                    <p>ラグランジアンとハミルトニアンの関係を見ておこう。まず、変分原理を確認する。</p>
+                                    <p>元々、<span
+                                    class="math inline">\(q\)</span>と<span
+                                    class="math inline">\(\dot{q}\)</span>の変数であったラグランジアンの作用積分</p>
+                                    <p><span class="math display">\[
+                                    I[q] = \int L dt
+                                    \]</span></p>
+                                    <p>について、変分がゼロ、すなわち<span
+                                    class="math inline">\(\delta I =
+                                    0\)</span>を要求することで、オイラー・ラグランジュ方程式</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{q}} \right) -
+                                    \frac{\partial L}{\partial q} = 0
+                                    \]</span></p>
+                                    <p>が導かれた。全く同様にして、ハミルトニアン<span
+                                    class="math inline">\(H(q,p)\)</span>について作用積分</p>
+                                    <p><span class="math display">\[
+                                    I[p,q] = \int (\dot{q}p - H) dt
+                                    \]</span></p>
+                                    <p>について、変分を考えてみよう。両辺の変分をとると</p>
+                                    <p><span class="math display">\[
+                                    \delta I = \int \left(\dot{q}\delta
+                                    p +p \delta \dot{q} - \frac{\partial
+                                    H}{\partial q}\delta q +
+                                    \frac{\partial H}{\partial p} \delta
+                                    p \right)dt
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(p \delta
+                                    \dot{q}\)</span>の項目について部分積分すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta I &amp;= \int
+                                    \left(\dot{q}\delta p -\dot{p}
+                                    \delta q - \frac{\partial
+                                    H}{\partial q}\delta q +
+                                    \frac{\partial H}{\partial p} \delta
+                                    p \right)dt \\
+                                    &amp;= \int \left( \left(\dot{q} -
+                                    \frac{\partial H}{\partial
+                                    p}\right)\delta p
+                                    - \left(\dot{p} + \frac{\partial
+                                    H}{\partial q}\right)\delta q
+                                    \right)dt \\
+                                    &amp;=0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これが任意の<span
+                                    class="math inline">\(\delta p,
+                                    \delta
+                                    q\)</span>について成り立たなければならないことから、以下の正準方程式が得られる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p} \\
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>したがって、作用積分の中身をラグランジアン<span
+                                    class="math inline">\(L\)</span>の代わりに、ハミルトニアンを使って<span
+                                    class="math inline">\(p\dot{q} -
+                                    H\)</span>としても変分原理が適用できる。</p>
+                                    <h1
+                                    id="ラグランジアンからの変換">ラグランジアンからの変換</h1>
+                                    <p>最後に、ラグランジアンからハミルトニアンへの変換をいくつか見ておこう。</p>
+                                    <p>TODO: 通常の質点 TODO: 極座標
+                                    TODO: スケーリング TODO:
+                                    相対座標</p>
+                                    <h1
                                     id="余談双対変換">余談：双対変換</h1>
                                     <p>双対変換とは要するに「2回行うと元にもどる変換」のことである。例えば鏡に映る自分は左右が逆になるが、もう一度鏡に映すと元にもどる。すなわち鏡映変換は双対変換である。こういった双対変換の中で興味深いのは、正多面体の双対性である。</p>
                                     <p>正多面体は、ある頂点にどんな多角形が何個接しているかで特徴づけることができる。そこで、それぞれの頂点に正<span

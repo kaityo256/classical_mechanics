@@ -144,7 +144,7 @@ $$
 $$
 \begin{aligned}
 X &= \frac{dy}{dx} \\
-Y &= y - x\frac{dy}{dx} = y - xX 
+Y &= y - x\frac{dy}{dx} = y - xX
 \end{aligned}
 $$
 
@@ -261,11 +261,71 @@ $$
 $$
 \begin{aligned}
 p &= \frac{\partial L}{d \dot{q}} \\
-H &= p\dot{q} - L 
+H &= p\dot{q} - L
 \end{aligned}
 $$
 
 面積表式では、自然に変換が対称となること、$(x,y)$と$(X,Y)$が満たす関係式$y+Y=xX$の解釈がわかりやすいというメリットがある。一方、我々が知りたい物理量は$(x,y)$平面もしくは$(X,Y)$平面上に表現されることが多いため、$(x,X)$平面を考える面積表式ではイメージがつかみにくいかもしれない。どちらでも好きな方で理解すれば良い。
+
+## ハミルトニアンと変分原理
+
+ラグランジアンとハミルトニアンの関係を見ておこう。まず、変分原理を確認する。
+
+元々、$q$と$\dot{q}$の変数であったラグランジアンの作用積分
+
+$$
+I[q] = \int L dt
+$$
+
+について、変分がゼロ、すなわち$\delta I = 0$を要求することで、オイラー・ラグランジュ方程式
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0
+$$
+
+が導かれた。全く同様にして、ハミルトニアン$H(q,p)$について作用積分
+
+$$
+I[p,q] = \int (\dot{q}p - H) dt
+$$
+
+について、変分を考えてみよう。両辺の変分をとると
+
+$$
+\delta I = \int \left(\dot{q}\delta p +p \delta \dot{q} - \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p} \delta p \right)dt
+$$
+
+ここで、$p \delta \dot{q}$の項目について部分積分すると
+
+$$
+\begin{aligned}
+\delta I &= \int \left(\dot{q}\delta p -\dot{p} \delta q - \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p} \delta p \right)dt \\
+&= \int \left( \left(\dot{q} - \frac{\partial H}{\partial p}\right)\delta p
+- \left(\dot{p} + \frac{\partial H}{\partial q}\right)\delta q
+\right)dt \\
+&=0
+\end{aligned}
+$$
+
+これが任意の$\delta p, \delta q$について成り立たなければならないことから、以下の正準方程式が得られる。
+
+$$
+\begin{aligned}
+\dot{q} &= \frac{\partial H}{\partial p} \\
+\dot{p} &= -\frac{\partial H}{\partial q} \\
+\end{aligned}
+$$
+
+したがって、作用積分の中身をラグランジアン$L$の代わりに、ハミルトニアンを使って$p\dot{q} - H$としても変分原理が適用できる。
+
+## ラグランジアンからの変換
+
+最後に、ラグランジアンからハミルトニアンへの変換をいくつか見ておこう。
+
+TODO: 通常の質点
+TODO: 極座標
+TODO: スケーリング
+TODO: 相対座標
 
 ## 余談：双対変換
 
