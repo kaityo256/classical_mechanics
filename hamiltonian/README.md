@@ -322,6 +322,27 @@ $$
 
 最後に、ラグランジアンからハミルトニアンへの変換をいくつか見ておこう。
 
+まず、ポテンシャル$U(x,y)$による力を受けて運動する質点を考える。質点の質量を$m$とすると、この系の運動エネルギーは
+
+$$
+K = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2)
+$$
+
+であるから、ラグランジアンは
+
+$$
+L = K - U = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2) - U(x,y)
+$$
+
+となる。オイラー・ラグランジュ方程式からただちに
+
+$$
+\begin{aligned}
+m \ddot{x} &= - \frac{\partial U}{\partial x} \\
+m \ddot{y} &= - \frac{\partial U}{\partial y}
+\end{aligned}
+$$
+
 TODO: 通常の質点
 TODO: 極座標
 TODO: スケーリング
