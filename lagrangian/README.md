@@ -192,7 +192,9 @@ m \frac{d}{dt} \left(r^2 \dot{\theta} \right) &= - \frac{\partial U}{\partial \t
 \end{aligned}
 $$
 
-このように、一度ラグランジアンを書いてしまえば、ラグランジアンだけを変数変換することで、後はオイラー・ラグランジュの方程式を書き下すだけで新しい変数が従う運動方程式が得られる。3次元の極座標や、より一般の変数変換をニュートンの運動方程式で扱うのは極めて面倒だが、ラグランジアンを用いればかなり見通しよく計算ができる。以下では、オイラー・ラグランジュ方程式が任意の点変換に対して共変であることを証明しよう。
+このように、一度ラグランジアンを書いてしまえば、ラグランジアンだけを変数変換することで、後はオイラー・ラグランジュの方程式を書き下すだけで新しい変数が従う運動方程式が得られる。3次元の極座標や、より一般の変数変換をニュートンの運動方程式で扱うのは極めて面倒だが、ラグランジアンを用いればかなり見通しよく計算ができる。以下では、オイラー・ラグランジュ方程式が任意の座標変換に対して共変であることを証明しよう。
+
+なお、この証明を覚える必要はまったくない。しかし、「証明できる」ということと「証明には数学のツールとして合成関数の偏微分くらいしか使わない」ということをなんとなく知っておくのは大事である。
 
 ## 点変換とラグランジアンの共変性
 
@@ -406,7 +408,7 @@ $$
 先程得た式と比べることで、
 
 $$
-\frac{d}{dt}\left(\frac{\partial \dot{q}^i}{\partial \dot{Q}^k}\right) = \frac{\partial \dot{q}^i}{\partial Q^k} 
+\frac{d}{dt}\left(\frac{\partial \dot{q}^i}{\partial \dot{Q}^k}\right) = \frac{\partial \dot{q}^i}{\partial Q^k}
 $$
 
 を得た。さて、ラグランジアンを新しい変数で偏微分していこう。適宜、途中で得た関係式を代入している。
@@ -419,7 +421,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right) &= 
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right) &=
 \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right) \frac{\partial \dot{q}^i}{\partial \dot{Q}^k}
 + \frac{\partial L}{\partial \dot{q}^i} \frac{d}{dt} \left( \frac{\partial \dot{q}^i}{\partial \dot{Q}^k} \right) \\
 &= \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  \frac{\partial q^i}{\partial Q^k} + \frac{\partial L}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial Q^k}
@@ -488,7 +490,7 @@ $$
 \begin{aligned}
 m\ddot{x} &= -q \frac{\partial \phi}{\partial x} \\
 m\ddot{y} &= -q \frac{\partial \phi}{\partial y} \\
-m\ddot{z} &= -q \frac{\partial \phi}{\partial z} 
+m\ddot{z} &= -q \frac{\partial \phi}{\partial z}
 \end{aligned}
 $$
 
@@ -544,7 +546,7 @@ $$
 
 $$
 \frac{d}{dt}\left(\frac{\partial K}{\partial \dot{x}}\right) - \frac{\partial K}{\partial x} =
-\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x} 
+\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
 $$
 
 が成り立つ。明らかに左辺は$m\ddot{x}$であるので、右辺を考えよう。
@@ -582,7 +584,7 @@ $$
 \frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
 &= q \left(
     \dot{y} \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}  \right)  
-    + \dot{z} \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}  \right)     
+    + \dot{z} \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}  \right)
     \right)\\
     &= q (\dot{y} B_z + \dot{z} B_y)
 \end{aligned}
@@ -594,7 +596,7 @@ $$
 \begin{aligned}
 m \ddot{x} &= q (\dot{y} B_z + \dot{z} B_y) \\
 m \ddot{y} &= q (\dot{z} B_y + \dot{x} B_z) \\
-m \ddot{z} &= q (\dot{x} B_x + \dot{y} B_x) 
+m \ddot{z} &= q (\dot{x} B_x + \dot{y} B_x)
 \end{aligned}
 $$
 
@@ -626,8 +628,33 @@ $$
 \dot{Q} = \frac{dQ}{dq} \dot{q}
 $$
 
-と書かれる。さらに、ラグランジアンにおいて$L(\dot{q}, q)$とし、$\dot{q}$と$q$は独立だとみなすが、ラグランジアンを時間積分する際には$q$と$\dot{q}$には$\dot{q} = dq/dt$の関係がある。これを記号の節約をせずにきちんと書くなら、ラグランジアンを$L(v, x)$と異なる記号で書いておけば独立であることがわかりやすく、これを時間積分する際には積分路が$s(t)$で指定されるとして、$x = s(t)$、$v = \dot{s}(t)$と表記することにすれば、$x$と$v$がどのような関係があるのかがわかりやすい。媒介変数であることがわかりやすいように$\xi$や$\eta$といった記号を使う流儀もある。しかし、このように表記すると記号が増え、かえって本質が見えづらいと感じる人もいるであろう。大多数の読者は深く考えず、なんとなく「そういうものだ」と納得するであろうし、今はそれで良いと思う。もし将来、真面目に計算して何が独立で何がそうでないか混乱した時に、混乱の原因が変数の節約にあるかもしれないと思い至ればそれで良い。どうせ解析力学をきちんと理解するのは時間がかかる。まずはざっと式変形の地図を頭にイメージできるようにして、あとで「あれ？」と思ったら別の書籍を調べて正確な理解を目指せば良い。
+と書かれる。さらに、ラグランジアンにおいて$L(q,\dot{q})$とし、$\dot{q}$と$q$は独立だとみなすが、ラグランジアンを時間積分する際には$q$と$\dot{q}$には$\dot{q} = dq/dt$の関係がある。これを記号の節約をせずにきちんと書くなら、ラグランジアンを$L(x, v)$と異なる記号で書いておけば独立であることがわかりやすく、これを時間積分する際には積分路が$s(t)$で指定されるとして、$x = s(t)$、$v = \dot{s}(t)$と表記することにすれば、$x$と$v$がどのような関係があるのかがわかりやすい。媒介変数であることがわかりやすいように$\xi$や$\eta$といった記号を使う流儀もある。しかし、このように表記すると記号が増え、かえって本質が見えづらいと感じる人もいるであろう。大多数の読者は深く考えず、なんとなく「そういうものだ」と納得するであろうし、今はそれで良いと思う。もし将来、真面目に計算して何が独立で何がそうでないか混乱した時に、混乱の原因が変数の節約にあるかもしれないと思い至ればそれで良い。どうせ解析力学をきちんと理解するのは時間がかかる。まずはざっと式変形の地図を頭にイメージできるようにして、あとで「あれ？」と思ったら別の書籍を調べて正確な理解を目指せば良い。
 
 ## まとめ
 
 ニュートンの運動方程式がガリレイ変換という限られた座標変換でのみ共変であったのに対して、オイラー・ラグランジュ方程式は、任意の非線形変換を含む点変換に対して共変であることが証明された。点変換の典型例は極座標表示である。二次元でもかなり面倒であるのだが、三次元の極座標が従う運動方程式を、ニュートン力学から導出するのは極めて面倒である(少なくとも私はやりたくない)。ラグランジアンを使ってもまだ面倒であるが、それでもかなり労力を減らすことができる。これは、単に計算が楽になるというだけでなく、系に内在する性質を見やすくするという、運動の本質をえぐり出すことにも繋がる。ここでは、座標を任意に混ぜる変換を考えた。次は運動量と座標も混ぜるような変換にたいして共変であるような運動方程式の表式が欲しくなる。それがハミルトンの運動方程式である。
+
+## 余談：公式の証明
+
+数学や物理には様々な公式が現れる。その代表例が三角関数であり、大量に現れる煩雑な公式に嫌になってしまう人も多いであろう。ネットで検索できる時代、公式は覚える必要はまったくない。しかし、自分で使う公式は、一度はすべて手で導出しておいたほうが良い。例えば三角関数の加法定理で、
+
+$$
+\begin{aligned}
+\sin(\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta\\
+\cos(\alpha - \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta\\
+\end{aligned}
+$$
+
+のような公式を「咲いたコスモス…」のように覚えた人もいるだろう。しかしこの公式は、オイラーの等式
+
+$$
+\exp(i\theta) = \cos \theta + i \sin \theta
+$$
+
+と、指数関数の性質
+
+$$
+\exp(i(\alpha + \beta)) = \exp(i \alpha) + \exp(i \beta)
+$$
+
+から容易に導出できる。ここで、これらの導出を知っていること、すなわち「知識」が大事なのではない。複素平面の幾何学的な解釈と、三角関数とは本質的に指数関数である、という「感覚」が大事である。こういった感覚の積み上げが物理や数学の理解につながっていく。結局、手を動かすことなく何かを理解できることはない。今回のラグランジアンの共変性も、その導出そのものが大事なのではなく、オイラー・ラグランジュ方程式が変分原理から導かれたから変数変換に強いのだ、という感覚を身につける方が良い。
