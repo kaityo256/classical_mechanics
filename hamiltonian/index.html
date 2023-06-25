@@ -65,7 +65,7 @@
                                     <p>ニュートンの運動方程式を、ラグランジアンを使ってオイラー・ラグランジュの式で書いてやると、ニュートンの運動方程式よりも広い変数変換に対して運動方程式が不変となることを見た。これにより変数変換が楽になる。しかし、オイラー・ラグランジュの式で許される変換は座標のみを対象としたものであり、例えば運動量と座標を混ぜるような変換に対しては形を変えてしまう。そこで、ラグランジアンを変数変換することで、より広い変数変換について形を変えないような運動方程式を作ることにしよう。</p>
                                     <p>系のラグランジアンが<span
                                     class="math inline">\(L(q,
-                                    \dot{q})\)</span>で与えられている。この時、ラグランジアンを速度<span
+                                    \dot{q})\)</span>で与えられている。この時、ラグランジアンを一般化速度<span
                                     class="math inline">\(\dot{q}\)</span>で偏微分したものを<span
                                     class="math inline">\(p\)</span>とする。</p>
                                     <p><span class="math display">\[
@@ -132,7 +132,12 @@
                                     equation)</strong>、もしくは
                                     <strong>正準方程式(canonical
                                     equation)</strong>
-                                    と呼ぶ。多変数の場合も全く同様な議論から以下のように書ける。</p>
+                                    と呼ぶ。多変数の場合、ラグランジアンからハミルトニアンへの変換は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    H = p_i \dot{q}^i - L
+                                    \]</span></p>
+                                    <p>ここで、アインシュタイン記法による和を取っていることに注意。また、後にわかるように一般化運動量は共変ベクトルであるので、添字を下につけている。</p>
+                                    <p>一変数の場合と同じ議論から、運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q}_i &amp;= \frac{\partial
@@ -146,6 +151,70 @@
                                     class="math inline">\(p_i\)</span>は互いにペアになっており、自分の時間微分は、ハミルトニアンを相手で偏微分することで得られる。ただし、運動量は負符号がつくことに注意。オイラー・ラグランジュ方程式に比べて、方程式が対称性の良い形になっていることがわかるであろう。この運動方程式を用いて運動を議論する形式をハミルトン形式と呼ぶ。また、<span
                                     class="math inline">\(q_i\)</span>と<span
                                     class="math inline">\(p_i\)</span>の関係を正準共役、もしくは単に共役と呼ぶ。</p>
+                                    <h1
+                                    id="ハミルトニアンとエネルギー">ハミルトニアンとエネルギー</h1>
+                                    <p>ラグランジアンの一般化速度をルジャンドル変換したものがハミルトニアンであるが、物理的には全エネルギーに対応する量となることを見ておこう。</p>
+                                    <p>二次元系において、ポテンシャル<span
+                                    class="math inline">\(U(x,y)\)</span>による力を受けて運動する質点を考える。質点の質量を<span
+                                    class="math inline">\(m\)</span>とすると、この系の運動エネルギーは</p>
+                                    <p><span class="math display">\[
+                                    K = \frac{1}{2}m(\dot{x}^2 +
+                                    \dot{y}^2)
+                                    \]</span></p>
+                                    <p>であるから、ラグランジアンは</p>
+                                    <p><span class="math display">\[
+                                    L = K - U = \frac{1}{2}m(\dot{x}^2 +
+                                    \dot{y}^2) - U(x,y)
+                                    \]</span></p>
+                                    <p>となる。オイラー・ラグランジュ方程式からただちに</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= - \frac{\partial
+                                    U}{\partial x} \\
+                                    m \ddot{y} &amp;= - \frac{\partial
+                                    U}{\partial y}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さて、ラグランジアンからハミルトニアンに移ろう。ラグランジアンを一般化速度で偏微分したものが一般化運動量であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p_x &amp;= \frac{\partial
+                                    L}{\partial \dot{x}} = m \dot{x}\\
+                                    p_y &amp;= \frac{\partial
+                                    L}{\partial \dot{y}} = m \dot{y}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    H &amp;= p_x \dot{x} + p_y \dot{y} -
+                                    L \\
+                                    &amp;= m \dot{x}^2 + m \dot{y}^2 - L
+                                    \\
+                                    &amp;= 2K - (K -U)\\
+                                    &amp;= K + U \\
+                                    &amp;= \frac{1}{2m}(p_x^2+p_y^2) + U
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、<span
+                                    class="math inline">\(p_i
+                                    \dot{q}^i\)</span>の項が運動エネルギーの2倍になるため、結果としてハミルトニアンは全エネルギーそのものとなる。</p>
+                                    <p>一般的なハミルトニアン<span
+                                    class="math inline">\(H(p,q)\)</span>に対して時間微分を計算すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{H} &amp;= \frac{\partial
+                                    H}{\partial q}\dot{q}
+                                    +\frac{\partial H}{\partial
+                                    p}\dot{p} \\
+                                    &amp;= \frac{\partial H}{\partial
+                                    q}\frac{\partial H}{\partial p}
+                                    - \frac{\partial H}{\partial
+                                    p}\frac{\partial H}{\partial q} \\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、ハミルトニアンの時間微分は(ハミルトニアンが時間に陽に依存しない限り)必ずゼロとなる。これはエネルギー保存則に他ならない。ニュートンの運動方程式や、オイラー・ラグランジュ方程式に比べ、正準方程式はエネルギー保存則が見えやすい形となっている。</p>
                                     <h1
                                     id="ルジャンドル変換">ルジャンドル変換</h1>
                                     <p>ラグランジアン<span
@@ -190,7 +259,6 @@
                                     \mathbf{e}_2
                                     \]</span></p>
                                     <p>のような、基底によるベクトルの展開に他ならない。</p>
-                                    <p>TODO: 図解</p>
                                     <p>さて、ルジャンドル変換とは、基底と展開係数の入れ替えに対応している。すなわち、</p>
                                     <p><span class="math display">\[
                                     \mathbf{a} = a_1 \mathbf{e}_1 + a_2
@@ -502,11 +570,109 @@
                                     class="math inline">\(p\dot{q} -
                                     H\)</span>としても変分原理が適用できる。</p>
                                     <h1
-                                    id="ラグランジアンからの変換">ラグランジアンからの変換</h1>
-                                    <p>最後に、ラグランジアンからハミルトニアンへの変換をいくつか見ておこう。</p>
-                                    <p>TODO: 通常の質点 TODO: 極座標
-                                    TODO: スケーリング TODO:
-                                    相対座標</p>
+                                    id="ラグランジアンからハミルトニアンへの変換の例">ラグランジアンからハミルトニアンへの変換の例</h1>
+                                    <p>最後に、ラグランジアンからハミルトニアンへの変換例をいくつか見ておこう。</p>
+                                    <p>まず、二次元極座標のラグランジアンを考える。</p>
+                                    <p><span class="math display">\[
+                                    L = \frac{1}{2}m(\dot{r}^2 +
+                                    r^2\dot{\theta}^2) - U
+                                    \]</span></p>
+                                    <p>一般化座標<span
+                                    class="math inline">\(r,\theta\)</span>に対応する一般化運動量は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p_r &amp;= \frac{\partial
+                                    L}{\partial \dot{r}} = m \dot{r} \\
+                                    p_\theta &amp;= \frac{\partial
+                                    L}{\partial \dot{\theta}} = m r^2
+                                    \dot{\theta} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。ここで、一般化座標<span
+                                    class="math inline">\(\theta\)</span>が座標の次元を持っていないことに対応して、一般化運動量<span
+                                    class="math inline">\(p_\theta\)</span>も運動量の次元を持っていないことに注意。</p>
+                                    <p>ハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    H &amp;= p_r \dot{r} + p_\theta
+                                    \dot{\theta} - L \\
+                                    &amp;= m(\dot{r}^2 + r^2
+                                    \dot{\theta}^2) -L \\
+                                    &amp;= 2 K - K + U \\
+                                    &amp;= K + U
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となり、やはり全エネルギーに対応する。</p>
+                                    <p>ハミルトニアンを一般化運動量と一般化座標で書くと</p>
+                                    <p><span class="math display">\[
+                                    H = \frac{1}{2m}\left(p_r^2 +
+                                    \frac{p_\theta^2}{r^2} \right) + U
+                                    \]</span></p>
+                                    <p>となる。ここで、<span
+                                    class="math inline">\(p_\theta\)</span>の次元に注意しよう。<span
+                                    class="math inline">\(\theta\)</span>が無次元量であるから、<span
+                                    class="math inline">\(p_\theta\)</span>は<span
+                                    class="math inline">\([M
+                                    L^2/T]\)</span>の次元を持つ。したがって、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \left[\frac{p_\theta^2}{2mr^2}\right]
+                                    &amp;= \left[\frac{M^2L^4}{T^2}
+                                    \frac{1}{ML^2} \right] \\
+                                    &amp; = \left[\frac{M L^2}{T^2}
+                                    \right]
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、エネルギーになっている。</p>
+                                    <p>次に、座標変換に対するラグランジアンとハミルトニアンの変換性を見ておこう。</p>
+                                    <p>ラグランジアンが</p>
+                                    <p><span class="math display">\[
+                                    L(q, \dot{q}) = \frac{1}{2}m
+                                    \dot{q}^2 - U(q)
+                                    \]</span></p>
+                                    <p>で与えられる一自由度系を考える。対応する一般化運動量は</p>
+                                    <p><span class="math display">\[
+                                    p = \frac{\partial L}{\partial
+                                    \dot{q}} = m \dot{q}
+                                    \]</span></p>
+                                    <p>である。ここで、座標を定数倍する</p>
+                                    <p><span class="math display">\[
+                                    Q = a q
+                                    \]</span></p>
+                                    <p>という変数変換を考える。一般化速度はそのまま</p>
+                                    <p><span class="math display">\[
+                                    \dot{Q} = a \dot{q}
+                                    \]</span></p>
+                                    <p>となるから、新しいラグランジアンは</p>
+                                    <p><span class="math display">\[
+                                    L(Q, \dot{Q}) =
+                                    \frac{m\dot{Q}^2}{2a^2} - U(Q/a)
+                                    \]</span></p>
+                                    <p>となる。対応する一般化運動量<span
+                                    class="math inline">\(P\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    P &amp;= \frac{\partial L}{\partial
+                                    \dot{Q}} \\
+                                      &amp;= \frac{m\dot{Q}}{a^2} \\
+                                      &amp;= \frac{m\dot{q}}{a}\\
+                                      &amp;= \frac{p}{a}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、</p>
+                                    <p><span class="math display">\[
+                                    Q = a q
+                                    \]</span></p>
+                                    <p>という変換<span
+                                    class="math inline">\(q \rightarrow
+                                    Q\)</span>において、一般化運動量<span
+                                    class="math inline">\(p \rightarrow
+                                    P\)</span>の変換は</p>
+                                    <p><span class="math display">\[
+                                    P = \frac{p}{a}
+                                    \]</span></p>
+                                    <p>と、逆になる。これにより、一般化運動量が一般化座標とは逆向きの変換則に従うこと、すなわち共変ベクトルであることがわかるであろう。</p>
+                                    <p>TODO: 相対座標</p>
                                     <h1
                                     id="余談双対変換">余談：双対変換</h1>
                                     <p>双対変換とは要するに「2回行うと元にもどる変換」のことである。例えば鏡に映る自分は左右が逆になるが、もう一度鏡に映すと元にもどる。すなわち鏡映変換は双対変換である。こういった双対変換の中で興味深いのは、正多面体の双対性である。</p>
