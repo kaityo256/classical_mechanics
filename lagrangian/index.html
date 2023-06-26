@@ -150,7 +150,7 @@
                                     \]</span></p>
                                     <p>以上から、</p>
                                     <p><span class="math display">\[
-                                    F_r = \frac{\partial U}{\partial r}
+                                    F_r = -\frac{\partial U}{\partial r}
                                     \]</span></p>
                                     <p>すなわち、変数変換しても力の形が変わっていない。これがスカラー関数で書いておくと変数変換が楽になる、という実例である。</p>
                                     <p>同様に、<span
@@ -841,22 +841,22 @@
                                         \dot{y} \left(\frac{\partial
                                     A_y}{\partial x} - \frac{\partial
                                     A_x}{\partial y}  \right)  
-                                        + \dot{z} \left(\frac{\partial
-                                    A_x}{\partial z} - \frac{\partial
-                                    A_z}{\partial x}  \right)
+                                        - \dot{z} \left(\frac{\partial
+                                    A_z}{\partial x} - \frac{\partial
+                                    A_x}{\partial z}  \right)
                                         \right)\\
-                                        &amp;= q (\dot{y} B_z + \dot{z}
+                                        &amp;= q (\dot{y} B_z - \dot{z}
                                     B_y)
                                     \end{aligned}
                                     \]</span></p>
                                     <p>運動エネルギーの項と合わせて運動方程式は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \ddot{x} &amp;= q (\dot{y} B_z +
+                                    m \ddot{x} &amp;= q (\dot{y} B_z -
                                     \dot{z} B_y) \\
-                                    m \ddot{y} &amp;= q (\dot{z} B_y +
+                                    m \ddot{y} &amp;= q (\dot{z} B_y -
                                     \dot{x} B_z) \\
-                                    m \ddot{z} &amp;= q (\dot{x} B_x +
+                                    m \ddot{z} &amp;= q (\dot{x} B_x -
                                     \dot{y} B_x)
                                     \end{aligned}
                                     \]</span></p>
@@ -868,7 +868,7 @@
                                     <p>以上から、電磁場中を荷電粒子が運動する際、その荷電粒子が感じるポテンシャルエネルギーは</p>
                                     <p><span class="math display">\[
                                     U(\textbf{r}, \dot{\textbf{r}}) = q
-                                    (\phi - \dot{\mathrm{r}}\times
+                                    (\phi - \dot{\mathbf{r}}\times
                                     \mathbf{A})
                                     \]</span></p>
                                     <p>であることがわかった。このエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。</p>

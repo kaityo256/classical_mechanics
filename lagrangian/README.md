@@ -62,7 +62,7 @@ $$
 以上から、
 
 $$
-F_r = \frac{\partial U}{\partial r}
+F_r = -\frac{\partial U}{\partial r}
 $$
 
 すなわち、変数変換しても力の形が変わっていない。これがスカラー関数で書いておくと変数変換が楽になる、という実例である。
@@ -584,9 +584,9 @@ $$
 \frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
 &= q \left(
     \dot{y} \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}  \right)  
-    + \dot{z} \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}  \right)
+    - \dot{z} \left(\frac{\partial A_z}{\partial x} - \frac{\partial A_x}{\partial z}  \right)
     \right)\\
-    &= q (\dot{y} B_z + \dot{z} B_y)
+    &= q (\dot{y} B_z - \dot{z} B_y)
 \end{aligned}
 $$
 
@@ -594,9 +594,9 @@ $$
 
 $$
 \begin{aligned}
-m \ddot{x} &= q (\dot{y} B_z + \dot{z} B_y) \\
-m \ddot{y} &= q (\dot{z} B_y + \dot{x} B_z) \\
-m \ddot{z} &= q (\dot{x} B_x + \dot{y} B_x)
+m \ddot{x} &= q (\dot{y} B_z - \dot{z} B_y) \\
+m \ddot{y} &= q (\dot{z} B_y - \dot{x} B_z) \\
+m \ddot{z} &= q (\dot{x} B_x - \dot{y} B_x)
 \end{aligned}
 $$
 
@@ -609,7 +609,7 @@ $$
 以上から、電磁場中を荷電粒子が運動する際、その荷電粒子が感じるポテンシャルエネルギーは
 
 $$
-U(\textbf{r}, \dot{\textbf{r}}) = q (\phi - \dot{\mathrm{r}}\times \mathbf{A})
+U(\textbf{r}, \dot{\textbf{r}}) = q (\phi - \dot{\mathbf{r}}\times \mathbf{A})
 $$
 
 であることがわかった。このエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。
