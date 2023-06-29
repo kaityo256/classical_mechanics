@@ -375,10 +375,32 @@
                                     <p>と、新たな変数 <span
                                     class="math inline">\((Q,P)\)</span>も、ハミルトンの運動方程式に従うことがわかる。このように、正準変換は座標と運動量が入れ替わるような変換を許容する。</p>
                                     <p>より一般に、座標と運動量を混ぜるような変換を考えよう。</p>
-                                    <p>TODO: <span
-                                    class="math inline">\(p,q\)</span>から<span
-                                    class="math inline">\(r,
-                                    \theta\)</span>への変換。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= \sqrt{2q} \cos p \\
+                                    P &amp;= \sqrt{2q} \sin p
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ヤコビアンを計算すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \begin{vmatrix}
+                                    \partial_q Q &amp; \partial_p Q \\
+                                    \partial_q P &amp; \partial_p P
+                                    \end{vmatrix}
+                                    &amp;=
+                                    \begin{vmatrix}
+                                    \displaystyle\frac{\cos
+                                    p}{\sqrt{2q}} &amp; - \sqrt{2q} \sin
+                                    p \\
+                                    \displaystyle\frac{\sin
+                                    p}{\sqrt{2q}} &amp;  \sqrt{2q} \cos
+                                    p
+                                    \end{vmatrix}\\
+                                    &amp; = \cos^2 p + \sin^2 p\\
+                                    &amp;=1
+                                    \end{aligned}
+                                    \]</span></p>
                     </article>
     </body>
 

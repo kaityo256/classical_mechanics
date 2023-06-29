@@ -227,4 +227,27 @@ $$
 
 より一般に、座標と運動量を混ぜるような変換を考えよう。
 
-TODO: $p,q$から$r, \theta$への変換。
+$$
+\begin{aligned}
+Q &= \sqrt{2q} \cos p \\
+P &= \sqrt{2q} \sin p
+\end{aligned}
+$$
+
+ヤコビアンを計算すると、
+
+$$
+\begin{aligned}
+\begin{vmatrix}
+\partial_q Q & \partial_p Q \\
+\partial_q P & \partial_p P
+\end{vmatrix}
+&= 
+\begin{vmatrix}
+\displaystyle\frac{\cos p}{\sqrt{2q}} & - \sqrt{2q} \sin p \\
+\displaystyle\frac{\sin p}{\sqrt{2q}} &  \sqrt{2q} \cos p
+\end{vmatrix}\\
+& = \cos^2 p + \sin^2 p\\
+&=1
+\end{aligned}
+$$
