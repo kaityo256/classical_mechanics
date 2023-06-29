@@ -140,16 +140,16 @@
                                     <p>一変数の場合と同じ議論から、運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{q}_i &amp;= \frac{\partial
+                                    \dot{q}^i &amp;= \frac{\partial
                                     H}{\partial p_i} \\
                                     \dot{p}_i &amp;= -\frac{\partial
-                                    H}{\partial q_i} \\
+                                    H}{\partial q^i} \\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>つまり、<span
-                                    class="math inline">\(q_i\)</span>と<span
+                                    class="math inline">\(q^i\)</span>と<span
                                     class="math inline">\(p_i\)</span>は互いにペアになっており、自分の時間微分は、ハミルトニアンを相手で偏微分することで得られる。ただし、運動量は負符号がつくことに注意。オイラー・ラグランジュ方程式に比べて、方程式が対称性の良い形になっていることがわかるであろう。この運動方程式を用いて運動を議論する形式をハミルトン形式と呼ぶ。また、<span
-                                    class="math inline">\(q_i\)</span>と<span
+                                    class="math inline">\(q^i\)</span>と<span
                                     class="math inline">\(p_i\)</span>の関係を正準共役、もしくは単に共役と呼ぶ。</p>
                                     <h1
                                     id="ハミルトニアンとエネルギー">ハミルトニアンとエネルギー</h1>
@@ -255,18 +255,18 @@
                                     class="math inline">\(dq\)</span>と<span
                                     class="math inline">\(d\dot{q}\)</span>である。つまり、先程の式は</p>
                                     <p><span class="math display">\[
-                                    \mathbf{a} = a_1 \mathbf{e}_1 + a_2
+                                    \mathbf{v} = v^1 \mathbf{e}_1 + v^2
                                     \mathbf{e}_2
                                     \]</span></p>
                                     <p>のような、基底によるベクトルの展開に他ならない。</p>
                                     <p>さて、ルジャンドル変換とは、基底と展開係数の入れ替えに対応している。すなわち、</p>
                                     <p><span class="math display">\[
-                                    \mathbf{a} = a_1 \mathbf{e}_1 + a_2
+                                    \mathbf{v} = v^1 \mathbf{e}_1 + v^2
                                     \mathbf{e}_2
                                     \]</span></p>
                                     <p>と書けている時、例えば<span
                                     class="math inline">\(\mathbf{e}_2\)</span>の代わりに<span
-                                    class="math inline">\(a_2\)</span>を基底として扱うのがルジャンドル変換である。そのために、先程のラグランジアンの全微分をもう一度見てみよう。</p>
+                                    class="math inline">\(v_2\)</span>を基底として扱うのがルジャンドル変換である。そのために、先程のラグランジアンの全微分をもう一度見てみよう。</p>
                                     <p><span class="math display">\[
                                     dL = \frac{\partial L}{\partial q}
                                     dq + \frac{\partial L}{\partial
@@ -679,6 +679,11 @@
                                     P = \frac{p}{a}
                                     \]</span></p>
                                     <p>と、逆になる。これにより、一般化運動量が一般化座標とは逆向きの変換則に従うこと、すなわち共変ベクトルであることがわかるであろう。</p>
+                                    <h1 id="まとめ">まとめ</h1>
+                                    <p>ラグランジアンの引数である一般化速度に対してルジャンドル変換を施したものが一般化運動量であり、ラグランジアンの代わりにハミルトニアンを得る。物理的には、ハミルトニアンは系の全エネルギーに対応する量となる。ラグランジアンと同様に、ハミルトニアンというただひとつのスカラー関数から全ての自由度に関する運動方程式が得られるが、ラグランジアンが<span
+                                    class="math inline">\(N\)</span>自由度系にたいして<span
+                                    class="math inline">\(N\)</span>本の時間に関する二階微分方程式を生み出すのに対して、ハミルトニアンは<span
+                                    class="math inline">\(2N\)</span>本の一階微分方程式を生み出す。ラグランジアンは変分原理に直接関係する量である一方、ハミルトニアンはエネルギーに対応する量となっている。しかし、どちらを用いても変分原理による議論は可能である。ラグランジアンとハミルトニアンはルジャンドル変換を通じて等価であるが、ハミルトニアンの方がより広い変換に対して共変となる他、対称性と保存則の議論の見通しが良くなる。これらについては後に議論する。</p>
                                     <h1
                                     id="余談双対変換">余談：双対変換</h1>
                                     <p>双対変換とは要するに「2回行うと元にもどる変換」のことである。例えば鏡に映る自分は左右が逆になるが、もう一度鏡に映すと元にもどる。すなわち鏡映変換は双対変換である。こういった双対変換の中で興味深いのは、正多面体の双対性である。</p>
