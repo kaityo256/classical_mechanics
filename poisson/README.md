@@ -45,15 +45,18 @@ $$
 
 と書くことができる。この括弧を **ポアソン括弧(Poisson bracket)** と呼ぶ。
 
-さて、実はポアソン括弧は正準変数に対して不変である。すなわち、ある正準変数の組$(q,p)$が、正準変換により別の正準変数の組$(q,p)$に変換される時、$(q,p)$で定義したポアソン括弧式と、$(q,p)$で定義したポアソン括弧式は等しいことが証明できる。したがって、ポアソン括弧式は正準変換で移り変わることができるいかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。
+さて、実はポアソン括弧は正準変数に対して不変でこと、すなわち、ある正準変数の組$(q,p)$が、正準変換により別の正準変数の組$(q,p)$に変換される時、$(q,p)$で定義したポアソン括弧式と、$(q,p)$で定義したポアソン括弧式は等しいことを示そう。
+
+TODO: ポアソン括弧の不変性
+
+
+したがって、ポアソン括弧式は正準変換で移り変わることができるいかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。
 
 $$
 \left\{X, Y\right\}_{q,p} =
 \left\{X, Y\right\}_{Q,P} =
 \left\{X, Y\right\}
 $$
-
-TODO: 正準変換によりポアソン括弧式が不変であることを証明する？
 
 ポアソン括弧を用いると、正準方程式は
 
@@ -448,7 +451,7 @@ $$
 これらの生成子の積について考えよう。以下の交換関係を定義する。
 
 $$
-[iL_x, i L_y] \equiv (iL_x)(iL_y) - (iL_y)(iL_x)
+[X, Y ] \equiv XY - YX
 $$
 
 これを実際に計算してみると、
@@ -498,7 +501,21 @@ $$
 * 3次元回転操作は一般に非可換である
 * $x$方向の回転と$y$方向の回転を組み合わせると$z$方向の回転を作ることができる
 
-という二つの意味を持っている。これらは生成子の関係であるから無限小の回転に関するものであるが、有限の回転でその意味を見てみよう。
+という二つの意味を持っている。
+
+同様に$[iL_y, iL_z], [iL_z, iL_x]$を計算し、3つの交換関係をまとめて書くと
+
+$$
+\begin{aligned}
+[iL_x, i L_y] &= i L_z\\
+[iL_y, i L_z] &= i L_x\\
+[iL_z, i L_x] &= i L_y\\
+\end{aligned}
+$$
+
+が成り立つことがわかる。このように、なんらかの演算を定義し、その結果がどうなるかを表す構造を代数的構造と呼ぶ。ここでは交換関係により積を定義しているため、作られた構造は環となっている。
+
+さて、先程の例は生成子の間の関係であるから無限小の回転に関するものであるが、有限の回転でその意味を見てみよう。
 
 ![非可換性](fig/noncommutative.png)
 
@@ -536,7 +553,124 @@ $$
 \frac{dA}{dt} = \{A, H\}
 $$
 
-では、ポアソン括弧の右側に、ハミルトニアンの代わりに別の量を入れてみよう。
+つまり、ポアソン括弧の右側にハミルトニアンを入れると、左側に入れた量の時間微分になった。
+
+では、ポアソン括弧の右側に、ハミルトニアンの代わりに別の量、例えば$p$を入れてみよう。
+
+$$
+\begin{aligned}
+\{A, p\} &= \frac{\partial A}{\partial q} \underbrace{\frac{\partial p}{\partial p}}_{=1} - \frac{\partial A}{\partial q} \underbrace{\frac{\partial p}{\partial q}}_{=0}\\
+&= \frac{\partial A}{\partial q}
+\end{aligned}
+$$
+
+すなわち、ハミルトニアンの右側に一般化運動量$p$を入れると、その変数と共役な一般化座標$q$による微分になった。
+
+同様にして、ハミルトニアンの右側に一般化座標$q$を入れると、
+
+$$
+\{A, q\} = -\frac{\partial A}{\partial p}
+$$
+
+と、左側に入れた量の$p$偏微分(に負符号をつけたもの)になることがわかる。
+
+さらに、今$(q,p) \rightarrow (Q,P)$が正準変換、すなわち
+
+$$
+\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} = 1 
+$$
+
+を満たすとしよう。この時、ポアソン括弧の右側に新しい一般化座標$P$を入れてみると、
+
+$$
+\{A, P\} = \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} 
+$$
+
+ここで、物理量$A$が新しい正準変数$(Q,P)$を使って$A(Q(q,p), P(q,p))$と書けたとすると、
+
+$$
+\begin{aligned}
+\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q}
++ \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
+\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p}
++ \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
+\end{aligned}
+$$
+
+これを用いてポアソン括弧を書き直すと、
+
+$$
+\begin{aligned}
+\{A, P\} &= \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p}  \\
+&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q}
++ \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
+&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p}
++ \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
+&= \frac{\partial A}{\partial Q}
+\underbrace{\left(\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} \right)}_{=1} \\
+& + \frac{\partial A}{\partial Q}
+\underbrace{\left(\frac{\partial P}{\partial q}\frac{\partial P}{\partial p}-\frac{\partial P}{\partial p}\frac{\partial P}{\partial q} \right)}_{=0}\\
+&= \frac{\partial A}{\partial Q}
+\end{aligned}
+$$
+
+つまり、ポアソン括弧の右側に一般化座標$P$を入れることは、その正準共役な変数である$Q$で偏微分することになる。同様に、ポアソン括弧の右側に$Q$を入れると、$P$による偏微分に負符号がついたものとなる。
+
+以上から、ポアソン括弧は、「ポアソン括弧の左側に入れた変数を右側に入れた変数と正準共役な変数で微分する」という意味を持つ。さて、ポアソン括弧の右側にハミルトニアンを入れたら時間微分となったのであるから、「ハミルトニアンと時間は正準共役である」ということが予想される。実際に、ハミルトニアン(エネルギー)$H$を一般化座標、時間$t$を一般化運動量として$H$と$t$が正準共役な変数とみなせることがわかる。ただし、一般化座標と一般化運動量を入れ替えて負符号をつける変換$(H,t) \rightarrow (t, -H)$が正準変換であることから、時間$t$を一般化座標、エネルギーに負符号をつけた$-H$を一般化運動量とみなすこともでき、こちらを採用する場合が多い。
+
+最後に、ポアソン括弧がゼロとなる場合について考えよう。ポアソン括弧の性質から、左右を入れ替えると負符号がつく。
+
+$$
+\{X, Y\} = - \{Y, X\}
+$$
+
+したがって、もしポアソン括弧に入れた変数を入れ替えても値が変わらなかった場合、そのポアソン括弧の値はゼロに限られることがわかる。
+
+$$
+\{X, Y\} = \{Y, X\} \Longleftrightarrow \{X, Y\} = 0
+$$
+
+これを、ポアソン括弧の意味で交換可能、あるいは単に可換と呼ぶ。ある物理量$X$が、別の物理量$Y$と可換である時、$X$を$Y$の正準共役な変数で偏微分するとゼロとなる。したがって、その変数について保存量となることがわかる。
+
+例えば、ある物理量$A$がハミルトニアン$H$と可換であるならば、$\{A, H\}=0$である。したがって
+
+$$
+\frac{dA}{dt} = \{A, H\} = 0
+$$
+
+となり、$A$は時間に対して不変量となる。
+
+時間以外の不変性の例として、角運動量について考えよう。いま、3次元系において、$z$軸周りの回転に対する角運動量
+
+$$
+L_z = x p_y - y p_x
+$$
+
+を考えよう。ここで、$L_z$と$z$のポアソン括弧を考える。計算の便利のために$x,y,z$を$q^1,q^2, q^3$、$p_x, p_y, p_z$を$p_1, p_2, p_3$と表し、$L_z$は$L_3$と表現しておこう。すると、
+
+$$
+\begin{aligned}
+\{q^3, L_3\} &= \frac{\partial q^3}{\partial q^i} \frac{\partial L_3}{\partial p_i}
+- \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
+&= \delta^3_i \frac{\partial L_3}{\partial p_i} \\
+&= \frac{\partial L_3}{\partial p_3} \\
+&=0
+\end{aligned}
+$$
+
+すなわち$z$と$L_z$はポアソン括弧の意味で可換である。ただし途中で、一般化座標を一般化座標で偏微分した場合は、自分自身による偏微分は1、それ以外はゼロになること、一般化座標を一般化運動量で偏微分したらゼロであること、$L_3$が$p_3$依存性をもたないことを用いた。
+
+$L_z$は$z$軸まわりの角運動量であり、共役な一般化座標は$z$軸周りの回転角度$\phi$であるから、これは
+
+$$
+\frac{\partial z}{\partial \phi} = 0
+$$
+
+を意味する。これは「$z$軸周りの回転に対して、$z$座標は変化しない」という、ある意味当然な主張に過ぎない。
+
+## まとめ
+
+本章ではポアソン括弧を定義した。ポアソン括弧には、「入れた物理量と共役な変数による微分をとる」という意味があり、ハミルトニアンを入れると時間微分に、一般化運動量を入れると、対応する一般化座標による微分となる。ポアソン括弧の性質から、入れ替えても値が変わらない、すなわちポアソン括弧の意味で可換である時、対応する量による微分がゼロ、すなわち何かしらの保存則を表していることがわかる。
 
 ## 余談：サイコロの雌雄と生命の選択
 
