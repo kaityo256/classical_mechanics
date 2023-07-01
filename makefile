@@ -35,6 +35,7 @@ copy-pdf:
 	cp hamilton_principle/README.pdf ./classical_mechanics05.pdf
 	cp variational_principle/README.pdf ./classical_mechanics06.pdf
 	cp lagrangian/README.pdf ./classical_mechanics07.pdf
+	cp hamiltonian/README.pdf ./classical_mechanics08.pdf
 
 clean:
 	rm -f $(TARGET) index.html

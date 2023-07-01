@@ -140,6 +140,7 @@ $$
 
 すなわち、ハミルトニアンの時間微分は(ハミルトニアンが時間に陽に依存しない限り)必ずゼロとなる。これはエネルギー保存則に他ならない。ニュートンの運動方程式や、オイラー・ラグランジュ方程式に比べ、正準方程式はエネルギー保存則が見えやすい形となっている。
 
+
 ## ルジャンドル変換
 
 ラグランジアン$L(q,\dot{q})$からハミルトニアン$H(q,p)$への変換は、自由変数を$\dot{q}$から$p$に取り直すものであり、これは **ルジャンドル変換(Legendre transformation)** と呼ばれるものの一種である。ルジャンドル変換は双対変換の一種であり、双対変換とは「2回行うと元に戻る操作」のことである。元に戻せるのであるから、ルジャンドル変換により情報は増えたり減ったりしない。しかし、ルジャンドル変換により目的に応じて自由変数を取り直すことで、見通しがよくなったり計算が楽になったりする。ルジャンドル変換は特に熱力学において主要な役割を果たすが、なかなかその直感的な意味を理解しづらい。以下ではルジャンドル変換の意味について様々な角度から見てみよう。
@@ -492,6 +493,97 @@ P = \frac{p}{a}
 $$
 
 と、逆になる。これにより、一般化運動量が一般化座標とは逆向きの変換則に従うこと、すなわち共変ベクトルであることがわかるであろう。
+
+## ハミルトニアンと不変量
+
+もう一度正準方程式を見てみよう。
+
+$$
+\begin{aligned}
+\dot{q}^i &= \frac{\partial H}{\partial p_i} \\
+\dot{p}_i &= -\frac{\partial H}{\partial q_i} 
+\end{aligned}
+$$
+
+自分の時間微分が、自分の「相方」による偏微分で得られている。したがって、例えばハミルトニアンが$q^i$依存性を持たなければ、直ちに共役な運動量$p_i$が保存量となることがわかる。
+
+例えば二次元空間において、ポテンシャル$U(r)$による中心力により運動する系を考えよう。デカルト座標では、この系のラグランジアンは
+
+$$
+L(x,y, \dot{x}, \dot{y}) = \frac{1}{2}(\dot{x}^2 + \dot{y}^2) - U(r)
+$$
+
+であるから、対応するハミルトニアンは
+
+$$
+H(x,y, p_x, p_y) = \frac{1}{2m} (p_x^2+p_y^2) + U(r)
+$$
+
+となる。正準方程式は
+
+$$
+\begin{aligned}
+\dot{x} &= \frac{\partial H}{\partial p_x} = \frac{p_x}{m} \\
+\dot{y} &= \frac{\partial H}{\partial p_y} = \frac{p_y}{m} \\
+\dot{p_x} &= -\frac{\partial H}{\partial x} = - \frac{\partial U}{\partial x} \\
+\dot{p_y} &= -\frac{\partial H}{\partial y} = - \frac{\partial U}{\partial y} \\
+\end{aligned}
+$$
+
+と、ニュートンの運動方程式と等価な式が現れ、特にご利益はない。そこで、極座標表示をしてみよう。極座標でのラグランジアンは
+
+$$
+L = \frac{1}{2}m (\dot{r}^2 + r^2\dot{\theta}^2) - U(r)
+$$
+
+で表される。したがって、$r, \theta$に対応する一般化運動量$p_r, p_\theta$は
+
+$$
+\begin{aligned}
+p_r &\equiv \frac{\partial L}{\partial \dot{r}} = m\dot{r} \\
+p_\theta &\equiv \frac{\partial L}{\partial \dot{\theta}} = mr^2\dot{\theta} \\
+\end{aligned}
+$$
+
+となる。したがって、ハミルトニアンの極座標表示は
+
+$$
+\begin{aligned}
+H &= p_r \dot{r} + p_\theta \dot{\theta}  - L \\
+&= \frac{1}{2m}\left(p_r^2 + \frac{p_\theta^2}{r^2}\right) + U(r)
+\end{aligned}
+$$
+
+で与えられる。もしくは、$\dot{r}, \dot{\theta}$を
+
+$$
+\begin{aligned}
+\dot{r} &= \frac{p_r}{m} \\
+\dot{\theta} &= \frac{p_\theta}{mr^2}
+\end{aligned}
+$$
+
+と$p_r, p_\theta$で表し、運動エネルギーに代入すると、
+
+$$
+K =  \frac{1}{2}m (\dot{r}^2 + r^2\dot{\theta}^2) = \frac{1}{2m}\left(p_r^2 + \frac{p_\theta^2}{r^2}\right)
+$$
+
+となることから、
+
+$$
+H = K + U =  \frac{1}{2m}\left(p_r^2 + \frac{p_\theta^2}{r^2}\right) + U(r)
+$$
+
+で求めることもできる。
+
+さて、ハミルトニアンの極座標表示には$\theta$を含まないことがわかる。したがって$\partial_\theta H = 0$である。正準方程式から
+
+$$
+\dot{p}_\theta = -\frac{\partial H}{\partial \theta} = 0
+$$
+
+すなわち、$\theta$に共役な運動量が時間保存量となることが、ハミルトニアンの形を見るだけでわかる。このように、ニュートンの運動方程式に比べて、保存則が非常に見やすいのがハミルトニアンの特徴である。この事実は後により一般的に議論する。
 
 ## まとめ
 

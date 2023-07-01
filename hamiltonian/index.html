@@ -679,6 +679,112 @@
                                     P = \frac{p}{a}
                                     \]</span></p>
                                     <p>と、逆になる。これにより、一般化運動量が一般化座標とは逆向きの変換則に従うこと、すなわち共変ベクトルであることがわかるであろう。</p>
+                                    <h1
+                                    id="ハミルトニアンと不変量">ハミルトニアンと不変量</h1>
+                                    <p>もう一度正準方程式を見てみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q}^i &amp;= \frac{\partial
+                                    H}{\partial p_i} \\
+                                    \dot{p}_i &amp;= -\frac{\partial
+                                    H}{\partial q_i}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>自分の時間微分が、自分の「相方」による偏微分で得られている。したがって、例えばハミルトニアンが<span
+                                    class="math inline">\(q^i\)</span>依存性を持たなければ、直ちに共役な運動量<span
+                                    class="math inline">\(p_i\)</span>が保存量となることがわかる。</p>
+                                    <p>例えば二次元空間において、ポテンシャル<span
+                                    class="math inline">\(U(r)\)</span>による中心力により運動する系を考えよう。デカルト座標では、この系のラグランジアンは</p>
+                                    <p><span class="math display">\[
+                                    L(x,y, \dot{x}, \dot{y}) =
+                                    \frac{1}{2}(\dot{x}^2 + \dot{y}^2) -
+                                    U(r)
+                                    \]</span></p>
+                                    <p>であるから、対応するハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    H(x,y, p_x, p_y) = \frac{1}{2m}
+                                    (p_x^2+p_y^2) + U(r)
+                                    \]</span></p>
+                                    <p>となる。正準方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{x} &amp;= \frac{\partial
+                                    H}{\partial p_x} = \frac{p_x}{m} \\
+                                    \dot{y} &amp;= \frac{\partial
+                                    H}{\partial p_y} = \frac{p_y}{m} \\
+                                    \dot{p_x} &amp;= -\frac{\partial
+                                    H}{\partial x} = - \frac{\partial
+                                    U}{\partial x} \\
+                                    \dot{p_y} &amp;= -\frac{\partial
+                                    H}{\partial y} = - \frac{\partial
+                                    U}{\partial y} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、ニュートンの運動方程式と等価な式が現れ、特にご利益はない。そこで、極座標表示をしてみよう。極座標でのラグランジアンは</p>
+                                    <p><span class="math display">\[
+                                    L = \frac{1}{2}m (\dot{r}^2 +
+                                    r^2\dot{\theta}^2) - U(r)
+                                    \]</span></p>
+                                    <p>で表される。したがって、<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>に対応する一般化運動量<span
+                                    class="math inline">\(p_r,
+                                    p_\theta\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p_r &amp;\equiv \frac{\partial
+                                    L}{\partial \dot{r}} = m\dot{r} \\
+                                    p_\theta &amp;\equiv \frac{\partial
+                                    L}{\partial \dot{\theta}} =
+                                    mr^2\dot{\theta} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。したがって、ハミルトニアンの極座標表示は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    H &amp;= p_r \dot{r} + p_\theta
+                                    \dot{\theta}  - L \\
+                                    &amp;= \frac{1}{2m}\left(p_r^2 +
+                                    \frac{p_\theta^2}{r^2}\right) + U(r)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>で与えられる。もしくは、<span
+                                    class="math inline">\(\dot{r},
+                                    \dot{\theta}\)</span>を</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{r} &amp;= \frac{p_r}{m} \\
+                                    \dot{\theta} &amp;=
+                                    \frac{p_\theta}{mr^2}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と<span
+                                    class="math inline">\(p_r,
+                                    p_\theta\)</span>で表し、運動エネルギーに代入すると、</p>
+                                    <p><span class="math display">\[
+                                    K =  \frac{1}{2}m (\dot{r}^2 +
+                                    r^2\dot{\theta}^2) =
+                                    \frac{1}{2m}\left(p_r^2 +
+                                    \frac{p_\theta^2}{r^2}\right)
+                                    \]</span></p>
+                                    <p>となることから、</p>
+                                    <p><span class="math display">\[
+                                    H = K + U =  \frac{1}{2m}\left(p_r^2
+                                    + \frac{p_\theta^2}{r^2}\right) +
+                                    U(r)
+                                    \]</span></p>
+                                    <p>で求めることもできる。</p>
+                                    <p>さて、ハミルトニアンの極座標表示には<span
+                                    class="math inline">\(\theta\)</span>を含まないことがわかる。したがって<span
+                                    class="math inline">\(\partial_\theta
+                                    H =
+                                    0\)</span>である。正準方程式から</p>
+                                    <p><span class="math display">\[
+                                    \dot{p}_\theta = -\frac{\partial
+                                    H}{\partial \theta} = 0
+                                    \]</span></p>
+                                    <p>すなわち、<span
+                                    class="math inline">\(\theta\)</span>に共役な運動量が時間保存量となることが、ハミルトニアンの形を見るだけでわかる。このように、ニュートンの運動方程式に比べて、保存則が非常に見やすいのがハミルトニアンの特徴である。この事実は後により一般的に議論する。</p>
                                     <h1 id="まとめ">まとめ</h1>
                                     <p>ラグランジアンの引数である一般化速度に対してルジャンドル変換を施したものが一般化運動量であり、ラグランジアンの代わりにハミルトニアンを得る。物理的には、ハミルトニアンは系の全エネルギーに対応する量となる。ラグランジアンと同様に、ハミルトニアンというただひとつのスカラー関数から全ての自由度に関する運動方程式が得られるが、ラグランジアンが<span
                                     class="math inline">\(N\)</span>自由度系にたいして<span
