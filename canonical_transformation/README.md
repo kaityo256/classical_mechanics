@@ -254,5 +254,64 @@ $$
 
 ## 生成子
 
+ある変換$(q,p) \rightarrow (Q, P)$が正準変換であるとは、それぞれが正準方程式を満たす、すなわちこの変換が正準方程式を共変に保つことを指すのであった。一方、正準共役な変数$(q,p)$が満たす正準方程式は
+
+$$
+\begin{aligned}
+\dot{q} &= \frac{\partial H}{\partial p} \\
+\dot{p} &= -\frac{\partial H}{\partial q} 
+\end{aligned}
+$$
+
+であるが、これはもともと作用積分
+
+$$
+I = \int_{t_1}^{t_2} (p\dot{q} - H(q,p))dt
+$$
+
+を最小にするものとして得られたものであった。同様に変換後の変数$(Q,P)$が正準方程式を満たすならば、やはり作用積分
+
+$$
+I = \int_{t_1}^{t_2} (P\dot{Q} - H(Q,P))dt
+$$
+
+の変分から得られる。したがって、正準方程式と作用積分は等価である。正準方程式は$N$自由度系では$2N$自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。そこで、変分原理から正準変換について調べて見よう。
+
+まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。そこで、もう少し非自明な例として、ハミルトニアンに$q\dot{q}$という量を加えて、新たに$\tilde{H} = H + q\dot{q}$という量を考える。この新たなハミルトニアン$\tilde{H}$について変分原理を考えると、
+
+
+$$
+\begin{aligned}
+\delta(p\dot{q} - \tilde{H}) &= \delta(p\dot{q} - H - q \dot{q}) \\
+&= \delta(p\dot{q} - H) - \dot{q}\delta q - q \delta \dot{q} \\
+&= \delta(p\dot{q} - H) \underbrace{- \dot{q}\delta q + \dot{q} \delta q}_{=0}
+\end{aligned}
+$$
+
+と、部分積分により付け加えた項がゼロになるため、元のハミルトニアンと同じ正準方程式が得られる。すなわち、ハミルトニアンに対して$H \rightarrow H + q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
+
+全く同様にして、$q$に関する任意の関数$W(q)$について、ハミルトニアンにその時間微分$dW/dt$を加えても正準方程式を変えないことがわかる。実際に
+
+$$
+\begin{aligned}
+\delta\left(p\dot{q} - H - \frac{dW}{dt}\right)  &= \delta (p\dot{q} - H - W'(q) \dot{q})\\
+&= \delta(p\dot{q} - H) -\delta (W'(q) \dot{q}) \\
+&= \delta(p\dot{q} - H) - W''(q) \dot{q} \delta q - W'(q) \delta \dot{q} \\
+&= \delta(p\dot{q} - H) \underbrace{- W''(q) \dot{q} \delta q + W''(q) \dot{q}\delta q}_{=0} \\
+\end{aligned}
+$$
+
+となり、部分積分で消えてしまう。より一般に、任意の座標、運動量の関数$W$について、その時間微分を加えても、作用積分の始点と終点で$W=0$を満たすならば、
+
+$$
+\begin{aligned}
+\tilde{I} &= \int_{t_1}^{t_2} \left(p\dot{q} - H - \frac{dW}{dt}\right)dt \\
+&= \int_{t_1}^{t_2} \left(p\dot{q} - H\right) - \left[ \right]_{t_1}^{t_2}
+\end{aligned}
+$$
+
+
 ## ポアソン括弧
+
+## 微分形式
 
