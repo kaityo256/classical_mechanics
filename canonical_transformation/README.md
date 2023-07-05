@@ -252,7 +252,7 @@ $$
 \end{aligned}
 $$
 
-## 生成子
+## 母関数
 
 ある変換$(q,p) \rightarrow (Q, P)$が正準変換であるとは、それぞれが正準方程式を満たす、すなわちこの変換が正準方程式を共変に保つことを指すのであった。一方、正準共役な変数$(q,p)$が満たす正準方程式は
 
@@ -275,41 +275,208 @@ $$
 I = \int_{t_1}^{t_2} (P\dot{Q} - H(Q,P))dt
 $$
 
-の変分から得られる。したがって、正準方程式と作用積分は等価である。正準方程式は$N$自由度系では$2N$自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。そこで、変分原理から正準変換について調べて見よう。
+の変分から得られる。したがって、正準方程式と作用積分は等価である。正準方程式は$N$自由度系では$2N$自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。作用積分の被積分関数はスカラー関数であるから、正準変換$(q,p) \rightarrow (Q,P)$も、変分原理まで戻ればスカラー関数だけで考えられるはずである。すなわち、ハミルトニアンになんらかの関数$F$を加えた$H+F$について作用積分
 
-まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。そこで、もう少し非自明な例として、ハミルトニアンに$q\dot{q}$という量を加えて、新たに$\tilde{H} = H + q\dot{q}$という量を考える。この新たなハミルトニアン$\tilde{H}$について変分原理を考えると、
+$$
+I = \int_{t_1}^{t_2} (p\dot{q} - H(q,p) - F(q,p))dt
+$$
+
+を考え、これを改めて新たな変数$(Q,P)$で
+
+$$
+I = \int_{t_1}^{t_2} (P\dot{Q} - H(Q,P))dt
+$$
+
+と書き直せたとする。後者については変分原理から$(Q,P)$に関する正準方程式を導くため、前者として正準方程式を変えないような$F$を探すことができれば、この変換は正準変換を導くことになる。
+
+
+まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。もう少し非自明な例として、作用積分に$q\dot{q}$という量を加えて、新たに$\tilde{H} = H - q\dot{q}$という量を考える(作用積分に加えると、ハミルトニアンからは引くことに注意)。この新たなハミルトニアン$\tilde{H}$について変分原理を考えると、
 
 
 $$
 \begin{aligned}
-\delta(p\dot{q} - \tilde{H}) &= \delta(p\dot{q} - H - q \dot{q}) \\
-&= \delta(p\dot{q} - H) - \dot{q}\delta q - q \delta \dot{q} \\
-&= \delta(p\dot{q} - H) \underbrace{- \dot{q}\delta q + \dot{q} \delta q}_{=0}
+\delta(p\dot{q} - \tilde{H}) &= \delta(p\dot{q} - H + q \dot{q}) \\
+&= \delta(p\dot{q} - H) + \dot{q}\delta q + q \delta \dot{q} \\
+&= \delta(p\dot{q} - H) + \underbrace{\dot{q}\delta q - \dot{q} \delta q}_{=0}
 \end{aligned}
 $$
 
-と、部分積分により付け加えた項がゼロになるため、元のハミルトニアンと同じ正準方程式が得られる。すなわち、ハミルトニアンに対して$H \rightarrow H + q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
+と、部分積分により付け加えた項がゼロになるため、元のハミルトニアンと同じ正準方程式が得られる。すなわち、ハミルトニアンに対して$H \rightarrow H - q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
 
-全く同様にして、$q$に関する任意の関数$W(q)$について、ハミルトニアンにその時間微分$dW/dt$を加えても正準方程式を変えないことがわかる。実際に
+全く同様にして、$q$に関する任意の関数$W(q)$について、作用積分にその時間微分$dW/dt$を加えても正準方程式を変えないことがわかる。実際に
 
 $$
 \begin{aligned}
-\delta\left(p\dot{q} - H - \frac{dW}{dt}\right)  &= \delta (p\dot{q} - H - W'(q) \dot{q})\\
-&= \delta(p\dot{q} - H) -\delta (W'(q) \dot{q}) \\
-&= \delta(p\dot{q} - H) - W''(q) \dot{q} \delta q - W'(q) \delta \dot{q} \\
-&= \delta(p\dot{q} - H) \underbrace{- W''(q) \dot{q} \delta q + W''(q) \dot{q}\delta q}_{=0} \\
+\delta\left(p\dot{q} - H + \frac{dW}{dt}\right)  &= \delta (p\dot{q} - H + W'(q) \dot{q})\\
+&= \delta(p\dot{q} - H) + \delta (W'(q) \dot{q}) \\
+&= \delta(p\dot{q} - H) + W''(q) \dot{q} \delta q + W'(q) \delta \dot{q} \\
+&= \delta(p\dot{q} - H) + \underbrace{W''(q) \dot{q} \delta q - W''(q) \dot{q}\delta q}_{=0} \\
 \end{aligned}
 $$
 
-となり、部分積分で消えてしまう。より一般に、任意の座標、運動量の関数$W$について、その時間微分を加えても、作用積分の始点と終点で$W=0$を満たすならば、
+となり、部分積分で消えてしまう。$W$が$p$のみの関数の場合も同様である。したがって、ハミルトニアンに加える項として$F = dW/dt$を考えれば正準変換を導けそうである。ただし、$W$が$q,p$のどちらにも依存する場合、$W$が正準変換を導くには条件がつく。
+
+いま、$(q,p)$で記述されたハミルトニアン$H(q,p)$に、任意の関数$W(q,p)$を考え、その時間微分$F=dW/dt$を加えたものの変分を考えよう。
+
+$$
+\delta\left(p\dot{q} - H + \frac{dW}{dt}\right)  = \delta (p\dot{q} - H) + \delta \left(\frac{dW}{dt} \right)
+$$
+
+であるから、$\delta \dot{W} = 0$であれば元の正準方程式を導く。計算してみると、
 
 $$
 \begin{aligned}
-\tilde{I} &= \int_{t_1}^{t_2} \left(p\dot{q} - H - \frac{dW}{dt}\right)dt \\
-&= \int_{t_1}^{t_2} \left(p\dot{q} - H\right) - \left[ \right]_{t_1}^{t_2}
+\delta \dot{W} &= \delta \left(\frac{\partial W}{\partial q}\dot{q} + \frac{\partial W}{\partial p}\dot{p} \right) \\
+&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + \frac{\partial W}{\partial q} \delta \dot{q}}_{\bigstar} 
++ \delta \left(\frac{\partial W}{\partial p}\right)\dot{p} + \frac{\partial W}{\partial p} \delta \dot{p} \\
 \end{aligned}
 $$
 
+右辺の第一項、第二項を計算すると、
+
+$$
+\begin{aligned}
+\bigstar &= \delta \left(\frac{\partial W}{\partial q}\right)\dot{q} - \frac{d}{dt}\left(\frac{\partial W}{\partial q}\right) \delta q \\
+&= \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q}
++ \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p
+- \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q}
+- \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q
+\end{aligned}
+$$
+
+したがって、$W(q,p)$が
+
+$$
+\frac{\partial^2 W}{\partial q \partial p} = 0
+$$
+
+という条件を満たせば、この項は消える。残りの$\dot{p}$に関する項も同様である。以上から、2つの引数両方に関する偏微分がゼロであるような関数$W$の時間微分をハミルトニアンに加えても正準方程式を変えない、すなわちこの関数が正準変換を導くことがわかった。
+
+具体的には、
+
+$$
+p\dot{q} - H(q,p) + \frac{dW}{dt} = P \dot{Q} - H(Q,P)
+$$
+
+が正準変換を与える。具体的な変換公式を見るため、$dW/dt$について整理しよう。また、後のために時間微分をニュートン表記からライプニッツ表記で書き直す。ハミルトニアン$H$は(時間非依存であれば)変数を書き直しただけで値は変わらないため、両辺でキャンセルする。
+
+$$
+\frac{dW}{dt} = p\frac{dq}{dt} - P \frac{dQ}{dt}
+$$
+
+両辺に形式的に$dt$をかけると
+
+$$
+dW = p dq - P dQ
+$$
+
+これは、関数$W$が自由変数を$q, Q$とみなした時の全微分の表式となっている。全微分の定義から
+
+$$
+dW(q, Q) = \frac{\partial W}{\partial q} dq + \frac{\partial W}{\partial Q}dQ
+$$
+
+であるから、両者を比較すると、
+
+$$
+\begin{aligned}
+p &= \frac{\partial W}{\partial q} \\
+P &= - \frac{\partial W}{\partial Q}
+\end{aligned}
+$$
+
+を得る。すなわち、先程の条件を満たす任意の関数$W(q,Q)$を考えると、 $(q,Q)$から新たな変数の組$(p(q,Q),P(q,Q))$が得られる。これを$(P,Q)$について解き直せば
+
+$$
+\begin{aligned}
+Q &= Q(q,p) \\
+P &= P(q,p)
+\end{aligned}
+$$
+
+という正準変換$(q,p) \rightarrow (Q,P)$を作ることができる。このように、$W$は正準変換を生み出す関数となっているため、 **母関数(generating function)** と呼ぶ。
+
+母関数は、変換前後の変数をそれぞれ含んでなければならない。先程の正準変換の母関数$W(q,Q)$は、新旧の一般化座標を引数としていた。これをType 1と呼び、慣習的に$W_1$と表す。ここからルジャンドル変換により自由変数を取り直そう。
+
+$$
+W_2 = W_1 + PQ
+$$
+
+により新たな関数$W_2$を考えると、
+
+$$
+\begin{aligned}
+d W_2 &= d W_1 + QdP + PdQ \\
+&= pdq - \cancel{PdQ} + QdP + \cancel{PdQ}\\
+&= pdq + QdP
+\end{aligned}
+$$
+
+ここから、$W_2$の自由変数は$q, P$であり、変換則は
+
+$$
+\begin{aligned}
+p &= \frac{\partial W_2}{\partial q}\\
+Q &= \frac{\partial W_2}{\partial P}\\
+\end{aligned}
+$$
+
+で与えられる。
+
+同様に、$W_3 = W_1 - pq$とすることで、
+
+$$
+d W_3 = -qdp - PdQ
+$$
+
+となるため、変換則は
+
+$$
+\begin{aligned}
+q &= -\frac{\partial W_3}{\partial p}\\
+P &= -\frac{\partial W_3}{\partial Q}\\
+\end{aligned}
+$$
+
+さらに、$W_4 = W_3+PQ$とすることで、
+
+$$
+d W_4 = -qdp + QdP
+$$
+
+から、変換則は
+
+$$
+\begin{aligned}
+q &= -\frac{\partial W_4}{\partial p}\\
+Q &= \frac{\partial W_4}{\partial P}\\
+\end{aligned}
+$$
+
+となる。以上をまとめると以下のような図となる。
+
+![変換則](fig/transform_diagram.png)
+
+図で見ると複雑に感じるかもしれないが、以下のルールを知ればさほど難しくはない。
+
+* 母関数は新旧の変数を一つずつ含む
+* その組み合わせは$W_1(q,Q), W_2(q,P), W_3(p, Q), W_4(p, P)$の四種類ある
+* 変換則は母関数を自由変数で偏微分することで、正準共役な変数が得られる
+* 偏微分した際の符号は、全微分からわかる
+* 母関数同士はルジャンドル変換で繋がっている
+
+これらはの母関数は、以下の条件さえ満たせば任意に選ぶことができる。
+
+$$
+\begin{aligned}
+\frac{\partial^2 W_1}{\partial q \partial Q} &= 0 \\
+\frac{\partial^2 W_2}{\partial q \partial P} &= 0 \\
+\frac{\partial^2 W_3}{\partial p \partial Q} &= 0 \\
+\frac{\partial^2 W_4}{\partial p \partial P} &= 0 
+\end{aligned}
+$$
+
+逆に言えば、この母関数から作られる変換は正準変換となる。
 
 ## ポアソン括弧
 
