@@ -401,9 +401,310 @@
                                     &amp;=1
                                     \end{aligned}
                                     \]</span></p>
-                                    <h1 id="生成子">生成子</h1>
+                                    <h1 id="母関数">母関数</h1>
+                                    <p>ある変換<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow (Q,
+                                    P)\)</span>が正準変換であるとは、それぞれが正準方程式を満たす、すなわちこの変換が正準方程式を共変に保つことを指すのであった。一方、正準共役な変数<span
+                                    class="math inline">\((q,p)\)</span>が満たす正準方程式は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p} \\
+                                    \dot{p} &amp;= -\frac{\partial
+                                    H}{\partial q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>であるが、これはもともと作用積分</p>
+                                    <p><span class="math display">\[
+                                    I = \int_{t_1}^{t_2} (p\dot{q} -
+                                    H(q,p))dt
+                                    \]</span></p>
+                                    <p>を最小にするものとして得られたものであった。同様に変換後の変数<span
+                                    class="math inline">\((Q,P)\)</span>が正準方程式を満たすならば、やはり作用積分</p>
+                                    <p><span class="math display">\[
+                                    I = \int_{t_1}^{t_2} (P\dot{Q} -
+                                    H(Q,P))dt
+                                    \]</span></p>
+                                    <p>の変分から得られる。したがって、正準方程式と作用積分は等価である。正準方程式は<span
+                                    class="math inline">\(N\)</span>自由度系では<span
+                                    class="math inline">\(2N\)</span>自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。作用積分の被積分関数はスカラー関数であるから、正準変換<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow
+                                    (Q,P)\)</span>も、変分原理まで戻ればスカラー関数だけで考えられるはずである。すなわち、ハミルトニアンになんらかの関数<span
+                                    class="math inline">\(F\)</span>を加えた<span
+                                    class="math inline">\(H+F\)</span>について作用積分</p>
+                                    <p><span class="math display">\[
+                                    I = \int_{t_1}^{t_2} (p\dot{q} -
+                                    H(q,p) - F(q,p))dt
+                                    \]</span></p>
+                                    <p>を考え、これを改めて新たな変数<span
+                                    class="math inline">\((Q,P)\)</span>で</p>
+                                    <p><span class="math display">\[
+                                    I = \int_{t_1}^{t_2} (P\dot{Q} -
+                                    H(Q,P))dt
+                                    \]</span></p>
+                                    <p>と書き直せたとする。後者については変分原理から<span
+                                    class="math inline">\((Q,P)\)</span>に関する正準方程式を導くため、前者として正準方程式を変えないような<span
+                                    class="math inline">\(F\)</span>を探すことができれば、この変換は正準変換を導くことになる。</p>
+                                    <p>まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。もう少し非自明な例として、作用積分に<span
+                                    class="math inline">\(q\dot{q}\)</span>という量を加えて、新たに<span
+                                    class="math inline">\(\tilde{H} = H
+                                    -
+                                    q\dot{q}\)</span>という量を考える(作用積分に加えると、ハミルトニアンからは引くことに注意)。この新たなハミルトニアン<span
+                                    class="math inline">\(\tilde{H}\)</span>について変分原理を考えると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta(p\dot{q} - \tilde{H}) &amp;=
+                                    \delta(p\dot{q} - H + q \dot{q}) \\
+                                    &amp;= \delta(p\dot{q} - H) +
+                                    \dot{q}\delta q + q \delta \dot{q}
+                                    \\
+                                    &amp;= \delta(p\dot{q} - H) +
+                                    \underbrace{\dot{q}\delta q -
+                                    \dot{q} \delta q}_{=0}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、部分積分により付け加えた項がゼロになるため、元のハミルトニアンと同じ正準方程式が得られる。すなわち、ハミルトニアンに対して<span
+                                    class="math inline">\(H \rightarrow
+                                    H -
+                                    q\dot{q}\)</span>という変換は正準方程式を共変に保つため、正準変換を導く。</p>
+                                    <p>全く同様にして、<span
+                                    class="math inline">\(q\)</span>に関する任意の関数<span
+                                    class="math inline">\(W(q)\)</span>について、作用積分にその時間微分<span
+                                    class="math inline">\(dW/dt\)</span>を加えても正準方程式を変えないことがわかる。実際に</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta\left(p\dot{q} - H +
+                                    \frac{dW}{dt}\right)  &amp;= \delta
+                                    (p\dot{q} - H + W&#39;(q) \dot{q})\\
+                                    &amp;= \delta(p\dot{q} - H) + \delta
+                                    (W&#39;(q) \dot{q}) \\
+                                    &amp;= \delta(p\dot{q} - H) +
+                                    W&#39;&#39;(q) \dot{q} \delta q +
+                                    W&#39;(q) \delta \dot{q} \\
+                                    &amp;= \delta(p\dot{q} - H) +
+                                    \underbrace{W&#39;&#39;(q) \dot{q}
+                                    \delta q - W&#39;&#39;(q)
+                                    \dot{q}\delta q}_{=0} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となり、部分積分で消えてしまう。<span
+                                    class="math inline">\(W\)</span>が<span
+                                    class="math inline">\(p\)</span>のみの関数の場合も同様である。したがって、ハミルトニアンに加える項として<span
+                                    class="math inline">\(F =
+                                    dW/dt\)</span>を考えれば正準変換を導けそうである。ただし、<span
+                                    class="math inline">\(W\)</span>が<span
+                                    class="math inline">\(q,p\)</span>のどちらにも依存する場合、<span
+                                    class="math inline">\(W\)</span>が正準変換を導くには条件がつく。</p>
+                                    <p>いま、<span
+                                    class="math inline">\((q,p)\)</span>で記述されたハミルトニアン<span
+                                    class="math inline">\(H(q,p)\)</span>に、任意の関数<span
+                                    class="math inline">\(W(q,p)\)</span>を考え、その時間微分<span
+                                    class="math inline">\(F=dW/dt\)</span>を加えたものの変分を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \delta\left(p\dot{q} - H +
+                                    \frac{dW}{dt}\right)  = \delta
+                                    (p\dot{q} - H) + \delta
+                                    \left(\frac{dW}{dt} \right)
+                                    \]</span></p>
+                                    <p>であるから、<span
+                                    class="math inline">\(\delta \dot{W}
+                                    =
+                                    0\)</span>であれば元の正準方程式を導く。計算してみると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta \dot{W} &amp;= \delta
+                                    \left(\frac{\partial W}{\partial
+                                    q}\dot{q} + \frac{\partial
+                                    W}{\partial p}\dot{p} \right) \\
+                                    &amp;= \underbrace{\delta
+                                    \left(\frac{\partial W}{\partial
+                                    q}\right)\dot{q} + \frac{\partial
+                                    W}{\partial q} \delta
+                                    \dot{q}}_{\bigstar}
+                                    + \delta \left(\frac{\partial
+                                    W}{\partial p}\right)\dot{p} +
+                                    \frac{\partial W}{\partial p} \delta
+                                    \dot{p} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>右辺の第一項、第二項を計算すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \bigstar &amp;= \delta
+                                    \left(\frac{\partial W}{\partial
+                                    q}\right)\dot{q} -
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    W}{\partial q}\right) \delta q \\
+                                    &amp;= \cancel{\frac{\partial^2
+                                    W}{\partial q^2} \dot{q} \delta q}
+                                    + \frac{\partial^2 W}{\partial q
+                                    \partial p} \dot{q} \delta p
+                                    - \cancel{\frac{\partial^2
+                                    W}{\partial q^2} \dot{q} \delta q}
+                                    - \frac{\partial^2 W}{\partial q
+                                    \partial p} \dot{p} \delta q
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>したがって、<span
+                                    class="math inline">\(W(q,p)\)</span>が</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial^2 W}{\partial q
+                                    \partial p} = 0
+                                    \]</span></p>
+                                    <p>という条件を満たせば、この項は消える。残りの<span
+                                    class="math inline">\(\dot{p}\)</span>に関する項も同様である。以上から、2つの引数両方に関する偏微分がゼロであるような関数<span
+                                    class="math inline">\(W\)</span>の時間微分をハミルトニアンに加えても正準方程式を変えない、すなわちこの関数が正準変換を導くことがわかった。</p>
+                                    <p>具体的には、</p>
+                                    <p><span class="math display">\[
+                                    p\dot{q} - H(q,p) + \frac{dW}{dt} =
+                                    P \dot{Q} - H(Q,P)
+                                    \]</span></p>
+                                    <p>が正準変換を与える。具体的な変換公式を見るため、<span
+                                    class="math inline">\(dW/dt\)</span>について整理しよう。また、後のために時間微分をニュートン表記からライプニッツ表記で書き直す。ハミルトニアン<span
+                                    class="math inline">\(H\)</span>は(時間非依存であれば)変数を書き直しただけで値は変わらないため、両辺でキャンセルする。</p>
+                                    <p><span class="math display">\[
+                                    \frac{dW}{dt} = p\frac{dq}{dt} - P
+                                    \frac{dQ}{dt}
+                                    \]</span></p>
+                                    <p>両辺に形式的に<span
+                                    class="math inline">\(dt\)</span>をかけると</p>
+                                    <p><span class="math display">\[
+                                    dW = p dq - P dQ
+                                    \]</span></p>
+                                    <p>これは、関数<span
+                                    class="math inline">\(W\)</span>が自由変数を<span
+                                    class="math inline">\(q,
+                                    Q\)</span>とみなした時の全微分の表式となっている。全微分の定義から</p>
+                                    <p><span class="math display">\[
+                                    dW(q, Q) = \frac{\partial
+                                    W}{\partial q} dq + \frac{\partial
+                                    W}{\partial Q}dQ
+                                    \]</span></p>
+                                    <p>であるから、両者を比較すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial W}{\partial
+                                    q} \\
+                                    P &amp;= - \frac{\partial
+                                    W}{\partial Q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を得る。すなわち、先程の条件を満たす任意の関数<span
+                                    class="math inline">\(W(q,Q)\)</span>を考えると、
+                                    <span
+                                    class="math inline">\((q,Q)\)</span>から新たな変数の組<span
+                                    class="math inline">\((p(q,Q),P(q,Q))\)</span>が得られる。これを<span
+                                    class="math inline">\((P,Q)\)</span>について解き直せば</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= Q(q,p) \\
+                                    P &amp;= P(q,p)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>という正準変換<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow
+                                    (Q,P)\)</span>を作ることができる。このように、<span
+                                    class="math inline">\(W\)</span>は正準変換を生み出す関数となっているため、
+                                    <strong>母関数(generating
+                                    function)</strong> と呼ぶ。</p>
+                                    <p>母関数は、変換前後の変数をそれぞれ含んでなければならない。先程の正準変換の母関数<span
+                                    class="math inline">\(W(q,Q)\)</span>は、新旧の一般化座標を引数としていた。これをType
+                                    1と呼び、慣習的に<span
+                                    class="math inline">\(W_1\)</span>と表す。ここからルジャンドル変換により自由変数を取り直そう。</p>
+                                    <p><span class="math display">\[
+                                    W_2 = W_1 + PQ
+                                    \]</span></p>
+                                    <p>により新たな関数<span
+                                    class="math inline">\(W_2\)</span>を考えると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    d W_2 &amp;= d W_1 + QdP + PdQ \\
+                                    &amp;= pdq - \cancel{PdQ} + QdP +
+                                    \cancel{PdQ}\\
+                                    &amp;= pdq + QdP
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここから、<span
+                                    class="math inline">\(W_2\)</span>の自由変数は<span
+                                    class="math inline">\(q,
+                                    P\)</span>であり、変換則は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial
+                                    W_2}{\partial q}\\
+                                    Q &amp;= \frac{\partial
+                                    W_2}{\partial P}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>で与えられる。</p>
+                                    <p>同様に、<span
+                                    class="math inline">\(W_3 = W_1 -
+                                    pq\)</span>とすることで、</p>
+                                    <p><span class="math display">\[
+                                    d W_3 = -qdp - PdQ
+                                    \]</span></p>
+                                    <p>となるため、変換則は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    q &amp;= -\frac{\partial
+                                    W_3}{\partial p}\\
+                                    P &amp;= -\frac{\partial
+                                    W_3}{\partial Q}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>さらに、<span
+                                    class="math inline">\(W_4 =
+                                    W_3+PQ\)</span>とすることで、</p>
+                                    <p><span class="math display">\[
+                                    d W_4 = -qdp + QdP
+                                    \]</span></p>
+                                    <p>から、変換則は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    q &amp;= -\frac{\partial
+                                    W_4}{\partial p}\\
+                                    Q &amp;= \frac{\partial
+                                    W_4}{\partial P}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となる。以上をまとめると以下のような図となる。</p>
+                                    <figure>
+                                    <img src="fig/transform_diagram.png"
+                                    alt="変換則" />
+                                    <figcaption
+                                    aria-hidden="true">変換則</figcaption>
+                                    </figure>
+                                    <p>図で見ると複雑に感じるかもしれないが、以下のルールを知ればさほど難しくはない。</p>
+                                    <ul>
+                                    <li>母関数は新旧の変数を一つずつ含む</li>
+                                    <li>その組み合わせは<span
+                                    class="math inline">\(W_1(q,Q),
+                                    W_2(q,P), W_3(p, Q), W_4(p,
+                                    P)\)</span>の四種類ある</li>
+                                    <li>変換則は母関数を自由変数で偏微分することで、正準共役な変数が得られる</li>
+                                    <li>偏微分した際の符号は、全微分からわかる</li>
+                                    <li>母関数同士はルジャンドル変換で繋がっている</li>
+                                    </ul>
+                                    <p>これらはの母関数は、以下の条件さえ満たせば任意に選ぶことができる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial^2 W_1}{\partial q
+                                    \partial Q} &amp;= 0 \\
+                                    \frac{\partial^2 W_2}{\partial q
+                                    \partial P} &amp;= 0 \\
+                                    \frac{\partial^2 W_3}{\partial p
+                                    \partial Q} &amp;= 0 \\
+                                    \frac{\partial^2 W_4}{\partial p
+                                    \partial P} &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>逆に言えば、この母関数から作られる変換は正準変換となる。</p>
                                     <h1
                                     id="ポアソン括弧">ポアソン括弧</h1>
+                                    <h1 id="微分形式">微分形式</h1>
                     </article>
     </body>
 
