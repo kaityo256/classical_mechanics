@@ -632,5 +632,57 @@ $$
 dP \wedge dQ = dp \wedge dq
 $$
 
-が成り立つことが正準変換の条件となる。このように、正準共役な変数同士を結んだ2形式を **正準2形式(canonical 2-form)** と呼ぶ。
+が成り立つことが正準変換の条件となる。このように、正準共役な変数同士を結んだ2形式を **正準2形式(canonical 2-form)** と呼び、一般に$\omega$で表すことが多い。
+
+$$
+\omega = dp \wedge dq = dP \wedge dQ
+$$
+
+すなわち、正準2形式は正準変換で不変である。
+
+正準2形式を使うと、正準方程式を内積の形で書くことができる。以下のような量を考えよう。
+
+$$
+\dot{c} = \dot{q} \frac{\partial}{\partial q} + \dot{p} \frac{\partial}{\partial p}
+$$
+
+この量と正準2形式の内積を取る。
+
+$$
+\left<dp\wedge dq, \dot{c}  \right> = \dot{p}dq - \dot{q}dp
+$$
+
+ハミルトニアン$H(q,p)$の全微分は
+
+$$
+dH = \frac{\partial H}{\partial q}dq + \frac{\partial H}{\partial p}dp
+$$
+
+であるから、
+
+$$
+\left<dp\wedge dq, \dot{c}  \right> = -dH
+$$
+
+が、正準方程式を与える。
+
+多自由度の場合も同様であり、正準2形式
+
+$$
+\omega = dp_i \wedge dq^i
+$$
+
+と、ベクトル場
+
+$$
+\dot{c} = \dot{q}^i\frac{\partial}{\partial q^i}+\dot{p}_i\frac{\partial}{\partial p_i}
+$$
+
+を用いて
+
+$$
+\left<\omega, \dot{c}\right> = -dH
+$$
+
+が正準方程式を与える。正準2形式は正準変換で不変であるから、これは局所基底の取り方に依らない運動方程式の表現となっている。
 
