@@ -269,13 +269,13 @@ $$
 I = \int_{t_1}^{t_2} (p\dot{q} - H(q,p))dt
 $$
 
-を最小にするものとして得られたものであった。同様に変換後の変数$(Q,P)$が正準方程式を満たすならば、やはり作用積分
+の変分から得られたものであった。同様に変換後の変数$(Q,P)$が正準方程式を満たすならば、やはり作用積分
 
 $$
 I = \int_{t_1}^{t_2} (P\dot{Q} - H(Q,P))dt
 $$
 
-の変分から得られる。したがって、正準方程式と作用積分は等価である。正準方程式は$N$自由度系では$2N$自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。作用積分の被積分関数はスカラー関数であるから、正準変換$(q,p) \rightarrow (Q,P)$も、変分原理まで戻ればスカラー関数だけで考えられるはずである。すなわち、ハミルトニアンになんらかの関数$F$を加えた$H+F$について作用積分
+の変分$\delta I = 0$から得られる。したがって、正準方程式と作用積分は等価である。$N$自由度系の正準方程式では$2N$自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。作用積分の被積分関数はスカラー関数であるから、正準変換$(q,p) \rightarrow (Q,P)$も、変分原理まで戻ればスカラー関数だけで考えられるはずである。すなわち、ハミルトニアンになんらかの関数$F$を加えた$H+F$について作用積分
 
 $$
 I = \int_{t_1}^{t_2} (p\dot{q} - H(q,p) + F(q,p))dt
@@ -291,19 +291,17 @@ $$
 
 ![正準変換と変分原理](fig/generating_function.png)
 
-
-まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。もう少し非自明な例として、作用積分に$q\dot{q}$という量を加えて、新たに$\tilde{H} = H - q\dot{q}$という量を考える(作用積分に加えると、ハミルトニアンからは引くことに注意)。この新たなハミルトニアン$\tilde{H}$について変分原理を考えると、
-
+まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。もう少し非自明な例として、作用積分に$q\dot{q}$という量を加えたものに対して変分を考えてみよう。
 
 $$
 \begin{aligned}
-\delta(p\dot{q} - \tilde{H}) &= \delta(p\dot{q} - H + q \dot{q}) \\
+\delta(p\dot{q} - H + q \dot{q}) &= \delta(p\dot{q} - H ) + \delta(q\dot{q}) \\
 &= \delta(p\dot{q} - H) + \dot{q}\delta q + q \delta \dot{q} \\
 &= \delta(p\dot{q} - H) + \underbrace{\dot{q}\delta q - \dot{q} \delta q}_{=0}
 \end{aligned}
 $$
 
-と、部分積分により付け加えた項がゼロになるため、元のハミルトニアンと同じ正準方程式が得られる。すなわち、ハミルトニアンに対して$H \rightarrow H - q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
+と、部分積分により付け加えた項がゼロになるため、項をつけわえる前と同じ正準方程式が得られる。すなわち、ハミルトニアン$H$に対して$H \rightarrow H - q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
 
 全く同様にして、$q$に関する任意の関数$W(q)$について、作用積分にその時間微分$dW/dt$を加えても正準方程式を変えないことがわかる。実際に
 
@@ -352,15 +350,13 @@ $$
 \frac{\partial^2 W}{\partial q \partial p} = 0
 $$
 
-という条件を満たせば、この項は消える。残りの$\dot{p}$に関する項も同様である。以上から、2つの引数両方に関する偏微分がゼロであるような関数$W$の時間微分をハミルトニアンに加えても正準方程式を変えない、すなわちこの関数が正準変換を導くことがわかった。
-
-具体的には、
+という条件を満たせば、この項は消える。残りの$\dot{p}$に関する項も同様である。以上から、2つの引数両方に関する偏微分がゼロであるような関数$W$の時間微分をハミルトニアンに加えても正準方程式を変えない、すなわちこの関数が以下の正準変換を導くことがわかった。
 
 $$
 p\dot{q} - H(q,p) + \frac{dW}{dt} = P \dot{Q} - H(Q,P)
 $$
 
-が正準変換を与える。具体的な変換公式を見るため、$dW/dt$について整理しよう。また、後のために時間微分をニュートン表記からライプニッツ表記で書き直す。ハミルトニアン$H$は(時間非依存であれば)変数を書き直しただけで値は変わらないため、両辺でキャンセルする。
+ここから変数の間の変換公式を得るため、$dW/dt$について整理しよう。また、後のために時間微分をニュートン表記からライプニッツ表記で書き直す。ハミルトニアン$H$は(時間非依存であれば)変数を書き直しただけで値は変わらないため、両辺でキャンセルする。
 
 $$
 \frac{dW}{dt} = p\frac{dq}{dt} - P \frac{dQ}{dt}
@@ -483,4 +479,158 @@ $$
 ## ポアソン括弧
 
 ## 微分形式
+
+先程、母関数$W_1$の全微分
+
+$$
+dW_1 = -pdq + PdQ
+$$
+
+から、形式的に両辺を$dq$で割ることで
+
+$$
+p = -\frac{\partial W_1}{\partial q}
+$$
+
+を得た。これをもう少しきちんと論じるため、微分形式を導入しよう。
+
+任意の次元の空間で議論できるが、わかりやすさのために3次元空間$(x,y,z)$で考えよう。この空間に定義されたスカラー関数$f(x,y,z)$を考える。この関数の全微分を以下のように定義する。
+
+$$
+df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz 
+$$
+
+これは、$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **$1$形式(1-form)** と呼ぶ。また、微分する前の関数を **0形式(0-form)** と呼ぶ。一般に、$p$形式を微分することで$p+1$形式を作ることができる。この時得られた$p+1$形式を、元の$p$形式の外微分と呼ぶ。
+
+ここで、外積記号$\wedge$により、以下の性質を持つ外積を定義する。
+
+* 同じ基底の外積はゼロ
+* 外積の両辺を入れ替えると負符号がつく
+
+すなわち、
+
+$$
+\begin{aligned}
+dx \wedge dx &= 0 \\
+dx \wedge dy &= - dy \wedge dx
+\end{aligned}
+$$
+
+である(他の基底も同様)。この外積記号を用いて、任意の$1$形式の間の外積を考えよう。
+以下のように2つの1形式が与えられたとする。
+
+$$
+\begin{aligned}
+du &= u_x dx + u_y dy + u_z dz\\
+dv &= v_x dx + v_y dy + v_z dz
+\end{aligned}
+$$
+
+この2つの$1$形式の外積は、先程の外積の性質を用いると以下のように計算できる。
+
+$$
+\begin{aligned}
+du \wedge dv &= (u_x dx + u_y dy + u_z dz) \wedge (v_x dx + v_y dy + v_z dz) \\
+&=
+(u_x v_y  - u_y v_x ) dx \wedge dy
++(u_y v_z  - u_z v_y ) dy \wedge dz
++(u_z v_x  - u_x v_z ) dz \wedge dx
+\end{aligned}
+$$
+
+さて、外積を用いて外微分を定義しよう。
+
+いま、$1$形式が
+
+$$
+df = f_x dx +  f_y dy +  f_z dz
+$$
+
+と書かれている時、この外微分を
+
+$$
+d(df) = df_x \wedge dx + df_y \wedge dy + df_z \wedge dz 
+$$
+
+と定義する。
+
+$f_x$はスカラー関数、すなわち$0$形式であり、一般に$x,y,z$の関数であるから、その外微分は
+
+$$
+df_x = \frac{\partial f_x}{\partial x} dx
++ \frac{\partial f_y}{\partial y} dy
++ \frac{\partial f_z}{\partial z} dz
+$$
+
+で与えられる。したがって、
+
+$$
+d(df) = 
+\left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy
++ (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz
++ (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
+$$
+
+となる。$dx\wedge dy$など、$1$形式の外積で作られた新たな基底で表現されたものを$2$形式と呼ぶ。すなわち$1$形式を外微分することで$2$形式を作ることができた。同様にして、$p$形式を外微分することで$p+1$形式を作ることができる。
+
+イメージとしては、ベクトルのテンソル積により、行列の基底を作ることができるのと同様である。
+
+微分形式では、$dx$や$dy$といった基底ベクトルや、その外積により作られた基底で張られた量を考える。これらはベクトルであるから、双対基底を考えることで内積を考えることができる。以前説明したように、$dx$に対しては$\partial_x$が双対基底となり、以下のような自然な内積を考えることができる。
+
+$$
+\begin{aligned}
+\left<dx, \frac{\partial}{\partial x} \right> &= \frac{\partial x}{\partial x} = 1\\
+\left<dy, \frac{\partial}{\partial x} \right> &= \frac{\partial y}{\partial x} = 0\\
+\end{aligned}
+$$
+
+すなわち、対応する双対基底と内積をとったら1、そうでなければ0となるため、$dx, dy, dz$と、$\partial_x, \partial_y, \partial_z$は正規直交基底をなす。
+
+2形式との内積については、一番左のものと内積をとると約束する。すなわち、
+
+$$
+\begin{aligned}
+\left<dx \wedge dy, \frac{\partial}{\partial x} \right> & \equiv 
+\left<dx, \frac{\partial}{\partial x} \right> dy \\
+&=1
+\end{aligned}
+$$
+
+対応する双対ベクトルが一番左になかった場合は、入れ替えることで一番左に持ってくる。その際、入れ替えた回数だけ負符号がつく。
+
+$$
+\begin{aligned}
+\left<dy \wedge dx, \frac{\partial}{\partial x} \right> & =
+- \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
+&= -\left<dx, \frac{\partial}{\partial x} \right> dy \\
+&=1
+\end{aligned}
+$$
+
+以上により、解析力学を微分形式で表現する準備が整った。まず、正準変換の条件を微分形式で表現しよう。今、変数$(q,p)$から$(Q,P)$に変数変換をしたとする。この時、$2$形式$dP \wedge dQ$を考える。$Q$、$P$は$(q,p)$の関数であるから、
+
+$$
+\begin{aligned}
+dQ &= \frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\\
+dP &= \frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp
+\end{aligned}
+$$
+
+$dP \wedge dQ$に代入して計算すると、
+
+$$
+\begin{aligned}
+dP \wedge dQ &= \left(\frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp \right)
+\left(\frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\right) \\
+&= \left(\frac{\partial P}{\partial p}\frac{\partial Q}{\partial q} - \frac{\partial P}{\partial q}\frac{\partial Q}{\partial p} \right) dp\wedge dq
+\end{aligned}
+$$
+
+すなわち、$(q,p)$から$(Q,P)$への変換のヤコビアンが現れる。正準変換の条件はヤコビアンが1であることであったから、
+
+$$
+dP \wedge dQ = dp \wedge dq
+$$
+
+が成り立つことが正準変換の条件となる。このように、正準共役な変数同士を結んだ2形式を **正準2形式(canonical 2-form)** と呼ぶ。
 
