@@ -112,13 +112,146 @@
                                     <p>と書くことができる。この括弧を
                                     <strong>ポアソン括弧(Poisson
                                     bracket)</strong> と呼ぶ。</p>
-                                    <p>さて、実はポアソン括弧は正準変数に対して不変でこと、すなわち、ある正準変数の組<span
+                                    <p>さて、実はポアソン括弧は正準変数に対して不変であること、すなわち、ある正準変数の組<span
                                     class="math inline">\((q,p)\)</span>が、正準変換により別の正準変数の組<span
                                     class="math inline">\((q,p)\)</span>に変換される時、<span
                                     class="math inline">\((q,p)\)</span>で定義したポアソン括弧式と、<span
-                                    class="math inline">\((q,p)\)</span>で定義したポアソン括弧式は等しいことを示そう。</p>
-                                    <p>TODO: ポアソン括弧の不変性</p>
-                                    <p>したがって、ポアソン括弧式は正準変換で移り変わることができるいかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。</p>
+                                    class="math inline">\((q,p)\)</span>で定義したポアソン括弧式は等しいことを示すことができる。</p>
+                                    <p>今、$(q,p) (Q,P) <span
+                                    class="math inline">\(が正準変換であるとする。この時、\)</span>(q,p)$によるポアソン括弧は</p>
+                                    <p><span class="math display">\[
+                                    \left\{X, Y\right\}_{q,p} \equiv
+                                    \frac{\partial X}{\partial
+                                    q}\frac{\partial Y}{\partial p} -
+                                    \frac{\partial X}{\partial
+                                    p}\frac{\partial Y}{\partial q}
+                                    \]</span></p>
+                                    <p>となる。ここで、<span
+                                    class="math inline">\(X,
+                                    Y\)</span>を<span
+                                    class="math inline">\((Q,P)\)</span>で表すと、<span
+                                    class="math inline">\((q,p)\)</span>依存性は以下のように入ってくる。
+                                    <span class="math display">\[
+                                    \begin{aligned}
+                                    X &amp;= X(Q(q,p), P(q,p))\\
+                                    Y &amp;= Y(Q(q,p), P(q,p))
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>それぞれ<span
+                                    class="math inline">\(q,p\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial X}{\partial q} &amp;=
+                                    \frac{\partial X}{\partial
+                                    Q}\frac{\partial Q}{\partial q} +
+                                    \frac{\partial X}{\partial
+                                    P}\frac{\partial P}{\partial q} \\
+                                    \frac{\partial Y}{\partial p} &amp;=
+                                    \frac{\partial Y}{\partial
+                                    Q}\frac{\partial Q}{\partial p} +
+                                    \frac{\partial Y}{\partial
+                                    P}\frac{\partial P}{\partial p} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial X}{\partial
+                                    q}\frac{\partial Y}{\partial p}
+                                    &amp;=
+                                    \left(
+                                    \frac{\partial X}{\partial
+                                    Q}\frac{\partial Q}{\partial q} +
+                                    \frac{\partial X}{\partial
+                                    P}\frac{\partial P}{\partial q}
+                                    \right)
+                                    \left(
+                                    \frac{\partial Y}{\partial
+                                    Q}\frac{\partial Q}{\partial p} +
+                                    \frac{\partial Y}{\partial
+                                    P}\frac{\partial P}{\partial p}
+                                    \right) \\
+                                    &amp;=
+                                    \frac{\partial X}{\partial
+                                    Q}\frac{\partial Y}{\partial
+                                    P}\frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p}
+                                    +
+                                    \frac{\partial X}{\partial
+                                    P}\frac{\partial Y}{\partial
+                                    Q}\frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial q}\\
+                                    &amp;+ \underbrace{\frac{\partial
+                                    X}{\partial Q}\frac{\partial
+                                    Y}{\partial Q}\frac{\partial
+                                    Q}{\partial p}\frac{\partial
+                                    Q}{\partial q}
+                                    + \frac{\partial X}{\partial
+                                    P}\frac{\partial Y}{\partial
+                                    P}\frac{\partial P}{\partial
+                                    p}\frac{\partial P}{\partial
+                                    q}}_{\bigstar}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>後に<span
+                                    class="math inline">\(X\)</span>と<span
+                                    class="math inline">\(Y\)</span>を入れ替えたものを引くため、入れ替えても値が変わらない項目である<span
+                                    class="math inline">\(\bigstar\)</span>の項目が消えることに注意。以上から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \left\{X, Y\right\}_{q,p} &amp;=
+                                    \frac{\partial X}{\partial
+                                    q}\frac{\partial Y}{\partial p}
+                                    - \frac{\partial Y}{\partial
+                                    q}\frac{\partial X}{\partial p} \\
+                                    &amp;=
+                                    \frac{\partial X}{\partial
+                                    Q}\frac{\partial Y}{\partial P}
+                                    \frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p}
+                                    +
+                                    \frac{\partial X}{\partial
+                                    P}\frac{\partial Y}{\partial Q}
+                                    \frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial q} \\
+                                    &amp;-
+                                    \frac{\partial X}{\partial
+                                    P}\frac{\partial Y}{\partial Q}
+                                    \frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p}
+                                    -
+                                    \frac{\partial X}{\partial
+                                    Q}\frac{\partial Y}{\partial P}
+                                    \frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial q}\\
+                                    &amp;=
+                                    \frac{\partial X}{\partial
+                                    Q}\frac{\partial Y}{\partial P}
+                                    \underbrace{\left(
+                                        \frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p}
+                                        -
+                                        \frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial q}
+                                    \right)}_{=1}
+                                    \\
+                                    &amp;- \frac{\partial X}{\partial
+                                    P}\frac{\partial Y}{\partial Q}
+                                    \underbrace{\left(
+                                        \frac{\partial Q}{\partial
+                                    q}\frac{\partial P}{\partial p}
+                                        -
+                                        \frac{\partial Q}{\partial
+                                    p}\frac{\partial P}{\partial q}
+                                    \right)}_{=1}\\
+                                    &amp;= \frac{\partial X}{\partial
+                                    Q}\frac{\partial Y}{\partial P} -
+                                    \frac{\partial X}{\partial
+                                    P}\frac{\partial Y}{\partial Q} \\
+                                    &amp;= \left\{X,Y\right\}_{Q,P}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>したがって、ポアソン括弧式は正準変換で移り変わることができる、いかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。</p>
                                     <p><span class="math display">\[
                                     \left\{X, Y\right\}_{q,p} =
                                     \left\{X, Y\right\}_{Q,P} =
@@ -235,9 +368,467 @@
                                     <li>ヤコビ恒等式</li>
                                     <li>ライプニッツルール</li>
                                     </ul>
-                                    <p>このうち、最初の3つの性質(反対称性、双線型性、ヤコビ恒等式)を満たす代数をリー代数と呼ぶ。リー代数については後に簡単に紹介する。</p>
+                                    <p>このように、あるベクトル空間の要素2つを、別の要素に結びつける演算を積と呼ぶ。ポアソン括弧は積の一種である。この集合と積をあわせたものを代数と呼ぶ。積の満たす性質により様々な代数がアリ得るが、ポアソン括弧が満たす3つの性質(反対称性、双線型性、ヤコビ恒等式)を持つ積が作る代数を
+                                    <strong>リー代数 (Lie
+                                    algebra)</strong>
+                                    、もしくはリー環と呼ぶ。リー環は、リー群と密接な関係を持つ。ここで、群や環について簡単に紹介しよう。</p>
+                                    <h1 id="代数的構造">代数的構造</h1>
+                                    <h2 id="群">群</h2>
+                                    <p>数学は大きく分けると代数、幾何、解析の３つに分けることができる。幾何は広い意味での図形を扱う学問である。解析とは極限を扱う学問で、微分や積分などが含まれる。そして代数とは、広い意味での足し算や掛け算を調べる学問である。足し算や掛け算といった算法は演算として抽象化され、様々な演算が作る構造(これを代数的構造と呼ぶ)について調べるのが代数学である。先程出てきたポアソン括弧も、リー環という代数構造を作る。リー環がどういうものであるかを調べる前に、最も基本的な代数構造である群から見ていきたい。以下では数学的な厳密さはあまり気にせず、「だいたいこういうもの」という説明をするため、詳細な定義については専門書を参照されたい。</p>
+                                    <p>先程出てきたリー環は、リー群という代数構造から自然に作ることができる。リー群は群の一種であり、群とは、何か操作の対象と操作の組があり、ある操作が後から打ち消せるものを言う。簡単な例として回転するツマミを考えよう。どこか基準となる向きを決め、そこから反時計回りに測った角度を、このツマミの状態としよう。例えばこのツマミの角度が<span
+                                    class="math inline">\(\theta\)</span>である時、その状態を<span
+                                    class="math inline">\(v(\theta)\)</span>と表すことにする。</p>
+                                    <p>さて、このツマミを、現在の状態から反時計回りに<span
+                                    class="math inline">\(\phi\)</span>だけ回す操作を考えよう。この操作を<span
+                                    class="math inline">\(U(\phi)\)</span>と表記する。これをツマミの状態<span
+                                    class="math inline">\(v(\theta)\)</span>に演算すると</p>
+                                    <p><span class="math display">\[
+                                    U(\phi) v(\theta) = v(\theta+\phi)
+                                    \]</span></p>
+                                    <p>となる。これは、もともとの角度が<span
+                                    class="math inline">\(\theta\)</span>であったツマミが<span
+                                    class="math inline">\(\phi\)</span>だけ回転したので、<span
+                                    class="math inline">\(\theta+\phi\)</span>になった、というだけの式だ。</p>
+                                    <p>また、逆向きに<span
+                                    class="math inline">\(\phi\)</span>だけ回す、すなわち<span
+                                    class="math inline">\(U(-\phi)\)</span>を演算すると元の状態に戻る。</p>
+                                    <p><span class="math display">\[
+                                    U(-\phi) v(\theta+\phi) = v(\theta)
+                                    \]</span></p>
+                                    <p>つまり、操作の対象(ツマミ)があり、任意の操作に対して後からその操作を打ち消すことができるので、「ツマミを回す操作」の集合は群を作る。より正確には、以下の4つの条件を満たすものを群と呼ぶ。</p>
+                                    <ol type="1">
+                                    <li>集合が演算について閉じている</li>
+                                    <li>演算に対して結合法則が成り立つ</li>
+                                    <li>演算について単位元が存在する</li>
+                                    <li>任意の演算に逆元が存在する</li>
+                                    </ol>
+                                    <p>つまみを回す操作全体の集合を<span
+                                    class="math inline">\(G\)</span>で表そう。ツマミを回す操作を、順番に<span
+                                    class="math inline">\(f=U(\alpha)\)</span>、<span
+                                    class="math inline">\(g
+                                    =U(\beta)\)</span>と二度続けて行おう。すると、これはまとめて<span
+                                    class="math inline">\(h= U(\alpha +
+                                    \beta)\)</span>という一つの操作を行ったのと等しい。これを</p>
+                                    <p><span class="math display">\[
+                                    f \circ g = h \in G
+                                    \]</span></p>
+                                    <p>と表記する。これにより、二つの操作を一つにまとめることができ、新たにできた操作も「ツマミを回す操作」に含まれる。二つの操作を続けて行う行為を<span
+                                    class="math inline">\(\circ\)</span>で表し、これを集合の演算と呼ぶ。集合<span
+                                    class="math inline">\(G\)</span>に含まれる任意の操作を、この演算によりまとめても、やはりできあがる操作は<span
+                                    class="math inline">\(G\)</span>の元である。これを「集合が演算について閉じている」と呼ぶ。例えば集合として自然数をとり、演算として加法をとると、任意の自然数の和は自然数であるから閉じている。しかし、演算として減法をとると、負の数が出てくる場合があるから閉じていない。</p>
+                                    <p>結合法則とは、<span
+                                    class="math inline">\(f,g,h \in
+                                    G\)</span>と、要素を三つ持ってきた時</p>
+                                    <p><span class="math display">\[
+                                    (f\circ g)\circ h = f \circ (g \circ
+                                    h)
+                                    \]</span></p>
+                                    <p>が成り立つことである。結合則が成り立たない例は、例えばベクトルの外積が挙げられる。</p>
+                                    <p>単位元とは、任意の操作と演算しても、その操作を変えないような元である。すなわち、以下を満たすものである。</p>
+                                    <p><span class="math display">\[
+                                    e \circ  f = f \circ e = f
+                                    \]</span></p>
+                                    <p>角度ゼロの操作<span
+                                    class="math inline">\(e \equiv
+                                    U(0)\)</span>が単位元となることは明らかであろう。また、最初に示した通り、逆元の存在も明らかである。</p>
+                                    <p>さて、群には様々な種類があるが、ここで挙げた例では回転角<span
+                                    class="math inline">\(\theta\)</span>という実数により、群の要素を特徴づけることができた。回転角は実数であるから、このパラメタに対して微分を考えることができる。このように群の要素が連続パラメタで特徴づけられ、そのパラメタに対して微分することができるような群を
+                                    <strong>リー群 (Lie Group)</strong>
+                                    と呼ぶ。二次元空間における連続回転は最も簡単なリー群の例である。</p>
+                                    <p>次に、この操作を行列で表現することを考える。ツマミの状態<span
+                                    class="math inline">\(v(\phi)\)</span>を、二次元ベクトル</p>
+                                    <p><span class="math display">\[
+                                    v(\theta) =
+                                    \begin{pmatrix}
+                                    \cos \theta \\
+                                    \sin \theta
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>で表現しよう。すると、これを<span
+                                    class="math inline">\(\phi\)</span>だけ回転する演算<span
+                                    class="math inline">\(U(\phi)\)</span>は、以下の2行2列の回転行列で表すことができる。</p>
+                                    <p><span class="math display">\[
+                                    U(\phi) =
+                                    \begin{pmatrix}
+                                    \cos \phi &amp; - \sin \phi \\
+                                    \sin \phi &amp; \cos \phi
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>これを群の表現行列と呼ぶ。</p>
+                                    <h2 id="生成子">生成子</h2>
+                                    <p>さて、リー群は微分できるのが特徴であったから、微分してみよう。ツマミの角度が<span
+                                    class="math inline">\(\theta\)</span>であったとして、それを微小角<span
+                                    class="math inline">\(h\)</span>だけ回転する操作は以下のように表現できる。</p>
+                                    <p><span class="math display">\[
+                                    U(h) v(\theta) = v(\theta+h)
+                                    \]</span></p>
+                                    <p>今、回転角<span
+                                    class="math inline">\(h\)</span>が小さい(<span
+                                    class="math inline">\(\lvert h
+                                    \rvert \ll
+                                    1)\)</span>として、右辺をテイラー展開しよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    v(\theta+ h) &amp;= v(\theta) +
+                                    v&#39;(\theta)h+
+                                    v&#39;&#39;(\theta)\frac{h^2}{2} +
+                                    \cdots\\
+                                    &amp;= v(\theta) + h \frac{d}{d
+                                    \theta} v(\theta) + \frac{h^2}{2}
+                                    \frac{d^2}{d \theta^2} v(\theta) +
+                                    \cdots \\
+                                    &amp;= \sum_{k=0}^{\infty}
+                                    \frac{h^k}{k!} \frac{d^k}{d
+                                    \theta^k} v(\theta)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>指数関数の定義</p>
+                                    <p><span class="math display">\[
+                                    \exp(ax) =
+                                    \sum_{k=0}^{\infty}  \frac{(ax)^k}{k!}
+                                    \]</span></p>
+                                    <p>と見比べると、先程の式は形式的に</p>
+                                    <p><span class="math display">\[
+                                    v(\theta + h) = \exp\left(h
+                                    \frac{d}{d\theta}\right) v(\theta)
+                                    \]</span></p>
+                                    <p>と書くことができる。もともと、</p>
+                                    <p><span class="math display">\[
+                                    v(\theta + h) = U(h) v(\theta)
+                                    \]</span></p>
+                                    <p>であったから、二つの式を見比べると、</p>
+                                    <p><span class="math display">\[
+                                    U(h) \equiv  \exp\left(h
+                                    \frac{d}{d\theta}\right)
+                                    \]</span></p>
+                                    <p>である。すなわち、回転を表す演算は、微分を指数関数の肩に載せたものであることがわかる。</p>
+                                    <p>さて、<span
+                                    class="math inline">\(h\)</span>を使って、微分の定義を書いてみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dv}{d\theta} &amp;= \lim_{h
+                                    \rightarrow 0}
+                                    \frac{v(\theta+h)-v(\theta)}{h} \\
+                                    &amp;= \lim_{h \rightarrow 0}
+                                    \frac{U(h)v(\theta)-U(0)v(\theta)}{h}
+                                    \\
+                                    &amp;= \lim_{h \rightarrow 0}
+                                    \left(\frac{U(h) - U(0)}{h}
+                                    \right)v(\theta) \\
+                                    &amp;= U&#39;(0) v(\theta)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺を見比べると</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{d\theta} = U&#39;(0)
+                                    \]</span></p>
+                                    <p>つまり、回転演算子について、微分してから回転角をゼロと置いたものは、時間微分演算子とみなすことができる。具体的な形は</p>
+                                    <p><span class="math display">\[
+                                    U&#39;(0) =
+                                    \begin{pmatrix}
+                                    0 &amp; -1\\
+                                    1 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>である。後の都合のために、これを</p>
+                                    <p><span class="math display">\[
+                                    i\mathcal{L} = \begin{pmatrix}
+                                    0 &amp; -1\\
+                                    1 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>と書いておく。虚数単位<span
+                                    class="math inline">\(i\)</span>をつける理由は、エルミート演算子にするためだが、今は気にしなくて良い。この演算子<span
+                                    class="math inline">\(i\mathcal{L}\)</span>を使うと、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{d\theta}v = i\mathcal{L} v
+                                    \]</span></p>
+                                    <p>と書くことができる。すなわち、この行列<span
+                                    class="math inline">\(i\mathcal{L}\)</span>は、時間微分を表す演算子になっている。両辺を<span
+                                    class="math inline">\(\theta\)</span>から<span
+                                    class="math inline">\(\theta+h\)</span>まで積分すると、</p>
+                                    <p><span class="math display">\[
+                                    v(\theta + h) - v(\theta) = \exp(ih
+                                    \mathcal{L}) v(\theta)
+                                    \]</span></p>
+                                    <p>これと、</p>
+                                    <p><span class="math display">\[
+                                    v(\theta + h) = U(h) v(\theta)
+                                    \]</span></p>
+                                    <p>を見比べると、</p>
+                                    <p><span class="math display">\[
+                                    U(h) = \exp(ih \mathcal{L})
+                                    \]</span></p>
+                                    <p>であることがわかる。左辺は<span
+                                    class="math inline">\(h\)</span>という有限の回転を引き起こす演算子である。それに対して、右辺は<span
+                                    class="math inline">\(i\mathcal{L} =
+                                    U&#39;(0)\)</span>という、どの方向に回転するかだけを表現した演算子を、指数関数の肩に載せたものだ。この<span
+                                    class="math inline">\(i\mathcal{L}\)</span>を、回転を生成する演算子であるという意味で
+                                    <strong>生成子(generator)</strong>
+                                    と呼ぶ。</p>
+                                    <p>生成子は、操作の方向を表す演算子である。いま、回転角<span
+                                    class="math inline">\(h\)</span>が微小だとして回転演算子をテイラー展開すると、</p>
+                                    <p><span class="math display">\[
+                                    U(h) = 1 + ih \mathcal{L} + O(h^2)
+                                    \]</span></p>
+                                    <p>となる。これは回転という操作が、回転方向<span
+                                    class="math inline">\(i
+                                    \mathcal{L}\)</span>と、回転量<span
+                                    class="math inline">\(h\)</span>に分離できたことを意味する。このように、無限小の操作を考えると、操作の方向を表す演算子と、操作の量を表すスカラー量に分けることができる。</p>
+                                    <p>ここでは回転を例にとったが、何か連続的なパラメータを持つ対象に対して並進変換を引き起こす全ての演算子に対して同じ議論をすることができる。時間発展はその代表例だ。</p>
+                                    <p>今、正準変数<span
+                                    class="math inline">\((q,p)\)</span>で記述できる世界を考えよう。この世界では全ての物理量を<span
+                                    class="math inline">\((q,p)\)</span>の関数として表現できる。そのような物理量として<span
+                                    class="math inline">\(A(q,p)\)</span>を考える。いま、運動方程式に従って<span
+                                    class="math inline">\((q(t),p(t))\)</span>が<span
+                                    class="math inline">\((q(t+h),
+                                    p(t+h))\)</span>に時間発展したとしよう。物理量<span
+                                    class="math inline">\(A\)</span>は<span
+                                    class="math inline">\(q,p\)</span>を通して時間発展を行うので、時刻<span
+                                    class="math inline">\(t\)</span>なら<span
+                                    class="math inline">\(A(q(t),p(t))\)</span>と書くべきだが、これを<span
+                                    class="math inline">\(A(t)\)</span>と表記する。回転の時と同様に、<span
+                                    class="math inline">\(A(t+h)\)</span>をテイラー展開することで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    A(t+ h) &amp;= A(t) + A&#39;(t)h+
+                                    A&#39;&#39;(t)\frac{h^2}{2} +
+                                    \cdots\\
+                                    &amp;= \sum_{k=0}^{\infty}
+                                    \frac{h^k}{k!} \frac{d^k}{dt^k}
+                                    A(t)\\
+                                    &amp;= \underbrace{\exp\left(h
+                                    \frac{d}{dt}\right)}_{\equiv U(h)}
+                                    A(t) \\
+                                    &amp;\equiv U(h) A(t)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(A\)</span>の時間微分は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{dA}{dt} &amp;= \frac{\partial
+                                    A}{\partial q}\frac{\partial
+                                    H}{\partial p} -\frac{\partial
+                                    A}{\partial p}\frac{\partial
+                                    H}{\partial q} \\
+                                    &amp;= \left( \frac{\partial
+                                    H}{\partial p}\frac{\partial
+                                    }{\partial q} -\frac{\partial
+                                    H}{\partial q}\frac{\partial
+                                    }{\partial p}\right) A
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>時間発展に関する生成子<span
+                                    class="math inline">\(i\mathcal{L}\)</span>は、時間微分を引き起こす演算子であるから、</p>
+                                    <p><span class="math display">\[
+                                    \frac{dA}{dt} \equiv i\mathcal{L}A
+                                    \]</span></p>
+                                    <p>先程の式と見比べると、</p>
+                                    <p><span class="math display">\[
+                                    i\mathcal{L} = \left( \frac{\partial
+                                    H}{\partial p}\frac{\partial
+                                    }{\partial q} -\frac{\partial
+                                    H}{\partial q}\frac{\partial
+                                    }{\partial p}\right)
+                                    \]</span></p>
+                                    <p>であることがわかる。時間発展演算子の生成子を特に
+                                    <strong>リュービル演算子(Liouville
+                                    operator)</strong>
+                                    と呼ぶ。回転の時と同様な議論により、リュービル演算子を指数関数の肩に載せたものが時間発展演算子である。</p>
+                                    <p><span class="math display">\[
+                                    U(h) = \exp(ih\mathcal{L})
+                                    \]</span></p>
+                                    <p>ここまでの議論をまとめておこう。</p>
+                                    <ul>
+                                    <li>有限の連続的な変化を引き起こす演算子<span
+                                    class="math inline">\(U(h)\)</span>を考える</li>
+                                    <li>その演算子に引数にゼロを代入すると、変化させない、すなわち恒等演算子<span
+                                    class="math inline">\(U(0)\)</span>が定義できる</li>
+                                    <li>恒等演算子から少しだけ動かした時の、「動く方向」だけを定義する演算子<span
+                                    class="math inline">\(U&#39;(0)\)</span>を生成子と呼び、<span
+                                    class="math inline">\(i\mathcal{L}\)</span>で表現する</li>
+                                    <li>演算子<span
+                                    class="math inline">\(U(h)\)</span>と生成子<span
+                                    class="math inline">\(i\mathcal{L}\)</span>の間には<span
+                                    class="math inline">\(U(h) = \exp(ih
+                                    \mathcal{L})\)</span>の関係がある</li>
+                                    </ul>
+                                    <h2
+                                    id="三次元回転の生成子とリー環">三次元回転の生成子とリー環</h2>
+                                    <p>リー群の表現行列<span
+                                    class="math inline">\(U(\theta)\)</span>から、生成子という微小回転の演算子<span
+                                    class="math inline">\(i\mathcal{L}\)</span>が出てきた。実はこれがリー環を作るのだが、二次元回転では面白いことがおきない。そこで三次元での回転を考えよう。</p>
+                                    <p>三次元空間では、<span
+                                    class="math inline">\(x\)</span>、<span
+                                    class="math inline">\(y\)</span>、<span
+                                    class="math inline">\(z\)</span>軸の周りの回転を考えることができる。例えば<span
+                                    class="math inline">\(z\)</span>軸の周りに<span
+                                    class="math inline">\(h\)</span>だけ回転させる操作を<span
+                                    class="math inline">\(U_z(h)\)</span>としよう。その行列表現は</p>
+                                    <p><span class="math display">\[
+                                    U_z(h) =
+                                    \begin{pmatrix}
+                                    \cos h &amp;  -\sin h &amp; 0\\
+                                    \sin h &amp; \cos h &amp; 0\\
+                                    0 &amp; 0 &amp; 1
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>z方向の回転の生成子は、回転角が小さい時のテイラー展開</p>
+                                    <p><span class="math display">\[
+                                    U_z(h) = 1 + ihL_z + O(h^2)
+                                    \]</span></p>
+                                    <p>で定義されるから、</p>
+                                    <p><span class="math display">\[
+                                    ihL_z = U_z&#39;(0) -I
+                                    \]</span></p>
+                                    <p>として求められる。ただし<span
+                                    class="math inline">\(I\)</span>は単位行列である。以上から、</p>
+                                    <p><span class="math display">\[
+                                    iL_z =
+                                    \begin{pmatrix}
+                                    0 &amp;  -1 &amp; 0\\
+                                    1 &amp; 0 &amp; 0\\
+                                    0 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>同様に、<span
+                                    class="math inline">\(x,y\)</span>方向の生成子も以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    iL_x =
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 0\\
+                                    0 &amp; 0 &amp; -1\\
+                                    0 &amp; 1 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    iL_y =
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 1\\
+                                    0 &amp; 0 &amp; 0\\
+                                    -1 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>これらの生成子の積について考えよう。以下の交換関係を定義する。</p>
+                                    <p><span class="math display">\[
+                                    [X, Y ] \equiv XY - YX
+                                    \]</span></p>
+                                    <p>これを実際に計算してみると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    [iL_x, i L_y] &amp;=
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 0\\
+                                    0 &amp; 0 &amp; -1\\
+                                    0 &amp; 1 &amp; 0
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 1\\
+                                    0 &amp; 0 &amp; 0\\
+                                    -1 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    -
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 1\\
+                                    0 &amp; 0 &amp; 0\\
+                                    -1 &amp; 0 &amp; 0
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    0 &amp; 0 &amp; 0\\
+                                    0 &amp; 0 &amp; -1\\
+                                    0 &amp; 1 &amp; 0
+                                    \end{pmatrix} \\
+                                    &amp;=
+                                    \begin{pmatrix}
+                                    0 &amp;  -1 &amp; 0\\
+                                    1 &amp; 0 &amp; 0\\
+                                    0 &amp; 0 &amp; 0
+                                    \end{pmatrix} \\
+                                    &amp;= iL_z
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>つまり、</p>
+                                    <p><span class="math display">\[
+                                    [iL_x, i L_y] = i L_z
+                                    \]</span></p>
+                                    <p>が成り立つ。この式は、</p>
+                                    <ul>
+                                    <li>3次元回転操作は一般に非可換である</li>
+                                    <li><span
+                                    class="math inline">\(x\)</span>方向の回転と<span
+                                    class="math inline">\(y\)</span>方向の回転を組み合わせると<span
+                                    class="math inline">\(z\)</span>方向の回転を作ることができる</li>
+                                    </ul>
+                                    <p>という二つの意味を持っている。</p>
+                                    <p>同様に<span
+                                    class="math inline">\([iL_y, iL_z],
+                                    [iL_z,
+                                    iL_x]\)</span>を計算し、3つの交換関係をまとめて書くと</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    [iL_x, i L_y] &amp;= i L_z\\
+                                    [iL_y, i L_z] &amp;= i L_x\\
+                                    [iL_z, i L_x] &amp;= i L_y\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>が成り立つことがわかる。このように、なんらかの演算を定義し、その結果がどうなるかを表す構造を代数的構造と呼ぶ。ここでは交換関係により積を定義しているため、作られた構造は環となっている。</p>
+                                    <p>さて、先程の例は生成子の間の関係であるから無限小の回転に関するものであるが、有限の回転でその意味を見てみよう。</p>
+                                    <figure>
+                                    <img src="fig/noncommutative.png"
+                                    alt="非可換性" />
+                                    <figcaption
+                                    aria-hidden="true">非可換性</figcaption>
+                                    </figure>
+                                    <p>サイコロを考える。サイコロの目のうち、1を<span
+                                    class="math inline">\(x\)</span>軸方向に、2を<span
+                                    class="math inline">\(y\)</span>軸方向に、3を<span
+                                    class="math inline">\(z\)</span>軸方向に揃えよう。<span
+                                    class="math inline">\(x\)</span>軸を回転軸として反時計回りに90度回転させる操作を<span
+                                    class="math inline">\(\hat{X}\)</span>とする。同様に、<span
+                                    class="math inline">\(y\)</span>軸回りに反時計回りに90度回転させる操作を<span
+                                    class="math inline">\(\hat{Y}\)</span>、<span
+                                    class="math inline">\(z\)</span>軸回りに反時計回りに90度回転させる操作を<span
+                                    class="math inline">\(\hat{Z}\)</span>とする。</p>
+                                    <p>まず、サイコロに<span
+                                    class="math inline">\(\hat{X}\)</span>を演算しよう。すると、上面に2がきて、向かって右側に4がくる。次に<span
+                                    class="math inline">\(\hat{Y}\)</span>を演算すると、上面に6がきて、向かって右側は4となる。</p>
+                                    <p>サイコロの状態を元に戻し、今度は最初に<span
+                                    class="math inline">\(\hat{Y}\)</span>を演算しよう。すると手前に3、上面に6がくる。さらに<span
+                                    class="math inline">\(\hat{X}\)</span>を演算すると、上面に2が、向かって右側は1となり、先程の状態とは異なる。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    \hat{Y}\hat{X} \neq \hat{X}\hat{Y}
+                                    \]</span></p>
+                                    <p>と、演算の順序を変えると、結果が変わることがわかる。すなわち、回転操作は非可換である。ここで、先に演算する演算子が右側にくることに注意。</p>
+                                    <p>次に、<span
+                                    class="math inline">\(x\)</span>軸回転と<span
+                                    class="math inline">\(y\)</span>軸回転の組み合わせで<span
+                                    class="math inline">\(z\)</span>軸回転を構成できることを示そう。</p>
+                                    <figure>
+                                    <img src="fig/composition.png"
+                                    alt="回転の合成" />
+                                    <figcaption
+                                    aria-hidden="true">回転の合成</figcaption>
+                                    </figure>
+                                    <p>先程と同様に、サイコロの1を<span
+                                    class="math inline">\(x\)</span>軸方向に、2を<span
+                                    class="math inline">\(y\)</span>軸方向に、3を<span
+                                    class="math inline">\(z\)</span>軸方向に揃えて置こう。まず<span
+                                    class="math inline">\(\hat{X}\)</span>を演算する。すると、上面に2、向かって右側に4がくる。さらに<span
+                                    class="math inline">\(\hat{Y}\)</span>を演算すると、上面に6、手前が2となる。最後に<span
+                                    class="math inline">\(-\hat{X}\)</span>、すなわち<span
+                                    class="math inline">\(x\)</span>軸を回転軸として、時計回りに90度回転させる。すると、上面が3、向かって右側が6、手前が2という状態になる。</p>
+                                    <p>さて、サイコロの状態を元に戻し、<span
+                                    class="math inline">\(z\)</span>軸を回転軸として時計回りに90度回転させよう。これは演算子としては<span
+                                    class="math inline">\(-\hat{Z}\)</span>になる。すると、上面が3、向かって右側が6、手前が2という状態になり、先程<span
+                                    class="math inline">\(x\)</span>軸回転と<span
+                                    class="math inline">\(y\)</span>軸回転のみで作った状態と同じ状態になった。つまり、</p>
+                                    <p><span class="math display">\[
+                                    (-\hat{X})\hat{Y}\hat{X} = -\hat{Z}
+                                    \]</span></p>
+                                    <p>である。先程見た交換関係は回転の生成子、すなわち微小回転に関するものであるから、90度回転という有限回転演算子が満たす関係式とは異なる関係式を満たすが、それでも「演算子が非可換である」「2つの演算子を合成することで別の演算子を作ることができる」ことがわかる。</p>
                                     <h1 id="交換関係">交換関係</h1>
-                                    <p>ポアソンの反対称性から、もしポアソン括弧に入れる物理量を左右入れ替えた時に値が変わらない時、すなわち</p>
+                                    <p>さて、解析力学に戻ろう。ポアソンの反対称性から、もしポアソン括弧に入れる物理量を左右入れ替えた時に値が変わらない時、すなわち</p>
                                     <p><span class="math display">\[
                                     \{A, B\} = \{A, B\}
                                     \]</span></p>
@@ -514,7 +1105,7 @@
                                     class="math inline">\(D\)</span>を作ることができれば、<span
                                     class="math inline">\(D\)</span>も時間不変量となる。このようにして、同じ変数が出てくるまで次々と不変量を作り出すことができる。</p>
                                     <h1 id="まとめ">まとめ</h1>
-                                    <p>本章ではポアソン括弧を定義した。ポアソン括弧には、「入れた物理量と共役な変数による微分をとる」という意味があり、ハミルトニアンを入れると時間微分に、一般化運動量を入れると、対応する一般化座標による微分となる。ポアソン括弧の性質から、入れ替えても値が変わらない、すなわちポアソン括弧の意味で可換である時、対応する量による微分がゼロ、すなわち何かしらの保存則を表していることがわかる。</p>
+                                    <p>本章ではポアソン括弧を定義した。ポアソン括弧が作る代数構造はリー環になっており、その意味で自然に解析力学に代数的構造が入る。ポアソン括弧には、「入れた物理量と共役な変数による微分をとる」という意味があり、ハミルトニアンを入れると時間微分に、一般化運動量を入れると、対応する一般化座標による微分となる。ポアソン括弧の性質から、入れ替えても値が変わらない、すなわちポアソン括弧の意味で可換である時、対応する量による微分がゼロ、すなわち何かしらの保存則を表していることがわかる。物理量の微分が交換関係から得られる、という性質は、量子力学の行列表現へと繋がっていく。</p>
                                     <h1
                                     id="余談サイコロの雌雄と生命の選択">余談：サイコロの雌雄と生命の選択</h1>
                                     <p>サイコロに雌雄があるのを知っているだろうか。サイコロは、1から6までの数字を、裏にある数字の和が7となるように正六面体の各面に割り振ったものだ。いま、サイコロの上面に1を配置すると、下面は6となる。側面には2,3,4,5のどれかが配置されるが、2を手前にしよう。すると奥が5と決まる。残りは3,4のペアだが、3を右に配置するか、左に配置するかの二通りの自由度が残る。3を右に配置したものを雌サイコロ、左に配置したものを雄サイコロと呼ぶ。3次元軸の上下を「天地」、残り東西南北に割り振る時、「天一地六東五西二南三北四」とするのが雌サイコロ、「「天一地六東五西二<strong>南四北三</strong>」とするのが雄サイコロだ。他にも、「1,2,3の順番にx,y,z軸を決めた時に、右手系になるのが雌、左手系になるのが雄」「1,2,3の順番に見た時、反時計回りになるのが雌、時計回りになるのが雄」という覚え方がある。</p>

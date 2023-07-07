@@ -37,6 +37,7 @@ copy-pdf:
 	cp lagrangian/README.pdf ./classical_mechanics07.pdf
 	cp hamiltonian/README.pdf ./classical_mechanics08.pdf
 	cp phasespace/README.pdf ./classical_mechanics09.pdf
+	cp poisson/README.pdf ./classical_mechanics10.pdf
 
 clean:
 	rm -f $(TARGET) index.html
