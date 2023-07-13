@@ -59,7 +59,7 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <h1 id="本章の目的">本章の目的</h1>
-                                    <p>物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は運動方程式の座標を用いない形を与える。</p>
+                                    <p>物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は運動方程式の座標を用いない形を与える。また、ポアソン括弧はリー代数の構造を持っており、量子力学における交換関係と密接につながっている。本章では、群や環といった代数構造がなぜ、どのようにして力学に現れるかを学ぶ。</p>
                                     <h1
                                     id="ポアソン括弧-1">ポアソン括弧</h1>
                                     <p>1自由度系における正準方程式を考えよう。</p>
@@ -113,12 +113,19 @@
                                     <strong>ポアソン括弧(Poisson
                                     bracket)</strong> と呼ぶ。</p>
                                     <p>さて、実はポアソン括弧は正準変数に対して不変であること、すなわち、ある正準変数の組<span
-                                    class="math inline">\((q,p)\)</span>が、正準変換により別の正準変数の組<span
-                                    class="math inline">\((q,p)\)</span>に変換される時、<span
-                                    class="math inline">\((q,p)\)</span>で定義したポアソン括弧式と、<span
-                                    class="math inline">\((q,p)\)</span>で定義したポアソン括弧式は等しいことを示すことができる。</p>
-                                    <p>今、$(q,p) (Q,P) <span
-                                    class="math inline">\(が正準変換であるとする。この時、\)</span>(q,p)$によるポアソン括弧は</p>
+                                    class="math inline">\((q,p)\)</span>が、正準変換により別の正準変数の組
+                                    <span
+                                    class="math inline">\((Q,P)\)</span>
+                                    に変換される時、<span
+                                    class="math inline">\((q,p)\)</span>で定義したポアソン括弧式と、
+                                    <span
+                                    class="math inline">\((Q,P)\)</span>
+                                    で定義したポアソン括弧式は等しいことを示すことができる。</p>
+                                    <p>今、<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow (Q,P)\)</span>
+                                    が正準変換であるとする。この時、<span
+                                    class="math inline">\((q,p)\)</span>によるポアソン括弧は</p>
                                     <p><span class="math display">\[
                                     \left\{X, Y\right\}_{q,p} \equiv
                                     \frac{\partial X}{\partial
@@ -288,8 +295,7 @@
                                     class="math inline">\(\{Y,
                                     X\}\)</span>は<span
                                     class="math inline">\(Y\)</span>の右から<span
-                                    class="math inline">\(A\)</span>とのポアソン括弧をとったものである。すると、「ある物理量<span
-                                    class="math inline">\(A\)</span>について、右からハミルトニアン<span
+                                    class="math inline">\(X\)</span>とのポアソン括弧をとったものである。すると、「ある物理量について、右からハミルトニアン<span
                                     class="math inline">\(H\)</span>とのポアソン括弧をとること」が、「時間<span
                                     class="math inline">\(t\)</span>で微分すること」に対応していることがわかる。</p>
                                     <p>ポアソン括弧式が正準変換に対して不変である事実は重要である。前提として、物理法則は座標のとり方によって形を変えて欲しくない。より正確に言えば、座標を変換した時、物理量が全て同じ様に変換するため、変換前と後で同じ形の式が成立する時、その式は共変性を持つという。我々は既に正準方程式が正準変換に対して形を変えないことを見た。つまり、正準方程式は正準変換に対して共変である。であるならば、運動方程式を表現するのにどのような座標を採用するかは重要ではないのだから、座標を陽に書かない表現が好ましい。もう一度物理量の時間微分を見てみよう。</p>
@@ -522,7 +528,7 @@
                                     <p><span class="math display">\[
                                     \frac{d}{d\theta} = U&#39;(0)
                                     \]</span></p>
-                                    <p>つまり、回転演算子について、微分してから回転角をゼロと置いたものは、時間微分演算子とみなすことができる。具体的な形は</p>
+                                    <p>つまり、回転演算子について、微分してから回転角をゼロと置いたものは、微分演算子とみなすことができる。具体的な形は</p>
                                     <p><span class="math display">\[
                                     U&#39;(0) =
                                     \begin{pmatrix}
@@ -714,6 +720,7 @@
                                     <p><span class="math display">\[
                                     [X, Y ] \equiv XY - YX
                                     \]</span></p>
+                                    <p>これを積とみなすと、リー代数の公理(反対称性、双線形性、ヤコビ恒等式)を満たすことがわかる。</p>
                                     <p>これを実際に計算してみると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
