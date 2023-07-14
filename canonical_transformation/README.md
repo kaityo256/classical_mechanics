@@ -545,6 +545,7 @@ $$
 
 まず、微小な正準変換とはどういうものであるかを考えよう。そのため、恒等変換を与える母関数$W_2(q,P)=qP$に対して、
 
+$$
 W = qP + \varepsilon J(q,P)
 $$
 
@@ -552,21 +553,43 @@ $$
 
 $$
 \begin{aligned}
-p &= \frac{\partial W}{\partial q} = P + \varepsilon \frac{\partial J}{\partial q} \\
-Q &= \frac{\partial W}{\partial P} = q + \varepsilon \frac{\partial J}{\partial P} \\
+p &= \frac{\partial W}{\partial q} = P + \varepsilon \frac{\partial}{\partial q}J(q,P) \\
+Q &= \frac{\partial W}{\partial P} = q + \varepsilon \frac{\partial}{\partial P}J(q,P) \\
 \end{aligned}
 $$
 
-これを$(Q,P)$を$(q,P)$で表す形に変形したい。運動量に関しては、そのまま
+これを$(Q,P)$を$(q,p)$で表す形に変形したい。
+
+まず、
 
 $$
-P = p - \varepsilon \frac{\partial J}{\partial q}
+P = p - O(\varepsilon)
 $$
 
-とすれば良い。$Q$に関しては$J$の$P$偏微分があるため、それを書き直す必要がある。
-
-変換後の運動量$P$は変換前の正準変数$(q,p)$の関数であるから、恒等変換からの補正項$J$は、$J(q,P(q,p))$と書ける。したがって、$J$を$p$で偏微分すると、
+であるから、
 
 $$
-\frac{\partial J(q,P(q,p))}{\partial p} =
+\begin{aligned}
+J(q,P) &= J(q,p - O(\varepsilon)) \\
+&= J(q,p) - O(\varepsilon)
+\end{aligned}
+$$
+
+また、$P$が$(q,p)$の関数であることから、$J$は$J(q,P(q,p))$と書けるので、
+
+$$
+\begin{aligned}
+\frac{\partial}{\partial p}J(q,P(q,p)) &=
+\frac{\partial J}{\partial P}\frac{\partial P}{\partial p} \\
+&= \frac{\partial J}{\partial P} \left(1 - O(\varepsilon)\right) \\
+&= \frac{\partial J}{\partial P} - O(\varepsilon)
+\end{aligned}
+$$
+
+つまり、$J(q,P)$を$J(q,p)$で置き換えたり、$\partial_P J$を$\partial_p J$で置き換えたりすると、$O(\varepsilon)$の誤差が生じるのであるから、先程の変換則に代入して整理すると、
+
+\$$
+\begin{aligned}
+P &= p - \varepsilon \frac{\partial}{\partial q}J(q,p) + O(\varepsilon^2)\\
+\end{aligned}
 $$
