@@ -64,13 +64,13 @@
                                     </ul>
                                     <h1
                                     id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>ハミルトンの運動方程式を共変に保つような変数変換を正準変換と呼ぶ。以下では正準変換を様々な角度から考察する。</p>
+                                    <p>ニュートンの運動方程式からラグランジュ形式の運動方程式に移ったのは、点変換という任意の座標変換について運動方程式の形が共変となるからであった。さらに、ラグランジアンをルジャンドル変換することによってハミルトニアンを作ると、座標と運動量が混ざるような、より広い変数変換を許容することになる。この、ハミルトンの運動方程式を共変に保つような変数変換を正準変換と呼ぶ。以下では正準変換を様々な角度から考察する。</p>
                                     <h1 id="正準変換-1">正準変換</h1>
-                                    <p>オイラー・ラグランジュ方程式は任意の点変換について共変であった。ハミルトンの運動方程式は、<span
+                                    <p>オイラー・ラグランジュ方程式は一般化座標について任意の変換(点変換)を行っても方程式の形が変わらなかった。ハミルトンの運動方程式は、点変換のみならず、<span
                                     class="math inline">\(p\)</span>
                                     と<span
                                     class="math inline">\(q\)</span>
-                                    を混ぜるような、より広い範囲の変換について共変であるが、自由に変換可能というわけではなく、その変換規則には制限がつく。いま、変数変換
+                                    を混ぜるような、より広い範囲の変換について共変となる。しかし、その変換は完全に任意というわけではなく、その変換規則には制限がつく。いま、変数変換
                                     <span class="math inline">\((q,p)
                                     \rightarrow (Q, P)\)</span>
                                     により、ハミルトンの運動方程式が共変に保たれるためには、どのような条件が必要であるかを調べてみよう。</p>
@@ -125,17 +125,35 @@
                                     p=G(Q,P)\)</span>を使って<span
                                     class="math inline">\(q,p\)</span>に代入し</p>
                                     <p><span class="math display">\[
-                                    H(p,q) = H(F(Q,P), G(Q,P))
+                                    H(q,p) = H(F(Q,P), G(Q,P))
                                     \]</span></p>
                                     <p>と書ける。右辺は変数 <span
                                     class="math inline">\((Q,P)\)</span>の関数であるから、</p>
                                     <p><span class="math display">\[
                                     H(q,p) = H(Q,P)
                                     \]</span></p>
-                                    <p>と略記する。このような記号の節約は混乱を招くこともあるが、記号を区別すると式が煩雑になるので、「これは変数であるから、関数であるか」を意識しながら計算を追って欲しい。</p>
+                                    <p>と略記することもある。</p>
+                                    <p>問題となるのは、<span
+                                    class="math inline">\((q,p)\)</span>
+                                    で記述されたハミルトニアンを <span
+                                    class="math inline">\((Q,P)\)</span>
+                                    の関数だと思って微分する場合である。その際、変換と変数を同一視して、</p>
+                                    <p><span class="math display">\[
+                                    H(q,p) = H(q(Q,P), p(Q,P))
+                                    \]</span></p>
+                                    <p>と書いておき、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial H}{\partial Q} =
+                                    \frac{\partial H}{\partial
+                                    q}\frac{\partial q}{Q}
+                                    +  \frac{\partial H}{\partial
+                                    p}\frac{\partial p}{Q}
+                                    \]</span></p>
+                                    <p>と合成関数の偏微分ルールにより計算が可能となる。</p>
+                                    <p>このような記号の節約は混乱を招くこともあるが、記号を区別すると式が煩雑になるので、「これは変数であるから、関数であるか」を意識しながら計算を追って欲しい。</p>
                                     <p>我々が調べたいことは、元の変数
                                     <span
-                                    class="math inline">\((p,q)\)</span>がハミルトンの運動方程式</p>
+                                    class="math inline">\((q,p)\)</span>がハミルトンの運動方程式</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q} &amp;= \frac{\partial
@@ -145,7 +163,7 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>を満たす時、新たな変数 <span
-                                    class="math inline">\((P,Q)\)</span>
+                                    class="math inline">\((Q,P)\)</span>
                                     が同じ形の運動方程式</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -155,7 +173,7 @@
                                     H}{\partial Q} \\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>を満たすための条件である。まず、ハミルトニアンを<span
+                                    <p>を満たすための条件、すなわちハミルトンの運動方程式が変数変換に対して共変となる条件である。まず、ハミルトニアンを<span
                                     class="math inline">\((Q,P)\)</span>で書いておく。そして<span
                                     class="math inline">\((Q,P)\)</span>を<span
                                     class="math inline">\((q,p)\)</span>の関数だと思って偏微分しよう。</p>
@@ -401,6 +419,7 @@
                                     &amp;=1
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>すなわち、先程の変換は正準変換である。</p>
                                     <h1 id="母関数">母関数</h1>
                                     <p>ある変換<span
                                     class="math inline">\((q,p)
@@ -429,8 +448,10 @@
                                     <p>の変分<span
                                     class="math inline">\(\delta I =
                                     0\)</span>から得られる。したがって、正準方程式と作用積分は等価である。<span
-                                    class="math inline">\(N\)</span>自由度系の正準方程式では<span
-                                    class="math inline">\(2N\)</span>自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。作用積分の被積分関数はスカラー関数であるから、正準変換<span
+                                    class="math inline">\(N\)</span>
+                                    自由度系の正準方程式では<span
+                                    class="math inline">\(2N\)</span>
+                                    自由度の変数の間の関係を調べる必要があったが、変分原理まで戻ればスカラー関数一つについての等価性を調べれば良い。作用積分の被積分関数はスカラー関数であるから、正準変換<span
                                     class="math inline">\((q,p)
                                     \rightarrow
                                     (Q,P)\)</span>も、変分原理まで戻ればスカラー関数だけで考えられるはずである。すなわち、ハミルトニアンになんらかの関数<span
@@ -708,9 +729,165 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>逆に言えば、この母関数から作られる変換は正準変換となる。</p>
+                                    <p>母関数による正準変換について、いくつか簡単な例を挙げておこう。</p>
+                                    <p>まず、<span
+                                    class="math inline">\(W_2(q,P)=qP\)</span>を採用すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial
+                                    W_2}{\partial q} = P\\
+                                    Q &amp;= \frac{\partial
+                                    W_2}{\partial P} = q\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となり、これは恒等変換を表す。</p>
+                                    <p><span
+                                    class="math inline">\(W_1(q, Q) =
+                                    qQ\)</span>を採用すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial
+                                    W_1}{\partial q} = Q\\
+                                    P &amp;= -\frac{\partial
+                                    W_1}{\partial Q} = -q
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>となるので、改めて<span
+                                    class="math inline">\((Q,P)\)</span>を<span
+                                    class="math inline">\((q,p)\)</span>の関数として書き直すと、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= p \\
+                                    P &amp;= -q
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>つまり、座標と運動量と入れ替えて負符号をつける変換になっている。同様に、<span
+                                    class="math inline">\(W_1(q,Q) =
+                                    -qQ\)</span>を採用すれば、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= -p \\
+                                    P &amp;= q
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、符号が逆転する。このように正準変換においては座標と運動量を自由に入れ替えることができる。</p>
                                     <h1
-                                    id="ポアソン括弧">ポアソン括弧</h1>
-                                    <h1 id="微小変換">微小変換</h1>
+                                    id="微小変換とネーターの定理">微小変換とネーターの定理</h1>
+                                    <p>繰り返しになるが、系の運動はハミルトニアンというスカラー関数一つだけから全て決まる。したがって、ハミルトニアンには、系の運動の情報、特に対称性や保存則についての情報が含まれている。そのうち、最も簡単なものは循環座標であり、ハミルトニアンが、ある一般化座標<span
+                                    class="math inline">\(q^i\)</span>に依存しなければ、対応する正準共役な運動量<span
+                                    class="math inline">\(p_i\)</span>が保存量となる。この性質をもっと一般化して論じることができる。</p>
+                                    <p>例えば、ハミルトニアンが時間を陽に含んでいなければ、時間の基準を変える変換<span
+                                    class="math inline">\(t \rightarrow
+                                    t +
+                                    h\)</span>について、ハミルトニアンは形を変えない。これを時間並進対称性と呼ぶ。この時、<span
+                                    class="math inline">\(t\)</span>と共役な量であるエネルギーが保存量となる。</p>
+                                    <p>多数の粒子が相互作用している時、その粒子間にかかる力が相対距離にのみ依存する場合、位置に関する並進移動<span
+                                    class="math inline">\(x \rightarrow
+                                    x +
+                                    h\)</span>についてハミルトニアンは形を変えない。これを空間並進対称性と呼ぶ。この時、位置<span
+                                    class="math inline">\(x\)</span>と共役な量である運動量<span
+                                    class="math inline">\(p_x\)</span>が保存量となる。</p>
+                                    <p>全く同様にして、系が回転対称性を持っていれば、回転角に共役な角運動量が保存量となる。</p>
+                                    <p>ポアソン括弧の章で述べたように、なんらかの連続変換は、その変換量が小さい時、「変換の向き」と「変換の大きさ」に分けることができる。さて、正準変換は、その変換が小さい場合、あやはり「変換の向き」と「変換の大きさ」に分けることができる。この時、ハミルトニアンの持つ保存量は、微小変換の「変換の向き」と密接な関係があることがわかる。以下、これを見ていこう。</p>
+                                    <p>まず、微小な正準変換とはどういうものであるかを考えよう。そのため、恒等変換を与える母関数<span
+                                    class="math inline">\(W_2(q,P)=qP\)</span>に対して、</p>
+                                    <p><span class="math display">\[
+                                    W = qP + \varepsilon J(q,P)
+                                    \]</span></p>
+                                    <p>と、<span
+                                    class="math inline">\(O(\varepsilon)\)</span>だけ何かを加えた母関数を考える。すると、これは<span
+                                    class="math inline">\(O(\varepsilon)\)</span>の微小正準変換を引き起こすことが期待される。この母関数による正準変換は以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial W}{\partial
+                                    q} = P + \varepsilon
+                                    \frac{\partial}{\partial q}J(q,P) \\
+                                    Q &amp;= \frac{\partial W}{\partial
+                                    P} = q + \varepsilon
+                                    \frac{\partial}{\partial P}J(q,P) \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを<span
+                                    class="math inline">\((Q,P)\)</span>を<span
+                                    class="math inline">\((q,p)\)</span>で表す形に変形したい。</p>
+                                    <p>まず、</p>
+                                    <p><span class="math display">\[
+                                    P = p - O(\varepsilon)
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    J(q,P) &amp;= J(q,p -
+                                    O(\varepsilon)) \\
+                                    &amp;= J(q,p) - O(\varepsilon)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>また、<span
+                                    class="math inline">\(P\)</span>が<span
+                                    class="math inline">\((q,p)\)</span>の関数であることから、<span
+                                    class="math inline">\(J\)</span>は<span
+                                    class="math inline">\(J(q,P(q,p))\)</span>と書けるので、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial}{\partial
+                                    p}J(q,P(q,p)) &amp;=
+                                    \frac{\partial J}{\partial
+                                    P}\frac{\partial P}{\partial p} \\
+                                    &amp;= \frac{\partial J}{\partial P}
+                                    \left(1 - O(\varepsilon)\right) \\
+                                    &amp;= \frac{\partial J}{\partial P}
+                                    - O(\varepsilon)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>つまり、<span
+                                    class="math inline">\(J(q,P)\)</span>を<span
+                                    class="math inline">\(J(q,p)\)</span>で置き換えたり、<span
+                                    class="math inline">\(\partial_P
+                                    J\)</span>を<span
+                                    class="math inline">\(\partial_p
+                                    J\)</span>で置き換えたりすると、<span
+                                    class="math inline">\(O(\varepsilon)\)</span>の誤差が生じるのであるから、先程の変換則に代入して整理すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= q + \varepsilon
+                                    \frac{\partial}{\partial p}J(q,p) +
+                                    O(\varepsilon^2)\\
+                                    P &amp;= p - \varepsilon
+                                    \frac{\partial}{\partial q}J(q,p) +
+                                    O(\varepsilon^2)\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を得る。すなわち、「現時点」での変数<span
+                                    class="math inline">\((q,p)\)</span>に対して、その変数で表現されたスカラー関数<span
+                                    class="math inline">\(J(q,p)\)</span>がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。</p>
+                                    <p>この変換が正準変換を与えることを確認しておこう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \begin{vmatrix}
+                                    \partial_q Q &amp; \partial_p Q \\
+                                    \partial_q P &amp; \partial_p P
+                                    \end{vmatrix}
+                                    &amp;=
+                                    \begin{vmatrix}
+                                    1 + \varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}
+                                    &amp;  \varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}\\
+                                    -\varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}  &amp;
+                                    1 - \varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}
+                                    \end{vmatrix} \\
+                                    &amp;= 1
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、この変換は<span
+                                    class="math inline">\(O(\varepsilon)\)</span>までの範囲で正準変換を与える。</p>
+                                    <p>さて、ポアソン括弧の章で、ハミルトニアンのポアソン括弧について可換である場合、その共役な量と</p>
                     </article>
     </body>
 
