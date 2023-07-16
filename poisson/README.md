@@ -148,8 +148,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{p_i} &= \left\{p_i, H\right\} \\
-\dot{q^i} &= \left\{q^i, H\right\}
+\dot{q^i} &= \left\{q^i, H\right\}\\
+\dot{p_i} &= \left\{p_i, H\right\}
 \end{aligned}
 $$
 
