@@ -338,7 +338,7 @@ $$
 指数関数の定義
 
 $$
-\exp(ax) = \sum_{k=0}^{\infty}  \frac{(ax)^k}{k!}
+\exp(x) = \sum_{k=0}^{\infty}  \frac{x^k }{k!}
 $$
 
 と見比べると、先程の式は形式的に
@@ -406,7 +406,7 @@ $$
 と書くことができる。すなわち、この行列$i\mathcal{L}$は、時間微分を表す演算子になっている。両辺を$\theta$から$\theta+h$まで積分すると、
 
 $$
-v(\theta + h) - v(\theta) = \exp(ih \mathcal{L}) v(\theta)
+v(\theta + h) = \exp(ih \mathcal{L}) v(\theta)
 $$
 
 これと、
