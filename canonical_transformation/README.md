@@ -654,9 +654,9 @@ $$
 $$
 \begin{aligned}
 Q^1 &= q^1 + \varepsilon \\
-P^1 &= p^1\\
+P_1 &= p_1\\
 Q^2 &= q^2 + \varepsilon \\
-P^2 &= p^2\\
+P_2 &= p_2\\
 \end{aligned}
 $$
 
