@@ -1,0 +1,72 @@
+\documentclass{jsarticle}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[dvipdfmx]{graphics}
+\usepackage{here}
+\usepackage[margin=20truemm]{geometry}
+\usepackage{enumitem}
+\usepackage{cancel}
+\renewcommand{\labelenumi}{【\arabic{enumi}】}
+\renewcommand{\labelenumii}{(\arabic{enumii})}
+\setlist[enumerate]{itemsep=10pt}
+
+
+\begin{document}
+
+\begin{center}
+  {\huge 数理物理期末試験 予想問題解答例}\\
+\end{center}
+
+\begin{enumerate}
+  \item
+        \begin{enumerate}
+          \item $p_1 = \partial L/\partial \dot{q}_1 = m\dot{q}_1$,$p_2 = \partial L/\partial \dot{q}_2 = m\dot{q}_2$より、
+                $$
+                  H = \frac{1}{2m}(p_1^2+p_2^2) + U(q_1-q_2)
+                $$
+          \item ラグランジアンを$Q_1, Q_2$で表すと、
+                $$
+                  L = \frac{m}{4}(\dot{Q}_1^2+\dot{Q}_2^2) - U(Q_2)
+                $$
+                したがって、
+                $$
+                  \begin{aligned}
+                    P_1 & = \frac{\partial L}{\partial \dot{Q}_1} = \frac{m \dot{Q}_1}{2} \\
+                    P_2 & = \frac{\partial L}{\partial \dot{Q}_2} = \frac{m \dot{Q}_2}{2} \\
+                  \end{aligned}
+                $$
+          \item
+                $$
+                  H = P_1 \dot{Q}_1 + P_1 \dot{Q}_1 - L
+                $$
+                であるから、
+                $$
+                  H = \frac{1}{m}(P_1^2+P_2^2) + U(Q_2)
+                $$
+          \item
+                $$
+                  \begin{aligned}
+                    \{P_1, H\} & = \frac{\partial P_1}{\partial Q_1}\frac{\partial H}{\partial P_1}
+                    +\frac{\partial P_1}{\partial Q_2}\frac{\partial H}{\partial P_2}
+                    - \frac{\partial P_1}{\partial P_1}\frac{\partial H}{\partial Q_1}
+                    - \frac{\partial P_1}{\partial P_2}\frac{\partial H}{\partial Q_2}              \\
+                               & = - \frac{\partial H}{\partial Q_1}                                \\
+                               & = 0
+                  \end{aligned}
+                $$
+          \item
+                $$
+                  \begin{aligned}
+                    \{P_2, H\} & = \frac{\partial P_2}{\partial Q_1}\frac{\partial H}{\partial P_1}
+                    +\frac{\partial P_2}{\partial Q_2}\frac{\partial H}{\partial P_2}
+                    - \frac{\partial P_2}{\partial P_1}\frac{\partial H}{\partial Q_1}
+                    - \frac{\partial P_2}{\partial P_2}\frac{\partial H}{\partial Q_2}              \\
+                               & = - \frac{\partial H}{\partial Q_2}                                \\
+                               & = -U'(Q_2)
+                  \end{aligned}
+                $$
+        \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
