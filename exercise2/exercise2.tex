@@ -30,7 +30,79 @@
           \item ポアソン括弧$\{P_1, H\}$を求めよ。
           \item ポアソン括弧$\{P_2, H\}$を求めよ。
         \end{enumerate}
-
+  \item 二次元系において中心力ポテンシャルを受けて運動する粒子のハミルトニアンが以下のように与えられている。
+        $$
+          H=\frac{1}{2m}(p_x^2 + p_y^2) + U(r)
+        $$
+        ただし$r = \sqrt{x^2+y^2}$である。この時、以下の問に答えよ。
+        \begin{enumerate}
+          \item 原点周りの角運動量を$L = x p_y - y p_x$とする。この時、ポアソン括弧$\{L, H\}$を求めよ。
+          \item 系を原点を中心として反時計回りに角度$\theta$だけ回転させる操作$R(\theta)$が以下のように与えられている。
+                $$
+                  R(\theta) = \begin{pmatrix}
+                    \cos \theta & -\sin \theta \\
+                    \sin \theta & \cos \theta
+                  \end{pmatrix}
+                $$
+                $\varepsilon$を微小量として
+                $$
+                  R(\varepsilon) = I + \varepsilon G + O(\varepsilon^2)
+                $$
+                と展開できる時、回転生成子$G$の行列表現を求めよ。
+          \item 回転生成子$G$による以下の微小変換を考える。
+                $$
+                  \begin{pmatrix}
+                    X \\ Y
+                  \end{pmatrix}
+                  =
+                  \begin{pmatrix}
+                    x \\ y
+                  \end{pmatrix}
+                  + \varepsilon G
+                  \begin{pmatrix}
+                    x \\ y
+                  \end{pmatrix}
+                $$
+                $$
+                  \begin{pmatrix}
+                    P_x \\ P_y
+                  \end{pmatrix}
+                  =
+                  \begin{pmatrix}
+                    p_x \\ p_y
+                  \end{pmatrix}
+                  + \varepsilon G
+                  \begin{pmatrix}
+                    p_x \\ p_y
+                  \end{pmatrix}
+                $$
+                この時、ポアソン括弧$\{X, P_x\}$を求めよ。
+          \item 同様にポアソン括弧$\{X, P_y\}$を求めよ。
+        \end{enumerate}
+        \newpage
+  \item 以下の2次元極座標表示を考える。
+        $$
+          \begin{aligned}
+            x & = r \cos \theta
+            y & = r \sin \theta \\
+          \end{aligned}
+        $$
+        この時、以下の問に答えよ。
+        \begin{enumerate}
+          \item $x$を$r, \theta$の関数と考え、全微分 $dx$を求めよ。
+          \item 同様に$dy$を求めよ。
+          \item $dx \wedge dy$を求めよ。
+        \end{enumerate}
+  \item 正準変換$(r, \theta, p_r, p_\theta) \rightarrow (x, y, p_x, p_y)$を行うため、以下の正準変換の母関数を考える。
+        $$
+          W_3(p_x, p_y, r, \theta) = - p_x r \cos \theta - p_y r \sin \theta
+        $$
+        この時、次の問いに答えよ。
+        \begin{enumerate}
+          \item この母関数$W_3$が与える正準変換を求めよ。
+          \item $p_x, p_y$を$r, \theta, p_r, p_\theta$の関数として求めよ。
+          \item ポアソン括弧$\{x, p_x\}$を、正準変数として$r, \theta, p_r, p_\theta$を用いて計算せよ。
+        \end{enumerate}
 \end{enumerate}
 
 
