@@ -71,6 +71,11 @@
 * 位相空間
 * リュービルの定理
 
+## [正準変換](canonical_transformation/README.md)
+
+* 正準変換
+* 母関数
+
 ## [ポアソン括弧](poisson/README.md)
 
 * ポアソン括弧
@@ -78,10 +83,10 @@
 * 三次元回転
 * 余談：サイコロの雌雄と生命の選択
 
-## [正準変換](canonical_transformation/README.md)
+## [微小正準変換とネーターの定理](noether/README.md)
 
-* 正準変換
-* 母関数
+* ハミルトニアンと対称性
+* 微小正準変換とネーターの定理
 
 ## [微分形式](differential_form/README.md)
 

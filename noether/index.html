@@ -59,6 +59,10 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <h1
+                                    id="本章で学ぶこと">本章で学ぶこと</h1>
+                                    <p>系を少しだけ変化させる微小正準変換を考え、微小正準変換によりハミルトニアンが変化しなければ(変化が高次であれば)対応する母関数が保存量になるというネーターの定理について学ぶ。
+                                    さらに、時間発展も正準変換であり、平行移動や回転と同様に扱えることを見る。</p>
+                                    <h1
                                     id="ハミルトニアンと対称性">ハミルトニアンと対称性</h1>
                                     <p>ニュートンの運動方程式では、発見法的に保存則を見つけていた。しかし、全ての運動方程式がただひとつのハミルトニアンから導出されるのであるから、系に存在する保存量の情報もハミルトニアンに含まれるはずである。それを見ていこう。</p>
                                     <p>まず、二次元空間中の質点の自由運動を考えよう。質点の質量を<span
@@ -124,8 +128,240 @@
                                     <p>角運動量保存についても同様である。二次元空間<span
                                     class="math inline">\((x,y)\)</span>において、原点からの距離<span
                                     class="math inline">\(r=\sqrt{x^2+y^2}\)</span>にのみ依存するポテンシャルに支配された運動を考える。</p>
-                                    <h1 id="微小変換">微小変換</h1>
-                                    <p>以下では、このポアソン括弧を積とみなすと、リー環という代数構造を作ることを見る。しかし、その前にリー環とは何か、そもそも代数構造とは何かというところから見ておこう。</p>
+                                    <h1
+                                    id="微小変換とネーターの定理">微小変換とネーターの定理</h1>
+                                    <p>繰り返しになるが、系の運動はハミルトニアンというスカラー関数一つだけから全て決まる。したがって、ハミルトニアンには、系の運動の情報、特に対称性や保存則についての情報が含まれている。そのうち、最も簡単なものは循環座標であり、ハミルトニアンが、ある一般化座標<span
+                                    class="math inline">\(q^i\)</span>に依存しなければ、対応する正準共役な運動量<span
+                                    class="math inline">\(p_i\)</span>が保存量となる。ここでは、その逆、ハミルトニアンと交換する物理量があれば、その量と共役な座標の変換に対してそれが不変量となることを見よう。</p>
+                                    <p>例えば、ハミルトニアンが時間を陽に含んでいなければ、時間の基準を変える変換<span
+                                    class="math inline">\(t \rightarrow
+                                    t +
+                                    h\)</span>について、ハミルトニアンは形を変えない。これを時間並進対称性と呼ぶ。この時、<span
+                                    class="math inline">\(t\)</span>と共役な量であるエネルギーが保存量となる。</p>
+                                    <p>多数の粒子が相互作用している時、その粒子間にかかる力が相対距離にのみ依存する場合、位置に関する並進移動<span
+                                    class="math inline">\(x \rightarrow
+                                    x +
+                                    h\)</span>についてハミルトニアンは形を変えない。これを空間並進対称性と呼ぶ。この時、位置<span
+                                    class="math inline">\(x\)</span>と共役な量である運動量<span
+                                    class="math inline">\(p_x\)</span>が保存量となる。</p>
+                                    <p>全く同様にして、系が回転対称性を持っていれば、回転角に共役な角運動量が保存量となる。</p>
+                                    <p>ポアソン括弧の章で述べたように、なんらかの連続変換は、その変換量が小さい時、「変換の向き」と「変換の大きさ」に分けることができる。さて、正準変換は、その変換が小さい場合、あやはり「変換の向き」と「変換の大きさ」に分けることができる。この時、ハミルトニアンの持つ保存量は、微小変換の「変換の向き」と密接な関係があることがわかる。以下、これを見ていこう。</p>
+                                    <p>まず、微小な正準変換とはどういうものであるかを考えよう。そのため、恒等変換を与える母関数<span
+                                    class="math inline">\(W_2(q,P)=qP\)</span>に対して、</p>
+                                    <p><span class="math display">\[
+                                    W = qP + \varepsilon J(q,P)
+                                    \]</span></p>
+                                    <p>と、<span
+                                    class="math inline">\(O(\varepsilon)\)</span>だけ何かを加えた母関数を考える。すると、これは<span
+                                    class="math inline">\(O(\varepsilon)\)</span>の微小正準変換を引き起こすことが期待される。この母関数による正準変換は以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial W}{\partial
+                                    q} = P + \varepsilon
+                                    \frac{\partial}{\partial q}J(q,P) \\
+                                    Q &amp;= \frac{\partial W}{\partial
+                                    P} = q + \varepsilon
+                                    \frac{\partial}{\partial P}J(q,P) \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを<span
+                                    class="math inline">\((Q,P)\)</span>を<span
+                                    class="math inline">\((q,p)\)</span>で表す形に変形したい。</p>
+                                    <p>まず、</p>
+                                    <p><span class="math display">\[
+                                    P = p - O(\varepsilon)
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    J(q,P) &amp;= J(q,p -
+                                    O(\varepsilon)) \\
+                                    &amp;= J(q,p) - O(\varepsilon)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>また、<span
+                                    class="math inline">\(P\)</span>が<span
+                                    class="math inline">\((q,p)\)</span>の関数であることから、<span
+                                    class="math inline">\(J\)</span>は<span
+                                    class="math inline">\(J(q,P(q,p))\)</span>と書けるので、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial}{\partial
+                                    p}J(q,P(q,p)) &amp;=
+                                    \frac{\partial J}{\partial
+                                    P}\frac{\partial P}{\partial p} \\
+                                    &amp;= \frac{\partial J}{\partial P}
+                                    \left(1 - O(\varepsilon)\right) \\
+                                    &amp;= \frac{\partial J}{\partial P}
+                                    - O(\varepsilon)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>つまり、<span
+                                    class="math inline">\(J(q,P)\)</span>を<span
+                                    class="math inline">\(J(q,p)\)</span>で置き換えたり、<span
+                                    class="math inline">\(\partial_P
+                                    J\)</span>を<span
+                                    class="math inline">\(\partial_p
+                                    J\)</span>で置き換えたりすると、<span
+                                    class="math inline">\(O(\varepsilon)\)</span>の誤差が生じるのであるから、先程の変換則に代入して整理すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= q + \varepsilon
+                                    \frac{\partial}{\partial p}J(q,p) +
+                                    O(\varepsilon^2)\\
+                                    P &amp;= p - \varepsilon
+                                    \frac{\partial}{\partial q}J(q,p) +
+                                    O(\varepsilon^2)\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を得る。すなわち、「現時点」での変数<span
+                                    class="math inline">\((q,p)\)</span>に対して、その変数で表現されたスカラー関数<span
+                                    class="math inline">\(J(q,p)\)</span>がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。</p>
+                                    <p>この変換が正準変換を与えることを確認しておこう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \begin{vmatrix}
+                                    \partial_q Q &amp; \partial_p Q \\
+                                    \partial_q P &amp; \partial_p P
+                                    \end{vmatrix}
+                                    &amp;=
+                                    \begin{vmatrix}
+                                    1 + \varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}
+                                    &amp;  \varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}\\
+                                    -\varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}  &amp;
+                                    1 - \varepsilon
+                                    \displaystyle\frac{\partial^2
+                                    J}{\partial q \partial p}
+                                    \end{vmatrix} \\
+                                    &amp;= 1
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、この変換は<span
+                                    class="math inline">\(O(\varepsilon)\)</span>までの範囲で正準変換を与える。</p>
+                                    <p>さて、母関数<span
+                                    class="math inline">\(J\)</span>によって生成される微小正準変換により、ハミルトニアンが変化しないならば、その母関数<span
+                                    class="math inline">\(J\)</span>は時間不変量となることが示される。</p>
+                                    <p>以下の微小正準変換<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow
+                                    (Q,P)\)</span>を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= q + \varepsilon
+                                    \frac{\partial J}{\partial p}\\
+                                    P &amp;= p - \varepsilon
+                                    \frac{\partial J}{\partial q}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この変換により、ハミルトニアンが<span
+                                    class="math inline">\(H(q,p)\)</span>から<span
+                                    class="math inline">\(H(Q,P)\)</span>に変化する。この時、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    H(Q, P) &amp;= H\left(q +
+                                    \varepsilon \frac{\partial
+                                    J}{\partial p}, p - \varepsilon
+                                    \frac{\partial J}{\partial q}
+                                    \right) \\
+                                    &amp;= H(q,p) + \varepsilon
+                                    \frac{\partial H}{\partial
+                                    q}\frac{\partial J}{\partial p} -
+                                    \varepsilon \frac{\partial
+                                    H}{\partial p}\frac{\partial
+                                    J}{\partial q} + O(\varepsilon^2)\\
+                                    &amp;= H(q,p) + \varepsilon \{H,J\}
+                                    + O(\varepsilon^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、この微小正準変換において、ハミルトニアンの変化分は高次の項を無視すると、</p>
+                                    <p><span class="math display">\[
+                                    \delta H = H(Q,P) - H(q,p) =
+                                    \varepsilon \{H,J\}
+                                    \]</span></p>
+                                    <p>となる。この差がゼロであるならば</p>
+                                    <p><span class="math display">\[
+                                    \{H,J\} = 0
+                                    \]</span></p>
+                                    <p>ハミルトニアンとのポアソン括弧は時間微分を意味するのであったから、</p>
+                                    <p><span class="math display">\[
+                                    \dot{J} = \{J, H\} = 0
+                                    \]</span></p>
+                                    <p>すなわち、母関数<span
+                                    class="math inline">\(J\)</span>が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　<strong>ネーターの定理(Noether’s
+                                    theorem)</strong>　と呼ぶ。</p>
+                                    <p>以後、母関数J$に様々なものを入れてみよう。</p>
+                                    <p>まず、<span
+                                    class="math inline">\(J\)</span>としてハミルトニアン<span
+                                    class="math inline">\(H\)</span>を入れてみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= q + \varepsilon
+                                    \frac{\partial H}{\partial p} = q +
+                                    \varepsilon \dot{q} \\
+                                    P &amp;= p - \varepsilon
+                                    \frac{\partial H}{\partial q} = p +
+                                    \varepsilon \dot{p} \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これと、時刻<span
+                                    class="math inline">\(t+\varepsilon\)</span>における正準変数を比較しよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    q(t+\varepsilon) &amp;= q +
+                                    \varepsilon \dot{q} +
+                                    O(\varepsilon^2)\\
+                                    p(t+\varepsilon) &amp;= p +
+                                    \varepsilon \dot{p} +
+                                    O(\varepsilon^2)\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、ハミルトニアンを母関数とする微小正準変換は、時間並進操作、つまり時間発展を表している。</p>
+                                    <p>ハミルトニアンは、当然ハミルトニアン自身と可換である。</p>
+                                    <p><span class="math display">\[
+                                    \{H, H\} = 0
+                                    \]</span></p>
+                                    <p>したがって、ハミルトニアンは時間の並進操作<span
+                                    class="math inline">\(t \rightarrow
+                                    t +
+                                    \varepsilon\)</span>に対して保存量となる。これは、正準方程式が、時間を連続パラメータとして、ハミルトニアンを母関数とする正準変換を表していることを意味する。</p>
+                                    <p>次に、空間並進操作を考えよう。相対距離に依存する相互作用をする二粒子系を考える。</p>
+                                    <p><span class="math display">\[
+                                    H = \frac{1}{2m}(p_1^2 + p_2^2) +
+                                    U(r)
+                                    \]</span></p>
+                                    <p>ただし<span
+                                    class="math inline">\(r = |q^1 -
+                                    q^2|\)</span>とする。</p>
+                                    <p>ここで、母関数として二粒子の運動量の和を考える。</p>
+                                    <p><span class="math display">\[
+                                    J = p_1 + p_2
+                                    \]</span></p>
+                                    <p>この母関数による微小正準変換は以下のようになる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q^1 &amp;= q^1 + \varepsilon \\
+                                    P_1 &amp;= p_1\\
+                                    Q^2 &amp;= q^2 + \varepsilon \\
+                                    P_2 &amp;= p_2\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>要するに、座標を正の方向に<span
+                                    class="math inline">\(\varepsilon\)</span>だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。したがって、この変換を生み出す母関数<span
+                                    class="math inline">\(J =
+                                    p^1+p^2\)</span>、すなわち重心の運動量は保存量となる。</p>
+                                    <p>TODO: <span
+                                    class="math inline">\(L_z = x p_y -
+                                    y
+                                    p_x\)</span>に対する正準変換について紹介する。</p>
+                                    <p>回転に対しても、全く同様に理解することができる。系に回転対称性がある場合、その回転角に共役な角運動量が保存量となる。</p>
+                                    <h1 id="まとめ">まとめ</h1>
+                                    <p>TODO: 書く</p>
                     </article>
     </body>
 
