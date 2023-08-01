@@ -257,7 +257,7 @@ $$
 $$
 \begin{aligned}
 dx &= \left(\frac{\partial x}{\partial r}\right)_P dr +\left(\frac{\partial x}{\partial \theta}\right)_P dr  \\
-dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\partial \theta}\right)_P dr  
+dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\partial \theta}\right)_P dr
 \end{aligned}
 $$
 

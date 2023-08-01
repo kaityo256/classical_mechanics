@@ -1,5 +1,11 @@
 def escape_underscore(str)
-  str.gsub("_", "@<underscore>")
+  str.gsub!("_", "@<underscore>")
+  str.gsub!("-", "@<minus>")
+  str.gsub!("=", "@<equal>")
+  str.gsub!("\\\\", "@<mynewline>")
+  str.gsub!('\{', '@<leftbracket>')
+  str.gsub!('\}', '@<rightbracket>')
+  str
 end
 
 def escape_inline_math(str)

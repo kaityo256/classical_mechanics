@@ -527,9 +527,9 @@ $$
 
 $$
 \begin{aligned}
-B_x &= \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\
-B_y &= \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\
-B_z &= \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \\
+B_x &= \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\\
+B_y &= \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\\
+B_z &= \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}
 \end{aligned}
 $$
 
@@ -589,7 +589,7 @@ $$
 \begin{aligned}
 \frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
 &= q \left(
-    \dot{y} \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}  \right)  
+    \dot{y} \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}  \right)
     - \dot{z} \left(\frac{\partial A_z}{\partial x} - \frac{\partial A_x}{\partial z}  \right)
     \right)\\
     &= q (\dot{y} B_z - \dot{z} B_y)

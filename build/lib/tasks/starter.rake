@@ -42,7 +42,6 @@ end
 ## https://booth.pm/ja/items/708196
 ##
 namespace :pdf do
-
   desc "+ add nombre (rake pdf:nombre [file=*.pdf] [out=*.pdf])"
   task :nombre do
     infile  = ENV['file']; infile  = nil if infile  && infile.empty?

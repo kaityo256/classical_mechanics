@@ -135,8 +135,7 @@ $$
 \partial_p Q & \partial_p P 
 \end{vmatrix} \\
 &= \frac{\partial Q}{\partial q}
-\frac{\partial P}{\partial p}
--
+\frac{\partial P}{\partial p} -
 \frac{\partial Q}{\partial p}
 \frac{\partial P}{\partial q}\\
 &=1
