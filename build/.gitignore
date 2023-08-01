@@ -1,3 +1,5 @@
 *.re
+*.post
+*.pre
 images
 classical_mechanics.pdf
