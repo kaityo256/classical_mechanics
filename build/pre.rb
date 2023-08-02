@@ -1,3 +1,13 @@
+def unescape_symbols(str)
+  str.gsub!('@<underscore>','_')
+  str.gsub!('@<equal>','=')
+  str.gsub!('@<minus>','-')
+  str.gsub!('@<mynewline>','\\\\\\\\')
+  str.gsub!('@<leftbracket>','\{')
+  str.gsub!('@<rightbracket>','\}')
+  strf
+end
+
 def escape_underscore(str)
   str.gsub!("_", "@<underscore>")
   str.gsub!("-", "@<minus>")

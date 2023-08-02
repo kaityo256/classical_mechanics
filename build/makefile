@@ -16,9 +16,10 @@ imgcopy:
                 done
 
 %.re: ../%/README.md
-	ruby pre.rb $^ > $*.pre
-	md2review $*.pre > $*.post
-	ruby post.rb $*.post > $*.re
+	ruby convert.rb $< > $@
+	#ruby pre.rb $^ > $*.pre
+	#md2review $*.pre > $*.post
+	#ruby post.rb $*.post > $*.re
 
 $(TARGET): config.yml $(RE)
 	docker run --rm -v `pwd`/:/work kauplan/review2.5 /bin/bash -c "cd /work; rake pdf"
