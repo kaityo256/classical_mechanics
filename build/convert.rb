@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'redcarpet'
 require 'redcarpet/render/review'
 
-def unescape(str)
+def unescape_symbols(str)
   str.gsub!('@<underscore>', '_')
   str.gsub!('@<equal>', '=')
   str.gsub!('@<minus>', '-')
@@ -12,7 +14,7 @@ def unescape(str)
   str
 end
 
-def escape_underscore(str)
+def escape_symbols(str)
   str.gsub!('_', '@<underscore>')
   str.gsub!('-', '@<minus>')
   str.gsub!('=', '@<equal>')
@@ -25,8 +27,8 @@ end
 
 def escape_inline_math(str)
   while str =~ /\$(.*?)\$/
-    math = escape_underscore(Regexp.last_match(1))
-    str = Regexp.last_match.pre_match + '@<m>|' + math + '|' + Regexp.last_match.post_match
+    math = escape_symbols(Regexp.last_match(1))
+    str = "#{Regexp.last_match.pre_match}@<m>|#{math}|#{Regexp.last_match.post_match}"
   end
   str
 end
@@ -40,13 +42,13 @@ def replace_review_command(line)
   "//#{key}\{"
 end
 
-def in_math(f, processed_lines)
-  while (line = f.gets)
+def in_math(file, processed_lines)
+  while (line = file.gets)
     if line =~ /\$\$/
       processed_lines.append '//}'
       return
     else
-      processed_lines.append escape_underscore(line)
+      processed_lines.append escape_symbols(line)
     end
   end
 end
@@ -71,5 +73,5 @@ mk = Redcarpet::Markdown.new(render)
 filename = ARGV[0]
 processed_text = pre_process(filename)
 review_text = mk.render(processed_text)
-review_text = unescape(review_text)
+review_text = unescape_symbols(review_text)
 puts review_text
