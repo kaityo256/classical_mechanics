@@ -143,11 +143,11 @@
                                     <p>量子力学を作るために、次に表現すべきは確率的な振る舞いである。観測事実から、量子力学に従う系は観測結果が確率的に振る舞うことがわかっている。そこで、先程定義した波束<span
                                     class="math inline">\(\psi(x)\)</span>について、その絶対値の二乗が、その位置に粒子が観測される確率に比例するものであると解釈しよう。</p>
                                     <p><span class="math display">\[
-                                    p(x) \propto |\psi(x)^2| = \psi(x)^*
-                                    \psi(x)
+                                    p(x) \propto |\psi(x)^2| =
+                                    \psi(x)^\ast \psi(x)
                                     \]</span></p>
                                     <p>ただし<span
-                                    class="math inline">\(\psi(x)^*\)</span>は<span
+                                    class="math inline">\(\psi(x)^\ast\)</span>は<span
                                     class="math inline">\(\psi(x)\)</span>の複素共役を表す。このように、絶対値の自乗が、そのパラメータが観測される確率を表すものを
                                     <strong>波動関数 (wave
                                     function)</strong>
@@ -165,7 +165,7 @@
                                     <p>これを規格化と呼ぶ。以後、波動関数は規格化されていると約束する。これにより、位置<span
                                     class="math inline">\(x\)</span>に粒子が観測される確率は</p>
                                     <p><span class="math display">\[
-                                    p(x) = |\psi(x)^2| = \psi(x)^*
+                                    p(x) = |\psi(x)^2| = \psi(x)^\ast
                                     \psi(x)
                                     \]</span></p>
                                     <p>と波動関数の絶対値の二乗と等式で結ばれる。</p>
@@ -175,8 +175,8 @@
                                     class="math inline">\(p(x,t)\)</span>は、時間依存する波動関数<span
                                     class="math inline">\(\psi(x,t)\)</span>を用いて</p>
                                     <p><span class="math display">\[
-                                    p(x,t) = |\psi(x,t)^2| = \psi(x,t)^*
-                                    \psi(x,t)
+                                    p(x,t) = |\psi(x,t)^2| =
+                                    \psi(x,t)^\ast \psi(x,t)
                                     \]</span></p>
                                     <p>で表される。</p>
                                     <h1
@@ -195,7 +195,7 @@
                                     class="math inline">\(p(x,t) =
                                     |\psi(x,t)^2|\)</span>であったから、</p>
                                     <p><span class="math display">\[
-                                    \bar{E}(t) = \int \psi^*(x,t) E
+                                    \bar{E}(t) = \int \psi^\ast(x,t) E
                                     \psi(x,t)  dx
                                     \]</span></p>
                                     <p>後のために、<span
@@ -250,16 +250,16 @@
                                     <p>エネルギーの期待値の式を、エネルギー演算子を使って書き直そう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \bar{E}(t) &amp;= \int \psi^*(x,t) E
-                                    \psi(x,t)  dx \\
-                                    &amp;= \int \psi^*(x,t) \hat{E}
+                                    \bar{E}(t) &amp;= \int
+                                    \psi^\ast(x,t) E \psi(x,t)  dx \\
+                                    &amp;= \int \psi^\ast(x,t) \hat{E}
                                     \psi(x,t)  dx
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで、関数の内積を以下のように定義する(以後、時間に関しては表記を省略する)。</p>
                                     <p><span class="math display">\[
-                                    (\phi, \psi) \equiv \int \phi^*(x)
-                                    \psi(x) dx
+                                    (\phi, \psi) \equiv \int
+                                    \phi^\ast(x) \psi(x) dx
                                     \]</span></p>
                                     <p>すると、先程のエネルギーの期待値は以下のように表現できる。</p>
                                     <p><span class="math display">\[
@@ -272,7 +272,7 @@
                                     \left|\psi\right&gt; &amp;\equiv
                                     \psi(x) \\
                                     \left&lt;\psi\right| &amp;\equiv
-                                    \psi(x)^* \\
+                                    \psi(x)^\ast \\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは、括弧(bracket)<span
