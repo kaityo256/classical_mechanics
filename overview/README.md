@@ -178,7 +178,7 @@ $$
 
 $$
 \begin{aligned}
-\{p, q\}&=1 \\
+\{q, p\}&=1 \\
 \{p, p\}&=0 \\
 \{q, q\}&=0
 \end{aligned}
