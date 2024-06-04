@@ -325,20 +325,81 @@
                                     がわかっていればいれば良い」ということを意味する。</p>
                                     <p>このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。</p>
                                     <h2
-                                    id="関数空間とベクトル">関数空間とベクトル</h2>
-                                    <p>高校まではベクトルを「複数個の値の組」として捉えていた。しかし、大学ではより一般的な扱いをする。すなわちベクトルとは、なにかの集合の要素であり、その線形結合がやはり同じ集合に所属するものを言う。3次元ベクトルはこの定義を満たしているが、例えば変数<span
-                                    class="math inline">\(x\)</span>の任意の関数もベクトルの定義を満たす。つまり、関数全体の集合を<span
-                                    class="math inline">\(\mathcal{V}\)</span>として、関数<span
+                                    id="ベクトル空間の定義">ベクトル空間の定義</h2>
+                                    <p>高校まではベクトルを「複数個の値の組」として捉えていた。しかし、大学ではより一般的に様々なものをベクトルとみなし、すべてベクトル空間の元として扱う。まず、ベクトルとはどういうものであったか確認みよう。高校では、ベクトルは向きと大きさを持ったものであると習う。いま、2つのベクトル<span
+                                    class="math inline">\(\mathbf{u},
+                                    \mathbf{v}\)</span>があったとして、その和<span
+                                    class="math inline">\(\mathbf{u}+\mathbf{v}\)</span>もベクトルである。また、それぞれの定数倍、<span
+                                    class="math inline">\(a \mathbf{u},
+                                    b
+                                    \mathbf{v}\)</span>もベクトルだ。当然、その和である<span
+                                    class="math inline">\(a \mathbf{u} +
+                                    b
+                                    \mathbf{v}\)</span>もベクトルとなる。このように、ベクトルをそれぞれ定数倍して加えることを線形結合と呼ぶ。さて、ベクトルと同様に線形結合、すなわち「定数倍して足す」ことができるものは他にもある。例えば行列もそうだし、関数や微分演算子も線形結合ができる。これらを統一的に扱えたら便利な気がするであろう。そこで逆に「線形結合できるもの」をベクトルと呼ぶことにしよう。</p>
+                                    <p>この「線形結合できる」という性質をきちんと定義しよう。線形結合とは「定数倍して和をとる」ことであるから、まず定数倍するための適当なスカラー<span
+                                    class="math inline">\(a,
+                                    b\)</span>を用意する。これは実数や複素数である。また、定数倍したり和をとったりするための要素を含む集合<span
+                                    class="math inline">\(\mathbb{V}\)</span>を考えよう。この集合の任意の元<span
+                                    class="math inline">\(\mathbf{u},
+                                    \mathbf{v}, \mathbf{w} \in
+                                    \mathbb{V}\)</span>が、以下の8つの性質を満たすとき、集合<span
+                                    class="math inline">\(\mathbb{V}\)</span>をベクトル空間、その元をベクトルと呼ぶ。</p>
+                                    <ol type="1">
+                                    <li>ベクトルの和が結合律を満たす
+                                    <span
+                                    class="math inline">\(\mathbf{u} +
+                                    (\mathbf{v} + \mathbf{w}) =
+                                    (\mathbf{u} + \mathbf{v}) +
+                                    \mathbf{w}\)</span></li>
+                                    <li>ベクトルの和が可換である <span
+                                    class="math inline">\(\mathbf{u} +
+                                    \mathbf{v} = \mathbf{v} +
+                                    \mathbf{u}\)</span></li>
+                                    <li>零ベクトル(加法の単位元)が存在する
+                                    <span
+                                    class="math inline">\(\mathbf{v} +
+                                    \mathbf{0} =
+                                    \mathbf{v}\)</span></li>
+                                    <li>ベクトルの加法に逆元が存在する(任意のベクトルに、和をとると零ベクトルにできるベクトルが存在する)
+                                    <span
+                                    class="math inline">\(\mathbf{v} +
+                                    (- \mathbf{v}) = 0\)</span></li>
+                                    <li>スカラーの乗法がベクトルに対して分配律を満たす
+                                    <span class="math inline">\(a
+                                    (\mathbf{u} + \mathbf{v}) = a
+                                    \mathbf{u} + a
+                                    \mathbf{v}\)</span></li>
+                                    <li>スカラーの加法と乗法が分配率を満たす
+                                    <span class="math inline">\((a+b)
+                                    \mathbf{u} = a \mathbf{u} + b
+                                    \mathbf{u}\)</span></li>
+                                    <li>スカラーとベクトルの乗法とスカラー同士の乗法が結合律を満たす
+                                    <span
+                                    class="math inline">\(a(b\mathbf{u})
+                                    = (ab) \mathbf{u}\)</span></li>
+                                    <li>スカラー乗法に単位元が存在する
+                                    <span class="math inline">\(1
+                                    \mathbf{u} =
+                                    \mathbf{u}\)</span></li>
+                                    </ol>
+                                    <p>以上の8つをベクトル空間の公理(axiom)と呼ぶ。</p>
+                                    <p>3次元ベクトルは明らかにこの定義を満たしているが、例えば任意の関数<span
+                                    class="math inline">\(f(x)\)</span>もベクトルの定義を満たす。例えば<span
+                                    class="math inline">\(\mathbb{V}\)</span>として位置変数関数全体の集合をとると、適当な関数<span
                                     class="math inline">\(f(x)\)</span>と<span
-                                    class="math inline">\(g(x)\)</span>が<span
-                                    class="math inline">\(\mathcal{V}\)</span>の要素である、つまり<span
-                                    class="math inline">\(f(x),g(x) \in
-                                    \mathcal{V}\)</span>である時、その線形結合<span
-                                    class="math inline">\(a f(x)+ b
-                                    (g)\)</span>もやはり<span
-                                    class="math inline">\(x\)</span>の関数であるから、関数の集合はベクトルである。この時、関数の集合<span
-                                    class="math inline">\(\mathcal{V}\)</span>をベクトル空間、その要素をベクトルと呼ぶ。</p>
-                                    <p>関数をベクトルとみなす時、内積も定義することができる。いま、関数<span
+                                    class="math inline">\(g(x)\)</span>は<span
+                                    class="math inline">\(\mathbb{V}\)</span>の要素となる。この時、<span
+                                    class="math inline">\(f(x)\)</span>と<span
+                                    class="math inline">\(g(x)\)</span>の線形結合により新たな関数</p>
+                                    <p><span class="math display">\[
+                                    h(x) = af(x) + bg(x)
+                                    \]</span></p>
+                                    <p>を作ると、明らかに<span
+                                    class="math inline">\(h(x)\)</span>も<span
+                                    class="math inline">\(\mathbb{V}\)</span>の元である。また、関数全体の集合と実数や複素数係数との組み合わせがベクトル空間の公理を満たすことはすぐにわかるであろう。</p>
+                                    <h2
+                                    id="関数空間とベクトル">関数空間とベクトル</h2>
+                                    <p>さて、ベクトル空間は、単に要素の線形結合ができる世界のことである。しかし、物理で現れるベクトル空間には、自然な内積が定義できることが多い。内積が定義されたベクトル空間を内積空間、もしくは計量ベクトル空間と呼ぶ。内積とは、ベクトル2つを、1つのスカラーに結びつける写像のことである。既に見たように、縦ベクトルや横ベクトルには自然な内積が定義できるが、関数をベクトルとみなすと、関数同士にも内積も定義することができる。いま、関数<span
                                     class="math inline">\(f(x)\)</span>と<span
                                     class="math inline">\(g(x)\)</span>について、その内積を</p>
                                     <p><span class="math display">\[
@@ -347,7 +408,7 @@
                                     \]</span></p>
                                     <p>により定義する。ただし<span
                                     class="math inline">\(f^*(x)\)</span>は<span
-                                    class="math inline">\(f(x)\)</span>の複素共役である。これにより、ベクトル2つからスカラーを結びつけることができる。こうして、関数をベクトルとみなし、ある基底から別の基底での表現を得るのがフーリエ変換であった。</p>
+                                    class="math inline">\(f(x)\)</span>の複素共役である。これにより、ベクトル2つからスカラーを結びつけることができる。このように関数をベクトルとみなし、ある基底から別の基底での表現を得るのがフーリエ変換であった。</p>
                                     <p>後で見るように、<span
                                     class="math inline">\(\partial_x\)</span>や、<span
                                     class="math inline">\(dx\)</span>といった演算子もベクトルとみなすことができ、さらにその間に内積を考えることができる。</p>
@@ -377,12 +438,13 @@
                                     0 &amp; 0 &amp; 0
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>これが3行3列の行列の1行目1列目の要素を表現する基底になっていることがわかるであろう。全く同様に<span
+                                    <p>3行3列の行列の1行目1列目の要素が1、それ以外が0となるような行列となっていることがわかる。全く同様に<span
                                     class="math inline">\(\mathbf{e}^j
                                     \otimes
                                     \mathbf{e}_i\)</span>を定義することができ、これが<span
                                     class="math inline">\(i\)</span>行目の<span
-                                    class="math inline">\(j\)</span>列目の要素を表現する。これらにより3行3列の行列を展開できる。</p>
+                                    class="math inline">\(j\)</span>列目の要素を表現する。このようにただ一つの要素が1、それ以外が0となるような行列を行列単位(matrix
+                                    unit)と呼ぶ。ベクトルが標準基底ベクトルで自然に展開できたように、行列も行列単位で自然に展開できることがわかるであろう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     A &amp;=
@@ -392,19 +454,21 @@
                                     A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
                                     = \sum_{i=1}^{3} \sum_{j=1}^{3}
-                                    A^i_j \mathbf{e}^i \otimes
+                                    A^j_i \mathbf{e}^i \otimes
                                     \mathbf{e}_j
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>さて、多くの場合において、和の範囲は自明である。例えば<span
-                                    class="math inline">\(i\)</span>が軸に関するものであれば1から3までであろうし、<span
-                                    class="math inline">\(i\)</span>が粒子番号であれば<span
+                                    <p>なお、厳密に言うとここで導入した積はテンソル積ではなく、クロネッカー積である。クロネッカー積はテンソル積の特別な場合だが、本書では深く触れない。</p>
+                                    <p>さて、多くの場合において、和の範囲は自明である。例えば3次元空間において<span
+                                    class="math inline">\(i\)</span>が軸に関するものであれば、和の範囲は1から3までであろうし、<span
+                                    class="math inline">\(N\)</span>粒子系において<span
+                                    class="math inline">\(i\)</span>が粒子番号であれば、範囲は<span
                                     class="math inline">\(1\)</span>から<span
                                     class="math inline">\(N\)</span>まで走るであろう。その場合にいちいち和記号<span
-                                    class="math inline">\(\Sigma\)</span>を書くのは面倒である。そこで、同じ添字が２つ現れたら、その添字について和を取る、という約束をする。これを
+                                    class="math inline">\(\Sigma\)</span>を書くのは面倒である。そこで、同じ添字が2つ現れたら、その添字について和を取る、という約束をする。これを
                                     <strong>アインシュタイン規約(Einstein
                                     notation)</strong> と呼ぶ。</p>
-                                    <p>先程の式は、アインシュタイン規約を用いると以下のようにかける。</p>
+                                    <p>先程の行列の展開の式は、アインシュタイン規約を用いると以下のようにかける。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     A &amp;=
@@ -413,19 +477,45 @@
                                     A^1_2 &amp; A^2_2 &amp; A^3_2 \\
                                     A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
-                                    = A^i_j \mathbf{e}^i \otimes
+                                    = A^j_i \mathbf{e}^i \otimes
                                     \mathbf{e}_j
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ベクトルや行列を要素表現した時の添字の数を「足」と呼ぶ。ベクトルのテンソル積を考えることで足を増やすことができる。ベクトルは足が1本であり、行列は足が2本である。ベクトルのテンソル積により作られた世界は、元になったベクトルよりも広い世界になっている。例えば3次元縦ベクトルと横ベクトルのテンソル積は、3行3列の行列、すなわち9次元の空間になっている。このベクトルや行列をまとめて
                                     <strong>テンソル(Tensor)</strong>
                                     と呼ぶ。足の本数、つまり添字の数をテンソルの階数と呼ぶ。ベクトルは1階のテンソル、行列は2階のテンソルである。テンソル積により、いくらでも高階のテンソルを考えることができる。</p>
-                                    <p>テンソルは様々なところに現れる。例えば連続体の力学では応力テンソルが重要な役割を果たす。一方、テンソルは抽象的な概念であり、なかなかイメージすることが難しい。まず、テンソルを内積を通じて理解しておくと良い。</p>
+                                    <p>テンソルは様々なところに現れる。例えば連続体の力学では応力テンソルが重要な役割を果たす。一方、テンソルは抽象的な概念であり、なかなかイメージすることが難しい。まずは内積を通じてテンソルを理解しておくと良い。</p>
                                     <p>縦ベクトル<span
                                     class="math inline">\(\mathbf{a}\)</span>と、横ベクトル<span
-                                    class="math inline">\(\mathbf{b}\)</span>の内積を要素表現すると、</p>
+                                    class="math inline">\(\mathbf{b}\)</span>の内積を考える。簡単のため、3次元ベクトルとしよう。それぞれ要素と基底を明示すると、</p>
                                     <p><span class="math display">\[
-                                    (\mathbf{a}, \mathbf{b}) = b^i a_i
+                                    \begin{aligned}
+                                    \mathbf{a} &amp;=
+                                    \begin{pmatrix}
+                                    a^1 \\
+                                    a^2\\
+                                    a^3
+                                    \end{pmatrix}\\
+                                    &amp;= a^i \mathbf{e}_i
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \mathbf{b} &amp;=
+                                    \begin{pmatrix}
+                                    b_1 &amp; b_2 &amp; b_3
+                                    \end{pmatrix}\\
+                                    &amp;= b_j \mathbf{e}^j
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これらの内積を取ると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\mathbf{a}, \mathbf{b}) &amp;= a^i
+                                    b_j (\mathbf{e}_i, \mathbf{e}^j)\\
+                                    &amp;= a^i b_j \delta_i^j \\
+                                    &amp;= a^i b_i
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>となる。ここでアインシュタイン規約を使っていることに注意。上下の足がつぶれて足のない数、すなわちスカラーになっている。</p>
                                     <p>同様に、行列<span
