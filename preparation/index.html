@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。特に、数学の主要三分野である解析、代数、幾何の全てが現れるのが解析力学の難しいところであり、また面白いところでもある。以下では、特にベクトル空間の導入と、微分とベクトルがからむベクトル解析についてまとめておく。</p>
+                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。特に、数学の主要三分野である解析、代数、幾何の全てが現れるのが解析力学の難しいところであり、また面白いところでもある。以下では、特にベクトル空間及び内積空間の導入と、微分とベクトルがからむベクトル解析についてまとめておく。</p>
                                     <h1
-                                    id="ベクトルとスカラー">ベクトルとスカラー</h1>
+                                    id="ベクトル空間">ベクトル空間</h1>
                                     <h2
                                     id="ベクトルの表記">ベクトルの表記</h2>
                                     <p>我々は3次元空間に住んでいるため、力学でも3次元空間中の運動を扱うことが多い。3次元空間中では、質点の位置を指定したり、速度や力を指定したりするのに3つの数字の組が必要になる。例えば、ある質点の座標が<span
@@ -78,18 +78,18 @@
                                     と呼ぶ。特に、<span
                                     class="math inline">\(\mathbf{r}\)</span>
                                     は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本講義ノートでは<span
-                                    class="math inline">\(\mathbf{r}\)</span>のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。</p>
-                                    <p>一方、ベクトルではない普通の数を
-                                    <strong>スカラー(scalar)</strong>
-                                    と呼ぶ。スカラーの定義は追って与える。また、板書では縦ベクトルは縦に書くが、講義ノートでは紙面の都合から横に書きたいことがある。その場合は<span
+                                    class="math inline">\(\mathbf{r}\)</span>のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。ベクトルは大きさと向きを持つ量である。板書では縦ベクトルは縦に書くが、講義ノートでは紙面の都合から横に書きたいことがある。その場合は<span
                                     class="math inline">\(\mathbf{r} =
                                     {}^t(r_x, r_y,
                                     r_z)\)</span>のように、ベクトルの最初に<span
                                     class="math inline">\(t\)</span>をつけて表す。この<span
                                     class="math inline">\(t\)</span>は転置を表し、横ベクトルを転置することで、縦ベクトルであることを表現している。</p>
+                                    <p>一方、ベクトルではない普通の数を
+                                    <strong>スカラー(scalar)</strong>
+                                    と呼ぶ。ベクトルと違い、スカラーは向きを持たず大きさのみを持つ。</p>
                                     <h2
                                     id="基底ベクトルと内積">基底ベクトルと内積</h2>
-                                    <p>力学におけるベクトルで重要な点は、座標変換によるベクトルの変換である。先程のベクトル表記では、数を3つ縦に並べた。これは、以下のように書き直すことができる。</p>
+                                    <p>力学におけるベクトルで重要なのは、座標変換によるベクトルの変換である。先程のベクトル表記では、数を3つ縦に並べた。これは、以下のように書き直すことができる。</p>
                                     <p><span class="math display">\[
                                     \mathbf{r} =
                                     r_x
@@ -113,14 +113,16 @@
                                     1
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>3つの基本的なベクトルの和にわけることができた。この基本的なベクトルを<span
+                                    <p>3つの基本的なベクトルの和にわけることができた。これらのベクトルを<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と書こう。すると、</p>
                                     <p><span class="math display">\[
                                     \mathbf{r} = r_x \mathbf{e_x} + r_y
                                     \mathbf{e_y} + r_z \mathbf{e_z}
                                     \]</span></p>
                                     <p>と表記できる。この時、<span
-                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を基底ベクトル、この式を基底ベクトルによる展開と呼ぶ。特に、</p>
+                                    class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を基底ベクトル、あるいは単に
+                                    <strong>基底(basis)</strong>
+                                    と呼び、この式を基底ベクトルによる展開と呼ぶ。特に、</p>
                                     <p><span class="math display">\[
                                     \mathbf{e}_x =
                                     \begin{pmatrix}
@@ -141,7 +143,7 @@
                                     1
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>の形をとる基底を標準基底と呼ぶ。</p>
+                                    <p>のように、成分の一つだけが1、残りが0となるような基底を標準基底と呼ぶ。</p>
                                     <p><span class="math display">\[
                                     \mathbf{r} =
                                     \begin{pmatrix}
@@ -160,6 +162,7 @@
                                     \]</span></p>
                                     <p>と書くべきところを、基底ベクトルを<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と暗黙に仮定した上で括弧で略記した記法である。</p>
+                                    <p>ベクトルの要素表示は、基底を定めて初めて決まるものである。物理においては、物理法則が座標系に依存しないという要請をする。したがって、まずベクトルがあり、座標系を決めると要素が決まる、という順序となる。</p>
                                     <p>さて、今は<span
                                     class="math inline">\(\mathbf{e}_x\)</span>などが簡単な形をしているため、<span
                                     class="math inline">\(\mathbf{r}\)</span>を<span
@@ -224,11 +227,13 @@
                                     \delta^i_j
                                     \]</span></p>
                                     <p>内積がゼロであることを
-                                    <strong>直交</strong>
+                                    <strong>直交(orthogonal)</strong>
                                     していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を
-                                    <strong>直交基底</strong>
+                                    <strong>直交基底(orthogonal
+                                    basis)</strong>
                                     と呼ぶ。さらに相方との内積が1に規格化されている基底を
-                                    <strong>正規直交基底</strong>
+                                    <strong>正規直交基底(orthonormal
+                                    basis)</strong>
                                     と呼ぶ。基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。</p>
                                     <p>なお、添え字の上下はきちんと区別すべきものであるが、表記が煩雑になる場合がある。例えば座標の成分は<span
                                     class="math inline">\(q^i\)</span>など上付きにすべきだが、そうすると座標の二乗を<span
@@ -237,7 +242,7 @@
                                     <strong>双対空間(dual
                                     space)</strong>
                                     と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。</p>
-                                    <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、２つの空間を区別する必要がない場合は２つのベクトル<span
+                                    <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、2つの空間を区別する必要がない場合は2つのベクトル<span
                                     class="math inline">\(\mathbf{a} =
                                     {}^t(a_1, a_2, a_3)\)</span>と<span
                                     class="math inline">\(\mathbf{b} =
@@ -277,7 +282,7 @@
                                     \mathbf{r} = r_1 \mathbf{e_1} + r_2
                                     \mathbf{e_2} + r_3 \mathbf{e_3}
                                     \]</span></p>
-                                    <p>なんとなく展開係数が先で、内積が後のように考えがちだが、物理においては特定の座標を特別視しないため、座標系に依存しないベクトルがまず存在し、必要に応じて座標系を定義し、内積によってその展開係数を調べる、というイメージを持った方がよい。</p>
+                                    <p>繰り返しとなるが、物理においては特定の座標を特別視しないため、まず座標系に依存しないベクトルが存在し、必要に応じて座標系を定義すると、内積によってその展開係数が決まる、というイメージを持つとよい。</p>
                                     <p>さて、ある基底<span
                                     class="math inline">\(\mathbf{e}_1,
                                     \mathbf{e}_2,
@@ -410,23 +415,6 @@
                                     <p>を作ることができる。明らかに<span
                                     class="math inline">\(h(x)\)</span>も<span
                                     class="math inline">\(\mathbb{V}\)</span>の元である。また、関数全体の集合と実数や複素数係数との組み合わせがベクトル空間の公理を満たすことはすぐにわかるであろう。</p>
-                                    <h2 id="内積空間">内積空間</h2>
-                                    <p>さて、ベクトル空間は、単に要素の線形結合ができる世界のことである。しかし、物理で現れるベクトル空間には、自然な内積が定義できることが多い。内積が定義されたベクトル空間を
-                                    <strong>内積空間(inner product
-                                    space)</strong>
-                                    と呼ぶ。内積とは、ベクトル2つを、1つのスカラーに結びつける写像のことである。既に見たように、縦ベクトルや横ベクトルには自然な内積が定義できるが、関数をベクトルとみなすと、関数同士にも内積も定義することができる。いま、関数<span
-                                    class="math inline">\(f(x)\)</span>と<span
-                                    class="math inline">\(g(x)\)</span>について、その内積を</p>
-                                    <p><span class="math display">\[
-                                    (f,g) =
-                                    \int_{-\infty}^{\infty}f^*(x)g(x)dx
-                                    \]</span></p>
-                                    <p>により定義する。ただし<span
-                                    class="math inline">\(f^*(x)\)</span>は<span
-                                    class="math inline">\(f(x)\)</span>の複素共役である。これにより、ベクトル2つからスカラーを結びつけることができる。このように関数をベクトルとみなし、ある基底から別の基底での表現を得るのがフーリエ変換であった。</p>
-                                    <p>後で見るように、<span
-                                    class="math inline">\(\partial_x\)</span>や、<span
-                                    class="math inline">\(dx\)</span>といった演算子もベクトルとみなすことができ、さらにその間に内積を考えることができる。</p>
                                     <h2 id="テンソル積">テンソル積</h2>
                                     <p>ベクトルには標準基底を考えることができた。では、行列に同様な基底はあるのだろうか？また、その基底はどのように定義されるのだろうか？その疑問に答えるのがテンソル積である。</p>
                                     <p>基底<span
@@ -454,14 +442,14 @@
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>3行3列の行列の1行目1列目の要素が1、それ以外が0となるような行列となっていることがわかる。全く同様に<span
-                                    class="math inline">\(\mathbf{e}^j
+                                    class="math inline">\(\mathbf{e}^i
                                     \otimes
-                                    \mathbf{e}_i\)</span>を定義することができ、これが<span
-                                    class="math inline">\(i\)</span>行目の<span
-                                    class="math inline">\(j\)</span>列目の要素を表現する。このようにただ一つの要素が1、それ以外が0となるような行列を
+                                    \mathbf{e}_j\)</span>を定義することができ、これが<span
+                                    class="math inline">\(j\)</span>行目の<span
+                                    class="math inline">\(i\)</span>列目の要素を表現する。このようにただ一つの要素が1、それ以外が0となるような行列を
                                     <strong>行列単位(matrix
                                     unit)</strong>
-                                    と呼ぶ。ベクトルが標準基底ベクトルで自然に展開できたように、行列も行列単位によって自然に展開することができる。すなわち行列単位が行列の標準基底の役割を果たしていることがわかる。</p>
+                                    と呼ぶ。ベクトルが標準基底ベクトルで自然に展開できたように、行列も行列単位によって自然に展開することができる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     A &amp;=
@@ -475,6 +463,7 @@
                                     \mathbf{e}_j
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>すなわち行列単位が行列の標準基底の役割を果たしていることがわかる。</p>
                                     <p>今、3次元縦ベクトルと3次元横ベクトルから、3行3列の行列を作ることができた。このように、2つのベクトル空間から新たなベクトル空間を作る操作を
                                     <strong>テンソル積(tensor
                                     product)</strong>
@@ -502,7 +491,7 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ベクトルや行列を要素表現した時の添字の数を「足」と呼ぶ。ベクトルのテンソル積を考えることで足を増やすことができる。ベクトルは足が1本であり、行列は足が2本である。ベクトルのテンソル積により作られた世界は、元になったベクトルよりも広い世界になっている。例えば3次元縦ベクトルと横ベクトルのテンソル積は、3行3列の行列、すなわち9次元の空間になっている。このベクトルや行列をまとめて
-                                    <strong>テンソル(Tensor)</strong>
+                                    <strong>テンソル(tensor)</strong>
                                     と呼ぶ。足の本数、つまり添字の数をテンソルの階数と呼ぶ。ベクトルは1階のテンソル、行列は2階のテンソルである。テンソル積により、いくらでも高階のテンソルを作ることができる。</p>
                                     <p>テンソルは様々なところに現れる。例えば連続体の力学では応力テンソルが重要な役割を果たす。一方、テンソルは抽象的な概念であり、なかなかイメージすることが難しい。まずは内積を通じてテンソルを理解しておくと良い。</p>
                                     <p>横ベクトル<span
@@ -573,6 +562,141 @@
                                     \mathbf{e}_j
                                     \]</span></p>
                                     <p>こうして作られたテンソルは、行列のようには表現できないが、「横ベクトルと内積をとると横ベクトルとなり、さらに横ベクトルと内積をとるとスカラーになるもの」と理解できる。このように、テンソルがイメージできないうちは「上下の逆側の足を持つベクトルと内積をとると、その足が潰せるもの」と理解しておくと良い。</p>
+                                    <h2 id="内積空間">内積空間</h2>
+                                    <p>ベクトル空間とは、要素の線形結合ができる世界のことである。これにより、いわゆる「向きと大きさ」を持ったベクトルだけでなく、関数や微分演算子などもベクトルとみなすことができる。</p>
+                                    <p>さて、物理で現れるベクトル空間には、自然な内積が定義できることが多い。内積が定義されたベクトル空間を
+                                    <strong>内積空間(inner product
+                                    space)</strong>
+                                    と呼ぶ。内積とは、ベクトル2つを、1つのスカラーに結びつける写像のことである。既に見たように、縦ベクトルや横ベクトルには自然な内積が定義できるが、関数をベクトルとみなすと、関数同士にも内積も定義することができる。いま、関数<span
+                                    class="math inline">\(f(x)\)</span>と<span
+                                    class="math inline">\(g(x)\)</span>について、その内積を</p>
+                                    <p><span class="math display">\[
+                                    (f,g) =
+                                    \int_{-\infty}^{\infty}f^*(x)g(x)dx
+                                    \]</span></p>
+                                    <p>により定義する。ただし<span
+                                    class="math inline">\(f^*(x)\)</span>は<span
+                                    class="math inline">\(f(x)\)</span>の複素共役である。これにより、ベクトル2つからスカラーを結びつけることができる。このように関数をベクトルとみなし、ある基底から別の基底での表現を得るのがフーリエ変換である。</p>
+                                    <p>次に、微分演算子に関する内積を考えよう。変数<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(y\)</span>にのみ依存する2変数関数<span
+                                    class="math inline">\(f(x,y)\)</span>を考える。<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(y\)</span>が時間<span
+                                    class="math inline">\(t\)</span>に依存している時、すなわち<span
+                                    class="math inline">\(f(x(t),
+                                    y(t))\)</span>と書ける時、<span
+                                    class="math inline">\(f\)</span>の時間微分は</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{dt} = \frac{\partial
+                                    f}{\partial x} \frac{dx}{dt} +
+                                    \frac{\partial f}{\partial y}
+                                    \frac{dy}{dt}
+                                    \]</span></p>
+                                    <p>さて、<span
+                                    class="math inline">\(f(x,y)\)</span>は<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(y\)</span>にしか依存していないので、<span
+                                    class="math inline">\(x\)</span>や<span
+                                    class="math inline">\(y\)</span>が<span
+                                    class="math inline">\(t\)</span>ではなく<span
+                                    class="math inline">\(s\)</span>に依存していても式の形は全く変わらない。</p>
+                                    <p><span class="math display">\[
+                                    \frac{df}{ds} = \frac{\partial
+                                    f}{\partial x} \frac{dx}{ds} +
+                                    \frac{\partial f}{\partial y}
+                                    \frac{dy}{ds}
+                                    \]</span></p>
+                                    <p>そこで、<span
+                                    class="math inline">\(dt\)</span>や<span
+                                    class="math inline">\(ds\)</span>を形式的に消して、以下のように書いてみる。</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial x}
+                                    dx
+                                    + \frac{\partial f}{\partial y} dy
+                                    \]</span></p>
+                                    <p>このように書ける時、<span
+                                    class="math inline">\(f\)</span>は全微分可能であると言い、この表式を<span
+                                    class="math inline">\(f\)</span>の
+                                    <strong>全微分(total
+                                    derivative)</strong> と呼ぶ。</p>
+                                    <p>さて、この式の意味を考えよう。<span
+                                    class="math inline">\(f(x,y)\)</span>という関数を、点<span
+                                    class="math inline">\((x,y)\)</span>の周りでテイラー展開し、一次の項目だけ残す。</p>
+                                    <p><span class="math display">\[
+                                    f(x+\delta x, y+\delta y) - f(x,y)
+                                    \sim \frac{\partial f}{\partial x}
+                                    \delta x +
+                                    \frac{\partial f}{\partial y} \delta
+                                    y
+                                    \]</span></p>
+                                    <p>つまり、<span
+                                    class="math inline">\(\partial
+                                    f/\partial
+                                    x\)</span>という量は、<span
+                                    class="math inline">\(y\)</span>を変化させずに、<span
+                                    class="math inline">\(x\)</span>だけを変化させた場合の<span
+                                    class="math inline">\(f\)</span>の変化の割合であった。そこで、全微分の両辺を形式的に<span
+                                    class="math inline">\(dx\)</span>でわろう。この時、微分記号が偏微分に化ける。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial f}{\partial x} &amp;=
+                                    \frac{\partial f}{\partial x}
+                                    \underbrace{\frac{\partial
+                                    x}{\partial x}}_{=1}
+                                    + \frac{\partial f}{\partial y}
+                                    \underbrace{\frac{\partial
+                                    y}{\partial x}}_{=0} \\
+                                    &amp;= \frac{\partial f}{\partial x}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>この事実をもって、もう一度先の全微分の式を眺めてみる。</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial x}
+                                    dx
+                                    + \frac{\partial f}{\partial y} dy
+                                    \]</span></p>
+                                    <p>すると、これがまるでベクトルを基底で展開しているかのように見える。</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{f} = \frac{\partial
+                                    f}{\partial x} \mathbf{e}_x +
+                                    \frac{\partial f}{\partial y}
+                                    \mathbf{e}_y
+                                    \]</span></p>
+                                    <p>両辺、<span
+                                    class="math inline">\(\mathbf{e}_x\)</span>の相方である<span
+                                    class="math inline">\(\mathbf{e}^x\)</span>との内積を取ると、</p>
+                                    <p><span class="math display">\[
+                                    (\mathbf{e}^x, \mathbf{f}) =
+                                    \frac{\partial f}{\partial x}
+                                    \]</span></p>
+                                    <p>となる。以上から、<span
+                                    class="math inline">\(df\)</span>をベクトル、<span
+                                    class="math inline">\(dx\)</span>や<span
+                                    class="math inline">\(dy\)</span>を基底のように扱うことができることがわかる。さらに、<span
+                                    class="math inline">\(dx\)</span>をベクトルと見た時、その相方となるベクトルが<span
+                                    class="math inline">\(\partial_x\)</span>であることもわかる。すなわち、<span
+                                    class="math inline">\(dx, dy,
+                                    dz\)</span>と<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y,
+                                    \partial_z\)</span>の間には、自然な内積、</p>
+                                    <p><span class="math display">\[
+                                    \left&lt;d\alpha,
+                                    \frac{\partial}{\partial
+                                    \beta}\right&gt; = \frac{\partial
+                                    \alpha}{\partial \beta} =
+                                    \delta_{\alpha, \beta}
+                                    \]</span></p>
+                                    <p>が定義される。このように、<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>を縦ベクトル、<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>を横ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>が住む世界と<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>が住む世界は双対空間である。</p>
                                     <h1
                                     id="微分と偏微分">微分と偏微分</h1>
                                     <p>力学は微分方程式を解く学問であるから、当然微積分が出てくる。特に合成関数の微分や、ベクトルによる微分などが現れるので、ここで簡単に確認しておこう。</p>
@@ -680,8 +804,8 @@
                                     x}\right)_y
                                     \]</span></p>
                                     <p>のように括弧の外に書く場合がある。熱力学ではどの変数を固定しているかが重要であるが、解析力学では自明であることが多いので本書では省略する。</p>
-                                    <h1
-                                    id="ベクトル解析">ベクトル解析</h1>
+                                    <h2
+                                    id="ベクトル解析">ベクトル解析</h2>
                                     <p>次に、ベクトルが絡んだ微分について考えよう。多くの場合、力学では3次元空間を扱うため、座標や速度、力は3次元ベクトルとなる。また、ポテンシャルエネルギーはスカラー量であるが、位置の関数であるから引数としてベクトルを取る。これらを微分すると、スカラーとベクトルが入り交じることになる。以後、混乱しないように、表記の確認をしておこう。</p>
                                     <p>質点の位置が<span
                                     class="math inline">\(\mathbf{r} =
@@ -854,126 +978,6 @@
                                     <p><span class="math display">\[
                                     \nabla fg \neq f \nabla g.
                                     \]</span></p>
-                                    <h1
-                                    id="全微分と内積">全微分と内積</h1>
-                                    <p>変数<span
-                                    class="math inline">\(x\)</span>と<span
-                                    class="math inline">\(y\)</span>にのみ依存する2変数関数<span
-                                    class="math inline">\(f(x,y)\)</span>を考える。<span
-                                    class="math inline">\(x\)</span>と<span
-                                    class="math inline">\(y\)</span>が時間<span
-                                    class="math inline">\(t\)</span>に依存している時、すなわち<span
-                                    class="math inline">\(f(x(t),
-                                    y(t))\)</span>と書ける時、<span
-                                    class="math inline">\(f\)</span>の時間微分は</p>
-                                    <p><span class="math display">\[
-                                    \frac{df}{dt} = \frac{\partial
-                                    f}{\partial x} \frac{dx}{dt} +
-                                    \frac{\partial f}{\partial y}
-                                    \frac{dy}{dt}
-                                    \]</span></p>
-                                    <p>さて、<span
-                                    class="math inline">\(f(x,y)\)</span>は<span
-                                    class="math inline">\(x\)</span>と<span
-                                    class="math inline">\(y\)</span>にしか依存していないので、<span
-                                    class="math inline">\(x\)</span>や<span
-                                    class="math inline">\(y\)</span>が<span
-                                    class="math inline">\(t\)</span>ではなく<span
-                                    class="math inline">\(s\)</span>に依存していても式の形は全く変わらない。</p>
-                                    <p><span class="math display">\[
-                                    \frac{df}{ds} = \frac{\partial
-                                    f}{\partial x} \frac{dx}{ds} +
-                                    \frac{\partial f}{\partial y}
-                                    \frac{dy}{ds}
-                                    \]</span></p>
-                                    <p>そこで、<span
-                                    class="math inline">\(dt\)</span>や<span
-                                    class="math inline">\(ds\)</span>を形式的に消して、以下のように書いてみる。</p>
-                                    <p><span class="math display">\[
-                                    df = \frac{\partial f}{\partial x}
-                                    dx
-                                    + \frac{\partial f}{\partial y} dy
-                                    \]</span></p>
-                                    <p>このように書ける時<span
-                                    class="math inline">\(f\)</span>は全微分可能であると言い、この表式を<span
-                                    class="math inline">\(f\)</span>の<strong>全微分</strong>と呼ぶ。</p>
-                                    <p>さて、この式の意味を考えよう。<span
-                                    class="math inline">\(f(x,y)\)</span>という関数を、点<span
-                                    class="math inline">\((x,y)\)</span>の周りでテイラー展開し、一次の項目だけ残す。</p>
-                                    <p><span class="math display">\[
-                                    f(x+\delta x, y+\delta y) - f(x,y)
-                                    \sim \frac{\partial f}{\partial x}
-                                    \delta x +
-                                    \frac{\partial f}{\partial y} \delta
-                                    y
-                                    \]</span></p>
-                                    <p>つまり、<span
-                                    class="math inline">\(\partial
-                                    f/\partial
-                                    x\)</span>という量は、<span
-                                    class="math inline">\(y\)</span>を変化させずに、<span
-                                    class="math inline">\(x\)</span>だけを変化させた場合の<span
-                                    class="math inline">\(f\)</span>の変化の割合であった。そこで、全微分の両辺を形式的に<span
-                                    class="math inline">\(dx\)</span>でわろう。この時、微分記号が偏微分に化ける。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{\partial f}{\partial x} &amp;=
-                                    \frac{\partial f}{\partial x}
-                                    \underbrace{\frac{\partial
-                                    x}{\partial x}}_{=1}
-                                    + \frac{\partial f}{\partial y}
-                                    \underbrace{\frac{\partial
-                                    y}{\partial x}}_{=0} \\
-                                    &amp;= \frac{\partial f}{\partial x}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>この事実をもって、もう一度先の全微分の式を眺めてみる。</p>
-                                    <p><span class="math display">\[
-                                    df = \frac{\partial f}{\partial x}
-                                    dx
-                                    + \frac{\partial f}{\partial y} dy
-                                    \]</span></p>
-                                    <p>すると、これがまるでベクトルを基底で展開しているかのように見える。</p>
-                                    <p><span class="math display">\[
-                                    \mathbf{f} = \frac{\partial
-                                    f}{\partial x} \mathbf{e}_x +
-                                    \frac{\partial f}{\partial y}
-                                    \mathbf{e}_y
-                                    \]</span></p>
-                                    <p>両辺、<span
-                                    class="math inline">\(\mathbf{e}_x\)</span>の相方である<span
-                                    class="math inline">\(\mathbf{e}^x\)</span>との内積を取ると、</p>
-                                    <p><span class="math display">\[
-                                    (\mathbf{e}^x, \mathbf{f}) =
-                                    \frac{\partial f}{\partial x}
-                                    \]</span></p>
-                                    <p>となる。以上から、<span
-                                    class="math inline">\(df\)</span>をベクトル、<span
-                                    class="math inline">\(dx\)</span>や<span
-                                    class="math inline">\(dy\)</span>を基底のように扱うことができることがわかる。さらに、<span
-                                    class="math inline">\(dx\)</span>をベクトルと見た時、その相方となるベクトルが<span
-                                    class="math inline">\(\partial_x\)</span>であることもわかる。すなわち、<span
-                                    class="math inline">\(dx, dy,
-                                    dz\)</span>と<span
-                                    class="math inline">\(\partial_x,
-                                    \partial_y,
-                                    \partial_z\)</span>の間には、自然な内積、</p>
-                                    <p><span class="math display">\[
-                                    \left&lt;d\alpha,
-                                    \frac{\partial}{\partial
-                                    \beta}\right&gt; = \frac{\partial
-                                    \alpha}{\partial \beta} =
-                                    \delta_{\alpha, \beta}
-                                    \]</span></p>
-                                    <p>が定義される。このように、<span
-                                    class="math inline">\(dx,
-                                    dy\)</span>を縦ベクトル、<span
-                                    class="math inline">\(\partial_x,
-                                    \partial_y\)</span>を横ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、<span
-                                    class="math inline">\(dx,
-                                    dy\)</span>が住む世界と<span
-                                    class="math inline">\(\partial_x,
-                                    \partial_y\)</span>が住む世界は双対空間である。</p>
                                     <h1 id="まとめ">まとめ</h1>
                                     <p>本章では、解析力学で現れる数学の最低限の準備を行った。特に、大学で扱う物理数学では、解析学と代数学がお互いに入り交じる。さらに解析力学では幾何学も現れるため、使う数学的ツールは多岐にわたる。出てくる数式は複雑であることが多いが、一つ一つは極めて単純であるため、理解は難しくないであろう。しかし、解析力学は多変数関数の常微分、偏微分が頻出し、「いま何が自由変数で、この変数で偏微分すると何が起きるか」が混乱しがちである。式の導出を曖昧にすると、結局全体の理解があやふやになってしまうので、一つ一つの式変形をきっちり追いかける癖をつけてほしい。</p>
                                     <h1
