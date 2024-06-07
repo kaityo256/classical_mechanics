@@ -175,18 +175,24 @@
                                     <p><span class="math display">\[
                                     \mathbf{u} = u^i \mathbf{e}_i
                                     \]</span></p>
-                                    <p>ここで、後の都合のためにベクトルの成分の添字を上付きにしている。さらに、同じ記号が現れた場合(今回は<span
-                                    class="math inline">\(i\)</span>)はその記号について和を取るというアインシュタイン規約を用いている。さて、なにか適当な行列<span
-                                    class="math inline">\(T\)</span>を用いて、基底が<span
-                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>から、別の正規直交基底<span
-                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>に以下のように変換されたとする。</p>
+                                    <p>さて、別の正規直交基底<span
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>を考え、先ほどのベクトルが</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{u} = \tilde{u}^i
+                                    \tilde{\mathbf{e}}_i
+                                    \]</span></p>
+                                    <p>と展開できるとしよう。さらに、二種類の基底が変換行列<span
+                                    class="math inline">\(T\)</span>を用いて</p>
                                     <p><span class="math display">\[
                                     \tilde{\mathbf{e}}_i = T^k_{\,i}
                                     \mathbf{e}_k
                                     \]</span></p>
+                                    <p>と結びついているとする。この時、この変換の前後のベクトルの成分<span
+                                    class="math inline">\(u^i\)</span>と<span
+                                    class="math inline">\(\tilde{u}^i\)</span>の間の関係を調べよう。</p>
                                     <p>ベクトル<span
                                     class="math inline">\(\mathbf{u}\)</span>を新しい基底<span
-                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>で展開すると、</p>
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>で展開した式に、基底の変換の関係を代入する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \mathbf{u} &amp;= \tilde{u}^k
@@ -214,8 +220,8 @@
                                     u^i &amp;= T^i_{\,k} \tilde{u}^k
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>チルダが現れる項が左右逆になっていることがわかる。<span
-                                    class="math inline">\(\mathbf{u}\)</span>は基底の変換と反対の変換を受けるから反変ベクトルである。</p>
+                                    <p>チルダが現れる項が左右逆になっていることがわかる。このように、<span
+                                    class="math inline">\(\mathbf{u}\)</span>は基底の変換と反対の変換を受けるので反変ベクトルと呼ばれる。</p>
                                     <p>逆に、基底と同じ形の変換を受けるベクトル、すなわちチルダが同じ側に現れるのが共変ベクトルである。定義から、基底自身は共変ベクトルとなる。さらに、先程、反変ベクトルであることがわかった成分ベクトルを縦ベクトルとすると、その双対である横ベクトルは共変ベクトルとなる。</p>
                                     <p><span
                                     class="math inline">\(\{\mathbf{e}_i\}\)</span>や<span

@@ -450,26 +450,15 @@ df = \frac{\partial f}{\partial x} dx
 + \frac{\partial f}{\partial y} dy
 $$
 
-すると、これがまるでベクトルを基底で展開しているかのように見える。
-
-$$
-\mathbf{f} = \frac{\partial f}{\partial x} \mathbf{e}_x +
-\frac{\partial f}{\partial y} \mathbf{e}_y
-$$
-
-両辺、$\mathbf{e}_x$の相方である$\mathbf{e}^x$との内積を取ると、
-
-$$
-(\mathbf{e}^x, \mathbf{f}) = \frac{\partial f}{\partial x}
-$$
+すると、これがまるでベクトルを基底で展開しているかのように見える。また、$dx$の内積をとる相方が$\partial_x$であることもわかる。
 
 となる。以上から、$df$をベクトル、$dx$や$dy$を基底のように扱うことができることがわかる。さらに、$dx$をベクトルと見た時、その相方となるベクトルが$\partial_x$であることもわかる。すなわち、$dx, dy, dz$と$\partial_x, \partial_y, \partial_z$の間には、自然な内積、
 
 $$
-\left<d\alpha, \frac{\partial}{\partial \beta}\right> = \frac{\partial \alpha}{\partial \beta} = \delta_{\alpha, \beta}
+\left<d\alpha,\frac{\partial}{\partial \beta}\right> = \frac{\partial \alpha}{\partial \beta} = \delta_{\alpha, \beta}
 $$
 
-が定義される。このように、$dx, dy$を縦ベクトル、$\partial_x, \partial_y$を横ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、$dx, dy$が住む世界と$\partial_x, \partial_y$が住む世界は双対空間である。
+が定義される。このように、$dx, dy$を横ベクトル、$\partial_x, \partial_y$を縦ベクトルだと思うことができ、それらの間に内積を定義することができた。このように考えると、$dx, dy$が住む世界と$\partial_x, \partial_y$が住む世界は双対空間である。
 
 ## 微分と偏微分
 
