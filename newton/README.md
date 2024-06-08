@@ -94,11 +94,10 @@ $$
 \mathbf{u} = u^i \mathbf{e}_i
 $$
 
-
 さて、別の正規直交基底$\{\tilde{\mathbf{e}}_i\}$を考え、先ほどのベクトルが
 
 $$
-\mathbf{u} = \tilde{u}^i \tilde{\mathbf{e}}_i 
+\mathbf{u} = \tilde{u}^i \tilde{\mathbf{e}}_i
 $$
 
 と展開できるとしよう。さらに、二種類の基底が変換行列$T$を用いて
@@ -310,12 +309,12 @@ $$
 逆に、
 
 $$
-\tilde{B}_i = \frac{\partial x^i}{\partial \tilde{x}^j} B_j
+\tilde{B}_i = \frac{\partial x^j}{\partial \tilde{x}^i} B_j
 $$
 
 のように変換を受けるベクトル$\mathbf{B}$を **共変ベクトル (covariant vector)** と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。
 
-数学的準備の章にて、$dx$を縦ベクトルとみなすと、$\partial_x$が自然な双対基底であり、横ベクトルとみなせることを見た。従って、$\partial_x, \partial_y$は共変ベクトルとなることが期待される。
+数学的準備の章にて、$dx$を横ベクトルとみなすと、$\partial_x$が自然な双対基底であり、縦ベクトルとみなせることを見た。従って、$\partial_x, \partial_y$は共変ベクトルとなることが期待される。
 
 いま、$(x^1, x^2)$で張られる空間に、スカラー関数$f(x^1, x^2)$があるとしよう。この関数の勾配(gradient)が、変数変換$(x^1, x^2) \rightarrow (\tilde{x}^1, \tilde{x}^2)$でどのように変換されるか見てみよう。合成関数の偏微分の公式から、
 
