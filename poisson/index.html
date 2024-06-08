@@ -112,6 +112,10 @@
                                     <p>と書くことができる。この括弧を
                                     <strong>ポアソン括弧(Poisson
                                     bracket)</strong> と呼ぶ。</p>
+                                    <p>さて、変数変換<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow
+                                    (Q,P)\)</span>により運動方程式の形を変えない時、つまりハミルトンの運動方程式が共変である場合、この変換を正準変換と呼ぶ。正準変換の条件については次章で詳しく説明する。</p>
                                     <p>さて、実はポアソン括弧は正準変数に対して不変であること、すなわち、ある正準変数の組<span
                                     class="math inline">\((q,p)\)</span>が、正準変換により別の正準変数の組
                                     <span
@@ -258,7 +262,7 @@
                                     &amp;= \left\{X,Y\right\}_{Q,P}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>したがって、ポアソン括弧式は正準変換で移り変わることができる、いかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。</p>
+                                    <p>なお、ここで正準変換の条件である「変換のヤコビアンが1であること」を用いた。これについては次章で証明する。したがって、ポアソン括弧式は正準変換で移り変わることができる、いかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。</p>
                                     <p><span class="math display">\[
                                     \left\{X, Y\right\}_{q,p} =
                                     \left\{X, Y\right\}_{Q,P} =
@@ -280,9 +284,9 @@
                                     <p>ポアソン括弧を用いると、正準方程式は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{p_i} &amp;= \left\{p_i,
-                                    H\right\} \\
                                     \dot{q^i} &amp;= \left\{q^i,
+                                    H\right\}\\
+                                    \dot{p_i} &amp;= \left\{p_i,
                                     H\right\}
                                     \end{aligned}
                                     \]</span></p>
@@ -490,8 +494,8 @@
                                     \]</span></p>
                                     <p>指数関数の定義</p>
                                     <p><span class="math display">\[
-                                    \exp(ax) =
-                                    \sum_{k=0}^{\infty}  \frac{(ax)^k}{k!}
+                                    \exp(x) =
+                                    \sum_{k=0}^{\infty}  \frac{x^k }{k!}
                                     \]</span></p>
                                     <p>と見比べると、先程の式は形式的に</p>
                                     <p><span class="math display">\[
@@ -554,8 +558,8 @@
                                     class="math inline">\(\theta\)</span>から<span
                                     class="math inline">\(\theta+h\)</span>まで積分すると、</p>
                                     <p><span class="math display">\[
-                                    v(\theta + h) - v(\theta) = \exp(ih
-                                    \mathcal{L}) v(\theta)
+                                    v(\theta + h) = \exp(ih \mathcal{L})
+                                    v(\theta)
                                     \]</span></p>
                                     <p>これと、</p>
                                     <p><span class="math display">\[
@@ -645,6 +649,10 @@
                                     <p><span class="math display">\[
                                     U(h) = \exp(ih\mathcal{L})
                                     \]</span></p>
+                                    <p>また、リュービル演算子が、ポアソン括弧の右側にハミルトニアンを、左側を空欄にしたものになっていることにも注意。</p>
+                                    <p><span class="math display">\[
+                                    i\mathcal{L} = \{~~~~, H\}
+                                    \]</span></p>
                                     <p>ここまでの議論をまとめておこう。</p>
                                     <ul>
                                     <li>有限の連続的な変化を引き起こす演算子<span
@@ -686,7 +694,7 @@
                                     \]</span></p>
                                     <p>で定義されるから、</p>
                                     <p><span class="math display">\[
-                                    ihL_z = U_z&#39;(0) -I
+                                    ihL_z = U_z&#39;(0)
                                     \]</span></p>
                                     <p>として求められる。ただし<span
                                     class="math inline">\(I\)</span>は単位行列である。以上から、</p>

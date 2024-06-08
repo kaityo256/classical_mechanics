@@ -16,8 +16,8 @@
 
 ## [解析力学の外観](overview/README.md)
 
-* 解析力学の概観
 * 式の見方について
+* 解析力学の概観
 
 ## [数学的準備](preparation/README.md)
 
