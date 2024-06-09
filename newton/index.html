@@ -521,33 +521,28 @@
                                     m\frac{d \mathbf{v}}{dt} =
                                     \mathbf{F}
                                     \]</span></p>
-                                    <p>上記では質量は一定としたが、燃料を消費しながら飛ぶロケットなど、運動に従って質量が変化する場合もあるため、質量と速度をまとめた運動量を導入しよう。</p>
-                                    <p><span class="math display">\[
-                                    \mathbf{p} = m \mathbf{v}
-                                    \]</span></p>
-                                    <p>するとニュートンの運動方程式は、運動量の時間変化が、加えられた力と一致する、という意味となる。</p>
-                                    <p><span class="math display">\[
-                                    \dot{\mathbf{p}} = \mathbf{F}
-                                    \]</span></p>
-                                    <p>さて、このベクトルを成分表示にあたり、<span
-                                    class="math inline">\(\mathbf{p}\)</span>や<span
+                                    <p>簡単のため、質量は時間変化しないと考えよう。さて、このベクトルを成分表示するにあたり、<span
+                                    class="math inline">\(\mathbf{v}\)</span>や<span
                                     class="math inline">\(\mathbf{F}\)</span>が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル<span
-                                    class="math inline">\(\mathbf{r}\)</span>は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトルは反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル<span
-                                    class="math inline">\(\mathbf{F}\)</span>も反変ベクトルとなる。</p>
+                                    class="math inline">\(\mathbf{r}\)</span>は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトル<span
+                                    class="math inline">\(\mathrm{v}\)</span>は反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量<span
+                                    class="math inline">\(m
+                                    \mathrm{v}\)</span>も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル<span
+                                    class="math inline">\(\mathbf{F}\)</span>も反変ベクトルでなくてはならない。</p>
                                     <p>さて、運動量も力も反変ベクトルであることがわかったので、上付きの添字で成分表示しよう。</p>
                                     <p><span class="math display">\[
-                                    \dot{p}^i = F^i
+                                    m\dot{v}^i = F^i
                                     \]</span></p>
                                     <p>となる。今、座標変換<span
                                     class="math inline">\((x^1,
                                     x^2,x^3)\rightarrow
                                     (\tilde{x}^1,\tilde{x}^2,\tilde{x}^3)\)</span>により、<span
-                                    class="math inline">\(\mathbf{p}
+                                    class="math inline">\(\mathbf{v}
                                     \rightarrow
-                                    \tilde{\mathbf{p}}\)</span>に変換されたとしよう。反変ベクトルの定義から、変換則は</p>
+                                    \tilde{\mathbf{v}}\)</span>に変換されたとしよう。反変ベクトルの定義から、変換則は</p>
                                     <p><span class="math display">\[
-                                    \tilde{p}^i = \frac{\partial
-                                    \tilde{x}^i}{\partial x^k} p^k
+                                    \tilde{v}^i = \frac{\partial
+                                    \tilde{x}^i}{\partial x^k} v^k
                                     \]</span></p>
                                     <p>で与えられる。ここで、成分が</p>
                                     <p><span class="math display">\[
@@ -557,24 +552,24 @@
                                     <p>で与えられる行列<span
                                     class="math inline">\(M\)</span>を用意すると、運動量ベクトルは以下のように変換される。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\mathbf{p}} = M \mathbf{p}
+                                    \tilde{\mathbf{v}} = M \mathbf{v}
                                     \]</span></p>
                                     <p>力ベクトル<span
                                     class="math inline">\(\mathbf{F}\)</span>も同様な変換を受ける。以上から、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{\tilde{\mathbf{p}}} -
+                                    m \dot{\tilde{\mathbf{v}}} -
                                     \tilde{\mathbf{F}} &amp;= M
-                                    (\dot{\mathbf{p}} - \mathbf{F}) \\
+                                    (m\dot{\mathbf{v}} - \mathbf{F}) \\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>となる。もともとのニュートンの運動方程式から右辺がゼロであるため、左辺もゼロとなる。すなわち、運動方程式</p>
                                     <p><span class="math display">\[
-                                    \dot{p}^i = F^i
+                                    m\dot{v}^i = F^i
                                     \]</span></p>
-                                    <p>が成立している時、変換後の成分においても</p>
+                                    <p>が成立している時、変換後の座標系においても</p>
                                     <p><span class="math display">\[
-                                    \dot{\tilde{p}^i} =\tilde{F}^i
+                                    m\dot{\tilde{v}^i} =\tilde{F}^i
                                     \]</span></p>
                                     <p>が成り立つ。すなわち、ニュートンの運動方程式は座標の線形変換に対して形を変えない。このような事実を「ニュートンの方程式は、座標の線形変換に対して
                                     <strong>共変(covariant)</strong>
@@ -600,8 +595,8 @@
                                     <p>両辺に質量<span
                                     class="math inline">\(m\)</span>をかけて、さらに時間微分すると</p>
                                     <p><span class="math display">\[
-                                    \dot{\tilde{\mathbf{p}}} =
-                                    \dot{\mathbf{p}}
+                                    m \dot{\tilde{\mathbf{v}}} =
+                                    m\dot{\mathbf{v}}
                                     \]</span></p>
                                     <p>運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。</p>
                                     <p>ニュートンの運動方程式は座標の一般の線形変換に対して共変であるが、系のスケールを変える変換はエネルギースケールを変えてしまうため、スケール変換を伴わない線形変換のみを考慮することが多い。スケール変換を伴わない線形変換は、回転と鏡映変換に分離できる。この、回転、鏡映変換、平行移動、等速度推進の変換をまとめて
