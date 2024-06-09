@@ -417,14 +417,24 @@
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     dr \\ d\theta
+                                    \end{pmatrix}\\
+                                    &amp;=
+                                    \begin{pmatrix}
+                                    \cos(-\theta) &amp; \sin(-\theta) \\
+                                    -\sin(-\theta) &amp; \cos(-\theta)
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>これは、点<span
                                     class="math inline">\(P\)</span>における<span
-                                    class="math inline">\((-\theta)\)</span>回転に他ならない。このように、どのような非線形変換であっても、適当な点の近傍で展開することで線形変換にすることができる。</p>
+                                    class="math inline">\((-\theta)\)</span>回転に他ならない。図を見れば、確かに<span
+                                    class="math inline">\((dr,
+                                    d\theta)\)</span>が張る座標系を<span
+                                    class="math inline">\(-\theta\)</span>だけ回転させたものが<span
+                                    class="math inline">\((dx,
+                                    dy)\)</span>が張る座標系になっていることがわかる。このように、どのような非線形変換であっても、適当な点の近傍で展開することで線形変換にすることができる。</p>
                                     <p>一般に、<span
                                     class="math inline">\(\{x^i\}\)</span>から<span
-                                    class="math inline">\(\{\tilde{x}^i\}\)</span>への座標変換において、</p>
+                                    class="math inline">\(\{\tilde{x}^i\}\)</span>への非線形な座標変換において、</p>
                                     <p><span class="math display">\[
                                     \tilde{A}^i = \frac{\partial
                                     \tilde{x}^i}{\partial x^j} A^j
@@ -541,20 +551,20 @@
                                     \]</span></p>
                                     <p>で与えられる。ここで、成分が</p>
                                     <p><span class="math display">\[
-                                    T^i_{\,k} \equiv \frac{\partial
+                                    M^i_{\,k} \equiv \frac{\partial
                                     \tilde{x}^i}{\partial x^k}
                                     \]</span></p>
                                     <p>で与えられる行列<span
-                                    class="math inline">\(T\)</span>を用意すると、運動量ベクトルは以下のように変換される。</p>
+                                    class="math inline">\(M\)</span>を用意すると、運動量ベクトルは以下のように変換される。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\mathbf{p}} = T \mathbf{p}
+                                    \tilde{\mathbf{p}} = M \mathbf{p}
                                     \]</span></p>
                                     <p>力ベクトル<span
                                     class="math inline">\(\mathbf{F}\)</span>も同様な変換を受ける。以上から、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{\tilde{\mathbf{p}}} -
-                                    \tilde{\mathbf{F}} &amp;= T
+                                    \tilde{\mathbf{F}} &amp;= M
                                     (\dot{\mathbf{p}} - \mathbf{F}) \\
                                     \end{aligned}
                                     \]</span></p>
@@ -607,9 +617,9 @@
                                     \tilde{x}^2)\)</span>がガリレイ変換であれば、変換後の座標においてもニュートンの運動方程式の形は変わらない。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \frac{d^2 \tilde{x}^1}{dt^2}
+                                    m \frac{d^2 \tilde{x}^i}{dt^2}
                                     &amp;= - \frac{\partial U}{\partial
-                                    \tilde{x}_1}
+                                    \tilde{x}^i}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面中の質点の運動方程式を考えよう。ユークリッド座標の場合は</p>
@@ -637,8 +647,8 @@
                                     \begin{aligned}
                                     m\ddot{r} &amp;= - \frac{\partial
                                     U}{\partial r}\\
-                                    m\ddot{\theta} &amp;- \frac{\partial
-                                    U}{\partial \theta}\\
+                                    m\ddot{\theta} &amp;=-
+                                    \frac{\partial U}{\partial \theta}\\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>しかし、残念ながら上記の式は成り立たない。実際には、後に導出するように、以下の様な式となる。</p>
@@ -647,7 +657,7 @@
                                     m(\ddot{r} -r\dot{\theta}^2)&amp;= -
                                     \frac{\partial U}{\partial r}\\
                                     m\frac{d}{dt}(r^2 \dot{\theta})
-                                    &amp;- r \frac{\partial U}{\partial
+                                    &amp;=- r \frac{\partial U}{\partial
                                     \theta}
                                     \end{aligned}
                                     \]</span></p>

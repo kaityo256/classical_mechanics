@@ -293,12 +293,17 @@ dx\\dy
 \end{pmatrix}
 \begin{pmatrix}
 dr \\ d\theta
+\end{pmatrix}\\
+&=
+\begin{pmatrix}
+\cos(-\theta) & \sin(-\theta) \\
+-\sin(-\theta) & \cos(-\theta)
 \end{pmatrix}
 $$
 
-これは、点$P$における$(-\theta)$回転に他ならない。このように、どのような非線形変換であっても、適当な点の近傍で展開することで線形変換にすることができる。
+これは、点$P$における$(-\theta)$回転に他ならない。図を見れば、確かに$(dr, d\theta)$が張る座標系を$-\theta$だけ回転させたものが$(dx, dy)$が張る座標系になっていることがわかる。このように、どのような非線形変換であっても、適当な点の近傍で展開することで線形変換にすることができる。
 
-一般に、$\{x^i\}$から$\{\tilde{x}^i\}$への座標変換において、
+一般に、$\{x^i\}$から$\{\tilde{x}^i\}$への非線形な座標変換において、
 
 $$
 \tilde{A}^i = \frac{\partial \tilde{x}^i}{\partial x^j} A^j
@@ -389,20 +394,20 @@ $$
 で与えられる。ここで、成分が
 
 $$
-T^i_{\,k} \equiv \frac{\partial \tilde{x}^i}{\partial x^k}
+M^i_{\,k} \equiv \frac{\partial \tilde{x}^i}{\partial x^k}
 $$
 
-で与えられる行列$T$を用意すると、運動量ベクトルは以下のように変換される。
+で与えられる行列$M$を用意すると、運動量ベクトルは以下のように変換される。
 
 $$
-\tilde{\mathbf{p}} = T \mathbf{p}
+\tilde{\mathbf{p}} = M \mathbf{p}
 $$
 
 力ベクトル$\mathbf{F}$も同様な変換を受ける。以上から、
 
 $$
 \begin{aligned}
-\dot{\tilde{\mathbf{p}}} - \tilde{\mathbf{F}} &= T (\dot{\mathbf{p}} - \mathbf{F}) \\
+\dot{\tilde{\mathbf{p}}} - \tilde{\mathbf{F}} &= M (\dot{\mathbf{p}} - \mathbf{F}) \\
 \end{aligned}
 $$
 
@@ -452,7 +457,7 @@ $$
 
 $$
 \begin{aligned}
-m \frac{d^2 \tilde{x}^1}{dt^2} &= - \frac{\partial U}{\partial \tilde{x}_1}
+m \frac{d^2 \tilde{x}^i}{dt^2} &= - \frac{\partial U}{\partial \tilde{x}^i}
 \end{aligned}
 $$
 
@@ -479,7 +484,7 @@ $$
 $$
 \begin{aligned}
 m\ddot{r} &= - \frac{\partial U}{\partial r}\\
-m\ddot{\theta} &- \frac{\partial U}{\partial \theta}\\
+m\ddot{\theta} &=- \frac{\partial U}{\partial \theta}\\
 \end{aligned}
 $$
 
@@ -488,7 +493,7 @@ $$
 $$
 \begin{aligned}
 m(\ddot{r} -r\dot{\theta}^2)&= - \frac{\partial U}{\partial r}\\
-m\frac{d}{dt}(r^2 \dot{\theta}) &- r \frac{\partial U}{\partial \theta}
+m\frac{d}{dt}(r^2 \dot{\theta}) &=- r \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
 
