@@ -283,10 +283,11 @@ $$
 以上を行列形式でまとめると
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 dx\\dy
 \end{pmatrix}
-=
+&=
 \begin{pmatrix}
 \sqrt{3}/2 & -1/2 \\
 1/2 & \sqrt{3}/2
@@ -299,6 +300,10 @@ dr \\ d\theta
 \cos(-\theta) & \sin(-\theta) \\
 -\sin(-\theta) & \cos(-\theta)
 \end{pmatrix}
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}
+\end{aligned}
 $$
 
 これは、点$P$における$(-\theta)$回転に他ならない。図を見れば、確かに$(dr, d\theta)$が張る座標系を$-\theta$だけ回転させたものが$(dx, dy)$が張る座標系になっていることがわかる。このように、どのような非線形変換であっても、適当な点の近傍で展開することで線形変換にすることができる。
@@ -661,7 +666,7 @@ $$
 $m\dot{x} \dot{y} - m\dot{x} \dot{y}$を足すと、
 
 $$
-m \left(m x\ddot{y}  + m\dot{x} \dot{y} - m\dot{x} \dot{y} - m y \ddot{x}\right) = 0
+m \left(x\ddot{y}  + \dot{x} \dot{y} - \dot{x} \dot{y} - y \ddot{x}\right) = 0
 $$
 
 この式をじっと眺めると
@@ -699,7 +704,7 @@ $$
 x \\ y \\ z
 \end{pmatrix}
 ,
-\mathbf{p} =
+m\mathbf{v} =
 m
 \begin{pmatrix}
 \dot{x} \\ \dot{y} \\ \dot{z}
@@ -714,10 +719,16 @@ $$
 と定義すると、角運動量ベクトルは
 
 $$
-\mathbf{L} = \mathbf{r} \times \mathbf{p}
+\mathbf{L} = \mathbf{r} \times m\mathbf{v}
 $$
 
-と表すことができる。
+と表すことができ、角運動量保存則は
+
+$$
+\frac{d}{dt}\mathbf{L} = \mathbf{0}
+$$
+
+とまとめることができる。
 
 ## ニュートンの運動方程式のまとめ
 
