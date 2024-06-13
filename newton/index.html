@@ -523,62 +523,92 @@
                                     と呼ぶ。以下では、ニュートンの運動方程式が座標変換に対してどのように変換を受けるか見てみよう。</p>
                                     <p>ニュートンの運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    m\frac{d \mathbf{v}}{dt} =
-                                    \mathbf{F}
+                                    m \ddot{\mathbf{r}} = \mathbf{F}
                                     \]</span></p>
-                                    <p>簡単のため、質量は時間変化しないと考えよう。さて、このベクトルを成分表示するにあたり、<span
-                                    class="math inline">\(\mathbf{v}\)</span>や<span
-                                    class="math inline">\(\mathbf{F}\)</span>が反変ベクトルであるか、共変ベクトルであるかを調べなければならない(そうでなければ添字を上付きにすべきか下付きにすべきかわからない)。まず、通常の位置ベクトル<span
-                                    class="math inline">\(\mathbf{r}\)</span>は、定義から明らかに反変ベクトルである。時間はスカラー量であるから、位置ベクトルの時間微分である速度ベクトル<span
-                                    class="math inline">\(\mathrm{v}\)</span>は反変ベクトルである。さらに、質量はスカラー量であるから、速度ベクトルに質量をかけた運動量<span
-                                    class="math inline">\(m
-                                    \mathrm{v}\)</span>も反変ベクトルであり、その時間微分も反変ベクトルであるから、等式で結ばれている力ベクトル<span
-                                    class="math inline">\(\mathbf{F}\)</span>も反変ベクトルでなくてはならない。</p>
-                                    <p>さて、運動量も力も反変ベクトルであることがわかったので、上付きの添字で成分表示しよう。</p>
+                                    <p>ただし、</p>
                                     <p><span class="math display">\[
-                                    m\dot{v}^i = F^i
+                                    \mathbf{r} = x^i \mathbf{e}_i
                                     \]</span></p>
-                                    <p>となる。今、座標変換<span
-                                    class="math inline">\((x^1,
-                                    x^2,x^3)\rightarrow
-                                    (\tilde{x}^1,\tilde{x}^2,\tilde{x}^3)\)</span>により、<span
-                                    class="math inline">\(\mathbf{v}
-                                    \rightarrow
-                                    \tilde{\mathbf{v}}\)</span>に変換されたとしよう。反変ベクトルの定義から、変換則は</p>
+                                    <p>である。</p>
+                                    <p>ここで、以下のような<span
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>から<span
+                                    class="math inline">\(\{\mathbf{\tilde{e}}_i\}\)</span>への変換を考える。</p>
                                     <p><span class="math display">\[
-                                    \tilde{v}^i = \frac{\partial
-                                    \tilde{x}^i}{\partial x^k} v^k
+                                    \tilde{\mathbf{e}}_i = T^k_{\,i}
+                                    \mathbf{e}_k
                                     \]</span></p>
-                                    <p>で与えられる。ここで、成分が</p>
+                                    <p>ただし、<span
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>及び<span
+                                    class="math inline">\(\{\mathbf{\tilde{e}}_i\}\)</span>は正規直交基底であるとする。すると、変換行列<span
+                                    class="math inline">\(T\)</span>は直交行列となるため、</p>
                                     <p><span class="math display">\[
-                                    M^i_{\,k} \equiv \frac{\partial
-                                    \tilde{x}^i}{\partial x^k}
+                                    {}^t T= T^{-1}
                                     \]</span></p>
-                                    <p>で与えられる行列<span
-                                    class="math inline">\(M\)</span>を用意すると、運動量ベクトルは以下のように変換される。</p>
+                                    <p>を満たす。</p>
+                                    <p>既に見たように、位置ベクトルは反変ベクトルであり、以下の様に変換される。</p>
                                     <p><span class="math display">\[
-                                    \tilde{\mathbf{v}} = M \mathbf{v}
+                                    x^i = T^i_j \tilde{x}^j
                                     \]</span></p>
-                                    <p>力ベクトル<span
-                                    class="math inline">\(\mathbf{F}\)</span>も同様な変換を受ける。以上から、</p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{x^i} = mT^i_j
+                                    \ddot{\tilde{x}^j}
+                                    \]</span></p>
+                                    <p>である。</p>
+                                    <p>ここで、力が保存力であるとしよう。すると、ポテンシャル<span
+                                    class="math inline">\(V(\mathbf{r})\)</span>が存在し、力は以下のように書ける。</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{F} = - \nabla V
+                                    \]</span></p>
+                                    <p>力は座標による微分であるから、座標とは反対の変換を受けると予想される。実際に成分表示してみよう。</p>
+                                    <p><span class="math display">\[
+                                    F_i = - \frac{\partial V}{\partial
+                                    x^i}
+                                    \]</span></p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{F}_i = - \frac{\partial
+                                    V}{\partial \tilde{x}^i}
+                                    \]</span></p>
+                                    <p>という量を考えると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \dot{\tilde{\mathbf{v}}} -
-                                    \tilde{\mathbf{F}} &amp;= M
-                                    (m\dot{\mathbf{v}} - \mathbf{F}) \\
+                                    \tilde{F}_i &amp;= - \frac{\partial
+                                    V}{\partial \tilde{x}^i}\\
+                                    &amp;= - \frac{\partial
+                                    x^j}{\partial
+                                    \tilde{x}^i}\frac{\partial
+                                    V}{\partial x^j} \\
+                                    &amp;= T^j_i F_j
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>となる。もともとのニュートンの運動方程式から右辺がゼロであるため、左辺もゼロとなる。すなわち、運動方程式</p>
+                                    <p>これは共変ベクトルの定義である。</p>
+                                    <p>さて、運動方程式の左辺の変換</p>
                                     <p><span class="math display">\[
-                                    m\dot{v}^i = F^i
+                                    m \ddot{x^i} = mT^i_j
+                                    \ddot{\tilde{x}^j}
                                     \]</span></p>
-                                    <p>が成立している時、変換後の座標系においても</p>
+                                    <p>について、<span
+                                    class="math inline">\({}^t T =
+                                    T^{-1}\)</span>であったから、</p>
                                     <p><span class="math display">\[
-                                    m\dot{\tilde{v}^i} =\tilde{F}^i
+                                    m\ddot{\tilde{x}^j} = m T^i_j
+                                    \ddot{x^i}
                                     \]</span></p>
-                                    <p>が成り立つ。すなわち、ニュートンの運動方程式は座標の線形変換に対して形を変えない。このような事実を「ニュートンの方程式は、座標の線形変換に対して
-                                    <strong>共変(covariant)</strong>
-                                    である」と表現する。このように、右辺がゼロとなるような形で運動方程式を書いておき、新しい座標系で運動方程式を書いて、元の座標系で運動方程式が成り立つ(ゼロになる)から、新しい座標系でも運動方程式が成り立つ(ゼロになる)という証明の仕方は今後も出てくるので覚えておいてほしい。</p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m\ddot{\tilde{x}^i} - \tilde{F}_i
+                                    &amp;= T^j_i (m \ddot{x}^j - F_j)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、<span
+                                    class="math inline">\(m \ddot{x}^j -
+                                    F_j =
+                                    0\)</span>が成り立つなら、<span
+                                    class="math inline">\(m\ddot{\tilde{x}^i}
+                                    - \tilde{F}_i\)</span>=0<span
+                                    class="math inline">\(も成り立つ。すなわち、ニュートンの運動方程式は直交変換\)</span>T$に対して共変である。</p>
                                     <p>ここで、
                                     <strong>共変性(covaiance)</strong>
                                     は
@@ -590,8 +620,10 @@
                                     \mathbf{u}t + \mathbf{c}
                                     \]</span></p>
                                     <p>ただし<span
-                                    class="math inline">\(\mathbf{u}\)</span>は定ベクトルである。この変換を等速度推進、もしくはガリレイ・ブースト(Galilei
-                                    boost)と呼ぶ。</p>
+                                    class="math inline">\(\mathbf{u}\)</span>は定ベクトルである。この変換を
+                                    <strong>ガリレイ変換(Galilean
+                                    transformation)</strong>
+                                    と呼ぶ。</p>
                                     <p>両辺を時間微分すると</p>
                                     <p><span class="math display">\[
                                     \tilde{\mathbf{v}} = \mathbf{v} +
@@ -604,11 +636,7 @@
                                     m\dot{\mathbf{v}}
                                     \]</span></p>
                                     <p>運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。</p>
-                                    <p>ニュートンの運動方程式は座標の一般の線形変換に対して共変であるが、系のスケールを変える変換はエネルギースケールを変えてしまうため、スケール変換を伴わない線形変換のみを考慮することが多い。スケール変換を伴わない線形変換は、回転と鏡映変換に分離できる。この、回転、鏡映変換、平行移動、等速度推進の変換をまとめて
-                                    <strong>ガリレイ変換(Galilean
-                                    transformation)</strong>
-                                    と呼ぶ。ニュートンの運動方程式は、ガリレイ変換に対して共変である。</p>
-                                    <p>ガリレイ変換は、ある慣性系に対して加速度を持たない別の慣性系への座標変換を表現している。ニュートンの運動方程式がガリレイ変換により共変であるとは、ニュートンの運動方程式がすべての慣性系において同じ形をしていることを意味する。これは逆に、「どの慣性系から見ても同じ運動法則が成り立つようにニュートンの運動方程式が構成されている」と考えることもできる。「どの慣性系から見ても同じ運動法則が成り立つ」という要請をガリレイの相対性原理と呼ぶ。一方、電磁場の基礎方程式であるマクスウェルの方程式は、ガリレイ変換に対して共変ではないが、ローレンツ変換に対して共変性を持つ。ローレンツ変換において、物体の速度が光速に対して無視できるという近似をするとガリレイ変換に帰着する。アインシュタインは運動方程式やマクスウェル方程式を含む全ての物理法則が、あらゆる慣性系から同じように見えなければならないという原理を要請することで、特殊相対性理論を用いた。この要請を特殊相対性原理と呼ぶ。</p>
+                                    <p>ニュートンの運動方程式は直交変換及びガリレイ変換に対して共変である。ガリレイ変換は、ある慣性系に対して加速度を持たない別の慣性系への座標変換を表現している。ニュートンの運動方程式がガリレイ変換により共変であるとは、ニュートンの運動方程式がすべての慣性系において同じ形をしていることを意味する。これは逆に、「どの慣性系から見ても同じ運動法則が成り立つようにニュートンの運動方程式が構成されている」と考えることもできる。「どの慣性系から見ても同じ運動法則が成り立つ」という要請をガリレイの相対性原理と呼ぶ。一方、電磁場の基礎方程式であるマクスウェルの方程式は、ガリレイ変換に対して共変ではないが、ローレンツ変換に対して共変性を持つ。ローレンツ変換において、物体の速度が光速に対して無視できるという近似をするとガリレイ変換に帰着する。アインシュタインは運動方程式やマクスウェル方程式を含む全ての物理法則が、あらゆる慣性系から同じように見えなければならないという原理を要請することで、特殊相対性理論を用いた。この要請を特殊相対性原理と呼ぶ。</p>
                                     <p>一般に、物理法則を記述する支配方程式がどのような変換に対して共変であるかを議論するのは重要である。例えば二次元空間を<span
                                     class="math inline">\((x^1,
                                     x^2)\)</span>を考えた時、座標変換<span
