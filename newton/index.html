@@ -549,10 +549,11 @@
                                     <p><span class="math display">\[
                                     x^i = T^i_j \tilde{x}^j
                                     \]</span></p>
-                                    <p>従って、</p>
+                                    <p>両辺を<span
+                                    class="math inline">\(\tilde{x}^j\)</span>で偏微分すると、</p>
                                     <p><span class="math display">\[
-                                    m \ddot{x^i} = mT^i_j
-                                    \ddot{\tilde{x}^j}
+                                    T^i_j = \frac{\partial x^i}{\partial
+                                    \tilde{x}^j}
                                     \]</span></p>
                                     <p>である。</p>
                                     <p>ここで、力が保存力であるとしよう。すると、ポテンシャル<span
@@ -583,16 +584,24 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは共変ベクトルの定義である。</p>
-                                    <p>さて、運動方程式の左辺の変換</p>
+                                    <p>座標の変換則</p>
                                     <p><span class="math display">\[
-                                    m \ddot{x^i} = mT^i_j
-                                    \ddot{\tilde{x}^j}
+                                    x^i = T^i_j \tilde{x}^j
                                     \]</span></p>
-                                    <p>について、<span
-                                    class="math inline">\({}^t T =
+                                    <p>について、両辺に<span
+                                    class="math inline">\(T^{-1}\)</span>をかけると、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{x}^i = (T^{-1})^i_j x^i
+                                    \]</span></p>
+                                    <p><span class="math inline">\({}^t
+                                    T =
                                     T^{-1}\)</span>であったから、</p>
                                     <p><span class="math display">\[
-                                    m\ddot{\tilde{x}^j} = m T^i_j
+                                    \tilde{x}^i = T^j_i x^i
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    m\ddot{\tilde{x}^i} = m T^i_j
                                     \ddot{x^i}
                                     \]</span></p>
                                     <p>以上から、</p>
@@ -608,7 +617,7 @@
                                     0\)</span>が成り立つなら、<span
                                     class="math inline">\(m\ddot{\tilde{x}^i}
                                     - \tilde{F}_i\)</span>=0<span
-                                    class="math inline">\(も成り立つ。すなわち、ニュートンの運動方程式は直交変換\)</span>T$に対して共変である。</p>
+                                    class="math inline">\(も成り立つ。すなわち、ニュートンの運動方程式は直交変換\)</span>T$に対して共変である。このように、何かが変換に対して共変であることを示したいとき、成り立つべき式がゼロとなるような形を作っておき、右辺がゼロなので左辺もゼロ、という論法をよく使うので気に留めておくとよい。</p>
                                     <p>ここで、
                                     <strong>共変性(covaiance)</strong>
                                     は
