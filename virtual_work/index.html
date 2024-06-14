@@ -595,15 +595,20 @@
                                     <p><span class="math display">\[
                                     L^2 = x^2 + y^2
                                     \]</span></p>
-                                    <p>で与えられる。両辺微分すると、</p>
+                                    <p>で与えられる。両辺全微分すると、</p>
                                     <p><span class="math display">\[
-                                    L \delta L = x \delta x + y \delta y
+                                    L dL = x dx + y dy
                                     \]</span></p>
                                     <p>ここで、棒の長さは変わらないので<span
                                     class="math inline">\(\delta L =
-                                    0\)</span>であるから</p>
+                                    0\)</span>であり、かつ<span
+                                    class="math inline">\(\delta
+                                    x\)</span>の方向を<span
+                                    class="math inline">\(x\)</span>と逆向きにとっているので<span
+                                    class="math inline">\(\delta x =
+                                    -dx\)</span>であることを代入し、</p>
                                     <p><span class="math display">\[
-                                    \delta y = - \frac{x}{y}\delta x
+                                    \delta y = \frac{x}{y}\delta x
                                     \]</span></p>
                                     <p>いま、力<span
                                     class="math inline">\(F\)</span>で<span
@@ -627,9 +632,7 @@
                                     class="math inline">\(\delta
                                     y\)</span>の関係式を用いて<span
                                     class="math inline">\(\delta
-                                    y\)</span>を消去すると(<span
-                                    class="math inline">\(\delta
-                                    x\)</span>の向きを座標と逆にとっているので、符号が逆になることに注意)</p>
+                                    y\)</span>を消去すると、</p>
                                     <p><span class="math display">\[
                                     W = \left(-F + mg \frac{x}{2y}
                                     \right) \delta x

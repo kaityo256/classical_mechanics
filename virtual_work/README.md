@@ -379,16 +379,16 @@ $$
 L^2 = x^2 + y^2
 $$
 
-で与えられる。両辺微分すると、
+で与えられる。両辺全微分すると、
 
 $$
-L \delta L = x \delta x + y \delta y
+L dL = x dx + y dy
 $$
 
-ここで、棒の長さは変わらないので$\delta L = 0$であるから
+ここで、棒の長さは変わらないので$\delta L = 0$であり、かつ$\delta x$の方向を$x$と逆向きにとっているので$\delta x = -dx$であることを代入し、
 
 $$
-\delta y = - \frac{x}{y}\delta x
+\delta y = \frac{x}{y}\delta x
 $$
 
 いま、力$F$で$\delta x$だけ棒を押すと、その分だけ$x$は減り、$y$は $\delta y$だけ増える。棒の中心は $(x/2, y/2)$であるから、これにより棒の重心は重力に逆らって $\delta y/2$だけ上に動く。棒になされる仕事全体は
@@ -397,7 +397,7 @@ $$
 W = - F \delta x + mg \frac{\delta y}{2}
 $$
 
-$\delta x$と$\delta y$の関係式を用いて$\delta y$を消去すると($\delta x$の向きを座標と逆にとっているので、符号が逆になることに注意)
+$\delta x$と$\delta y$の関係式を用いて$\delta y$を消去すると、
 
 $$
 W = \left(-F + mg \frac{x}{2y} \right) \delta x
