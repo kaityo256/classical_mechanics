@@ -269,7 +269,7 @@ dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\
 \end{aligned}
 $$
 
-点$P$において$(r, \theta) = (1, \pi/3)$であるので、
+点$P$において$(r, \theta) = (1, \pi/6)$であるので、
 
 $$
 \begin{aligned}
