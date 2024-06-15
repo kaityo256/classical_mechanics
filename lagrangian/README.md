@@ -53,8 +53,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial U}{\partial r} &= \frac{\partial U}{\partial x} \frac{\partial x}{\partial r}
-+ \frac{\partial U}{\partial y} \frac{\partial y}{\partial r} \\
+\frac{\partial U}{\partial r} &= \frac{\partial U}{\partial x} \frac{\partial x}{\partial r} + \frac{\partial U}{\partial y} \frac{\partial y}{\partial r} \\
 &= \frac{\partial U}{\partial x}\frac{x}{r} + \frac{\partial U}{\partial y}\frac{y}{r}
 \end{aligned}
 $$
@@ -86,8 +85,7 @@ $$
 
 $$
 \begin{aligned}
-F_\theta &= - \frac{1}{r}\frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta}
-- \frac{1}{r}\frac{\partial U}{\partial y} \frac{\partial y}{\partial \theta} \\
+F_\theta &= - \frac{1}{r}\frac{\partial U}{\partial x} \frac{\partial x}{\partial \theta} - \frac{1}{r}\frac{\partial U}{\partial y} \frac{\partial y}{\partial \theta} \\
 &= -\frac{1}{r} \frac{\partial U}{\partial \theta}
 \end{aligned}
 $$
@@ -166,9 +164,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right)
-- \frac{\partial L}{\partial r} &= m \ddot{r}
-- mr \dot{\theta}^2 + \frac{\partial U}{\partial r} \\
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right) - \frac{\partial L}{\partial r} &= m \ddot{r} - mr \dot{\theta}^2 + \frac{\partial U}{\partial r} \\
 &= 0
 \end{aligned}
 $$
@@ -177,8 +173,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)
-- \frac{\partial L}{\partial \theta} &= m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial r} \\
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} &= m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial r} \\
 &= 0
 \end{aligned}
 $$

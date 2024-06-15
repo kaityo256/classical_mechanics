@@ -127,56 +127,59 @@
                                     class="math inline">\(U\)</span>をまとめてしまおう。</p>
                                     <p><span class="math display">\[
                                     L(x,y,z,\dot{x},\dot{y},\dot{z}) =
-                                    K(\dot{x},\dot{y},\dot{z})
-                                    - U(x,y,z)
+                                    K(\dot{x},\dot{y},\dot{z}) -
+                                    U(x,y,z)
                                     \]</span></p>
                                     <p>により運動全体のポテンシャル<span
-                                    class="math inline">\(L\)</span>を定義すると、運動方程式は</p>
+                                    class="math inline">\(L\)</span>を定義すると、運動方程式の<span
+                                    class="math inline">\(x\)</span>成分は</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left(\frac{\partial
                                     L}{\partial \dot{x}}\right)
                                     = \frac{\partial L}{\partial x}
                                     \]</span></p>
-                                    <p>のように、ただ一つのスカラー関数から記述できるようになる。この関数<span
+                                    <p>と書ける。<span
+                                    class="math inline">\(y\)</span>、<span
+                                    class="math inline">\(z\)</span>成分も全く同様に書けるため、<span
+                                    class="math inline">\((x,y,z)\)</span>を<span
+                                    class="math inline">\(x^1, x^2,
+                                    x^3\)</span>と記述すると、</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{x}^i}\right)
+                                    = \frac{\partial L}{\partial x^i}
+                                    \]</span></p>
+                                    <p>と、3本の運動方程式が、ただ一つのスカラー関数でまとめて記述できるようになる。この関数<span
                                     class="math inline">\(L\)</span>を
                                     <strong>ラグランジアン
                                     (Lagrangian)</strong>
                                     と呼ぶ。ここで、<span
                                     class="math inline">\(L = K -
                                     U\)</span>と、運動エネルギーとポテンシャルエネルギーの差で表現した。なぜ和ではなく差なのかを理解するのが本章の目的である。</p>
-                                    <p>ラグランジアンを用いることのメリットは2つある。一つは、ラグランジアン一つだけで全ての自由度に関する運動方程式が記述できることである。今回は3自由度系を用いたが、質点が複数あるような超多自由度系であっても、適切なラグランジアンさえ選ぶことができれば、全ての自由度に関する運動方程式を得ることができる。すなわち、運動の全ての性質はラグランジアンが担うため、例えば保存則のような性質も全てラグランジアンに内在するはずである。</p>
+                                    <p>ラグランジアンを用いることのメリットは2つある。一つは、ラグランジアン一つだけで全ての自由度に関する運動方程式が記述できることである。今回は3自由度系を用いたが、質点が複数あるような超多自由度系であっても、適切なラグランジアンさえ選ぶことができれば、全ての自由度に関する運動方程式を得ることができる。すなわち、運動の全ての性質はラグランジアンが担うため、例えば保存則のような性質も全てラグランジアンに内在するはずであり、それらの性質を調べる際に見通しが良くなる。</p>
                                     <p>もう一つのメリットは、運動をラグランジアンで記述すると、変数変換に強くなることである。もともと、運動方程式の右辺はポテンシャルエネルギーというスカラー関数で表現できていた。スカラー関数は変数変換に強く、異なる座標で表現しても、その座標で微分すれば、その方向の力を得ることができる。今回、運動エネルギーも「ポテンシャル」だと思って、運動方程式の左辺を記述した。従って、こちらも座標変換がやりやすくなることが予想される。ラグランジアンは、運動エネルギー、ポテンシャルエネルギーを合わせた、運動全体を記述するポテンシャルであることから、運動ポテンシャルと呼ばれることもある。スカラー関数により運動を記述していることから、本質的にベクトルに関する微分方程式であるニュートンの運動方程式よりも座標変換に強くなる。この事実は、後に点変換に対する共変性として示される。</p>
                                     <h1
                                     id="ダランベールの原理">ダランベールの原理</h1>
                                     <p>さて、発見法的に導出したラグランジアンを、もう少し理論的に導出しよう。仮想仕事の原理は、力が釣り合っており物体が静止している場合、すなわち静力学に適用する原理であった。これを動力学に応用することでラグランジアンが得られる。そのため、仮想仕事の原理の動力学版であるダランベールの原理について述べる。</p>
-                                    <p>ニュートンの運動方程式から始めよう。</p>
+                                    <p>ニュートンの運動方程式から始めよう。簡単のため、一次元空間の運動を考える。</p>
                                     <p><span class="math display">\[
-                                    m \frac{d^2x}{dt^2} = F
+                                    m \dot{v} = F
                                     \]</span></p>
-                                    <p>ここで、運動方程式の二階微分が扱いづらいので、新たな変数<span
-                                    class="math inline">\(v\)</span>を用いて一階の連立微分方程式にしておく。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{dx}{dt} &amp;= v \\
-                                    m \frac{dv}{dt} &amp;= F
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>この微分方程式の気持ちは、運動方程式を<span
-                                    class="math inline">\(v\)</span>に関する一階の微分方程式に落とす代わりに、<span
-                                    class="math inline">\(x\)</span>に関する時間微分が<span
-                                    class="math inline">\(v\)</span>であるという条件の中で解を探しなさい、というものだ。</p>
                                     <p>仮想仕事の原理では物体は静止していたために左辺はゼロであったが、今回は動いている場合を扱うのでゼロではない。さて、この運動方程式の左辺を右辺に移項しよう。</p>
                                     <p><span class="math display">\[
-                                    0 = - m \frac{dv}{dt} + F
+                                    0 = - m \dot{v} + F
                                     \]</span></p>
                                     <p>ここで、慣性項<span
                                     class="math inline">\(m
                                     v/dt\)</span>を力とみなすと、式の上では力が釣り合っているかのように見える。これを<strong>ダランベールの原理(d’Alembert’s
                                     principle)</strong>
-                                    と呼ぶ。見かけ上、力が釣り合っているのであるから、静力学における仮想仕事の原理が適用できそうである。そこで、右辺を仮想的な力であるとみなし、<span
+                                    と呼ぶ。見かけ上、力が釣り合っているのであるから、静力学における仮想仕事の原理が適用できそうである。もし、<span
+                                    class="math inline">\((x,
+                                    v)\)</span>が運動方程式を満たさなければ、上記は<span
+                                    class="math inline">\(0\)</span>からずれる。そこで、右辺を仮想的な力であるとみなし、<span
                                     class="math inline">\(F_D\)</span>とおく。</p>
                                     <p><span class="math display">\[
-                                    F_D = - m \frac{dv}{dt} + F
+                                    F_D = - m \dot{v} + F
                                     \]</span></p>
                                     <p>そして、力<span
                                     class="math inline">\(F_D\)</span>が働いている状態で、拘束条件を破らない仮想変位
@@ -186,113 +189,96 @@
                                     <p><span class="math display">\[
                                     W = F_D \delta x
                                     \]</span></p>
-                                    <p>いま、<span
+                                    <p>もし、もともとの軌道<span
+                                    class="math inline">\((x,v)\)</span>が運動方程式を満たしている場合は<span
                                     class="math inline">\(F_D=0\)</span>であったのだから、この力のする仮想仕事はゼロである。</p>
                                     <p><span class="math display">\[
-                                    W = (- m \frac{dv}{dt} + F) \delta x
-                                    = 0
+                                    W = (- m \dot{v} + F) \delta x = 0
                                     \]</span></p>
-                                    <p>これもダランベールの原理と呼ぶ。すなわちダランベールの原理とは、加速度がゼロでない時に、慣性項を移項することで、あたかも力であるように解釈し、その上で仮想仕事の原理を適用しようとするものである。</p>
-                                    <p>特に、力が保存力である場合を考えると、</p>
+                                    <p>これもダランベールの原理と呼ぶ。すなわちダランベールの原理とは、加速度がゼロでない時に、慣性項を移項することで、あたかも力であるように解釈し、その上で仮想仕事の原理を適用しようとするものである。ただし、速度の項があるため、静力学の場合は「力が釣り合っている時」だったのに対し、動力学の場合は「速度と位置が運動方程式の解である時」という条件に変わっていることに注意。</p>
+                                    <p>力が保存力である場合、</p>
                                     <p><span class="math display">\[
                                     F(x) = -U&#39;(x)
                                     \]</span></p>
                                     <p>であるから、</p>
                                     <p><span class="math display">\[
-                                    W = - m \frac{dv}{dt}\delta x  -U(x)
+                                    W = - m \dot{v} \delta x  -U(x)
                                     \delta x = 0
                                     \]</span></p>
+                                    <p>となる。</p>
+                                    <p>さて、静力学における仮想仕事の原理では、釣り合いの位置<span
+                                    class="math inline">\(x\)</span>からの仮想的な変位<span
+                                    class="math inline">\(x \rightarrow
+                                    x + \delta
+                                    x\)</span>を考えた。動力学では、運動方程式を満たすような解<span
+                                    class="math inline">\(x(t)\)</span>から、少しだけずれたような軌道<span
+                                    class="math inline">\(x(t) + \delta
+                                    x(t)\)</span>での運動を考える。すなわち、時間依存するような仮想変位<span
+                                    class="math inline">\(\delta
+                                    x(t)\)</span>を考える。この時、ポテンシャルの変化は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \delta U &amp;\equiv U(x+\delta x) -
                                     U(x) \\
-                                    &amp;= U&#39;(x) \delta x\\
-                                    &amp;= -F \delta x
+                                    &amp;= U&#39;(x) \delta x +O(\delta
+                                    x^2)\\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>最終的にダランベールの原理は以下のように書ける。</p>
+                                    <p>で与えられる。これを用いると、最終的にダランベールの原理は以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    W = - m \frac{dv}{dt}\delta x
-                                    -\delta U = 0
-                                    \]</span></p>
-                                    <p>さて、静力学における仮想仕事の原理では、釣り合いの位置<span
-                                    class="math inline">\(x\)</span>において力<span
-                                    class="math inline">\(F(x)\)</span>がゼロである、すなわち</p>
-                                    <p><span class="math display">\[
-                                    F(x) = 0
-                                    \]</span></p>
-                                    <p>という条件を、<span
-                                    class="math inline">\(F(x) = -
-                                    U&#39;(x)\)</span>を満たすポテンシャル関数<span
-                                    class="math inline">\(U(x)\)</span>を考え、</p>
-                                    <p><span class="math display">\[
-                                    \delta U \equiv U(x+\delta) - U(x) =
+                                    W = - m \dot{v}\delta x -\delta U =
                                     0
                                     \]</span></p>
-                                    <p>を満たす<span
-                                    class="math inline">\(x\)</span>を探せ、という条件に読み替えた。これにより、「位置に依存するベクトル量である力<span
-                                    class="math inline">\(F(x)\)</span>がゼロになる<span
-                                    class="math inline">\(x\)</span>を探せ」という問題が、「あるスカラー関数の最小値を取るような<span
-                                    class="math inline">\(x\)</span>を探せ」という問題に読み替えられた。</p>
-                                    <p>動力学においても同様な手続きを考える。すなわち、「ある時刻において、<span
-                                    class="math inline">\(\dot{x} =
-                                    v\)</span>という条件を満たす変数の組<span
-                                    class="math inline">\((v,
-                                    x)\)</span>について、運動方程式を満たすものを探せ。」という問題を、「あるスカラー関数を最小化するような速度<span
-                                    class="math inline">\(v\)</span>と位置<span
-                                    class="math inline">\(x\)</span>を探せ。ただし<span
-                                    class="math inline">\(v,x\)</span>は<span
-                                    class="math inline">\(\dot{x} =
-                                    v\)</span>という条件を満たすものとする。」という問題に帰着させたい。そのために、保存力の場合のダランベールの原理をもう一度眺めてみる。</p>
+                                    <p>したがって、</p>
                                     <p><span class="math display">\[
-                                    W = - m \frac{dv}{dt}\delta x
-                                    -\delta U = 0
+                                    \delta U = - m \dot{v}\delta x
                                     \]</span></p>
-                                    <p><span
+                                    <p>である。</p>
+                                    <p>左辺の<span
                                     class="math inline">\(\delta
                                     U\)</span>とは、位置が<span
                                     class="math inline">\(x\)</span>から<span
                                     class="math inline">\(x + \delta
-                                    x\)</span>に移動した時のポテンシャルエネルギーの変化分である。これを、ポテンシャルエネルギーの変化が、運動エネルギーの変化に吸収されたと解釈したいので、運動エネルギーの変化を考える。運動エネルギーを速度<span
+                                    x\)</span>に移動した時のポテンシャルエネルギーの変化分である。右辺は、いかにも運動エネルギーの変化分を表しているように見える。そこで、運動方程式の解から軌道が少しずれた時の、運動エネルギーの変化分を考えよう。運動エネルギーを速度<span
                                     class="math inline">\(v\)</span>の関数</p>
                                     <p><span class="math display">\[
                                     K(v) = \frac{1}{2}mv^2
                                     \]</span></p>
-                                    <p>とする。いま、位置<span
-                                    class="math inline">\(x\)</span>、速度<span
-                                    class="math inline">\(v\)</span>を持つ物体が、運動方程式に従って運動した結果、位置が<span
-                                    class="math inline">\(x+\delta
-                                    x\)</span>、速度が <span
-                                    class="math inline">\(v + \delta
-                                    v\)</span>に変化したと考えると、運動エネルギーの変化は以下で与えられる。</p>
+                                    <p>とする。いま、運動方程式の解として<span
+                                    class="math inline">\(x(t)\)</span>が与えられたとしよう。すると、速度の時間依存性は<span
+                                    class="math inline">\(v =
+                                    \dot{x}\)</span>で与えられる。この運動方程式の解から、少しだけずれた軌道<span
+                                    class="math inline">\(X(t) = x(t) +
+                                    \delta
+                                    x(t)\)</span>を考える。新しい軌道における速度を<span
+                                    class="math inline">\(V(t) = v(t) +
+                                    \delta v(t)\)</span>とすると、<span
+                                    class="math inline">\(\delta
+                                    x\)</span>と<span
+                                    class="math inline">\(\delta
+                                    v\)</span>は</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\delta v = \delta x
+                                    \]</span></p>
+                                    <p>を満たす。さて、新しい軌道ともとの軌道での運動エネルギーの変化<span
+                                    class="math inline">\(\delta
+                                    K\)</span>は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \delta K &amp;\equiv K(v+\delta v) -
                                     K(v) \\
                                     &amp;=K&#39;(v) \delta v \\
-                                    &amp;= mv \delta v
+                                    &amp;= mv \delta v \\
+                                    &amp;= mv \frac{d}{dt} \delta x
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>変化前の位置と速度、変化後の位置と速度がそれぞれ運動方程式を満たしていることから、</p>
+                                    <p>先ほど得られたダランベールの原理</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{dx}{dt} &amp;= v \\
-                                    \frac{d}{dt}(x+\delta x) &amp;= v +
-                                    \delta v
-                                    \end{aligned}
+                                    \delta U = - m \dot{v} \delta x
                                     \]</span></p>
-                                    <p>したがって、</p>
-                                    <p><span class="math display">\[
-                                    \delta v = \frac{d}{dt} \delta x
-                                    \]</span></p>
-                                    <p>が満たされる。これを運動エネルギーの変化に代入すると、以下を得る。</p>
-                                    <p><span class="math display">\[
-                                    \delta K = m v \frac{d}{dt} \delta x
-                                    \]</span></p>
-                                    <p>これと、仮想仕事の運動エネルギーに由来すると思われる項
-                                    <span class="math inline">\(-m
-                                    (dv/dt) \delta x\)</span>
-                                    を見比べると、部分積分したくなるであろう。これによりラグランジアンが導入される。</p>
+                                    <p>と比較すると、部分積分したら<span
+                                    class="math inline">\(\delta
+                                    K\)</span>になることがわかるであろう。これによりラグランジアンが導入される。</p>
                                     <h1
                                     id="ハミルトンの原理とラグランジアン">ハミルトンの原理とラグランジアン</h1>
                                     <p>時刻<span
@@ -318,13 +304,15 @@
                                     </figure>
                                     <p>ここで、<span
                                     class="math inline">\(t=t_1\)</span>と<span
-                                    class="math inline">\(t=t_2\)</span>における運動エネルギーを固定したまま、運動が少しずれた経路
+                                    class="math inline">\(t=t_2\)</span>における位置と速度<span
+                                    class="math inline">\((x(t),
+                                    v(t))\)</span>を固定したまま、運動が少しずれた経路
                                     <span class="math inline">\(X(t) =
                                     x(t) + \delta
                                     x(t)\)</span>を辿ったと仮定する。ここで、<span
                                     class="math inline">\(\delta
                                     x(t)\)</span>
-                                    は適当な時間の関数である。<span
+                                    は時間依存する仮想変位である。<span
                                     class="math inline">\(X(t)\)</span>
                                     は時間の関数であるから、時間微分することで少しずれた経路における速度<span
                                     class="math inline">\(V(t)\)</span>が得られる。それを</p>
@@ -337,19 +325,19 @@
                                     \]</span></p>
                                     <p>であることから、</p>
                                     <p><span class="math display">\[
-                                    \delta v(t) = \frac{d}{dt}\delta (x)
+                                    \delta v(t) = \frac{d}{dt}\delta
+                                    x(t)
                                     \]</span></p>
-                                    <p>が成り立つことがわかる。さて、経路がずれたときの、この時の運動エネルギーの変化分の積分値を計算してみよう。</p>
+                                    <p>が成り立つことがわかる。さて、経路がずれたときの、この時の運動エネルギーの変化分の積分値を計算してみよう。先ほど求めたように</p>
+                                    <p><span class="math display">\[
+                                    \delta K = mv \frac{d}{dt} \delta x
+                                    \]</span></p>
+                                    <p>であったから</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \delta \int_{t_1}^{t_2} K dt &amp;=
-                                    \int_{t_1}^{t_2}  \delta K dt \\
-                                    &amp;= \int_{t_1}^{t_2} \left(
-                                    K(v+\delta v) - K(v)\right) dt \\
-                                    &amp;= \int_{t_1}^{t_2} K&#39;(v)
-                                    \delta v dt \\
-                                    &amp;= \int_{t_1}^{t_2} m v \delta v
-                                    dt \\
+                                    \delta \int_{t_1}^{t_2} K dt
+                                    &amp;\equiv \int_{t_1}^{t_2}  \delta
+                                    K dt \\
                                     &amp;= \int_{t_1}^{t_2} m v
                                     \frac{d}{dt} \left(\delta x\right)
                                     dt \\
@@ -359,8 +347,8 @@
                                     \]</span></p>
                                     <p>ここで、最後に部分積分を用いた。さて、ダランベールの原理により、</p>
                                     <p><span class="math display">\[
-                                    - m \frac{dv}{dt} \delta x =  \delta
-                                    U
+                                    \delta U = - m \frac{dv}{dt} \delta
+                                    x
                                     \]</span></p>
                                     <p>であったから、</p>
                                     <p><span class="math display">\[
@@ -375,14 +363,16 @@
                                     class="math inline">\(L(x,
                                     v)\)</span>を</p>
                                     <p><span class="math display">\[
-                                    L(x, \dot{x}) = K(\dot{x}) - U(x)
+                                    L(x, v) = K(v) - U(x)
                                     \]</span></p>
-                                    <p>で定義し、それを時間積分した量を考える。</p>
+                                    <p>で定義し、それを時間積分した量<span
+                                    class="math inline">\(I\)</span>を考える。</p>
                                     <p><span class="math display">\[
-                                    I = \int_{t_1}^{t_2} L(x, \dot{x})dt
+                                    I = \int_{t_1}^{t_2} L(x, v)dt
                                     \]</span></p>
-                                    <p>いま示したことは、もし<span
-                                    class="math inline">\(x(t)\)</span>が運動方程式の解であるならば、上記の積分が任意の微小変化<span
+                                    <p>もし<span
+                                    class="math inline">\((x(t),
+                                    v(t))\)</span>が運動方程式の解であるならば、上記の積分が、運動方程式の解の経路からの微小変化<span
                                     class="math inline">\(x(t)
                                     \rightarrow x(t) + \delta
                                     x(t)\)</span>に対して一次のオーダーで変化がゼロ、すなわち、</p>
@@ -406,18 +396,20 @@
                                     <p><span
                                     class="math inline">\(U(x)\)</span>を最小にする<span
                                     class="math inline">\(x\)</span>を探せ、という問題に読み替えた。</p>
-                                    <p>動力学でも同様に、ダランベールの原理から</p>
+                                    <p>動力学でも同様に、ダランベールの原理から、運動方程式の解である<span
+                                    class="math inline">\((x(t),
+                                    v(t))\)</span>を探せ、という問題が、</p>
                                     <p><span class="math display">\[
                                     L(x, v) = K(v) - U(x)
                                     \]</span></p>
-                                    <p>という量を考え、その積分の最小値を与えるような<span
-                                    class="math inline">\((v(t),x(t))\)</span>の組を探す問題に帰着させる。静力学では時間変化がなかったので積分変数は<span
-                                    class="math inline">\(x\)</span>であったが、動力学では位置と速度が変化するため積分変数は<span
-                                    class="math inline">\(t\)</span>となる。</p>
+                                    <p>という量を考え、その時間積分の</p>
                                     <p><span class="math display">\[
                                     I = \int L(x, v) dt
                                     \]</span></p>
-                                    <p>この量<span
+                                    <p>の最小値を与えるような軌道<span
+                                    class="math inline">\((x(t),v(t))\)</span>を探す問題に帰着した。静力学では時間変化がなかったので積分変数は<span
+                                    class="math inline">\(x\)</span>であったが、動力学では位置と速度が変化するため積分変数は<span
+                                    class="math inline">\(t\)</span>となる。この量<span
                                     class="math inline">\(I\)</span>を
                                     <strong>作用
                                     (action)</strong>、この積分を作用積分と呼び、作用積分を与えるような被積分関数<span
@@ -473,8 +465,8 @@
                                     <p>三次元系におけるラグランジアンが以下のように与えられているとする。</p>
                                     <p><span class="math display">\[
                                     L(x,y,z,\dot{x},\dot{y},\dot{z}) =
-                                    K(\dot{x},\dot{y},\dot{z})
-                                    - U(x,y,z)
+                                    K(\dot{x},\dot{y},\dot{z}) -
+                                    U(x,y,z)
                                     \]</span></p>
                                     <p>ただし<span
                                     class="math inline">\(K\)</span>は運動エネルギーであり、</p>
@@ -502,20 +494,19 @@
                                     \frac{\partial U}{\partial x}
                                     \]</span></p>
                                     <p>これは、ユークリッド空間において、自由な質点がポテンシャル<span
-                                    class="math inline">\(U\)</span>に起因する保存力に従って運動する様子を表現している。すなわち、先程のラグランジアンはそのような運動を表現していた。</p>
-                                    <p>全く同様な手続きで、自由度<span
+                                    class="math inline">\(U\)</span>に起因する保存力に従って運動する様子を表現している。すなわち、先程のラグランジアンはそのような運動を表現していた。全く同様な手続きで、自由度<span
                                     class="math inline">\(y\)</span>や<span
                                     class="math inline">\(z\)</span>についての運動方程式も求めることができる。すなわち、3つの自由度<span
                                     class="math inline">\(x,y,z\)</span>が従う3本の運動方程式が、ただ1つのスカラー関数<span
                                     class="math inline">\(L(x, y,z,
                                     \dot{x},
                                     \dot{y},\dot{z})\)</span>から導かれた。</p>
-                                    <p>一般に、<span
+                                    <p>ここでは、ユークリッド空間における自由な質点の運動を記述したが、拘束条件があったり、極座標のような一般の座標でも全く同様に、ラグランジアン一つから必要な数の運動方程式を生み出すことができる。一般に、<span
                                     class="math inline">\(N\)</span>自由度系を考える。この系の配位空間は、<span
                                     class="math inline">\(N\)</span>個の一般化座標<span
                                     class="math inline">\(q^1, q^2,
                                     \cdots,
-                                    q^N\)</span>で記述されている。もしこの系のラグランジアン<span
+                                    q^N\)</span>で記述されている。これは、例えば剛体振り子のように、拘束条件がある場合に、それを考慮したような変数で記述されている場合を含む。もしこの系のラグランジアン<span
                                     class="math inline">\(L(q^1, q^2,
                                     \cdots, q^N,
                                     \dot{q}^1,\dot{q}^2,\cdots,
@@ -528,8 +519,7 @@
                                     \quad (i=1,2,\cdots, N)
                                     \]</span></p>
                                     <p>で与えられる。すなわち、たった一つのスカラー関数に<span
-                                    class="math inline">\(N\)</span>本の運動方程式の情報が含まれている。ただし、後の便利のために右辺を左辺に移項し、右辺をゼロとおいた。</p>
-                                    <p>ここでは、ユークリッド空間における自由な質点の運動を記述したが、拘束条件があったり、極座標のような一般の座標でも全く同様に、ラグランジアン一つから必要な数の運動方程式を生み出すことができる。</p>
+                                    class="math inline">\(N\)</span>本の運動方程式の情報が含まれている。</p>
                                     <h1 id="極座標の例">極座標の例</h1>
                                     <p>ラグランジアンで記述すると変数変換に強くなる例として、二次元空間における自由運動を例に挙げよう。ラグランジアンは、運動エネルギーとポテンシャルエネルギーの差を取れば良い。今回は自由運動を考えるのでポテンシャルエネルギーはゼロである。ユークリッド座標<span
                                     class="math inline">\((x,y)\)</span>で記述すると運動エネルギーは、</p>
