@@ -319,6 +319,32 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>のように、基底の変換とベクトルの変換のチルダのある方が同じ側に来ることがわかる。このような変換をするベクトルを共変ベクトルと呼ぶ。すなわち、横ベクトルは縦ベクトルの基底変換に対して共変性を持つ。</p>
+                                    <p>さて、もともとの基底の変換則は以下で与えられていた。</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\mathbf{e}}_i = T^k_{\,i}
+                                    \mathbf{e}_k.
+                                    \]</span></p>
+                                    <p>これを両辺転置してみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    {}^t(\tilde{\mathbf{e}}_i) &amp;=
+                                    {}^t(T^k_{\,i} \mathbf{e}_k)\\
+                                    \tilde{\mathbf{e}}^i &amp;=
+                                    ({}^tT)^i_k \mathbf{e}^k
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\mathbf{e}}^i = M^i_k
+                                    \mathbf{e}^k
+                                    \]</span></p>
+                                    <p>であったから、<span
+                                    class="math inline">\({}^tT =
+                                    M\)</span>である。先程<span
+                                    class="math inline">\(M=T^{-1}\)</span>であることを証明したので、<span
+                                    class="math inline">\({}^tT =
+                                    T^{-1}\)</span>、すなわち変換行列<span
+                                    class="math inline">\(T\)</span>は転置を取ると逆行列になることがわかる。この性質を持つ行列を直交行列、この行列による変換を直交変換と呼ぶ。このように、正規直交基底から正規直交基底へ変換する行列は直交行列となる。</p>
                                     <p>解析力学においては線形でない基底変換も考慮するが、非線形な変換であってもある点の近傍で展開すれば線形変換とみなすことができる。非線形な座標変換の典型例がデカルト座標から極座標への変換である。例えば<span
                                     class="math inline">\((x,y)\)</span>と<span
                                     class="math inline">\((r,\theta)\)</span>の変換を考えよう。</p>
@@ -545,7 +571,6 @@
                                     {}^t T= T^{-1}
                                     \]</span></p>
                                     <p>を満たす。</p>
-                                    <p>TODO: 証明を追加。</p>
                                     <p>既に見たように、位置ベクトルは反変ベクトルであり、以下の様に変換される。</p>
                                     <p><span class="math display">\[
                                     x^i = T^i_j \tilde{x}^j
@@ -614,11 +639,11 @@
                                     \]</span></p>
                                     <p>従って、<span
                                     class="math inline">\(m \ddot{x}^j -
-                                    F_j =
-                                    0\)</span>が成り立つなら、<span
+                                    F_j = 0\)</span>
+                                    が成り立つなら、<span
                                     class="math inline">\(m\ddot{\tilde{x}^i}
-                                    - \tilde{F}_i\)</span>=0<span
-                                    class="math inline">\(も成り立つ。すなわち、ニュートンの運動方程式は直交変換\)</span>T$に対して共変である。このように、何かが変換に対して共変であることを示したいとき、成り立つべき式がゼロとなるような形を作っておき、右辺がゼロなので左辺もゼロ、という論法をよく使うので気に留めておくとよい。</p>
+                                    - \tilde{F}_i\)</span>=0$
+                                    も成り立つ。すなわち、ニュートンの運動方程式は直交変換に対して共変である。このように、何かが変換に対して共変であることを示したいとき、成り立つべき式がゼロとなるような形を作っておき、右辺がゼロなので左辺もゼロ、という論法をよく使うので気に留めておくとよい。</p>
                                     <p>ここで、
                                     <strong>共変性(covaiance)</strong>
                                     は
@@ -647,60 +672,34 @@
                                     \]</span></p>
                                     <p>運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。</p>
                                     <p>ニュートンの運動方程式は直交変換及びガリレイ変換に対して共変である。ガリレイ変換は、ある慣性系に対して加速度を持たない別の慣性系への座標変換を表現している。ニュートンの運動方程式がガリレイ変換により共変であるとは、ニュートンの運動方程式がすべての慣性系において同じ形をしていることを意味する。これは逆に、「どの慣性系から見ても同じ運動法則が成り立つようにニュートンの運動方程式が構成されている」と考えることもできる。「どの慣性系から見ても同じ運動法則が成り立つ」という要請をガリレイの相対性原理と呼ぶ。一方、電磁場の基礎方程式であるマクスウェルの方程式は、ガリレイ変換に対して共変ではないが、ローレンツ変換に対して共変性を持つ。ローレンツ変換において、物体の速度が光速に対して無視できるという近似をするとガリレイ変換に帰着する。アインシュタインは運動方程式やマクスウェル方程式を含む全ての物理法則が、あらゆる慣性系から同じように見えなければならないという原理を要請することで、特殊相対性理論を用いた。この要請を特殊相対性原理と呼ぶ。</p>
-                                    <p>一般に、物理法則を記述する支配方程式がどのような変換に対して共変であるかを議論するのは重要である。例えば二次元空間を<span
-                                    class="math inline">\((x^1,
-                                    x^2)\)</span>を考えた時、座標変換<span
-                                    class="math inline">\((x^1, x^2)
-                                    \rightarrow (\tilde{x}^1,
-                                    \tilde{x}^2)\)</span>がガリレイ変換であれば、変換後の座標においてもニュートンの運動方程式の形は変わらない。</p>
+                                    <p>ニュートンの運動方程式が直交変換及びガリレイ変換で共変であることを見たが、一般の変換に対しては共変ではない。簡単な例として、一次元空間の保存力による運動</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{x} = F = - \frac{dU}{dx}
+                                    \]</span></p>
+                                    <p>を考えよう。いま、座標を定数倍する<span
+                                    class="math inline">\(\tilde{x} = a
+                                    x\)</span>という変換を考える。運動方程式の左辺は</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{\tilde{x}} = a m \ddot{x}
+                                    \]</span></p>
+                                    <p>という変換を受ける。一方、右辺は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \frac{d^2 \tilde{x}^i}{dt^2}
-                                    &amp;= - \frac{\partial U}{\partial
-                                    \tilde{x}^i}
+                                    \tilde{F} &amp;=
+                                    -\frac{dU}{d\tilde{x}}\\
+                                    &amp;=
+                                    \underbrace{-\frac{dU}{dx}}_{F}
+                                    \underbrace{\frac{dx}{d\tilde{x}}}_{1/a}
+                                    \\
+                                    &amp;= \frac{1}{a}F
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>しかし、極座標への変換においては、ニュートンの運動方程式は共変ではない。二次元平面中の質点の運動方程式を考えよう。ユークリッド座標の場合は</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m\ddot{x} &amp;= F_x\\
-                                    m\ddot{y} &amp;= F_y\\
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>と書ける。いま、力が保存力である場合、ポテンシャル<span
-                                    class="math inline">\(U(x,y)\)</span>が存在し、運動方程式は以下のように書ける。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m\ddot{x} &amp;= -\frac{\partial
-                                    U}{\partial x}\\
-                                    m\ddot{y} &amp;= -\frac{\partial
-                                    U}{\partial y}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>ここで、極座標への変換<span
-                                    class="math inline">\((x,y)
-                                    \rightarrow (r,
-                                    \theta)\)</span>を考える。もしもニュートンの運動方程式がこの変換で共変であれば、新しい座標系で運動方程式は以下のように書けるはずだ。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m\ddot{r} &amp;= - \frac{\partial
-                                    U}{\partial r}\\
-                                    m\ddot{\theta} &amp;=-
-                                    \frac{\partial U}{\partial \theta}\\
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>しかし、残念ながら上記の式は成り立たない。実際には、後に導出するように、以下の様な式となる。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m(\ddot{r} -r\dot{\theta}^2)&amp;= -
-                                    \frac{\partial U}{\partial r}\\
-                                    m\frac{d}{dt}(r^2 \dot{\theta})
-                                    &amp;=- r \frac{\partial U}{\partial
-                                    \theta}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>この運動方程式をユークリッド座標の運動方程式から導出するのは面倒だ。</p>
-                                    <p>異なる座標系に移るのは、その方が便利であるからだ。中心力が働く系であれば、極座標で表示した方が式が簡略化される。しかし、座標変換に伴い、いちいち運動方程式を発見法的に変形するのは面倒である。そこで、なるべく広い座標変換に対して形を変えない運動方程式の表式があれば便利だ。今後学ぶラグランジュ形式の力学、ハミルトン形式の力学は、ニュートンの運動方程式よりも広いタイプの座標変換に対して共変であることを見ていく。</p>
+                                    <p>つまり、<span
+                                    class="math inline">\(m\ddot{x} =
+                                    F\)</span>が成り立っていても、<span
+                                    class="math inline">\(m\ddot{\tilde{x}}
+                                    =
+                                    \tilde{F}\)</span>は成立しない。このように、直交変換でない変換についてはニュートンの運動方程式は共変ではない。極座標への変換も、ニュートンの運動方程式が共変でない座標変換である。極座標はよく使うので、運動方程式が共変でないといろいろ面倒だ。そこで、より広いクラスの変換に対して共変な運動方程式を使いたくなる。それが後に学ぶラグランジュ形式や、ハミルトン形式の運動方程式である。</p>
                                     <h1 id="保存則">保存則</h1>
                                     <p>ニュートンの運動方程式から得られる帰結として、いくつかの保存則を発見法的に導いておこう。</p>
                                     <h2
@@ -737,8 +736,9 @@
                                     E = \frac{1}{2}m\dot{x}^2 +
                                     \frac{1}{2} k x^2
                                     \]</span></p>
-                                    <p>が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を保存量(Conserved
-                                    value)と呼ぶ。この<span
+                                    <p>が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を
+                                    <strong>保存量(Conserved
+                                    value)</strong> と呼ぶ。この<span
                                     class="math inline">\(E\)</span>をエネルギーと呼び、エネルギーが時間変化しないことをエネルギー保存則と呼ぶ。すなわち、エネルギーとは運動方程式の保存量の一つであり、エネルギー保存則は運動方程式の持つ性質の一つに過ぎない。</p>
                                     <p>ここで、</p>
                                     <p><span class="math display">\[
@@ -760,9 +760,12 @@
                                     <p><span class="math display">\[
                                     E = \frac{1}{2} m \dot{x}^2 + U(x)
                                     \]</span></p>
-                                    <p>このうち、右辺第一項を運動エネルギー(Kinetic
-                                    Energy)と呼び、<span
-                                    class="math inline">\(K\)</span>で表すことが多い。左辺第二項をポテンシャルエネルギーと呼び、<span
+                                    <p>このうち、右辺第一項を
+                                    <strong>運動エネルギー(Kinetic
+                                    Energy)</strong> と呼び、<span
+                                    class="math inline">\(K\)</span>で表すことが多い。左辺第二項を
+                                    <strong>ポテンシャルエネルギー(Potential
+                                    Energy)</strong> と呼び、<span
                                     class="math inline">\(U\)</span>で表すことが多い。一般的、物体に働く力が全てポテンシャルから引き出される場合、運動エネルギーとポテンシャルエネルギーの和である全エネルギーが必ず保存量となる。</p>
                                     <figure>
                                     <img src="fig/fall.png"
