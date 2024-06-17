@@ -242,7 +242,7 @@ $$
     $\mathbf{v} + (- \mathbf{v}) = 0$
 1. スカラーの乗法がベクトルに対して分配律を満たす
     $a (\mathbf{u} + \mathbf{v}) = a \mathbf{u} + a \mathbf{v}$
-1. スカラーの加法と乗法が分配率を満たす
+1. スカラーの加法と乗法が分配律を満たす
     $(a+b) \mathbf{u} = a \mathbf{u} + b \mathbf{u}$
 1. スカラーとベクトルの乗法とスカラー同士の乗法が結合律を満たす
     $a(b\mathbf{u}) = (ab) \mathbf{u}$
