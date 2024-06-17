@@ -113,7 +113,7 @@ $$
 $$
 \begin{aligned}
 \ddot{x} &= \ddot{r} \cos \theta - 2\dot{r} \dot{\theta} \sin \theta - r\ddot{\theta} \sin \theta- r \dot{\theta}^2 \cos \theta \\
-\ddot{y} &= \ddot{r} \sin \theta + 2\dot{r} \dot{\theta} \cos \theta + r\ddot{\theta} \sin \theta- r \dot{\theta}^2 \sin \theta
+\ddot{y} &= \ddot{r} \sin \theta + 2\dot{r} \dot{\theta} \cos \theta + r\ddot{\theta} \cos \theta- r \dot{\theta}^2 \sin \theta
 \end{aligned}
 $$
 
