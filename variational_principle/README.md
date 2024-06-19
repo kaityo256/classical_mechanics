@@ -36,19 +36,19 @@ $$
 $T(x)$を最小化する$x$は$T'(x) = 0$を満たすはずであるから、
 
 $$
+T'(x) = \frac{l_A'}{v_A} + \frac{l_B'}{v_B} = 0
+$$
+
+ここで
+
+$$
 \begin{aligned}
 l_A'(x) &= \frac{x}{\sqrt{h_A^2 + x^2}} = \frac{x}{l_A} \\
-l_B'(x) &= \frac{-x}{\sqrt{h_B^2 + (L-x)^2}} = -\frac{L-x}{l_B}\\
+l_B'(x) &= \frac{-(L-x)}{\sqrt{h_B^2 + (L-x)^2}} = -\frac{L-x}{l_B}\\
 \end{aligned}
 $$
 
-に注意すると、
-
-$$
-T'(x) = \frac{x}{l_A v_A} - \frac{L-x}{l_B v_B} = 0
-$$
-
-ここで、境界の法線に対して直線AX、XBのなす角をそれぞれ$\theta_A$、$\theta_B$とすると、三角関数の定義から、
+である。境界の法線に対して直線AX、XBのなす角をそれぞれ$\theta_A$、$\theta_B$とすると、三角関数の定義から、
 
 $$
 \begin{aligned}
@@ -57,7 +57,13 @@ $$
 \end{aligned}
 $$
 
-これを用いて先程の式を書き直すと、
+従って、
+
+$$
+T'(x) = \frac{\sin \theta_A}{v_A} - \frac{\sin \theta_B}{v_B} = 0
+$$
+
+以上から、
 
 $$
 \frac{\sin \theta_A}{v_A} = \frac{\sin \theta_B}{v_B}
@@ -67,9 +73,9 @@ $$
 
 ![ホイヘンスの原理](fig/huygens.png)
 
-スネルの法則は、ホイヘンスの原理によっても説明できる。ホイヘンスの原理は、波の波面から二次波とよばれる新しい波が生じ、それらが強めあうところが次の波面となる、というもので、こちらはミクロな立場から屈折を説明する。
+スネルの法則は、ホイヘンスの原理によっても説明できる。ホイヘンスの原理は、波の波面から二次波とよばれる新しい波が生じ、それらが強めあうところが次の波面となる、というもので、こちらは局所的かつ逐次的な立場から屈折を説明する。
 
-一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、これは変分問題の最も簡単な例となっている。光の場合、到達時間ではなく光路長を考えるのが一般的である。媒質中の光は真空中よりも速度が遅くなる。そこで、真空中での光速を媒質中の光速で割ったものを、その媒質の屈折率と呼ぶ。真空中での光速を$c$とすると、屈折率$n_A$を持つ媒質Aの中での速度$v_A$は、屈折率の定義から
+一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、大域的に問題を捉えている。光の場合、到達時間ではなく光路長を考えるのが一般的である。媒質中の光は真空中よりも速度が遅くなる。そこで、真空中での光速を媒質中の光速で割ったものを、その媒質の屈折率と呼ぶ。真空中での光速を$c$とすると、屈折率$n_A$を持つ媒質Aの中での速度$v_A$は、屈折率の定義から
 
 $$
 v_A = \frac{c}{n_A}
@@ -129,7 +135,7 @@ $$
 $$
 \begin{aligned}
 T &= \sum_{k=0}^{N-1} \frac{l(x_k)}{v(x_k)} \\
-&= \frac{\sqrt{1 + (y'_k)^2}}{\sqrt{2gy_k}} \Delta x 
+&= \sum_{k=0}^{N-1}\frac{\sqrt{1 + (y'_k)^2}}{\sqrt{2gy_k}} \Delta x 
 \end{aligned}
 $$
 
@@ -163,7 +169,7 @@ $$
 \end{aligned}
 $$
 
-$\sin \theta = v C = C \sqrt{2gy}$を代入して整理すると、
+$\sin \theta = Cv = C \sqrt{2gy}$を代入して整理すると、
 
 $$
 \frac{dy}{dx} = - \sqrt{\frac{2a - y}{y}}
@@ -220,7 +226,7 @@ $$
 両辺積分すると、
 
 $$
-x = a (x-\sin s)
+x = a (s-\sin s)
 $$
 
 $y$と合わせて、以下の媒介変数表示での解を得る。
@@ -389,9 +395,7 @@ $$
 $$
 \begin{aligned}
 \delta I &= \int_a^b \left(\frac{\partial F}{\partial f} \delta f +  \frac{\partial F}{\partial g} \frac{d}{dx}(\delta f)   \right) dx \\
-&= \int_a^b \frac{\partial F}{\partial f} \delta f dx
-+ \left[\frac{\partial F}{\partial g} \delta f \right]_a^b
-- \int_a^b \frac{d}{dx}\left(\frac{\partial F}{\partial g}\right) \delta f dx\\
+&= \int_a^b \frac{\partial F}{\partial f} \delta f dx + \left[\frac{\partial F}{\partial g} \delta f \right]_a^b - \int_a^b \frac{d}{dx}\left(\frac{\partial F}{\partial g}\right) \delta f dx\\
 &= \int_a^b \left( \frac{\partial F}{\partial f} - \frac{d}{dx} \left(\frac{\partial F}{\partial g} \right)\right) \delta f dx
 \end{aligned}
 $$
@@ -557,6 +561,34 @@ $$
 $$
 
 が成り立つ。この式を **オイラー・ラグランジュ方程式(Euler-Laglange equation)** と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動法定式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。
+
+さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、
+
+$$
+B = L - \dot{x} \frac{\partial L}{\partial \dot{q}}
+$$
+
+が時間不変量となる。ここで、ラグランジアンが
+
+$$
+L(x,\dot{x}) = \frac{1}{2} m\dot{x}^2 - U(x)
+$$
+
+の形であったとすると、
+
+$$
+\begin{aligned}
+B &= L - \dot{x} \frac{\partial L}{\partial \dot{x}}\\
+&= \frac{1}{2} m\dot{x}^2 - U(x) - m\dot{x}^2\\
+&= - \left( \frac{1}{2} m\dot{x}^2 + U(x) \right)\\
+&= -E
+\end{aligned}
+$$
+
+すなわち、エネルギー保存則を表している。また、これは自由変数を$\dot{x}$から
+$p = \partial_$
+
+に
 
 ## 停留条件
 
