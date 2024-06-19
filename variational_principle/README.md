@@ -135,7 +135,7 @@ $$
 $$
 \begin{aligned}
 T &= \sum_{k=0}^{N-1} \frac{l(x_k)}{v(x_k)} \\
-&= \sum_{k=0}^{N-1}\frac{\sqrt{1 + (y'_k)^2}}{\sqrt{2gy_k}} \Delta x 
+&= \sum_{k=0}^{N-1}\frac{\sqrt{1 + (y'_k)^2}}{\sqrt{2gy_k}} \Delta x
 \end{aligned}
 $$
 
@@ -147,7 +147,7 @@ $$
 
 関数$y(x)$は、スカラー量を入力とし、スカラー量を返すものであった。先程の$T$は関数$y(x)$を入力とし、出力としてスカラー量が決まるため、「関数の関数」とみなすことができる。それを表現して$T[y]$と書くことがある。適当な境界条件のもとで$T[y]$を最小とするような関数$y(x)$を見つけよ、というのが最速降下曲線問題である。
 
-この問題を、汎関数微分を用いて解くというのが本章の目的だが、まずは物理的な考察で解いてみよう。曲線を折れ線で近似した状態を考える。$x_{k-1}$から$x_k$までの領域の速度は$v_{k-1}$であり、$x_k$から$x_{k+1}$までの速度が$v_k$であるから、入射角$\theta_{k-1}$と出射角$\theta_k$を定義するとスネルの法則と同じ議論により
+この問題を、汎関数微分を用いて解くというのが本章の目的だが、まずは幾何学的な考察で解いてみよう。曲線を折れ線で近似した状態を考える。$x_{k-1}$から$x_k$までの領域の速度は$v_{k-1}$であり、$x_k$から$x_{k+1}$までの速度が$v_k$であるから、入射角$\theta_{k-1}$と出射角$\theta_k$を定義するとスネルの法則と同じ議論により
 
 $$
 \frac{\sin \theta_{k-1}}{v_{k-1}} = \frac{\sin \theta_k}{v_k}
@@ -159,82 +159,66 @@ $$
 \frac{\sin \theta}{v} = C
 $$
 
-が場所に依らず成り立つ。ただし$C$は定数である。傾きと三角関数の定義から
+が場所に依らず成り立つ。ただし$C$は定数である。エネルギー保存則から
+
+$$
+v = \sqrt{2g y}
+$$
+
+であったから、
+
+$$
+2gC^2 y = \sin^2 \theta
+$$
+
+である。あとの便利のために$2gC^2 = 1/2a$とすると
+
+$$
+y = 2a \sin^2 \theta
+$$
+
+である。両辺$\theta$で微分すると
+
+$$
+\frac{dy}{d\theta} = 4 a \sin \theta \cos \theta
+$$
+
+となる。また、傾きと三角関数の定義から
 
 $$
 \begin{aligned}
 \frac{dy}{dx} &= \tan\left(\frac{\pi}{2} - \theta \right) \\
-&= - \frac{\cos \theta}{\sin \theta} \\
-&= - \frac{\sqrt{1-\sin^2 \theta}}{\sin \theta}
+&= \frac{\cos \theta}{\sin \theta}
 \end{aligned}
 $$
 
-$\sin \theta = Cv = C \sqrt{2gy}$を代入して整理すると、
-
-$$
-\frac{dy}{dx} = - \sqrt{\frac{2a - y}{y}}
-$$
-
-となる。ただし$a = 1/(4gC^2)$である。これを真面目に解いてみよう。
-
-$y = 2au$と変数変換すると、
-
-$$
-\frac{du}{dx} = - \frac{1}{2a} \sqrt{\frac{1-u}{u}}
-$$
-
-さらに
-
-$$
-\tan \frac{s}{2} = \sqrt{\frac{u}{1-u}}
-$$
-
-と変数変換すると、半角公式
-
-$$
-\tan^2 \frac{s}{2} = \frac{1 - \cos s}{1  + \cos s}
-$$
-
-を用いて、ただちに
-
-$$
-u = \frac{1 + \cos s}{2}
-$$
-
-と求まる。両辺を微分すると
+ここから$x$を$\theta$の関数として求めよう。
 
 $$
 \begin{aligned}
-du &= - \frac{\sin s}{2} ds \\
-&= - \sin \frac{s}{2} \cos \frac{s}{2} ds
+\frac{dx}{d\theta} &= \frac{dx}{dy} \frac{dy}{d\theta} \\
+&=\frac{\sin \theta}{\cos\theta}\left( 4 a \sin \theta \cos \theta\right) \\
+&= 4 a \sin^2 \theta \\
+&= 2 a (1 - \cos 2\theta)
 \end{aligned}
 $$
 
-$$
-du = - \frac{1}{2a} \frac{\cos \frac{s}{2}}{\sin \frac{s}{2}} dx
-$$
-
-であったから、$du$を消去して、
+両辺を$\theta$で積分すると
 
 $$
-\begin{aligned}
-dx &= 2a \sin^2 \frac{s}{2} ds \\
-&= a (1 - \cos s) ds
-\end{aligned}
+x = 2 a \left(\theta - \frac{1}{2} \sin \theta \right)
 $$
 
-両辺積分すると、
-
 $$
-x = a (s-\sin s)
+y = 2a \sin^2 \theta = a (1 - \cos 2 \theta)
 $$
 
-$y$と合わせて、以下の媒介変数表示での解を得る。
+であったから、$s = 2\theta$とすると
 
 $$
 \begin{aligned}
-x &= a (s-\cos s) \\
-y &= a (1 + \cos s) \\
+x &= a (s - \sin s) \\
+y &= a (1 - \cos s)
 \end{aligned}
 $$
 
@@ -469,18 +453,14 @@ $$
 $$
 
 が成り立たなければならない。$F$が$y$と$y'$の関数である時、
- 
+
 $$
 \frac{\delta F}{\delta y} \equiv \frac{\partial F}{\partial y} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'} \right)
 $$
 
-が成り立つのであるから、$F(y,y') = \sqrt{1+y'^2}/\sqrt{2gy}$ を代入して整理すると、計算は面倒だが最終的に幾何学的な考察から得られた微分方程式、
+が成り立つのであるから、$F(y,y') = \sqrt{1+y'^2}/\sqrt{2gy}$ を代入して整理すると、$y$が満たすべき微分方程式が得られる。
 
-$$
-\frac{dy}{dx} = - \sqrt{\frac{2a - y}{y}}
-$$
-
-を得る。しかし、今回のようなケースではベルトラミの公式を使うと計算が楽なので、解析力学の本筋からは外れてしまうが、参考までに紹介しておこう。$f(x)$および$f'(x)$に依存する関数$F(f,f')$がオイラー・ラグランジュの方程式
+ここで、計算の便利のためにベルトラミの公式を導出しておこう。$f(x)$および$f'(x)$に依存する関数$F(f,f')$がオイラー・ラグランジュの方程式
 
 $$
 \frac{d}{dt}\left(\frac{\partial F}{\partial f'}\right) - \frac{\partial F}{\partial f} = 0
@@ -526,10 +506,10 @@ F - y' \frac{\partial F}{\partial y'} &= \frac{\sqrt{1+y'^2}}{\sqrt{2gy}} - \fra
 \end{aligned}
 $$
 
-$y'$について整理すると(複号は負符号を採用した)、
+$y'$について整理すると、
 
 $$
-y' = - \sqrt{\frac{1 -2gC^2y}{2gC^2y}}
+y' =　\sqrt{\frac{1 -2gC^2y}{2gC^2y}}
 $$
 
 $2gC^2 = 1/2a$とすると、以下の微分方程式を得る。
@@ -537,6 +517,20 @@ $2gC^2 = 1/2a$とすると、以下の微分方程式を得る。
 $$
 \frac{dy}{dx} = -\sqrt{\frac{2a - y}{y}}
 $$
+
+これと、角度の定義
+
+$$
+\frac{dy}{dx} = \frac{\cos \theta}{\sin \theta}
+$$
+
+を合わせると、$y = 2a \sin^2 \theta$が結論される。これはスネルの法則
+
+$$
+\frac{\sin \theta }{v} = C
+$$
+
+に等価である。したがって、変分原理からスネルの法則が導かれた。
 
 このように、何か連続的な経路(この場合は斜面の形を表す関数$y(x)$)を与えると実数(この場合は通過時間)が決まるような問題は汎関数の最小化問題として定式化できることが多い。このような問題を変分問題と呼ぶ。被積分関数は、目的となる関数$f(x)$とその導関数の関数$F(f,f')$であることが多い。この時、最小化したい汎関数$I$について汎関数微分を行い、第一変分がゼロとなる、という条件から$f(x)$に関する微分方程式を得る。あとはこの微分方程式を解けば、目的の関数が得られる。この一連の手続きを変分法と呼ぶ。特に、汎関数$I$について、関数を少し変化させた時の変化分$\delta I$を変分と呼び、被積分関数$F$の変化分$\delta F$を計算することを「変分をとる」と呼ぶことが多い。
 
@@ -585,10 +579,7 @@ B &= L - \dot{x} \frac{\partial L}{\partial \dot{x}}\\
 \end{aligned}
 $$
 
-すなわち、エネルギー保存則を表している。また、これは自由変数を$\dot{x}$から
-$p = \partial_$
-
-に
+すなわち、エネルギー保存則を表している。また、これは自由変数を$\dot{x}$から$p = \partial_{\dot{x}}L$に取り直すルジャンドル変換をしたことに対応する。
 
 ## 停留条件
 

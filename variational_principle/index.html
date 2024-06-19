@@ -107,21 +107,21 @@
                                     class="math inline">\(T&#39;(x) =
                                     0\)</span>を満たすはずであるから、</p>
                                     <p><span class="math display">\[
+                                    T&#39;(x) = \frac{l_A&#39;}{v_A} +
+                                    \frac{l_B&#39;}{v_B} = 0
+                                    \]</span></p>
+                                    <p>ここで</p>
+                                    <p><span class="math display">\[
                                     \begin{aligned}
                                     l_A&#39;(x) &amp;=
                                     \frac{x}{\sqrt{h_A^2 + x^2}} =
                                     \frac{x}{l_A} \\
                                     l_B&#39;(x) &amp;=
-                                    \frac{-x}{\sqrt{h_B^2 + (L-x)^2}} =
-                                    -\frac{L-x}{l_B}\\
+                                    \frac{-(L-x)}{\sqrt{h_B^2 +
+                                    (L-x)^2}} = -\frac{L-x}{l_B}\\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>に注意すると、</p>
-                                    <p><span class="math display">\[
-                                    T&#39;(x) = \frac{x}{l_A v_A} -
-                                    \frac{L-x}{l_B v_B} = 0
-                                    \]</span></p>
-                                    <p>ここで、境界の法線に対して直線AX、XBのなす角をそれぞれ<span
+                                    <p>である。境界の法線に対して直線AX、XBのなす角をそれぞれ<span
                                     class="math inline">\(\theta_A\)</span>、<span
                                     class="math inline">\(\theta_B\)</span>とすると、三角関数の定義から、</p>
                                     <p><span class="math display">\[
@@ -132,7 +132,13 @@
                                     \\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>これを用いて先程の式を書き直すと、</p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    T&#39;(x) = \frac{\sin
+                                    \theta_A}{v_A} - \frac{\sin
+                                    \theta_B}{v_B} = 0
+                                    \]</span></p>
+                                    <p>以上から、</p>
                                     <p><span class="math display">\[
                                     \frac{\sin \theta_A}{v_A} =
                                     \frac{\sin \theta_B}{v_B}
@@ -144,8 +150,8 @@
                                     <figcaption
                                     aria-hidden="true">ホイヘンスの原理</figcaption>
                                     </figure>
-                                    <p>スネルの法則は、ホイヘンスの原理によっても説明できる。ホイヘンスの原理は、波の波面から二次波とよばれる新しい波が生じ、それらが強めあうところが次の波面となる、というもので、こちらはミクロな立場から屈折を説明する。</p>
-                                    <p>一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、これは変分問題の最も簡単な例となっている。光の場合、到達時間ではなく光路長を考えるのが一般的である。媒質中の光は真空中よりも速度が遅くなる。そこで、真空中での光速を媒質中の光速で割ったものを、その媒質の屈折率と呼ぶ。真空中での光速を<span
+                                    <p>スネルの法則は、ホイヘンスの原理によっても説明できる。ホイヘンスの原理は、波の波面から二次波とよばれる新しい波が生じ、それらが強めあうところが次の波面となる、というもので、こちらは局所的かつ逐次的な立場から屈折を説明する。</p>
+                                    <p>一方、我々が求めたのは、「始点と終点が指定されている時、最も到達時間が短くなる経路」であり、大域的に問題を捉えている。光の場合、到達時間ではなく光路長を考えるのが一般的である。媒質中の光は真空中よりも速度が遅くなる。そこで、真空中での光速を媒質中の光速で割ったものを、その媒質の屈折率と呼ぶ。真空中での光速を<span
                                     class="math inline">\(c\)</span>とすると、屈折率<span
                                     class="math inline">\(n_A\)</span>を持つ媒質Aの中での速度<span
                                     class="math inline">\(v_A\)</span>は、屈折率の定義から</p>
@@ -227,9 +233,9 @@
                                     \begin{aligned}
                                     T &amp;= \sum_{k=0}^{N-1}
                                     \frac{l(x_k)}{v(x_k)} \\
-                                    &amp;= \frac{\sqrt{1 +
-                                    (y&#39;_k)^2}}{\sqrt{2gy_k}} \Delta
-                                    x
+                                    &amp;= \sum_{k=0}^{N-1}\frac{\sqrt{1
+                                    + (y&#39;_k)^2}}{\sqrt{2gy_k}}
+                                    \Delta x
                                     \end{aligned}
                                     \]</span></p>
                                     <p>であるから、<span
@@ -249,7 +255,7 @@
                                     class="math inline">\(T[y]\)</span>と書くことがある。適当な境界条件のもとで<span
                                     class="math inline">\(T[y]\)</span>を最小とするような関数<span
                                     class="math inline">\(y(x)\)</span>を見つけよ、というのが最速降下曲線問題である。</p>
-                                    <p>この問題を、汎関数微分を用いて解くというのが本章の目的だが、まずは物理的な考察で解いてみよう。曲線を折れ線で近似した状態を考える。<span
+                                    <p>この問題を、汎関数微分を用いて解くというのが本章の目的だが、まずは幾何学的な考察で解いてみよう。曲線を折れ線で近似した状態を考える。<span
                                     class="math inline">\(x_{k-1}\)</span>から<span
                                     class="math inline">\(x_k\)</span>までの領域の速度は<span
                                     class="math inline">\(v_{k-1}\)</span>であり、<span
@@ -267,79 +273,67 @@
                                     \frac{\sin \theta}{v} = C
                                     \]</span></p>
                                     <p>が場所に依らず成り立つ。ただし<span
-                                    class="math inline">\(C\)</span>は定数である。傾きと三角関数の定義から</p>
+                                    class="math inline">\(C\)</span>は定数である。エネルギー保存則から</p>
+                                    <p><span class="math display">\[
+                                    v = \sqrt{2g y}
+                                    \]</span></p>
+                                    <p>であったから、</p>
+                                    <p><span class="math display">\[
+                                    2gC^2 y = \sin^2 \theta
+                                    \]</span></p>
+                                    <p>である。あとの便利のために<span
+                                    class="math inline">\(2gC^2 =
+                                    1/2a\)</span>とすると</p>
+                                    <p><span class="math display">\[
+                                    y = 2a \sin^2 \theta
+                                    \]</span></p>
+                                    <p>である。両辺<span
+                                    class="math inline">\(\theta\)</span>で微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{dy}{d\theta} = 4 a \sin \theta
+                                    \cos \theta
+                                    \]</span></p>
+                                    <p>となる。また、傾きと三角関数の定義から</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \frac{dy}{dx} &amp;=
                                     \tan\left(\frac{\pi}{2} - \theta
                                     \right) \\
-                                    &amp;= - \frac{\cos \theta}{\sin
-                                    \theta} \\
-                                    &amp;= - \frac{\sqrt{1-\sin^2
-                                    \theta}}{\sin \theta}
+                                    &amp;= \frac{\cos \theta}{\sin
+                                    \theta}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p><span class="math inline">\(\sin
-                                    \theta = v C = C
-                                    \sqrt{2gy}\)</span>を代入して整理すると、</p>
-                                    <p><span class="math display">\[
-                                    \frac{dy}{dx} = - \sqrt{\frac{2a -
-                                    y}{y}}
-                                    \]</span></p>
-                                    <p>となる。ただし<span
-                                    class="math inline">\(a =
-                                    1/(4gC^2)\)</span>である。これを真面目に解いてみよう。</p>
-                                    <p><span class="math inline">\(y =
-                                    2au\)</span>と変数変換すると、</p>
-                                    <p><span class="math display">\[
-                                    \frac{du}{dx} = - \frac{1}{2a}
-                                    \sqrt{\frac{1-u}{u}}
-                                    \]</span></p>
-                                    <p>さらに</p>
-                                    <p><span class="math display">\[
-                                    \tan \frac{s}{2} =
-                                    \sqrt{\frac{u}{1-u}}
-                                    \]</span></p>
-                                    <p>と変数変換すると、半角公式</p>
-                                    <p><span class="math display">\[
-                                    \tan^2 \frac{s}{2} = \frac{1 - \cos
-                                    s}{1  + \cos s}
-                                    \]</span></p>
-                                    <p>を用いて、ただちに</p>
-                                    <p><span class="math display">\[
-                                    u = \frac{1 + \cos s}{2}
-                                    \]</span></p>
-                                    <p>と求まる。両辺を微分すると</p>
+                                    <p>ここから<span
+                                    class="math inline">\(x\)</span>を<span
+                                    class="math inline">\(\theta\)</span>の関数として求めよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    du &amp;= - \frac{\sin s}{2} ds \\
-                                    &amp;= - \sin \frac{s}{2} \cos
-                                    \frac{s}{2} ds
+                                    \frac{dx}{d\theta} &amp;=
+                                    \frac{dx}{dy} \frac{dy}{d\theta} \\
+                                    &amp;=\frac{\sin
+                                    \theta}{\cos\theta}\left( 4 a \sin
+                                    \theta \cos \theta\right) \\
+                                    &amp;= 4 a \sin^2 \theta \\
+                                    &amp;= 2 a (1 - \cos 2\theta)
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>両辺を<span
+                                    class="math inline">\(\theta\)</span>で積分すると</p>
                                     <p><span class="math display">\[
-                                    du = - \frac{1}{2a} \frac{\cos
-                                    \frac{s}{2}}{\sin \frac{s}{2}} dx
+                                    x = 2 a \left(\theta - \frac{1}{2}
+                                    \sin \theta \right)
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    y = 2a \sin^2 \theta = a (1 - \cos 2
+                                    \theta)
                                     \]</span></p>
                                     <p>であったから、<span
-                                    class="math inline">\(du\)</span>を消去して、</p>
+                                    class="math inline">\(s =
+                                    2\theta\)</span>とすると</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    dx &amp;= 2a \sin^2 \frac{s}{2} ds
-                                    \\
-                                    &amp;= a (1 - \cos s) ds
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>両辺積分すると、</p>
-                                    <p><span class="math display">\[
-                                    x = a (x-\sin s)
-                                    \]</span></p>
-                                    <p><span
-                                    class="math inline">\(y\)</span>と合わせて、以下の媒介変数表示での解を得る。</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    x &amp;= a (s-\cos s) \\
-                                    y &amp;= a (1 + \cos s) \\
+                                    x &amp;= a (s - \sin s) \\
+                                    y &amp;= a (1 - \cos s)
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これはサイクロイド曲線を表現している。</p>
@@ -584,10 +578,9 @@
                                     F}{\partial g} \frac{d}{dx}(\delta
                                     f)   \right) dx \\
                                     &amp;= \int_a^b \frac{\partial
-                                    F}{\partial f} \delta f dx
-                                    + \left[\frac{\partial F}{\partial
-                                    g} \delta f \right]_a^b
-                                    - \int_a^b
+                                    F}{\partial f} \delta f dx +
+                                    \left[\frac{\partial F}{\partial g}
+                                    \delta f \right]_a^b - \int_a^b
                                     \frac{d}{dx}\left(\frac{\partial
                                     F}{\partial g}\right) \delta f dx\\
                                     &amp;= \int_a^b \left(
@@ -700,12 +693,9 @@
                                     <p>が成り立つのであるから、<span
                                     class="math inline">\(F(y,y&#39;) =
                                     \sqrt{1+y&#39;^2}/\sqrt{2gy}\)</span>
-                                    を代入して整理すると、計算は面倒だが最終的に幾何学的な考察から得られた微分方程式、</p>
-                                    <p><span class="math display">\[
-                                    \frac{dy}{dx} = - \sqrt{\frac{2a -
-                                    y}{y}}
-                                    \]</span></p>
-                                    <p>を得る。しかし、今回のようなケースではベルトラミの公式を使うと計算が楽なので、解析力学の本筋からは外れてしまうが、参考までに紹介しておこう。<span
+                                    を代入して整理すると、<span
+                                    class="math inline">\(y\)</span>が満たすべき微分方程式が得られる。</p>
+                                    <p>ここで、計算の便利のためにベルトラミの公式を導出しておこう。<span
                                     class="math inline">\(f(x)\)</span>および<span
                                     class="math inline">\(f&#39;(x)\)</span>に依存する関数<span
                                     class="math inline">\(F(f,f&#39;)\)</span>がオイラー・ラグランジュの方程式</p>
@@ -775,9 +765,9 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span
-                                    class="math inline">\(y&#39;\)</span>について整理すると(複号は負符号を採用した)、</p>
+                                    class="math inline">\(y&#39;\)</span>について整理すると、</p>
                                     <p><span class="math display">\[
-                                    y&#39; = - \sqrt{\frac{1
+                                    y&#39; =　\sqrt{\frac{1
                                     -2gC^2y}{2gC^2y}}
                                     \]</span></p>
                                     <p><span class="math inline">\(2gC^2
@@ -787,6 +777,18 @@
                                     \frac{dy}{dx} = -\sqrt{\frac{2a -
                                     y}{y}}
                                     \]</span></p>
+                                    <p>これと、角度の定義</p>
+                                    <p><span class="math display">\[
+                                    \frac{dy}{dx} = \frac{\cos
+                                    \theta}{\sin \theta}
+                                    \]</span></p>
+                                    <p>を合わせると、<span
+                                    class="math inline">\(y = 2a \sin^2
+                                    \theta\)</span>が結論される。これはスネルの法則</p>
+                                    <p><span class="math display">\[
+                                    \frac{\sin \theta }{v} = C
+                                    \]</span></p>
+                                    <p>に等価である。したがって、変分原理からスネルの法則が導かれた。</p>
                                     <p>このように、何か連続的な経路(この場合は斜面の形を表す関数<span
                                     class="math inline">\(y(x)\)</span>)を与えると実数(この場合は通過時間)が決まるような問題は汎関数の最小化問題として定式化できることが多い。このような問題を変分問題と呼ぶ。被積分関数は、目的となる関数<span
                                     class="math inline">\(f(x)\)</span>とその導関数の関数<span
@@ -838,6 +840,32 @@
                                     <strong>オイラー・ラグランジュ方程式(Euler-Laglange
                                     equation)</strong>
                                     と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動法定式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。</p>
+                                    <p>さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    B = L - \dot{x} \frac{\partial
+                                    L}{\partial \dot{q}}
+                                    \]</span></p>
+                                    <p>が時間不変量となる。ここで、ラグランジアンが</p>
+                                    <p><span class="math display">\[
+                                    L(x,\dot{x}) = \frac{1}{2}
+                                    m\dot{x}^2 - U(x)
+                                    \]</span></p>
+                                    <p>の形であったとすると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    B &amp;= L - \dot{x} \frac{\partial
+                                    L}{\partial \dot{x}}\\
+                                    &amp;= \frac{1}{2} m\dot{x}^2 - U(x)
+                                    - m\dot{x}^2\\
+                                    &amp;= - \left( \frac{1}{2}
+                                    m\dot{x}^2 + U(x) \right)\\
+                                    &amp;= -E
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、エネルギー保存則を表している。また、これは自由変数を<span
+                                    class="math inline">\(\dot{x}\)</span>から<span
+                                    class="math inline">\(p =
+                                    \partial_{\dot{x}}L\)</span>に取り直すルジャンドル変換をしたことに対応する。</p>
                                     <h1 id="停留条件">停留条件</h1>
                                     <p>これまで「力の釣り合いを与える座標は、ポテンシャル関数<span
                                     class="math inline">\(U(x)\)</span>を最小にするように決まる」「運動方程式の解は、作用を最小にするように決まる」などと「最小」という言葉を雑に使ってきた。しかし、実際に我々が要請しているのは、求めたい解(釣り合いの位置や運動方程式の解)に対して、ポテンシャルの変化分が一次のオーダーでゼロであるということだけであり、その点が最小であるとは限らない。</p>
