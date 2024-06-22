@@ -435,32 +435,23 @@ $$
 $$
 \begin{aligned}
 \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right) &=
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right) \frac{\partial \dot{q}^i}{\partial \dot{Q}^k}
-
-+ \frac{\partial L}{\partial \dot{q}^i} \frac{d}{dt} \left( \frac{\partial \dot{q}^i}{\partial \dot{Q}^k} \right) \\
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right) \frac{\partial \dot{q}^i}{\partial \dot{Q}^k} + \frac{\partial L}{\partial \dot{q}^i} \frac{d}{dt} \left( \frac{\partial \dot{q}^i}{\partial \dot{Q}^k} \right) \\
 &= \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  \frac{\partial q^i}{\partial Q^k} + \frac{\partial L}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial Q^k}
 \end{aligned}
-
 $$
 
 一方、$L$を$Q^k$で偏微分すると、
 
 $$
 \begin{aligned}
-\frac{\partial L}{\partial Q^k} &= \frac{\partial L}{\partial q^i}\frac{\partial q^i}{\partial Q^k}
-
-+ \frac{\partial L}{\partial \dot{q}^i}\frac{\partial \dot{q}^i}{\partial Q^k}
+\frac{\partial L}{\partial Q^k} &= \frac{\partial L}{\partial q^i}\frac{\partial q^i}{\partial Q^k} + \frac{\partial L}{\partial \dot{q}^i}\frac{\partial \dot{q}^i}{\partial Q^k}
 \end{aligned}
-
 $$
 
 先程求めた式と差を取ると、
 
 $$
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right)
-
-+ \frac{\partial L}{\partial Q^k} = \underbrace{\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  - \frac{\partial L}{\partial \dot{q}^i}\right)}_{=0} \frac{\partial q^i}{\partial Q^k}
-
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right) + \frac{\partial L}{\partial Q^k} = \underbrace{\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  - \frac{\partial L}{\partial \dot{q}^i}\right)}_{=0} \frac{\partial q^i}{\partial Q^k}
 $$
 
 以上から、元の変数でオイラー・ラグランジュ方程式が成り立つと、新しい変数でもオイラー・ラグランジュ方程式が成り立つ、すなわち、オイラー・ラグランジュ方程式が任意の点変換において共変であることが示された。繰り返しになるが、この証明を追う必要はない。しかし「面倒ではあるが、基本的な微分の公式だけで証明できる」ということは頭に入れておいて欲しい。
