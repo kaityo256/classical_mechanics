@@ -33,29 +33,74 @@ m a_\theta &= F_\theta
 \end{aligned}
 $$
 
-となる。この式を$r, \theta$を用いて書き下すのが目的である。まず、力について考えよう。力の$r$方向の向きの成分を考えると、
+となる。この式を$r, \theta$を用いて書き下すのが目的である。図を見るとわかるように、$(dx,dy)$ の座標系から見て$(dr, d\theta)$の座標系は反時計回りに角度$\theta$ だけ回転している。したがって、
 
 $$
-F_r = F_x \cos \theta + F_y \sin \theta
+\begin{aligned}
+\begin{pmatrix}
+a_r \\ a_\theta
+\end{pmatrix}
+&=
+\begin{pmatrix}
+\cos \theta & \sin \theta \\
+-\sin \theta & \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+\ddot{x} \\ \ddot{y}
+\end{pmatrix}\\
+\begin{pmatrix}
+F_r \\ F_\theta
+\end{pmatrix}
+&=
+\begin{pmatrix}
+\cos \theta & \sin \theta \\
+-\sin \theta & \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+F_x \\ F_y
+\end{pmatrix}
+\end{aligned}
 $$
 
-ここで、$\cos \theta = x/r, \sin \theta = y/r$ であるから、
+が成り立つ。
+
+まず、力について考えよう。力の$r$方向の向きの成分を考えると、
 
 $$
 \begin{aligned}
 F_r &= F_x \cos \theta + F_y \sin \theta \\
-&= F_x \frac{x}{r} + F_y \frac{y}{r}\\
-&= -\frac{\partial U}{\partial x}\frac{x}{r} - \frac{\partial U}{\partial y}\frac{y}{r}
+&= - \frac{\partial U}{\partial x} \cos \theta - \frac{\partial U}{\partial y} \sin \theta
 \end{aligned}
 $$
 
-ここで、$U$の変数変換の意味を考えておこう。もともと$U$は$x,y$の関数$U(x,y)$であった。しかし、$x,y$を$r, \theta$の関数として表したので、$U$は$x,y$を通じて$U(x(r,\theta), y(r, \theta))$という形で$r, \theta$依存性が入る。合成関数の偏微分から
+ここで、もともと
 
 $$
 \begin{aligned}
-\frac{\partial U}{\partial r} &= \frac{\partial U}{\partial x} \frac{\partial x}{\partial r} + \frac{\partial U}{\partial y} \frac{\partial y}{\partial r} \\
-&= \frac{\partial U}{\partial x}\frac{x}{r} + \frac{\partial U}{\partial y}\frac{y}{r}
+x &= r \cos \theta\\
+y &= r \sin \theta
 \end{aligned}
+$$
+
+であったから、
+
+$$
+\begin{aligned}
+\frac{\partial x}{\partial r} &= \cos \theta\\
+\frac{\partial y}{\partial r} &= \sin \theta
+\end{aligned}
+$$
+
+である。これを用いると
+
+$$
+F_r = - \frac{\partial U}{\partial x}\frac{\partial x}{\partial r} - \frac{\partial U}{\partial y}\frac{\partial y}{\partial r}
+$$
+
+ここで、$U(x,y)$について、合成関数の微分公式から
+
+$$
+\frac{\partial U}{\partial r} = \frac{\partial U}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial U}{\partial y}\frac{\partial y}{\partial r}
 $$
 
 以上から、
@@ -64,7 +109,7 @@ $$
 F_r = -\frac{\partial U}{\partial r}
 $$
 
-すなわち、変数変換しても力の形が変わっていない。これがスカラー関数で書いておくと変数変換が楽になる、という実例である。
+が得られる。
 
 同様に、$\theta$方向の力についての成分を考えると
 
@@ -103,8 +148,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{x} = \dot{r} \cos \theta - r \dot{\theta} \sin \theta \\
-\dot{y} = \dot{r} \sin \theta + r \dot{\theta} \cos \theta \\
+\dot{x} &= \dot{r} \cos \theta - r \dot{\theta} \sin \theta \\
+\dot{y} &= \dot{r} \sin \theta + r \dot{\theta} \cos \theta
 \end{aligned}
 $$
 
@@ -163,19 +208,14 @@ $$
 自由度$r$に関するオイラー・ラグランジュ方程式は、
 
 $$
-\begin{aligned}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right) - \frac{\partial L}{\partial r} &= m \ddot{r} - mr \dot{\theta}^2 + \frac{\partial U}{\partial r} \\
-&= 0
-\end{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{r}}\right) - \frac{\partial L}{\partial r} = m \ddot{r} - mr \dot{\theta}^2 + \frac{\partial U}{\partial r}
+= 0
 $$
 
 自由度$\theta$に関するオイラー・ラグランジュ方程式は、
 
 $$
-\begin{aligned}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} &= m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial r} \\
-&= 0
-\end{aligned}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} = m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial r} = 0
 $$
 
 それぞれ整理すると、先程得られた式と全く同じ運動方程式が得られる。
@@ -268,17 +308,15 @@ $$
 このラグランジアン$L$の$\dot{Q}$による偏微分を考えよう。$\dot{Q}$は$\dot{q}$の場所にしか現れないため
 
 $$
-\frac{\partial L}{\partial \dot{Q}}  = \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial \dot{Q}}
+\frac{\partial L}{\partial \dot{Q}}  = \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial \dot{Q}} = \frac{\partial L}{\partial \dot{q}}\frac{dq}{dQ}
 $$
 
 ただし、先程導いた関係式 $\partial \dot{q}/\partial \dot{Q} = dq/dQ$を用いた。$Q, \dot{Q}$に関するオイラー・ラグランジュ方程式を作りたいので、さらに時間で微分すると、
 
 $$
 \begin{aligned}
-\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{Q}} \right) &=
-\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \frac{\partial \dot{q}}{\partial \dot{Q}} + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt}\left( \frac{\partial \dot{q}}{\partial \dot{Q}} \right) \\
-&= \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \frac{dq}{dQ}
-+ \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}} \right) &= \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}} \right) \underbrace{\frac{\partial \dot{q}}{\partial \dot{Q}}}_{d q/d Q} + \frac{\partial L}{\partial \dot{q}} \underbrace{\frac{d}{dt}\left(\frac{dq}{dQ}\right)}_{\partial \dot{q}/\partial Q} \\
+&=\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}} \right) \frac{d q}{d Q} + \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}
 \end{aligned}
 $$
 
@@ -291,34 +329,14 @@ $$
 \frac{\partial L}{\partial q} \frac{dq}{dQ}
 $$
 
-一方、
-
-以上より、
-
-$$
-\frac{\partial L}{\partial \dot{Q}} = \frac{\partial L}{\partial \dot{q}}\frac{dq}{dQ}
-$$
-
-オイラー・ラグランジュ方程式を作るため、上記を時間微分すると、
-
-$$
-\begin{aligned}
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{Q}}\right) &=
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}}  \right) \frac{dq}{dQ}
-+ \frac{\partial L}{\partial \dot{q}} \frac{d}{dt} \left(\frac{dq}{dQ} \right) \\
-&= \left( \frac{\partial L}{\partial \dot{q}}  \right) \frac{dq}{dQ} +
-\frac{d^2 q}{d Q^2} \dot{Q}
-\end{aligned}
-$$
-
 以上から、
 
 $$
 \begin{aligned}
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}}\right) - \frac{\partial L}{\partial Q}
 &= \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) \frac{dq}{dQ}
-+ \cancel{\frac{\partial L}{\partial \dot{q}} \frac{d \dot{q}}{dQ}}\\
-&- \frac{\partial L}{\partial q} \frac{dq}{dQ} - \cancel{\frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dQ}} \\
++ \cancel{\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}}\\
+&- \frac{\partial L}{\partial q} \frac{dq}{dQ} - \cancel{\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}} \\
 &= \left[
 \underbrace{
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) + \frac{\partial L}{\partial q}
@@ -418,9 +436,11 @@ $$
 \begin{aligned}
 \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right) &=
 \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right) \frac{\partial \dot{q}^i}{\partial \dot{Q}^k}
+
 + \frac{\partial L}{\partial \dot{q}^i} \frac{d}{dt} \left( \frac{\partial \dot{q}^i}{\partial \dot{Q}^k} \right) \\
 &= \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  \frac{\partial q^i}{\partial Q^k} + \frac{\partial L}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial Q^k}
 \end{aligned}
+
 $$
 
 一方、$L$を$Q^k$で偏微分すると、
@@ -428,15 +448,19 @@ $$
 $$
 \begin{aligned}
 \frac{\partial L}{\partial Q^k} &= \frac{\partial L}{\partial q^i}\frac{\partial q^i}{\partial Q^k}
+
 + \frac{\partial L}{\partial \dot{q}^i}\frac{\partial \dot{q}^i}{\partial Q^k}
 \end{aligned}
+
 $$
 
 先程求めた式と差を取ると、
 
 $$
 \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{Q}^k}\right)
-- \frac{\partial L}{\partial Q^k} = \underbrace{\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  - \frac{\partial L}{\partial \dot{q}^i}\right)}_{=0} \frac{\partial q^i}{\partial Q^k}
+
++ \frac{\partial L}{\partial Q^k} = \underbrace{\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}^i}\right)  - \frac{\partial L}{\partial \dot{q}^i}\right)}_{=0} \frac{\partial q^i}{\partial Q^k}
+
 $$
 
 以上から、元の変数でオイラー・ラグランジュ方程式が成り立つと、新しい変数でもオイラー・ラグランジュ方程式が成り立つ、すなわち、オイラー・ラグランジュ方程式が任意の点変換において共変であることが示された。繰り返しになるが、この証明を追う必要はない。しかし「面倒ではあるが、基本的な微分の公式だけで証明できる」ということは頭に入れておいて欲しい。
