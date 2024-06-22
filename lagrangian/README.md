@@ -467,7 +467,7 @@ $$
 の力を受ける。この力に対応するポテンシャルが
 
 $$
-U = q \phi - q \dot{\mathbf{r}} \cdot \mathbf{A}
+U = q \left( \phi - \dot{\mathbf{r}} \cdot \mathbf{A} \right)
 $$
 
 と書けることを、ラグランジアンから導出しよう。
@@ -552,61 +552,48 @@ U &= - q \dot{\mathbf{r}}  \cdot \mathbf{A}\\
 \end{aligned}
 $$
 
-で定義する。今度はポテンシャルに速度成分が含まれるため、計算がややこしくなる。運動エネルギーを$K$、ポテンシャルを$K$とすると、ラグランジアンは$L=K-U$であるから、オイラー・ラグランジュ方程式
+で定義する。今度はポテンシャルに速度成分が含まれるため、計算がややこしくなる。この系のラグランジアンは
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - \frac{\partial L}{\partial x} =0
+L(\mathbf{r}, \dot{\mathbf{r}}) = \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) + q (\dot{x}A_x  +  \dot{x}A_y  + \dot{x}A_z)
 $$
 
-が成り立つ時、
+まず、両辺を$\dot{x}$で偏微分する。
 
 $$
-\frac{d}{dt}\left(\frac{\partial K}{\partial \dot{x}}\right) - \frac{\partial K}{\partial x} =
-\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
+\frac{\partial L}{\partial \dot{x}} = m\dot{x} + q A_x
 $$
 
-が成り立つ。明らかに左辺は$m\ddot{x}$であるので、右辺を考えよう。
-
-まず$U$を$\dot{x}$で偏微分すると、
+$A_x(x,y,z)$であり、$(x,y,z)$が時間依存することに注意して、さらに時間微分すると、
 
 $$
-\frac{\partial U}{\partial \dot{x}} = -q A_x
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}} \right)
+= m \ddot{x} + q \left(\dot{x} \frac{\partial A_x}{\partial x} + \dot{y} \frac{\partial A_x}{\partial y} + \dot{z} \frac{\partial A_x}{\partial z}\right)
 $$
 
-$A_x$が$A_x(x,y,z)$と座標に依存し、座標が時間に依存することを考慮して
+次に、ラグランジアンを$x$で偏微分すると、
 
 $$
-\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) = -q \left(
-\frac{\partial A_x}{\partial x}\dot{x}
-+\frac{\partial A_x}{\partial y}\dot{y}
-+\frac{\partial A_x}{\partial z}\dot{z}
-\right)
+\frac{\partial L}{\partial x} = q \left(\dot{x}\frac{\partial A_x}{\partial x}+ \dot{y}\frac{\partial A_y}{\partial x}+\dot{z}\frac{\partial A_z}{\partial x}\right)
 $$
 
-$U$を$x$で偏微分すると
-
-$$
-\frac{\partial U}{\partial x} = -q \left(
-\frac{\partial A_x}{\partial x} \dot{x}
-+\frac{\partial A_y}{\partial x} \dot{y}
-+\frac{\partial A_z}{\partial x} \dot{z}
-\right)
-$$
-
-以上から、
+辺々引くと、
 
 $$
 \begin{aligned}
-\frac{d}{dt}\left(\frac{\partial U}{\partial \dot{x}}\right) - \frac{\partial U}{\partial x}
-&= q \left(
-    \dot{y} \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}  \right)
-    - \dot{z} \left(\frac{\partial A_z}{\partial x} - \frac{\partial A_x}{\partial z}  \right)
-    \right)\\
-    &= q (\dot{y} B_z - \dot{z} B_y)
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}} \right) - \frac{\partial L}{\partial x} &= m\ddot{x} - q \left\{\dot{y} \underbrace{\left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \right)}_{B_z} - \dot{z} \underbrace{\left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \right)}_{B_y}\right\} \\
+&= m\ddot{x} - q (\dot{y}B_z - \dot{z}B_y)\\
+&= 0
 \end{aligned}
 $$
 
-運動エネルギーの項と合わせて運動方程式は
+したがって、
+
+$$
+m \ddot{x} = q (\dot{y} B_z - \dot{z} B_y) \\
+$$
+
+他の成分も同様に求めることができ、結果として以下の運動方程式を得る。
 
 $$
 \begin{aligned}
@@ -625,10 +612,10 @@ $$
 以上から、電磁場中を荷電粒子が運動する際、その荷電粒子が感じるポテンシャルエネルギーは
 
 $$
-U(\textbf{r}, \dot{\textbf{r}}) = q (\phi - \dot{\mathbf{r}}\times \mathbf{A})
+U(\textbf{r}, \dot{\textbf{r}}) = q (\phi - \dot{\mathbf{r}}\cdot \mathbf{A})
 $$
 
-であることがわかった。このエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。
+であることがわかった。このポテンシャルエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。
 
 電磁気学でベクトルポテンシャルをならった時に「スカラーポテンシャルを考える理由はまだわかるが、ベクトルポテンシャルというものをなぜ考えなければならないのだろう？」と疑問に思ったことはないだろうか？上記の議論がその答えの一部を与えている。
 
@@ -648,7 +635,7 @@ $$
 \dot{Q} = \frac{dQ}{dq} \dot{q}
 $$
 
-と書かれる。さらに、ラグランジアンにおいて$L(q,\dot{q})$とし、$\dot{q}$と$q$は独立だとみなすが、ラグランジアンを時間積分する際には$q$と$\dot{q}$には$\dot{q} = dq/dt$の関係がある。これを記号の節約をせずにきちんと書くなら、ラグランジアンを$L(x, v)$と異なる記号で書いておけば独立であることがわかりやすく、これを時間積分する際には積分路が$s(t)$で指定されるとして、$x = s(t)$、$v = \dot{s}(t)$と表記することにすれば、$x$と$v$がどのような関係があるのかがわかりやすい。媒介変数であることがわかりやすいように$\xi$や$\eta$といった記号を使う流儀もある。しかし、このように表記すると記号が増え、かえって本質が見えづらいと感じる人もいるであろう。大多数の読者は深く考えず、なんとなく「そういうものだ」と納得するであろうし、今はそれで良いと思う。もし将来、真面目に計算して何が独立で何がそうでないか混乱した時に、混乱の原因が変数の節約にあるかもしれないと思い至ればそれで良い。どうせ解析力学をきちんと理解するのは時間がかかる。まずはざっと式変形の地図を頭にイメージできるようにして、あとで「あれ？」と思ったら別の書籍を調べて正確な理解を目指せば良い。
+と書かれる。さらに、ラグランジアンにおいて$L(q,\dot{q})$とし、$\dot{q}$と$q$は独立だとみなすが、ラグランジアンを時間積分する際には$q$と$\dot{q}$には$\dot{q} = dq/dt$の関係がある。これを記号の節約をせずにきちんと書くなら、ラグランジアンを$L(x, v)$と異なる記号で書いておけば独立であることがわかりやすく、これを時間積分する際には積分路が$s(t)$で指定されるとして、$x = s(t)$、$v = \dot{s}(t)$と媒介変数表示をすれば、$x$と$v$がどのような関係があるのかがわかりやすい。媒介変数であることがわかりやすいように$\xi$や$\eta$といった記号を使う流儀もある。しかし筆者は、このように表記すると記号が増え、かえって本質が見えづらくなると感じる。大多数の読者は深く考えず、なんとなく「そういうものだ」と納得するであろうし、今はそれで良いと思う。もし将来、真面目に計算して何が独立で何がそうでないか混乱した時に、混乱の原因が変数の節約にあるかもしれないと思い至ればそれで良い。どうせ解析力学をきちんと理解するのは時間がかかる。まずはざっと式変形の地図を頭にイメージできるようにして、あとで「あれ？」と思ったら別の書籍を調べて正確な理解を目指せば良い。
 
 ## まとめ
 
