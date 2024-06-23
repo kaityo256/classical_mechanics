@@ -11,7 +11,7 @@ $$
 ここから$W_1$の自由変数が$(q, Q)$であることがわかるため、その全微分が
 
 $$
-dW_1(q,Q) = \frac{\partial W_1}{\partial q} dq + \frac{\partial W_1}{\partial Q} dQ 
+dW_1(q,Q) = \frac{\partial W_1}{\partial q} dq + \frac{\partial W_1}{\partial Q} dQ
 $$
 
 となるため、先程の式と比較することで変換則
@@ -50,7 +50,7 @@ $$
 任意の次元の空間で議論できるが、わかりやすさのために3次元空間$(x,y,z)$で考えよう。この空間に定義されたスカラー関数$f(x,y,z)$を考える。この関数の全微分を以下のように定義する。
 
 $$
-df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz 
+df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz
 $$
 
 これは、$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **$1$形式(1-form)** と呼ぶ。また、微分する前のスカラー関数を **0形式(0-form)** と呼ぶ。一般に、$p$形式を微分することで$p+1$形式を作ることができる。この時得られた$p+1$形式を、元の$p$形式の外微分と呼ぶ。
@@ -100,7 +100,7 @@ $$
 と書かれている時、この外微分を
 
 $$
-d(df) = df_x \wedge dx + df_y \wedge dy + df_z \wedge dz 
+d(df) = df_x \wedge dx + df_y \wedge dy + df_z \wedge dz
 $$
 
 と定義する。
@@ -109,17 +109,17 @@ $f_x$はスカラー関数、すなわち$0$形式であり、一般に$x,y,z$�
 
 $$
 df_x = \frac{\partial f_x}{\partial x} dx
-+ \frac{\partial f_y}{\partial y} dy
-+ \frac{\partial f_z}{\partial z} dz
+* \frac{\partial f_y}{\partial y} dy
+* \frac{\partial f_z}{\partial z} dz
 $$
 
 で与えられる。$f_y, f_z$も同様である。したがって、
 
 $$
-d(df) = 
+d(df) =
 \left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy
-+ (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz
-+ (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
+* (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz
+* (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
 $$
 
 となる。$dx\wedge dy$など、$1$形式の外積で作られた新たな基底で表現されたものを$2$形式と呼ぶ。すなわち$1$形式を外微分することで$2$形式を作ることができた。同様にして、$p$形式を外微分することで$p+1$形式を作ることができる。
@@ -133,7 +133,7 @@ $$
 で展開されたことに対応する。ただし、行列は縦ベクトルと横ベクトルのテンソル積から作ったため、縦ベクトルと内積を取ると縦ベクトルが得られたが、微分形式の場合は縦ベクトルと縦ベクトルのテンソル積から2形式を作っているため、横ベクトルと内積をとることで縦ベクトルが得られるという違いがある。また、微分形式の外積は反対称性を持つため、ベクトルの言葉で言えば
 
 $$
-\mathbf{e_x} \wedge \mathbf{e_y} \equiv \mathbf{e_x} \otimes \mathbf{e_y} - 
+\mathbf{e_x} \wedge \mathbf{e_y} \equiv \mathbf{e_x} \otimes \mathbf{e_y} -
 \mathbf{e_y} \otimes \mathbf{e_x}
 $$
 
@@ -154,7 +154,7 @@ $$
 
 $$
 \begin{aligned}
-\left<dx \wedge dy, \frac{\partial}{\partial x} \right> & \equiv 
+\left<dx \wedge dy, \frac{\partial}{\partial x} \right> & \equiv
 \left<dx, \frac{\partial}{\partial x} \right> dy \\
 &=1
 \end{aligned}
@@ -165,11 +165,52 @@ $$
 $$
 \begin{aligned}
 \left<dy \wedge dx, \frac{\partial}{\partial x} \right> & =
-- \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
+* \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
 &= -\left<dx, \frac{\partial}{\partial x} \right> dy \\
 &=1
 \end{aligned}
 $$
+
+この全微分と外積のルールは、多変数間の変換のヤコビアンを一般化したものになっている。簡単な例を挙げよう。
+
+二次元の極座標表示を考える。
+
+$$
+\begin{aligned}
+x &= r \cos \theta \\
+y &= r \sin \theta
+\end{aligned}
+$$
+
+$x, y$を$r, \theta$の関数だと思って、それぞれ全微分してみよう。
+
+$$
+\begin{aligned}
+dx &= \cos \theta dr - r\sin \theta d\theta\\
+dy &= \sin \theta dr + r\cos \theta d\theta
+\end{aligned}
+$$
+
+定義に従って$dx \wedge dy$を計算する。
+
+$$
+\begin{aligned}
+dx \wedge dy &= (\cos \theta dr - r\sin \theta d\theta) (\sin \theta dr + r\cos \theta d\theta) \\
+&= r \cos^2 \theta dr \wedge d\theta - r \sin^2 \theta d\theta \wedge dr \\
+&= r dr \wedge d\theta
+\end{aligned}
+$$
+
+途中で$dr \wedge dr = d\theta\wedge d\theta =0$及び$d\theta \wedge dr = - dr \wedge d\theta$を用いた。これが、積分におけるヤコビアン
+
+$$
+\begin{aligned}
+dx dy &= \frac{\partial (x,y)}{\partial r, \theta} dr d\theta\\
+&= r dr d\theta
+\end{aligned}
+$$
+
+に対応することがわかる。
 
 ## 微分形式とベクトル解析
 
@@ -218,9 +259,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{dA}{dt} &= \frac{\partial A}{\partial q} \dot{q} + 
+\frac{dA}{dt} &= \frac{\partial A}{\partial q} \dot{q} +
 \frac{\partial A}{\partial p} \dot{p}\\
-&= \underbrace{\left(\dot{q}\frac{\partial }{\partial q} + \dot{q} \frac{\partial}{\partial p}\right)}_{-i\mathcal{L}}A 
+&= \underbrace{\left(\dot{q}\frac{\partial }{\partial q} + \dot{q} \frac{\partial}{\partial p}\right)}_{-i\mathcal{L}}A
 \end{aligned}
 $$
 
@@ -272,4 +313,3 @@ $$
 $$
 
 が正準方程式を与える。正準2形式は正準変換で不変であるから、これは局所基底の取り方に依らない運動方程式の表現となっている。
-
