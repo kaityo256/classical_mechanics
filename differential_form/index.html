@@ -177,8 +177,8 @@
                                     <p><span class="math display">\[
                                     df_x = \frac{\partial f_x}{\partial
                                     x} dx
-                                    + \frac{\partial f_y}{\partial y} dy
-                                    + \frac{\partial f_z}{\partial z} dz
+                                    * \frac{\partial f_y}{\partial y} dy
+                                    * \frac{\partial f_z}{\partial z} dz
                                     \]</span></p>
                                     <p>で与えられる。<span
                                     class="math inline">\(f_y,
@@ -188,10 +188,10 @@
                                     \left(\frac{\partial f_x}{\partial
                                     y} - \frac{\partial f_y}{\partial
                                     x}\right) dx \wedge dy
-                                    + (\frac{\partial f_y}{\partial z} -
+                                    * (\frac{\partial f_y}{\partial z} -
                                     \frac{\partial f_z}{\partial y}) dy
                                     \wedge dz
-                                    + (\frac{\partial f_z}{\partial x} -
+                                    * (\frac{\partial f_z}{\partial x} -
                                     \frac{\partial f_x}{\partial x}) dz
                                     \wedge dx
                                     \]</span></p>
@@ -264,7 +264,7 @@
                                     \left&lt;dy \wedge dx,
                                     \frac{\partial}{\partial x}
                                     \right&gt; &amp; =
-                                    - \left&lt;dx \wedge dy,
+                                    * \left&lt;dx \wedge dy,
                                     \frac{\partial}{\partial x}
                                     \right&gt; \\
                                     &amp;= -\left&lt;dx,
@@ -273,6 +273,56 @@
                                     &amp;=1
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>この全微分と外積のルールは、多変数間の変換のヤコビアンを一般化したものになっている。簡単な例を挙げよう。</p>
+                                    <p>二次元の極座標表示を考える。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r \cos \theta \\
+                                    y &amp;= r \sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span class="math inline">\(x,
+                                    y\)</span>を<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>の関数だと思って、それぞれ全微分してみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx &amp;= \cos \theta dr - r\sin
+                                    \theta d\theta\\
+                                    dy &amp;= \sin \theta dr + r\cos
+                                    \theta d\theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>定義に従って<span
+                                    class="math inline">\(dx \wedge
+                                    dy\)</span>を計算する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx \wedge dy &amp;= (\cos \theta dr
+                                    - r\sin \theta d\theta) (\sin \theta
+                                    dr + r\cos \theta d\theta) \\
+                                    &amp;= r \cos^2 \theta dr \wedge
+                                    d\theta - r \sin^2 \theta d\theta
+                                    \wedge dr \\
+                                    &amp;= r dr \wedge d\theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>途中で<span
+                                    class="math inline">\(dr \wedge dr =
+                                    d\theta\wedge d\theta
+                                    =0\)</span>及び<span
+                                    class="math inline">\(d\theta \wedge
+                                    dr = - dr \wedge
+                                    d\theta\)</span>を用いた。これが、積分におけるヤコビアン</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx dy &amp;= \frac{\partial
+                                    (x,y)}{\partial r, \theta} dr
+                                    d\theta\\
+                                    &amp;= r dr d\theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>に対応することがわかる。</p>
                                     <h1
                                     id="微分形式とベクトル解析">微分形式とベクトル解析</h1>
                                     <h1
