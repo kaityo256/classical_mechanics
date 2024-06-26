@@ -127,7 +127,87 @@
                                     class="math inline">\(P^1\)</span>の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量が保存量となることを示す。</p>
                                     <p>角運動量保存についても同様である。二次元空間<span
                                     class="math inline">\((x,y)\)</span>において、原点からの距離<span
-                                    class="math inline">\(r=\sqrt{x^2+y^2}\)</span>にのみ依存するポテンシャルに支配された運動を考える。</p>
+                                    class="math inline">\(r=\sqrt{x^2+y^2}\)</span>にのみ依存するポテンシャルに支配された運動を考える。この系のラグランジアンを極座標表示すると、</p>
+                                    <p><span class="math display">\[
+                                    L = \frac{1}{2}m(\dot{r}^2 +
+                                    r^2\dot{\theta}^2) - U(r)
+                                    \]</span></p>
+                                    <p>となるから、ハミルトニアンは</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p_r &amp;= \frac{\partial
+                                    L}{\partial \dot{r}} = m\dot{r}\\
+                                    p_\theta &amp;= \frac{\partial
+                                    L}{\partial \dot{\theta}} =
+                                    mr^2\dot{\theta}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を用いて、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    H &amp;= p_r \dot{r} + p_\theta
+                                    \dot{\theta} - L\\
+                                    &amp;=
+                                    \frac{p_r^2}{m}+\frac{p_\theta^2}{mr^2}
+                                    - \frac{p_r^2}{2m} -
+                                    \frac{p_\theta^2}{2mr^2} + U(r) \\
+                                    &amp;= \frac{1}{2m}\left(p_r^2 +
+                                    \frac{p_\theta^2}{r^2} \right) +
+                                    U(r)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>明らかにハミルトニアンは<span
+                                    class="math inline">\(\theta\)</span>に依存しないため、</p>
+                                    <p><span class="math display">\[
+                                    \dot{p_\theta} = - \frac{\partial
+                                    H}{\partial \theta} = 0
+                                    \]</span></p>
+                                    <p>すなわち、<span
+                                    class="math inline">\(\theta\)</span>に対応する一般化運動量が保存量となることがわかる。</p>
+                                    <p>さて、この系では各運動量</p>
+                                    <p><span class="math display">\[
+                                    L_z = m(x\dot{y} - y \dot{x})
+                                    \]</span></p>
+                                    <p>が時間不変量であった。極座標表示から</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r \cos \theta \\
+                                    y &amp;= r \sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺時間微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{x} &amp;= \dot{r} \cos \theta -
+                                    r \dot{\theta} \sin \theta\\
+                                    \dot{y} &amp;= \dot{r} \sin \theta +
+                                    r \dot{\theta} \cos \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺に<span
+                                    class="math inline">\(y\)</span>や<span
+                                    class="math inline">\(x\)</span>をかけると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    y\dot{x} &amp;= r\dot{r} \cos \theta
+                                    \sin \theta - r^2 \dot{\theta}
+                                    \sin^2 \theta\\
+                                    x\dot{y} &amp;= r\dot{r} \sin \theta
+                                    \cos \theta + r^2 \dot{\theta}
+                                    \cos^2 \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    L_z = m(x\dot{y} - y \dot{x}) = mr^2
+                                    \dot{\theta} = p_\theta
+                                    \]</span></p>
+                                    <p>すなわち、一般化座標<span
+                                    class="math inline">\(\theta\)</span>に対応する一般化運動量<span
+                                    class="math inline">\(p_\theta\)</span>は、角運動量に対応する。すなわち<span
+                                    class="math inline">\(\dot{p}_\theta
+                                    =
+                                    0\)</span>は角運動量保存則に他ならない。</p>
                                     <h1
                                     id="微小変換とネーターの定理">微小変換とネーターの定理</h1>
                                     <p>繰り返しになるが、系の運動はハミルトニアンというスカラー関数一つだけから全て決まる。したがって、ハミルトニアンには、系の運動の情報、特に対称性や保存則についての情報が含まれている。そのうち、最も簡単なものは循環座標であり、ハミルトニアンが、ある一般化座標<span

@@ -58,7 +58,79 @@ $$
 
 となり、ハミルトニアンは$Q^1$を含まなくなる。そこから直ちに共役な運動量である$P^1$の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量が保存量となることを示す。
 
-角運動量保存についても同様である。二次元空間$(x,y)$において、原点からの距離$r=\sqrt{x^2+y^2}$にのみ依存するポテンシャルに支配された運動を考える。
+角運動量保存についても同様である。二次元空間$(x,y)$において、原点からの距離$r=\sqrt{x^2+y^2}$にのみ依存するポテンシャルに支配された運動を考える。この系のラグランジアンを極座標表示すると、
+
+$$
+L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U(r)
+$$
+
+となるから、ハミルトニアンは
+
+$$
+\begin{aligned}
+p_r &= \frac{\partial L}{\partial \dot{r}} = m\dot{r}\\
+p_\theta &= \frac{\partial L}{\partial \dot{\theta}} = mr^2\dot{\theta}\\
+\end{aligned}
+$$
+
+を用いて、
+
+$$
+\begin{aligned}
+H &= p_r \dot{r} + p_\theta \dot{\theta} - L\\
+&= \frac{p_r^2}{m}+\frac{p_\theta^2}{mr^2} - \frac{p_r^2}{2m} - \frac{p_\theta^2}{2mr^2} + U(r) \\
+&= \frac{1}{2m}\left(p_r^2 + \frac{p_\theta^2}{r^2} \right) + U(r)
+\end{aligned}
+$$
+
+明らかにハミルトニアンは$\theta$に依存しないため、
+
+$$
+\dot{p_\theta} = - \frac{\partial H}{\partial \theta} = 0
+$$
+
+すなわち、$\theta$に対応する一般化運動量が保存量となることがわかる。
+
+さて、この系では各運動量
+
+$$
+L_z = m(x\dot{y} - y \dot{x})
+$$
+
+が時間不変量であった。極座標表示から
+
+$$
+\begin{aligned}
+x &= r \cos \theta \\
+y &= r \sin \theta
+\end{aligned}
+$$
+
+両辺時間微分すると、
+
+$$
+\begin{aligned}
+\dot{x} &= \dot{r} \cos \theta - r \dot{\theta} \sin \theta\\
+\dot{y} &= \dot{r} \sin \theta + r \dot{\theta} \cos \theta
+\end{aligned}
+$$
+
+両辺に$y$や$x$をかけると、
+
+$$
+\begin{aligned}
+y\dot{x} &= r\dot{r} \cos \theta \sin \theta - r^2 \dot{\theta} \sin^2 \theta\\
+x\dot{y} &= r\dot{r} \sin \theta \cos \theta + r^2 \dot{\theta} \cos^2 \theta
+\end{aligned}
+$$
+
+従って、
+
+$$
+L_z = m(x\dot{y} - y \dot{x}) = mr^2 \dot{\theta} = p_\theta
+$$
+
+すなわち、一般化座標$\theta$に対応する一般化運動量$p_\theta$は、角運動量に対応する。すなわち$\dot{p}_\theta = 0$は角運動量保存則に他ならない。
 
 ## 微小変換とネーターの定理
 
