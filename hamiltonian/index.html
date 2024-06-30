@@ -225,11 +225,14 @@
                                     <h2
                                     id="全微分とルジャンドル変換">全微分とルジャンドル変換</h2>
                                     <p>まず、自由変数を取り直す、ということの意味について考える。簡単のために、一変数関数<span
-                                    class="math inline">\(y(x)\)</span>を考えよう。この関数の全微分は</p>
+                                    class="math inline">\(y =
+                                    f(x)\)</span>を考えよう。この関数の全微分は</p>
                                     <p><span class="math display">\[
                                     dy = \frac{dy}{dx} dx
                                     \]</span></p>
-                                    <p>と記述できる。また、右辺に<span
+                                    <p>と記述できる(また<span
+                                    class="math inline">\(y\)</span>と<span
+                                    class="math inline">\(f\)</span>を同一視している)。また、右辺に<span
                                     class="math inline">\(dx\)</span>しか現れないのは、この関数<span
                                     class="math inline">\(y\)</span>が<span
                                     class="math inline">\(x\)</span>にのみ依存する関数であることを表している。すなわち、<span
@@ -264,7 +267,44 @@
                                     class="math inline">\(X\)</span>になっていることを示す。すなわち、自由変数が<span
                                     class="math inline">\(x\)</span>から<span
                                     class="math inline">\(X\)</span>に入れ替わった。これをルジャンドル変換と呼ぶ。</p>
-                                    <p>もともとラグランジアンは<span
+                                    <p>ラグランジアンでは多変数のルジャンドル変換を行うので、二変数のルジャンドル変換も見ておこう。<span
+                                    class="math inline">\(x,y\)</span>に依存する関数<span
+                                    class="math inline">\(f(x,y)\)</span>を考える。その全微分は</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial x}
+                                    dx + \frac{\partial f}{\partial y}
+                                    dy
+                                    \]</span></p>
+                                    <p>と書ける。ここで</p>
+                                    <p><span class="math display">\[
+                                    Y \equiv \frac{\partial f}{\partial
+                                    y}
+                                    \]</span></p>
+                                    <p>として、<span
+                                    class="math inline">\(Y\)</span>と<span
+                                    class="math inline">\(y\)</span>を入れ替える。そのために、<span
+                                    class="math inline">\(yY\)</span>の全微分を考える。<span
+                                    class="math inline">\(f\)</span>の全微分と並べて書くと</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    d(yY) &amp;= ydY + Ydy \\
+                                    df &amp;=  \frac{\partial
+                                    f}{\partial x} dx + Ydy
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>辺々引くと、</p>
+                                    <p><span class="math display">\[
+                                    d(yY - f) = -\frac{\partial
+                                    f}{\partial x} dx + ydY
+                                    \]</span></p>
+                                    <p>ここで<span
+                                    class="math inline">\(F=yY
+                                    -f\)</span>とおくと、<span
+                                    class="math inline">\(F\)</span>の自由変数は<span
+                                    class="math inline">\(x\)</span>と<span
+                                    class="math inline">\(Y\)</span>になっている、すなわち<span
+                                    class="math inline">\(F(x,Y)\)</span>となっていることがわかる。今回は第二引数に対してルジャンドル変換をしたが、もちろん任意の引数についてルジャンドル変換を行うことができる。</p>
+                                    <p>では、ラグランジアンに対してルジャンドル変換を適用しよう。もともとラグランジアンは<span
                                     class="math inline">\(q\)</span>と<span
                                     class="math inline">\(\dot{q}\)</span>の関数であり、<span
                                     class="math inline">\(L(q,\dot{q})\)</span>と書けた。従って、その全微分は</p>
