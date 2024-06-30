@@ -65,7 +65,51 @@
                                     <p>ニュートンの運動方程式を、ラグランジアンを使ってオイラー・ラグランジュの式で書いてやると、ニュートンの運動方程式よりも広い変数変換に対して運動方程式が不変となることを見た。これにより変数変換が楽になる。しかし、オイラー・ラグランジュの式で許される変換は座標のみを対象としたものであり、例えば運動量と座標を混ぜるような変換に対しては形を変えてしまう。そこで、ラグランジアンを変数変換することで、より広い変数変換について形を変えないような運動方程式を作ることにしよう。</p>
                                     <p>系のラグランジアンが<span
                                     class="math inline">\(L(q,
-                                    \dot{q})\)</span>で与えられている。この時、ラグランジアンを一般化速度<span
+                                    \dot{q})\)</span>で与えられている。一般化座標<span
+                                    class="math inline">\(q\)</span>と一般化速度<span
+                                    class="math inline">\(\dot{q}\)</span>が時間依存する時、ラグランジアンを時間積分したものを作用積分と呼ぶ。</p>
+                                    <p><span class="math display">\[
+                                    I = \int L dt
+                                    \]</span></p>
+                                    <p>この作用積分の変分がゼロとなる条件(<span
+                                    class="math inline">\(\delta I =
+                                    0\)</span>)より、オイラー・ラグランジュ方程式が導かれるのであった。</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{q}} \right) -
+                                    \frac{\partial L}{\partial q} = 0
+                                    \]</span></p>
+                                    <p>さて。ラグランジアン<span
+                                    class="math inline">\(L\)</span>が時間に陽に依存しない場合、すなわち<span
+                                    class="math inline">\(\partial_t L =
+                                    0\)</span>が成り立つ時、ベルトラミの公式により、以下の量が時間不変量になるのであった。</p>
+                                    <p><span class="math display">\[
+                                    B = L - \dot{q} \frac{\partial
+                                    L}{\partial \dot{q}}
+                                    \]</span></p>
+                                    <p>ラグランジアンが</p>
+                                    <p><span class="math display">\[
+                                    L = \frac{1}{2}m \dot{q}^2 - U(q)
+                                    \]</span></p>
+                                    <p>という形でかけている時、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    B &amp;=  L - \dot{q} \frac{\partial
+                                    L}{\partial \dot{q}} \\
+                                    &amp;=  \frac{1}{2}m \dot{q}^2 -
+                                    U(q) - m \dot{q}^2 \\
+                                    &amp;= -\frac{1}{2}m \dot{q}^2 -U(q)
+                                    \\
+                                    &amp;= -(K+U)\\
+                                    &amp;= -E
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、この時間不変量はエネルギーに負符号をつけたものである。そこで、</p>
+                                    <p><span class="math display">\[
+                                    H = -B = \dot{q} \frac{\partial
+                                    L}{\partial \dot{q}} - L
+                                    \]</span></p>
+                                    <p>という量を考えよう。この時、ラグランジアンを一般化速度<span
                                     class="math inline">\(\dot{q}\)</span>で偏微分したものを<span
                                     class="math inline">\(p\)</span>とする。</p>
                                     <p><span class="math display">\[
@@ -75,9 +119,10 @@
                                     <p>ラグランジアンはエネルギーの次元を持っているため、もし一般化座標<span
                                     class="math inline">\(q\)</span>が長さの次元を持っていれば、<span
                                     class="math inline">\(p\)</span>は運動量の次元を持つことがわかる。そこで、<span
-                                    class="math inline">\(p\)</span>を一般化運動量と呼ぶ。ラグランジアンの自由変数を<span
-                                    class="math inline">\(\dot{q}\)</span>から<span
-                                    class="math inline">\(p\)</span>に取り直すため、以下のような量を考える。</p>
+                                    class="math inline">\(p\)</span>を<strong>一般化運動量(generalized
+                                    momentum)</strong>と呼ぶ。</p>
+                                    <p>一般化運動量<span
+                                    class="math inline">\(p\)</span>を用いると、先程の量は以下のように書ける。</p>
                                     <p><span class="math display">\[
                                     H = \dot{q}p - L
                                     \]</span></p>
@@ -151,55 +196,7 @@
                                     class="math inline">\(p_i\)</span>は互いにペアになっており、自分の時間微分は、ハミルトニアンを相手で偏微分することで得られる。ただし、運動量は負符号がつくことに注意。オイラー・ラグランジュ方程式に比べて、方程式が対称性の良い形になっていることがわかるであろう。この運動方程式を用いて運動を議論する形式をハミルトン形式と呼ぶ。また、<span
                                     class="math inline">\(q^i\)</span>と<span
                                     class="math inline">\(p_i\)</span>の関係を正準共役、もしくは単に共役と呼ぶ。</p>
-                                    <h1
-                                    id="ハミルトニアンとエネルギー">ハミルトニアンとエネルギー</h1>
-                                    <p>ラグランジアンの一般化速度をルジャンドル変換したものがハミルトニアンであるが、物理的には全エネルギーに対応する量となることを見ておこう。</p>
-                                    <p>二次元系において、ポテンシャル<span
-                                    class="math inline">\(U(x,y)\)</span>による力を受けて運動する質点を考える。質点の質量を<span
-                                    class="math inline">\(m\)</span>とすると、この系の運動エネルギーは</p>
-                                    <p><span class="math display">\[
-                                    K = \frac{1}{2}m(\dot{x}^2 +
-                                    \dot{y}^2)
-                                    \]</span></p>
-                                    <p>であるから、ラグランジアンは</p>
-                                    <p><span class="math display">\[
-                                    L = K - U = \frac{1}{2}m(\dot{x}^2 +
-                                    \dot{y}^2) - U(x,y)
-                                    \]</span></p>
-                                    <p>となる。オイラー・ラグランジュ方程式からただちに</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    m \ddot{x} &amp;= - \frac{\partial
-                                    U}{\partial x} \\
-                                    m \ddot{y} &amp;= - \frac{\partial
-                                    U}{\partial y}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>さて、ラグランジアンからハミルトニアンに移ろう。ラグランジアンを一般化速度で偏微分したものが一般化運動量であるから、</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    p_x &amp;= \frac{\partial
-                                    L}{\partial \dot{x}} = m \dot{x}\\
-                                    p_y &amp;= \frac{\partial
-                                    L}{\partial \dot{y}} = m \dot{y}\\
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>ハミルトニアンは</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    H &amp;= p_x \dot{x} + p_y \dot{y} -
-                                    L \\
-                                    &amp;= m \dot{x}^2 + m \dot{y}^2 - L
-                                    \\
-                                    &amp;= 2K - (K -U)\\
-                                    &amp;= K + U \\
-                                    &amp;= \frac{1}{2m}(p_x^2+p_y^2) + U
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>すなわち、<span
-                                    class="math inline">\(p_i
-                                    \dot{q}^i\)</span>の項が運動エネルギーの2倍になるため、結果としてハミルトニアンは全エネルギーそのものとなる。</p>
-                                    <p>一般的なハミルトニアン<span
+                                    <p>ハミルトニアンは、ベルトラミの公式の保存量に対応しているから、時間に陽に依存しなければ時間不変量となる。それを見てみよう。一般的なハミルトニアン<span
                                     class="math inline">\(H(p,q)\)</span>に対して時間微分を計算すると</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -227,7 +224,47 @@
                                     と呼ばれるものの一種である。ルジャンドル変換は双対変換の一種であり、双対変換とは「2回行うと元に戻る操作」のことである。元に戻せるのであるから、ルジャンドル変換により情報は増えたり減ったりしない。しかし、ルジャンドル変換により目的に応じて自由変数を取り直すことで、見通しがよくなったり計算が楽になったりする。ルジャンドル変換は特に熱力学において主要な役割を果たすが、なかなかその直感的な意味を理解しづらい。以下ではルジャンドル変換の意味について様々な角度から見てみよう。</p>
                                     <h2
                                     id="全微分とルジャンドル変換">全微分とルジャンドル変換</h2>
-                                    <p>まず、自由変数を取り直す、ということの意味について考える。もともとラグランジアンは<span
+                                    <p>まず、自由変数を取り直す、ということの意味について考える。簡単のために、一変数関数<span
+                                    class="math inline">\(y(x)\)</span>を考えよう。この関数の全微分は</p>
+                                    <p><span class="math display">\[
+                                    dy = \frac{dy}{dx} dx
+                                    \]</span></p>
+                                    <p>と記述できる。また、右辺に<span
+                                    class="math inline">\(dx\)</span>しか現れないのは、この関数<span
+                                    class="math inline">\(y\)</span>が<span
+                                    class="math inline">\(x\)</span>にのみ依存する関数であることを表している。すなわち、<span
+                                    class="math inline">\(x\)</span>が自由変数であり、<span
+                                    class="math inline">\(dy\dx\)</span>がその微係数である。さて、ここで、自由変数と微係数を入れ替えることを考える。つまり、</p>
+                                    <p><span class="math display">\[
+                                    X = \frac{dy}{dx}
+                                    \]</span></p>
+                                    <p>とおいて、<span
+                                    class="math inline">\(x\)</span>のかわりに<span
+                                    class="math inline">\(X\)</span>を自由変数に取り直す。そのために、<span
+                                    class="math inline">\(xX\)</span>という量の全微分を考える。あとのために<span
+                                    class="math inline">\(y\)</span>の全微分を並べて書いておく。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    d(xX) &amp;= x dX + X dx\\
+                                    dy &amp;= X dx
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>辺々引くと</p>
+                                    <p><span class="math display">\[
+                                    d(xX - y) = x dX
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(Y = xX
+                                    -y\)</span>という量を考えると、</p>
+                                    <p><span class="math display">\[
+                                    dY = x dX
+                                    \]</span></p>
+                                    <p>これは、新しい関数<span
+                                    class="math inline">\(Y\)</span>の自由変数は<span
+                                    class="math inline">\(X\)</span>になっていることを示す。すなわち、自由変数が<span
+                                    class="math inline">\(x\)</span>から<span
+                                    class="math inline">\(X\)</span>に入れ替わった。これをルジャンドル変換と呼ぶ。</p>
+                                    <p>もともとラグランジアンは<span
                                     class="math inline">\(q\)</span>と<span
                                     class="math inline">\(\dot{q}\)</span>の関数であり、<span
                                     class="math inline">\(L(q,\dot{q})\)</span>と書けた。従って、その全微分は</p>
