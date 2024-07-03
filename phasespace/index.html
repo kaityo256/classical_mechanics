@@ -107,7 +107,8 @@
                                     <strong>位相空間(phase
                                     space)</strong>
                                     と呼ぶ。一次元の調和振動子であれば、<span
-                                    class="math inline">\((q,p)\)</span>で表現される二次元空間が位相空間である。</p>
+                                    class="math inline">\((q,p)\)</span>で表現される二次元空間が位相空間である。なお、物理で使う位相空間は、数学で使う位相空間(topological
+                                    space)とは異なる概念なので注意。</p>
                                     <p>ここで、系の自由度と配位空間、位相空間の関係についてまとめておこう。系の自由度とは、系の配位を一意に決めることができる変数の数である。何かの系を写真に撮った、その写真の状態を説明することを考えよう。たとえば調和振動子なら、釣り合いの位置からどれだけ離れているか、振り子なら鉛直方向からの角度のみを指定すれば、写真の状態を指定できる。このように、系を写真に撮った状態を配位(configuration)、その配位を指定するための変数を一般化座標、その一般化座標の数を自由度と呼ぶ。一般化座標が住む空間を配位空間と呼び、その次元は自由度に等しい。しかし、先程の写真からは運動を決定することができない。調和振動子なら、釣り合いの位置に戻っていくところなのか、離れていくところなのかが写真からはわからない。そこで、この系の一般化座標に対応する一般化速度も指定することで系の運動を一意に決めることができる。この、一般化座標と一般化速度が住む空間を
                                     <strong>状態空間(state
                                     space)</strong>
@@ -159,20 +160,20 @@
                                     \dot{q})\)</span>に従って進んでいく。運動方程式は、位相空間という地図に、「次はどこに進むべきか」という情報を与えている。</p>
                                     <h1
                                     id="ラグランジュ描像とオイラー描像">ラグランジュ描像とオイラー描像</h1>
-                                    <p>運動方程式を「物体の運動を記述する」という見方から、「位相空間に速度場を定義する」という見方に変えることは、ラグランジュ描像からオイラー描像に移ったことに対応する。</p>
-                                    <p>今、流れる川の中に葉っぱが落ちたとしよう。その葉っぱをずっと追いかけると、その葉っぱは水から押されて右にいったり左にいったりしながら流れていく様子が見えるだろう。このように観測者が運動する物体に並走し、その物体の軌跡を観察するのがラグランジュ描像である。</p>
+                                    <p>ここで、運動方程式を「運動を規程するもの」という見方から「位相空間に速度場を定義するもの」という見方に移ったことに注意したい。これは、ラグランジュ描像からオイラー描像に移ったことに対応する。</p>
+                                    <p>今、流れる川の中に葉っぱが落ちたとしよう。その葉っぱをずっと追いかけると、その葉っぱは水から押されて右にいったり左にいったりしながら流れていく様子が見えるだろう。このように観測者が運動する物体に並走し、その物体の軌跡を観察するのがラグランジュ描像である。ニュートンの運動方程式は、ラグランジュ描像により運動を記述する。</p>
                                     <p>一方、流れに関しては、媒質の運動をおいかけるよりも、その場にとどまって、その場所での流れがどのように変化していくかに興味があることが多い。例えば天気予報においては、ある特定の雲の運動を追いかけるよりも、ある地点において雲がどう入ってきてどう出ていくかの方が重要である。このように観測者の場所を固定し、その場所での流れを観察し続けるのがオイラー描像である。</p>
-                                    <p>オイラー描像では、物理量を場の量として捉える。<strong>場(field)</strong>
+                                    <p>オイラー描像では、空間に固定された座標系を考え、物理量をその座標系における場の量として捉える。<strong>場(field)</strong>
                                     とは、物理量を空間や時間の関数として捉えることである。例えば等高線のある地図を考えよう。例えば緯度と経度のような適当な座標を指定すると、その場所での標高が決まる。この地図は、二次元座標<span
                                     class="math inline">\((x,y)\)</span>を決めると、その場所での高さ<span
                                     class="math inline">\(h(x,y)\)</span>を与えている。このように、座標を決めるとスカラー量が与えられるような場をスカラー場と呼ぶ。例えば温度や密度はスカラー量であるから、温度場や密度場はスカラー場である。</p>
                                     <p>同様に、場所を決めるとベクトルが決まるような場をベクトル場と呼ぶ。例えば流れるプールでは、場所が決まれば流れる向きが決まる。この流れの速度場はベクトル場である。正準方程式は、<span
                                     class="math inline">\((q,p)\)</span>という位相空間に、<span
                                     class="math inline">\((\dot{p},
-                                    \dot{q})\)</span>というベクトル場を対応させる写像であると考えることができる。この講義では扱わないが、場所を指定すると、そこに住むテンソルを返すテンソル場も定義できる。材料力学などで重要となる応力場などもテンソル場である。</p>
+                                    \dot{q})\)</span>というベクトル場を対応させる写像であると考えることができる。場所を指定すると、そこに住むテンソルを返すテンソル場も定義できる。材料力学などで重要となる応力場などもテンソル場である。</p>
                                     <p>さて、ベクトル場が定義された位相空間の一点にトレーサーを置こう。トレーサーはその場所のベクトルの向きに移動する。そして、移動先のベクトルの向きに動き……ということを繰り返す。川にインクを少量ずつたらしていくとそのインクにより流れ場が可視化されるように、トレーサーは位相空間における軌跡を可視化する。すなわち、位相空間におけるベクトル場とは、系の時間発展の流れを表す流れ場となっている。この流れ場の性質を調べるのが本章の目的である。</p>
                                     <h1
-                                    id="リュービルの定理">リュービルの定理</h1>
+                                    id="位相空間とベクトル場">位相空間とベクトル場</h1>
                                     <p>一自由度系のハミルトニアン<span
                                     class="math inline">\(H(q,p)\)</span>に支配される正準方程式を考えよう。</p>
                                     <p><span class="math display">\[
@@ -185,14 +186,12 @@
                                     \]</span></p>
                                     <p>これを、<span
                                     class="math inline">\((q,p)\)</span>で張られる位相空間に<span
-                                    class="math inline">\((\dot{p},
-                                    \dot{q})\)</span>という速度場を定義する式であると考える。位相空間の座標をまとめて<span
+                                    class="math inline">\((\dot{q},
+                                    \dot{p})\)</span>という速度場を定義する式であると考える。位相空間の座標をまとめて<span
                                     class="math inline">\(\mathbf{z}\)</span>で表そう。すなわち、</p>
                                     <p><span class="math display">\[
                                     \mathbf{z} =
-                                    \begin{pmatrix}
-                                    q\\
-                                    p
+                                    \begin{pmatrix} q\\ p
                                     \end{pmatrix},
                                     \dot{\mathbf{z}} =
                                     \begin{pmatrix}
@@ -201,13 +200,12 @@
                                     \end{pmatrix}
                                     \]</span></p>
                                     <p>ハミルトニアンに関して<span
-                                    class="math inline">\(p\)</span>や<span
-                                    class="math inline">\(q\)</span>の偏微分があるので、ハミルトニアンをスカラー場と思って<span
+                                    class="math inline">\(q\)</span>や<span
+                                    class="math inline">\(p\)</span>の偏微分があるので、ハミルトニアンをスカラー場と思って<span
                                     class="math inline">\(\mathbf{z}\)</span>で微分してみよう。</p>
                                     <p><span class="math display">\[
                                     \frac{\partial H}{\partial
-                                    \mathbf{z}} \equiv \nabla H
-                                    =
+                                    \mathbf{z}} \equiv \nabla H =
                                     \begin{pmatrix}
                                     \partial_q H \\
                                     \partial_p H
@@ -287,13 +285,13 @@
                                     \varepsilon_y)\)</span>の大きさを固定したまま、左辺を最大化するためには、内積を最大化する必要がある。つまり、方向ベクトルは<span
                                     class="math inline">\((\partial_x
                                     f,\partial_y
-                                    f)\)</span>と平行でなければならない。逆に、<span
+                                    f)\)</span>と平行でなければならない。故に、<span
                                     class="math inline">\(\nabla f
                                     \equiv (\partial_x f,\partial_y
                                     f)\)</span>は、スカラー場<span
-                                    class="math inline">\(f\)</span>の最大傾斜の方向を表すベクトルとなっている。以上から、<span
+                                    class="math inline">\(f\)</span>の最大傾斜の方向を表すベクトルである。そのため、<span
                                     class="math inline">\(\nabla
-                                    f\)</span>はスカラー場の勾配(gradient)を表すため、<span
+                                    f\)</span>はスカラー場の勾配(gradient)と呼び、<span
                                     class="math inline">\(\mathrm{grad}
                                     f\)</span>とも表す。</p>
                                     <p>さて、<span
@@ -313,7 +311,10 @@
                                     </ol>
                                     <p>我々の目的は運動方程式を解くことであった。運動方程式の解は、位相空間上ではハミルトニアンベクトル場に沿って「流れて」いく流線に対応しており、これを解曲線と呼ぶ。ハミルトニアンベクトル場が、エネルギーの勾配ベクトルと直交していることから、解曲線は<span
                                     class="math inline">\(H(q,p)\)</span>の等高線上を運動する。すなわち、運動によりエネルギーが保存する。ハミルトニアンベクトル場は、「なぜ運動によりエネルギーが保存するか？」という問いに対して「位相空間上での運動の方向が、エネルギーが変化する向きと常に直交しているから」という答えを用意する。</p>
-                                    <p>ハミルトニアンベクトル場には、もう一つ重要な性質がある。ハミルトニアンベクトル場が作る速度場<span
+                                    <p>先ほどの調和振動子の位相空間を思い起こそう。運動方程式は位相空間に回転するような速度場を定義する。回転半径は回転によって変化しない。この回転半径がエネルギーにあたり、回転角度が時間にあたる。すなわち、時間発展とは位相空間における回転である。また、ニュートンの運動方程式は一つの調和振動子の振動する様子を記述しているが、位相空間は、この運動方程式で記述可能な運動を一度に全て記述している。このように、解析力学では居所的なものの見方から、大域的なものの見方へ視点を変化させる。</p>
+                                    <h1
+                                    id="リュービルの定理">リュービルの定理</h1>
+                                    <p>さて、ハミルトニアンベクトル場は、もう一つ重要な性質を持っている。ハミルトニアンベクトル場が作る速度場<span
                                     class="math inline">\(\dot{\mathbf{z}}\)</span>を考えよう。この速度場と<span
                                     class="math inline">\(\nabla\)</span>の内積を考える。ベクトル同士の内積であるから、結果はスカラー量になる。</p>
                                     <p><span class="math display">\[
@@ -336,13 +337,11 @@
                                     \end{pmatrix}
                                     \cdot
                                     \begin{pmatrix}
-                                    \partial_p H\\
-                                    -\partial_q H
+                                    \partial_p H\\ -\partial_q H
                                     \end{pmatrix}\\
                                     &amp;= \frac{\partial^2 H }{\partial
-                                    p \partial q}
-                                    - \frac{\partial^2 H }{\partial p
-                                    \partial q}\\
+                                    p \partial q} - \frac{\partial^2 H
+                                    }{\partial p \partial q}\\
                                     &amp;=0
                                     \end{aligned}
                                     \]</span></p>
@@ -403,15 +402,19 @@
                                     </figure>
                                     <p>オイラー微分とラグランジュ微分は、時刻<span
                                     class="math inline">\(t\)</span>から<span
-                                    class="math inline">\(h\)</span>後に、どこの場所の値と比較しているかの違いを表している。オイラー微分は、同じ場所、異なる時間の変化を追いかけている。</p>
+                                    class="math inline">\(h\)</span>後に、どこの場所の値と比較しているかの違いを表している。オイラー微分は、同じ場所において、異なる時間の変化を追いかけている。</p>
                                     <p><span class="math display">\[
                                     \rho(x,t+h)-\rho(x,h) \sim
                                     \frac{\partial \rho}{\partial t}h +
                                     O(h^2)
                                     \]</span></p>
-                                    <p>ラグランジュ微分は、時刻<span
-                                    class="math inline">\(t+h\)</span>、<span
-                                    class="math inline">\(x+vh\)</span>の場所との値の差を見ている。</p>
+                                    <p>ラグランジュ微分は、流れ(速度場)に沿って移動する観測者が感じる変化を追いかける。時刻<span
+                                    class="math inline">\(t\)</span>において観測者が位置<span
+                                    class="math inline">\(x(t)\)</span>におり、その場所における速度場が<span
+                                    class="math inline">\(v(x)\)</span>であったなら、時刻<span
+                                    class="math inline">\(t+h\)</span>後には、この観測者は<span
+                                    class="math inline">\(x +
+                                    vt\)</span>の場所に移動しているため、その差を取ると</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \rho(x+vh,t+h) - \rho(x,h) &amp;=
@@ -427,20 +430,77 @@
                                     \frac{D \rho}{D t} = -\rho
                                     \frac{\partial v}{\partial x}
                                     \]</span></p>
-                                    <p>ここまでは一次元で表現したが、三次元の場合でも(さらに高次元の場合でも)全く同様に、物質微分を</p>
+                                    <p>ここまでは一次元を考えたが、高次元の場合でも全く同様に計算できる。</p>
+                                    <figure>
+                                    <img src="fig/lagrange2d.png"
+                                    alt="lagrange2d" />
+                                    <figcaption
+                                    aria-hidden="true">lagrange2d</figcaption>
+                                    </figure>
+                                    <p>例えば2次元の密度場<span
+                                    class="math inline">\(\rho(x,y)\)</span>と流れ場<span
+                                    class="math inline">\(\mathbf{v}(x,y)\)</span>を考えよう。<span
+                                    class="math inline">\((x,y)\)</span>から<span
+                                    class="math inline">\((x+h,
+                                    y+h)\)</span>の正方形の領域における物質の収支を考える。<span
+                                    class="math inline">\(x\)</span>方向の収支<span
+                                    class="math inline">\(J_x\)</span>は、左から<span
+                                    class="math inline">\(v_x(x,y)\)</span>の速度かつ<span
+                                    class="math inline">\(\rho(x,y)\)</span>の密度で流入し、右から<span
+                                    class="math inline">\(v_x(x+h,y)\)</span>の速度かつ<span
+                                    class="math inline">\(\rho(x+h,y)\)</span>の密度で流出するから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    J_x &amp;= \left(v_x(x,y)\rho(x,y) -
+                                    v_x(x + h,y)\rho(x,y) \right)h \\
+                                    &amp;= - h^2
+                                    \frac{\partial}{\partial x}
+                                    \left(v_x \rho \right) + O(h^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>同様に<span
+                                    class="math inline">\(y\)</span>方向の収支は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    J_y &amp;= \left(v_y(x,y)\rho(x,y) -
+                                    v_y(x,y)\rho(x,y+h) \right)h \\
+                                    &amp;= - h^2
+                                    \frac{\partial}{\partial y}
+                                    \left(v_y \rho \right) + O(h^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>その結果、単位時間あたり正方形の領域内の密度が<span
+                                    class="math inline">\(\Delta
+                                    \rho(x,y)\)</span>だけ変化したならば、密度に面積をかけたものが物質量であるから、</p>
+                                    <p><span class="math display">\[
+                                    \Delta \rho h^2 = J_x + J_y
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\(\Delta \rho =
+                                    \partial \rho/ \partial
+                                    t\)</span>だと思えば、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \Delta \rho &amp;= -
+                                    \frac{\partial}{\partial x}
+                                    \left(v_x \rho \right) -
+                                    \frac{\partial}{\partial y}
+                                    \left(v_y \rho \right) \\
+                                    &amp;= - \nabla \left(\rho
+                                    \mathbf{v} \right)
+                                    \end{aligned}
+                                    \]</span></p>
                                     <p><span class="math display">\[
                                     \frac{D}{D t} \equiv
                                     \frac{\partial}{\partial t} +
                                     \mathbf{v} \cdot \nabla
                                     \]</span></p>
-                                    <p>として、</p>
+                                    <p>として多次元のラグランジュ微分を定義すれば</p>
                                     <p><span class="math display">\[
                                     \frac{D \rho}{D t} = -\rho (\nabla
                                     \cdot \mathbf{v})
                                     \]</span></p>
-                                    <p>を導くことができる。</p>
-                                    <p>TODO:
-                                    多次元版の説明の図を追加</p>
+                                    <p>と同じ式が得られる。</p>
                                     <p>ここで、右辺の意味を考えよう。速度場<span
                                     class="math inline">\(\mathbf{v}\)</span>の位置による微分が正である時、流入速度よりも、流出速度の方が大きいことになる。これは、そこに何か湧き出していることを意味する。逆に、微分が負であるならば、流入速度より流出速度の方が小さく、これはそこに吸い込みがあることを意味する。以上から、速度場の空間微分<span
                                     class="math inline">\((\nabla \cdot
@@ -451,7 +511,7 @@
                                     \mathbf{v}\)</span>とも書く。</p>
                                     <p>さて、速度場の発散がゼロ、つまり</p>
                                     <p><span class="math display">\[
-                                    \nabla \mathbf{v}
+                                    \nabla \cdot \mathbf{v} = 0
                                     \]</span></p>
                                     <p>としよう。この時、密度の物質微分がゼロ、すなわち流れに追いかけた場合の密度変化がゼロとなる。この流体は流れに対して密度が変わらない。このような流体を非圧縮流体と呼ぶ。</p>
                                     <p>ハミルトニアンベクトル場に話を戻そう。ハミルトニアンベクトル場は、位相空間上に<span
