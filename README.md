@@ -59,7 +59,6 @@
 * ラグランジアン
 * 一般化座標と一般化速度
 * 点変換
-* 余談：公式の証明
 
 ## [ハミルトン形式の力学](hamiltonian/README.md)
 
@@ -73,17 +72,17 @@
 * リュービルの定理
 * 余談：理論の正しさ
 
-## [正準変換](canonical_transformation/README.md)
-
-* 正準変換
-* 母関数
-
 ## [ポアソン括弧](poisson/README.md)
 
 * ポアソン括弧
 * Lie代数
 * 三次元回転
 * 余談：サイコロの雌雄と生命の選択
+
+## [正準変換](canonical_transformation/README.md)
+
+* 正準変換
+* 母関数
 
 ## [微小正準変換とネーターの定理](noether/README.md)
 
