@@ -11,7 +11,6 @@
 
 オイラー・ラグランジュ方程式は一般化座標について任意の変換(点変換)を行っても方程式の形が変わらなかった。ハミルトンの運動方程式は、点変換のみならず、$p$ と$q$ を混ぜるような、より広い範囲の変換について共変となる。しかし、その変換は完全に任意というわけではなく、その変換規則には制限がつく。いま、変数変換 $(q,p) \rightarrow (Q, P)$ により、ハミルトンの運動方程式が共変に保たれるためには、どのような条件が必要であるかを調べてみよう。
 
-
 我々が調べたいことは、元の変数 $(q,p)$がハミルトンの運動方程式
 
 $$
@@ -36,8 +35,7 @@ $$
 \begin{aligned}
 \dot{q} &= \frac{\partial H}{\partial p} \\
 &= \frac{\partial H(Q(q,p),P(q,p))}{\partial p} \\
-&= \frac{\partial H}{\partial Q}\frac{\partial Q}{\partial p}
-+ \frac{\partial H}{\partial P}\frac{\partial P}{\partial p}
+&= \frac{\partial H}{\partial Q}\frac{\partial Q}{\partial p} * \frac{\partial H}{\partial P}\frac{\partial P}{\partial p}
 \end{aligned}
 $$
 
@@ -46,8 +44,7 @@ $$
 $$
 \begin{aligned}
 \dot{p} &= -\frac{\partial H}{\partial q} \\
-&= -\frac{\partial H}{\partial Q}\frac{\partial Q}{\partial q}
-- \frac{\partial H}{\partial P}\frac{\partial P}{\partial q}
+&= -\frac{\partial H}{\partial Q}\frac{\partial Q}{\partial q} * \frac{\partial H}{\partial P}\frac{\partial P}{\partial q}
 \end{aligned}
 $$
 
@@ -57,8 +54,7 @@ $$
 \begin{aligned}
 \dot{Q} &= \frac{d}{dt} Q(q,p) \\
 &= \frac{\partial Q}{\partial q}\dot{q} +\frac{\partial Q}{\partial p} \dot{p} \\
-&= \frac{\partial Q}{\partial q} \underbrace{\left( \frac{\partial H}{\partial Q}\frac{\partial Q}{\partial p}
-+ \frac{\partial H}{\partial P}\frac{\partial P}{\partial p} \right)}_{\dot{q}} \\
+&= \frac{\partial Q}{\partial q} \underbrace{\left( \frac{\partial H}{\partial Q}\frac{\partial Q}{\partial p} * \frac{\partial H}{\partial P}\frac{\partial P}{\partial p} \right)}_{\dot{q}} \\
 &- \frac{\partial Q}{\partial p} \underbrace{\left( \frac{\partial H}{\partial Q}\frac{\partial Q}{\partial q} + \frac{\partial H}{\partial P}\frac{\partial P}{\partial q} \right)}_{\dot{p}}\\
 &=\cancel{\frac{\partial Q}{\partial q} \frac{\partial H}{\partial Q}\frac{\partial Q}{\partial p}} + \frac{\partial Q}{\partial q}\frac{\partial H}{\partial P}\frac{\partial P}{\partial p} \\
 &- \cancel{\frac{\partial Q}{\partial p}\frac{\partial H}{\partial Q}\frac{\partial Q}{\partial q}} - \frac{\partial Q}{\partial p}\frac{\partial H}{\partial P}\frac{\partial P}{\partial q} \\
@@ -263,20 +259,20 @@ $$
 
 と、部分積分により付け加えた項がゼロになるため、項をつけわえる前と同じ正準方程式が得られる。すなわち、ハミルトニアン$H$に対して$H \rightarrow H - q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
 
-全く同様にして、$q$に関する任意の関数$W(q)$について、作用積分にその時間微分$dW/dt$を加えても正準方程式を変えないことがわかる。実際に
+全く同様にして、$q$に関する任意の関数$W(q)$について、作用積分にその時間微分$-dW/dt$を加えても正準方程式を変えないことがわかる(あとのために負符号をつけておく)。実際に
 
 $$
 \begin{aligned}
-\delta\left(p\dot{q} - H + \frac{dW}{dt}\right)  &= \delta (p\dot{q} - H + W'(q) \dot{q})\\
-&= \delta(p\dot{q} - H) + \delta (W'(q) \dot{q}) \\
-&= \delta(p\dot{q} - H) + W''(q) \dot{q} \delta q + W'(q) \delta \dot{q} \\
-&= \delta(p\dot{q} - H) + \underbrace{W''(q) \dot{q} \delta q - W''(q) \dot{q}\delta q}_{=0} \\
+\delta\left(p\dot{q} - H - \frac{dW}{dt}\right)  &= \delta (p\dot{q} - H - W'(q) \dot{q})\\
+&= \delta(p\dot{q} - H) - \delta (W'(q) \dot{q}) \\
+&= \delta(p\dot{q} - H) - W''(q) \dot{q} \delta q - W'(q) \delta \dot{q} \\
+&= \delta(p\dot{q} - H) - \underbrace{W''(q) \dot{q} \delta q + W''(q) \dot{q}\delta q}_{=0} \\
 \end{aligned}
 $$
 
 となり、部分積分で消えてしまう。$W$が$p$のみの関数の場合も同様である。したがって、ハミルトニアンに加える項として$F = dW/dt$を考えれば正準変換を導けそうである。ただし、$W$が$q,p$のどちらにも依存する場合、$W$が正準変換を導くには条件がつく。
 
-いま、$(q,p)$で記述されたハミルトニアン$H(q,p)$に、任意の関数$W(q,p)$を考え、その時間微分$F=dW/dt$を加えたものの変分を考えよう。
+いま、$(q,p)$で記述されたハミルトニアン$H(q,p)$に、任意の関数$W(q,p)$を考え、その時間微分$F=-dW/dt$を加えたものの変分を考えよう。
 
 $$
 \delta\left(p\dot{q} - H - \frac{dW}{dt}\right)  = \delta (p\dot{q} - H) - \delta \left(\frac{dW}{dt} \right)
@@ -287,8 +283,7 @@ $$
 $$
 \begin{aligned}
 \delta \dot{W} &= \delta \left(\frac{\partial W}{\partial q}\dot{q} + \frac{\partial W}{\partial p}\dot{p} \right) \\
-&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + \frac{\partial W}{\partial q} \delta \dot{q}}_{\bigstar}
-+ \delta \left(\frac{\partial W}{\partial p}\right)\dot{p} + \frac{\partial W}{\partial p} \delta \dot{p} \\
+&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + \frac{\partial W}{\partial q} \delta \dot{q}}_{\bigstar} + \delta \left(\frac{\partial W}{\partial p}\right)\dot{p} + \frac{\partial W}{\partial p} \delta \dot{p} \\
 \end{aligned}
 $$
 
@@ -297,10 +292,7 @@ $$
 $$
 \begin{aligned}
 \bigstar &= \delta \left(\frac{\partial W}{\partial q}\right)\dot{q} - \frac{d}{dt}\left(\frac{\partial W}{\partial q}\right) \delta q \\
-&= \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q}
-+ \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p
-- \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q}
-- \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q
+&= \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} + \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p + \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} + \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q
 \end{aligned}
 $$
 
@@ -477,7 +469,6 @@ P &= q
 $$
 
 と、符号が逆転する。このように正準変換においては座標と運動量を自由に入れ替えることができる。
-
 
 ## まとめ
 

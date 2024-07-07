@@ -107,8 +107,8 @@
                                     &amp;= \frac{\partial
                                     H(Q(q,p),P(q,p))}{\partial p} \\
                                     &amp;= \frac{\partial H}{\partial
-                                    Q}\frac{\partial Q}{\partial p}
-                                    + \frac{\partial H}{\partial
+                                    Q}\frac{\partial Q}{\partial p} *
+                                    \frac{\partial H}{\partial
                                     P}\frac{\partial P}{\partial p}
                                     \end{aligned}
                                     \]</span></p>
@@ -118,8 +118,8 @@
                                     \dot{p} &amp;= -\frac{\partial
                                     H}{\partial q} \\
                                     &amp;= -\frac{\partial H}{\partial
-                                    Q}\frac{\partial Q}{\partial q}
-                                    - \frac{\partial H}{\partial
+                                    Q}\frac{\partial Q}{\partial q} *
+                                    \frac{\partial H}{\partial
                                     P}\frac{\partial P}{\partial q}
                                     \end{aligned}
                                     \]</span></p>
@@ -135,10 +135,9 @@
                                     &amp;= \frac{\partial Q}{\partial q}
                                     \underbrace{\left( \frac{\partial
                                     H}{\partial Q}\frac{\partial
-                                    Q}{\partial p}
-                                    + \frac{\partial H}{\partial
-                                    P}\frac{\partial P}{\partial p}
-                                    \right)}_{\dot{q}} \\
+                                    Q}{\partial p} * \frac{\partial
+                                    H}{\partial P}\frac{\partial
+                                    P}{\partial p} \right)}_{\dot{q}} \\
                                     &amp;- \frac{\partial Q}{\partial p}
                                     \underbrace{\left( \frac{\partial
                                     H}{\partial Q}\frac{\partial
@@ -423,20 +422,20 @@
                                     <p>全く同様にして、<span
                                     class="math inline">\(q\)</span>に関する任意の関数<span
                                     class="math inline">\(W(q)\)</span>について、作用積分にその時間微分<span
-                                    class="math inline">\(dW/dt\)</span>を加えても正準方程式を変えないことがわかる。実際に</p>
+                                    class="math inline">\(-dW/dt\)</span>を加えても正準方程式を変えないことがわかる(あとのために負符号をつけておく)。実際に</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \delta\left(p\dot{q} - H +
+                                    \delta\left(p\dot{q} - H -
                                     \frac{dW}{dt}\right)  &amp;= \delta
-                                    (p\dot{q} - H + W&#39;(q) \dot{q})\\
-                                    &amp;= \delta(p\dot{q} - H) + \delta
+                                    (p\dot{q} - H - W&#39;(q) \dot{q})\\
+                                    &amp;= \delta(p\dot{q} - H) - \delta
                                     (W&#39;(q) \dot{q}) \\
-                                    &amp;= \delta(p\dot{q} - H) +
-                                    W&#39;&#39;(q) \dot{q} \delta q +
+                                    &amp;= \delta(p\dot{q} - H) -
+                                    W&#39;&#39;(q) \dot{q} \delta q -
                                     W&#39;(q) \delta \dot{q} \\
-                                    &amp;= \delta(p\dot{q} - H) +
+                                    &amp;= \delta(p\dot{q} - H) -
                                     \underbrace{W&#39;&#39;(q) \dot{q}
-                                    \delta q - W&#39;&#39;(q)
+                                    \delta q + W&#39;&#39;(q)
                                     \dot{q}\delta q}_{=0} \\
                                     \end{aligned}
                                     \]</span></p>
@@ -452,7 +451,7 @@
                                     class="math inline">\((q,p)\)</span>で記述されたハミルトニアン<span
                                     class="math inline">\(H(q,p)\)</span>に、任意の関数<span
                                     class="math inline">\(W(q,p)\)</span>を考え、その時間微分<span
-                                    class="math inline">\(F=dW/dt\)</span>を加えたものの変分を考えよう。</p>
+                                    class="math inline">\(F=-dW/dt\)</span>を加えたものの変分を考えよう。</p>
                                     <p><span class="math display">\[
                                     \delta\left(p\dot{q} - H -
                                     \frac{dW}{dt}\right)  = \delta
@@ -473,11 +472,10 @@
                                     \left(\frac{\partial W}{\partial
                                     q}\right)\dot{q} + \frac{\partial
                                     W}{\partial q} \delta
-                                    \dot{q}}_{\bigstar}
-                                    + \delta \left(\frac{\partial
-                                    W}{\partial p}\right)\dot{p} +
-                                    \frac{\partial W}{\partial p} \delta
-                                    \dot{p} \\
+                                    \dot{q}}_{\bigstar} + \delta
+                                    \left(\frac{\partial W}{\partial
+                                    p}\right)\dot{p} + \frac{\partial
+                                    W}{\partial p} \delta \dot{p} \\
                                     \end{aligned}
                                     \]</span></p>
                                     <p>右辺の第一項、第二項を計算すると、</p>
@@ -489,12 +487,12 @@
                                     \frac{d}{dt}\left(\frac{\partial
                                     W}{\partial q}\right) \delta q \\
                                     &amp;= \cancel{\frac{\partial^2
-                                    W}{\partial q^2} \dot{q} \delta q}
-                                    + \frac{\partial^2 W}{\partial q
-                                    \partial p} \dot{q} \delta p
-                                    - \cancel{\frac{\partial^2
-                                    W}{\partial q^2} \dot{q} \delta q}
-                                    - \frac{\partial^2 W}{\partial q
+                                    W}{\partial q^2} \dot{q} \delta q} +
+                                    \frac{\partial^2 W}{\partial q
+                                    \partial p} \dot{q} \delta p +
+                                    \cancel{\frac{\partial^2 W}{\partial
+                                    q^2} \dot{q} \delta q} +
+                                    \frac{\partial^2 W}{\partial q
                                     \partial p} \dot{p} \delta q
                                     \end{aligned}
                                     \]</span></p>
