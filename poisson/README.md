@@ -2,7 +2,7 @@
 
 ## 本章の目的
 
-物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は運動方程式の座標を用いない形を与える。また、ポアソン括弧はリー代数の構造を持っており、量子力学における交換関係と密接につながっている。本章では、群や環といった代数構造がなぜ、どのようにして力学に現れるかを学ぶ。
+物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は座標を陽に用いない運動方程式の表式を与える。また、ポアソン括弧はリー代数の構造を持っており、量子力学における交換関係と密接につながっている。本章では、群や環といった代数構造がなぜ、どのようにして力学に現れるかを学ぶ。
 
 ## ポアソン括弧
 
@@ -41,7 +41,7 @@ $$
 
 と書くことができる。この括弧を **ポアソン括弧(Poisson bracket)** と呼ぶ。
 
-さて、変数変換$(q,p) \rightarrow (Q,P)$により運動方程式の形を変えない時、つまりハミルトンの運動方程式が共変である場合、この変換を正準変換と呼ぶ。正準変換の条件については次章で詳しく説明する。
+さて、変数変換$(q,p) \rightarrow (Q,P)$により運動方程式の形を変えない時、つまりハミルトンの運動方程式が共変である場合、この変換を正準変換と呼ぶのであった。
 
 さて、実はポアソン括弧は正準変数に対して不変であること、すなわち、ある正準変数の組$(q,p)$が、正準変換により別の正準変数の組 $(Q,P)$ に変換される時、$(q,p)$で定義したポアソン括弧式と、 $(Q,P)$ で定義したポアソン括弧式は等しいことを示すことができる。
 
@@ -80,11 +80,9 @@ $$
 \frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p} + \frac{\partial Y}{\partial P}\frac{\partial P}{\partial p}
 \right) \\
 &=
-\frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P}\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}
-+
+\frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P}\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} +
 \frac{\partial X}{\partial P}\frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p}\frac{\partial P}{\partial q}\\
-&+ \underbrace{\frac{\partial X}{\partial Q}\frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p}\frac{\partial Q}{\partial q}
-+ \frac{\partial X}{\partial P}\frac{\partial Y}{\partial P}\frac{\partial P}{\partial p}\frac{\partial P}{\partial q}}_{\bigstar}
+&+ \underbrace{\frac{\partial X}{\partial Q}\frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p}\frac{\partial Q}{\partial q} + \frac{\partial X}{\partial P}\frac{\partial Y}{\partial P}\frac{\partial P}{\partial p}\frac{\partial P}{\partial q}}_{\bigstar}
 \end{aligned}
 $$
 
@@ -93,32 +91,27 @@ $$
 $$
 \begin{aligned}
 \left\{X, Y\right\}_{q,p} &=
-\frac{\partial X}{\partial q}\frac{\partial Y}{\partial p}
-- \frac{\partial Y}{\partial q}\frac{\partial X}{\partial p} \\
+\frac{\partial X}{\partial q}\frac{\partial Y}{\partial p} - \frac{\partial Y}{\partial q}\frac{\partial X}{\partial p} \\
 &=
 \frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P}
-\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}
-+
+\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} +
 \frac{\partial X}{\partial P}\frac{\partial Y}{\partial Q}
 \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} \\
 &-
 \frac{\partial X}{\partial P}\frac{\partial Y}{\partial Q}
-\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}
--
+\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} -
 \frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P}
 \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q}\\
 &=
 \frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P}
 \underbrace{\left(
-    \frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}
-    -
+    \frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}    -
     \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q}
 \right)}_{=1}
 \\
 &- \frac{\partial X}{\partial P}\frac{\partial Y}{\partial Q}
 \underbrace{\left(
-    \frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}
-    -
+    \frac{\partial Q}{\partial q}\frac{\partial P}{\partial p}    -
     \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q}
 \right)}_{=1}\\
 &= \frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P} -
@@ -127,7 +120,7 @@ $$
 \end{aligned}
 $$
 
-なお、ここで正準変換の条件である「変換のヤコビアンが1であること」を用いた。これについては次章で証明する。したがって、ポアソン括弧式は正準変換で移り変わることができる、いかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。
+なお、ここで正準変換の条件である「変換のヤコビアンが1であること」を用いた。したがって、ポアソン括弧式は正準変換で移り変わることができる、いかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。
 
 $$
 \left\{X, Y\right\}_{q,p} =
@@ -148,8 +141,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{q^i} &= \left\{q^i, H\right\}\\
-\dot{p_i} &= \left\{p_i, H\right\}
+\dot{q}^i &= \left\{q^i, H\right\}\\
+\dot{p}_i &= \left\{p_i, H\right\}
 \end{aligned}
 $$
 
@@ -229,7 +222,7 @@ $$
 \left\{Z , \left\{X, Y\right\}\right\} = 0
 $$
 
-この恒等式をヤコビ恒等式と呼ぶ。
+この恒等式をヤコビ恒等式と呼ぶ。証明はやや煩雑であるので、本書には掲載しない。
 
 以上をまとめると、ポアソン括弧は以下の性質を持っている。
 
@@ -238,7 +231,7 @@ $$
 * ヤコビ恒等式
 * ライプニッツルール
 
-このように、あるベクトル空間の要素2つを、別の要素に結びつける演算を積と呼ぶ。ポアソン括弧は積の一種である。この集合と積をあわせたものを代数と呼ぶ。積の満たす性質により様々な代数がアリ得るが、ポアソン括弧が満たす3つの性質(反対称性、双線型性、ヤコビ恒等式)を持つ積が作る代数を **リー代数 (Lie algebra)** 、もしくはリー環と呼ぶ。リー環は、リー群と密接な関係を持つ。ここで、群や環について簡単に紹介しよう。
+このように、あるベクトル空間の要素2つを、別の要素に結びつける演算を積と呼ぶ。ポアソン括弧は積の一種である。この集合と積をあわせたものを代数と呼ぶ。積の満たす性質により様々な代数があり得るが、ポアソン括弧が満たす3つの性質(反対称性、双線型性、ヤコビ恒等式)を持つ積が作る代数を **リー代数 (Lie algebra)** 、もしくはリー環と呼ぶ。リー環は、リー群と密接な関係を持つ。ここで、群や環について簡単に紹介しよう。
 
 ## 代数的構造
 
@@ -564,8 +557,7 @@ $$
 0 & 0 & 1\\
 0 & 0 & 0\\
 -1 & 0 & 0
-\end{pmatrix}
--
+\end{pmatrix}　-
 \begin{pmatrix}
 0 & 0 & 1\\
 0 & 0 & 0\\
@@ -725,10 +717,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q}
-+ \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
-\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p}
-+ \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
+\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} * \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
+\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} * \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
 \end{aligned}
 $$
 
@@ -737,10 +727,8 @@ $$
 $$
 \begin{aligned}
 \{A, P\} &= \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p}  \\
-&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q}
-+ \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
-&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p}
-+ \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
+&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} * \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
+&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p}　* \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
 &= \frac{\partial A}{\partial Q}
 \underbrace{\left(\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} \right)}_{=1} \\
 & + \frac{\partial A}{\partial Q}
@@ -773,8 +761,7 @@ $$
 
 $$
 \begin{aligned}
-\{q^3, L_3\} &= \frac{\partial q^3}{\partial q^i} \frac{\partial L_3}{\partial p_i}
-- \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
+\{q^3, L_3\} &= \frac{\partial q^3}{\partial q^i} \frac{\partial L_3}{\partial p_i} * \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
 &= \delta^3_i \frac{\partial L_3}{\partial p_i} \\
 &= \frac{\partial L_3}{\partial p_3} \\
 &=0
