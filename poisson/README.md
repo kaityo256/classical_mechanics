@@ -603,36 +603,6 @@ $$
 
 が成り立つことがわかる。このように、なんらかの演算を定義し、その結果がどうなるかを表す構造を代数的構造と呼ぶ。ここでは交換関係により積を定義しているため、作られた構造は環となっている。
 
-さて、先程の例は生成子の間の関係であるから無限小の回転に関するものであるが、有限の回転でその意味を見てみよう。
-
-![非可換性](fig/noncommutative.png)
-
-サイコロを考える。サイコロの目のうち、1を$x$軸方向に、2を$y$軸方向に、3を$z$軸方向に揃えよう。$x$軸を回転軸として反時計回りに90度回転させる操作を$\hat{X}$とする。同様に、$y$軸回りに反時計回りに90度回転させる操作を$\hat{Y}$、$z$軸回りに反時計回りに90度回転させる操作を$\hat{Z}$とする。
-
-まず、サイコロに$\hat{X}$を演算しよう。すると、上面に2がきて、向かって右側に4がくる。次に$\hat{Y}$を演算すると、上面に6がきて、向かって右側は4となる。
-
-サイコロの状態を元に戻し、今度は最初に$\hat{Y}$を演算しよう。すると手前に3、上面に6がくる。さらに$\hat{X}$を演算すると、上面に2が、向かって右側は1となり、先程の状態とは異なる。すなわち、
-
-$$
-\hat{Y}\hat{X} \neq \hat{X}\hat{Y}
-$$
-
-と、演算の順序を変えると、結果が変わることがわかる。すなわち、回転操作は非可換である。ここで、先に演算する演算子が右側にくることに注意。
-
-次に、$x$軸回転と$y$軸回転の組み合わせで$z$軸回転を構成できることを示そう。
-
-![回転の合成](fig/composition.png)
-
-先程と同様に、サイコロの1を$x$軸方向に、2を$y$軸方向に、3を$z$軸方向に揃えて置こう。まず$\hat{X}$を演算する。すると、上面に2、向かって右側に4がくる。さらに$\hat{Y}$を演算すると、上面に6、手前が2となる。最後に$-\hat{X}$、すなわち$x$軸を回転軸として、時計回りに90度回転させる。すると、上面が3、向かって右側が6、手前が2という状態になる。
-
-さて、サイコロの状態を元に戻し、$z$軸を回転軸として時計回りに90度回転させよう。これは演算子としては$-\hat{Z}$になる。すると、上面が3、向かって右側が6、手前が2という状態になり、先程$x$軸回転と$y$軸回転のみで作った状態と同じ状態になった。つまり、
-
-$$
-(-\hat{X})\hat{Y}\hat{X} = -\hat{Z}
-$$
-
-である。先程見た交換関係は回転の生成子、すなわち微小回転に関するものであるから、90度回転という有限回転演算子が満たす関係式とは異なる関係式を満たすが、それでも「演算子が非可換である」「2つの演算子を合成することで別の演算子を作ることができる」ことがわかる。
-
 ## 交換関係
 
 さて、解析力学に戻ろう。ポアソンの反対称性から、もしポアソン括弧に入れる物理量を左右入れ替えた時に値が変わらない時、すなわち
@@ -717,8 +687,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} * \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
-\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} * \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
+\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
+\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
 \end{aligned}
 $$
 
@@ -727,8 +697,8 @@ $$
 $$
 \begin{aligned}
 \{A, P\} &= \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p}  \\
-&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} * \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
-&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p}　* \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
+&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
+&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
 &= \frac{\partial A}{\partial Q}
 \underbrace{\left(\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} \right)}_{=1} \\
 & + \frac{\partial A}{\partial Q}
@@ -748,7 +718,7 @@ $$
 $$
 \frac{dA}{dt} = \{A, H\} = 0
 $$
-
+                                 
 となり、$A$は時間に対して不変量となる。
 
 時間以外の不変性の例として、角運動量について考えよう。いま、3次元系において、$z$軸周りの回転に対する角運動量
@@ -761,7 +731,7 @@ $$
 
 $$
 \begin{aligned}
-\{q^3, L_3\} &= \frac{\partial q^3}{\partial q^i} \frac{\partial L_3}{\partial p_i} * \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
+\{q^3, L_3\} &= \frac{\partial q^3}{\partial q^i} \frac{\partial L_3}{\partial p_i} - \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
 &= \delta^3_i \frac{\partial L_3}{\partial p_i} \\
 &= \frac{\partial L_3}{\partial p_3} \\
 &=0
