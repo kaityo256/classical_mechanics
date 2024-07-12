@@ -198,23 +198,7 @@ $$
 
 つまり、括弧の左側や右側に入れるものは線形性が成り立つ。括弧の両側で線形性が成り立っているため、これを**双線形性(bilinearity)** と呼ぶ。
 
-関数の積の微分は、ライプニッツ則により以下のように分解できるのであった。
-
-$$
-\frac{d}{dx} (fg) = f'g + fg'
-$$
-
-ポアソン括弧も微分を含むことから、括弧に関数の積を入れるとライプニッツ則により分解することができる。
-
-$$
-\left\{XY , Z\right\} = X \left\{Y, Z\right\} + \left\{X, Z\right\} Y
-$$
-
-$$
-\left\{X , YZ\right\} = \left\{X, Y\right\}Z + Y\left\{X, Z\right\}
-$$
-
-これらの性質は定義から容易に導けるものであるが、非自明な性質として、以下の恒等式が成り立つ。
+また、非自明な性質として以下の恒等式が成り立つ。
 
 $$
 \left\{X , \left\{Y, Z\right\}\right\} +
@@ -229,7 +213,6 @@ $$
 * 反対称性
 * 双線型性
 * ヤコビ恒等式
-* ライプニッツルール
 
 このように、あるベクトル空間の要素2つを、別の要素に結びつける演算を積と呼ぶ。ポアソン括弧は積の一種である。この集合と積をあわせたものを代数と呼ぶ。積の満たす性質により様々な代数があり得るが、ポアソン括弧が満たす3つの性質(反対称性、双線型性、ヤコビ恒等式)を持つ積が作る代数を **リー代数 (Lie algebra)** 、もしくはリー環と呼ぶ。リー環は、リー群と密接な関係を持つ。ここで、群や環について簡単に紹介しよう。
 
@@ -396,7 +379,7 @@ $$
 \frac{d}{d\theta}v = i\mathcal{L} v
 $$
 
-と書くことができる。すなわち、この行列$i\mathcal{L}$は、時間微分を表す演算子になっている。両辺を$\theta$から$\theta+h$まで積分すると、
+と書くことができる。すなわち、この行列$i\mathcal{L}$は、微分を表す演算子になっている。両辺を$\theta$から$\theta+h$まで積分すると、
 
 $$
 v(\theta + h) = \exp(ih \mathcal{L}) v(\theta)
@@ -423,59 +406,6 @@ U(h) = 1 + ih \mathcal{L} + O(h^2)
 $$
 
 となる。これは回転という操作が、回転方向$i \mathcal{L}$と、回転量$h$に分離できたことを意味する。このように、無限小の操作を考えると、操作の方向を表す演算子と、操作の量を表すスカラー量に分けることができる。
-
-ここでは回転を例にとったが、何か連続的なパラメータを持つ対象に対して並進変換を引き起こす全ての演算子に対して同じ議論をすることができる。時間発展はその代表例だ。
-
-今、正準変数$(q,p)$で記述できる世界を考えよう。この世界では全ての物理量を$(q,p)$の関数として表現できる。そのような物理量として$A(q,p)$を考える。いま、運動方程式に従って$(q(t),p(t))$が$(q(t+h), p(t+h))$に時間発展したとしよう。物理量$A$は$q,p$を通して時間発展を行うので、時刻$t$なら$A(q(t),p(t))$と書くべきだが、これを$A(t)$と表記する。回転の時と同様に、$A(t+h)$をテイラー展開することで、
-
-$$
-\begin{aligned}
-A(t+ h) &= A(t) + A'(t)h+ A''(t)\frac{h^2}{2} + \cdots\\
-&= \sum_{k=0}^{\infty} \frac{h^k}{k!} \frac{d^k}{dt^k} A(t)\\
-&= \underbrace{\exp\left(h \frac{d}{dt}\right)}_{\equiv U(h)} A(t) \\
-&\equiv U(h) A(t)
-\end{aligned}
-$$
-
-$A$の時間微分は
-
-$$
-\begin{aligned}
-\frac{dA}{dt} &= \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q} \\
-&= \left( \frac{\partial H}{\partial p}\frac{\partial }{\partial q} -\frac{\partial H}{\partial q}\frac{\partial }{\partial p}\right) A
-\end{aligned}
-$$
-
-時間発展に関する生成子$i\mathcal{L}$は、時間微分を引き起こす演算子であるから、
-
-$$
-\frac{dA}{dt} \equiv i\mathcal{L}A
-$$
-
-先程の式と見比べると、
-
-$$
-i\mathcal{L} = \left( \frac{\partial H}{\partial p}\frac{\partial }{\partial q} -\frac{\partial H}{\partial q}\frac{\partial }{\partial p}\right)
-$$
-
-であることがわかる。時間発展演算子の生成子を特に **リュービル演算子(Liouville operator)** と呼ぶ。回転の時と同様な議論により、リュービル演算子を指数関数の肩に載せたものが時間発展演算子である。
-
-$$
-U(h) = \exp(ih\mathcal{L})
-$$
-
-また、リュービル演算子が、ポアソン括弧の右側にハミルトニアンを、左側を空欄にしたものになっていることにも注意。
-
-$$
-i\mathcal{L} = \{~~~~, H\}
-$$
-
-ここまでの議論をまとめておこう。
-
-* 有限の連続的な変化を引き起こす演算子$U(h)$を考える
-* その演算子に引数にゼロを代入すると、変化させない、すなわち恒等演算子$U(0)$が定義できる
-* 恒等演算子から少しだけ動かした時の、「動く方向」だけを定義する演算子$U'(0)$を生成子と呼び、$i\mathcal{L}$で表現する
-* 演算子$U(h)$と生成子$i\mathcal{L}$の間には$U(h) = \exp(ih \mathcal{L})$の関係がある
 
 ### 三次元回転の生成子とリー環
 
@@ -603,9 +533,64 @@ $$
 
 が成り立つことがわかる。このように、なんらかの演算を定義し、その結果がどうなるかを表す構造を代数的構造と呼ぶ。ここでは交換関係により積を定義しているため、作られた構造は環となっている。
 
+ここまでの議論をまとめておこう。
+
+* 有限の連続的な変化を引き起こす演算子$U(h)$を考える
+* その演算子に引数にゼロを代入すると、変化させない、すなわち恒等演算子$U(0)$が定義できる
+* 恒等演算子から少しだけ動かした時の、「動く方向」だけを定義する演算子$U'(0)$を生成子と呼び、$i\mathcal{L}$で表現する
+* 演算子$U(h)$と生成子$i\mathcal{L}$の間には$U(h) = \exp(ih \mathcal{L})$の関係がある
+
+## リュービル演算子
+
+さて、解析力学に戻ろう。先ほどは回転を例にとったが、何か連続的なパラメータを持つ対象に対して並進変換を引き起こす全ての演算子に対して同じ議論をすることができる。時間発展はその代表例だ。
+
+今、正準変数$(q,p)$で記述できる世界を考えよう。この世界では全ての物理量を$(q,p)$の関数として表現できる。そのような物理量として$A(q,p)$を考える。いま、運動方程式に従って$(q(t),p(t))$が$(q(t+h), p(t+h))$に時間発展したとしよう。物理量$A$は$q,p$を通して時間発展を行うので、時刻$t$なら$A(q(t),p(t))$と書くべきだが、これを$A(t)$と表記する。回転の時と同様に、$A(t+h)$をテイラー展開することで、
+
+$$
+\begin{aligned}
+A(t+ h) &= A(t) + A'(t)h+ A''(t)\frac{h^2}{2} + \cdots\\
+&= \sum_{k=0}^{\infty} \frac{h^k}{k!} \frac{d^k}{dt^k} A(t)\\
+&= \underbrace{\exp\left(h \frac{d}{dt}\right)}_{\equiv U(h)} A(t) \\
+&\equiv U(h) A(t)
+\end{aligned}
+$$
+
+$A$の時間微分は
+
+$$
+\begin{aligned}
+\frac{dA}{dt} &= \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q} \\
+&= \left( \frac{\partial H}{\partial p}\frac{\partial }{\partial q} -\frac{\partial H}{\partial q}\frac{\partial }{\partial p}\right) A
+\end{aligned}
+$$
+
+時間発展に関する生成子$i\mathcal{L}$は、時間微分を引き起こす演算子であるから、
+
+$$
+\frac{dA}{dt} \equiv i\mathcal{L}A
+$$
+
+先程の式と見比べると、
+
+$$
+i\mathcal{L} = \left( \frac{\partial H}{\partial p}\frac{\partial }{\partial q} -\frac{\partial H}{\partial q}\frac{\partial }{\partial p}\right)
+$$
+
+であることがわかる。時間発展演算子の生成子を特に **リュービル演算子(Liouville operator)** と呼ぶ。回転の時と同様な議論により、リュービル演算子を指数関数の肩に載せたものが時間発展演算子である。
+
+$$
+U(h) = \exp(ih\mathcal{L})
+$$
+
+また、リュービル演算子が、ポアソン括弧の右側にハミルトニアンを、左側を空欄にしたものになっていることにも注意。
+
+$$
+i\mathcal{L} = \{~~~~, H\}
+$$
+
 ## 交換関係
 
-さて、解析力学に戻ろう。ポアソンの反対称性から、もしポアソン括弧に入れる物理量を左右入れ替えた時に値が変わらない時、すなわち
+ポアソンの反対称性から、もしポアソン括弧に入れる物理量を左右入れ替えた時に値が変わらない時、すなわち
 
 $$
 \{A, B\} = \{A, B\}
@@ -623,7 +608,7 @@ $$
 \{A, B\} = C
 $$
 
-と書ける。このように、何かしらの物理量をポアソン括弧の入れた結果をまとめて **交換関係(commutation relation)** と呼ぶ。
+と書ける。このように、何かしらの物理量をポアソン括弧に入れた結果をまとめて **交換関係(commutation relation)** と呼ぶ。
 
 特に、一般化座標$q^i$と一般化運動量$p_j$の交換関係を調べると
 
@@ -687,8 +672,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
-\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
+\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
+\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
 \end{aligned}
 $$
 
@@ -697,8 +682,8 @@ $$
 $$
 \begin{aligned}
 \{A, P\} &= \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p}  \\
-&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
-&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} - \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
+&= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
+&- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
 &= \frac{\partial A}{\partial Q}
 \underbrace{\left(\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} \right)}_{=1} \\
 & + \frac{\partial A}{\partial Q}
@@ -781,7 +766,7 @@ $$
 
 ## まとめ
 
-本章ではポアソン括弧を定義した。ポアソン括弧が作る代数構造はリー環になっており、その意味で自然に解析力学に代数的構造が入る。ポアソン括弧には、「入れた物理量と共役な変数による微分をとる」という意味があり、ハミルトニアンを入れると時間微分に、一般化運動量を入れると、対応する一般化座標による微分となる。ポアソン括弧の性質から、入れ替えても値が変わらない、すなわちポアソン括弧の意味で可換である時、対応する量による微分がゼロ、すなわち何かしらの保存則を表していることがわかる。物理量の微分が交換関係から得られる、という性質は、量子力学の行列表現へと繋がっていく。
+本章ではポアソン括弧を定義した。ポアソン括弧が作る代数構造はリー環になっており、その意味で自然に解析力学に代数的構造が入る。ポアソン括弧には、「入れた物理量と共役な変数による微分をとる」という意味があり、ハミルトニアンを入れると時間微分に、一般化運動量を入れると対応する一般化座標による微分となる。ポアソン括弧の性質から、入れ替えても値が変わらない、すなわちポアソン括弧の意味で可換である時、対応する量による微分がゼロ、すなわち何かしらの保存則を表していることがわかる。物理量の微分が交換関係から得られる、という性質は、量子力学の行列表現へと繋がっていく。
 
 ## 余談：サイコロの雌雄と生命の選択
 
