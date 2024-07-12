@@ -3,7 +3,6 @@ MD=$(shell ls */README.md)
 PANDOC_HTMLOPT=--mathjax -t html --template=template
 PANDOC_TEXOPT=--highlight-style tango --pdf-engine=lualatex -V documentclass=ltjarticle -V geometry:margin=1in -H ../mytemplate.tex
 TARGET=$(INDEX)
-
 PDF=$(MD:.md=.pdf)
 
 all: $(TARGET) index.html
@@ -39,7 +38,8 @@ copy-pdf:
 	cp phasespace/README.pdf ./classical_mechanics09.pdf
 	cp canonical_transformation/README.pdf ./classical_mechanics10.pdf
 	cp poisson/README.pdf ./classical_mechanics11.pdf
-	cp differential_form/README.pdf ./classical_mechanics12.pdf
+	cp noether/README.pdf ./classical_mechanics12.pdf
+	cp differential_form/README.pdf ./classical_mechanics13.pdf
 
 clean:
 	rm -f $(TARGET) index.html

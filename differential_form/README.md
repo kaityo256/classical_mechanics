@@ -1,5 +1,153 @@
 # 微分形式
 
+## 全微分とベクトル
+
+座標変換において、基底と同じ変換を受けるベクトルを共変ベクトル、逆向きの変換を受けるベクトルを反変ベクトルと呼ぶのであった。具体的には、ある基底$\{\mathbf{e}_i\}$から$\{\tilde{\mathbf{e}}_i\}$への変換が
+
+$$
+\tilde{\mathbf{e}}_i = A_i^j \mathbf{e}_j
+$$
+
+で与えられている時、このベクトルで展開されたベクトルの成分
+
+$$
+\mathbf{u} = u^i \mathbf{e}_i = \tilde{u}^i \tilde{\mathbf{e}}_i
+$$
+
+には、
+
+$$
+u^i = A_j^i \tilde{u}^j
+$$
+
+の関係があり、これは基底の変換と逆向きの変換であるので、反変ベクトルとなる。また、
+
+$$
+(\mathbf{e}^i, \mathbf{e}_j) = (\tilde{\mathbf{e}}^i, \tilde{\mathbf{e}}_j) = \delta^i_j
+$$
+
+の関係を満たす双対ベクトル$\{\mathbf{e}^i\}, \{\tilde{\mathbf{e}}^i\}$の間には
+
+$$
+\mathbf{e}^i = A^i_j \tilde{\mathbf{e}}^j
+$$
+
+という関係があるため、やはり反変ベクトルであった。
+
+さて、$(x,y)$空間における物理量$u(x,y)$の全微分を考えよう。
+
+$$
+du = \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy
+$$
+
+これは、あたかも$du$というベクトルを、$dx, dy$という基底で展開しているように見える。そこで、以下の極座標表示を例に、基底の変換則を見てみよう。
+
+$$
+\begin{aligned}
+x &= r \cos \theta \\
+y &= r \sin \theta
+\end{aligned}
+$$
+
+これを、それぞれ全微分すると、
+
+$$
+\begin{aligned}
+dx &= \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta\\
+&= \cos \theta dr - r \sin \theta d\theta \\
+dy &= \frac{\partial y}{\partial r}dr + \frac{\partial y}{\partial \theta} d\theta \\
+&= \sin \theta dr + r \cos \theta d\theta
+\end{aligned}
+$$
+
+これを行列で書けば
+
+$$
+\begin{aligned}
+\begin{pmatrix}
+dx \\ dy
+\end{pmatrix} &=
+\begin{pmatrix}
+\partial_r x & \partial_\theta x  \\
+\partial_r y & \partial_\theta y 
+\end{pmatrix}
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}
+ \\
+&=
+\begin{pmatrix}
+\cos \theta & - r \sin \theta \\
+\sin \theta & r \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}　\\
+&= A 
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}
+\end{aligned}
+$$
+
+これは、行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。
+
+この基底変換において、$u(x,y) = u(r, \theta)$の全微分を調べて見よう。
+
+$$
+\begin{aligned}
+du &= \frac{\partial u}{\partial x}dx +\frac{\partial u}{\partial y}dy \\
+&=\frac{\partial u}{\partial r}dr +\frac{\partial u}{\partial \theta}d\theta 
+\end{aligned}
+$$
+
+ここで、各成分について、
+
+$$
+\begin{aligned}
+\frac{\partial u}{\partial r} &= \frac{\partial u}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial r} \\
+\frac{\partial u}{\partial \theta} &= \frac{\partial u}{\partial x}\frac{\partial x}{\partial \theta} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial \theta}
+\end{aligned}
+$$
+
+が成り立つので、これを行列形式で書くと、
+
+$$
+\begin{pmatrix}
+\partial_r u \\ \partial_\theta u
+\end{pmatrix} = 
+\begin{pmatrix}
+\partial_r x & \partial_\theta x  \\
+\partial_r y & \partial_\theta y 
+\end{pmatrix}
+\begin{pmatrix}
+\partial_x u \\ \partial_y u
+\end{pmatrix}
+$$
+
+これは、$dr, d\theta$から$dx, dy$への座標変換と逆の変換を受けているため、$u$の全微分の係数$\partial_x u, \partial_y u$などは反変ベクトルであることがわかる。
+
+これは、$u$を除くと
+
+$$
+\begin{pmatrix}
+\partial_r \\ \partial_\theta
+\end{pmatrix} = 
+\begin{pmatrix}
+\partial_r x & \partial_\theta x  \\
+\partial_r y & \partial_\theta y 
+\end{pmatrix}
+\begin{pmatrix}
+\partial_x\\ \partial_y
+\end{pmatrix}
+$$
+
+となるため、$dx, dy$と$\partial_x, \partial_y$、$dr, d\theta$と$\partial_r, \partial_\theta$、が互いに双対ベクトルの関係にあり、変換も逆向きであることに対応している。
+
+これを利用すると、$\partial_x \theta$や$\partial_y \theta$などが簡単に計算できる。
+
+TODO: 計算方法を書く。
+
 ## 外積と外微分
 
 正準変換において母関数$W_1$の全微分が以下のように与えられることを見た。

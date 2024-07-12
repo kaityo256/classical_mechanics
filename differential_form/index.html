@@ -59,6 +59,187 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <h1
+                                    id="全微分とベクトル">全微分とベクトル</h1>
+                                    <p>座標変換において、基底と同じ変換を受けるベクトルを共変ベクトル、逆向きの変換を受けるベクトルを反変ベクトルと呼ぶのであった。具体的には、ある基底<span
+                                    class="math inline">\(\{\mathbf{e}_i\}\)</span>から<span
+                                    class="math inline">\(\{\tilde{\mathbf{e}}_i\}\)</span>への変換が</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\mathbf{e}}_i = A_i^j
+                                    \mathbf{e}_j
+                                    \]</span></p>
+                                    <p>で与えられている時、このベクトルで展開されたベクトルの成分</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{u} = u^i \mathbf{e}_i =
+                                    \tilde{u}^i \tilde{\mathbf{e}}_i
+                                    \]</span></p>
+                                    <p>には、</p>
+                                    <p><span class="math display">\[
+                                    u^i = A_j^i \tilde{u}^j
+                                    \]</span></p>
+                                    <p>の関係があり、これは基底の変換と逆向きの変換であるので、反変ベクトルとなる。また、</p>
+                                    <p><span class="math display">\[
+                                    (\mathbf{e}^i, \mathbf{e}_j) =
+                                    (\tilde{\mathbf{e}}^i,
+                                    \tilde{\mathbf{e}}_j) = \delta^i_j
+                                    \]</span></p>
+                                    <p>の関係を満たす双対ベクトル<span
+                                    class="math inline">\(\{\mathbf{e}^i\},
+                                    \{\tilde{\mathbf{e}}^i\}\)</span>の間には</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{e}^i = A^i_j
+                                    \tilde{\mathbf{e}}^j
+                                    \]</span></p>
+                                    <p>という関係があるため、やはり反変ベクトルであった。</p>
+                                    <p>さて、<span
+                                    class="math inline">\((x,y)\)</span>空間における物理量<span
+                                    class="math inline">\(u(x,y)\)</span>の全微分を考えよう。</p>
+                                    <p><span class="math display">\[
+                                    du = \frac{\partial u}{\partial x}
+                                    dx + \frac{\partial u}{\partial y}
+                                    dy
+                                    \]</span></p>
+                                    <p>これは、あたかも<span
+                                    class="math inline">\(du\)</span>というベクトルを、<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>という基底で展開しているように見える。そこで、以下の極座標表示を例に、基底の変換則を見てみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp;= r \cos \theta \\
+                                    y &amp;= r \sin \theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを、それぞれ全微分すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dx &amp;= \frac{\partial x}{\partial
+                                    r} dr + \frac{\partial x}{\partial
+                                    \theta} d\theta\\
+                                    &amp;= \cos \theta dr - r \sin
+                                    \theta d\theta \\
+                                    dy &amp;= \frac{\partial y}{\partial
+                                    r}dr + \frac{\partial y}{\partial
+                                    \theta} d\theta \\
+                                    &amp;= \sin \theta dr + r \cos
+                                    \theta d\theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを行列で書けば</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \begin{pmatrix}
+                                    dx \\ dy
+                                    \end{pmatrix} &amp;=
+                                    \begin{pmatrix}
+                                    \partial_r x &amp; \partial_\theta
+                                    x  \\
+                                    \partial_r y &amp; \partial_\theta y
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}
+                                    \\
+                                    &amp;=
+                                    \begin{pmatrix}
+                                    \cos \theta &amp; - r \sin \theta \\
+                                    \sin \theta &amp; r \cos \theta
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}　\\
+                                    &amp;= A
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは、行列<span
+                                    class="math inline">\(A\)</span>を用いた<span
+                                    class="math inline">\(\{dr,
+                                    d\theta\}\)</span>という基底から<span
+                                    class="math inline">\(\{dx,
+                                    dy\}\)</span>という基底への変換則のように見える。</p>
+                                    <p>この基底変換において、<span
+                                    class="math inline">\(u(x,y) = u(r,
+                                    \theta)\)</span>の全微分を調べて見よう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    du &amp;= \frac{\partial u}{\partial
+                                    x}dx +\frac{\partial u}{\partial
+                                    y}dy \\
+                                    &amp;=\frac{\partial u}{\partial
+                                    r}dr +\frac{\partial u}{\partial
+                                    \theta}d\theta
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、各成分について、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial u}{\partial r} &amp;=
+                                    \frac{\partial u}{\partial
+                                    x}\frac{\partial x}{\partial r} +
+                                    \frac{\partial u}{\partial
+                                    y}\frac{\partial y}{\partial r} \\
+                                    \frac{\partial u}{\partial \theta}
+                                    &amp;= \frac{\partial u}{\partial
+                                    x}\frac{\partial x}{\partial \theta}
+                                    + \frac{\partial u}{\partial
+                                    y}\frac{\partial y}{\partial \theta}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>が成り立つので、これを行列形式で書くと、</p>
+                                    <p><span class="math display">\[
+                                    \begin{pmatrix}
+                                    \partial_r u \\ \partial_\theta u
+                                    \end{pmatrix} =
+                                    \begin{pmatrix}
+                                    \partial_r x &amp; \partial_\theta
+                                    x  \\
+                                    \partial_r y &amp; \partial_\theta y
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    \partial_x u \\ \partial_y u
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>これは、<span
+                                    class="math inline">\(dr,
+                                    d\theta\)</span>から<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>への座標変換と逆の変換を受けているため、<span
+                                    class="math inline">\(u\)</span>の全微分の係数<span
+                                    class="math inline">\(\partial_x u,
+                                    \partial_y
+                                    u\)</span>などは反変ベクトルであることがわかる。</p>
+                                    <p>これは、<span
+                                    class="math inline">\(u\)</span>を除くと</p>
+                                    <p><span class="math display">\[
+                                    \begin{pmatrix}
+                                    \partial_r \\ \partial_\theta
+                                    \end{pmatrix} =
+                                    \begin{pmatrix}
+                                    \partial_r x &amp; \partial_\theta
+                                    x  \\
+                                    \partial_r y &amp; \partial_\theta y
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    \partial_x\\ \partial_y
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>となるため、<span
+                                    class="math inline">\(dx,
+                                    dy\)</span>と<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y\)</span>、<span
+                                    class="math inline">\(dr,
+                                    d\theta\)</span>と<span
+                                    class="math inline">\(\partial_r,
+                                    \partial_\theta\)</span>、が互いに双対ベクトルの関係にあり、変換も逆向きであることに対応している。</p>
+                                    <p>これを利用すると、<span
+                                    class="math inline">\(\partial_x
+                                    \theta\)</span>や<span
+                                    class="math inline">\(\partial_y
+                                    \theta\)</span>などが簡単に計算できる。</p>
+                                    <p>TODO: 計算方法を書く。</p>
+                                    <h1
                                     id="外積と外微分">外積と外微分</h1>
                                     <p>正準変換において母関数<span
                                     class="math inline">\(W_1\)</span>の全微分が以下のように与えられることを見た。</p>
