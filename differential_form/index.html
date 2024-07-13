@@ -206,9 +206,13 @@
                                     \partial_r u \\ \partial_\theta u
                                     \end{pmatrix} =
                                     \begin{pmatrix}
-                                    \partial_r x &amp; \partial_\theta
-                                    x  \\
-                                    \partial_r y &amp; \partial_\theta y
+                                    \displaystyle \frac{\partial
+                                    x}{\partial r} &amp; \displaystyle
+                                    \frac{\partial x}{\partial
+                                    \theta}  \\
+                                    \displaystyle \frac{\partial
+                                    x}{\partial y} &amp; \displaystyle
+                                    \frac{\partial y}{\partial \theta}
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     \partial_x u \\ \partial_y u
@@ -226,25 +230,35 @@
                                     <p>これは、<span
                                     class="math inline">\(u\)</span>を除くと</p>
                                     <p><span class="math display">\[
+                                    \begin{aligned}
                                     \begin{pmatrix}
                                     \partial_r \\ \partial_\theta
-                                    \end{pmatrix} =
+                                    \end{pmatrix} &amp;=
                                     \begin{pmatrix}
-                                    \partial_r x &amp; \partial_\theta
-                                    x  \\
-                                    \partial_r y &amp; \partial_\theta y
+                                    \displaystyle \frac{\partial
+                                    x}{\partial r} &amp; \displaystyle
+                                    \frac{\partial x}{\partial
+                                    \theta}  \\
+                                    \displaystyle \frac{\partial
+                                    x}{\partial y} &amp; \displaystyle
+                                    \frac{\partial y}{\partial \theta}
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     \partial_x\\ \partial_y
+                                    \end{pmatrix}\\
+                                    &amp;= A
+                                    \begin{pmatrix}
+                                    \partial_x\\ \partial_y
                                     \end{pmatrix}
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>となるため、<span
                                     class="math inline">\(dx,
                                     dy\)</span> と <span
                                     class="math inline">\(\partial_x,
-                                    \partial_y\)</span>、<span
+                                    \partial_y\)</span> 、<span
                                     class="math inline">\(dr,
-                                    d\theta\)</span>と<span
+                                    d\theta\)</span> と <span
                                     class="math inline">\(\partial_r,
                                     \partial_\theta\)</span>
                                     が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、
@@ -253,12 +267,13 @@
                                     \mathbf{e}^1, \partial_\theta =
                                     \mathbf{e}^2, \partial_x =
                                     \tilde{\mathbf{e}}^1, \partial_y =
-                                    \tilde{\mathbf{e}}^2\)</span>として、</p>
+                                    \tilde{\mathbf{e}}^2\)</span>
+                                    として、</p>
                                     <p><span class="math display">\[
                                     \mathbf{e}^i = A^i_j
                                     \tilde{\mathbf{e}}^j
                                     \]</span></p>
-                                    <p>が成り立つことがわかる。</p>
+                                    <p>が成り立っていることがわかる。</p>
                                     <p>これを利用すると、例えば<span
                                     class="math inline">\(\partial_x
                                     \theta\)</span>や<span
@@ -280,22 +295,25 @@
                                     \]</span></p>
                                     <p>ここで、<span
                                     class="math inline">\(\cos \theta =
-                                    x/r\)</span>であることから、</p>
+                                    x/r\)</span>であることから以下のように求めることができる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \frac{\partial \theta}{\partial x}
                                     &amp;=  - \frac{x^2}{r^2}
                                     \frac{y}{x^2}\\
                                     &amp;= \frac{-y}{x^2+y^2} \\
-                                    &amp;= \frac{- \sin \theta}{r}
+                                    &amp;= -\frac{\sin \theta}{r}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>こうして求まった。</p>
-                                    <p>一方、<span
+                                    <p><span
+                                    class="math inline">\(\partial_y
+                                    \theta\)</span>も同様に求めなくてはならない。</p>
+                                    <p>一方、 <span
                                     class="math inline">\(\partial_r
-                                    x\)</span>や<span
+                                    x\)</span> や <span
                                     class="math inline">\(\partial_\theta
-                                    x\)</span>などの計算が簡単であることから、以下のように行列形式で書いておき、</p>
+                                    x\)</span>
+                                    などの計算が簡単であることから、以下のように行列形式で書く。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \begin{pmatrix}
@@ -368,7 +386,7 @@
                                     <p>を見比べれば、</p>
                                     <p><span class="math display">\[
                                     \frac{\partial \theta}{\partial x} =
-                                    \frac{-\sin
+                                    -\frac{\sin
                                     \theta}{r},\frac{\partial
                                     \theta}{\partial y} = \frac{\cos
                                     \theta}{r}
@@ -428,7 +446,7 @@
                                     y}dy + \frac{\partial f}{\partial
                                     z}dz
                                     \]</span></p>
-                                    <p>これは、<span
+                                    <p>先ほど見たように、これは<span
                                     class="math inline">\(dx, dy,
                                     dz\)</span>を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に
                                     <strong><span
@@ -492,9 +510,9 @@
                                     class="math inline">\(x,y,z\)</span>の関数であるから、その外微分は</p>
                                     <p><span class="math display">\[
                                     df_x = \frac{\partial f_x}{\partial
-                                    x} dx
-                                    * \frac{\partial f_y}{\partial y} dy
-                                    * \frac{\partial f_z}{\partial z} dz
+                                    x} dx　+ \frac{\partial
+                                    f_y}{\partial y} dy + \frac{\partial
+                                    f_z}{\partial z} dz
                                     \]</span></p>
                                     <p>で与えられる。<span
                                     class="math inline">\(f_y,
@@ -503,13 +521,12 @@
                                     d(df) =
                                     \left(\frac{\partial f_x}{\partial
                                     y} - \frac{\partial f_y}{\partial
-                                    x}\right) dx \wedge dy
-                                    * (\frac{\partial f_y}{\partial z} -
+                                    x}\right) dx \wedge dy +
+                                    (\frac{\partial f_y}{\partial z} -
                                     \frac{\partial f_z}{\partial y}) dy
-                                    \wedge dz
-                                    * (\frac{\partial f_z}{\partial x} -
-                                    \frac{\partial f_x}{\partial x}) dz
-                                    \wedge dx
+                                    \wedge dz + (\frac{\partial
+                                    f_z}{\partial x} - \frac{\partial
+                                    f_x}{\partial x}) dz \wedge dx
                                     \]</span></p>
                                     <p>となる。<span
                                     class="math inline">\(dx\wedge
@@ -579,10 +596,9 @@
                                     \begin{aligned}
                                     \left&lt;dy \wedge dx,
                                     \frac{\partial}{\partial x}
-                                    \right&gt; &amp; =
-                                    * \left&lt;dx \wedge dy,
-                                    \frac{\partial}{\partial x}
-                                    \right&gt; \\
+                                    \right&gt; &amp; = \left&lt;dx
+                                    \wedge dy, \frac{\partial}{\partial
+                                    x} \right&gt; \\
                                     &amp;= -\left&lt;dx,
                                     \frac{\partial}{\partial x}
                                     \right&gt; dy \\
@@ -633,17 +649,15 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     dx dy &amp;= \frac{\partial
-                                    (x,y)}{\partial r, \theta} dr
+                                    (x,y)}{\partial (r, \theta)} dr
                                     d\theta\\
                                     &amp;= r dr d\theta
                                     \end{aligned}
                                     \]</span></p>
                                     <p>に対応することがわかる。</p>
                                     <h1
-                                    id="微分形式とベクトル解析">微分形式とベクトル解析</h1>
-                                    <h1
                                     id="微分形式による正準方程式の表式">微分形式による正準方程式の表式</h1>
-                                    <p>解析力学を微分形式で表現する準備が整った。まず、正準変換の条件を微分形式で表現しよう。今、変数<span
+                                    <p>前置きが長かったが、これでようやく解析力学を微分形式で表現する準備が整った。まず、正準変換の条件を微分形式で表現しよう。今、変数<span
                                     class="math inline">\((q,p)\)</span>から<span
                                     class="math inline">\((Q,P)\)</span>に変数変換をしたとする。この時、<span
                                     class="math inline">\(2\)</span>形式<span
@@ -697,7 +711,7 @@
                                     <p>すなわち、正準2形式は正準変換で不変である。</p>
                                     <p>正準2形式を使うと、正準方程式を内積の形で書くことができる。正準方程式のリュービル演算子を考えよう。リュービル演算子とは、任意の物理量の時間微分を与える演算子であった。</p>
                                     <p><span class="math display">\[
-                                    -i\mathcal{L}A = \frac{dA}{dt}
+                                    \frac{dA}{dt} = i\mathcal{L}A
                                     \]</span></p>
                                     <p>虚数単位は負符号については今はあまり気にしなくて良い。<span
                                     class="math inline">\(A\)</span>が<span
@@ -713,12 +727,12 @@
                                     \underbrace{\left(\dot{q}\frac{\partial
                                     }{\partial q} + \dot{q}
                                     \frac{\partial}{\partial
-                                    p}\right)}_{-i\mathcal{L}}A
+                                    p}\right)}_{i\mathcal{L}}A
                                     \end{aligned}
                                     \]</span></p>
                                     <p>したがって、</p>
                                     <p><span class="math display">\[
-                                    -i\mathcal{L} = \dot{q}
+                                    i\mathcal{L} = \dot{q}
                                     \frac{\partial}{\partial q} +
                                     \dot{p} \frac{\partial}{\partial p}
                                     \]</span></p>
@@ -726,7 +740,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \left&lt;\omega,
-                                    -i\mathcal{L}  \right&gt;  &amp;=
+                                    i\mathcal{L}  \right&gt;  &amp;=
                                     \left&lt;dp\wedge dq, \dot{q}
                                     \frac{\partial}{\partial q} +
                                     \dot{p} \frac{\partial}{\partial p}
@@ -742,7 +756,7 @@
                                     \]</span></p>
                                     <p>であるから、</p>
                                     <p><span class="math display">\[
-                                    \left&lt;dp\wedge dq, -i\mathcal{L}
+                                    \left&lt;\omega, i\mathcal{L}
                                     \right&gt; = -dH
                                     \]</span></p>
                                     <p>が、正準方程式を与える。</p>
@@ -752,7 +766,7 @@
                                     \]</span></p>
                                     <p>と、リュービル演算子</p>
                                     <p><span class="math display">\[
-                                    -i\mathcal{L} =
+                                    i\mathcal{L} =
                                     \dot{q}^i\frac{\partial}{\partial
                                     q^i}+\dot{p}_i\frac{\partial}{\partial
                                     p_i}
@@ -760,9 +774,100 @@
                                     <p>を用いて</p>
                                     <p><span class="math display">\[
                                     \left&lt;\omega,
-                                    -i\mathcal{L}\right&gt; = -dH
+                                    i\mathcal{L}\right&gt; = -dH
                                     \]</span></p>
-                                    <p>が正準方程式を与える。正準2形式は正準変換で不変であるから、これは局所基底の取り方に依らない運動方程式の表現となっている。</p>
+                                    <p>が正準方程式を与える。</p>
+                                    <p>ここで、リュービル演算子がポアソン括弧を使って、</p>
+                                    <p><span class="math display">\[
+                                    \frac{dA}{dt} \equiv i\mathcal{L}A =
+                                    \{A, H\}
+                                    \]</span></p>
+                                    <p>と書けていたことを思い出そう。ポアソン括弧は局所座標に依らない表現であったから、リュービル演算子も局所座標に依らない。さらに、正準2形式は正準変換で不変であるから、局所基底の取り方に依らない正準方程式の表式が得られたことになる。</p>
+                                    <h1 id="まとめ">まとめ</h1>
+                                    <p>ニュートンの運動方程式から始まり、局所座標に依らない正準方程式までたどり着いた。ここまでの長い旅路を振り返って置こう。</p>
+                                    <p>我々は、力と加速度が比例する、というニュートンの運動方程式からスタートした。</p>
+                                    <p><span class="math display">\[
+                                    F = ma
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(F\)</span>がポテンシャル力であり、<span
+                                    class="math inline">\(F(x) =
+                                    -U&#39;(x)\)</span>と書けるならば、</p>
+                                    <p><span class="math display">\[
+                                    m \ddot{x} = -U&#39;(x)
+                                    \]</span></p>
+                                    <p>と書ける。ここで、<span
+                                    class="math inline">\(x\)</span>の代わりに一般化座標<span
+                                    class="math inline">\(q\)</span>と、一般化速度<span
+                                    class="math inline">\(\dot{q}\)</span>を用いて、ラグランジアン</p>
+                                    <p><span class="math display">\[
+                                    L(q, \dot{q}) = K(\dot{q}) - U(q)
+                                    \]</span></p>
+                                    <p>を定義すると、オイラー・ラグランジュの運動方程式</p>
+                                    <p><span class="math display">\[
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    L}{\partial \dot{q}} \right) -
+                                    \frac{\partial L}{\partial q} = 0
+                                    \]</span></p>
+                                    <p>を得る。ここで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p &amp;= \frac{\partial L}{\partial
+                                    \dot{q}} \\
+                                    H = p \dot{q} - L
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>というルジャンドル変換により、自由変数を一般化速度<span
+                                    class="math inline">\(\dot{q}\)</span>から一般化運動量<span
+                                    class="math inline">\(p\)</span>に取り直すと、オイラー・ラグランジュの運動方程式は、以下の正準方程式に書き換わる。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q} &amp;= \frac{\partial
+                                    H}{\partial p}\\
+                                    \dot{q} &amp;= -\frac{\partial
+                                    H}{\partial q}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span
+                                    class="math inline">\((q,p)\)</span>で表現された物理量<span
+                                    class="math inline">\(A\)</span>の時間微分は</p>
+                                    <p><span class="math display">\[
+                                    \dot{A} = \frac{\partial A}{\partial
+                                    q} \frac{\partial H}{\partial p} -
+                                    \frac{\partial A}{\partial p}
+                                    \frac{\partial H}{\partial q}
+                                    \]</span></p>
+                                    <p>と書けるため、リュービル演算子を</p>
+                                    <p><span class="math display">\[
+                                    \dot{A} \equiv i \mathcal{L} A
+                                    \]</span></p>
+                                    <p>と定義すると、</p>
+                                    <p><span class="math display">\[
+                                    i \mathcal{L} = \frac{\partial
+                                    H}{\partial
+                                    p}\frac{\partial}{\partial q}
+                                    -\frac{\partial H}{\partial
+                                    q}\frac{\partial}{\partial p}
+                                    \]</span></p>
+                                    <p>となるため、リュービル演算子の正準2形式<span
+                                    class="math inline">\(\omega = dp
+                                    \wedge
+                                    dq\)</span>との内積は、ハミルトニアンの全微分を用いて</p>
+                                    <p><span class="math display">\[
+                                    \left&lt;\omega, i\mathcal{L}
+                                    \right&gt; = -dH
+                                    \]</span></p>
+                                    <p>という、局所座標に依らない運動方程式が得られた。</p>
+                                    <p>2つの式を並べて見ても、とても同じ現象を表現しているようには見えない。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    m \ddot{x} &amp;= -U&#39;(x) \\
+                                    \left&lt;\omega, i\mathcal{L}
+                                    \right&gt; &amp;= -dH
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>しかし、ずっと等式変形をしてきたのだから、これは紛れもなく等価な式である。これは当式変形であるから、式の予言能力は変わらない。しかし、これまで見てきたように、「同じものが異なるように見える」「異なるものが同じように見える」という新たな視点を与えることが学問の真髄である。</p>
+                                    <p>解析力学を学んだことが、読者の世界を広げたなら幸いである。</p>
                     </article>
     </body>
 

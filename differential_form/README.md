@@ -123,8 +123,8 @@ $$
 \partial_r u \\ \partial_\theta u
 \end{pmatrix} =
 \begin{pmatrix}
-\partial_r x & \partial_\theta x  \\
-\partial_r y & \partial_\theta y
+\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial x}{\partial \theta}  \\
+\displaystyle \frac{\partial x}{\partial y} & \displaystyle \frac{\partial y}{\partial \theta}
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x u \\ \partial_y u
@@ -136,25 +136,31 @@ $$
 これは、$u$を除くと
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 \partial_r \\ \partial_\theta
-\end{pmatrix} =
+\end{pmatrix} &=
 \begin{pmatrix}
-\partial_r x & \partial_\theta x  \\
-\partial_r y & \partial_\theta y
+\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial x}{\partial \theta}  \\
+\displaystyle \frac{\partial x}{\partial y} & \displaystyle \frac{\partial y}{\partial \theta}
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x\\ \partial_y
+\end{pmatrix}\\
+&= A
+\begin{pmatrix}
+\partial_x\\ \partial_y
 \end{pmatrix}
+\end{aligned}
 $$
 
-となるため、$dx, dy$ と $\partial_x, \partial_y$、$dr, d\theta$と$\partial_r, \partial_\theta$ が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、 $\partial_r = \mathbf{e}^1, \partial_\theta = \mathbf{e}^2, \partial_x = \tilde{\mathbf{e}}^1, \partial_y = \tilde{\mathbf{e}}^2$として、
+となるため、$dx, dy$ と $\partial_x, \partial_y$ 、$dr, d\theta$ と $\partial_r, \partial_\theta$ が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、 $\partial_r = \mathbf{e}^1, \partial_\theta = \mathbf{e}^2, \partial_x = \tilde{\mathbf{e}}^1, \partial_y = \tilde{\mathbf{e}}^2$ として、
 
 $$
 \mathbf{e}^i = A^i_j \tilde{\mathbf{e}}^j
 $$
 
-が成り立つことがわかる。
+が成り立っていることがわかる。
 
 これを利用すると、例えば$\partial_x \theta$や$\partial_y \theta$などが簡単に計算できる。
 
@@ -170,19 +176,19 @@ $$
 \frac{1}{\cos^2 \theta} \frac{\partial \theta}{\partial x} = -\frac{y}{x^2}
 $$
 
-ここで、$\cos \theta = x/r$であることから、
+ここで、$\cos \theta = x/r$であることから以下のように求めることができる。
 
 $$
 \begin{aligned}
 \frac{\partial \theta}{\partial x} &=  - \frac{x^2}{r^2} \frac{y}{x^2}\\
 &= \frac{-y}{x^2+y^2} \\
-&= \frac{- \sin \theta}{r}
+&= -\frac{\sin \theta}{r}
 \end{aligned}
 $$
 
-こうして求まった。
+$\partial_y \theta$も同様に求めなくてはならない。
 
-一方、$\partial_r x$や$\partial_\theta x$などの計算が簡単であることから、以下のように行列形式で書いておき、
+一方、 $\partial_r x$ や $\partial_\theta x$ などの計算が簡単であることから、以下のように行列形式で書く。
 
 $$
 \begin{aligned}
@@ -253,7 +259,7 @@ $$
 を見比べれば、
 
 $$
-\frac{\partial \theta}{\partial x} = \frac{-\sin \theta}{r},\frac{\partial \theta}{\partial y} = \frac{\cos \theta}{r}
+\frac{\partial \theta}{\partial x} = -\frac{\sin \theta}{r},\frac{\partial \theta}{\partial y} = \frac{\cos \theta}{r}
 $$
 
 と求めることができる。多変数、例えば3次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。
@@ -311,7 +317,7 @@ $$
 df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz
 $$
 
-これは、$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **$1$形式(1-form)** と呼ぶ。また、微分する前のスカラー関数を **0形式(0-form)** と呼ぶ。一般に、$p$形式を微分することで$p+1$形式を作ることができる。この時得られた$p+1$形式を、元の$p$形式の外微分と呼ぶ。
+先ほど見たように、これは$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **$1$形式(1-form)** と呼ぶ。また、微分する前のスカラー関数を **0形式(0-form)** と呼ぶ。一般に、$p$形式を微分することで$p+1$形式を作ることができる。この時得られた$p+1$形式を、元の$p$形式の外微分と呼ぶ。
 
 ここで、外積記号$\wedge$により、以下の性質を持つ外積を定義する。
 
@@ -366,18 +372,14 @@ $$
 $f_x$はスカラー関数、すなわち$0$形式であり、一般に$x,y,z$の関数であるから、その外微分は
 
 $$
-df_x = \frac{\partial f_x}{\partial x} dx
-* \frac{\partial f_y}{\partial y} dy
-* \frac{\partial f_z}{\partial z} dz
+df_x = \frac{\partial f_x}{\partial x} dx　+ \frac{\partial f_y}{\partial y} dy + \frac{\partial f_z}{\partial z} dz
 $$
 
 で与えられる。$f_y, f_z$も同様である。したがって、
 
 $$
 d(df) =
-\left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy
-* (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz
-* (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
+\left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy + (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz + (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
 $$
 
 となる。$dx\wedge dy$など、$1$形式の外積で作られた新たな基底で表現されたものを$2$形式と呼ぶ。すなわち$1$形式を外微分することで$2$形式を作ることができた。同様にして、$p$形式を外微分することで$p+1$形式を作ることができる。
@@ -422,8 +424,7 @@ $$
 
 $$
 \begin{aligned}
-\left<dy \wedge dx, \frac{\partial}{\partial x} \right> & =
-* \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
+\left<dy \wedge dx, \frac{\partial}{\partial x} \right> & = \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
 &= -\left<dx, \frac{\partial}{\partial x} \right> dy \\
 &=1
 \end{aligned}
@@ -463,18 +464,16 @@ $$
 
 $$
 \begin{aligned}
-dx dy &= \frac{\partial (x,y)}{\partial r, \theta} dr d\theta\\
+dx dy &= \frac{\partial (x,y)}{\partial (r, \theta)} dr d\theta\\
 &= r dr d\theta
 \end{aligned}
 $$
 
 に対応することがわかる。
 
-## 微分形式とベクトル解析
-
 ## 微分形式による正準方程式の表式
 
-解析力学を微分形式で表現する準備が整った。まず、正準変換の条件を微分形式で表現しよう。今、変数$(q,p)$から$(Q,P)$に変数変換をしたとする。この時、$2$形式$dP \wedge dQ$を考える。$Q$、$P$は$(q,p)$の関数であるから、
+前置きが長かったが、これでようやく解析力学を微分形式で表現する準備が整った。まず、正準変換の条件を微分形式で表現しよう。今、変数$(q,p)$から$(Q,P)$に変数変換をしたとする。この時、$2$形式$dP \wedge dQ$を考える。$Q$、$P$は$(q,p)$の関数であるから、
 
 $$
 \begin{aligned}
@@ -510,7 +509,7 @@ $$
 正準2形式を使うと、正準方程式を内積の形で書くことができる。正準方程式のリュービル演算子を考えよう。リュービル演算子とは、任意の物理量の時間微分を与える演算子であった。
 
 $$
--i\mathcal{L}A = \frac{dA}{dt}
+\frac{dA}{dt} = i\mathcal{L}A
 $$
 
 虚数単位は負符号については今はあまり気にしなくて良い。$A$が$(q,p)$の関数であり、$(q,p)$が時間の関数であるなら
@@ -519,21 +518,21 @@ $$
 \begin{aligned}
 \frac{dA}{dt} &= \frac{\partial A}{\partial q} \dot{q} +
 \frac{\partial A}{\partial p} \dot{p}\\
-&= \underbrace{\left(\dot{q}\frac{\partial }{\partial q} + \dot{q} \frac{\partial}{\partial p}\right)}_{-i\mathcal{L}}A
+&= \underbrace{\left(\dot{q}\frac{\partial }{\partial q} + \dot{q} \frac{\partial}{\partial p}\right)}_{i\mathcal{L}}A
 \end{aligned}
 $$
 
 したがって、
 
 $$
--i\mathcal{L} = \dot{q} \frac{\partial}{\partial q} + \dot{p} \frac{\partial}{\partial p}
+i\mathcal{L} = \dot{q} \frac{\partial}{\partial q} + \dot{p} \frac{\partial}{\partial p}
 $$
 
 であることがわかる。このリュービル演算子と正準2形式の内積を取る。
 
 $$
 \begin{aligned}
-\left<\omega, -i\mathcal{L}  \right>  &= \left<dp\wedge dq, \dot{q} \frac{\partial}{\partial q} + \dot{p} \frac{\partial}{\partial p} \right> \\
+\left<\omega, i\mathcal{L}  \right>  &= \left<dp\wedge dq, \dot{q} \frac{\partial}{\partial q} + \dot{p} \frac{\partial}{\partial p} \right> \\
 &= \dot{p}dq - \dot{q}dp
 \end{aligned}
 $$
@@ -547,7 +546,7 @@ $$
 であるから、
 
 $$
-\left<dp\wedge dq, -i\mathcal{L} \right> = -dH
+\left<\omega, i\mathcal{L} \right> = -dH
 $$
 
 が、正準方程式を与える。
@@ -561,13 +560,106 @@ $$
 と、リュービル演算子
 
 $$
--i\mathcal{L} = \dot{q}^i\frac{\partial}{\partial q^i}+\dot{p}_i\frac{\partial}{\partial p_i}
+i\mathcal{L} = \dot{q}^i\frac{\partial}{\partial q^i}+\dot{p}_i\frac{\partial}{\partial p_i}
 $$
 
 を用いて
 
 $$
-\left<\omega, -i\mathcal{L}\right> = -dH
+\left<\omega, i\mathcal{L}\right> = -dH
 $$
 
-が正準方程式を与える。正準2形式は正準変換で不変であるから、これは局所基底の取り方に依らない運動方程式の表現となっている。
+が正準方程式を与える。
+
+ここで、リュービル演算子がポアソン括弧を使って、
+
+$$
+\frac{dA}{dt} \equiv i\mathcal{L}A = \{A, H\}
+$$
+
+と書けていたことを思い出そう。ポアソン括弧は局所座標に依らない表現であったから、リュービル演算子も局所座標に依らない。さらに、正準2形式は正準変換で不変であるから、局所基底の取り方に依らない正準方程式の表式が得られたことになる。
+
+## まとめ
+
+ニュートンの運動方程式から始まり、局所座標に依らない正準方程式までたどり着いた。ここまでの長い旅路を振り返って置こう。
+
+我々は、力と加速度が比例する、というニュートンの運動方程式からスタートした。
+
+$$
+F = ma
+$$
+
+ここで、$F$がポテンシャル力であり、$F(x) = -U'(x)$と書けるならば、
+
+$$
+m \ddot{x} = -U'(x)
+$$
+
+と書ける。ここで、$x$の代わりに一般化座標$q$と、一般化速度$\dot{q}$を用いて、ラグランジアン
+
+$$
+L(q, \dot{q}) = K(\dot{q}) - U(q)
+$$
+
+を定義すると、オイラー・ラグランジュの運動方程式
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0
+$$
+
+を得る。ここで、
+
+$$
+\begin{aligned}
+p &= \frac{\partial L}{\partial \dot{q}} \\
+H = p \dot{q} - L
+\end{aligned}
+$$
+
+というルジャンドル変換により、自由変数を一般化速度$\dot{q}$から一般化運動量$p$に取り直すと、オイラー・ラグランジュの運動方程式は、以下の正準方程式に書き換わる。
+
+$$
+\begin{aligned}
+\dot{q} &= \frac{\partial H}{\partial p}\\
+\dot{q} &= -\frac{\partial H}{\partial q}
+\end{aligned}
+$$
+
+$(q,p)$で表現された物理量$A$の時間微分は
+
+$$
+\dot{A} = \frac{\partial A}{\partial q} \frac{\partial H}{\partial p} - \frac{\partial A}{\partial p} \frac{\partial H}{\partial q}
+$$
+
+と書けるため、リュービル演算子を
+
+$$
+\dot{A} \equiv i \mathcal{L} A
+$$
+
+と定義すると、
+
+$$
+i \mathcal{L} = \frac{\partial H}{\partial p}\frac{\partial}{\partial q} -\frac{\partial H}{\partial q}\frac{\partial}{\partial p}
+$$
+
+となるため、リュービル演算子の正準2形式$\omega = dp \wedge dq$との内積は、ハミルトニアンの全微分を用いて
+
+$$
+\left<\omega, i\mathcal{L} \right> = -dH
+$$
+
+という、局所座標に依らない運動方程式が得られた。
+
+2つの式を並べて見ても、とても同じ現象を表現しているようには見えない。
+
+$$
+\begin{aligned}
+m \ddot{x} &= -U'(x) \\
+\left<\omega, i\mathcal{L} \right> &= -dH
+\end{aligned}
+$$
+
+しかし、ずっと等式変形をしてきたのだから、これは紛れもなく等価な式である。これは当式変形であるから、式の予言能力は変わらない。しかし、これまで見てきたように、「同じものが異なるように見える」「異なるものが同じように見える」という新たな視点を与えることが学問の真髄である。
+
+解析力学を学んだことが、読者の世界を広げたなら幸いである。
