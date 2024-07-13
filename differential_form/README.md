@@ -49,14 +49,13 @@ y &= r \sin \theta
 \end{aligned}
 $$
 
-これを、それぞれ全微分すると、
+まずは具体的な$r, \theta$依存性を忘れ、$x(r, \theta), y(r,\theta)$として一般論を考える。
+それぞれ全微分すると、
 
 $$
 \begin{aligned}
 dx &= \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta\\
-&= \cos \theta dr - r \sin \theta d\theta \\
-dy &= \frac{\partial y}{\partial r}dr + \frac{\partial y}{\partial \theta} d\theta \\
-&= \sin \theta dr + r \cos \theta d\theta
+dy &= \frac{\partial y}{\partial r}dr + \frac{\partial y}{\partial \theta} d\theta
 \end{aligned}
 $$
 
@@ -67,39 +66,46 @@ $$
 \begin{pmatrix}
 dx \\ dy
 \end{pmatrix} &=
+\underbrace{
 \begin{pmatrix}
-\partial_r x & \partial_\theta x  \\
-\partial_r y & \partial_\theta y 
-\end{pmatrix}
+\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial x}{\partial \theta}  \\
+\displaystyle \frac{\partial x}{\partial y} & \displaystyle \frac{\partial y}{\partial \theta}
+\end{pmatrix}}_A
 \begin{pmatrix}
 dr \\ d\theta
 \end{pmatrix}
  \\
-&=
-\begin{pmatrix}
-\cos \theta & - r \sin \theta \\
-\sin \theta & r \cos \theta
-\end{pmatrix}
-\begin{pmatrix}
-dr \\ d\theta
-\end{pmatrix}　\\
-&= A 
+&= A
 \begin{pmatrix}
 dr \\ d\theta
 \end{pmatrix}
 \end{aligned}
 $$
 
-これは、行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。
+これは、行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。つまり、$dr = \mathbf{e}_1, d\theta = \mathbf{e}_2, dx = \tilde{\mathbf{e}_1}, dy = \tilde{\mathbf{e}_2}$として、
+
+$$
+\tilde{\mathbf{e}}_i = A_i^j \mathbf{e}_j
+$$
+
+という変換が与えられたと解釈できる。
 
 この基底変換において、$u(x,y) = u(r, \theta)$の全微分を調べて見よう。
 
 $$
 \begin{aligned}
 du &= \frac{\partial u}{\partial x}dx +\frac{\partial u}{\partial y}dy \\
-&=\frac{\partial u}{\partial r}dr +\frac{\partial u}{\partial \theta}d\theta 
+&=\frac{\partial u}{\partial r}dr +\frac{\partial u}{\partial \theta}d\theta
 \end{aligned}
 $$
+
+これは、
+
+$$
+\mathbf{u} = u^i \mathbf{e}_i = \tilde{u}^i \tilde{\mathbf{e}}_i
+$$
+
+という表式に対応する。
 
 ここで、各成分について、
 
@@ -115,10 +121,10 @@ $$
 $$
 \begin{pmatrix}
 \partial_r u \\ \partial_\theta u
-\end{pmatrix} = 
+\end{pmatrix} =
 \begin{pmatrix}
 \partial_r x & \partial_\theta x  \\
-\partial_r y & \partial_\theta y 
+\partial_r y & \partial_\theta y
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x u \\ \partial_y u
@@ -132,21 +138,86 @@ $$
 $$
 \begin{pmatrix}
 \partial_r \\ \partial_\theta
-\end{pmatrix} = 
+\end{pmatrix} =
 \begin{pmatrix}
 \partial_r x & \partial_\theta x  \\
-\partial_r y & \partial_\theta y 
+\partial_r y & \partial_\theta y
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x\\ \partial_y
 \end{pmatrix}
 $$
 
-となるため、$dx, dy$と$\partial_x, \partial_y$、$dr, d\theta$と$\partial_r, \partial_\theta$、が互いに双対ベクトルの関係にあり、変換も逆向きであることに対応している。
+となるため、$dx, dy$と$\partial_x, \partial_y$、$dr, d\theta$と$\partial_r, \partial_\theta$、が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、$\partial_r = \mathbf{e}^1, \partial_\theta = \mathbf{e}^2, \partial_x = \tilde{\mathbf{e}}^1, \partial_y = \tilde{\mathbf{e}}^2$として、
 
-これを利用すると、$\partial_x \theta$や$\partial_y \theta$などが簡単に計算できる。
+$$
+\mathbf{e}^i = A^i_j \tilde{\mathbf{e}}^j
+$$
 
-TODO: 計算方法を書く。
+が成り立つことがわかる。
+
+これを利用すると、例えば$\partial_x \theta$や$\partial_y \theta$などが簡単に計算できる。
+
+普通に計算しようとすると、$\partial_x \theta$の計算は面倒だ。まずは具体的な
+
+$$
+\tan \theta = \frac{y}{x}
+$$
+
+として$r$を消去し、両辺を$x$で偏微分すると
+
+$$
+\frac{1}{\cos^2 \theta} \frac{\partial \theta}{\partial x} = -\frac{y}{x^2}
+$$
+
+ここで、$\cos \theta = x/r$であることから、
+
+$$
+\begin{aligned}
+\frac{\partial \theta}{\partial x} &=  - \frac{x^2}{r^2} \frac{y}{x^2}\\
+&= \frac{-y}{x^2+y^2} \\
+&= \frac{- \sin \theta}{r}
+\end{aligned}
+$$
+
+一方、$\partial_r x$や$\partial_\theta x$などの計算が簡単であることから、
+
+$$
+\begin{aligned}
+\begin{pmatrix}
+dx \\ dy
+\end{pmatrix} &=
+\begin{pmatrix}
+\partial_r x & \partial_\theta x  \\
+\partial_r y & \partial_\theta y
+\end{pmatrix}
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+\cos \theta & -r \sin \theta \\
+\sin \theta & r \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}
+\end{aligned}
+$$
+
+TODO: 続きを書く。
+
+逆行列を用いると、
+
+$$
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}
+= A^{-1}
+\begin{pmatrix}
+dx \\ dy
+\end{pmatrix}
+$$
 
 ## 外積と外微分
 
