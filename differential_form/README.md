@@ -82,7 +82,7 @@ dr \\ d\theta
 \end{aligned}
 $$
 
-これは、行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。つまり、$dr = \mathbf{e}_1, d\theta = \mathbf{e}_2, dx = \tilde{\mathbf{e}_1}, dy = \tilde{\mathbf{e}_2}$として、
+これは、ヤコビ行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。つまり、$dr = \mathbf{e}_1, d\theta = \mathbf{e}_2, dx = \tilde{\mathbf{e}_1}, dy = \tilde{\mathbf{e}_2}$として、
 
 $$
 \tilde{\mathbf{e}}_i = A_i^j \mathbf{e}_j
@@ -148,7 +148,7 @@ $$
 \end{pmatrix}
 $$
 
-となるため、$dx, dy$と$\partial_x, \partial_y$、$dr, d\theta$と$\partial_r, \partial_\theta$、が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、$\partial_r = \mathbf{e}^1, \partial_\theta = \mathbf{e}^2, \partial_x = \tilde{\mathbf{e}}^1, \partial_y = \tilde{\mathbf{e}}^2$として、
+となるため、$dx, dy$ と $\partial_x, \partial_y$、$dr, d\theta$と$\partial_r, \partial_\theta$ が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、 $\partial_r = \mathbf{e}^1, \partial_\theta = \mathbf{e}^2, \partial_x = \tilde{\mathbf{e}}^1, \partial_y = \tilde{\mathbf{e}}^2$として、
 
 $$
 \mathbf{e}^i = A^i_j \tilde{\mathbf{e}}^j
@@ -180,7 +180,9 @@ $$
 \end{aligned}
 $$
 
-一方、$\partial_r x$や$\partial_\theta x$などの計算が簡単であることから、
+こうして求まった。
+
+一方、$\partial_r x$や$\partial_\theta x$などの計算が簡単であることから、以下のように行列形式で書いておき、
 
 $$
 \begin{aligned}
@@ -195,29 +197,66 @@ dx \\ dy
 dr \\ d\theta
 \end{pmatrix} \\
 &=
+\underbrace{
 \begin{pmatrix}
 \cos \theta & -r \sin \theta \\
 \sin \theta & r \cos \theta
-\end{pmatrix}
+\end{pmatrix}}_A
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}\\
+&=
+A
 \begin{pmatrix}
 dr \\ d\theta
 \end{pmatrix}
 \end{aligned}
 $$
 
-TODO: 続きを書く。
+両辺に$A$の逆行列をかけると
 
-逆行列を用いると、
+$$
+\begin{aligned}
+\begin{pmatrix}
+dr \\ d\theta
+\end{pmatrix}
+&= A^{-1}
+\begin{pmatrix}
+dx \\ dy
+\end{pmatrix}\\
+&= \frac{1}{r}
+\begin{pmatrix}
+r \cos \theta &  r \sin \theta \\
+ -\sin \theta &  \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+dx \\ dy
+\end{pmatrix}
+\end{aligned}
+$$
+
+これと、
 
 $$
 \begin{pmatrix}
 dr \\ d\theta
+\end{pmatrix} =
+\begin{pmatrix}
+\displaystyle \frac{\partial r}{\partial x} & \displaystyle \frac{\partial r}{\partial y} \\
+\displaystyle \frac{\partial \theta}{\partial x} & \displaystyle \frac{\partial \theta}{\partial y}
 \end{pmatrix}
-= A^{-1}
 \begin{pmatrix}
 dx \\ dy
 \end{pmatrix}
 $$
+
+を見比べれば、
+
+$$
+\frac{\partial \theta}{\partial x} = \frac{-\sin \theta}{r},\frac{\partial \theta}{\partial y} = \frac{\cos \theta}{r}
+$$
+
+と求めることができる。多変数、例えば3次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。
 
 ## 外積と外微分
 

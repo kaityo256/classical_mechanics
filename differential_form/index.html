@@ -108,19 +108,20 @@
                                     y &amp;= r \sin \theta
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>これを、それぞれ全微分すると、</p>
+                                    <p>まずは具体的な<span
+                                    class="math inline">\(r,
+                                    \theta\)</span>依存性を忘れ、<span
+                                    class="math inline">\(x(r, \theta),
+                                    y(r,\theta)\)</span>として一般論を考える。
+                                    それぞれ全微分すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     dx &amp;= \frac{\partial x}{\partial
                                     r} dr + \frac{\partial x}{\partial
                                     \theta} d\theta\\
-                                    &amp;= \cos \theta dr - r \sin
-                                    \theta d\theta \\
                                     dy &amp;= \frac{\partial y}{\partial
                                     r}dr + \frac{\partial y}{\partial
-                                    \theta} d\theta \\
-                                    &amp;= \sin \theta dr + r \cos
-                                    \theta d\theta
+                                    \theta} d\theta
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを行列で書けば</p>
@@ -129,35 +130,42 @@
                                     \begin{pmatrix}
                                     dx \\ dy
                                     \end{pmatrix} &amp;=
+                                    \underbrace{
                                     \begin{pmatrix}
-                                    \partial_r x &amp; \partial_\theta
-                                    x  \\
-                                    \partial_r y &amp; \partial_\theta y
-                                    \end{pmatrix}
+                                    \displaystyle \frac{\partial
+                                    x}{\partial r} &amp; \displaystyle
+                                    \frac{\partial x}{\partial
+                                    \theta}  \\
+                                    \displaystyle \frac{\partial
+                                    x}{\partial y} &amp; \displaystyle
+                                    \frac{\partial y}{\partial \theta}
+                                    \end{pmatrix}}_A
                                     \begin{pmatrix}
                                     dr \\ d\theta
                                     \end{pmatrix}
                                     \\
-                                    &amp;=
-                                    \begin{pmatrix}
-                                    \cos \theta &amp; - r \sin \theta \\
-                                    \sin \theta &amp; r \cos \theta
-                                    \end{pmatrix}
-                                    \begin{pmatrix}
-                                    dr \\ d\theta
-                                    \end{pmatrix}　\\
                                     &amp;= A
                                     \begin{pmatrix}
                                     dr \\ d\theta
                                     \end{pmatrix}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>これは、行列<span
+                                    <p>これは、ヤコビ行列<span
                                     class="math inline">\(A\)</span>を用いた<span
                                     class="math inline">\(\{dr,
                                     d\theta\}\)</span>という基底から<span
                                     class="math inline">\(\{dx,
-                                    dy\}\)</span>という基底への変換則のように見える。</p>
+                                    dy\}\)</span>という基底への変換則のように見える。つまり、<span
+                                    class="math inline">\(dr =
+                                    \mathbf{e}_1, d\theta =
+                                    \mathbf{e}_2, dx =
+                                    \tilde{\mathbf{e}_1}, dy =
+                                    \tilde{\mathbf{e}_2}\)</span>として、</p>
+                                    <p><span class="math display">\[
+                                    \tilde{\mathbf{e}}_i = A_i^j
+                                    \mathbf{e}_j
+                                    \]</span></p>
+                                    <p>という変換が与えられたと解釈できる。</p>
                                     <p>この基底変換において、<span
                                     class="math inline">\(u(x,y) = u(r,
                                     \theta)\)</span>の全微分を調べて見よう。</p>
@@ -171,6 +179,12 @@
                                     \theta}d\theta
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>これは、</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{u} = u^i \mathbf{e}_i =
+                                    \tilde{u}^i \tilde{\mathbf{e}}_i
+                                    \]</span></p>
+                                    <p>という表式に対応する。</p>
                                     <p>ここで、各成分について、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -226,19 +240,140 @@
                                     \]</span></p>
                                     <p>となるため、<span
                                     class="math inline">\(dx,
-                                    dy\)</span>と<span
+                                    dy\)</span> と <span
                                     class="math inline">\(\partial_x,
                                     \partial_y\)</span>、<span
                                     class="math inline">\(dr,
                                     d\theta\)</span>と<span
                                     class="math inline">\(\partial_r,
-                                    \partial_\theta\)</span>、が互いに双対ベクトルの関係にあり、変換も逆向きであることに対応している。</p>
-                                    <p>これを利用すると、<span
+                                    \partial_\theta\)</span>
+                                    が互いに双対ベクトルの関係にあり、変換も逆向きであること、すなわち、
+                                    <span
+                                    class="math inline">\(\partial_r =
+                                    \mathbf{e}^1, \partial_\theta =
+                                    \mathbf{e}^2, \partial_x =
+                                    \tilde{\mathbf{e}}^1, \partial_y =
+                                    \tilde{\mathbf{e}}^2\)</span>として、</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{e}^i = A^i_j
+                                    \tilde{\mathbf{e}}^j
+                                    \]</span></p>
+                                    <p>が成り立つことがわかる。</p>
+                                    <p>これを利用すると、例えば<span
                                     class="math inline">\(\partial_x
                                     \theta\)</span>や<span
                                     class="math inline">\(\partial_y
                                     \theta\)</span>などが簡単に計算できる。</p>
-                                    <p>TODO: 計算方法を書く。</p>
+                                    <p>普通に計算しようとすると、<span
+                                    class="math inline">\(\partial_x
+                                    \theta\)</span>の計算は面倒だ。まずは具体的な</p>
+                                    <p><span class="math display">\[
+                                    \tan \theta = \frac{y}{x}
+                                    \]</span></p>
+                                    <p>として<span
+                                    class="math inline">\(r\)</span>を消去し、両辺を<span
+                                    class="math inline">\(x\)</span>で偏微分すると</p>
+                                    <p><span class="math display">\[
+                                    \frac{1}{\cos^2 \theta}
+                                    \frac{\partial \theta}{\partial x} =
+                                    -\frac{y}{x^2}
+                                    \]</span></p>
+                                    <p>ここで、<span
+                                    class="math inline">\(\cos \theta =
+                                    x/r\)</span>であることから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial \theta}{\partial x}
+                                    &amp;=  - \frac{x^2}{r^2}
+                                    \frac{y}{x^2}\\
+                                    &amp;= \frac{-y}{x^2+y^2} \\
+                                    &amp;= \frac{- \sin \theta}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>こうして求まった。</p>
+                                    <p>一方、<span
+                                    class="math inline">\(\partial_r
+                                    x\)</span>や<span
+                                    class="math inline">\(\partial_\theta
+                                    x\)</span>などの計算が簡単であることから、以下のように行列形式で書いておき、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \begin{pmatrix}
+                                    dx \\ dy
+                                    \end{pmatrix} &amp;=
+                                    \begin{pmatrix}
+                                    \partial_r x &amp; \partial_\theta
+                                    x  \\
+                                    \partial_r y &amp; \partial_\theta y
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix} \\
+                                    &amp;=
+                                    \underbrace{
+                                    \begin{pmatrix}
+                                    \cos \theta &amp; -r \sin \theta \\
+                                    \sin \theta &amp; r \cos \theta
+                                    \end{pmatrix}}_A
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}\\
+                                    &amp;=
+                                    A
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>両辺に<span
+                                    class="math inline">\(A\)</span>の逆行列をかけると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix}
+                                    &amp;= A^{-1}
+                                    \begin{pmatrix}
+                                    dx \\ dy
+                                    \end{pmatrix}\\
+                                    &amp;= \frac{1}{r}
+                                    \begin{pmatrix}
+                                    r \cos \theta &amp;  r \sin \theta
+                                    \\
+                                    -\sin \theta &amp;  \cos \theta
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    dx \\ dy
+                                    \end{pmatrix}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これと、</p>
+                                    <p><span class="math display">\[
+                                    \begin{pmatrix}
+                                    dr \\ d\theta
+                                    \end{pmatrix} =
+                                    \begin{pmatrix}
+                                    \displaystyle \frac{\partial
+                                    r}{\partial x} &amp; \displaystyle
+                                    \frac{\partial r}{\partial y} \\
+                                    \displaystyle \frac{\partial
+                                    \theta}{\partial x} &amp;
+                                    \displaystyle \frac{\partial
+                                    \theta}{\partial y}
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                    dx \\ dy
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>を見比べれば、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial \theta}{\partial x} =
+                                    \frac{-\sin
+                                    \theta}{r},\frac{\partial
+                                    \theta}{\partial y} = \frac{\cos
+                                    \theta}{r}
+                                    \]</span></p>
+                                    <p>と求めることができる。多変数、例えば3次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。</p>
                                     <h1
                                     id="外積と外微分">外積と外微分</h1>
                                     <p>正準変換において母関数<span
