@@ -90,42 +90,42 @@
                                     coordinate)</strong>
                                     と呼び、その共役な運動量が保存量となる。</p>
                                     <p>与えられたハミルトニアンに循環座標が含まれない場合でも、変数変換により循環座標が現れる場合がある。一次元空間中に質量<span
-                                    class="math inline">\(m\)</span>の質点AとBがあり、相対距離だけに依存するポテンシャルで相互作用しているとしよう。質点A、Bの座標を<span
-                                    class="math inline">\(q^A,
-                                    q^B\)</span>、運動量を<span
-                                    class="math inline">\(p_A,
-                                    p_B\)</span>とすると、この系のハミルトニアンは</p>
+                                    class="math inline">\(m\)</span>の質点1と2があり、相対距離だけに依存するポテンシャルで相互作用しているとしよう。質点1、2の座標を<span
+                                    class="math inline">\(q^1,
+                                    q^2\)</span>、運動量を<span
+                                    class="math inline">\(p_1,
+                                    p_2\)</span>とすると、この系のハミルトニアンは</p>
                                     <p><span class="math display">\[
-                                    H(q^A, q^B, p_A, p_B) =
-                                    \frac{1}{2m}(p_A^2+p_A^2) +
-                                    U(q^A-q^B)
+                                    H(q^1, q^2, p_1, p_2) =
+                                    \frac{1}{2m}(p_1^2+p_2^2) +
+                                    U(q^1-q^2)
                                     \]</span></p>
                                     <p>で表すことができる。このハミルトニアンは、座標<span
-                                    class="math inline">\(q_A,
-                                    q_B\)</span>の両方を含むため、循環座標は存在しない。ここで、</p>
+                                    class="math inline">\(q_1,
+                                    q_2\)</span>の両方を含むため、循環座標は存在しない。ここで、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    Q^1 &amp;= \frac{q^A + q^B}{2}\\
-                                    Q^2 &amp;= \frac{q^A - q^B}{2}
+                                    Q^1 &amp;= \frac{q^1 + q^1}{2}\\
+                                    Q^2 &amp;= \frac{q^1 - q^2}{2}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>という変換を考えよう。<span
                                     class="math inline">\(Q^1\)</span>は重心座標である。</p>
-                                    <p><span class="math inline">\(q^A,
-                                    q^B\)</span>を<span
+                                    <p><span class="math inline">\(q^1,
+                                    q^2\)</span>を<span
                                     class="math inline">\(Q^1,
                                     Q^2\)</span>について逆に解くと、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    q^A &amp;= Q^1 + Q^2\\
-                                    q^B &amp;= Q^1 - Q^2
+                                    q^1 &amp;= Q^1 + Q^2\\
+                                    q^2 &amp;= Q^1 - Q^2
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを用いると、元の系の運動エネルギーは</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     K &amp;=
-                                    \frac{m}{2}((\dot{q}^A)^2+(\dot{q}^B)^2)
+                                    \frac{m}{2}((\dot{q}^1)^2+(\dot{q}^2)^2)
                                     \\
                                     &amp;= \frac{m}{2}
                                     \left((\dot{Q}^1+\dot{Q}^2)^2+(\dot{Q}^1-\dot{Q}^2)^2  \right)
@@ -151,7 +151,9 @@
                                     \]</span></p>
                                     <p>となり、ハミルトニアンは<span
                                     class="math inline">\(Q^1\)</span>を含まなくなる。そこから直ちに共役な運動量である<span
-                                    class="math inline">\(P^1\)</span>の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量が保存量となることを示す。</p>
+                                    class="math inline">\(P_1\)</span>の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量<span
+                                    class="math inline">\(P_1 =
+                                    p_1+p_2\)</span>が保存量となることを示す。</p>
                                     <p>角運動量保存についても同様である。二次元空間<span
                                     class="math inline">\((x,y)\)</span>において、原点からの距離<span
                                     class="math inline">\(r=\sqrt{x^2+y^2}\)</span>にのみ依存するポテンシャルに支配された運動を考える。この系のラグランジアンを極座標表示すると、</p>
@@ -263,12 +265,12 @@
                                     class="math inline">\(O(\varepsilon)\)</span>の微小正準変換を引き起こすことが期待される。この母関数による正準変換は以下のようになる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    p &amp;= \frac{\partial W}{\partial
-                                    q} = P + \varepsilon
-                                    \frac{\partial}{\partial q}J(q,P) \\
                                     Q &amp;= \frac{\partial W}{\partial
                                     P} = q + \varepsilon
                                     \frac{\partial}{\partial P}J(q,P) \\
+                                    p &amp;= \frac{\partial W}{\partial
+                                    q} = P + \varepsilon
+                                    \frac{\partial}{\partial q}J(q,P)
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを<span
@@ -281,51 +283,59 @@
                                     \]</span></p>
                                     <p>と定義しよう。すると、</p>
                                     <p><span class="math display">\[
-                                    P = p -\varepsilon h
-                                    \]</span></p>
-                                    <p>と書ける。先ほどの式を<span
-                                    class="math inline">\(P\)</span>について解くと</p>
-                                    <p><span class="math display">\[
                                     \begin{aligned}
-                                    P &amp;= p - \varepsilon
-                                    \frac{\partial}{\partial q}J(q, P)
-                                    \\
-                                    &amp;= p - \varepsilon
-                                    \frac{\partial}{\partial q}J(q, p -
-                                    \varepsilon h) \\
-                                    &amp;= p -\varepsilon
-                                    \frac{\partial}{\partial q} \left(
-                                    J(q, p)-h \varepsilon
-                                    \frac{\partial}{\partial q} J(q, p)
-                                    \right) \\
-                                    &amp;= p - \varepsilon
-                                    \frac{\partial}{\partial q} J(q, p)
-                                    + O(\varepsilon^2)
+                                    Q &amp;= q + \varepsilon h \\
+                                    P &amp;= p - \varepsilon h
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>全く同様にして、</p>
+                                    <p>と書ける。</p>
+                                    <p>ここで、</p>
                                     <p><span class="math display">\[
-                                    Q = q + \varepsilon
+                                    \begin{aligned}
+                                    J(q, P) &amp;= J(q, p - \varepsilon
+                                    h) \\
+                                    &amp;= J(q,p) -\varepsilon h
+                                    \frac{\partial}{\partial p} J(q,p)
+                                    \\
+                                    &amp;= J(q,p) + O(\varepsilon)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q &amp;= \frac{\partial W}{\partial
+                                    P} \\
+                                    &amp; = q + \varepsilon
+                                    \frac{\partial}{\partial P}J(q,P) \\
+                                    &amp;= q + \varepsilon
+                                    \left(\frac{\partial}{\partial p}
+                                    J(q,p) +O(\varepsilon) \right) \\
+                                    &amp;= q + \varepsilon
+                                    \frac{\partial}{\partial p}J(q,p) +
+                                    O(\varepsilon^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>と、<span
+                                    class="math inline">\(Q\)</span>を<span
+                                    class="math inline">\((q,p)\)</span>だけで表現できた。同様に、</p>
+                                    <p><span class="math display">\[
+                                    P = p - \varepsilon
                                     \frac{\partial}{\partial p}J(q,p) +
                                     O(\varepsilon^2)
                                     \]</span></p>
-                                    <p>両方の式をまとめると、微小変化を引き起こす正準変換によって与えられる変換<span
-                                    class="math inline">\((q,p)
-                                    \rightarrow
-                                    (Q,P)\)</span>は以下のように与えられる。</p>
+                                    <p>となる。2式をあわせて</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     Q &amp;= q + \varepsilon
-                                    \frac{\partial}{\partial p}J(q,p) +
-                                    O(\varepsilon^2)\\
+                                    \frac{\partial}{\partial p}J(q,p)\\
                                     P &amp;= p - \varepsilon
-                                    \frac{\partial}{\partial q}J(q,p) +
-                                    O(\varepsilon^2)\\
+                                    \frac{\partial}{\partial q}J(q,p)
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>すなわち、「現時点」での変数<span
+                                    <p>すなわち、<strong>現時点での</strong>
+                                    変数<span
                                     class="math inline">\((q,p)\)</span>に対して、その変数で表現されたスカラー関数<span
-                                    class="math inline">\(J(q,p)\)</span>がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。</p>
+                                    class="math inline">\(J(q,p)\)</span>が与えられた時、そのスカラー関数により生成される微小正準変換は上記で与えられる。</p>
                                     <p>この変換が正準変換を与えることを確認しておこう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -340,15 +350,15 @@
                                     J}{\partial q \partial p}
                                     &amp;  \varepsilon
                                     \displaystyle\frac{\partial^2
-                                    J}{\partial q \partial p}\\
+                                    J}{\partial p^2}\\
                                     -\varepsilon
                                     \displaystyle\frac{\partial^2
-                                    J}{\partial q \partial p}  &amp;
+                                    J}{\partial q^2}  &amp;
                                     1 - \varepsilon
                                     \displaystyle\frac{\partial^2
                                     J}{\partial q \partial p}
                                     \end{vmatrix} \\
-                                    &amp;= 1
+                                    &amp;= 1 + O(\varepsilon^2)
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、この変換は<span
@@ -404,8 +414,8 @@
                                     <p>すなわち、母関数<span
                                     class="math inline">\(J\)</span>が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　<strong>ネーターの定理(Noether’s
                                     theorem)</strong>　と呼ぶ。</p>
-                                    <p>以後、母関数<span
-                                    class="math inline">\(J\)</span>に様々なものを入れてみよう。まず、<span
+                                    <p>母関数<span
+                                    class="math inline">\(J\)</span>として様々な物理量を入れてみよう。まず、<span
                                     class="math inline">\(J\)</span>としてハミルトニアン<span
                                     class="math inline">\(H\)</span>を入れてみる。</p>
                                     <p><span class="math display">\[
@@ -439,14 +449,11 @@
                                     class="math inline">\(t \rightarrow
                                     t +
                                     \varepsilon\)</span>に対して保存量となる。これは、正準方程式が、時間を連続パラメータとして、ハミルトニアンを母関数とする正準変換を表していることを意味する。</p>
-                                    <p>次に、空間並進操作を考えよう。相対距離に依存する相互作用をする二粒子系を考える。</p>
+                                    <p>次に、空間並進操作を考えよう。先ほど考えた相対距離に依存する相互作用をする二粒子系を考える。</p>
                                     <p><span class="math display">\[
                                     H = \frac{1}{2m}(p_1^2 + p_2^2) +
-                                    U(r)
+                                    U(q^1-q^2)
                                     \]</span></p>
-                                    <p>ただし<span
-                                    class="math inline">\(r = |q^1 -
-                                    q^2|\)</span>とする。</p>
                                     <p>ここで、母関数として二粒子の運動量の和を考える。</p>
                                     <p><span class="math display">\[
                                     J = p_1 + p_2
@@ -461,7 +468,20 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>要するに、座標を正の方向に<span
-                                    class="math inline">\(\varepsilon\)</span>だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。すなわち、</p>
+                                    class="math inline">\(\varepsilon\)</span>だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、</p>
+                                    <p><span class="math display">\[
+                                    Q^1 - Q^2 = q^1 - q^2
+                                    \]</span></p>
+                                    <p>また、運動量は変化しないから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    H &amp;= \frac{1}{2m}(p_1^2 + p_2^2)
+                                    + U(q^1-q^2) \\
+                                    &amp;= \frac{1}{2m}(P_1^2 + P_2^2) +
+                                    U(Q^1-Q^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、この変換においてハミルトニアンは変化しない。すなわち、</p>
                                     <p><span class="math display">\[
                                     \delta H \equiv H(Q^1, Q^2,P_1, P_2)
                                     -H(q^1, q^2,p_1, p_2) = 0
@@ -522,7 +542,7 @@
                                     \]</span></p>
                                     <p>すなわち、重心の運動量<span
                                     class="math inline">\(J=p_1 +
-                                    p_2\)</span>は保存量である。</p>
+                                    p_2\)</span>は保存量である。このように、ポアソン括弧により保存することを確認できるが、ハミルトニアンが変化しないことを確認した方が簡便である。</p>
                                     <p>回転対称性についても同様に理解することができる。以下のような中心力ポテンシャルに依存する系を考える。</p>
                                     <p><span class="math display">\[
                                     H = \frac{1}{2m}(p_1^2 + p_2^2) +
@@ -583,8 +603,8 @@
                                     &amp;= \sqrt{(q^1 - \varepsilon
                                     q^2)^2 + (q^2 + \varepsilon
                                     q^1)^2}\\
-                                    &amp;= \sqrt{(q^1)^2+(q^2)^2}+
-                                    \varepsilon^2\left((q^1)^2+(q^2)^2\right)\\
+                                    &amp;= \sqrt{(q^1)^2+(q^2)^2+
+                                    \varepsilon^2\left((q^1)^2+(q^2)^2\right)}\\
                                     &amp;= \sqrt{r^2 + \varepsilon^2
                                     r^2}\\
                                     &amp;= \sqrt{1+\varepsilon^2} r \\

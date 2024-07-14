@@ -26,29 +26,29 @@ $$
 
 と、$p_x$および$p_y$が保存されることがわかる。運動量の時間微分は、ハミルトニアンを共役な座標で偏微分することで得られるから、ハミルトニアンに座標が陽に含まれない場合はただちに保存量となることがわかる。このように、ハミルトニアンに陽に含まれない座標を **循環座標(cyclic coordinate)** と呼び、その共役な運動量が保存量となる。
 
-与えられたハミルトニアンに循環座標が含まれない場合でも、変数変換により循環座標が現れる場合がある。一次元空間中に質量$m$の質点AとBがあり、相対距離だけに依存するポテンシャルで相互作用しているとしよう。質点A、Bの座標を$q^A, q^B$、運動量を$p_A, p_B$とすると、この系のハミルトニアンは
+与えられたハミルトニアンに循環座標が含まれない場合でも、変数変換により循環座標が現れる場合がある。一次元空間中に質量$m$の質点1と2があり、相対距離だけに依存するポテンシャルで相互作用しているとしよう。質点1、2の座標を$q^1, q^2$、運動量を$p_1, p_2$とすると、この系のハミルトニアンは
 
 $$
-H(q^A, q^B, p_A, p_B) = \frac{1}{2m}(p_A^2+p_A^2) + U(q^A-q^B)
+H(q^1, q^2, p_1, p_2) = \frac{1}{2m}(p_1^2+p_2^2) + U(q^1-q^2)
 $$
 
-で表すことができる。このハミルトニアンは、座標$q_A, q_B$の両方を含むため、循環座標は存在しない。ここで、
+で表すことができる。このハミルトニアンは、座標$q_1, q_2$の両方を含むため、循環座標は存在しない。ここで、
 
 $$
 \begin{aligned}
-Q^1 &= \frac{q^A + q^B}{2}\\
-Q^2 &= \frac{q^A - q^B}{2}
+Q^1 &= \frac{q^1 + q^1}{2}\\
+Q^2 &= \frac{q^1 - q^2}{2}
 \end{aligned}
 $$
 
 という変換を考えよう。$Q^1$は重心座標である。
 
-$q^A, q^B$を$Q^1, Q^2$について逆に解くと、
+$q^1, q^2$を$Q^1, Q^2$について逆に解くと、
 
 $$
 \begin{aligned}
-q^A &= Q^1 + Q^2\\
-q^B &= Q^1 - Q^2
+q^1 &= Q^1 + Q^2\\
+q^2 &= Q^1 - Q^2
 \end{aligned}
 $$
 
@@ -56,7 +56,7 @@ $$
 
 $$
 \begin{aligned}
-K &= \frac{m}{2}((\dot{q}^A)^2+(\dot{q}^B)^2) \\
+K &= \frac{m}{2}((\dot{q}^1)^2+(\dot{q}^2)^2) \\
 &= \frac{m}{2} \left((\dot{Q}^1+\dot{Q}^2)^2+(\dot{Q}^1-\dot{Q}^2)^2  \right) \\
 &= m(\dot{Q}^1)^2 + m(\dot{Q}^2)^2
 \end{aligned}
@@ -77,7 +77,7 @@ $$
 H(Q^1, Q^2, P_1, P_2) = \frac{1}{4m}(P_1^2+P_2^2) + U(Q^2)
 $$
 
-となり、ハミルトニアンは$Q^1$を含まなくなる。そこから直ちに共役な運動量である$P^1$の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量が保存量となることを示す。
+となり、ハミルトニアンは$Q^1$を含まなくなる。そこから直ちに共役な運動量である$P_1$の時間微分がゼロ、すなわち保存量となることがわかる。これは、相互作用が相対距離にのみ依存する系では、重心の運動量$P_1 = p_1+p_2$が保存量となることを示す。
 
 角運動量保存についても同様である。二次元空間$(x,y)$において、原点からの距離$r=\sqrt{x^2+y^2}$にのみ依存するポテンシャルに支配された運動を考える。この系のラグランジアンを極座標表示すると、
 
@@ -175,8 +175,8 @@ $$
 
 $$
 \begin{aligned}
-p &= \frac{\partial W}{\partial q} = P + \varepsilon \frac{\partial}{\partial q}J(q,P) \\
 Q &= \frac{\partial W}{\partial P} = q + \varepsilon \frac{\partial}{\partial P}J(q,P) \\
+p &= \frac{\partial W}{\partial q} = P + \varepsilon \frac{\partial}{\partial q}J(q,P)
 \end{aligned}
 $$
 
@@ -191,36 +191,51 @@ $$
 と定義しよう。すると、
 
 $$
-P = p -\varepsilon h
-$$
-
-と書ける。先ほどの式を$P$について解くと
-
-$$
 \begin{aligned}
-P &= p - \varepsilon \frac{\partial}{\partial q}J(q, P) \\
-&= p - \varepsilon \frac{\partial}{\partial q}J(q, p - \varepsilon h) \\
-&= p -\varepsilon \frac{\partial}{\partial q} \left( J(q, p)-h \varepsilon \frac{\partial}{\partial q} J(q, p) \right) \\
-&= p - \varepsilon \frac{\partial}{\partial q} J(q, p) + O(\varepsilon^2)
+Q &= q + \varepsilon h \\
+P &= p - \varepsilon h
 \end{aligned}
 $$
 
-全く同様にして、
+と書ける。
 
-$$
-Q = q + \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
-$$
-
-両方の式をまとめると、微小変化を引き起こす正準変換によって与えられる変換$(q,p) \rightarrow (Q,P)$は以下のように与えられる。
+ここで、
 
 $$
 \begin{aligned}
-Q &= q + \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)\\
-P &= p - \varepsilon \frac{\partial}{\partial q}J(q,p) + O(\varepsilon^2)\\
+J(q, P) &= J(q, p - \varepsilon h) \\
+&= J(q,p) -\varepsilon h \frac{\partial}{\partial p} J(q,p) \\
+&= J(q,p) + O(\varepsilon)
 \end{aligned}
 $$
 
-すなわち、「現時点」での変数$(q,p)$に対して、その変数で表現されたスカラー関数$J(q,p)$がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。
+従って、
+
+$$
+\begin{aligned}
+Q &= \frac{\partial W}{\partial P} \\
+& = q + \varepsilon \frac{\partial}{\partial P}J(q,P) \\
+&= q + \varepsilon \left(\frac{\partial}{\partial p} J(q,p) +O(\varepsilon) \right) \\
+&= q + \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
+\end{aligned}
+$$
+
+と、$Q$を$(q,p)$だけで表現できた。同様に、
+
+$$
+P = p - \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
+$$
+
+となる。2式をあわせて
+
+$$
+\begin{aligned}
+Q &= q + \varepsilon \frac{\partial}{\partial p}J(q,p)\\
+P &= p - \varepsilon \frac{\partial}{\partial q}J(q,p)
+\end{aligned}
+$$
+
+すなわち、**現時点での** 変数$(q,p)$に対して、その変数で表現されたスカラー関数$J(q,p)$が与えられた時、そのスカラー関数により生成される微小正準変換は上記で与えられる。
 
 この変換が正準変換を与えることを確認しておこう。
 
@@ -232,11 +247,11 @@ $$
 \end{vmatrix}
 &=
 \begin{vmatrix}
-1 + \varepsilon \displaystyle\frac{\partial^2 J}{\partial q \partial p} &  \varepsilon \displaystyle\frac{\partial^2 J}{\partial q \partial p}\\
--\varepsilon \displaystyle\frac{\partial^2 J}{\partial q \partial p}  &
+1 + \varepsilon \displaystyle\frac{\partial^2 J}{\partial q \partial p} &  \varepsilon \displaystyle\frac{\partial^2 J}{\partial p^2}\\
+-\varepsilon \displaystyle\frac{\partial^2 J}{\partial q^2}  &
 1 - \varepsilon \displaystyle\frac{\partial^2 J}{\partial q \partial p}
 \end{vmatrix} \\
-&= 1
+&= 1 + O(\varepsilon^2)
 \end{aligned}
 $$
 
@@ -283,7 +298,7 @@ $$
 
 すなわち、母関数$J$が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　**ネーターの定理(Noether's theorem)**　と呼ぶ。
 
-以後、母関数$J$に様々なものを入れてみよう。まず、$J$としてハミルトニアン$H$を入れてみる。
+母関数$J$として様々な物理量を入れてみよう。まず、$J$としてハミルトニアン$H$を入れてみる。
 
 $$
 \begin{aligned}
@@ -311,13 +326,11 @@ $$
 
 したがって、ハミルトニアンは時間の並進操作$t \rightarrow t + \varepsilon$に対して保存量となる。これは、正準方程式が、時間を連続パラメータとして、ハミルトニアンを母関数とする正準変換を表していることを意味する。
 
-次に、空間並進操作を考えよう。相対距離に依存する相互作用をする二粒子系を考える。
+次に、空間並進操作を考えよう。先ほど考えた相対距離に依存する相互作用をする二粒子系を考える。
 
 $$
-H = \frac{1}{2m}(p_1^2 + p_2^2) + U(r)
+H = \frac{1}{2m}(p_1^2 + p_2^2) + U(q^1-q^2)
 $$
-
-ただし$r = |q^1 - q^2|$とする。
 
 ここで、母関数として二粒子の運動量の和を考える。
 
@@ -336,7 +349,22 @@ P_2 &= p_2\\
 \end{aligned}
 $$
 
-要するに、座標を正の方向に$\varepsilon$だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。すなわち、
+要するに、座標を正の方向に$\varepsilon$だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、
+
+$$
+Q^1 - Q^2 = q^1 - q^2
+$$
+
+また、運動量は変化しないから、
+
+$$
+\begin{aligned}
+H &= \frac{1}{2m}(p_1^2 + p_2^2) + U(q^1-q^2) \\
+&= \frac{1}{2m}(P_1^2 + P_2^2) + U(Q^1-Q^2)
+\end{aligned}
+$$
+
+従って、この変換においてハミルトニアンは変化しない。すなわち、
 
 $$
 \delta H \equiv H(Q^1, Q^2,P_1, P_2) -H(q^1, q^2,p_1, p_2) = 0
@@ -388,7 +416,7 @@ $$
 \end{aligned}
 $$
 
-すなわち、重心の運動量$J=p_1 + p_2$は保存量である。
+すなわち、重心の運動量$J=p_1 + p_2$は保存量である。このように、ポアソン括弧により保存することを確認できるが、ハミルトニアンが変化しないことを確認した方が簡便である。
 
 回転対称性についても同様に理解することができる。以下のような中心力ポテンシャルに依存する系を考える。
 
@@ -442,7 +470,7 @@ $$
 \begin{aligned}
 R &= \sqrt{(Q^1)^2+(Q^2)^2} \\
 &= \sqrt{(q^1 - \varepsilon q^2)^2 + (q^2 + \varepsilon q^1)^2}\\
-&= \sqrt{(q^1)^2+(q^2)^2}+ \varepsilon^2\left((q^1)^2+(q^2)^2\right)\\
+&= \sqrt{(q^1)^2+(q^2)^2+ \varepsilon^2\left((q^1)^2+(q^2)^2\right)}\\
 &= \sqrt{r^2 + \varepsilon^2 r^2}\\
 &= \sqrt{1+\varepsilon^2} r \\
 &= r + \frac{\varepsilon^2r}{2} + O(\varepsilon^4)
