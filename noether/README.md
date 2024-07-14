@@ -20,7 +20,7 @@ $$
 $$
 \begin{aligned}
 \dot{p}_x &= -\frac{\partial H}{\partial q^x} = 0 \\
-\dot{p}_y &= -\frac{\partial H}{\partial q^y} = 0 
+\dot{p}_y &= -\frac{\partial H}{\partial q^y} = 0
 \end{aligned}
 $$
 
@@ -41,12 +41,33 @@ Q^2 &= \frac{q^A - q^B}{2}
 \end{aligned}
 $$
 
-という変換を考えよう。$Q^1$は重心座標である。対応する運動量が
+という変換を考えよう。$Q^1$は重心座標である。
+
+$q^A, q^B$を$Q^1, Q^2$について逆に解くと、
 
 $$
 \begin{aligned}
-P_1 &= p_A+p_B \\
-P_2 &= p_A-p_B \\
+q^A &= Q^1 + Q^2\\
+q^B &= Q^1 - Q^2
+\end{aligned}
+$$
+
+これを用いると、元の系の運動エネルギーは
+
+$$
+\begin{aligned}
+K &= \frac{m}{2}((\dot{q}^A)^2+(\dot{q}^B)^2) \\
+&= \frac{m}{2} \left((\dot{Q}^1+\dot{Q}^2)^2+(\dot{Q}^1-\dot{Q}^2)^2  \right) \\
+&= m(\dot{Q}^1)^2 + m(\dot{Q}^2)^2
+\end{aligned}
+$$
+
+対応する運動量が
+
+$$
+\begin{aligned}
+P_1 &= \frac{\partial K}{\partial \dot{Q}^1} = 2m\dot{Q}^1 \\
+P_2 &= \frac{\partial K}{\partial \dot{Q}^2} = 2m\dot{Q}^2
 \end{aligned}
 $$
 
@@ -142,7 +163,7 @@ $$
 
 全く同様にして、系が回転対称性を持っていれば、回転角に共役な角運動量が保存量となる。
 
-ポアソン括弧の章で述べたように、なんらかの連続変換は、その変換量が小さい時、「変換の向き」と「変換の大きさ」に分けることができる。さて、正準変換は、その変換が小さい場合、あやはり「変換の向き」と「変換の大きさ」に分けることができる。この時、ハミルトニアンの持つ保存量は、微小変換の「変換の向き」と密接な関係があることがわかる。以下、これを見ていこう。
+ポアソン括弧の章で述べたように、なんらかの連続変換は、その変換量が小さい時、「変換の向き」と「変換の大きさ」に分けることができる。さて、正準変換は、その変換が小さい場合、やはり「変換の向き」と「変換の大きさ」に分けることができる。この時、ハミルトニアンの持つ保存量は、微小変換の「変換の向き」と密接な関係があることがわかる。以下、これを見ていこう。
 
 まず、微小な正準変換とはどういうものであるかを考えよう。そのため、恒等変換を与える母関数$W_2(q,P)=qP$に対して、
 
@@ -164,30 +185,33 @@ $$
 まず、
 
 $$
-P = p - O(\varepsilon)
+h \equiv \frac{\partial}{\partial q}J(q, P)
 $$
 
-であるから、
+と定義しよう。すると、
 
 $$
-\begin{aligned}
-J(q,P) &= J(q,p - O(\varepsilon)) \\
-&= J(q,p) - O(\varepsilon)
-\end{aligned}
+P = p -\varepsilon h
 $$
 
-また、$P$が$(q,p)$の関数であることから、$J$は$J(q,P(q,p))$と書けるので、
+と書ける。先ほどの式を$P$について解くと
 
 $$
 \begin{aligned}
-\frac{\partial}{\partial p}J(q,P(q,p)) &=
-\frac{\partial J}{\partial P}\frac{\partial P}{\partial p} \\
-&= \frac{\partial J}{\partial P} \left(1 - O(\varepsilon)\right) \\
-&= \frac{\partial J}{\partial P} - O(\varepsilon)
+P &= p - \varepsilon \frac{\partial}{\partial q}J(q, P) \\
+&= p - \varepsilon \frac{\partial}{\partial q}J(q, p - \varepsilon h) \\
+&= p -\varepsilon \frac{\partial}{\partial q} \left( J(q, p)-h \varepsilon \frac{\partial}{\partial q} J(q, p) \right) \\
+&= p - \varepsilon \frac{\partial}{\partial q} J(q, p) + O(\varepsilon^2)
 \end{aligned}
 $$
 
-つまり、$J(q,P)$を$J(q,p)$で置き換えたり、$\partial_P J$を$\partial_p J$で置き換えたりすると、$O(\varepsilon)$の誤差が生じるのであるから、先程の変換則に代入して整理すると、
+全く同様にして、
+
+$$
+Q = q + \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
+$$
+
+両方の式をまとめると、微小変化を引き起こす正準変換によって与えられる変換$(q,p) \rightarrow (Q,P)$は以下のように与えられる。
 
 $$
 \begin{aligned}
@@ -196,7 +220,7 @@ P &= p - \varepsilon \frac{\partial}{\partial q}J(q,p) + O(\varepsilon^2)\\
 \end{aligned}
 $$
 
-を得る。すなわち、「現時点」での変数$(q,p)$に対して、その変数で表現されたスカラー関数$J(q,p)$がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。
+すなわち、「現時点」での変数$(q,p)$に対して、その変数で表現されたスカラー関数$J(q,p)$がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。
 
 この変換が正準変換を与えることを確認しておこう。
 
@@ -259,9 +283,7 @@ $$
 
 すなわち、母関数$J$が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　**ネーターの定理(Noether's theorem)**　と呼ぶ。
 
-以後、母関数J$に様々なものを入れてみよう。
-
-まず、$J$としてハミルトニアン$H$を入れてみよう。
+以後、母関数$J$に様々なものを入れてみよう。まず、$J$としてハミルトニアン$H$を入れてみる。
 
 $$
 \begin{aligned}

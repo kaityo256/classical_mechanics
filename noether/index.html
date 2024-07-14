@@ -110,11 +110,38 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>という変換を考えよう。<span
-                                    class="math inline">\(Q^1\)</span>は重心座標である。対応する運動量が</p>
+                                    class="math inline">\(Q^1\)</span>は重心座標である。</p>
+                                    <p><span class="math inline">\(q^A,
+                                    q^B\)</span>を<span
+                                    class="math inline">\(Q^1,
+                                    Q^2\)</span>について逆に解くと、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    P_1 &amp;= p_A+p_B \\
-                                    P_2 &amp;= p_A-p_B \\
+                                    q^A &amp;= Q^1 + Q^2\\
+                                    q^B &amp;= Q^1 - Q^2
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これを用いると、元の系の運動エネルギーは</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    K &amp;=
+                                    \frac{m}{2}((\dot{q}^A)^2+(\dot{q}^B)^2)
+                                    \\
+                                    &amp;= \frac{m}{2}
+                                    \left((\dot{Q}^1+\dot{Q}^2)^2+(\dot{Q}^1-\dot{Q}^2)^2  \right)
+                                    \\
+                                    &amp;= m(\dot{Q}^1)^2 +
+                                    m(\dot{Q}^2)^2
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>対応する運動量が</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    P_1 &amp;= \frac{\partial
+                                    K}{\partial \dot{Q}^1} = 2m\dot{Q}^1
+                                    \\
+                                    P_2 &amp;= \frac{\partial
+                                    K}{\partial \dot{Q}^2} = 2m\dot{Q}^2
                                     \end{aligned}
                                     \]</span></p>
                                     <p>になることに注意すると、新しいハミルトニアンは</p>
@@ -225,7 +252,7 @@
                                     class="math inline">\(x\)</span>と共役な量である運動量<span
                                     class="math inline">\(p_x\)</span>が保存量となる。</p>
                                     <p>全く同様にして、系が回転対称性を持っていれば、回転角に共役な角運動量が保存量となる。</p>
-                                    <p>ポアソン括弧の章で述べたように、なんらかの連続変換は、その変換量が小さい時、「変換の向き」と「変換の大きさ」に分けることができる。さて、正準変換は、その変換が小さい場合、あやはり「変換の向き」と「変換の大きさ」に分けることができる。この時、ハミルトニアンの持つ保存量は、微小変換の「変換の向き」と密接な関係があることがわかる。以下、これを見ていこう。</p>
+                                    <p>ポアソン括弧の章で述べたように、なんらかの連続変換は、その変換量が小さい時、「変換の向き」と「変換の大きさ」に分けることができる。さて、正準変換は、その変換が小さい場合、やはり「変換の向き」と「変換の大きさ」に分けることができる。この時、ハミルトニアンの持つ保存量は、微小変換の「変換の向き」と密接な関係があることがわかる。以下、これを見ていこう。</p>
                                     <p>まず、微小な正準変換とはどういうものであるかを考えよう。そのため、恒等変換を与える母関数<span
                                     class="math inline">\(W_2(q,P)=qP\)</span>に対して、</p>
                                     <p><span class="math display">\[
@@ -249,41 +276,43 @@
                                     class="math inline">\((q,p)\)</span>で表す形に変形したい。</p>
                                     <p>まず、</p>
                                     <p><span class="math display">\[
-                                    P = p - O(\varepsilon)
+                                    h \equiv \frac{\partial}{\partial
+                                    q}J(q, P)
                                     \]</span></p>
-                                    <p>であるから、</p>
+                                    <p>と定義しよう。すると、</p>
+                                    <p><span class="math display">\[
+                                    P = p -\varepsilon h
+                                    \]</span></p>
+                                    <p>と書ける。先ほどの式を<span
+                                    class="math inline">\(P\)</span>について解くと</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    J(q,P) &amp;= J(q,p -
-                                    O(\varepsilon)) \\
-                                    &amp;= J(q,p) - O(\varepsilon)
+                                    P &amp;= p - \varepsilon
+                                    \frac{\partial}{\partial q}J(q, P)
+                                    \\
+                                    &amp;= p - \varepsilon
+                                    \frac{\partial}{\partial q}J(q, p -
+                                    \varepsilon h) \\
+                                    &amp;= p -\varepsilon
+                                    \frac{\partial}{\partial q} \left(
+                                    J(q, p)-h \varepsilon
+                                    \frac{\partial}{\partial q} J(q, p)
+                                    \right) \\
+                                    &amp;= p - \varepsilon
+                                    \frac{\partial}{\partial q} J(q, p)
+                                    + O(\varepsilon^2)
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>また、<span
-                                    class="math inline">\(P\)</span>が<span
-                                    class="math inline">\((q,p)\)</span>の関数であることから、<span
-                                    class="math inline">\(J\)</span>は<span
-                                    class="math inline">\(J(q,P(q,p))\)</span>と書けるので、</p>
+                                    <p>全く同様にして、</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{\partial}{\partial
-                                    p}J(q,P(q,p)) &amp;=
-                                    \frac{\partial J}{\partial
-                                    P}\frac{\partial P}{\partial p} \\
-                                    &amp;= \frac{\partial J}{\partial P}
-                                    \left(1 - O(\varepsilon)\right) \\
-                                    &amp;= \frac{\partial J}{\partial P}
-                                    - O(\varepsilon)
-                                    \end{aligned}
+                                    Q = q + \varepsilon
+                                    \frac{\partial}{\partial p}J(q,p) +
+                                    O(\varepsilon^2)
                                     \]</span></p>
-                                    <p>つまり、<span
-                                    class="math inline">\(J(q,P)\)</span>を<span
-                                    class="math inline">\(J(q,p)\)</span>で置き換えたり、<span
-                                    class="math inline">\(\partial_P
-                                    J\)</span>を<span
-                                    class="math inline">\(\partial_p
-                                    J\)</span>で置き換えたりすると、<span
-                                    class="math inline">\(O(\varepsilon)\)</span>の誤差が生じるのであるから、先程の変換則に代入して整理すると、</p>
+                                    <p>両方の式をまとめると、微小変化を引き起こす正準変換によって与えられる変換<span
+                                    class="math inline">\((q,p)
+                                    \rightarrow
+                                    (Q,P)\)</span>は以下のように与えられる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     Q &amp;= q + \varepsilon
@@ -294,7 +323,7 @@
                                     O(\varepsilon^2)\\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>を得る。すなわち、「現時点」での変数<span
+                                    <p>すなわち、「現時点」での変数<span
                                     class="math inline">\((q,p)\)</span>に対して、その変数で表現されたスカラー関数<span
                                     class="math inline">\(J(q,p)\)</span>がある時、そのスカラー関数により生成される微小正準変換は上記で与えられる。</p>
                                     <p>この変換が正準変換を与えることを確認しておこう。</p>
@@ -375,10 +404,10 @@
                                     <p>すなわち、母関数<span
                                     class="math inline">\(J\)</span>が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　<strong>ネーターの定理(Noether’s
                                     theorem)</strong>　と呼ぶ。</p>
-                                    <p>以後、母関数J$に様々なものを入れてみよう。</p>
-                                    <p>まず、<span
+                                    <p>以後、母関数<span
+                                    class="math inline">\(J\)</span>に様々なものを入れてみよう。まず、<span
                                     class="math inline">\(J\)</span>としてハミルトニアン<span
-                                    class="math inline">\(H\)</span>を入れてみよう。</p>
+                                    class="math inline">\(H\)</span>を入れてみる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     Q &amp;= q + \varepsilon
