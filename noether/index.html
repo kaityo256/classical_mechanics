@@ -461,16 +461,160 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>要するに、座標を正の方向に<span
-                                    class="math inline">\(\varepsilon\)</span>だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。したがって、この変換を生み出す母関数<span
+                                    class="math inline">\(\varepsilon\)</span>だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。すなわち、</p>
+                                    <p><span class="math display">\[
+                                    \delta H \equiv H(Q^1, Q^2,P_1, P_2)
+                                    -H(q^1, q^2,p_1, p_2) = 0
+                                    \]</span></p>
+                                    <p>である。</p>
+                                    <p>したがって、この変換を生み出す母関数<span
                                     class="math inline">\(J =
-                                    p^1+p^2\)</span>、すなわち重心の運動量は保存量となる。</p>
-                                    <p>TODO: <span
-                                    class="math inline">\(L_z = x p_y -
-                                    y
-                                    p_x\)</span>に対する正準変換について紹介する。</p>
-                                    <p>回転に対しても、全く同様に理解することができる。系に回転対称性がある場合、その回転角に共役な角運動量が保存量となる。</p>
+                                    p^1+p^2\)</span>、すなわち重心の運動量は保存量となる。ポアソン括弧に入れて確かめてみよう。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \{J, H\} &amp;= \{p_1+p_2, H\}\\
+                                    &amp;= \{p_1, H\} +  \{p_2, H\}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \{p_1, H\} &amp;=
+                                    \underbrace{\frac{\partial
+                                    p_1}{\partial
+                                    q^i}}_{=0}\frac{\partial H}{\partial
+                                    p_i} - \underbrace{\frac{\partial
+                                    p_1}{\partial
+                                    p_i}}_{\delta_1^i}\frac{\partial
+                                    H}{\partial q^i} \\
+                                    &amp;= -\frac{\partial H}{\partial
+                                    q^1}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>同様に、</p>
+                                    <p><span class="math display">\[
+                                    \{p_2, H\} = -\frac{\partial
+                                    H}{\partial q^2}
+                                    \]</span></p>
+                                    <p>ここで、ポテンシャルの形から、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \frac{\partial H}{\partial q^1}
+                                    &amp;= \frac{dU}{dr} \frac{\partial
+                                    r}{\partial q^1} = U&#39;(r)
+                                    \frac{(q^1 - q^2)}{r} \\
+                                    \frac{\partial H}{\partial q^2}
+                                    &amp;= \frac{dU}{dr} \frac{\partial
+                                    r}{\partial q^2} = U&#39;(r)
+                                    \frac{(q^2 - q^1)}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>従って、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \{J, H\} &amp;= \{p_1+p_2, H\} \\
+                                    &amp;= \{p_1, H\} +  \{p_2, H\} \\
+                                    &amp;= - U&#39;(r) \frac{(q^1 -
+                                    q^2)}{r} - U&#39;(r)\frac{(q^2 -
+                                    q^1)}{r} \\
+                                    &amp;=0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>すなわち、重心の運動量<span
+                                    class="math inline">\(J=p_1 +
+                                    p_2\)</span>は保存量である。</p>
+                                    <p>回転対称性についても同様に理解することができる。以下のような中心力ポテンシャルに依存する系を考える。</p>
+                                    <p><span class="math display">\[
+                                    H = \frac{1}{2m}(p_1^2 + p_2^2) +
+                                    U(r)
+                                    \]</span></p>
+                                    <p>先ほどと形が似ているが、今回は</p>
+                                    <p><span class="math display">\[
+                                    r = \sqrt{(q^1)^2 + (q^2)^2}
+                                    \]</span></p>
+                                    <p>であることに注意。ここで、母関数として<span
+                                    class="math inline">\(z\)</span>軸周りの角運動量を選ぶ。</p>
+                                    <p><span class="math display">\[
+                                    J = q^1 p_2 - q^2 p_1
+                                    \]</span></p>
+                                    <p>これによる微小正準変換は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q^1 &amp;= q^1 + \varepsilon
+                                    \frac{\partial J}{\partial p_1} =
+                                    q^1 - \varepsilon q^2\\
+                                    Q^2 &amp;= q^2 + \varepsilon
+                                    \frac{\partial J}{\partial p_2} =
+                                    q^2 + \varepsilon q^1\\
+                                    P_1 &amp;= p_1 - \varepsilon
+                                    \frac{\partial J}{\partial q^1} =
+                                    p_1 - \varepsilon p_2 \\
+                                    P_2 &amp;= p_2 - \varepsilon
+                                    \frac{\partial J}{\partial q^2} =
+                                    p_2 + \varepsilon p_1 \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで<span
+                                    class="math inline">\(R=\sqrt{(Q^1)^2+(Q^2)^2}\)</span>として、ハミルトニアンの微小変化は</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta H &amp; \equiv H(Q^1,Q^2,
+                                    P_1, P_2) - H(q^1,q^2,p_1,p_2) \\
+                                    &amp;= \frac{1}{2}(P_1^2+P_2^2)
+                                    -\frac{1}{2}(p_1^2+p_2^2) + U(R) -
+                                    U(r)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    P_1^2 + P_2^2 &amp;= (p_1 -
+                                    \varepsilon p_2)^2 + (p_2 +
+                                    \varepsilon p_1)^2 \\
+                                    &amp;= p_1^2 + p_2^2 + \varepsilon^2
+                                    (p_1^2 + p_2^2) \\
+                                    &amp;= p_1^2 + p_2^2 +
+                                    O(\varepsilon^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    R &amp;= \sqrt{(Q^1)^2+(Q^2)^2} \\
+                                    &amp;= \sqrt{(q^1 - \varepsilon
+                                    q^2)^2 + (q^2 + \varepsilon
+                                    q^1)^2}\\
+                                    &amp;= \sqrt{(q^1)^2+(q^2)^2}+
+                                    \varepsilon^2\left((q^1)^2+(q^2)^2\right)\\
+                                    &amp;= \sqrt{r^2 + \varepsilon^2
+                                    r^2}\\
+                                    &amp;= \sqrt{1+\varepsilon^2} r \\
+                                    &amp;= r + \frac{\varepsilon^2r}{2}
+                                    + O(\varepsilon^4)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    U(R) &amp;= U(r + \varepsilon^2
+                                    r/2)\\
+                                    &amp;= U(r) +
+                                    U&#39;(r)\frac{\varepsilon^2r}{2}\\
+                                    &amp;= U(r) + O(\varepsilon^2)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>以上から、</p>
+                                    <p><span class="math display">\[
+                                    \delta H \equiv H(Q^1,Q^2, P_1, P_2)
+                                    - H(q^1,q^2,p_1,p_2)=
+                                    O(\varepsilon^2)
+                                    \]</span></p>
+                                    <p>となり、ハミルトニアンの変化が高次であること、すなわち、この母関数<span
+                                    class="math inline">\(J\)</span>が保存量であることがわかる。これは、ポアソン括弧のところで見たように、</p>
+                                    <p><span class="math display">\[
+                                    \{J, H\} = \{q^1 p_2 - q^2 p_1, H\}
+                                    = 0
+                                    \]</span></p>
+                                    <p>と、ハミルトニアンと各運動量が交換することで確認することもできる。</p>
                                     <h1 id="まとめ">まとめ</h1>
-                                    <p>TODO: 書く</p>
                                     <h1
                                     id="余談全てはに過ぎない病">余談：全ては◯◯に過ぎない病</h1>
                                     <p>研究者は何かの分野を愛するあまり「全ては◯◯に過ぎない」と言ってしまいがちである。ポアソン括弧の章で代数の行列表現を紹介したが、このように代数構造をベクトル空間の線形変換として表現する学問を表現論と呼ぶ。群論の美しさに魅せられ、熱っぽくその素晴らしさを説く様子は流行り病になぞらえて群論病(Gruppenpest)と呼ばれた。群論病というと、私の大学院時代の同期が罹患したのを思い出す。深夜の研究室、一人作業していると、突然彼(別の研究室で、彼も夜型だった)が部屋にやってきて、ひとしきり群論の素晴らしさを熱弁し、「全ては表現なんだ」と言って去っていった。同様な病に「場の理論病」もあるそうだ。場の理論の素晴らしさに感動し、全てを場として考えてしまう病気である。物性理論を専門とする某教授は、場の理論を学んだ時にいたく感動し、彼女とのデートで「僕も君も場に過ぎないんだ」と口走ってフラれてしまったという。私はそのような患者を生温かい目で見ていたが、気がついたら講義で「全ては正準変換に過ぎない」と口走り、後で「あぁ、自分も『全ては◯◯に過ぎない』病に罹患していた」と自覚して落ち込んでしまった。でもまぁ、何かを学んでいて突然「全ては◯◯に過ぎない」という啓示を受けるのは学問の醍醐味でもあるので、皆さんも怖がらずに「全ては◯◯に過ぎない病」に罹患して欲しい。大丈夫、すぐにその熱は冷めるから。</p>

@@ -336,15 +336,142 @@ P_2 &= p_2\\
 \end{aligned}
 $$
 
-要するに、座標を正の方向に$\varepsilon$だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。したがって、この変換を生み出す母関数$J = p^1+p^2$、すなわち重心の運動量は保存量となる。
+要するに、座標を正の方向に$\varepsilon$だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、この変換においてハミルトニアンは変化しない。すなわち、
 
-TODO: $L_z = x p_y - y p_x$に対する正準変換について紹介する。
+$$
+\delta H \equiv H(Q^1, Q^2,P_1, P_2) -H(q^1, q^2,p_1, p_2) = 0
+$$
 
-回転に対しても、全く同様に理解することができる。系に回転対称性がある場合、その回転角に共役な角運動量が保存量となる。
+である。
+
+したがって、この変換を生み出す母関数$J = p^1+p^2$、すなわち重心の運動量は保存量となる。ポアソン括弧に入れて確かめてみよう。
+
+$$
+\begin{aligned}
+\{J, H\} &= \{p_1+p_2, H\}\\
+&= \{p_1, H\} +  \{p_2, H\}
+\end{aligned}
+$$
+
+ここで、
+
+$$
+\begin{aligned}
+\{p_1, H\} &= \underbrace{\frac{\partial p_1}{\partial q^i}}_{=0}\frac{\partial H}{\partial p_i} - \underbrace{\frac{\partial p_1}{\partial p_i}}_{\delta_1^i}\frac{\partial H}{\partial q^i} \\
+&= -\frac{\partial H}{\partial q^1}
+\end{aligned}
+$$
+
+同様に、
+
+$$
+\{p_2, H\} = -\frac{\partial H}{\partial q^2}
+$$
+
+ここで、ポテンシャルの形から、
+
+$$
+\begin{aligned}
+\frac{\partial H}{\partial q^1} &= \frac{dU}{dr} \frac{\partial r}{\partial q^1} = U'(r) \frac{(q^1 - q^2)}{r} \\
+\frac{\partial H}{\partial q^2} &= \frac{dU}{dr} \frac{\partial r}{\partial q^2} = U'(r) \frac{(q^2 - q^1)}{r}
+\end{aligned}
+$$
+
+従って、
+
+$$
+\begin{aligned}
+\{J, H\} &= \{p_1+p_2, H\} \\
+&= \{p_1, H\} +  \{p_2, H\} \\
+&= - U'(r) \frac{(q^1 - q^2)}{r} - U'(r)\frac{(q^2 - q^1)}{r} \\
+&=0
+\end{aligned}
+$$
+
+すなわち、重心の運動量$J=p_1 + p_2$は保存量である。
+
+回転対称性についても同様に理解することができる。以下のような中心力ポテンシャルに依存する系を考える。
+
+$$
+H = \frac{1}{2m}(p_1^2 + p_2^2) + U(r)
+$$
+
+先ほどと形が似ているが、今回は
+
+$$
+r = \sqrt{(q^1)^2 + (q^2)^2}
+$$
+
+であることに注意。ここで、母関数として$z$軸周りの角運動量を選ぶ。
+
+$$
+J = q^1 p_2 - q^2 p_1
+$$
+
+これによる微小正準変換は
+
+$$
+\begin{aligned}
+Q^1 &= q^1 + \varepsilon \frac{\partial J}{\partial p_1} = q^1 - \varepsilon q^2\\
+Q^2 &= q^2 + \varepsilon \frac{\partial J}{\partial p_2} = q^2 + \varepsilon q^1\\
+P_1 &= p_1 - \varepsilon \frac{\partial J}{\partial q^1} = p_1 - \varepsilon p_2 \\
+P_2 &= p_2 - \varepsilon \frac{\partial J}{\partial q^2} = p_2 + \varepsilon p_1 \\
+\end{aligned}
+$$
+
+ここで$R=\sqrt{(Q^1)^2+(Q^2)^2}$として、ハミルトニアンの微小変化は
+
+$$
+\begin{aligned}
+\delta H & \equiv H(Q^1,Q^2, P_1, P_2) - H(q^1,q^2,p_1,p_2) \\
+&= \frac{1}{2}(P_1^2+P_2^2) -\frac{1}{2}(p_1^2+p_2^2) + U(R) - U(r)
+\end{aligned}
+$$
+
+ここで、
+
+$$
+\begin{aligned}
+P_1^2 + P_2^2 &= (p_1 - \varepsilon p_2)^2 + (p_2 + \varepsilon p_1)^2 \\
+&= p_1^2 + p_2^2 + \varepsilon^2 (p_1^2 + p_2^2) \\
+&= p_1^2 + p_2^2 + O(\varepsilon^2)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+R &= \sqrt{(Q^1)^2+(Q^2)^2} \\
+&= \sqrt{(q^1 - \varepsilon q^2)^2 + (q^2 + \varepsilon q^1)^2}\\
+&= \sqrt{(q^1)^2+(q^2)^2}+ \varepsilon^2\left((q^1)^2+(q^2)^2\right)\\
+&= \sqrt{r^2 + \varepsilon^2 r^2}\\
+&= \sqrt{1+\varepsilon^2} r \\
+&= r + \frac{\varepsilon^2r}{2} + O(\varepsilon^4)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+U(R) &= U(r + \varepsilon^2 r/2)\\
+&= U(r) + U'(r)\frac{\varepsilon^2r}{2}\\
+&= U(r) + O(\varepsilon^2)
+\end{aligned}
+$$
+
+以上から、
+
+$$
+\delta H \equiv H(Q^1,Q^2, P_1, P_2) - H(q^1,q^2,p_1,p_2)= O(\varepsilon^2)
+$$
+
+となり、ハミルトニアンの変化が高次であること、すなわち、この母関数$J$が保存量であることがわかる。これは、ポアソン括弧のところで見たように、
+
+$$
+\{J, H\} = \{q^1 p_2 - q^2 p_1, H\} = 0
+$$
+
+と、ハミルトニアンと各運動量が交換することで確認することもできる。
 
 ## まとめ
-
-TODO: 書く
 
 ## 余談：全ては◯◯に過ぎない病
 
