@@ -628,12 +628,47 @@
                                     O(\varepsilon^2)
                                     \]</span></p>
                                     <p>となり、ハミルトニアンの変化が高次であること、すなわち、この母関数<span
-                                    class="math inline">\(J\)</span>が保存量であることがわかる。これは、ポアソン括弧のところで見たように、</p>
+                                    class="math inline">\(J\)</span>が保存量であることがわかる。これは、直接ポアソン括弧による交換関係を調べることでも確認することができる。</p>
+                                    <p>ハミルトニアンの形が</p>
                                     <p><span class="math display">\[
-                                    \{J, H\} = \{q^1 p_2 - q^2 p_1, H\}
-                                    = 0
+                                    H = \frac{1}{2m}(p_1^2+p_2^2) + U(r)
                                     \]</span></p>
-                                    <p>と、ハミルトニアンと各運動量が交換することで確認することもできる。</p>
+                                    <p>であることに注意して、まず<span
+                                    class="math inline">\(\{q^1 p_2,
+                                    H\}\)</span>を計算する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \{q^1 p_2, H\} &amp;= \frac{\partial
+                                    (q^1 p_2)}{\partial
+                                    q^i}\frac{\partial H}{\partial p_i}
+                                    - \frac{\partial (q^1 p_2)}{\partial
+                                    p_i}\frac{\partial H}{\partial q^i}
+                                    \\
+                                    &amp;= p_2 \frac{\partial
+                                    H}{\partial p_1} - q^1
+                                    \frac{\partial H}{\partial q^2} \\
+                                    &amp;= \frac{p_1 p_2}{m} - U&#39;(r)
+                                    \frac{q_1 q_2}{r}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>同様に<span
+                                    class="math inline">\(\{q^2 p_1,
+                                    H\}\)</span>も、</p>
+                                    <p><span class="math display">\[
+                                    \{q^2 p_1, H\} = \frac{p_1 p_2}{m} -
+                                    U&#39;(r) \frac{q_1 q_2}{r}
+                                    \]</span></p>
+                                    <p>となるため、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \{J, H\} &amp;= \{q^1 p_2 - q^2 p_1,
+                                    H\} \\
+                                    &amp;= \{q^1 p_2, H\} - \{q^2 p_1,
+                                    H\}\\
+                                    &amp;= 0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>である。</p>
                                     <h1 id="まとめ">まとめ</h1>
                                     <p>系を少しだけ変化させる微小正準変換を考えた。この正準変換を引き起こす母関数<span
                                     class="math inline">\(J\)</span>は、回転や時間発展などの、有限の変化を引き起こす操作に対する生成子になっている。この生成子により引き起こされるハミルトニアンの変化が高次であるとき、この生成子は保存する。すなわち、対称性とは「微小な変化を引き起こす操作に対して、ハミルトニアンが不変であること」と定義することができる。これをネーターの定理と呼ぶ。ハミルトニアンの変化が高次であることと、変化を引き起こす母関数<span

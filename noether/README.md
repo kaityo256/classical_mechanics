@@ -491,13 +491,41 @@ $$
 \delta H \equiv H(Q^1,Q^2, P_1, P_2) - H(q^1,q^2,p_1,p_2)= O(\varepsilon^2)
 $$
 
-となり、ハミルトニアンの変化が高次であること、すなわち、この母関数$J$が保存量であることがわかる。これは、ポアソン括弧のところで見たように、
+となり、ハミルトニアンの変化が高次であること、すなわち、この母関数$J$が保存量であることがわかる。これは、直接ポアソン括弧による交換関係を調べることでも確認することができる。
+
+ハミルトニアンの形が
 
 $$
-\{J, H\} = \{q^1 p_2 - q^2 p_1, H\} = 0
+H = \frac{1}{2m}(p_1^2+p_2^2) + U(r)
 $$
 
-と、ハミルトニアンと各運動量が交換することで確認することもできる。
+であることに注意して、まず$\{q^1 p_2, H\}$を計算する。
+
+$$
+\begin{aligned}
+\{q^1 p_2, H\} &= \frac{\partial (q^1 p_2)}{\partial q^i}\frac{\partial H}{\partial p_i} - \frac{\partial (q^1 p_2)}{\partial p_i}\frac{\partial H}{\partial q^i} \\
+&= p_2 \frac{\partial H}{\partial p_1} - q^1 \frac{\partial H}{\partial q^2} \\
+&= \frac{p_1 p_2}{m} - U'(r) \frac{q_1 q_2}{r}
+\end{aligned}
+$$
+
+同様に$\{q^2 p_1, H\}$も、
+
+$$
+\{q^2 p_1, H\} = \frac{p_1 p_2}{m} - U'(r) \frac{q_1 q_2}{r}
+$$
+
+となるため、
+
+$$
+\begin{aligned}
+\{J, H\} &= \{q^1 p_2 - q^2 p_1, H\} \\
+&= \{q^1 p_2, H\} - \{q^2 p_1, H\}\\
+&= 0
+\end{aligned}
+$$
+
+である。
 
 ## まとめ
 
