@@ -394,49 +394,12 @@
                                     <p>と求めることができる。多変数、例えば3次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。</p>
                                     <h1
                                     id="外積と外微分">外積と外微分</h1>
-                                    <p>正準変換において母関数<span
-                                    class="math inline">\(W_1\)</span>の全微分が以下のように与えられることを見た。</p>
-                                    <p><span class="math display">\[
-                                    dW_1 = -pdq + PdQ
-                                    \]</span></p>
-                                    <p>ここから<span
-                                    class="math inline">\(W_1\)</span>の自由変数が<span
-                                    class="math inline">\((q,
-                                    Q)\)</span>であることがわかるため、その全微分が</p>
-                                    <p><span class="math display">\[
-                                    dW_1(q,Q) = \frac{\partial
-                                    W_1}{\partial q} dq + \frac{\partial
-                                    W_1}{\partial Q} dQ
-                                    \]</span></p>
-                                    <p>となるため、先程の式と比較することで変換則</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    p &amp;= - \frac{\partial
-                                    W_1}{\partial q}\\
-                                    P &amp;= \frac{\partial
-                                    W_1}{\partial Q}
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>を得る。これを見ると、最初の式</p>
-                                    <p><span class="math display">\[
-                                    dW_1 = -pdq + PdQ
-                                    \]</span></p>
-                                    <p>について、形式的に両辺を<span
-                                    class="math inline">\(dq\)</span>や<span
-                                    class="math inline">\(dQ\)</span>で割わった形になっていることがわかる。すなわち、自由変数同士の割り算は、自分自身なら1、そうでなければ0、それ以外は偏微分とする、すなわち、</p>
-                                    <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \frac{dq}{dq} &amp;\equiv 1 \\
-                                    \frac{dQ}{dq} &amp;\equiv 0 \\
-                                    \frac{dW_1}{dq} &amp;\equiv
-                                    \frac{\partial W_1}{\partial q} \\
-                                    \end{aligned}
-                                    \]</span></p>
-                                    <p>というルールを定めることで、以下の関係式を得ることができる。</p>
-                                    <p><span class="math display">\[
-                                    p = -\frac{\partial W_1}{\partial q}
-                                    \]</span></p>
-                                    <p>このルールをもう少しきちんと論じるため、微分形式を導入しよう。</p>
+                                    <p>全微分による<span
+                                    class="math inline">\(dx, dy,
+                                    dz\)</span>がベクトルの基底のように見え、その双対基底が<span
+                                    class="math inline">\(\partial_x,
+                                    \partial_y,
+                                    \partial_z\)</span>であることを見た。このルールをもう少しきちんと論じるため、微分形式を導入しよう。</p>
                                     <p>任意の次元の空間で議論できるが、わかりやすさのために3次元空間<span
                                     class="math inline">\((x,y,z)\)</span>で考えよう。この空間に定義されたスカラー関数<span
                                     class="math inline">\(f(x,y,z)\)</span>を考える。この関数の全微分を以下のように定義する。</p>
@@ -449,15 +412,10 @@
                                     <p>先ほど見たように、これは<span
                                     class="math inline">\(dx, dy,
                                     dz\)</span>を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に
-                                    <strong><span
-                                    class="math inline">\(1\)</span>形式(1-form)</strong>
+                                    <strong>1形式(1-form)</strong>
                                     と呼ぶ。また、微分する前のスカラー関数を
                                     <strong>0形式(0-form)</strong>
-                                    と呼ぶ。一般に、<span
-                                    class="math inline">\(p\)</span>形式を微分することで<span
-                                    class="math inline">\(p+1\)</span>形式を作ることができる。この時得られた<span
-                                    class="math inline">\(p+1\)</span>形式を、元の<span
-                                    class="math inline">\(p\)</span>形式の外微分と呼ぶ。</p>
+                                    と呼ぶ。</p>
                                     <p>ここで、外積記号<span
                                     class="math inline">\(\wedge\)</span>により、以下の性質を持つ外積を定義する。</p>
                                     <ul>
@@ -496,12 +454,13 @@
                                     <p>さて、外積を用いて外微分を定義しよう。いま、<span
                                     class="math inline">\(1\)</span>形式が</p>
                                     <p><span class="math display">\[
-                                    df = f_x dx +  f_y dy +  f_z dz
+                                    \omega_1 = f_x dx +  f_y dy +  f_z
+                                    dz
                                     \]</span></p>
                                     <p>と書かれている時、この外微分を</p>
                                     <p><span class="math display">\[
-                                    d(df) = df_x \wedge dx + df_y \wedge
-                                    dy + df_z \wedge dz
+                                    d \omega_1 = df_x \wedge dx + df_y
+                                    \wedge dy + df_z \wedge dz
                                     \]</span></p>
                                     <p>と定義する。</p>
                                     <p><span
@@ -510,15 +469,15 @@
                                     class="math inline">\(x,y,z\)</span>の関数であるから、その外微分は</p>
                                     <p><span class="math display">\[
                                     df_x = \frac{\partial f_x}{\partial
-                                    x} dx　+ \frac{\partial
-                                    f_y}{\partial y} dy + \frac{\partial
-                                    f_z}{\partial z} dz
+                                    x} dx + \frac{\partial f_y}{\partial
+                                    y} dy + \frac{\partial f_z}{\partial
+                                    z} dz
                                     \]</span></p>
                                     <p>で与えられる。<span
                                     class="math inline">\(f_y,
                                     f_z\)</span>も同様である。したがって、</p>
                                     <p><span class="math display">\[
-                                    d(df) =
+                                    d\omega_1 =
                                     \left(\frac{\partial f_x}{\partial
                                     y} - \frac{\partial f_y}{\partial
                                     x}\right) dx \wedge dy +
@@ -537,28 +496,8 @@
                                     class="math inline">\(2\)</span>形式を作ることができた。同様にして、<span
                                     class="math inline">\(p\)</span>形式を外微分することで<span
                                     class="math inline">\(p+1\)</span>形式を作ることができる。</p>
-                                    <p>さて、微分形式では、<span
-                                    class="math inline">\(dx\)</span>や<span
-                                    class="math inline">\(dy\)</span>といった基底ベクトルや、その外積により作られた基底で張られた量を考える。これらはベクトルであるから、双対基底を考えることで内積を考えることができる。イメージとしては、ベクトルのテンソル積により、行列の基底を作ることができるのと同様である。例えば3次元の基底<span
-                                    class="math inline">\(\mathbf{e}_1,
-                                    \mathbf{e}_2,
-                                    \mathbf{e}_3\)</span>が与えられた時、その双対基底<span
-                                    class="math inline">\(\mathbf{e}^1,
-                                    \mathbf{e}^2,
-                                    \mathbf{e}^3\)</span>を使って、3行3列の行列Aの要素が</p>
-                                    <p><span class="math display">\[
-                                    A = A^i_j \mathbf{e^j} \otimes
-                                    \mathbf{e_i}
-                                    \]</span></p>
-                                    <p>で展開されたことに対応する。ただし、行列は縦ベクトルと横ベクトルのテンソル積から作ったため、縦ベクトルと内積を取ると縦ベクトルが得られたが、微分形式の場合は縦ベクトルと縦ベクトルのテンソル積から2形式を作っているため、横ベクトルと内積をとることで縦ベクトルが得られるという違いがある。また、微分形式の外積は反対称性を持つため、ベクトルの言葉で言えば</p>
-                                    <p><span class="math display">\[
-                                    \mathbf{e_x} \wedge \mathbf{e_y}
-                                    \equiv \mathbf{e_x} \otimes
-                                    \mathbf{e_y} -
-                                    \mathbf{e_y} \otimes \mathbf{e_x}
-                                    \]</span></p>
-                                    <p>のように定義されているという違いがあることが注意。</p>
-                                    <p>以前説明したように、1形式の基底<span
+                                    <p><span
+                                    class="math inline">\(1\)</span>形式の基底<span
                                     class="math inline">\(dx\)</span>に対しては、偏微分演算子<span
                                     class="math inline">\(\partial_x\)</span>が双対基底となり、以下のような自然な内積を考えることができる。</p>
                                     <p><span class="math display">\[
@@ -655,6 +594,212 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>に対応することがわかる。</p>
+                                    <h1
+                                    id="微分形式とベクトル解析">微分形式とベクトル解析</h1>
+                                    <p>微分形式は、ベクトル解析で習った<span
+                                    class="math inline">\(\mathrm{grad}\)</span>や<span
+                                    class="math inline">\(\mathrm{div}\)</span>、<span
+                                    class="math inline">\(\mathrm{rot}\)</span>などを一般化する概念となっている。</p>
+                                    <p>例えば3次元空間におけるスカラー場<span
+                                    class="math inline">\(f\)</span>の外微分は</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial x}dx
+                                    + \frac{\partial f}{\partial y}dy +
+                                    \frac{\partial f}{\partial z}dz
+                                    \]</span></p>
+                                    <p>であるが、<span
+                                    class="math inline">\(dx, dy,
+                                    dz\)</span>を、<span
+                                    class="math inline">\(\mathbf{e}_x,
+                                    \mathbf{e}_y,
+                                    \mathbf{e}_z\)</span>とみなせば</p>
+                                    <p><span class="math display">\[
+                                    df =
+                                    \begin{pmatrix}
+                                    \partial_x f \\
+                                    \partial_y f \\
+                                    \partial_z f
+                                    \end{pmatrix}
+                                    = \mathrm{grad} f
+                                    \]</span></p>
+                                    <p>すなわち、これは勾配を表している。また、1形式<span
+                                    class="math inline">\(\omega_1\)</span>が</p>
+                                    <p><span class="math display">\[
+                                    \omega_1 = B_x dx + B_y dx + B_z dz
+                                    \]</span></p>
+                                    <p>で与えられている時、</p>
+                                    <p><span class="math display">\[
+                                    d\omega_1 =  dB_x \wedge dx + B_y
+                                    \wedge dx + B_z \wedge dz
+                                    \]</span></p>
+                                    <p>となる。ここで</p>
+                                    <p><span class="math display">\[
+                                    dB_x = \frac{\partial B_x}{\partial
+                                    x} dx +\frac{\partial B_x}{\partial
+                                    y} dy +\frac{\partial B_x}{\partial
+                                    z} dz
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    dB_x \wedge dx &amp;=
+                                    \left(\frac{\partial B_x}{\partial
+                                    x} dx +\frac{\partial B_x}{\partial
+                                    y} dy +\frac{\partial B_x}{\partial
+                                    z} dz \right) \wedge dx \\
+                                    &amp;= \frac{\partial B_x}{\partial
+                                    y} dy \wedge dx + \frac{\partial
+                                    B_x}{\partial z} dz \wedge dx \\
+                                    &amp;= - \frac{\partial
+                                    B_x}{\partial y} dx \wedge dy +
+                                    \frac{\partial B_x}{\partial z} dz
+                                    \wedge dx
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ただし、<span
+                                    class="math inline">\(dx \wedge dx =
+                                    0\)</span>、<span
+                                    class="math inline">\(dy \wedge dx =
+                                    - dx \wedge
+                                    dy\)</span>を用いた。他の成分も同様に計算すると、</p>
+                                    <p><span class="math display">\[
+                                    dB = \left(\frac{\partial
+                                    B_z}{\partial y} - \frac{\partial
+                                    B_y}{\partial z} \right) dy \wedge
+                                    dz + \left(\frac{\partial
+                                    B_x}{\partial z} - \frac{\partial
+                                    B_z}{\partial x} \right) dz \wedge
+                                    dx + \left(\frac{\partial
+                                    B_y}{\partial x} - \frac{\partial
+                                    B_x}{\partial y} \right) dx \wedge
+                                    dy
+                                    \]</span></p>
+                                    <p>ここで、以下の性質を満たすホッジ作用素<span
+                                    class="math inline">\(\ast\)</span>を定義する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \ast dx &amp;= dy \wedge dz \\
+                                    \ast dy &amp;= dz \wedge dx \\
+                                    \ast dz &amp;= dx \wedge dy
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ホッジ作用素は、微分形式を裏返す演算子になっており、<span
+                                    class="math inline">\(d\)</span>次元空間における<span
+                                    class="math inline">\(p\)</span>形式を、<span
+                                    class="math inline">\(d-p\)</span>形式に対応させる。これは双対変換であり、もう一度作用させると元に戻る。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \ast (dy \wedge dz) &amp;= dx \\
+                                    \ast (dz \wedge dx) &amp;= dy \\
+                                    \ast (dx \wedge dy) &amp;= dz
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>また、ベクトルが張る次元と等しい微分形式(<span
+                                    class="math inline">\(p=d\)</span>の場合)に作用させるとスカラーとなる。</p>
+                                    <p><span class="math display">\[
+                                    \ast (dx \wedge dy \wedge dz) = 1
+                                    \]</span></p>
+                                    <p>ホッジ作用素を用いると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \ast (d\omega_1) &amp;=
+                                    \left(\frac{\partial B_z}{\partial
+                                    y} - \frac{\partial B_y}{\partial z}
+                                    \right) dx + \left(\frac{\partial
+                                    B_x}{\partial z} - \frac{\partial
+                                    B_z}{\partial x} \right) dy +
+                                    \left(\frac{\partial B_y}{\partial
+                                    x} - \frac{\partial B_x}{\partial y}
+                                    \right) dz \end{aligned}
+                                    \]</span></p>
+                                    <p>これはベクトル場</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{B} =
+                                    \begin{pmatrix}
+                                    B_x \\ B_y \\ B_z
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>に対する回転<span
+                                    class="math inline">\(\mathrm{rot}
+                                    \mathbf{B}\)</span>に対応する。</p>
+                                    <p>また、以下の2形式を定義する。</p>
+                                    <p><span class="math display">\[
+                                    \omega_2 = E_x dy \wedge dz + E_y dz
+                                    \wedge dx + E_z dx \wedge dy
+                                    \]</span></p>
+                                    <p>この外微分を計算すると、</p>
+                                    <p><span class="math display">\[
+                                    d \omega_2 = \left(\frac{\partial
+                                    E_x}{\partial x} + \frac{\partial
+                                    E_y}{\partial y} +  \frac{\partial
+                                    E_z}{\partial z} \right) dx \wedge
+                                    dy \wedge dz
+                                    \]</span></p>
+                                    <p>さらにホッジ作用素を作用させると、</p>
+                                    <p><span class="math display">\[
+                                    \ast (d \omega_2) =
+                                    \left(\frac{\partial E_x}{\partial
+                                    x} + \frac{\partial E_y}{\partial y}
+                                    +  \frac{\partial E_z}{\partial z}
+                                    \right)
+                                    \]</span></p>
+                                    <p>これは、ベクトル場</p>
+                                    <p><span class="math display">\[
+                                    \mathbf{E} =
+                                    \begin{pmatrix}
+                                    E_x \\ E_y \\ E_z
+                                    \end{pmatrix}
+                                    \]</span></p>
+                                    <p>に対する発散<span
+                                    class="math inline">\(\mathrm{div}
+                                    \mathbf{E}\)</span>に対応する。</p>
+                                    <p>微分形式の定義から、任意の微分形式<span
+                                    class="math inline">\(\omega\)</span>について</p>
+                                    <p><span class="math display">\[
+                                    d(d\omega) = 0
+                                    \]</span></p>
+                                    <p>が成り立つ。一般に証明するのは煩雑なので、<span
+                                    class="math inline">\(\omega\)</span>が<span
+                                    class="math inline">\(0\)</span>形式、すなわちスカラー場<span
+                                    class="math inline">\(f\)</span>である場合を見ておこう。座標を<span
+                                    class="math inline">\(x,y,z\)</span>で書くと煩雑なので、<span
+                                    class="math inline">\(\{q^i\}\)</span>で記述すると、</p>
+                                    <p><span class="math display">\[
+                                    df = \frac{\partial f}{\partial
+                                    q^i}dq^i
+                                    \]</span></p>
+                                    <p>であるから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    d(df) &amp;= \sum_i d
+                                    \left(\frac{\partial f}{\partial
+                                    q^i}dq^i \right) \\
+                                    &amp;= \sum_i\left(\frac{\partial^2
+                                    f}{\partial q^i \partial q^j}
+                                    dq^j\right) \wedge dq^i\\
+                                    &amp;= \sum_i\frac{\partial^2
+                                    f}{\partial q^i \partial q^j} dq^j
+                                    \wedge dq^i \\
+                                    &amp;= \sum_{i&lt;j}
+                                    \left(\frac{\partial^2 f}{\partial
+                                    q^i \partial q^j} - \frac{\partial^2
+                                    f}{\partial q^j \partial q^i}
+                                    \right) dq^j \wedge dq^i \\
+                                    &amp;=0
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これは、よく知られた以下の公式を一般化したものになっている。</p>
+                                    <p><span class="math display">\[
+                                    \mathrm{rot} (\mathrm{grad} f) = 0
+                                    \]</span></p>
+                                    <p>また、<span
+                                    class="math inline">\(\omega\)</span>として<span
+                                    class="math inline">\(1\)</span>形式を採用した場合は</p>
+                                    <p><span class="math display">\[
+                                    \mathrm{div} (\mathrm{rot}
+                                    \mathbf{v}) = 0
+                                    \]</span></p>
+                                    <p>に対応する。</p>
                                     <h1
                                     id="微分形式による正準方程式の表式">微分形式による正準方程式の表式</h1>
                                     <p>前置きが長かったが、これでようやく解析力学を微分形式で表現する準備が整った。まず、正準変換の条件を微分形式で表現しよう。今、変数<span

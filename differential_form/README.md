@@ -266,50 +266,7 @@ $$
 
 ## 外積と外微分
 
-正準変換において母関数$W_1$の全微分が以下のように与えられることを見た。
-
-$$
-dW_1 = -pdq + PdQ
-$$
-
-ここから$W_1$の自由変数が$(q, Q)$であることがわかるため、その全微分が
-
-$$
-dW_1(q,Q) = \frac{\partial W_1}{\partial q} dq + \frac{\partial W_1}{\partial Q} dQ
-$$
-
-となるため、先程の式と比較することで変換則
-
-$$
-\begin{aligned}
-p &= - \frac{\partial W_1}{\partial q}\\
-P &= \frac{\partial W_1}{\partial Q}
-\end{aligned}
-$$
-
-を得る。これを見ると、最初の式
-
-$$
-dW_1 = -pdq + PdQ
-$$
-
-について、形式的に両辺を$dq$や$dQ$で割わった形になっていることがわかる。すなわち、自由変数同士の割り算は、自分自身なら1、そうでなければ0、それ以外は偏微分とする、すなわち、
-
-$$
-\begin{aligned}
-\frac{dq}{dq} &\equiv 1 \\
-\frac{dQ}{dq} &\equiv 0 \\
-\frac{dW_1}{dq} &\equiv \frac{\partial W_1}{\partial q} \\
-\end{aligned}
-$$
-
-というルールを定めることで、以下の関係式を得ることができる。
-
-$$
-p = -\frac{\partial W_1}{\partial q}
-$$
-
-このルールをもう少しきちんと論じるため、微分形式を導入しよう。
+全微分による$dx, dy, dz$がベクトルの基底のように見え、その双対基底が$\partial_x, \partial_y, \partial_z$であることを見た。このルールをもう少しきちんと論じるため、微分形式を導入しよう。
 
 任意の次元の空間で議論できるが、わかりやすさのために3次元空間$(x,y,z)$で考えよう。この空間に定義されたスカラー関数$f(x,y,z)$を考える。この関数の全微分を以下のように定義する。
 
@@ -317,7 +274,7 @@ $$
 df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz
 $$
 
-先ほど見たように、これは$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **$1$形式(1-form)** と呼ぶ。また、微分する前のスカラー関数を **0形式(0-form)** と呼ぶ。一般に、$p$形式を微分することで$p+1$形式を作ることができる。この時得られた$p+1$形式を、元の$p$形式の外微分と呼ぶ。
+先ほど見たように、これは$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **1形式(1-form)** と呼ぶ。また、微分する前のスカラー関数を **0形式(0-form)** と呼ぶ。
 
 ここで、外積記号$\wedge$により、以下の性質を持つ外積を定義する。
 
@@ -358,13 +315,13 @@ $$
 さて、外積を用いて外微分を定義しよう。いま、$1$形式が
 
 $$
-df = f_x dx +  f_y dy +  f_z dz
+\omega_1 = f_x dx +  f_y dy +  f_z dz
 $$
 
 と書かれている時、この外微分を
 
 $$
-d(df) = df_x \wedge dx + df_y \wedge dy + df_z \wedge dz
+d \omega_1 = df_x \wedge dx + df_y \wedge dy + df_z \wedge dz
 $$
 
 と定義する。
@@ -372,34 +329,19 @@ $$
 $f_x$はスカラー関数、すなわち$0$形式であり、一般に$x,y,z$の関数であるから、その外微分は
 
 $$
-df_x = \frac{\partial f_x}{\partial x} dx　+ \frac{\partial f_y}{\partial y} dy + \frac{\partial f_z}{\partial z} dz
+df_x = \frac{\partial f_x}{\partial x} dx + \frac{\partial f_y}{\partial y} dy + \frac{\partial f_z}{\partial z} dz
 $$
 
 で与えられる。$f_y, f_z$も同様である。したがって、
 
 $$
-d(df) =
+d\omega_1 =
 \left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy + (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz + (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
 $$
 
 となる。$dx\wedge dy$など、$1$形式の外積で作られた新たな基底で表現されたものを$2$形式と呼ぶ。すなわち$1$形式を外微分することで$2$形式を作ることができた。同様にして、$p$形式を外微分することで$p+1$形式を作ることができる。
 
-さて、微分形式では、$dx$や$dy$といった基底ベクトルや、その外積により作られた基底で張られた量を考える。これらはベクトルであるから、双対基底を考えることで内積を考えることができる。イメージとしては、ベクトルのテンソル積により、行列の基底を作ることができるのと同様である。例えば3次元の基底$\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$が与えられた時、その双対基底$\mathbf{e}^1, \mathbf{e}^2, \mathbf{e}^3$を使って、3行3列の行列Aの要素が
-
-$$
-A = A^i_j \mathbf{e^j} \otimes \mathbf{e_i}
-$$
-
-で展開されたことに対応する。ただし、行列は縦ベクトルと横ベクトルのテンソル積から作ったため、縦ベクトルと内積を取ると縦ベクトルが得られたが、微分形式の場合は縦ベクトルと縦ベクトルのテンソル積から2形式を作っているため、横ベクトルと内積をとることで縦ベクトルが得られるという違いがある。また、微分形式の外積は反対称性を持つため、ベクトルの言葉で言えば
-
-$$
-\mathbf{e_x} \wedge \mathbf{e_y} \equiv \mathbf{e_x} \otimes \mathbf{e_y} -
-\mathbf{e_y} \otimes \mathbf{e_x}
-$$
-
-のように定義されているという違いがあることが注意。
-
-以前説明したように、1形式の基底$dx$に対しては、偏微分演算子$\partial_x$が双対基底となり、以下のような自然な内積を考えることができる。
+$1$形式の基底$dx$に対しては、偏微分演算子$\partial_x$が双対基底となり、以下のような自然な内積を考えることができる。
 
 $$
 \begin{aligned}
@@ -470,6 +412,173 @@ dx dy &= \frac{\partial (x,y)}{\partial (r, \theta)} dr d\theta\\
 $$
 
 に対応することがわかる。
+
+## 微分形式とベクトル解析
+
+微分形式は、ベクトル解析で習った$\mathrm{grad}$や$\mathrm{div}$、$\mathrm{rot}$などを一般化する概念となっている。
+
+例えば3次元空間におけるスカラー場$f$の外微分は
+
+$$
+df = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz
+$$
+
+であるが、$dx, dy, dz$を、$\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z$とみなせば
+
+$$
+df = 
+\begin{pmatrix}
+\partial_x f \\
+\partial_y f \\
+\partial_z f
+\end{pmatrix}
+= \mathrm{grad} f
+$$
+
+すなわち、これは勾配を表している。また、1形式$\omega_1$が
+
+$$
+\omega_1 = B_x dx + B_y dx + B_z dz
+$$
+
+で与えられている時、
+
+$$
+d\omega_1 =  dB_x \wedge dx + B_y \wedge dx + B_z \wedge dz
+$$
+
+となる。ここで
+
+$$
+dB_x = \frac{\partial B_x}{\partial x} dx +\frac{\partial B_x}{\partial y} dy +\frac{\partial B_x}{\partial z} dz
+$$
+
+であるから、
+
+$$
+\begin{aligned}
+dB_x \wedge dx &= \left(\frac{\partial B_x}{\partial x} dx +\frac{\partial B_x}{\partial y} dy +\frac{\partial B_x}{\partial z} dz \right) \wedge dx \\
+&= \frac{\partial B_x}{\partial y} dy \wedge dx + \frac{\partial B_x}{\partial z} dz \wedge dx \\
+&= - \frac{\partial B_x}{\partial y} dx \wedge dy + \frac{\partial B_x}{\partial z} dz \wedge dx
+\end{aligned}
+$$
+
+ただし、$dx \wedge dx = 0$、$dy \wedge dx = - dx \wedge dy$を用いた。他の成分も同様に計算すると、
+
+$$
+dB = \left(\frac{\partial B_z}{\partial y} - \frac{\partial B_y}{\partial z} \right) dy \wedge dz + \left(\frac{\partial B_x}{\partial z} - \frac{\partial B_z}{\partial x} \right) dz \wedge dx + \left(\frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) dx \wedge dy
+$$
+
+ここで、以下の性質を満たすホッジ作用素$\ast$を定義する。
+
+$$
+\begin{aligned}
+\ast dx &= dy \wedge dz \\
+\ast dy &= dz \wedge dx \\
+\ast dz &= dx \wedge dy
+\end{aligned}
+$$
+
+ホッジ作用素は、微分形式を裏返す演算子になっており、$d$次元空間における$p$形式を、$d-p$形式に対応させる。これは双対変換であり、もう一度作用させると元に戻る。
+
+$$
+\begin{aligned}
+\ast (dy \wedge dz) &= dx \\
+\ast (dz \wedge dx) &= dy \\
+\ast (dx \wedge dy) &= dz
+\end{aligned}
+$$
+
+また、ベクトルが張る次元と等しい微分形式($p=d$の場合)に作用させるとスカラーとなる。
+
+$$
+\ast (dx \wedge dy \wedge dz) = 1
+$$
+
+ホッジ作用素を用いると、
+
+$$
+\begin{aligned}
+\ast (d\omega_1) &= \left(\frac{\partial B_z}{\partial y} - \frac{\partial B_y}{\partial z} \right) dx + \left(\frac{\partial B_x}{\partial z} - \frac{\partial B_z}{\partial x} \right) dy + \left(\frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) dz \end{aligned}
+$$
+
+これはベクトル場
+
+$$
+\mathbf{B} =
+\begin{pmatrix}
+B_x \\ B_y \\ B_z
+\end{pmatrix}
+$$
+
+に対する回転$\mathrm{rot} \mathbf{B}$に対応する。
+
+また、以下の2形式を定義する。
+
+$$
+\omega_2 = E_x dy \wedge dz + E_y dz \wedge dx + E_z dx \wedge dy 
+$$
+
+この外微分を計算すると、
+
+$$
+d \omega_2 = \left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} +  \frac{\partial E_z}{\partial z} \right) dx \wedge dy \wedge dz
+$$
+
+さらにホッジ作用素を作用させると、
+
+$$
+\ast (d \omega_2) = \left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} +  \frac{\partial E_z}{\partial z} \right)
+$$
+
+これは、ベクトル場
+
+$$
+\mathbf{E} =
+\begin{pmatrix}
+E_x \\ E_y \\ E_z
+\end{pmatrix}
+$$
+
+に対する発散$\mathrm{div} \mathbf{E}$に対応する。
+
+微分形式の定義から、任意の微分形式$\omega$について
+
+$$
+d(d\omega) = 0
+$$
+
+が成り立つ。一般に証明するのは煩雑なので、$\omega$が$0$形式、すなわちスカラー場$f$である場合を見ておこう。座標を$x,y,z$で書くと煩雑なので、$\{q^i\}$で記述すると、
+
+$$
+df = \frac{\partial f}{\partial q^i}dq^i
+$$
+
+であるから、
+
+$$
+\begin{aligned}
+d(df) &= \sum_i d \left(\frac{\partial f}{\partial q^i}dq^i \right) \\
+&= \sum_i\left(\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j\right) \wedge dq^i\\
+&= \sum_i\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j \wedge dq^i \\
+&= \sum_{i<j} \left(\frac{\partial^2 f}{\partial q^i \partial q^j} - \frac{\partial^2 f}{\partial q^j \partial q^i} \right) dq^j \wedge dq^i \\
+&=0
+\end{aligned}
+$$
+
+これは、よく知られた以下の公式を一般化したものになっている。
+
+$$
+\mathrm{rot} (\mathrm{grad} f) = 0
+$$
+
+また、$\omega$として$1$形式を採用した場合は
+
+$$
+\mathrm{div} (\mathrm{rot} \mathbf{v}) = 0
+$$
+
+に対応する。
 
 ## 微分形式による正準方程式の表式
 
