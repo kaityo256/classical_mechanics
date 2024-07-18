@@ -721,7 +721,7 @@ $$
 $$
 \begin{aligned}
 p &= \frac{\partial L}{\partial \dot{q}} \\
-H = p \dot{q} - L
+H &= p \dot{q} - L
 \end{aligned}
 $$
 

@@ -110,8 +110,8 @@
                                     \end{aligned}
                                     \]</span></p>
                                     <p>という変換を考えよう。<span
-                                    class="math inline">\(Q^1\)</span>は重心座標である。</p>
-                                    <p><span class="math inline">\(q^1,
+                                    class="math inline">\(Q^1\)</span>は重心座標である。<span
+                                    class="math inline">\(q^1,
                                     q^2\)</span>を<span
                                     class="math inline">\(Q^1,
                                     Q^2\)</span>について逆に解くと、</p>
@@ -121,30 +121,45 @@
                                     q^2 &amp;= Q^1 - Q^2
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>これを用いると、元の系の運動エネルギーは</p>
+                                    <p>両辺を時間微分すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    K &amp;=
-                                    \frac{m}{2}((\dot{q}^1)^2+(\dot{q}^2)^2)
-                                    \\
-                                    &amp;= \frac{m}{2}
-                                    \left((\dot{Q}^1+\dot{Q}^2)^2+(\dot{Q}^1-\dot{Q}^2)^2  \right)
-                                    \\
-                                    &amp;= m(\dot{Q}^1)^2 +
-                                    m(\dot{Q}^2)^2
+                                    \dot{q}^1 &amp;= \dot{Q}^1 +
+                                    \dot{Q}^2\\
+                                    \dot{q}^2 &amp;= \dot{Q}^1 -
+                                    \dot{Q}^2
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>対応する運動量が</p>
+                                    <p>運動量の定義から、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     P_1 &amp;= \frac{\partial
-                                    K}{\partial \dot{Q}^1} = 2m\dot{Q}^1
+                                    L}{\partial \dot{Q}^1}\\
+                                    &amp;= \underbrace{\frac{\partial
+                                    L}{\partial \dot{q}^1}}_{p_1}
+                                    \underbrace{\frac{\partial
+                                    \dot{q}^1}{\partial \dot{Q}^1}}_{1}
+                                    + \underbrace{\frac{\partial
+                                    L}{\partial \dot{q}^2}}_{p_1}
+                                    \underbrace{\frac{\partial
+                                    \dot{q}^2}{\partial \dot{Q}^1}}_{1}
                                     \\
-                                    P_2 &amp;= \frac{\partial
-                                    K}{\partial \dot{Q}^2} = 2m\dot{Q}^2
+                                    &amp;= p_1 + p_2
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>になることに注意すると、新しいハミルトニアンは</p>
+                                    <p>同様に、</p>
+                                    <p><span class="math display">\[
+                                    P_2 = p_1 - p_2
+                                    \]</span></p>
+                                    <p><span class="math inline">\(p_1,
+                                    p_2\)</span>について解くと</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    p_1 &amp;= \frac{P_1 + P_2}{2}\\
+                                    p_2 &amp;= \frac{P_1 - P_2}{2}\\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>これらを用いると、新しいハミルトニアンは</p>
                                     <p><span class="math display">\[
                                     H(Q^1, Q^2, P_1, P_2) =
                                     \frac{1}{4m}(P_1^2+P_2^2) + U(2Q^2)

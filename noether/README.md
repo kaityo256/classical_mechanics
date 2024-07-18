@@ -41,9 +41,7 @@ Q^2 &= \frac{q^1 - q^2}{2}
 \end{aligned}
 $$
 
-という変換を考えよう。$Q^1$は重心座標である。
-
-$q^1, q^2$を$Q^1, Q^2$について逆に解くと、
+という変換を考えよう。$Q^1$は重心座標である。$q^1, q^2$を$Q^1, Q^2$について逆に解くと、
 
 $$
 \begin{aligned}
@@ -52,26 +50,41 @@ q^2 &= Q^1 - Q^2
 \end{aligned}
 $$
 
-これを用いると、元の系の運動エネルギーは
+両辺を時間微分すると、
 
 $$
 \begin{aligned}
-K &= \frac{m}{2}((\dot{q}^1)^2+(\dot{q}^2)^2) \\
-&= \frac{m}{2} \left((\dot{Q}^1+\dot{Q}^2)^2+(\dot{Q}^1-\dot{Q}^2)^2  \right) \\
-&= m(\dot{Q}^1)^2 + m(\dot{Q}^2)^2
+\dot{q}^1 &= \dot{Q}^1 + \dot{Q}^2\\
+\dot{q}^2 &= \dot{Q}^1 - \dot{Q}^2
 \end{aligned}
 $$
 
-対応する運動量が
+運動量の定義から、
 
 $$
 \begin{aligned}
-P_1 &= \frac{\partial K}{\partial \dot{Q}^1} = 2m\dot{Q}^1 \\
-P_2 &= \frac{\partial K}{\partial \dot{Q}^2} = 2m\dot{Q}^2
+P_1 &= \frac{\partial L}{\partial \dot{Q}^1}\\
+&= \underbrace{\frac{\partial L}{\partial \dot{q}^1}}_{p_1} \underbrace{\frac{\partial \dot{q}^1}{\partial \dot{Q}^1}}_{1} + \underbrace{\frac{\partial L}{\partial \dot{q}^2}}_{p_1} \underbrace{\frac{\partial \dot{q}^2}{\partial \dot{Q}^1}}_{1} \\
+&= p_1 + p_2
 \end{aligned}
 $$
 
-になることに注意すると、新しいハミルトニアンは
+同様に、
+
+$$
+P_2 = p_1 - p_2
+$$
+
+$p_1, p_2$について解くと
+
+$$
+\begin{aligned}
+p_1 &= \frac{P_1 + P_2}{2}\\
+p_2 &= \frac{P_1 - P_2}{2}\\
+\end{aligned}
+$$
+
+これらを用いると、新しいハミルトニアンは
 
 $$
 H(Q^1, Q^2, P_1, P_2) = \frac{1}{4m}(P_1^2+P_2^2) + U(2Q^2)
