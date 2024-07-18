@@ -69,7 +69,7 @@ dx \\ dy
 \underbrace{
 \begin{pmatrix}
 \displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial x}{\partial \theta}  \\
-\displaystyle \frac{\partial x}{\partial y} & \displaystyle \frac{\partial y}{\partial \theta}
+\displaystyle \frac{\partial y}{\partial r} & \displaystyle \frac{\partial y}{\partial \theta}
 \end{pmatrix}}_A
 \begin{pmatrix}
 dr \\ d\theta
@@ -123,8 +123,8 @@ $$
 \partial_r u \\ \partial_\theta u
 \end{pmatrix} =
 \begin{pmatrix}
-\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial x}{\partial \theta}  \\
-\displaystyle \frac{\partial x}{\partial y} & \displaystyle \frac{\partial y}{\partial \theta}
+\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial y}{\partial r}  \\
+\displaystyle \frac{\partial x}{\partial \theta} & \displaystyle \frac{\partial y}{\partial \theta}
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x u \\ \partial_y u
@@ -141,13 +141,13 @@ $$
 \partial_r \\ \partial_\theta
 \end{pmatrix} &=
 \begin{pmatrix}
-\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial x}{\partial \theta}  \\
-\displaystyle \frac{\partial x}{\partial y} & \displaystyle \frac{\partial y}{\partial \theta}
+\displaystyle \frac{\partial x}{\partial r} & \displaystyle \frac{\partial y}{\partial r}  \\
+\displaystyle \frac{\partial x}{\partial \theta} & \displaystyle \frac{\partial y}{\partial \theta}
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x\\ \partial_y
 \end{pmatrix}\\
-&= A
+&= {}^tA
 \begin{pmatrix}
 \partial_x\\ \partial_y
 \end{pmatrix}
@@ -162,9 +162,9 @@ $$
 
 が成り立っていることがわかる。
 
-これを利用すると、例えば$\partial_x \theta$や$\partial_y \theta$などが簡単に計算できる。
+この行列表示を利用すると、普通に計算すると面倒な$\partial_x \theta$や$\partial_y \theta$などが簡単に計算できる。
 
-普通に計算しようとすると、$\partial_x \theta$の計算は面倒だ。まずは具体的な
+まずは直接求めて見よう。
 
 $$
 \tan \theta = \frac{y}{x}

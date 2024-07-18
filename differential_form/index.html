@@ -137,7 +137,7 @@
                                     \frac{\partial x}{\partial
                                     \theta}  \\
                                     \displaystyle \frac{\partial
-                                    x}{\partial y} &amp; \displaystyle
+                                    y}{\partial r} &amp; \displaystyle
                                     \frac{\partial y}{\partial \theta}
                                     \end{pmatrix}}_A
                                     \begin{pmatrix}
@@ -208,11 +208,11 @@
                                     \begin{pmatrix}
                                     \displaystyle \frac{\partial
                                     x}{\partial r} &amp; \displaystyle
-                                    \frac{\partial x}{\partial
-                                    \theta}  \\
+                                    \frac{\partial y}{\partial r}  \\
                                     \displaystyle \frac{\partial
-                                    x}{\partial y} &amp; \displaystyle
-                                    \frac{\partial y}{\partial \theta}
+                                    x}{\partial \theta} &amp;
+                                    \displaystyle \frac{\partial
+                                    y}{\partial \theta}
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     \partial_x u \\ \partial_y u
@@ -237,16 +237,16 @@
                                     \begin{pmatrix}
                                     \displaystyle \frac{\partial
                                     x}{\partial r} &amp; \displaystyle
-                                    \frac{\partial x}{\partial
-                                    \theta}  \\
+                                    \frac{\partial y}{\partial r}  \\
                                     \displaystyle \frac{\partial
-                                    x}{\partial y} &amp; \displaystyle
-                                    \frac{\partial y}{\partial \theta}
+                                    x}{\partial \theta} &amp;
+                                    \displaystyle \frac{\partial
+                                    y}{\partial \theta}
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     \partial_x\\ \partial_y
                                     \end{pmatrix}\\
-                                    &amp;= A
+                                    &amp;= {}^tA
                                     \begin{pmatrix}
                                     \partial_x\\ \partial_y
                                     \end{pmatrix}
@@ -274,14 +274,12 @@
                                     \tilde{\mathbf{e}}^j
                                     \]</span></p>
                                     <p>が成り立っていることがわかる。</p>
-                                    <p>これを利用すると、例えば<span
+                                    <p>この行列表示を利用すると、普通に計算すると面倒な<span
                                     class="math inline">\(\partial_x
                                     \theta\)</span>や<span
                                     class="math inline">\(\partial_y
                                     \theta\)</span>などが簡単に計算できる。</p>
-                                    <p>普通に計算しようとすると、<span
-                                    class="math inline">\(\partial_x
-                                    \theta\)</span>の計算は面倒だ。まずは具体的な</p>
+                                    <p>まずは直接求めて見よう。</p>
                                     <p><span class="math display">\[
                                     \tan \theta = \frac{y}{x}
                                     \]</span></p>
