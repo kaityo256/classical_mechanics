@@ -357,8 +357,8 @@ $$
 $$
 \begin{aligned}
 \left<dx \wedge dy, \frac{\partial}{\partial x} \right> & \equiv
-\left<dx, \frac{\partial}{\partial x} \right> dy \\
-&=1
+\left<dx, \frac{\partial}{\partial x} \right> dy\\
+&= dy
 \end{aligned}
 $$
 
@@ -367,8 +367,8 @@ $$
 $$
 \begin{aligned}
 \left<dy \wedge dx, \frac{\partial}{\partial x} \right> & = \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
-&= -\left<dx, \frac{\partial}{\partial x} \right> dy \\
-&=1
+&= -\left<dx, \frac{\partial}{\partial x} \right> dy
+&= -dy
 \end{aligned}
 $$
 
@@ -621,7 +621,7 @@ $$
 \frac{dA}{dt} = i\mathcal{L}A
 $$
 
-虚数単位は負符号については今はあまり気にしなくて良い。$A$が$(q,p)$の関数であり、$(q,p)$が時間の関数であるなら
+$A$が$(q,p)$の関数であり、$(q,p)$が時間の関数であるなら
 
 $$
 \begin{aligned}
