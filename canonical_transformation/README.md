@@ -249,19 +249,20 @@ $$
 
 ![正準変換と変分原理](fig/generating_function.png)
 
-まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。もう少し非自明な例として、作用積分に$q\dot{q}$という量を加えたものに対して変分を考えてみよう。
+まず、自明な例として、ハミルトニアンに定数を加えても結果は変わらない。もう少し非自明な例として、ハミルトニアンに$q\dot{q}$という量を加えたものに対して変分を考えてみよう。
 
 $$
 \begin{aligned}
-\delta(p\dot{q} - H + q \dot{q}) &= \delta(p\dot{q} - H ) + \delta(q\dot{q}) \\
-&= \delta(p\dot{q} - H) + \dot{q}\delta q + q \delta \dot{q} \\
-&= \delta(p\dot{q} - H) + \underbrace{\dot{q}\delta q - \dot{q} \delta q}_{=0}
+\delta(p\dot{q} - H - q \dot{q}) &= \delta(p\dot{q} - H ) - \delta(q\dot{q}) \\
+&= \delta(p\dot{q} - H) - \dot{q}\delta q - q \delta \dot{q} \\
+&= \delta(p\dot{q} - H) - \underbrace{\dot{q}\delta q + \dot{q} \delta q}_{=0}\\
+&= \delta(p\dot{q} - H)
 \end{aligned}
 $$
 
-と、部分積分により付け加えた項がゼロになるため、項をつけわえる前と同じ正準方程式が得られる。すなわち、ハミルトニアン$H$に対して$H \rightarrow H - q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
+と、部分積分により付け加えた項がゼロになるため、この項をつけわえる前と同じ正準方程式が得られる。すなわち、ハミルトニアン$H$に対して$H \rightarrow H + q\dot{q}$という変換は正準方程式を共変に保つため、正準変換を導く。
 
-全く同様にして、$q$に関する任意の関数$W(q)$について、作用積分にその時間微分$-dW/dt$を加えても正準方程式を変えないことがわかる(あとのために負符号をつけておく)。実際に
+全く同様にして、$q$に関する任意の関数$W(q)$の時間微分をハミルトニアンに加えても、加える前のハミルトニアンと同じ正準方程式を導く。実際に
 
 $$
 \begin{aligned}
@@ -272,45 +273,69 @@ $$
 \end{aligned}
 $$
 
-となり、部分積分で消えてしまう。$W$が$p$のみの関数の場合も同様である。したがって、ハミルトニアンに加える項として$F = dW/dt$を考えれば正準変換を導けそうである。ただし、$W$が$q,p$のどちらにも依存する場合、$W$が正準変換を導くには条件がつく。
-
-いま、$(q,p)$で記述されたハミルトニアン$H(q,p)$に、任意の関数$W(q,p)$を考え、その時間微分$F=-dW/dt$を加えたものの変分を考えよう。
-
-$$
-\delta\left(p\dot{q} - H - \frac{dW}{dt}\right)  = \delta (p\dot{q} - H) - \delta \left(\frac{dW}{dt} \right)
-$$
-
-であるから、$\delta \dot{W} = 0$であれば元の正準方程式を導く。計算してみると、
+となり、部分積分で消えてしまう。$W$が$p$のみの関数の場合も同様である。$W$が$q$と$p$の両方に依存する場合、計算はやや面倒であるが$dW/dt$の変分がゼロとなることが以下のように示される。
 
 $$
 \begin{aligned}
-\delta \dot{W} &= \delta \left(\frac{\partial W}{\partial q}\dot{q} + \frac{\partial W}{\partial p}\dot{p} \right) \\
-&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + \frac{\partial W}{\partial q} \delta \dot{q}}_{\bigstar} + \delta \left(\frac{\partial W}{\partial p}\right)\dot{p} + \frac{\partial W}{\partial p} \delta \dot{p} \\
+\delta \left(\frac{dW}{dt} \right) &= \delta \left(\frac{\partial W}{\partial q}\dot{q} + \frac{\partial W}{\partial p}\dot{p} \right) \\
+&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + 
+\frac{\partial W}{\partial q} \delta \dot{q}}_{\bigstar} +
+\underbrace{\delta \left(\frac{\partial W}{\partial p} \right)\dot{p} + 
+\frac{\partial W}{\partial p} \delta \dot{p}}_{\bigstar \bigstar} \\
 \end{aligned}
 $$
 
-右辺の第一項、第二項を計算すると、
+右辺の第一項$\bigstar$を計算すると
 
 $$
 \begin{aligned}
-\bigstar &= \delta \left(\frac{\partial W}{\partial q}\right)\dot{q} - \frac{d}{dt}\left(\frac{\partial W}{\partial q}\right) \delta q \\
-&= \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} + \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p + \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} + \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q
+\bigstar &= \delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + 
+\frac{\partial W}{\partial q} \delta \dot{q} \\
+&= 
+\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q +
+\frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p + \frac{\partial W}{\partial q} \delta \dot{q} \\
+&= 
+\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q +
+\frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p -  \frac{d}{dt}\left(\frac{\partial W}{\partial q}\right) \delta q \\
+&= 
+\cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} +
+\frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p -  \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} - \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q \\
+&= \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p - \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q
 \end{aligned}
 $$
 
-したがって、$W(q,p)$が
+同様に、右辺第二項$\bigstar \bigstar$を計算すると
+$$
+\bigstar \bigstar = \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q -
+\frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p
+$$
+
+以上から、
 
 $$
-\frac{\partial^2 W}{\partial q \partial p} = 0
+\begin{aligned}
+\bigstar + \bigstar \bigstar &= \cancel{\frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p} - \cancel{\frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q} + \cancel{\frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q} - \cancel{\frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p} \\
+&= 0
+\end{aligned}
 $$
 
-という条件を満たせば、この項は消える。残りの$\dot{p}$に関する項も同様である。以上から、2つの引数両方に関する偏微分がゼロであるような関数$W$の時間微分をハミルトニアンに加えても正準方程式を変えない、すなわちこの関数が以下の正準変換を導くことがわかった。
+したがって、関数$W$が時間に陽に依存しない場合、その時間微分の変分がゼロ、すなわち
+
+$$
+\delta \left(\frac{dW}{dt} \right) = 0
+$$
+
+であることがわかった。
+
+以上から、時間に陽に依存しない関数$W$の時間微分$dW/dt$をハミルトニアンに加えても、加える前と同じ正準方程式を与えることがわかった。この関数を用いて以下の変数変換を定義すると、この変換$(q,p) \rightarrow (Q,P)$は正準変換をとなる。
 
 $$
 p\dot{q} - H(q,p) - \frac{dW}{dt} = P \dot{Q} - H(Q,P)
 $$
 
-ここから変数の間の変換公式を得るため、$dW/dt$について整理しよう。また、後のために時間微分をニュートン表記からライプニッツ表記で書き直す。ハミルトニアン$H$は(時間非依存であれば)変数を書き直しただけで値は変わらないため、両辺でキャンセルする。
+しかし、上式を用いて任意の関数$W(q,p)$から変換$(q,p) \rightarrow (Q,P)$を求めるのは煩雑である。そこで、以下のように簡便な変数間の変換公式を導こう。後のために時間微分をニュートン表記からライプニッツ表記で書き直す。
+
+ハミルトニアン$H$は(時間非依存であれば)変数を書き直しただけで値は変わらないため、両辺でキャンセルする。
 
 $$
 \frac{dW}{dt} = p\frac{dq}{dt} - P \frac{dQ}{dt}
@@ -322,7 +347,9 @@ $$
 dW = p dq - P dQ
 $$
 
-これは、関数$W$が自由変数を$q, Q$とみなした時の全微分の表式となっている。全微分の定義から
+これは、関数$W$の自由変数を$q, Q$とみなした時の全微分の表式となっている。
+
+全微分の定義から
 
 $$
 dW(q, Q) = \frac{\partial W}{\partial q} dq + \frac{\partial W}{\partial Q}dQ
@@ -337,7 +364,7 @@ P &= - \frac{\partial W}{\partial Q}
 \end{aligned}
 $$
 
-を得る。すなわち、先程の条件を満たす任意の関数$W(q,Q)$を考えると、 $(q,Q)$から新たな変数の組$(p(q,Q),P(q,Q))$が得られる。これを$(P,Q)$について解き直せば
+を得る。すなわち、関数$W(q,Q)$は$(q,Q)$から新たな変数の組$(p(q,Q),P(q,Q))$への変換公式を与える。これを$(P,Q)$について解き直せば
 
 $$
 \begin{aligned}
@@ -416,19 +443,6 @@ $$
 * 変換則は母関数を自由変数で偏微分することで、正準共役な変数が得られる
 * 偏微分した際の符号は、全微分からわかる
 * 母関数同士はルジャンドル変換で繋がっている
-
-これらはの母関数は、以下の条件さえ満たせば任意に選ぶことができる。
-
-$$
-\begin{aligned}
-\frac{\partial^2 W_1}{\partial q \partial Q} &= 0 \\
-\frac{\partial^2 W_2}{\partial q \partial P} &= 0 \\
-\frac{\partial^2 W_3}{\partial p \partial Q} &= 0 \\
-\frac{\partial^2 W_4}{\partial p \partial P} &= 0
-\end{aligned}
-$$
-
-逆に言えば、この母関数から作られる変換は正準変換となる。
 
 母関数による正準変換について、いくつか簡単な例を挙げておこう。
 
