@@ -275,9 +275,9 @@ $$
 $$
 \begin{aligned}
 \delta \left(\frac{dW}{dt} \right) &= \delta \left(\frac{\partial W}{\partial q}\dot{q} + \frac{\partial W}{\partial p}\dot{p} \right) \\
-&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + 
+&= \underbrace{\delta \left(\frac{\partial W}{\partial q}\right)\dot{q} +
 \frac{\partial W}{\partial q} \delta \dot{q}}_{\bigstar} +
-\underbrace{\delta \left(\frac{\partial W}{\partial p} \right)\dot{p} + 
+\underbrace{\delta \left(\frac{\partial W}{\partial p} \right)\dot{p} +
 \frac{\partial W}{\partial p} \delta \dot{p}}_{\bigstar \bigstar} \\
 \end{aligned}
 $$
@@ -286,15 +286,15 @@ $$
 
 $$
 \begin{aligned}
-\bigstar &= \delta \left(\frac{\partial W}{\partial q}\right)\dot{q} + 
+\bigstar &= \delta \left(\frac{\partial W}{\partial q}\right)\dot{q} +
 \frac{\partial W}{\partial q} \delta \dot{q} \\
-&= 
+&=
 \frac{\partial^2 W}{\partial q^2} \dot{q} \delta q +
 \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p + \frac{\partial W}{\partial q} \delta \dot{q} \\
-&= 
+&=
 \frac{\partial^2 W}{\partial q^2} \dot{q} \delta q +
 \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p -  \frac{d}{dt}\left(\frac{\partial W}{\partial q}\right) \delta q \\
-&= 
+&=
 \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} +
 \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p -  \cancel{\frac{\partial^2 W}{\partial q^2} \dot{q} \delta q} - \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q \\
 &= \frac{\partial^2 W}{\partial q \partial p} \dot{q} \delta p - \frac{\partial^2 W}{\partial q \partial p} \dot{p} \delta q

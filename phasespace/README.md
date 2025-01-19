@@ -101,7 +101,7 @@ $$
 これを、$(q,p)$で張られる位相空間に$(\dot{q}, \dot{p})$という速度場を定義する式であると考える。位相空間の座標をまとめて$\mathbf{z}$で表そう。すなわち、
 
 $$
-\mathbf{z} = 
+\mathbf{z} =
 \begin{pmatrix} q\\ p
 \end{pmatrix},
 \dot{\mathbf{z}} =
@@ -329,7 +329,6 @@ $$
 \end{aligned}
 $$
 
-
 $$
 \frac{D}{D t} \equiv \frac{\partial}{\partial t} + \mathbf{v} \cdot \nabla
 $$
@@ -355,7 +354,7 @@ $$
 さて、速度場の発散がゼロ、つまり
 
 $$
-\nabla \cdot \mathbf{v} = 0 
+\nabla \cdot \mathbf{v} = 0
 $$
 
 としよう。この時、密度の物質微分がゼロ、すなわち流れに追いかけた場合の密度変化がゼロとなる。この流体は流れに対して密度が変わらない。このような流体を非圧縮流体と呼ぶ。

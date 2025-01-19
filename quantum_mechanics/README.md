@@ -154,7 +154,7 @@ $$
 これを見ると、エネルギーを
 
 $$
-\hat{E} \equiv \frac{i}{\hbar}\frac{\partial}{\partial t} 
+\hat{E} \equiv \frac{i}{\hbar}\frac{\partial}{\partial t}
 $$
 
 という演算子とみなすのが自然であることがわかる。すると、
@@ -200,7 +200,7 @@ $$
 これは、括弧(bracket)$<>$の左側$<$をブラ(bra)、右側$>$をケットと分解する、Diracが考案した記法である。それぞれブラベクトル、ケットベクトルと呼ぶが、ブラ、ケットと略すことも多い。この表記を用いると、波動関数がエネルギー演算子の固有関数であることがわかりやすい。
 
 $$
-\hat{E} \left|\psi\right>  = E \left|\psi\right> 
+\hat{E} \left|\psi\right>  = E \left|\psi\right>
 $$
 
 行列と固有ベクトルの表記と比較してみよう。
