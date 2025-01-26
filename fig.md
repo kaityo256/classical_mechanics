@@ -6,8 +6,8 @@
 
 ## 解析力学の概観
 
-* overview/README.md:![式の見方](fig/table.png)
-* overview/README.md:![overview/fig/birds_eye_view.png](overview/fig/birds_eye_view.png)
+* ![式の見方](overview/fig/table.png)
+* ![overview/fig/birds_eye_view.png](overview/fig/birds_eye_view.png)
 
 ## 数学的準備
 
@@ -15,75 +15,75 @@
 
 ## ニュートンの運動方程式
 
-* newton/README.md:![観測から法則、法則から原理、原理から予測の流れ](fig/principle_law.png)
-* newton/README.md:![反変ベクトル](fig/contravariant_vector.png)
-* newton/README.md:![linear.png](fig/linear.png)
-* newton/README.md:![物体の落下](fig/fall.png)
-* newton/README.md:![ヘリ](fig/heli.png)
+* ![観測から法則、法則から原理、原理から予測の流れ](newton/fig/principle_law.png)
+* ![反変ベクトル](newton/fig/contravariant_vector.png)
+* ![linear.png](newton/fig/linear.png)
+* ![物体の落下](newton/fig/fall.png)
+* [ヘリ](newton/fig/heli.png)
   * これは作ってもらう
 
-## 仮想仕事の原理
+## 仮想仕事の原理(virtual_work)
 
-* virtual_work/README.md:![work1.png](fig/work1.png)
-* virtual_work/README.md:![バネと質点](fig/spring.png)
-* virtual_work/README.md:![potential](fig/potential.png)
-* virtual_work/README.md:![斜面](fig/slope.png)
-* virtual_work/README.md:![てこ](fig/lever.png)
-* virtual_work/README.md:![動滑車](fig/movable_pulley.png)
-* virtual_work/README.md:![stick](fig/stick.png)
+* ![work1.png](/virtual_work/fig/work1.png)
+* ![バネと質点](/virtual_work/fig/spring.png)
+* ![potential](/virtual_work/fig/potential.png)
+* ![斜面](/virtual_work/fig/slope.png)
+* ![てこ](/virtual_work/fig/lever.png)
+* ![動滑車](/virtual_work/fig/movable_pulley.png)
+* ![stick](/virtual_work/fig/stick.png)
 
-## ハミルトンの原理
+## ハミルトンの原理(hamilton_principle)
 
-* hamilton_principle/README.md:![ラグランジアン](fig/lagrangian.png)
-* hamilton_principle/README.md:![積分路](fig/delta.png)
+* ![ラグランジアン](/hamilton_principle/fig/lagrangian.png)
+* ![積分路](/hamilton_principle/fig/delta.png)
 
-## 変分原理
+## 変分原理(variational_principle)
 
-* variational_principle/README.md:![スネルの法則](fig/snell.png)
-* variational_principle/README.md:![ホイヘンスの原理](fig/huygens.png)
-* variational_principle/README.md:![座標軸](fig/bc_coordinate.png)
-* variational_principle/README.md:![折れ線近似](fig/bc_snell.png)
-* variational_principle/README.md:![磁石](fig/magnet.png)
-* variational_principle/README.md:![停留](fig/stationary.png)
+* ![スネルの法則](/variational_principle/fig/snell.png)
+* ![ホイヘンスの原理](/variational_principle/fig/huygens.png)
+* ![座標軸](/variational_principle/fig/bc_coordinate.png)
+* ![折れ線近似](/variational_principle/fig/bc_snell.png)
+* ![磁石](/variational_principle/fig/magnet.png)
+* ![停留](/variational_principle/fig/stationary.png)
 
-## ラグランジュ形式の力学
+## ラグランジュ形式の力学(laglangian)
 
-* lagrangian/README.md:![極座標](fig/polar_coordinate.png)
-* lagrangian/README.md:![点変換](fig/point_transformation.png)
+* ![極座標](/lagrangian/fig/polar_coordinate.png)
+* ![点変換](/lagrangian/fig/point_transformation.png)
 
-## ハミルトン形式の力学
+## ハミルトン形式の力学(hamiltonian)
 
-* hamiltonian/README.md:![ルジャンドル変換の接線による解釈](fig/legendre_tangent.png)
-* hamiltonian/README.md:![ルジャンドル変換の面積による解釈](fig/legendre_area.png)
-* hamiltonian/README.md:![正多面体の双対](fig/dual.png)
+* ![ルジャンドル変換の接線による解釈](/hamiltonian/fig/legendre_tangent.png)
+* ![ルジャンドル変換の面積による解釈](/hamiltonian/fig/legendre_area.png)
+* ![正多面体の双対](/hamiltonian/fig/dual.png)
 
-## 位相空間おリュービルの定理
+## 位相空間おリュービルの定理(phasespace)
 
-* phasespace/README.md:![phasespace.png](fig/phasespace.png)
-* phasespace/README.md:![ハミルトンベクトル場の作り方](fig/phaseflow.png)
-* phasespace/README.md:![流入の収支](fig/flow_balance.png)
-* phasespace/README.md:![物質微分](fig/material_derivative.png)
-* phasespace/README.md:![lagrange2d](fig/lagrange2d.png)
-* phasespace/README.md:![divergence](fig/divergence.png)
+* ![phasespace.png](/phasespace/fig/phasespace.png)
+* ![ハミルトンベクトル場の作り方](/phasespace/fig/phaseflow.png)
+* ![流入の収支](/phasespace/fig/flow_balance.png)
+* ![物質微分](/phasespace/fig/material_derivative.png)
+* ![lagrange2d](/phasespace/fig/lagrange2d.png)
+* ![divergence](/phasespace/fig/divergence.png)
 
-## 正準変換
+## 正準変換(canonical_transformation)
 
-* canonical_transformation/README.md:![正準変換と変分原理](fig/generating_function.png)
-* canonical_transformation/README.md:![変換則](fig/transform_diagram.png)
+* ![正準変換と変分原理](/canonical_transformation/fig/generating_function.png)
+* ![変換則](/canonical_transformation/fig/transform_diagram.png)
 
-## ポアソン括弧
+## ポアソン括弧(poisson)
 
-* poisson/finite.md:![非可換性](fig/noncommutative.png)
-* poisson/finite.md:![回転の合成](fig/composition.png)
+* [非可換性](/poisson/fig/noncommutative.png)
+* ![回転の合成](/poisson/fig/composition.png)
 
 ## 微小正準変換とネーターの定理
 
 図なし
 
-## 微分形式
+## 微分形式(differential_form)
 
-* differential_form/README.md:![diffrential form](fig/differential_form.png)
+* ![diffrential form](/differential_form/fig/differential_form.png)
 
-## 演習問題
+## 演習問題(exercise)
 
-* exercise/README.md:![triangle.png](fig/triangle.png)
+* ![triangle.png](/exercise/fig/triangle.png)
