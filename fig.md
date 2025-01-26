@@ -18,10 +18,11 @@
 * ![観測から法則、法則から原理、原理から予測の流れ](newton/fig/principle_law.png)
   * 作ってもらう
 * ![反変ベクトル](newton/fig/contravariant_vector.png)
-  * PDF作った
+  * 作った
 * ![linear.png](newton/fig/linear.png)
+  * 作った
 * ![物体の落下](newton/fig/fall.png)
-* [ヘリ](newton/fig/heli.png)
+* ![リンゴに働く力](newton/fig/apple.png)
   * これは作ってもらう
 
 ## 仮想仕事の原理(virtual_work)
