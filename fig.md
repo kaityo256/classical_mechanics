@@ -16,6 +16,7 @@
 ## ニュートンの運動方程式
 
 * ![観測から法則、法則から原理、原理から予測の流れ](newton/fig/principle_law.png)
+  * 作ってもらう
 * ![反変ベクトル](newton/fig/contravariant_vector.png)
 * ![linear.png](newton/fig/linear.png)
 * ![物体の落下](newton/fig/fall.png)
