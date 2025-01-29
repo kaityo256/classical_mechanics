@@ -16,6 +16,7 @@ CHAPS:
   - noether.re
   - differential_form.re
   - quantum_mechanics.re
+  - exercise.re
 
 POSTDEF:
   - postface.re
