@@ -7,7 +7,7 @@
 ## 解析力学の概観
 
 * ![式の見方](overview/fig/table.png)
-* ![overview/fig/birds_eye_view.png](overview/fig/birds_eye_view.png)
+* ![概観](overview/fig/birds_eye_view.png)
 
 ## 数学的準備
 
@@ -66,12 +66,12 @@
 
 ## 位相空間とリュービルの定理(phasespace)
 
-* ![phasespace.png](/phasespace/fig/phasespace.png)
+* ![位相空間の流れ](/phasespace/fig/phasespace.png)
 * ![ハミルトンベクトル場の作り方](/phasespace/fig/phaseflow.png)
 * ![流入の収支](/phasespace/fig/flow_balance.png)
 * ![物質微分](/phasespace/fig/material_derivative.png)
-* ![lagrange2d](/phasespace/fig/lagrange2d.png)
-* ![divergence](/phasespace/fig/divergence.png)
+* ![2次元の流れの収支](/phasespace/fig/lagrange2d.png)
+* ![発散の意味](/phasespace/fig/divergence.png)
 
 ## 正準変換(canonical_transformation)
 
@@ -89,8 +89,12 @@
 
 ## 微分形式(differential_form)
 
-* ![diffrential form](/differential_form/fig/differential_form.png)
+* ![運動方程式の座標に依らない表現](/differential_form/fig/differential_form.png)
+
+## 量子力学
+
+図なし
 
 ## 演習問題(exercise)
 
-* ![triangle.png](/exercise/fig/triangle.png)
+* ![ヒンジと紐](/exercise/fig/triangle.png)

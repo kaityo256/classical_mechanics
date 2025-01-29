@@ -764,7 +764,7 @@ $$
 
 という、局所座標に依らない運動方程式が得られた。
 
-![diffrential form](fig/differential_form.png)
+![運動方程式の座標に依らない表現](fig/differential_form.png)
 
 2つの式を並べて見ても、とても同じ現象を表現しているようには見えない。
 
