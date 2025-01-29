@@ -22,6 +22,7 @@
 * ![linear.png](newton/fig/linear.png)
   * 作った
 * ![物体の落下](newton/fig/fall.png)
+  * 作った
 * ![リンゴに働く力](newton/fig/apple.png)
   * これは作ってもらう
 
