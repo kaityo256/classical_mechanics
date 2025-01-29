@@ -28,8 +28,10 @@
 
 ## 仮想仕事の原理(virtual_work)
 
-* ![work1.png](/virtual_work/fig/work1.png)
+* ![work.png](/virtual_work/fig/work.png)
+  * 作った
 * ![バネと質点](/virtual_work/fig/spring.png)
+  * 作った
 * ![potential](/virtual_work/fig/potential.png)
 * ![斜面](/virtual_work/fig/slope.png)
 * ![てこ](/virtual_work/fig/lever.png)
@@ -61,7 +63,7 @@
 * ![ルジャンドル変換の面積による解釈](/hamiltonian/fig/legendre_area.png)
 * ![正多面体の双対](/hamiltonian/fig/dual.png)
 
-## 位相空間おリュービルの定理(phasespace)
+## 位相空間とリュービルの定理(phasespace)
 
 * ![phasespace.png](/phasespace/fig/phasespace.png)
 * ![ハミルトンベクトル場の作り方](/phasespace/fig/phaseflow.png)
