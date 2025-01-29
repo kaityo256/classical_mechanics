@@ -33,6 +33,7 @@
 * ![バネと質点](/virtual_work/fig/spring.png)
   * 作った
 * ![potential](/virtual_work/fig/potential.png)
+  * 作った
 * ![斜面](/virtual_work/fig/slope.png)
 * ![てこ](/virtual_work/fig/lever.png)
 * ![動滑車](/virtual_work/fig/movable_pulley.png)
