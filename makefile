@@ -41,8 +41,13 @@ copy-pdf:
 	cp noether/README.pdf ./classical_mechanics12.pdf
 	cp differential_form/README.pdf ./classical_mechanics13.pdf
 
+zip:
+	zip -r classical_mechanics.zip canonical_transformation differential_form exercise hamilton_principle hamiltonian lagrangian newton noether overview phasespace poisson postface preface preparation quantum_mechanics references variational_principle virtual_work
+
 clean:
 	rm -f $(TARGET) index.html
 
 clean-pdf:
 	rm -f $(PDF) classical_mechanics*.pdf
+
+.PHONY: zip clean clean-pdf
