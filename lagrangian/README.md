@@ -6,7 +6,7 @@
 
 ## 極座標の例
 
-![極座標](fig/polar_coordinate.png)
+![極座標における運動方程式](fig/polar_coordinate.png)
 
 極座標における運動を考えよう。以下のような二次元の極座標系を考える。
 
@@ -345,8 +345,7 @@ $$
 $$
 \begin{aligned}
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{Q}}\right) - \frac{\partial L}{\partial Q}
-&= \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) \frac{dq}{dQ}
-+ \cancel{\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}}\\
+&= \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) \frac{dq}{dQ} + \cancel{\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}}\\
 &- \frac{\partial L}{\partial q} \frac{dq}{dQ} - \cancel{\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}} \\
 &= \left[
 \underbrace{
@@ -362,7 +361,7 @@ $q$を$Q(q)$に変数変換した場合、$q$がオイラー・ラグランジ�
 
 以上の変換を図解しておこう。
 
-![点変換](fig/point_transformation.png)
+![点変換の流れ](fig/point_transformation.png)
 
 ## 多変数の場合
 

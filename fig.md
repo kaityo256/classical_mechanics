@@ -55,8 +55,8 @@
 
 ## ラグランジュ形式の力学(laglangian)
 
-* ![極座標](/lagrangian/fig/polar_coordinate.png)
-* ![点変換](/lagrangian/fig/point_transformation.png)
+* ![極座標における運動方程式](/lagrangian/fig/polar_coordinate.png)
+* ![点変換の流れ](/lagrangian/fig/point_transformation.png)
 
 ## ハミルトン形式の力学(hamiltonian)
 
@@ -76,12 +76,11 @@
 ## 正準変換(canonical_transformation)
 
 * ![正準変換と変分原理](/canonical_transformation/fig/generating_function.png)
-* ![変換則](/canonical_transformation/fig/transform_diagram.png)
+* ![正準変換と母関数](/canonical_transformation/fig/transform_diagram.png)
 
 ## ポアソン括弧(poisson)
 
-* [非可換性](/poisson/fig/noncommutative.png)
-* ![回転の合成](/poisson/fig/composition.png)
+図なし
 
 ## 微小正準変換とネーターの定理
 
@@ -91,10 +90,10 @@
 
 * ![運動方程式の座標に依らない表現](/differential_form/fig/differential_form.png)
 
-## 量子力学
+## 解析力学から量子力学へ
 
 図なし
 
 ## 演習問題(exercise)
 
-* ![ヒンジと紐](/exercise/fig/triangle.png)
+* ![ヒンジと紐による釣り合い](/exercise/fig/triangle.png)
