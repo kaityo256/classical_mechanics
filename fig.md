@@ -32,26 +32,26 @@
   * 作った
 * ![バネと質点](/virtual_work/fig/spring.png)
   * 作った
-* ![potential](/virtual_work/fig/potential.png)
+* ![力の釣り合いとポテンシャル](/virtual_work/fig/potential.png)
   * 作った
-* ![斜面](/virtual_work/fig/slope.png)
-* ![てこ](/virtual_work/fig/lever.png)
-* ![動滑車](/virtual_work/fig/movable_pulley.png)
-* ![stick](/virtual_work/fig/stick.png)
+* ![斜面にある物体に働く力](/virtual_work/fig/slope.png)
+* ![てことモーメント](/virtual_work/fig/lever.png)
+* ![動滑車と力の釣り合い](/virtual_work/fig/movable_pulley.png)
+* ![壁に立てかけられた棒に働く力の釣り合い](/virtual_work/fig/stick.png)
 
 ## ハミルトンの原理(hamilton_principle)
 
-* ![ラグランジアン](/hamilton_principle/fig/lagrangian.png)
-* ![積分路](/hamilton_principle/fig/delta.png)
+* ![運動方程式とポテンシャル](/hamilton_principle/fig/lagrangian.png)
+* ![運動エネルギーの積分路](/hamilton_principle/fig/delta.png)
 
 ## 変分原理(variational_principle)
 
 * ![スネルの法則](/variational_principle/fig/snell.png)
 * ![ホイヘンスの原理](/variational_principle/fig/huygens.png)
-* ![座標軸](/variational_principle/fig/bc_coordinate.png)
-* ![折れ線近似](/variational_principle/fig/bc_snell.png)
-* ![磁石](/variational_principle/fig/magnet.png)
-* ![停留](/variational_principle/fig/stationary.png)
+* ![最速降下曲線の座標軸](/variational_principle/fig/bc_coordinate.png)
+* ![折れ線近似とスネルの法則](/variational_principle/fig/bc_snell.png)
+* ![磁石と力の釣り合い](/variational_principle/fig/magnet.png)
+* ![最大値、最小値、極大値、極小値](/variational_principle/fig/stationary.png)
 
 ## ラグランジュ形式の力学(laglangian)
 
