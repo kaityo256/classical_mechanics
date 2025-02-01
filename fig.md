@@ -36,6 +36,7 @@
   * 作った
 * ![斜面にある物体に働く力](/virtual_work/fig/slope.png)
 * ![てことモーメント](/virtual_work/fig/lever.png)
+  * 作った
 * ![動滑車と力の釣り合い](/virtual_work/fig/movable_pulley.png)
 * ![壁に立てかけられた棒に働く力の釣り合い](/virtual_work/fig/stick.png)
 
