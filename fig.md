@@ -38,6 +38,7 @@
 * ![てことモーメント](/virtual_work/fig/lever.png)
   * 作った
 * ![動滑車と力の釣り合い](/virtual_work/fig/movable_pulley.png)
+  * 作った
 * ![壁に立てかけられた棒に働く力の釣り合い](/virtual_work/fig/stick.png)
 
 ## ハミルトンの原理(hamilton_principle)
