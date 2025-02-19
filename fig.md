@@ -40,6 +40,7 @@
 * ![動滑車と力の釣り合い](/virtual_work/fig/movable_pulley.png)
   * 作った
 * ![壁に立てかけられた棒に働く力の釣り合い](/virtual_work/fig/stick.png)
+  * 作った
 
 ## ハミルトンの原理(hamilton_principle)
 
