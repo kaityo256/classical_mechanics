@@ -45,6 +45,7 @@
 ## ハミルトンの原理(hamilton_principle)
 
 * ![運動方程式とポテンシャル](/hamilton_principle/fig/lagrangian.png)
+  * 作った
 * ![運動エネルギーの積分路](/hamilton_principle/fig/delta.png)
 
 ## 変分原理(variational_principle)
