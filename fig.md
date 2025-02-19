@@ -68,6 +68,7 @@
 * ![ルジャンドル変換の接線による解釈](/hamiltonian/fig/legendre_tangent.png)
 * ![ルジャンドル変換の面積による解釈](/hamiltonian/fig/legendre_area.png)
 * ![正多面体の双対](/hamiltonian/fig/dual.png)
+  * 作った
 
 ## 位相空間とリュービルの定理(phasespace)
 
