@@ -47,6 +47,7 @@
 * ![運動方程式とポテンシャル](/hamilton_principle/fig/lagrangian.png)
   * 作った
 * ![運動エネルギーの積分路](/hamilton_principle/fig/delta.png)
+  * 作った
 
 ## 変分原理(variational_principle)
 
