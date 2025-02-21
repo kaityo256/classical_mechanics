@@ -80,6 +80,7 @@
 * ![物質微分](/phasespace/fig/material_derivative.png)
   * 作った
 * ![2次元の流れの収支](/phasespace/fig/lagrange2d.png)
+  * 作った
 * ![発散の意味](/phasespace/fig/divergence.png)
   * 作った
 
