@@ -7,7 +7,8 @@
 ## 解析力学の概観
 
 * ![式の見方](overview/fig/table.png)
-* ![概観](overview/fig/birds_eye_view.png)
+* ![解析力学の概観](overview/fig/birds_eye_view.png)
+  * 作った
 
 ## 数学的準備
 

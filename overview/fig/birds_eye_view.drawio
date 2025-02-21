@@ -1,170 +1,235 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram name="ページ1" id="Xpi5GvDhhlEL-7WdTvqS">
-    <mxGraphModel dx="529" dy="341" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="10200" math="1" shadow="0">
+    <mxGraphModel dx="1345" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="750" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-1" value="`m\frac{dx}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="20" y="150" width="140" height="70" as="geometry" />
+        <mxCell id="-pB7I64REoCSjXhP6a5t-30" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="1230" height="730" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-2" value="ニュートン力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="25" y="110" width="130" height="30" as="geometry" />
+        <mxCell id="-pB7I64REoCSjXhP6a5t-9" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#9933FF;strokeWidth=3;dashed=1;fontColor=#9933FF;arcSize=5;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="252" y="590" width="970" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0000FF;strokeWidth=3;dashed=1;fontColor=#FF8000;arcSize=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="252" y="40" width="970" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF0000;strokeWidth=3;dashed=1;fontColor=#00994D;arcSize=5;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="932" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#00CC00;strokeWidth=3;dashed=1;fontColor=#00994D;arcSize=5;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="672" y="90" width="530" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF8000;strokeWidth=3;dashed=1;fontColor=#FF8000;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="22" y="55" width="150" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-1" value="`m\frac{dx}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="27" y="125" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-2" value="ニュートン力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF8000;" parent="1" vertex="1">
+          <mxGeometry x="32" y="75" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rrx2s7AU9UJIHRH4i8Ev-3" value="ニュートンの&lt;div&gt;運動方程式&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="20" y="240" width="130" height="30" as="geometry" />
+          <mxGeometry x="32" y="210" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-5" value="`\sum_i F_i=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="240" y="110" width="140" height="50" as="geometry" />
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-5" value="`\sum_i F_i=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="252" y="110" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-6" value="`\sum_i F_i \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="460" y="110" width="140" height="50" as="geometry" />
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-6" value="`\sum_i F_i \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="502" y="110" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-7" value="`m\frac{d^x}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="250" y="190" width="140" height="70" as="geometry" />
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-7" value="`m\frac{d^x}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="262" y="180" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-8" value="`m\frac{d^x}{dt^2}-\sum_i F_i=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="470" y="190" width="140" height="70" as="geometry" />
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-8" value="`m\frac{d^x}{dt^2}-\sum_i F_i=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="502" y="180" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="t1Iy8DMnqRUx4DhuXsr5-1" value="仮想仕事&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;の原理&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="360" y="80" width="130" height="30" as="geometry" />
+          <mxGeometry x="372" y="70" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-2" value="`L=K-V`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="670" y="190" width="140" height="70" as="geometry" />
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-2" value="`L=K-V`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="742" y="180" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-3" value="`\frac{d}{dx}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} = 0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="880" y="180" width="140" height="70" as="geometry" />
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-3" value="`\frac{d}{dx}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} = 0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1012" y="180" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-4" value="`\left(m\frac{d^x}{dt^2}-\sum_i F_i\right) \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="680" y="240" width="140" height="70" as="geometry" />
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-4" value="`\left(m\frac{d^x}{dt^2}-\sum_i F_i\right) \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="761.88" y="230" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="t1Iy8DMnqRUx4DhuXsr5-5" value="ダランベールの原理" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="360" y="260" width="150" height="30" as="geometry" />
+          <mxGeometry x="369.63" y="260" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-7" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#FF0000;strokeColor=#000000;" parent="1" edge="1">
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-9" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="185" y="151.25" as="sourcePoint" />
+            <mxPoint x="242" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="185" y="176.25" as="sourcePoint" />
+            <mxPoint x="242" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-12" value="静力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="184.25" y="75" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-16" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#FF0000;strokeColor=#000000;fontStyle=1;fontSize=16;" parent="1" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="390" y="130" as="sourcePoint" />
-            <mxPoint x="460" y="130" as="targetPoint" />
+            <mxPoint x="682" y="210" as="sourcePoint" />
+            <mxPoint x="752" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-8" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#FF0000;strokeColor=#000000;" parent="1" edge="1">
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-19" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="893.38" y="214.7" as="sourcePoint" />
+            <mxPoint x="943.38" y="214.57" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-20" value="極小作用&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;の原理&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="868" y="150" width="84" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-21" value="ラグランジュ形式の力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#00994D;" parent="1" vertex="1">
+          <mxGeometry x="848" y="100" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-22" value="解析力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000FF;" parent="1" vertex="1">
+          <mxGeometry x="624.88" y="50" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-1" value="`H=p\dot{q}-L`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="334.63" y="464" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-2" value="`p\equiv \frac{\partial L}{\partial \dot{q}}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="330.44" y="403" width="68.37" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-3" value="シュレーディンガー方程式" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="767" y="680" width="236" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-4" value="ルジャンドル変換" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="297" y="497" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="423.5" y="430" as="sourcePoint" />
+            <mxPoint x="483.5" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-6" value="`\dot{q} = \frac{\partial H}{\partial p}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="508.5" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-7" value="`\dot{p} = - \frac{\partial H}{\partial q}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="510.5" y="440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-8" value="`dPdQ=dpdq`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="677" y="387" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-9" value="ハミルトン形式の力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;" parent="1" vertex="1">
+          <mxGeometry x="601.5" y="330" width="195.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-10" value="`\{q_i, p_j\} = \delta_{ij}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="674.5" y="470" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-12" value="正準変換" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="652" y="417" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-13" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="807" y="417" as="sourcePoint" />
+            <mxPoint x="867" y="417" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-14" value="`H\left(q,\frac{\partial W}{\partial q},t\right)+\frac{\partial W}{\partial t} = 0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="922" y="387" width="195" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-17" value="`\hat{p} = -i \frac{h}{2\pi} \frac{\partial}{\partial x}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="542" y="625" width="157.12" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="482" y="659.57" as="sourcePoint" />
+            <mxPoint x="542" y="659.57" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-19" value="`[\hat{x},\hat{p}]= i\frac{h}{2\pi}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="342" y="635" width="127.63" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-20" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="697" y="659.57" as="sourcePoint" />
+            <mxPoint x="757" y="659.57" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-21" value="`\hat{H}\psi=E\psi,\hat{H}=\frac{\hat{p}^2}{2m} + V`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="757" y="635" width="244" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-23" value="ポアソン括弧" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="647" y="507" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-4" value="仮想仕事&lt;div&gt;の原理&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="677" y="150" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-5" value="オイラーラグランジュ方程式" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="959.5" y="155" width="245" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-7" value="正準方程式" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="465.5" y="497" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-8" value="ハミルトンーヤコビ方程式" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="887" y="460" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-10" value="量子力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#9933FF;" vertex="1" parent="1">
+          <mxGeometry x="270" y="605" width="95" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-14" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="435" as="sourcePoint" />
+            <mxPoint x="650" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-15" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="455" as="sourcePoint" />
+            <mxPoint x="650" y="482.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-20" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#FF0000;strokeColor=#000000;fontStyle=1;fontSize=16;" edge="1" parent="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="390" y="220" as="sourcePoint" />
-            <mxPoint x="460" y="220" as="targetPoint" />
+            <mxPoint x="409.63" y="130" as="sourcePoint" />
+            <mxPoint x="479.63" y="130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-9" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="160" y="176.25" as="sourcePoint" />
-            <mxPoint x="200" y="146.25" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="160" y="196.25" as="sourcePoint" />
-            <mxPoint x="200" y="223.75" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-12" value="静力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="200" y="120" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-13" value="動力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="200" y="210" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-16" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#FF0000;strokeColor=#000000;fontStyle=1" parent="1" edge="1">
+        <mxCell id="-pB7I64REoCSjXhP6a5t-21" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#FF0000;strokeColor=#000000;fontStyle=1;fontSize=16;" edge="1" parent="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="620" y="220" as="sourcePoint" />
-            <mxPoint x="690" y="220" as="targetPoint" />
+            <mxPoint x="409.63" y="214.44" as="sourcePoint" />
+            <mxPoint x="479.63" y="214.44" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-19" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;" parent="1" edge="1">
+        <mxCell id="-pB7I64REoCSjXhP6a5t-23" value="動力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="184.25" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-pB7I64REoCSjXhP6a5t-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.568;exitY=0.999;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.603;entryY=-0.061;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="t1Iy8DMnqRUx4DhuXsr5-3" target="bC-y-SfwGKUDFejCJZRV-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="800" y="223.13" as="sourcePoint" />
-            <mxPoint x="850" y="223" as="targetPoint" />
+            <mxPoint x="1087" y="260" as="sourcePoint" />
+            <mxPoint x="202" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1092" y="360" />
+              <mxPoint x="372" y="360" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-20" value="極小作用&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;の原理&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="750" y="170" width="130" height="30" as="geometry" />
+        <mxCell id="-pB7I64REoCSjXhP6a5t-26" value="交換関係" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="362" y="685" width="75" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-21" value="ラグランジュ形式の力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="700" y="100" width="200" height="20" as="geometry" />
+        <mxCell id="-pB7I64REoCSjXhP6a5t-27" value="演算子表現" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="570.5" y="685" width="105" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-22" value="解析力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="420" y="30" width="200" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-1" value="`H=p\dot{q}-L`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="236.5" y="417" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-2" value="`p\equiv \frac{\partial L}{\partial \dot{q}}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="235.5" y="370" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-3" value="シュレーディンガー方程式" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="564" y="570" width="172" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-4" value="ルジャンドル変換" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="194" y="460" width="145" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;" edge="1" parent="1">
+        <mxCell id="-pB7I64REoCSjXhP6a5t-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bC-y-SfwGKUDFejCJZRV-23" target="bC-y-SfwGKUDFejCJZRV-19">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="320.5" y="400" as="sourcePoint" />
-            <mxPoint x="380.5" y="400" as="targetPoint" />
+            <mxPoint x="742" y="500" as="sourcePoint" />
+            <mxPoint x="792" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="610" />
+              <mxPoint x="406" y="610" />
+            </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-6" value="`\dot{q} = \frac{\partial H}{\partial p}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="405.5" y="360" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-7" value="`\dot{p} = - \frac{\partial H}{\partial q}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="407.5" y="410" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-8" value="`dPdQ=dpdq`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="535.5" y="350" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-9" value="ハミルトン形式の力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="200.5" y="340" width="145" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-10" value="`\{q_i, p_j\} = \delta_{ij}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="525.5" y="417" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-12" value="正準変換" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="510.5" y="380" width="145" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-13" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="655.5" y="400" as="sourcePoint" />
-            <mxPoint x="715.5" y="400" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-14" value="`H\left(q,\frac{w}{q},t\right)+\frac{\partial W}{\partial t} = 0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="750" y="380" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-16" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="620" y="370" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-17" value="`\hat{p} = -i \frac{h}{2\pi} \frac{\partial}{\partial x}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="407.5" y="530" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="310" y="544.6" as="sourcePoint" />
-            <mxPoint x="370" y="544.6" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-19" value="`[\hat{x},\hat{p}]= i\frac{h}{2\pi}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="235.5" y="530" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-20" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="490" y="544.6" as="sourcePoint" />
-            <mxPoint x="550" y="544.6" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-21" value="`\hat{H}\psi=E\psi`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="570" y="530" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-22" value="`\hat{H}=\frac{\hat{p}^2}{2m} + V`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="650" y="530" width="94.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-23" value="ポアソン括弧" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="528" y="457" width="145" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
