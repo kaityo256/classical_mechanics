@@ -76,6 +76,7 @@
 * ![ハミルトンベクトル場の作り方](/phasespace/fig/phaseflow.png)
   * 作った
 * ![流入の収支](/phasespace/fig/flow_balance.png)
+  * 作った
 * ![物質微分](/phasespace/fig/material_derivative.png)
 * ![2次元の流れの収支](/phasespace/fig/lagrange2d.png)
 * ![発散の意味](/phasespace/fig/divergence.png)

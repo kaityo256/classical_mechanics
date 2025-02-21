@@ -1,0 +1,93 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+  <diagram id="DaogkuL_IA6g-qFm3fgo" name="ページ1">
+    <mxGraphModel dx="926" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="400" background="#ffffff" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cioTImAXwsyGXYHtM81i-21" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="780" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="320" as="sourcePoint" />
+            <mxPoint x="700" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-3" value="`x`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="710" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-4" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="330" as="sourcePoint" />
+            <mxPoint x="200" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-5" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="330" as="sourcePoint" />
+            <mxPoint x="480" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-6" value="`x`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="170" y="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-7" value="`x+h`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="450" y="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-8" value="`\rho(x)`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="170" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-9" value="`\rho(x+h)`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-10" value="" style="endArrow=none;html=1;rounded=0;curved=1;strokeColor=#0000FF;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="140" as="sourcePoint" />
+            <mxPoint x="700" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="120" />
+              <mxPoint x="350" y="150" />
+              <mxPoint x="480" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-11" value="密度場" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="570" y="60" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-12" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=26.486486486486484;endSize=7.34054054054054;fillColor=#FF0000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="230" as="sourcePoint" />
+            <mxPoint x="200" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-13" value="`\rho(x)v(x)`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="20" y="210" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-14" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=36.36363636363636;endSize=11.054545454545453;fillColor=#FF0000;width=14.545454545454545;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="229.09" as="sourcePoint" />
+            <mxPoint x="560" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-15" value="`\rho(x+h)v(x+h)`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="570" y="200" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-16" value="入ってくる量" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-17" value="出ていく量" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="300" as="sourcePoint" />
+            <mxPoint x="480" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cioTImAXwsyGXYHtM81i-19" value="着目している領域" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="240" y="260" width="200" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
