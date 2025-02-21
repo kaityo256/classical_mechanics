@@ -88,6 +88,7 @@
 ## 正準変換(canonical_transformation)
 
 * ![正準変換と変分原理](/canonical_transformation/fig/generating_function.png)
+   * 作った。
 * ![正準変換と母関数](/canonical_transformation/fig/transform_diagram.png)
 
 ## ポアソン括弧(poisson)
