@@ -55,7 +55,7 @@
 * ![スネルの法則](/variational_principle/fig/snell.png)
   * 作った
 * ![ホイヘンスの原理](/variational_principle/fig/huygens.png)
-  *
+  * 作った
 * ![最速降下曲線の座標軸](/variational_principle/fig/bc_coordinate.png)
 * ![折れ線近似とスネルの法則](/variational_principle/fig/bc_snell.png)
   * 作った
@@ -73,6 +73,7 @@
 ## ハミルトン形式の力学(hamiltonian)
 
 * ![ルジャンドル変換の接線による解釈](/hamiltonian/fig/legendre_tangent.png)
+  * 作った
 * ![ルジャンドル変換の面積による解釈](/hamiltonian/fig/legendre_area.png)
 * ![正多面体の双対](/hamiltonian/fig/dual.png)
   * 作った
