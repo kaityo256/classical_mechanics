@@ -55,6 +55,7 @@
 * ![スネルの法則](/variational_principle/fig/snell.png)
   * 作った
 * ![ホイヘンスの原理](/variational_principle/fig/huygens.png)
+  *
 * ![最速降下曲線の座標軸](/variational_principle/fig/bc_coordinate.png)
 * ![折れ線近似とスネルの法則](/variational_principle/fig/bc_snell.png)
 * ![磁石と力の釣り合い](/variational_principle/fig/magnet.png)
