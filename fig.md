@@ -67,6 +67,7 @@
 ## ラグランジュ形式の力学(laglangian)
 
 * ![極座標における運動方程式](/lagrangian/fig/polar_coordinate.png)
+  * 作った
 * ![点変換の流れ](/lagrangian/fig/point_transformation.png)
 
 ## ハミルトン形式の力学(hamiltonian)
