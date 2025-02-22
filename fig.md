@@ -61,6 +61,7 @@
   * 作った
 * ![磁石と力の釣り合い](/variational_principle/fig/magnet.png)
 * ![最大値、最小値、極大値、極小値](/variational_principle/fig/stationary.png)
+  * 作った
 
 ## ラグランジュ形式の力学(laglangian)
 
