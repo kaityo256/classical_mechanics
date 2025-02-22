@@ -58,6 +58,7 @@
   *
 * ![最速降下曲線の座標軸](/variational_principle/fig/bc_coordinate.png)
 * ![折れ線近似とスネルの法則](/variational_principle/fig/bc_snell.png)
+  * 作った
 * ![磁石と力の釣り合い](/variational_principle/fig/magnet.png)
 * ![最大値、最小値、極大値、極小値](/variational_principle/fig/stationary.png)
 
