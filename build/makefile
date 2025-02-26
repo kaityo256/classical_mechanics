@@ -1,7 +1,5 @@
 TARGET=classical_mechanics.pdf
-RE=preface.re overview.re preparation.re newton.re virtual_work.re hamilton_principle.re lagrangian.re hamiltonian.re variational_principle.re phasespace.re poisson.re canonical_transformation.re poisson.re noether.re differential_form.re quantum_mechanics.re exercise.re postface.re references.re
-
-RE3=preface.re overview.re preparation.re newton.re virtual_work.re postface.re references.re
+RE=preface.re overview.re preparation.re newton.re virtual_work.re hamilton_principle.re lagrangian.re hamiltonian.re variational_principle.re phasespace.re poisson.re canonical_transformation.re poisson.re noether.re differential_form.re quantum_mechanics.re exercise.re answer.re postface.re references.re
 
 DIRS=$(RE:.re=)
 
