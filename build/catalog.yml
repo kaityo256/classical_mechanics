@@ -15,6 +15,7 @@ CHAPS:
   - poisson.re
   - noether.re
   - differential_form.re
+  - quantum_mechanics.re
   - exercise.re
   - answer.re
 
