@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="pandoc">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                                <title>解答と解説</title>
+
+        <style>
+            .btn-square {
+                display: inline-block;
+                padding: 0.5em 0.5em;
+                text-decoration: none;
+                background: #668ad8;
+                color: #FFF;
+                border-bottom: solid 4px #626295;
+                border-radius: 5px;
+            }
+
+            .btn-square:active {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+                border-bottom: none;
+            }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+                type="text/javascript"></script>
+                        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="icon" href="https://kaityo256.github.io/classical_mechanics/favicon.ico">
+        <link rel="stylesheet" href="https://kaityo256.github.io/classical_mechanics/github-markdown.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <article class="markdown-body">
+                                    <header>
+                <h1 class="title">解答と解説</h1>
+                                                            </header>
+                                    <p><a href="../index.html">[Up]</a>
+                                    <a
+                                    href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
+                                    <h1 id="section">【1】</h1>
+                                    <h2 id="解答">解答</h2>
+                                    <ol type="1">
+                                    <li><p>ア、イ、ウ</p></li>
+                                    <li><p>ア、ウ</p></li>
+                                    <li><p>なし</p></li>
+                                    </ol>
+                                    <h2 id="解説">解説</h2>
+                                    <p>力学的な条件と保存則の関係を問う問題である。複雑な問題が解けても、このように単純なことを改めて問われると誤答することが多い。</p>
+                                    <ol type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>外力が働いていないため、運動エネルギー、並進運動量、角運動量は全て保存する。「中心力が働いている時に角運動量が保存する」と、外力が働いていない場合に「角運動量が保存しない」と誤答することが多い。</p>
+                                    <p>角運動量の保存については以下のように直接示すと教育的である。系が等速直線運動をすることから、
+                                    <span class="math display">\[
+                                        \begin{aligned}
+                                        x(t) &amp; = x(0) + \dot{x} t \\
+                                        y(t) &amp; = y(0) + \dot{y} t
+                                        \end{aligned}
+                                    \]</span> となる。従って、 <span
+                                    class="math display">\[
+                                        \begin{aligned}
+                                        x\dot{y} - y\dot{x} &amp; =
+                                    (x(0) + \dot{x}  t)\dot{y} - (y(0) +
+                                    \dot{y}  t)\dot{x} \\
+                                                            &amp;
+                                    =  x(0)\dot{y} - y(0) \dot{x}
+                                        \end{aligned}
+                                    \]</span> 今、<span
+                                    class="math inline">\(\dot{x},
+                                    \dot{y}\)</span>は時間依存しない、すなわち時間微分するとゼロであるから、<span
+                                    class="math inline">\(x\dot{y} -
+                                    y\dot{x}\)</span>の時間微分もゼロ、すなわち保存量である。</p>
+                                    <p>また、中心力ポテンシャル<span
+                                    class="math inline">\(U(r)\)</span>の特別な場合であり、極座標表示のハミルトニアン
+                                    <span class="math display">\[
+                                        H = \frac{1}{2m}\left(p_r^2
+                                    +\frac{p_\theta^2}{r^2}\right)
+                                    \]</span> からハミルトニアンに<span
+                                    class="math inline">\(\theta\)</span>依存性がなく、<span
+                                    class="math inline">\(\dot{p}_\theta
+                                    = -\partial_\theta
+                                    H=0\)</span>からも角運動量保存がわかる。</p>
+                                    <ol start="2" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>全エネルギー及び原点周りの角運動量が保存する。ラグランジアンを学んだ直後であると、保存量とラグランジアンを混同し、イが保存すると誤答しやすい。</p>
+                                    <ol start="3" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>全エネルギー及び<span
+                                    class="math inline">\(x\)</span>方向の運動量のみ保存するが、選択肢に存在しない。ウの位置エネルギーを保存すると誤答することが多い。</p>
+                                    <h1 id="section-1">【2】</h1>
+                                    <ol type="1">
+                                    <li>質点<span
+                                    class="math inline">\(A\)</span>の<span
+                                    class="math inline">\(x\)</span>方向、<span
+                                    class="math inline">\(y\)</span>方向の釣り合い。
+                                    <span class="math display">\[
+                                    \begin{aligned}
+                                    T \sin \theta &amp; = N \sin
+                                    \phi      \\
+                                    T \cos \theta &amp; = N \cos \phi +
+                                    mg
+                                    \end{aligned}
+                                    \]</span></li>
+                                    </ol>
+                                    <p>質点<span
+                                    class="math inline">\(B\)</span>の<span
+                                    class="math inline">\(x\)</span>方向、<span
+                                    class="math inline">\(y\)</span>方向の釣り合い。
+                                    <span class="math display">\[
+                                    \begin{aligned}
+                                    N \sin \phi &amp; = F  \\
+                                    N \cos \phi &amp; = Mg
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <ol start="2" type="1">
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp; = l \sin
+                                    \theta                \\
+                                    y &amp; = -l \cos
+                                    \theta               \\
+                                    X &amp; = l (\sin \theta + \sin
+                                    \phi)  \\
+                                    Y &amp; = -l (\cos \theta + \cos
+                                    \phi)
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    \delta x  &amp; = l \cos \theta
+                                    \delta
+                                    \theta                           \\
+                                    \delta y  &amp; = l \sin \theta
+                                    \delta
+                                    \theta                           \\
+                                    \delta X  &amp; = l (\cos \theta
+                                    \delta \theta + \cos \phi \delta
+                                    \phi) \\
+                                    \delta  Y &amp; = l (\sin \theta
+                                    \delta \theta + \sin \phi \delta
+                                    \phi) \\
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    F_\theta &amp; = (m+M)lg \sin \theta
+                                    - Fl \cos \theta \\
+                                    F_\phi   &amp; =  Mlg \sin \phi - Fl
+                                    \cos \phi
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    \tan \theta &amp; = \frac{F}{(m+M)g}
+                                    \\
+                                    \tan \phi   &amp; =  \frac{F}{Mg}
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    </ol>
+                                    <h2 id="解説-1">解説</h2>
+                                    <p>解析力学ではお約束の二重振り子の問題。お約束ではあるが、一般化座標や仮想仕事の理解の確認に便利である。</p>
+                                    <h1 id="section-2">【3】</h1>
+                                    <h2 id="解答-1">解答</h2>
+                                    <ol type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x_g &amp; = \frac{x}{2} +
+                                    \frac{X}{4}                            \\
+                                    y_g &amp; = \frac{y}{2} +
+                                    \frac{Y}{4}
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <ol start="2" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    x &amp; = l \sin
+                                    \theta                            \\
+                                    y &amp; = - l \cos
+                                    \theta                          \\
+                                    X &amp; = l (\sin \theta - \sin
+                                    (\theta + \phi))   \\
+                                    Y &amp; = - l (\cos \theta - \cos
+                                    (\theta + \phi)) \\
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <ol start="3" type="1">
+                                    <li><span class="math display">\[
+                                    3 \sin \theta = \sin (\theta + \phi)
+                                    \]</span></li>
+                                    </ol>
+                                    <h2 id="解説-2">解説</h2>
+                                    <p>ヒンジと糸を持つ系の釣り合い条件である。ラグランジアンによる記述や、仮想仕事の原理を学ぶ際、やや複雑な機械的構造を扱うことが多い。この問題もその例にもれずやや複雑な系だが、重心の<span
+                                    class="math inline">\(x\)</span>座標がゼロとなるため、やや問題が解きやすくなっている。</p>
+                                    <ol type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>棒<span
+                                    class="math inline">\(OA\)</span>の重心の座標が<span
+                                    class="math inline">\((x/2,
+                                    y/2)\)</span>、棒<span
+                                    class="math inline">\(AB\)</span>の重心の座標が<span
+                                    class="math inline">\(((x+X)/2,
+                                    (y+Y)/2)\)</span>であることから、
+                                    <span class="math display">\[
+                                        \begin{aligned}
+                                        x_g &amp; =
+                                    \frac{1}{2}\left(\frac{x}{2} +
+                                    \frac{x+X}{2} \right) \\
+                                            &amp; = \frac{x}{2} +
+                                    \frac{X}{4}                            \\
+                                        y_g &amp; = \frac{y}{2} +
+                                    \frac{Y}{4}
+                                        \end{aligned}
+                                    \]</span></p>
+                                    <ol start="2" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>極座標の定義から導出は容易であろう。</p>
+                                    <ol start="3" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>重心座標<span
+                                    class="math inline">\(y_g\)</span>による位置エネルギーの変化を考えれば良い。総質量が<span
+                                    class="math inline">\(2m\)</span>であることに注意。</p>
+                                    <p><span class="math display">\[
+                                        \begin{aligned}
+                                        W &amp; = 2mg \delta
+                                    y_g                                                               \\
+                                            &amp; = \frac{mgl}{2} \left(
+                                    3 \sin \theta - \sin(\theta +
+                                    \phi)\right)\delta \theta \\
+                                            &amp; = F_\theta \delta
+                                    \theta
+                                        \end{aligned}
+                                    \]</span> 従って、 <span
+                                    class="math display">\[
+                                        F_\theta =  \frac{mgl}{2} \left(
+                                    3 \sin \theta - \sin(\theta +
+                                    \phi)\right)
+                                    \]</span></p>
+                                    <p>また、釣り合いと座標の取り方から、「<span
+                                    class="math inline">\(x\)</span>座標の重心位置が<span
+                                    class="math inline">\(0\)</span>でなければならない」という条件を使っても求めることができる。
+                                    <span class="math display">\[
+                                        \begin{aligned}
+                                        x_g &amp; = \frac{x}{2} +
+                                    \frac{X}{4}                                                 \\
+                                            &amp; = \frac{l}{2} \sin
+                                    \theta + \frac{l}{4} (\sin \theta -
+                                    \sin(\theta + \phi)) \\
+                                            &amp; =
+                                    \frac{l}{4}\left(3\sin \theta -
+                                    \sin(\theta + \phi)
+                                    \right)               \\
+                                            &amp; = 0
+                                        \end{aligned}
+                                    \]</span></p>
+                                    <h1 id="section-3">【4】</h1>
+                                    <h2 id="解答-2">解答</h2>
+                                    <ol type="1">
+                                    <li><p><span class="math display">\[
+                                    \frac{1}{2}m (\dot{r}^2 + r^2
+                                    \dot{\theta}^2)
+                                    \]</span></p></li>
+                                    <li></li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                        \frac{1}{2}m (\dot{r}^2 + r^2
+                                    \dot{\theta}^2) - U(r)
+                                    \]</span></p>
+                                    <ol start="3" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                        \begin{aligned}
+                                        m(\ddot{r} - r
+                                    \dot{\theta}^2)    &amp; = -
+                                    U&#39;(r) \\
+                                        m \frac{d}{dt} (r^2
+                                    \dot{\theta}) &amp; = 0
+                                        \end{aligned}
+                                    \]</span></p>
+                                    <h2 id="解説-3">解説</h2>
+                                    <p>角運動量保存則がラグランジュの運動方程式として直接現れる例である。最初にラグランジアンを扱う際は、二次元極座標を扱うのがわかりやすいであろう。</p>
+                                    <h1 id="section-4">【5】</h1>
+                                    <h2 id="解答-3">解答</h2>
+                                    <p>合成関数の微分公式から <span
+                                    class="math display">\[
+                                        \frac{dF}{dx} = \frac{\partial
+                                    F}{\partial f}f&#39;+\frac{\partial
+                                    F}{\partial f&#39;}f&#39;&#39;
+                                    \]</span>
+                                    また、オイラー・ラグランジュ方程式より
+                                    <span class="math display">\[
+                                        \frac{d}{dx}\left(\frac{\partial
+                                    F}{\partial f&#39;}\right) =
+                                    \frac{\partial F}{\partial f}
+                                    \]</span> 以上より、 <span
+                                    class="math display">\[
+                                        \begin{aligned}
+                                        \frac{dB}{dx} &amp; =
+                                    \frac{d}{dx} \left( F - f&#39;
+                                    \frac{\partial F}{\partial
+                                    f&#39;}\right)                                                                               \\
+                                                        &amp; =
+                                    \underbrace{\frac{dF}{dx}}_{f&#39;
+                                    \partial_f F  +
+                                    f&#39;&#39;\partial_f&#39; F} -
+                                    f&#39;&#39; \frac{\partial
+                                    F}{\partial f&#39;}
+                                        -  f&#39;
+                                    \underbrace{\frac{d}{dx}\left(\frac{\partial
+                                    F}{\partial
+                                    f&#39;}\right)}_{\partial_f
+                                    F}                                                                        \\
+                                                        &amp; = f&#39;
+                                    \frac{\partial F}{\partial f} +
+                                    f&#39;&#39; \frac{\partial
+                                    F}{\partial f&#39;} - f&#39;&#39;
+                                    \frac{\partial F}{\partial f&#39;}
+                                    -  f&#39; \frac{\partial F}{\partial
+                                    f} \\
+                                                        &amp; = 0
+                                        \end{aligned}
+                                    \]</span> 以上から、<span
+                                    class="math inline">\(dB/dx =
+                                    0\)</span>が示された。</p>
+                                    <h2 id="解説-4">解説</h2>
+                                    <p>解析力学において頻出する合成関数の微分ができるか問う問題である。変分原理においてベルトラミの公式は頻繁に利用するため、一度導出させておくのは教育的であろう。</p>
+                                    <h1 id="section-5">【6】</h1>
+                                    <h2 id="解答-4">解答</h2>
+                                    <ol type="1">
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    P_1 &amp; = p_1 + p_2 \\
+                                    P_2 &amp; = p_1 - p_2
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    H = \frac{1}{4m}(P_1^2+P_2^2) +
+                                    U(2Q^2)
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    \{P_1, H\} = 0
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    \{P_2, H\} = - 2U&#39;(2Q^2)
+                                    \]</span></p></li>
+                                    </ol>
+                                    <h2 id="解説-5">解説</h2>
+                                    <p>変数変換により、重心の運動量が保存することを確認する問題である。</p>
+                                    <ol type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>きちんと定義にもどって計算する。</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    q^1 &amp; = Q^1+Q^2 \\
+                                    q^2 &amp; = Q^1-Q^2
+                                    \end{aligned}
+                                    \]</span> であるから、 <span
+                                    class="math display">\[
+                                    \begin{aligned}
+                                    \dot{q}^1 &amp; =
+                                    \dot{Q}^1+\dot{Q}^2 \\
+                                    \dot{q}^2 &amp; =
+                                    \dot{Q}^1-\dot{Q}^2
+                                    \end{aligned}
+                                    \]</span>
+                                    ここで、一般化運動量の定義から、
+                                    <span class="math display">\[
+                                    \begin{aligned}
+                                    P_1 &amp; = \frac{\partial
+                                    L}{\partial
+                                    \dot{Q}^1}                                                                                                                                 \\
+                                        &amp; = \frac{\partial
+                                    L}{\partial \dot{q}^1}\frac{\partial
+                                    \dot{q}^1}{\partial
+                                    \dot{Q}^1}+\frac{\partial
+                                    L}{\partial \dot{q}^2}\frac{\partial
+                                    \dot{q}^2}{\partial \dot{Q}^1} \\
+                                        &amp; = p_1 + p_2
+                                    \end{aligned}
+                                    \]</span> 同様に、 <span
+                                    class="math display">\[
+                                    P_2 = p_1 - p_2
+                                    \]</span></p>
+                                    <p>定義に戻らないと、2のファクターをよく間違える。</p>
+                                    <ol start="2" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p>新しい運動量を<span
+                                    class="math inline">\(P_1 =
+                                    p_1+p_2\)</span>と定義するか<span
+                                    class="math inline">\(P_1 =
+                                    (p_1+p_2)/2\)</span>と定義するかによって、変換後のハミルトニアンの係数が変わることに注意。</p>
+                                    <ol start="3" type="1">
+                                    <li></li>
+                                    </ol>
+                                    <p><span class="math display">\[
+                                    \{P_1, H\} = 0
+                                    \]</span></p>
+                                    <p>より、<span
+                                    class="math inline">\(P_1\)</span>が時間不変量であることがわかる。一方、相対運動量である<span
+                                    class="math inline">\(P_2\)</span>は保存しない。</p>
+                                    <p><span class="math display">\[
+                                    \{P_2, H\} =- \frac{\partial
+                                    H}{\partial Q^2} = - 2U&#39;(2Q^2)
+                                    \]</span></p>
+                                    <p>微分により、係数<span
+                                    class="math inline">\(2\)</span>が出てくることに注意。</p>
+                                    <h1 id="section-6">【7】</h1>
+                                    <h2 id="解答-5">解答</h2>
+                                    <ol type="1">
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q^1 &amp; = q^1 + \varepsilon
+                                    \frac{p_1}{m} \\
+                                    P_1 &amp; = p_1 - \varepsilon k
+                                    q^1         \\
+                                    Q^2 &amp; = q^2 + \varepsilon
+                                    \frac{p_2}{m} \\
+                                    P_2 &amp; = p_2 - \varepsilon k q^2
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    <li><p><span class="math display">\[
+                                    \begin{aligned}
+                                    Q^1 &amp; = q^1 - \varepsilon q^2 \\
+                                    P_1 &amp; = p_1 - \varepsilon p_2 \\
+                                    Q^2 &amp; = q^2 + \varepsilon q^1 \\
+                                    P_2 &amp; = p_2 + \varepsilon p_1
+                                    \end{aligned}
+                                    \]</span></p></li>
+                                    </ol>
+                                    <h2 id="解説-6">解説</h2>
+                                    <p>それぞれ、(1)が微小な時間発展、(2)が微小な回転操作に対応している。余裕があれば、この操作によるハミルトニアンの変化が高次となり、それぞれ<span
+                                    class="math inline">\(J\)</span>が保存量であることを示させると良い。</p>
+                    </article>
+    </body>
+
+    </html>
