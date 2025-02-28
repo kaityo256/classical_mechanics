@@ -74,7 +74,7 @@ $$
 \frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} = 1
 $$
 
-この条件を満たす変数変換を **正準変換(canonical transform)** と呼ぶ。先程の条件は、行列式の形にまとめることができる。
+この条件を満たす変数変換を **正準変換**(canonical transform) と呼ぶ。先程の条件は、行列式の形にまとめることができる。
 
 $$
 \begin{vmatrix}
@@ -370,7 +370,7 @@ P &= P(q,p)
 \end{aligned}
 $$
 
-という正準変換$(q,p) \rightarrow (Q,P)$を作ることができる。このように、$W$は正準変換を生み出す関数となっているため、 **母関数(generating function)** と呼ぶ。
+という正準変換$(q,p) \rightarrow (Q,P)$を作ることができる。このように、$W$は正準変換を生み出す関数となっているため、 **母関数**(generating function) と呼ぶ。
 
 母関数は、変換前後の変数をそれぞれ含んでなければならない。先程の正準変換の母関数$W(q,Q)$は、新旧の一般化座標を引数としていた。これをType 1と呼び、慣習的に$W_1$と表す。ここからルジャンドル変換により自由変数を取り直そう。
 

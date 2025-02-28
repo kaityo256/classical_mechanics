@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>解析力学は、ニュートンの運動方程式と本質的に等価なことを延々と式変形していく学問である。その結果、仮想仕事の原理や変分原理、ラグランジアン、ハミルトニアンといった概念が生まれ、ニュートン力学が再定式化されるのみならず、量子力学へとつながる。多くの学問がそうであるように、解析力学はニュートン力学を抽象化する。その過程で「いま、ポアソン括弧を学んでいるけど、なんのためだっけ？」と迷子になりがちである。そこで、最初に本書で学ぶ全体像をざっと概観ておこう。</p>
+                                    <!--- abstract --->
+                                    <p>解析力学は、ニュートンの運動方程式と本質的に等価なことを延々と式変形していく学問である。その結果、仮想仕事の原理や変分原理、ラグランジアン、ハミルトニアンといった概念が生まれ、ニュートン力学が再定式化されるのみならず、量子力学へとつながる。多くの学問がそうであるように、解析力学はニュートン力学を抽象化する。その過程で「いま、ポアソン括弧を学んでいるけど、なんのためだっけ？」と迷子になりがちである。そこで、最初に本書で学ぶ全体像をざっと概観ておこう。
+                                    <!--- end ---></p>
                                     <h1
                                     id="式の見方について">式の見方について</h1>
                                     <p>解析力学は、言ってしまえばニュートンの運動方程式をひたすら変数変換するだけの学問だ。それにより問題を見通しよく定式化し、場合によっては簡単に解けるようになる。本書でも運動方程式が解けるようになることを目標の一つとはするが、本書を通じて本当に学んで欲しいのは、解析力学を通してこれまでとは異なるものの見方ができることを実感することである。そこで、本格的に解析力学を学ぶ前に、式の視点の変え方についていくつか例を挙げておこう。</p>
@@ -89,11 +89,11 @@
                                     class="math inline">\(m\)</span></li>
                                     </ul>
                                     <p>となっている。</p>
-                                    <p>同様に、世の中には「外から何か操作した時に、対象が応答し、その係数が応答のしやすさを表す」という式が多いことがわかる。例えばバネに対する力と長さの関係式</p>
+                                    <p>同様に、世の中には「外から何か操作した時に、対象が応答し、その係数が応答のしやすさを表す」という式が多いことがわかる。例えばバネに対する力と長さの関係式を考えよう。</p>
                                     <p><span class="math display">\[
                                     F = k x
                                     \]</span></p>
-                                    <p>を考えよう。これは「バネ定数<span
+                                    <p>これは「バネ定数<span
                                     class="math inline">\(k\)</span>のバネに、力<span
                                     class="math inline">\(F\)</span>を加えると、<span
                                     class="math inline">\(x\)</span>だけ伸びる」という関係を表している(フックの法則)。これも、</p>
@@ -111,11 +111,11 @@
                                     <p>電流と電圧の関係を表すオームの法則についても同じことが言える。抵抗<span
                                     class="math inline">\(R\)</span>の物体に電圧<span
                                     class="math inline">\(V\)</span>をかけると、電流<span
-                                    class="math inline">\(I\)</span>が流れるという式は</p>
+                                    class="math inline">\(I\)</span>が流れるという式は以下のようにかける。</p>
                                     <p><span class="math display">\[
                                     V = R I
                                     \]</span></p>
-                                    <p>とかける。これも、</p>
+                                    <p>これも、以下のように分類できる。</p>
                                     <ul>
                                     <li>外から与える操作の大きさ:
                                     電圧<span
@@ -125,7 +125,6 @@
                                     <li>対象の応答のしにくさ: 抵抗<span
                                     class="math inline">\(R\)</span></li>
                                     </ul>
-                                    <p>と分類できる。</p>
                                     <p>外から与える操作の大きさは制御可能であり、対象の応答は観測可能であるとしよう。すると、これらの式は「対象になんらかの操作をして、その応答を測定することで、対象の個性を調べる」という意味を持つ。つまり、<span
                                     class="math inline">\(F=ma\)</span>という式は「質量<span
                                     class="math inline">\(m\)</span>の物体に力<span
@@ -135,14 +134,14 @@
                                     class="math inline">\(a\)</span>が生じた場合、その比<span
                                     class="math inline">\(F/a\)</span>が物体の動かしにくさであり、それを質量<span
                                     class="math inline">\(m\)</span>と呼ぶ」という、質量の定義式とみなすこともできる。世の中の物理法則はほとんど「外からの操作と、対象の応答が比例し、その比例係数が対象の性質を決める」という形をしている。</p>
-                                    <p>さて、先程は力を操作、加速度を応答と考えたが、力を応答と考える立場も可能である。通常、我々は質量の大きさを重量で判断する。これは一様な重力加速度<span
-                                    class="math inline">\(g\)</span>が働く世界においては、</p>
+                                    <p>さて、先程は力を操作、加速度を応答と考えたが、力を応答と考える立場も可能である。通常、我々は質量の大きさを重量で判断する。一様な重力加速度<span
+                                    class="math inline">\(g\)</span>が働く世界において、以下の運動方程式を考える。</p>
                                     <p><span class="math display">\[
                                     F = mg
                                     \]</span></p>
-                                    <p>により、質量<span
+                                    <p>これは質量<span
                                     class="math inline">\(m\)</span>の物体には<span
-                                    class="math inline">\(mg\)</span>という力がかかり、その力の大きさ(重量)をもって質量の大小を感じていることになる。この式も本質的には<span
+                                    class="math inline">\(mg\)</span>という力がかかり、その力の大きさ(重量)をもって質量の大小を感じていることを意味する。この式も本質的には<span
                                     class="math inline">\(F=ma\)</span>と同じ式であるが、重力加速度が外からの操作、力が応答(観測量)である点で、入力と出力が逆転している。</p>
                                     <p>我々が日常で感じる質量は<span
                                     class="math inline">\(F=mg\)</span>を通じた力、すなわち重量であることが多いが、それでは無重量空間において質量が定義できない。しかし、<span
@@ -153,13 +152,13 @@
                                     class="math inline">\(ma\)</span>により<span
                                     class="math inline">\(F\)</span>を定義している、とみなすこともできる。すなわち、質量が既知の物体の加速度運動の様子から、物体にかかっている力を推定するというものだ。例えば惑星の運動から星同士に働く力を推定し、万有引力の法則の発見につながったのはこの見方である。</p>
                                     <p>以上のように、<span
-                                    class="math inline">\(F=ma\)</span>という式は、</p>
+                                    class="math inline">\(F=ma\)</span>という式は、以下のいずれともみなすことができる。</p>
                                     <ul>
                                     <li>力と質量が既知である時、どのように物体が運動するか、運動を規定する式</li>
                                     <li>力と加速度が既知である時、物体の質量を定義する式</li>
                                     <li>質量と加速度が既知である時、物体に働く力を定義する式</li>
                                     </ul>
-                                    <p>のいずれともみなすことができる。このうちどれが正しい、正しくないという議論は意味がない。様々な見方ができるというのが大事な点である。</p>
+                                    <p>このうちどれが正しい、正しくないという議論は意味がない。様々な見方ができるというのが大事な点である。</p>
                                     <p><span
                                     class="math inline">\(F=ma\)</span>という式について、さらに別の見方をしてみよう。<span
                                     class="math inline">\(ma\)</span>を右辺に移項して、こんな式を作ってみる。</p>
@@ -199,15 +198,16 @@
                                     class="math inline">\(m\)</span>が質量、<span
                                     class="math inline">\(a\)</span>が加速度である。いま、座標を<span
                                     class="math inline">\(x\)</span>とし、力が保存力であるとして、<span
-                                    class="math inline">\(F=-V&#39;(r)\)</span>と書ける場合を考えると、運動方程式は</p>
+                                    class="math inline">\(F=-V&#39;(r)\)</span>と書ける場合を考えると、運動方程式は以下のようにかける。</p>
                                     <p><span class="math display">\[
                                     m \frac{d^2 x}{dt^2} = - V&#39;(x)
                                     \]</span></p>
-                                    <p>となる。この方程式の初期値問題を解くのがニュートン力学の目的であった。もし物体が静止している場合、左辺はゼロであるから、</p>
+                                    <p>この方程式の初期値問題を解くのがニュートン力学の目的であった。</p>
+                                    <p>もし物体が静止している場合、左辺はゼロであるから、</p>
                                     <p><span class="math display">\[
                                     F = -V&#39;(x) = 0
                                     \]</span></p>
-                                    <p>となる。これは、物体に働く力の総和<span
+                                    <p>これは、物体に働く力の総和<span
                                     class="math inline">\(F\)</span>が釣り合っている状態(<span
                                     class="math inline">\(F=0\)</span>)を表している。このように静止状態にある物体に働く力を調べる学問を静力学という。我々は後に、力が釣り合っているならば、拘束条件を破らないような変位を引き起こす力のする仕事はゼロであるという、仮想仕事の原理を学ぶ。</p>
                                     <p>物体が力をうけて運動している場合、加速度はゼロではなくなる。この状態を動力学と呼ぶ。動力学を表す運動方程式は二階の微分方程式である。ここで、新たな変数<span
@@ -235,20 +235,19 @@
                                     = -\frac{dV}{dt}
                                     \]</span></p>
                                     <p>ここで、新たな物理量<span
-                                    class="math inline">\(K\)</span>を</p>
-                                    <p><span class="math display">\[
+                                    class="math inline">\(K\)</span>を
+                                    <span class="math display">\[
                                     K = \frac{1}{2}mv^2
-                                    \]</span></p>
-                                    <p>として導入すると、</p>
-                                    <p><span class="math display">\[
+                                    \]</span> として導入すると、 <span
+                                    class="math display">\[
                                     \frac{d}{dt} \left( K+V \right) = 0
-                                    \]</span></p>
-                                    <p>となる。これがエネルギー保存則である。</p>
-                                    <p>運動方程式は、運動量の時間変化と力を結ぶ等式である。等式であるから移項することができる。すると、</p>
-                                    <p><span class="math display">\[
+                                    \]</span>
+                                    となる。これがエネルギー保存則である。</p>
+                                    <p>運動方程式は、運動量の時間変化と力を結ぶ等式である。等式であるから移項することができる。すると、
+                                    <span class="math display">\[
                                     F = - m\frac{dv}{dt} -V&#39;(x) = 0
-                                    \]</span></p>
-                                    <p>と、運動量の変化をあたかも力のように扱うことができ、力の釣り合いの式とみなすことができる。これをダランベールの原理と呼ぶ。</p>
+                                    \]</span>
+                                    と、運動量の変化をあたかも力のように扱うことができ、力の釣り合いの式とみなすことができる。これをダランベールの原理と呼ぶ。</p>
                                     <p>さて、右辺第二項はポテンシャルエネルギーを位置で微分したものだ。同様に、右辺第一項も、運動エネルギーを速度で偏微分した上で、さらに時間微分したものであるとみなすことができる。</p>
                                     <p><span class="math display">\[
                                     m\frac{dv}{dt} =
@@ -270,13 +269,13 @@
                                     L(x, \dot{x}) \equiv K(\dot{x}) -
                                     V(x)
                                     \]</span></p>
-                                    <p>この量をラグランジアンと呼ぶ。先程の運動方程式はラグランジアンを用いると</p>
-                                    <p><span class="math display">\[
+                                    <p>この量をラグランジアンと呼ぶ。先程の運動方程式はラグランジアンを用いると
+                                    <span class="math display">\[
                                     \frac{d}{dt}\left( \frac{\partial
                                     L}{\partial \dot{x}} \right) =
                                     \frac{\partial L}{\partial x}
-                                    \]</span></p>
-                                    <p>と書きなおすことができる。これをオイラー・ラグランジュ方程式と呼び、この式を使う力学をラグランジュ形式の力学と呼ぶ。静力学で力が釣り合っている時、ポテンシャル関数を考え、それを最小にする場所として位置が決まった。同様に動力学においてもなんらかのポテンシャルがあり、それを最小にするように運動が決まると考えることができる。そのポテンシャルにあたるのがラグランジアンであり、それを積分したものを極小にするように運動が決まると主張するのがハミルトンの原理である。</p>
+                                    \]</span>
+                                    と書きなおすことができる。これをオイラー・ラグランジュ方程式と呼び、この式を使う力学をラグランジュ形式の力学と呼ぶ。静力学で力が釣り合っている時、ポテンシャル関数を考え、それを最小にする場所として位置が決まった。同様に動力学においてもなんらかのポテンシャルがあり、それを最小にするように運動が決まると考えることができる。そのポテンシャルにあたるのがラグランジアンであり、それを積分したものを極小にするように運動が決まると主張するのがハミルトンの原理である。</p>
                                     <p>ラグランジュ形式の力学はニュートンの運動方程式を変形したものであるから、特に情報は増えていない。しかし、この形で書いておいた方が座標変換や変数変換に便利である。例えば極座標や、二重振り子など複雑な拘束がある系においてニュートンの運動方程式の導出は面倒であることが多い。しかし、ラグランジュ形式では簡便に運動方程式を導出できる。後に、点変換と呼ばれる任意の非線形変換において、オイラー・ラグランジュ方程式の形が変わらない(方程式が座標変換に対して共変である)ことを見る。</p>
                                     <p>力学では、自由に動くなにかを「自由度」と呼ぶ。質点の位置などは最も基本的な自由度であるが、拘束条件がある系において何を自由度とするかは自明ではない。例えば振り子の自由度としては、鉛直方向からの角度<span
                                     class="math inline">\(\theta\)</span>を採用するのが自然である。ここでは、座標の代わりに、そのような自由度として一般化座標<span
@@ -284,23 +283,21 @@
                                     class="math inline">\(x\)</span>と<span
                                     class="math inline">\(\dot{x}\)</span>の代わりに<span
                                     class="math inline">\(q\)</span>と<span
-                                    class="math inline">\(\dot{q}\)</span>を使って</p>
-                                    <p><span class="math display">\[
+                                    class="math inline">\(\dot{q}\)</span>を使って
+                                    <span class="math display">\[
                                     L(q, \dot{q}) = K(\dot{q}) - V(q)
-                                    \]</span></p>
-                                    <p>と書ける。ここで一般化座標の時間微分<span
+                                    \]</span>
+                                    と書ける。ここで一般化座標の時間微分<span
                                     class="math inline">\(\dot{q}\)</span>は一般化速度と呼ばれる。この一般化速度<span
                                     class="math inline">\(\dot{q}\)</span>についてルジャンドル変換をしよう。つまり、新たな変数<span
-                                    class="math inline">\(p\)</span>を</p>
-                                    <p><span class="math display">\[
+                                    class="math inline">\(p\)</span>を
+                                    <span class="math display">\[
                                     p = \frac{\partial L}{\partial
                                     \dot{q}}
-                                    \]</span></p>
-                                    <p>により導入し、さらに</p>
-                                    <p><span class="math display">\[
+                                    \]</span> により導入し、さらに <span
+                                    class="math display">\[
                                     H = p\dot{q} - L
-                                    \]</span></p>
-                                    <p>により、新たな量<span
+                                    \]</span> により、新たな量<span
                                     class="math inline">\(H\)</span>を導入すると、運動方程式は以下のように書き直すことができる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -320,8 +317,8 @@
                                     class="math inline">\(P\)</span>も同様である。この時、<span
                                     class="math inline">\((q,p)\)</span>がハミルトンの運動方程式に従い、かつ<span
                                     class="math inline">\((Q,P)\)</span>の<span
-                                    class="math inline">\((q,p)\)</span>に関するヤコビアンについて</p>
-                                    <p><span class="math display">\[
+                                    class="math inline">\((q,p)\)</span>に関するヤコビアンについて
+                                    <span class="math display">\[
                                     \begin{aligned}
                                     \frac{\partial(Q,P)}{\partial(q,p)}
                                     &amp; \equiv
@@ -335,25 +332,25 @@
                                     \frac{\partial P}{\partial q}\\
                                     &amp;=1
                                     \end{aligned}
-                                    \]</span></p>
-                                    <p>が満たされる時、変換後の変数<span
-                                    class="math inline">\((P,Q)\)</span>の時間発展も、ハミルトンの運動方程式</p>
-                                    <p><span class="math display">\[
+                                    \]</span>
+                                    が満たされる時、変換後の変数<span
+                                    class="math inline">\((P,Q)\)</span>の時間発展も、ハミルトンの運動方程式
+                                    <span class="math display">\[
                                     \begin{aligned}
                                     \dot{Q} &amp;= \frac{\partial
                                     H}{\partial P} \\
                                     \dot{P} &amp;= -\frac{\partial
                                     H}{\partial Q}
                                     \end{aligned}
-                                    \]</span></p>
-                                    <p>に従う、すなわち運動方程式の解であることが示される。従って、「運動方程式を解く」という微分方程式の初期値問題は、「変数<span
+                                    \]</span>
+                                    に従う、すなわち運動方程式の解であることが示される。従って、「運動方程式を解く」という微分方程式の初期値問題は、「変数<span
                                     class="math inline">\((q,p)\)</span>が一定時間後に変数<span
                                     class="math inline">\((Q,P)\)</span>になっているとき、それを<span
                                     class="math inline">\((q,p)\)</span>で記述する」という変数変換の問題に帰着される。このような変換を正準変換と呼ぶ。最初に述べたように、ハミルトン形式の力学、すなわち解析力学は変数変換の学問であり、時間発展すらも変数変換とみなす見方を提供する。正準変換を与える母関数について考えることで、ハミルトン・ヤコビの偏微分方程式が得られる。</p>
                                     <p>最後に、解析力学から量子力学への接続を見ておこう。正準方程式に従う系において、物理量<span
                                     class="math inline">\(A\)</span>が<span
-                                    class="math inline">\((p,q)\)</span>の関数として得られる時、その時間微分は</p>
-                                    <p><span class="math display">\[
+                                    class="math inline">\((p,q)\)</span>の関数として得られる時、その時間微分は
+                                    <span class="math display">\[
                                     \begin{aligned}
                                     \frac{dA}{dt} &amp;= \frac{\partial
                                     A}{\partial q}\dot{q} +
@@ -364,34 +361,33 @@
                                     \frac{\partial A}{\partial
                                     p}\frac{\partial H}{\partial q}
                                     \end{aligned}
-                                    \]</span></p>
-                                    <p>で得られる。そこで、</p>
-                                    <p><span class="math display">\[
+                                    \]</span> で得られる。そこで、 <span
+                                    class="math display">\[
                                     \left\{X, Y\right\}
                                     =  \frac{\partial X}{\partial
                                     q}\frac{\partial Y}{\partial p} -
                                     \frac{\partial X}{\partial
                                     p}\frac{\partial Y}{\partial q}
-                                    \]</span></p>
-                                    <p>という括弧を定義すると、先程の時間微分は</p>
-                                    <p><span class="math display">\[
+                                    \]</span>
+                                    という括弧を定義すると、先程の時間微分は
+                                    <span class="math display">\[
                                     \frac{dA}{dt} = \{A,H\}
-                                    \]</span></p>
-                                    <p>と記述できる。この括弧をポアソン括弧と呼ぶ。このポアソン括弧について、</p>
-                                    <p><span class="math display">\[
+                                    \]</span>
+                                    と記述できる。この括弧をポアソン括弧と呼ぶ。このポアソン括弧について、
+                                    <span class="math display">\[
                                     \begin{aligned}
                                     \{q, p\}&amp;=1 \\
                                     \{p, p\}&amp;=0 \\
                                     \{q, q\}&amp;=0
                                     \end{aligned}
-                                    \]</span></p>
-                                    <p>が成り立つ。これを量子力学に持っていこう。量子力学では一般化座標ではなく通常の座標を使うことが多いので、座標と運動量の組として<span
+                                    \]</span>
+                                    が成り立つ。これを量子力学に持っていこう。量子力学では一般化座標ではなく通常の座標を使うことが多いので、座標と運動量の組として<span
                                     class="math inline">\((x,
-                                    p)\)</span>を採用しよう。興味ある系のハミルトニアンが、</p>
-                                    <p><span class="math display">\[
+                                    p)\)</span>を採用しよう。興味ある系のハミルトニアンが、
+                                    <span class="math display">\[
                                     H(x, p) = \frac{p^2}{2m} + V(x)
-                                    \]</span></p>
-                                    <p>と与えられているとする。この時、座標<span
+                                    \]</span>
+                                    と与えられているとする。この時、座標<span
                                     class="math inline">\(x\)</span>と運動量<span
                                     class="math inline">\(p\)</span>を演算子とみなし、ハットをつけて<span
                                     class="math inline">\(\hat{x}\)</span>、<span
@@ -415,15 +411,15 @@
                                     class="math inline">\(h\)</span>はプランク定数である。なぜこんなことをするかは本書では問わない。定義から同じものを括弧にいれた場合にゼロとなることは明らかであろう。以下では<span
                                     class="math inline">\(\left[\hat{x},
                                     \hat{p}\right] =
-                                    i\hbar\)</span>について考える。このような交換関係を満たす演算子の選び方はいろいろあるが、例えば</p>
-                                    <p><span class="math display">\[
+                                    i\hbar\)</span>について考える。このような交換関係を満たす演算子の選び方はいろいろあるが、例えば
+                                    <span class="math display">\[
                                     \begin{aligned}
                                     \hat{x} &amp;= x\\
                                     \hat{p} &amp;= -i\hbar
                                     \frac{d}{dx}\\
                                     \end{aligned}
-                                    \]</span></p>
-                                    <p>と選んでみよう。これらは演算子であるから、なにかに演算しなければ意味を持たない。そこで、適当な微分可能な関数<span
+                                    \]</span>
+                                    と選んでみよう。これらは演算子であるから、なにかに演算しなければ意味を持たない。そこで、適当な微分可能な関数<span
                                     class="math inline">\(f(x)\)</span>を用意し、<span
                                     class="math inline">\([\hat{x},\hat{p}]f\)</span>を計算してみよう。</p>
                                     <p><span class="math display">\[
@@ -439,16 +435,16 @@
                                     &amp;= i \hbar f
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>すなわち、</p>
-                                    <p><span class="math display">\[
+                                    <p>すなわち、 <span
+                                    class="math display">\[
                                     [\hat{x},\hat{p}]f = i \hbar f
-                                    \]</span></p>
-                                    <p>という関係が得られた。<span
-                                    class="math inline">\(f\)</span>は任意の関数であったから、これは形式的に</p>
-                                    <p><span class="math display">\[
+                                    \]</span>
+                                    という関係が得られた。<span
+                                    class="math inline">\(f\)</span>は任意の関数であったから、これは形式的に
+                                    <span class="math display">\[
                                     [\hat{x},\hat{p}] = i \hbar
-                                    \]</span></p>
-                                    <p>と書ける。これが最初に課した交換関係であった。</p>
+                                    \]</span>
+                                    と書ける。これが最初に課した交換関係であった。</p>
                                     <p>さて、この表現をハミルトニアンに代入しよう。するとハミルトニアンも演算子<span
                                     class="math inline">\(\hat{H}\)</span>となる。</p>
                                     <p><span class="math display">\[
@@ -464,17 +460,16 @@
                                     <p>ハミルトニアン演算子<span
                                     class="math inline">\(\hat{H}\)</span>の固有関数を<span
                                     class="math inline">\(\psi(x)\)</span>とし、その固有値を<span
-                                    class="math inline">\(E\)</span>とすると、</p>
-                                    <p><span class="math display">\[
+                                    class="math inline">\(E\)</span>とすると、
+                                    <span class="math display">\[
                                     \hat{H} \psi = E\psi
-                                    \]</span></p>
-                                    <p>が成り立つ。<span
-                                    class="math inline">\(\hat{H}\)</span>を微分演算子で表現したものを代入すると、</p>
-                                    <p><span class="math display">\[
+                                    \]</span> が成り立つ。<span
+                                    class="math inline">\(\hat{H}\)</span>を微分演算子で表現したものを代入すると、
+                                    <span class="math display">\[
                                     -\frac{\hbar^2}{2m} \frac{d^2
                                     \psi}{dx^2} + V\psi = E\psi
-                                    \]</span></p>
-                                    <p>これが時間非依存のシュレーディンガー方程式であり、量子力学的な現象を記述する基礎方程式である。</p>
+                                    \]</span>
+                                    これが時間非依存のシュレーディンガー方程式であり、量子力学的な現象を記述する基礎方程式である。</p>
                                     <figure>
                                     <img src="fig/birds_eye_view.png"
                                     alt="解析力学の概観" />
