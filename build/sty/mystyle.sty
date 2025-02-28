@@ -8,3 +8,5 @@
 
 \usepackage{cancel}
 
+\renewcommand{\@makecaption}[2]{%       % 図や表のキャプションの空白を増やす
+  \original@makecaption{\starter@caption@font\starter@caption@prefix #1}{\starter@caption@font ~#2}}

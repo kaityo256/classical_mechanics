@@ -58,18 +58,14 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1 id="本章の目的">本章の目的</h1>
-                                    <p>解析力学で学んだラグランジアンやハミルトニアン、ポアソン括弧といった概念が、量子力学でどのように使われているかを概観する。量子論は、ある種の極限として古典論を含む。したがって、量子論の方が古典論よりも広い概念であり、量子論が与えられた時に、それに対応する古典論を作ることはできるが、古典論が与えられた時、それに対応する量子論は一意には決まらない。しかし、この章では厳密な話は避け、古典論から対応する量子論を推定する処方箋を説明する。</p>
+                                    <h1
+                                    id="本章で学ぶこと">本章で学ぶこと</h1>
+                                    <p>解析力学で学んだハミルトニアン、ポアソン括弧といった概念が、量子力学でどのように使われているかを概観する。</p>
                                     <h1
                                     id="量子論が必要な理由">量子論が必要な理由</h1>
-                                    <p>量子力学がなぜ必要か。それは、量子力学でないと説明できない観測事実があるからだ。物理学の目的は世界を記述することであり、世界の記述とは観測事実を説明することである。物理学は世界を記述する義務を負っており、これまでの理論では説明できない現象が出てきたら、新たな理論を構築しなければならない。量子論以前の物理を、量子論と区別するために古典論と呼ぶ。古典論では説明できない実験事実が多数発見され、新たな理論が必要となり、量子力学が生まれた。詳しくは量子力学の講義で学ぶであろうが、ここで簡単に古典論では説明できない実験事実をいくつか紹介しよう。</p>
-                                    <h2 id="原子核">原子核</h2>
-                                    <h2 id="光電効果">光電効果</h2>
-                                    <h2 id="黒体輻射">黒体輻射</h2>
-                                    <h2
-                                    id="二重スリット実験">二重スリット実験</h2>
+                                    <p>量子力学がなぜ必要か。それは、量子力学でないと説明できない観測事実があるからだ。物理学の目的は世界を記述することであり、世界の記述とは観測事実を説明することである。物理学は世界を記述する義務を負っており、これまでの理論では説明できない現象が出てきたら、新たな理論を構築しなければならない。量子論以前の物理を、量子論と区別するために古典論と呼ぶ。古典論では説明できない実験事実が多数発見され、新たな理論が必要となり、量子力学が生まれた。二重スリット実験やトンネル効果など、量子力学に従うミクロな系の振る舞いはしばしば非直感的な結果を生む。しかし、本書では量子力学の不思議さや面白さには触れず、解析力学で学んだ単語がどのように量子力学に現れるか、その数式に対応のみを概観する。</p>
                                     <h1 id="波動関数">波動関数</h1>
-                                    <p>光子や電子などのミクロな粒子は粒子と波動の両方の性質を持ち、さらに確率的に振る舞うことがわかった。物理は観測事実を説明する義務を負っているから、これらの性質を全て表現する表式を作らなければならない。まず、粒子と波動の両方の性質を説明するため、ある場所に局在しているが、有限の広がりを持つ存在を作ろう。ある関数<span
+                                    <p>光子や電子などのミクロな粒子は粒子と波動の両方の性質を持ち、さらに確率的に振る舞うことがわかっている。物理は観測事実を説明する義務を負っているから、これらの性質を全て表現する表式を作らなければならない。まず、粒子と波動の両方の性質を説明するため、ある場所に局在しているが、有限の広がりを持つ存在を作ろう。ある関数<span
                                     class="math inline">\(\psi(x)\)</span>のフーリエ変換を考える。</p>
                                     <p><span class="math display">\[
                                     \psi(x) = \int \tilde{\psi}(k)
@@ -143,19 +139,22 @@
                                     <p>量子力学を作るために、次に表現すべきは確率的な振る舞いである。観測事実から、量子力学に従う系は観測結果が確率的に振る舞うことがわかっている。そこで、先程定義した波束<span
                                     class="math inline">\(\psi(x)\)</span>について、その絶対値の二乗が、その位置に粒子が観測される確率に比例するものであると解釈しよう。</p>
                                     <p><span class="math display">\[
-                                    p(x) \propto |\psi(x)^2| =
+                                    P(x) \propto |\psi(x)^2| =
                                     \psi(x)^\ast \psi(x)
                                     \]</span></p>
                                     <p>ただし<span
                                     class="math inline">\(\psi(x)^\ast\)</span>は<span
-                                    class="math inline">\(\psi(x)\)</span>の複素共役を表す。このように、絶対値の自乗が、そのパラメータが観測される確率を表すものを
+                                    class="math inline">\(\psi(x)\)</span>の複素共役である。<span
+                                    class="math inline">\(P(x)\)</span>は確率密度であり、粒子が座標<span
+                                    class="math inline">\(x\)</span>の近傍で観測される確率が<span
+                                    class="math inline">\(P(x)\)</span>に比例することを意味する。このように、絶対値の自乗が、そのパラメータが観測される確率を表すものを
                                     <strong>波動関数 (wave
                                     function)</strong>
                                     と呼ぶ。ここではパラメータとして位置<span
                                     class="math inline">\(x\)</span>を採用したが、スピンの状態や運動量など、系を表すパラメータであればなんでも良い。とにかく何か物理量に対応するパラメータを持っており、絶対値の二乗がその物理量を観測する確率を与えるものが波動関数である。波動関数は一般に複素数であるため、絶対値の二乗は複素共役との積で与えられる。</p>
                                     <p>確率は、全ての可能な状態について和をとると1になる必要があるから、</p>
                                     <p><span class="math display">\[
-                                    \int_{-\infty}^\infty p(x)dx = 1
+                                    \int_{-\infty}^\infty P(x)dx = 1
                                     \]</span></p>
                                     <p>である。これは、観測するたびに粒子の位置は確率的に揺らぐが、どこかには必ずある、ということを意味している。そこで、波動関数も適当な定数をかけて、その絶対値の二乗を全空間で積分したら1になるようにしておこう。</p>
                                     <p><span class="math display">\[
@@ -165,7 +164,7 @@
                                     <p>これを規格化と呼ぶ。以後、波動関数は規格化されていると約束する。これにより、位置<span
                                     class="math inline">\(x\)</span>に粒子が観測される確率は</p>
                                     <p><span class="math display">\[
-                                    p(x) = |\psi(x)^2| = \psi(x)^\ast
+                                    P(x) = |\psi(x)^2| = \psi(x)^\ast
                                     \psi(x)
                                     \]</span></p>
                                     <p>と波動関数の絶対値の二乗と等式で結ばれる。</p>
@@ -175,7 +174,7 @@
                                     class="math inline">\(p(x,t)\)</span>は、時間依存する波動関数<span
                                     class="math inline">\(\psi(x,t)\)</span>を用いて</p>
                                     <p><span class="math display">\[
-                                    p(x,t) = |\psi(x,t)^2| =
+                                    P(x,t) = |\psi(x,t)^2| =
                                     \psi(x,t)^\ast \psi(x,t)
                                     \]</span></p>
                                     <p>で表される。</p>
@@ -205,16 +204,18 @@
                                     \psi(x, t) = \int \tilde{\psi}(k)
                                     \mathrm{e}^{i(kx-\omega t)} dk
                                     \]</span></p>
-                                    <p>ここで、</p>
-                                    <p><span class="math display">\[
+                                    <p>ここで、エネルギーと運動量が、ある定数<span
+                                    class="math inline">\(\hbar\)</span>により角運動量や波数と結びついている、すなわち
+                                    <span class="math display">\[
                                     \begin{aligned}
                                     E &amp;= \hbar \omega \\
                                     p &amp;= \hbar k
                                     \end{aligned}
-                                    \]</span></p>
-                                    <p>TODO:
-                                    それぞれ説明すること(ド・ブロイ波)</p>
-                                    <p>であったから、平面波展開は以下のように書き直すことができる。</p>
+                                    \]</span>
+                                    と記述できることを要請しよう。ただし、<span
+                                    class="math inline">\(\hbar =
+                                    h/2\pi\)</span>であり、<span
+                                    class="math inline">\(h\)</span>はプランク定数と呼ばれる定数である。なぜこのように書けるかは本書では説明しない。この表記を用いると平面波展開は以下のように書き直すことができる。</p>
                                     <p><span class="math display">\[
                                     \psi(x, t) = \int \tilde{\psi}(k)
                                     \mathrm{e}^{i(px-Et)/\hbar} dk
@@ -275,17 +276,10 @@
                                     \psi(x)^\ast \\
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>これは、括弧(bracket)<span
-                                    class="math inline">\(&lt;&gt;\)</span>の左側<span
-                                    class="math inline">\(&lt;\)</span>をブラ(bra)、右側<span
-                                    class="math inline">\(&gt;\)</span>をケットと分解する、Diracが考案した記法である。それぞれブラベクトル、ケットベクトルと呼ぶが、ブラ、ケットと略すことも多い。この表記を用いると、波動関数がエネルギー演算子の固有関数であることがわかりやすい。</p>
+                                    <p>これは、括弧(bracket)の左側をブラ(bra)、右側をケットと分解する、Diracが考案した記法である。それぞれブラベクトル、ケットベクトルと呼ぶが、ブラ、ケットと略すことも多い。この表記を用いると、波動関数がエネルギー演算子の固有関数であり、その固有値がエネルギーであることがわかりやすい。</p>
                                     <p><span class="math display">\[
                                     \hat{E} \left|\psi\right&gt;  = E
                                     \left|\psi\right&gt;
-                                    \]</span></p>
-                                    <p>行列と固有ベクトルの表記と比較してみよう。</p>
-                                    <p><span class="math display">\[
-                                    A \mathbf{x} = \lambda \mathbf{x}
                                     \]</span></p>
                                     <p>ケットベクトルは、対応するブラベクトルを作ることができる。</p>
                                     <p><span class="math display">\[
@@ -317,29 +311,205 @@
                                     &amp;= \frac{ip}{\hbar} \psi(x,t)
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>ここから、以下の関係がわかる。</p>
+                                    <p>整理すると</p>
                                     <p><span class="math display">\[
-                                    \hat{p} \equiv -
-                                    \frac{i}{\hbar}\frac{\partial}{\partial
-                                    x}
+                                    i \hbar \frac{\partial}{\partial
+                                    x}\psi(x,t) = p \psi(x,t)
                                     \]</span></p>
+                                    <p>エネルギーの場合と同様に、左辺の波動関数にかかっている演算子を運動量演算子であると解釈することができる。</p>
+                                    <p><span class="math display">\[
+                                    \hat{p} \equiv - i \hbar
+                                    \frac{\partial}{\partial x}
+                                    \]</span></p>
+                                    <p>この演算子とブラケットベクトル表記を用いると、</p>
+                                    <p><span class="math display">\[
+                                    \hat{p} \left|\psi\right&gt;  = p
+                                    \left|\psi\right&gt;
+                                    \]</span></p>
+                                    <p>となり、波動関数は運動量演算子の固有関数であり、その固有値として運動量が得られることがわかる。また、<span
+                                    class="math inline">\(x\)</span>をパラメータとして採用しているため、<span
+                                    class="math inline">\(\hat{x} \equiv
+                                    x\)</span>と定義すれば</p>
+                                    <p><span class="math display">\[
+                                    \hat{x} \psi(x, t) = x \psi(x, t)
+                                    \]</span></p>
+                                    <p>となる位置演算子<span
+                                    class="math inline">\(\hat{x}\)</span>も作ることができる。</p>
+                                    <p>また、逆に運動量<span
+                                    class="math inline">\(p\)</span>をパラメータとして採用し、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \hat{x} &amp;= i \hbar
+                                    \frac{\partial}{\partial p} \\
+                                    \hat{p} &amp;= p
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>として理論を構築することもできる。</p>
                                     <h1 id="交換関係">交換関係</h1>
-                                    <h1 id="経路積分">経路積分</h1>
+                                    <p>運動量が以下の演算子として記述できることがわかった。</p>
+                                    <p><span class="math display">\[
+                                    \hat{p} \equiv - i \hbar
+                                    \frac{\partial}{\partial x}
+                                    \]</span></p>
+                                    <p>これは微分演算子であるから、意味を持つためにはなにか微分できる関数に演算してやる必要がある。例えば微分可能な関数<span
+                                    class="math inline">\(f(x)\)</span>に演算すると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \hat{p}f &amp;= - i\hbar
+                                    \frac{\partial}{\partial x}f\\
+                                    &amp;= - i\hbar f&#39;(x)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>を得る。</p>
+                                    <p>さて、位置の演算子<span
+                                    class="math inline">\(\hat{x}\)</span>と、運動量演算子<span
+                                    class="math inline">\(\hat{p}\)</span>を両方演算することを考えよう。<span
+                                    class="math inline">\(\hat{p}\)</span>は<span
+                                    class="math inline">\(x\)</span>に関する微分演算子であるから、先に<span
+                                    class="math inline">\(\hat{p}\)</span>を演算して次に<span
+                                    class="math inline">\(\hat{x}\)</span>を演算する<span
+                                    class="math inline">\(\hat{x}\hat{p}\)</span>と、その逆順で演算する<span
+                                    class="math inline">\(\hat{p}\hat{x}\)</span>の結果は異なる。計算してみよう。</p>
+                                    <p>まず<span
+                                    class="math inline">\(\hat{x}\hat{p}\)</span>を適当な微分可能な関数<span
+                                    class="math inline">\(f(x)\)</span>に演算してみると、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\hat{x}\hat{p})f &amp;= \hat{x}
+                                    (\hat{p}f)\\
+                                    &amp;= - i\hbar f&#39;(x)
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>一方、<span
+                                    class="math inline">\(f(x)\)</span>に<span
+                                    class="math inline">\(\hat{p}\hat{x}\)</span>を演算すると</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\hat{p}\hat{x})f &amp;= \hat{p}
+                                    (\hat{x}f)\\
+                                    &amp;= -
+                                    i\hbar\frac{\partial}{\partial x}
+                                    (xf)\\
+                                    &amp;= -
+                                    ix\hbar\frac{\partial}{\partial x}f
+                                    - i \hbar f \frac{\partial}{\partial
+                                    x}x \\
+                                    &amp;=  - i \hbar x f&#39;(x) - i
+                                    \hbar f
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここから、</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    (\hat{x}\hat{p} - \hat{p}\hat{x})f
+                                    &amp;= - \cancel{i\hbar f&#39;(x)} +
+                                    \cancel{i \hbar x f&#39;(x)} + i
+                                    \hbar f\\
+                                    &amp;= i \hbar f
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>ここで、</p>
+                                    <p><span class="math display">\[
+                                    \left[\hat{x}, \hat{p} \right]
+                                    \equiv \hat{x}\hat{p}
+                                    -  \hat{p}\hat{x}
+                                    \]</span></p>
+                                    <p>と定義すると、</p>
+                                    <p><span class="math display">\[
+                                    \left[\hat{x}, \hat{p} \right]f = i
+                                    \hbar f
+                                    \]</span></p>
+                                    <p>が成り立つ。これは任意の微分可能な関数<span
+                                    class="math inline">\(f(x)\)</span>について成り立つため、形式的に</p>
+                                    <p><span class="math display">\[
+                                    \left[\hat{x}, \hat{p} \right] = i
+                                    \hbar
+                                    \]</span></p>
+                                    <p>とまとめることができる。これを
+                                    <strong>交換関係(commutation
+                                    relation)</strong>
+                                    と呼ぶ。ここでは添字のない一自由度系で示したが、<span
+                                    class="math inline">\(\hat{x}^\mu\)</span>や<span
+                                    class="math inline">\(\hat{p}_\nu\)</span>のように、異なる粒子に関する位置演算子や運動量演算子に対しても、</p>
+                                    <p><span class="math display">\[
+                                    \frac{\partial x^\mu}{\partial
+                                    x^\nu} = \delta^\mu_\nu
+                                    \]</span></p>
+                                    <p>であることを用いればただちに</p>
+                                    <p><span class="math display">\[
+                                    \left[\hat{x}^\mu, \hat{p}_\nu
+                                    \right] = i \hbar  \delta^\mu_\nu
+                                    \]</span></p>
+                                    <p>を得る。ただし、ここで虚数単位<span
+                                    class="math inline">\(i\)</span>との混同を防ぐために添え字に<span
+                                    class="math inline">\(\mu,
+                                    \nu\)</span>を用いた。</p>
+                                    <p>これは、解析力学におけるポアソン括弧</p>
+                                    <p><span class="math display">\[
+                                    \left\{q^\mu, p_\nu \right\} =
+                                    \delta^\mu_\nu
+                                    \]</span></p>
+                                    <p>に対応している。解析力学において、ポアソン括弧の意味で交換可能であるかどうかが、ある量がある操作に対して保存するかどうかに関係があることがわかっているが、量子力学においても交換関係が重要な役割を果たす。</p>
                                     <h1
                                     id="時間非依存シュレーディンガー方程式">時間非依存シュレーディンガー方程式</h1>
                                     <p>波動関数を<span
-                                    class="math inline">\(\psi(x,t)\)</span>とする時、一次元シュレーディンガー方程式は以下のように表現された。</p>
+                                    class="math inline">\(\psi(x,t)\)</span>とする際、エネルギー演算子<span
+                                    class="math inline">\(\hat{E}\)</span>を用いて</p>
                                     <p><span class="math display">\[
+                                    \hat{E} \psi(x,t) = E \psi(x, t)
+                                    \]</span></p>
+                                    <p>と記述できた。ここで<span
+                                    class="math inline">\(\hat{E}\)</span>は以下のエネルギー演算子である。</p>
+                                    <p><span class="math display">\[
+                                    \hat{E} \equiv
+                                    \frac{i}{\hbar}\frac{\partial}{\partial
+                                    t}
+                                    \]</span></p>
+                                    <p>ここで、エネルギーとして一粒子系のハミルトニアン</p>
+                                    <p><span class="math display">\[
+                                    H = \frac{p^2}{2m} + V(x)
+                                    \]</span></p>
+                                    <p>を考えよう。 <span
+                                    class="math display">\[
+                                    \hat{H} = \frac{\hat{p}^2}{2m} +
+                                    V(\hat{x})
+                                    \]</span></p>
+                                    <p>となる。<span
+                                    class="math inline">\(x\)</span>をパラメータとする表記では</p>
+                                    <p><span class="math display">\[
+                                    \begin{aligned}
+                                    \hat{p} &amp;= i \hbar
+                                    \frac{\partial}{\partial x} \\
+                                    \hat{x} &amp;= x
+                                    \end{aligned}
+                                    \]</span></p>
+                                    <p>であったから</p>
+                                    <p><span class="math display">\[
+                                    \hat{H} =
+                                    -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
+                                    x^2} + V
+                                    \]</span></p>
+                                    <p>と書ける。さて、波動関数<span
+                                    class="math inline">\(\psi\)</span>に対して、エネルギー演算子<span
+                                    class="math inline">\(\hat{E}\)</span>と、ハミルトニアンを演算子化した<span
+                                    class="math inline">\(\hat{H}\)</span>の固有値が等しいことを要請する。すなわち、
+                                    <span class="math display">\[
+                                    \hat{E}\psi = \hat{H}\psi = E\psi
+                                    \]</span> が満たされるとする。</p>
+                                    <p>それぞれの演算子の具体的な表式を代入すると
+                                    <span class="math display">\[
                                     i\hbar \frac{\partial \psi}{\partial
                                     t}
                                     = \left(
                                     -\frac{\hbar^2}{m}\frac{\partial^2}{\partial
                                     x^2} + V \right) \psi
-                                    \]</span></p>
-                                    <p>今、ポテンシャル<span
+                                    \]</span>
+                                    という式を得る。これは<strong>シュレーディンガー方程式(Schrödinger
+                                    equation)</strong>
+                                    にほかならない。今、ポテンシャル<span
                                     class="math inline">\(V\)</span>が位置<span
                                     class="math inline">\(x\)</span>のみに依存し、<span
-                                    class="math inline">\(t\)</span>には依存しないとしよう。すると、左辺には時間に関係する項のみが、右辺には空間に関係する項のみがあるから変数分離ができる。</p>
+                                    class="math inline">\(t\)</span>に陽には依存しないとしよう。すると、左辺には時間に関係する項のみが、右辺には空間に関係する項のみがあるから変数分離ができる。</p>
                                     <p><span class="math display">\[
                                     \psi(x,t) = X(x)T(t)
                                     \]</span></p>
@@ -387,13 +557,15 @@
                                     <p><span class="math display">\[
                                     \hat{H}\psi = E\psi
                                     \]</span></p>
-                                    <p>これが時間非依存のシュレーディンガー方程式である。意味は、ハミルトニアンを演算子とした時、波動関数がその演算子の固有関数であり、固有値がエネルギーであることを意味している。</p>
+                                    <p>これが時間非依存のシュレーディンガー方程式である。この式の意味は、ハミルトニアンを演算子とした時、波動関数がその演算子の固有関数であり、固有値がエネルギーであることを意味している。これは先ほど「演算子化したハミルトニアンの固有値がエネルギーに等しい」ということを要請したから当然の帰結であり、一種のトートロジーになっているが、時間依存シュレーディンガー方程式を変数分離法で解いた時の定数がエネルギーであり、ハミルトニアンが時間非依存部分のエネルギー演算子に対応しているということがわかる。</p>
+                                    <h1 id="まとめ">まとめ</h1>
+                                    <p>解析力学で現れるハミルトニアンや交換関係が、どのように量子力学に現れるかを概観した。位置か運動量のどちらかを、もう一方による偏微分演算子で表すと、量子力学における交換関係や、ハミルトニアンからシュレーディンガー方程式を作ることができる。ただし、ここでは量子力学を何かしら原理から導いたわけでもなく、古典と量子の対応関係を厳密に示したわけでもないことに注意されたい。現時点では、量子力学で学んだ様々なものが解析力学に現れる概念とつながっているのだ、と認識できれば良い。</p>
                                     <h1
                                     id="余談牛は球であると仮定する">余談：牛は球であると仮定する</h1>
                                     <p>球形の牛というジョークがある。いくつかバリエーションがあるが、典型的にはこんな内容だ。「経営が苦しい酪農場に工学者、心理学者、物理学者が呼ばれた。工学者は柵や搾乳機の改良を、心理学者は牛の心理的なケアを提案した。最後に物理学者このように切り出した。『まず、牛を球と仮定します』」。このジョークは、物理学者がしばしば現実を極端に単純化しすぎるという例として紹介されているようだ。しかし、場合によっては牛や人を球と仮定するのは悪くない近似となる。</p>
                                     <p>物理学は観測事実を説明するための学問である。「観測事実を説明する」とは、「結果を厳密に予測する」ことを意味しない。実際には誤差や観測精度の限界などがあるため、観測事実を満足できる精度で説明できればそれで良い。太陽系を考えよう。地球は太陽の回りを回っていると説明されるが、実際には太陽も地球にひっぱられて動いている。しかし、太陽の質量は地球の33万倍あるため、太陽を固定するという近似が生み出す誤差は33万分の1である。地球の平均公転半径は15億kmであるから、誤差は450km、すなわち地球の半径の7%程度のズレでしかない。災害時の避難経路について調べるため、人の避難行動の数値シミュレーションが行われることがある。この時、人は円としてモデル化されることが多い。よほど混み合う状況にならない限り、人が丸くないという影響は現れない。</p>
-                                    <p>物を投げた時、それが鉄球などであれば質点と近似した上で空気抵抗も無視してよいであろう。軽いものであれば空気抵抗も考慮する必要がある。野球の変化球などを考える場合は、質点ではなく大きさのある剛体と考えた上で回転も考慮する必要があり、バットで打ち返す瞬間を記述したければ、剛体ではなく弾性体として考える必要があるだろう。逆に、野球を考えてる時にトンネル効果や干渉など、量子力学で現れる現象を考慮する意味はない(たまに量子力学をマクロスケールに適用するトンデモ理論を見かけるが……)。</p>
-                                    <p>目的に対して、満足できる精度で現象を予測、説明できるならば、それは正しい理論である。全てを説明する究極理論というものは無く(あるかもしれないがあまり意味はなく)、我々は目的に応じて適切な理論を選択しなければならない。</p>
+                                    <p>物を投げた時、それが鉄球などであれば質点と近似した上で空気抵抗も無視してよいであろう。しかし軽いものであれば空気抵抗も考慮する必要がある。野球の変化球などを考える場合は、質点ではなく大きさのある剛体と考えた上で回転も考慮する必要があり、バットで打ち返す瞬間を記述したければ、剛体ではなく弾性体として考える必要があるだろう。逆に、野球を考えてる時にトンネル効果や干渉など、量子力学で現れる現象を考慮する意味はない(たまに量子力学をマクロスケールに適用するトンデモ理論を見かけるが……)。</p>
+                                    <p>目的に対して、満足できる精度で現象を予測、説明できるならば、それは正しい理論である。全てを説明する究極理論というものは無く、もしあったとしても意味のある予測能力を持たないであろう。我々は目的に応じて適切な理論を選択しなければならず、それは観測に対してどれくらいの誤差を許容するかも暗に決めていることを忘れてはならない。</p>
                     </article>
     </body>
 
