@@ -68,10 +68,28 @@ def pre_process(filename)
   processed_lines.join('')
 end
 
+def post_process(text)
+  lines = text.split(/\r?\n/)
+  output_lines = ""
+  lines.each do |line|
+    if line =~ /\=\=(.*まとめ)/
+      section = Regexp.last_match(1).strip
+      line = "==[nonum] #{section}"
+    elsif line =~ /\=\=(.*コラム：.*)/
+      section = Regexp.last_match(1).strip
+      line = "==[nonum] #{section}"
+    end
+    output_lines += line + "\n"
+  end
+  output_lines
+end
+
 render = Redcarpet::Render::ReVIEW.new
 mk = Redcarpet::Markdown.new(render)
 filename = ARGV[0]
 processed_text = pre_process(filename)
 review_text = mk.render(processed_text)
 review_text = unescape_symbols(review_text)
+review_text = post_process(review_text)
 puts review_text
+
