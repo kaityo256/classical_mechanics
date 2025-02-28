@@ -45,7 +45,7 @@ end
 def in_math(file, processed_lines)
   while (line = file.gets)
     if line =~ /\$\$/
-      processed_lines.append '//}'
+      processed_lines.append "//}\n"
       return
     else
       processed_lines.append escape_symbols(line)
