@@ -37,9 +37,9 @@ def replace_review_command(line)
   return line if line !~ /^<!---(.*)--->$/
 
   key = Regexp.last_match(1).strip
-  return '//}' if key == 'end'
+  return "//}\n" if key == 'end'
 
-  "//#{key}\{"
+  "//#{key}\{\n"
 end
 
 def in_math(file, processed_lines)
