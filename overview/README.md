@@ -80,7 +80,7 @@ $$
 
 これは、もともと物体にかかっていた力$F$と、仮想的な力$ma$が釣り合っている、ということを表している。$F$も$ma$、同じ「力」の次元を持っている。物理においては、同じ次元を持つ量は自由に足したり引いたりできる。そうして式を変形すると、式が持つ物理的な意味も異なって見える。
 
-例えば、長さ$r$の紐で結ばれた石が速度$v$で回転しているとしよう。運動方程式は以下のようになる。
+例えば、長さ$r$の紐で結ばれた質量$m$の石が速度$v$で回転しているとしよう。運動方程式は以下のようになる。
 
 $$
 F = \frac{mv^2}{r}
@@ -163,13 +163,13 @@ $$
 さて、右辺第二項はポテンシャルエネルギーを位置で微分したものだ。同様に、右辺第一項も、運動エネルギーを速度で偏微分した上で、さらに時間微分したものであるとみなすことができる。
 
 $$
-m\frac{dv}{dt} = \frac{d}{dt}\left(\frac{d K}{d v}\right)
+m\frac{dv}{dt} = \frac{d}{dt}\left(\frac{\partial K}{\partial v}\right)
 $$
 
 すると、運動方程式は以下のように書き直すことができる。
 
 $$
-\frac{d}{dt}\left(\frac{d K}{d v}\right) + \frac{d V}{dx} = 0
+\frac{d}{dt}\left(\frac{\partial K}{\partial v}\right) + \frac{d V}{dx} = 0
 $$
 
 ここで、後の都合のために$v=\dot{x}$と表記する。$K$と$V$の差を考え、それを二変数関数$L(x, \dot{x})$とみなす。
@@ -281,7 +281,7 @@ $$
 
 $$
 \begin{aligned}
-[\hat{x},\hat{p}]f &= (\hat{x}\hat{p} - \hat{p}\hat{x})f \\
+\left[\hat{x},\hat{p}\right]f &= (\hat{x}\hat{p} - \hat{p}\hat{x})f \\
 &= -i x\hbar \frac{df}{dx} + i \hbar \frac{d}{dx}(xf) \\
 &= \cancel{-i x\hbar \frac{df}{dx}} + i \hbar f + \cancel{i x\hbar \frac{df}{dx}}\\
 &= i \hbar f
