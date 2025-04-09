@@ -84,12 +84,25 @@ def post_process(text)
   output_lines
 end
 
+def convert_footnote(text)
+  # 脚注定義 [^name]: 内容 を //footnote[name][内容] に変換
+  text = text.gsub(/^\[\^([^\]]+)\]:\s*(.+)$/) do
+    name = Regexp.last_match(1)
+    content = Regexp.last_match(2)
+    "//footnote[#{name}][#{content}]"
+  end
+
+  # 文中の [^name] を @<fn>{name} に変換
+  text.gsub(/\[\^([^\]]+)\]/, '@<fn>{\1}')
+end
+
 render = Redcarpet::Render::ReVIEW.new
 mk = Redcarpet::Markdown.new(render)
 filename = ARGV[0]
-processed_text = pre_process(filename)
-review_text = mk.render(processed_text)
-review_text = unescape_symbols(review_text)
-review_text = post_process(review_text)
-puts review_text
-
+text = pre_process(filename)
+text = convert_footnote(text)
+text = mk.render(text)
+text = unescape_symbols(text)
+text = post_process(text)
+text = convert_footnote(text)
+puts text
