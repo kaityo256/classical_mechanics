@@ -48,7 +48,7 @@ r_y
 0\\
 0\\
 1
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 3つの基本的なベクトルの和にわけることができた。これらのベクトルを$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$と書こう。すると、
@@ -111,15 +111,15 @@ $$
 \mathbf{e}^x =
 \begin{pmatrix}
 1 & 0 & 0
-\end{pmatrix} \\
+\end{pmatrix}, \\
 \mathbf{e}^y =
 \begin{pmatrix}
 0 & 1 & 0
-\end{pmatrix} \\
+\end{pmatrix}, \\
 \mathbf{e}^z =
 \begin{pmatrix}
 0 & 0 & 1
-\end{pmatrix}
+\end{pmatrix}.
 \end{aligned}
 $$
 
@@ -137,7 +137,7 @@ $$
 0\\
 0
 \end{pmatrix}
-= 1
+= 1.
 $$
 
 同様に、$\mathbf{e}^x$と$\mathbf{e}_y$の内積を取ると
@@ -152,14 +152,14 @@ $$
 1\\
 0
 \end{pmatrix}
-= 0
+= 0.
 $$
 つまり、添字が同じであれば1に、異なれば0になる。
 
 いちいち座標を$x,y,z$と書いていると、特に和を取る時に不便なので、以下$\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z$を、それぞれ$\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$と表記しよう。相方となる基底$\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3$も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。
 
 $$
-(\mathbf{e}^i, \mathbf{e}_j) = \delta^i_j
+(\mathbf{e}^i, \mathbf{e}_j) = \delta^i_j.
 $$
 
 ここで$\delta^i_j$はクロネッカーのデルタであり、$i=j$の時に$1$、そうでない時に$0$となる量である。内積がゼロであることを **直交**(orthogonal) していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を **直交基底**(orthogonal basis) と呼ぶ。さらに相方との内積が1に規格化されている基底を **正規直交基底**(orthonormal basis) と呼ぶ。基底として正規直交基底を選ぶと、任意の基底で表現されたベクトルを、別の基底で表現した時の成分が簡単に求まる、という利点がある。
@@ -193,7 +193,7 @@ $$
 で与えられている時、この基底でベクトルが以下のように展開できる。
 
 $$
-\mathbf{r} = r_1 \mathbf{e_1} + r_2 \mathbf{e_2} + r_3 \mathbf{e_3}
+\mathbf{r} = r_1 \mathbf{e_1} + r_2 \mathbf{e_2} + r_3 \mathbf{e_3}.
 $$
 
 繰り返しとなるが、物理においては特定の座標を特別視しないため、まず座標系に依存しないベクトルが存在し、必要に応じて座標系を定義すると、内積によってその展開係数が決まる、というイメージを持つとよい。
@@ -203,7 +203,7 @@ $$
 $$
 \begin{aligned}
 \mathbf{r} &= r_1 \mathbf{e}_1  +r_1 \mathbf{e}_2+r_3 \mathbf{e}_3\\
-&= r'_1 \mathbf{e}'_1  +r'_1 \mathbf{e}'_2+r'_3 \mathbf{e}'_3\\
+&= r'_1 \mathbf{e}'_1  +r'_1 \mathbf{e}'_2+r'_3 \mathbf{e}'_3.
 \end{aligned}
 $$
 
@@ -212,7 +212,7 @@ $$
 例えば、基底ベクトル$\mathbf{e}'_1$に対する成分$r'_1$を知りたければ、$\mathbf{e}'_1$と$\mathbf{r}$との内積を取ればよい。
 
 $$
-r'_1 = \mathbf{e}'_1 \cdot \mathbf{r}
+r'_1 = \mathbf{e}'_1 \cdot \mathbf{r}.
 $$
 
 さて、$\mathbf{r}$を基底$\mathbf{e}_i$で展開しておき、左から別の基底$\mathbf{e}'_j$との内積を取ろう。
@@ -220,7 +220,7 @@ $$
 $$
 \begin{aligned}
 r'_j &= \mathbf{e}'_j \cdot \mathbf{r}  \\
-&= \sum_i r_i \mathbf{e}'_j \cdot  \mathbf{e}_i
+&= \sum_i r_i \mathbf{e}'_j \cdot  \mathbf{e}_i.
 \end{aligned}
 $$
 
@@ -282,7 +282,7 @@ $$
 1 & 0 & 0 \\
 0 & 0 & 0 \\
 0 & 0 & 0
-\end{pmatrix}
+\end{pmatrix}.
 \end{aligned}
 $$
 
@@ -296,7 +296,7 @@ A^1_1 & A^2_1 & A^3_1 \\
 A^1_2 & A^2_2 & A^3_2 \\
 A^1_3 & A^2_3 & A^3_3
 \end{pmatrix}
-= \sum_{i=1}^{3} \sum_{j=1}^{3} A^j_i \mathbf{e}^i \otimes \mathbf{e}_j
+= \sum_{i=1}^{3} \sum_{j=1}^{3} A^j_i \mathbf{e}^i \otimes \mathbf{e}_j.
 \end{aligned}
 $$
 
@@ -316,7 +316,7 @@ A^1_1 & A^2_1 & A^3_1 \\
 A^1_2 & A^2_2 & A^3_2 \\
 A^1_3 & A^2_3 & A^3_3
 \end{pmatrix}
-= A^j_i \mathbf{e}^i \otimes \mathbf{e}_j
+= A^j_i \mathbf{e}^i \otimes \mathbf{e}_j.
 \end{aligned}
 $$
 
@@ -327,25 +327,21 @@ $$
 横ベクトル$\mathbf{a}$と、縦ベクトル$\mathbf{b}$の内積を考える。簡単のため、3次元ベクトルとしよう。それぞれ要素と基底を明示すると、
 
 $$
-\begin{aligned}
-\mathbf{a} &=
+\mathbf{a} =
 \begin{pmatrix}
 a_1 & a_2 & a_3
-\end{pmatrix}\\
-&= a_i \mathbf{e}^i
-\end{aligned}
+\end{pmatrix}
+= a_i \mathbf{e}^i,
 $$
 
 $$
-\begin{aligned}
-\mathbf{b} &=
+\mathbf{b} =
 \begin{pmatrix}
 b^1 \\
 b^2\\
 b^3
-\end{pmatrix}\\
-&= b^j \mathbf{e}_j
-\end{aligned}
+\end{pmatrix}
+= b^j \mathbf{e}_j.
 $$
 
 これらの内積を取ると
@@ -363,7 +359,7 @@ $$
 同様に、行列$A$と、縦ベクトルの標準基底の一つ$\mathbf{e}_k$の内積$(A, \mathbf{e}_k)$を考えよう。行列$A$は、縦ベクトルと横ベクトルのテンソル積で展開できるのであるから、
 
 $$
-(A, \mathbf{e}_k) = (A^j_i \mathbf{e}^i \otimes \mathbf{e}_j, \mathbf{e}_k)
+(A, \mathbf{e}_k) = (A^j_i \mathbf{e}^i \otimes \mathbf{e}_j, \mathbf{e}_k).
 $$
 
 ここで、横ベクトルと縦ベクトルの内積が
@@ -387,7 +383,7 @@ $$
 ここでは、2階のテンソルとして縦ベクトルと横ベクトルのテンソル積を考えたが、縦ベクトル2つのテンソル積を考えることもできる。その場合は添字が2つとも上付きとなる。
 
 $$
-A = A^{ij} \mathbf{e}_i \otimes \mathbf{e}_j
+A = A^{ij} \mathbf{e}_i \otimes \mathbf{e}_j.
 $$
 
 こうして作られたテンソルは、行列のようには表現できないが、「横ベクトルと内積をとると縦ベクトルとなり、さらに横ベクトルと内積をとるとスカラーになるもの」と理解できる。このように、テンソルがイメージできないうちは「上下の逆側の足を持つベクトルと内積をとると、その足が潰せるもの」と理解しておくと良い。
@@ -407,20 +403,19 @@ $$
 次に、微分演算子に関する内積を考えよう。変数$x$と$y$にのみ依存する2変数関数$f(x,y)$を考える。$x$と$y$が時間$t$に依存している時、すなわち$f(x(t), y(t))$と書ける時、$f$の時間微分は
 
 $$
-\frac{df}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}
+\frac{df}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}.
 $$
 
 さて、$f(x,y)$は$x$と$y$にしか依存していないので、$x$や$y$が$t$ではなく$s$に依存していても式の形は全く変わらない。
 
 $$
-\frac{df}{ds} = \frac{\partial f}{\partial x} \frac{dx}{ds} + \frac{\partial f}{\partial y} \frac{dy}{ds}
+\frac{df}{ds} = \frac{\partial f}{\partial x} \frac{dx}{ds} + \frac{\partial f}{\partial y} \frac{dy}{ds}.
 $$
 
 そこで、$dt$や$ds$を形式的に消して、以下のように書いてみる。
 
 $$
-df = \frac{\partial f}{\partial x} dx
-+ \frac{\partial f}{\partial y} dy
+df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy.
 $$
 
 このように書ける時、$f$は全微分可能であると言い、この表式を$f$の **全微分**(total derivative) と呼ぶ。
@@ -429,16 +424,15 @@ $$
 
 $$
 f(x+\delta x, y+\delta y) - f(x,y) \sim \frac{\partial f}{\partial x} \delta x +
-\frac{\partial f}{\partial y} \delta y
+\frac{\partial f}{\partial y} \delta y .
 $$
 
 つまり、$\partial f/\partial x$という量は、$y$を変化させずに、$x$だけを変化させた場合の$f$の変化の割合であった。そこで、全微分の両辺を形式的に$dx$でわろう。この時、微分記号が偏微分に化ける。
 
 $$
 \begin{aligned}
-\frac{\partial f}{\partial x} &= \frac{\partial f}{\partial x} \underbrace{\frac{\partial x}{\partial x}}_{=1}
-+ \frac{\partial f}{\partial y} \underbrace{\frac{\partial y}{\partial x}}_{=0} \\
-&= \frac{\partial f}{\partial x}
+\frac{\partial f}{\partial x} &= \frac{\partial f}{\partial x} \underbrace{\frac{\partial x}{\partial x}}_{=1} + \frac{\partial f}{\partial y} \underbrace{\frac{\partial y}{\partial x}}_{=0} \\
+&= \frac{\partial f}{\partial x}.
 \end{aligned}
 $$
 
@@ -446,7 +440,7 @@ $$
 
 $$
 df = \frac{\partial f}{\partial x} dx
-+ \frac{\partial f}{\partial y} dy
++ \frac{\partial f}{\partial y} dy.
 $$
 
 すると、これがまるでベクトルを基底で展開しているかのように見える。また、$dx$の内積をとる相方が$\partial_x$であることもわかる。
@@ -480,15 +474,15 @@ $$
 まず関数$f(x)$を見ると、$f$という値が$x$という引数に依存していることがわかる。したがって、$f(x)$を微分しようとしたら$x$に決まっているので、以下のようにプライム記号で表記する。
 
 $$
-f'(x) \equiv \frac{df}{dx}
+f'(x) \equiv \frac{df}{dx}.
 $$
 
 二階微分や三階微分は
 
 $$
 \begin{aligned}
-f''(x) &\equiv \frac{d^2f}{dx^2}\\
-f'''(x) &\equiv \frac{d^3f}{dx^3}\\
+f''(x) &\equiv \frac{d^2f}{dx^2},\\
+f'''(x) &\equiv \frac{d^3f}{dx^3}
 \end{aligned}
 $$
 
@@ -500,7 +494,7 @@ $$
 
 $$
 \begin{aligned}
-f^{(4)}(x) &\equiv \frac{d^4 f}{dx^4}\\
+f^{(4)}(x) &\equiv \frac{d^4 f}{dx^4},\\
 f^{(n)}(x) &\equiv \frac{d^n f}{dx^n}
 \end{aligned}
 $$
@@ -511,8 +505,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{x} &\equiv \frac{dx}{dt} \\
-\ddot{x} &\equiv \frac{d^2x}{dt^2}
+\dot{x} &\equiv \frac{dx}{dt}, \\
+\ddot{x} &\equiv \frac{d^2x}{dt^2}.
 \end{aligned}
 $$
 
@@ -542,7 +536,7 @@ $$
 
 $$
 \frac{\partial f}{\partial x} \equiv \lim_{h \rightarrow 0}
-\frac{f(x + h , y) - f(x,y)}{h}
+\frac{f(x + h , y) - f(x,y)}{h}.
 $$
 
 $y$に関する偏微分係数も同様に定義する。以後、$x$に関する偏微分演算子$\partial/\partial_x$を、$\partial_x$のように略記することがある。
@@ -564,7 +558,7 @@ $$
 $$
 \frac{df}{dt} = \frac{\partial f}{\partial x} \dot{x}
 +\frac{\partial f}{\partial y} \dot{y}
-+\frac{\partial f}{\partial z} \dot{z}
++\frac{\partial f}{\partial z} \dot{z}.
 $$
 
 三次元空間では、このように$x, y, z$座標での偏微分が頻繁に現れる。これらを毎回書くのは面倒であるので、以下のような$\nabla$(ナブラ)という演算子を定義する。
@@ -575,7 +569,7 @@ $$
 \frac{\partial}{\partial x} \\
 \frac{\partial}{\partial y} \\
 \frac{\partial}{\partial z}
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 ナブラは成分に微分演算子が含まれているベクトルである。ベクトルであるから、スカラーに作用させるとベクトル量になる。
@@ -586,7 +580,7 @@ $$
 \frac{\partial f}{\partial x} \\
 \frac{\partial f}{\partial y} \\
 \frac{\partial f}{\partial z}
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 ここで、速度ベクトル
@@ -603,15 +597,15 @@ $$
 を定義すると、先程の$f$の時間微分は以下のように表記できる。
 
 $$
-\frac{df}{dt} = (\nabla f) \cdot \dot{\mathbf{r}}
+\frac{df}{dt} = (\nabla f) \cdot \dot{\mathbf{r}}.
 $$
 
 $\nabla$を使う簡単な例として太陽系を考えよう。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。太陽質量を$M$、地球の質量を$m$とし、地球の座標を$(x,y)$とする。太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。
 
 $$
 \begin{aligned}
-m \frac{d^2x}{dt^2} &=  -G \frac{Mmx}{r^3} \\
-m \frac{d^2y}{dt^2} &=  -G \frac{Mmy}{r^3}
+m \frac{d^2x}{dt^2} &=  -G \frac{Mmx}{r^3}, \\
+m \frac{d^2y}{dt^2} &=  -G \frac{Mmy}{r^3}.
 \end{aligned}
 $$
 
@@ -620,7 +614,7 @@ $$
 まず、重力は保存力なので、ポテンシャルエネルギー$V(r)$を考えよう。
 
 $$
-V(r) = -\frac{GMm}{r}
+V(r) = -\frac{GMm}{r}.
 $$
 
 これを$x$で偏微分すると
@@ -638,13 +632,13 @@ $$
 の両辺を$x$で偏微分して、
 
 $$
-2r \frac{\partial r}{\partial x} = 2 x
+2r \frac{\partial r}{\partial x} = 2 x.
 $$
 
 従って、
 
 $$
-\frac{\partial r}{\partial x} = \frac{x}{r}
+\frac{\partial r}{\partial x} = \frac{x}{r}.
 $$
 
 以上から、
@@ -657,8 +651,8 @@ $y$も同様である。ここから運動方程式は
 
 $$
 \begin{aligned}
-m \frac{d^2x}{dt^2} &=  - \frac{\partial V}{\partial x} \\
-m \frac{d^2y}{dt^2} &=  - \frac{\partial V}{\partial y}
+m \frac{d^2x}{dt^2} &=  - \frac{\partial V}{\partial x}, \\
+m \frac{d^2y}{dt^2} &=  - \frac{\partial V}{\partial y}.
 \end{aligned}
 $$
 
@@ -668,18 +662,18 @@ $$
 \mathbf{r} =
 \begin{pmatrix}
 x \\ y
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 すると、先程の運動方程式は以下のように一行にまとめられる。
 
 $$
 \begin{aligned}
-m \frac{d^2 \mathbf{r}}{dt^2} &= - \nabla V
+m \frac{d^2 \mathbf{r}}{dt^2} &= - \nabla V.
 \end{aligned}
 $$
 
-両辺ともにベクトルで有ることに注意。
+両辺ともにベクトルであることに注意。
 
 $\nabla$を$d/ d\mathbf{r}$と表現すれば
 
@@ -704,19 +698,19 @@ $\nabla$はベクトルであるから、普通のベクトルのようにスカ
 先程見たように、スカラー場に$\nabla$を適用するとベクトル場を得る。これは**勾配**(gradient)と呼ばれ$\mathrm{grad}$で表記することがある。
 
 $$
-\mathrm{grad} f \equiv \nabla f
+\mathrm{grad} f \equiv \nabla f.
 $$
 
 $\nabla$とベクトル場と内積を取るとスカラー場になる。これは**発散**(divergence)と呼ばれ、$\mathrm{div}$で表記することがある。
 
 $$
-\mathrm{div} \mathbf{v} \equiv \nabla \cdot \mathbf{v}
+\mathrm{div} \mathbf{v} \equiv \nabla \cdot \mathbf{v}.
 $$
 
 $\nabla$とベクトル場との外積をとるとベクトル場になる。これは**回転**(rotation)と呼ばれ、$\mathrm{rot}$で表記することがある。
 
 $$
-\mathrm{rot} \mathbf{v} \equiv \nabla \times \mathbf{v}
+\mathrm{rot} \mathbf{v} \equiv \nabla \times \mathbf{v}.
 $$
 
 これらがなぜ勾配、発散、回転と呼ばれているか、またその物理的な意味については位相空間の節で説明する。
