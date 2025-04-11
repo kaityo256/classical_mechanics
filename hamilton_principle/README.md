@@ -10,34 +10,34 @@
 
 $$
 \begin{aligned}
-m \dot{v_x} &= -\frac{\partial U}{\partial x}\\
-m \dot{v_y} &= -\frac{\partial U}{\partial y}\\
-m \dot{v_z} &= -\frac{\partial U}{\partial z}\\
+m \dot{v_x} &= -\frac{\partial U}{\partial x},\\
+m \dot{v_y} &= -\frac{\partial U}{\partial y},\\
+m \dot{v_z} &= -\frac{\partial U}{\partial z}
 \end{aligned}
 $$
 
 という形に書ける。ここで、運動方程式の右辺が全てポテンシャルエネルギーの位置による偏微分になっていることに注目する。左辺も同様にポテンシャルを用意して、自由度で偏微分する形にすると運動方程式がきれいに書けそうである。運動において全エネルギーが保存しており、全エネルギーとは運動エネルギーと位置エネルギーの和であり、右辺に位置エネルギーが来ているなら、左辺には運動エネルギーが来るのが自然であろう。そこで、以下のような運動エネルギーを考える。
 
 $$
-K(v_x,v_y,v_z) = \frac{1}{2}m(v_x^2+v_y^2+v_z^2)
+K(v_x,v_y,v_z) = \frac{1}{2}m(v_x^2+v_y^2+v_z^2).
 $$
 
 ポテンシャルエネルギーと同様に、自由度で偏微分してみよう。
 
 $$
-\frac{\partial K}{\partial v_x} = m v_x
+\frac{\partial K}{\partial v_x} = m v_x.
 $$
 
 運動方程式と見比べると、両辺を時間微分したくなる
 
 $$
-\frac{d}{dt}\left(\frac{\partial K}{\partial v_x}\right) = m \dot{v_x}
+\frac{d}{dt}\left(\frac{\partial K}{\partial v_x}\right) = m \dot{v_x}.
 $$
 
 これは運動方程式の左辺である。以上から、運動方程式を以下のようにまとめることができた。
 
 $$
-\frac{d}{dt}\left(\frac{\partial K}{\partial v_x}\right)
+\frac{d}{dt}\left(\frac{\partial K}{\partial v_x}\right).
 = -\frac{\partial U}{\partial x}
 $$
 
@@ -87,31 +87,31 @@ $$
 ニュートンの運動方程式から始めよう。簡単のため、一次元空間の運動を考える。
 
 $$
-m \dot{v} = F
+m \dot{v} = F.
 $$
 
 仮想仕事の原理では物体は静止していたために左辺はゼロであったが、今回は動いている場合を扱うのでゼロではない。さて、この運動方程式の左辺を右辺に移項しよう。
 
 $$
-0 = - m \dot{v} + F
+0 = - m \dot{v} + F.
 $$
 
-ここで、慣性項$m v/dt$を力とみなすと、式の上では力が釣り合っているかのように見える。これを**ダランベールの原理**(d'Alembert's principle) と呼ぶ。見かけ上、力が釣り合っているのであるから、静力学における仮想仕事の原理が適用できそうである。もし、$(x, v)$が運動方程式を満たさなければ、上記は$0$からずれる。そこで、右辺を仮想的な力であるとみなし、$F_D$とおく。
+ここで、慣性項$m \dot{v}$を力とみなすと、式の上では力が釣り合っているかのように見える。これを**ダランベールの原理**(d'Alembert's principle) と呼ぶ。見かけ上、力が釣り合っているのであるから、静力学における仮想仕事の原理が適用できそうである。もし、$(x, v)$が運動方程式を満たさなければ、上記は$0$からずれる。そこで、右辺を仮想的な力であるとみなし、$F_D$とおく。
 
 $$
-F_D = - m \dot{v} + F
+F_D = - m \dot{v} + F.
 $$
 
 そして、力$F_D$が働いている状態で、拘束条件を破らない仮想変位 $\delta x$ だけ動いた時の仮想仕事を考える。
 
 $$
-W = F_D \delta x
+W = F_D \delta x.
 $$
 
 もし、もともとの軌道$(x,v)$が運動方程式を満たしている場合は$F_D=0$であったのだから、この力のする仮想仕事はゼロである。
 
 $$
-W = (- m \dot{v} + F) \delta x = 0
+W = (- m \dot{v} + F) \delta x = 0.
 $$
 
 これもダランベールの原理と呼ぶ。すなわちダランベールの原理とは、加速度がゼロでない時に、慣性項を移項することで、あたかも力であるように解釈し、その上で仮想仕事の原理を適用しようとするものである。ただし、速度の項があるため、静力学の場合は「力が釣り合っている時」だったのに対し、動力学の場合は「速度と位置が運動方程式の解である時」という条件に変わっていることに注意。
@@ -142,7 +142,7 @@ $$
 で与えられる。これを用いると、最終的にダランベールの原理は以下のように書ける。
 
 $$
-W = - m \dot{v}\delta x -\delta U = 0
+W = - m \dot{v}\delta x -\delta U = 0.
 $$
 
 したがって、
@@ -162,7 +162,7 @@ $$
 とする。いま、運動方程式の解として$x(t)$が与えられたとしよう。すると、速度の時間依存性は$v = \dot{x}$で与えられる。この運動方程式の解から、少しだけずれた軌道$X(t) = x(t) + \delta x(t)$を考える。新しい軌道における速度を$V(t) = v(t) + \delta v(t)$とすると、$\delta x$と$\delta v$は
 
 $$
-\frac{d}{dt}\delta v = \delta x
+\frac{d}{dt}\delta x = \delta v
 $$
 
 を満たす。さて、新しい軌道ともとの軌道での運動エネルギーの変化$\delta K$は
@@ -172,7 +172,7 @@ $$
 \delta K &\equiv K(v+\delta v) - K(v) \\
 &=K'(v) \delta v \\
 &= mv \delta v \\
-&= mv \frac{d}{dt} \delta x
+&= mv \frac{d}{dt} \delta x.
 \end{aligned}
 $$
 
@@ -182,14 +182,14 @@ $$
 \delta U = - m \dot{v} \delta x
 $$
 
-と比較すると、部分積分したら$\delta K$になることがわかるであろう。これによりラグランジアンが導入される。
+と比較すると、部分積分したら$\delta K$になりそうなことがわかるであろう。これによりラグランジアンが導入される。
 
 ## ハミルトンの原理とラグランジアン
 
 時刻$t_1$から時刻$t_2$まで、運動方程式の解として、軌道$x(t)$が得られたとしよう。すると、時刻$t$での速度$v(t)$も、$v(t) =\dot{x}(t)$として決まることになる。我々はこれから、ダランベールの原理を使って、運動エネルギーとポテンシャルエネルギーの変化について追いかけたい。そこで、運動エネルギーの時間積分を考える。積分範囲は$t_1$から$t_2$までとしよう。
 
 $$
-\int_{t_1}^{t_2} K(v) dt
+\int_{t_1}^{t_2} K(v) dt.
 $$
 
 ただし、この積分は、運動方程式の解$(x(t),v(t))$にそって実行するものとする。
@@ -226,7 +226,7 @@ $$
 \begin{aligned}
 \delta \int_{t_1}^{t_2} K dt &\equiv \int_{t_1}^{t_2}  \delta K dt \\
 &= \int_{t_1}^{t_2} m v \frac{d}{dt} \left(\delta x\right) dt \\
-&= - \int_{t_1}^{t_2} m \frac{dv}{dt} \delta x dv
+&= - \int_{t_1}^{t_2} m \frac{dv}{dt} \delta x dv.
 \end{aligned}
 $$
 
@@ -239,7 +239,7 @@ $$
 であったから、
 
 $$
-\int_{t_1}^{t_2} \delta K dt = \int_{t_1}^{t_2} \delta U dt
+\int_{t_1}^{t_2} \delta K dt = \int_{t_1}^{t_2} \delta U dt.
 $$
 
 以上から、
@@ -257,7 +257,7 @@ $$
 で定義し、それを時間積分した量$I$を考える。
 
 $$
-I = \int_{t_1}^{t_2} L(x, v)dt
+I = \int_{t_1}^{t_2} L(x, v)dt.
 $$
 
 もし$(x(t), v(t))$が運動方程式の解であるならば、上記の積分が、運動方程式の解の経路からの微小変化$x(t) \rightarrow x(t) + \delta x(t)$に対して一次のオーダーで変化がゼロ、すなわち、
@@ -280,9 +280,7 @@ $$
 U(x) = \int F(x) dx
 $$
 
-を考え、
-
-$U(x)$を最小にする$x$を探せ、という問題に読み替えた。
+を考え、$U(x)$を最小にする$x$を探せ、という問題に読み替えた。
 
 動力学でも同様に、ダランベールの原理から、運動方程式の解である$(x(t), v(t))$を探せ、という問題が、
 
@@ -347,7 +345,7 @@ $$
 三次元系におけるラグランジアンが以下のように与えられているとする。
 
 $$
-L(x,y,z,\dot{x},\dot{y},\dot{z}) = K(\dot{x},\dot{y},\dot{z}) - U(x,y,z)
+L(x,y,z,\dot{x},\dot{y},\dot{z}) = K(\dot{x},\dot{y},\dot{z}) - U(x,y,z).
 $$
 
 ただし$K$は運動エネルギーであり、
@@ -360,13 +358,13 @@ $$
 
 $$
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right)
-= \frac{\partial L}{\partial x}
+= \frac{\partial L}{\partial x}.
 $$
 
 $L$の中身を代入すると、以下のようになる。
 
 $$
-m \frac{d \dot{x}}{dt} = - \frac{\partial U}{\partial x}
+m \frac{d \dot{x}}{dt} = - \frac{\partial U}{\partial x}.
 $$
 
 これは、ユークリッド空間において、自由な質点がポテンシャル$U$に起因する保存力に従って運動する様子を表現している。すなわち、先程のラグランジアンはそのような運動を表現していた。全く同様な手続きで、自由度$y$や$z$についての運動方程式も求めることができる。すなわち、3つの自由度$x,y,z$が従う3本の運動方程式が、ただ1つのスカラー関数$L(x, y,z, \dot{x}, \dot{y},\dot{z})$から導かれた。
@@ -391,7 +389,7 @@ $$
 
 $$
 \begin{aligned}
-x &= r\cos\theta \\
+x &= r\cos\theta, \\
 y &= r\sin\theta
 \end{aligned}
 $$
@@ -406,8 +404,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{x}} \right)  - \frac{\partial L}{\partial x} &= m\ddot{x} =0 \\
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{y}} \right) - \frac{\partial L}{\partial y} &= m\ddot{y} =0
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{x}} \right)  - \frac{\partial L}{\partial x} &= m\ddot{x} =0, \\
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{y}} \right) - \frac{\partial L}{\partial y} &= m\ddot{y} =0.
 \end{aligned}
 $$
 
@@ -415,8 +413,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{r}} \right) - \frac{\partial L}{\partial r} &= m(\ddot{r} - r\dot{\theta}^2)=0 \\
-\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} &= m\frac{d}{dt}\left(r^2 \dot{\theta} \right) =0
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{r}} \right) - \frac{\partial L}{\partial r} &= m(\ddot{r} - r\dot{\theta}^2)=0, \\
+\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} &= m\frac{d}{dt}\left(r^2 \dot{\theta} \right) =0.
 \end{aligned}
 $$
 
