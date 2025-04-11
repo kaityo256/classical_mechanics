@@ -75,8 +75,8 @@ $$
 
 $$
 \begin{aligned}
-\tilde{\mathbf{e}}_1 &= 2 \mathbf{e}_1 \\
-\tilde{\mathbf{e}}_2 &= 2 \mathbf{e}_2
+\tilde{\mathbf{e}}_1 &= 2 \mathbf{e}_1, \\
+\tilde{\mathbf{e}}_2 &= 2 \mathbf{e}_2.
 \end{aligned}
 $$
 
@@ -89,7 +89,7 @@ $$
 この事実を一般化しておこう。いま、あるベクトル$\mathbf{u}$が正規直交基底$\{\mathbf{e}_i\}$により、以下のように成分表示されているとしよう。
 
 $$
-\mathbf{u} = u^i \mathbf{e}_i
+\mathbf{u} = u^i \mathbf{e}_i.
 $$
 
 さて、別の正規直交基底$\{\tilde{\mathbf{e}}_i\}$を考え、先ほどのベクトルが
@@ -111,7 +111,7 @@ $$
 $$
 \begin{aligned}
 \mathbf{u} &= \tilde{u}^k \tilde{\mathbf{e}}_k \\
-&= \tilde{u}^k T^j_{\,k} \mathbf{e}_j
+&= \tilde{u}^k T^j_{\,k} \mathbf{e}_j.
 \end{aligned}
 $$
 
@@ -129,8 +129,8 @@ $$
 
 $$
 \begin{aligned}
-\tilde{\mathbf{e}}_i &= T^k_{\,i} \mathbf{e}_k \\
-u^i &= T^i_{\,k} \tilde{u}^k
+\tilde{\mathbf{e}}_i &= T^k_{\,i} \mathbf{e}_k, \\
+u^i &= T^i_{\,k} \tilde{u}^k.
 \end{aligned}
 $$
 
@@ -144,8 +144,8 @@ $\{\mathbf{e}_i\}$や$\{\tilde{\mathbf{e}}_i\}$が張っていた空間と双対
 
 $$
 \begin{aligned}
-(\mathbf{e}^j,\mathbf{e}_i) &= \delta^j_{\,i} \\
-(\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i) &= \delta^j_{\,i} \\
+(\mathbf{e}^j,\mathbf{e}_i) &= \delta^j_{\,i}, \\
+(\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i) &= \delta^j_{\,i}. \\
 \end{aligned}
 $$
 
@@ -161,7 +161,7 @@ $$
 \begin{aligned}
 (\tilde{\mathbf{e}}^i, \mathbf{e}_j) &= M^i_{\,k} (\mathbf{e}^k, \mathbf{e}_j)
 &= M^i_{\,k} \delta^k_{\,j} \\
-&= M^i_{\,j}
+&= M^i_{\,j}.
 \end{aligned}
 $$
 
@@ -180,7 +180,7 @@ $$
 右辺は、先程求めた$(\tilde{\mathbf{e}}^i, \mathbf{e}_j) = M^i_{\,j}$を代入することで
 
 $$
-T^k_{\,i} (\tilde{\mathbf{e}}^j, \mathbf{e}_k) =   M^j_{\,k} T^k_{\,i}
+T^k_{\,i} (\tilde{\mathbf{e}}^j, \mathbf{e}_k) =   M^j_{\,k} T^k_{\,i}.
 $$
 
 以上から、
@@ -209,7 +209,7 @@ $$
 \begin{aligned}
 T^k_{\,i} v_k &= T^k_{\,i} M^j_{\,k} \tilde{v}_j \\
 &= \delta^j_{\,i} \tilde{v}_j \\
-&= \tilde{v}_i
+&= \tilde{v}_i.
 \end{aligned}
 $$
 
@@ -217,7 +217,7 @@ $$
 
 $$
 \begin{aligned}
-\tilde{\mathbf{e}}_i &= T^k_{\,i} \mathbf{e}_k \\
+\tilde{\mathbf{e}}_i &= T^k_{\,i} \mathbf{e}_k, \\
 \tilde{v}_i &= T^k_{\,i }v_k
 \end{aligned}
 $$
@@ -234,8 +234,8 @@ $$
 
 $$
 \begin{aligned}
-{}^t(\tilde{\mathbf{e}}_i) &= {}^t(T^k_{\,i} \mathbf{e}_k)\\
-\tilde{\mathbf{e}}^i &= ({}^tT)^i_k \mathbf{e}^k
+{}^t(\tilde{\mathbf{e}}_i) &= {}^t(T^k_{\,i} \mathbf{e}_k),\\
+\tilde{\mathbf{e}}^i &= ({}^tT)^i_k \mathbf{e}^k.
 \end{aligned}
 $$
 
@@ -251,8 +251,8 @@ $$
 
 $$
 \begin{aligned}
-x &= r \cos\theta \\
-y &= r \sin \theta
+x &= r \cos\theta, \\
+y &= r \sin \theta.
 \end{aligned}
 $$
 
@@ -260,8 +260,8 @@ $$
 
 $$
 \begin{aligned}
-dx &= \cos \theta dr - r \sin \theta d\theta \\
-dy &= \sin \theta dr + r \cos \theta d\theta \\
+dx &= \cos \theta dr - r \sin \theta d\theta, \\
+dy &= \sin \theta dr + r \cos \theta d\theta. \\
 \end{aligned}
 $$
 
@@ -285,8 +285,8 @@ $$
 
 $$
 \begin{aligned}
-dx &= \left(\frac{\partial x}{\partial r}\right)_P dr +\left(\frac{\partial x}{\partial \theta}\right)_P dr  \\
-dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\partial \theta}\right)_P dr
+dx &= \left(\frac{\partial x}{\partial r}\right)_P dr +\left(\frac{\partial x}{\partial \theta}\right)_P dr,  \\
+dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\partial \theta}\right)_P dr.
 \end{aligned}
 $$
 
@@ -294,10 +294,10 @@ $$
 
 $$
 \begin{aligned}
-\left(\frac{\partial x}{\partial r}\right)_P &= (\cos \theta)_P = \frac{\sqrt{3}}{2} \\
-\left(\frac{\partial x}{\partial \theta}\right)_P &= (-r \sin \theta)_P = -\frac{1}{2}\\
-\left(\frac{\partial y}{\partial r}\right)_P &= (\sin \theta)_P = \frac{\sqrt{1}}{2} \\
-\left(\frac{\partial y}{\partial \theta}\right)_P &= (r \cos \theta)_P = \frac{\sqrt{3}}{2}
+\left(\frac{\partial x}{\partial r}\right)_P &= (\cos \theta)_P = \frac{\sqrt{3}}{2}, \\
+\left(\frac{\partial x}{\partial \theta}\right)_P &= (-r \sin \theta)_P = -\frac{1}{2},\\
+\left(\frac{\partial y}{\partial r}\right)_P &= (\sin \theta)_P = \frac{\sqrt{1}}{2}, \\
+\left(\frac{\partial y}{\partial \theta}\right)_P &= (r \cos \theta)_P = \frac{\sqrt{3}}{2}.
 \end{aligned}
 $$
 
@@ -323,7 +323,7 @@ dr \\ d\theta
 \end{pmatrix}
 \begin{pmatrix}
 dr \\ d\theta
-\end{pmatrix}
+\end{pmatrix}.
 \end{aligned}
 $$
 
@@ -353,17 +353,17 @@ $$
 \begin{aligned}
 \frac{\partial f}{\partial \tilde{x}^1} &=
 \frac{\partial f}{\partial x^1} \frac{\partial x^1}{\partial \tilde{x}^1}+
-\frac{\partial f}{\partial x^2} \frac{\partial x^2}{\partial \tilde{x}^1}\\
+\frac{\partial f}{\partial x^2} \frac{\partial x^2}{\partial \tilde{x}^1},\\
 \frac{\partial f}{\partial \tilde{x}^2} &=
 \frac{\partial f}{\partial x^1} \frac{\partial x^1}{\partial \tilde{x}^2}+
-\frac{\partial f}{\partial x^2} \frac{\partial x^2}{\partial \tilde{x}^2}\\
+\frac{\partial f}{\partial x^2} \frac{\partial x^2}{\partial \tilde{x}^2}.\\
 \end{aligned}
 $$
 
 これが任意の$f$について成り立つので、
 
 $$
-\tilde{\partial}_i = \frac{\partial x^k}{\partial \tilde{x}^i} \partial_k
+\tilde{\partial}_i = \frac{\partial x^k}{\partial \tilde{x}^i} \partial_k.
 $$
 
 ここで、$\partial_i \equiv \partial_{x_i}$、$\tilde{\partial}_i \equiv \partial_{\tilde{x}_i}$という表記を用いた。右辺に現れる偏微分の分母にチルダのある量が現れているため、$\{\partial_i\}$は共変ベクトルであることがわかる(そのため、添字を下に書いている)。
@@ -372,8 +372,8 @@ $$
 
 $$
 \begin{aligned}
-d\tilde{x}^i &= \frac{\partial \tilde{x}^i}{\partial x^k} dx^k\\
-\tilde{\partial}_i &= \frac{\partial x^k}{\partial \tilde{x}^i} \partial_k
+d\tilde{x}^i &= \frac{\partial \tilde{x}^i}{\partial x^k} dx^k,\\
+\tilde{\partial}_i &= \frac{\partial x^k}{\partial \tilde{x}^i} \partial_k.
 \end{aligned}
 $$
 
@@ -388,7 +388,7 @@ $$
 ニュートンの運動方程式は以下のように書ける。
 
 $$
-m \ddot{\mathbf{r}} = \mathbf{F}
+m \ddot{\mathbf{r}} = \mathbf{F}.
 $$
 
 ただし、
@@ -402,7 +402,7 @@ $$
 ここで、以下のような$\{\mathbf{e}_i\}$から$\{\mathbf{\tilde{e}}_i\}$への変換を考える。
 
 $$
-\tilde{\mathbf{e}}_i = T^k_{\,i} \mathbf{e}_k
+\tilde{\mathbf{e}}_i = T^k_{\,i} \mathbf{e}_k.
 $$
 
 ただし、$\{\mathbf{e}_i\}$及び$\{\mathbf{\tilde{e}}_i\}$は正規直交基底であるとする。すると、変換行列$T$は直交行列となるため、
@@ -416,7 +416,7 @@ $$
 既に見たように、位置ベクトルは反変ベクトルであり、以下の様に変換される。
 
 $$
-x^i = T^i_j \tilde{x}^j
+x^i = T^i_j \tilde{x}^j.
 $$
 
 両辺を$\tilde{x}^j$で偏微分すると、
@@ -430,13 +430,13 @@ $$
 ここで、力が保存力であるとしよう。すると、ポテンシャル$V(\mathbf{r})$が存在し、力は以下のように書ける。
 
 $$
-\mathbf{F} = - \nabla V
+\mathbf{F} = - \nabla V.
 $$
 
 力は座標による微分であるから、座標とは反対の変換を受けると予想される。実際に成分表示してみよう。
 
 $$
-F_i = - \frac{\partial V}{\partial x^i}
+F_i = - \frac{\partial V}{\partial x^i}.
 $$
 
 ここで、
@@ -451,7 +451,7 @@ $$
 \begin{aligned}
 \tilde{F}_i &= - \frac{\partial V}{\partial \tilde{x}^i}\\
 &= - \frac{\partial x^j}{\partial \tilde{x}^i}\frac{\partial V}{\partial x^j} \\
-&= T^j_i F_j
+&= T^j_i F_j.
 \end{aligned}
 $$
 
@@ -466,26 +466,26 @@ $$
 について、両辺に$T^{-1}$をかけると、
 
 $$
-\tilde{x}^i = (T^{-1})^i_j x^i
+\tilde{x}^i = (T^{-1})^i_j x^i.
 $$
 
 ${}^t T = T^{-1}$であったから、
 
 $$
-\tilde{x}^i = T^j_i x^j
+\tilde{x}^i = T^j_i x^j.
 $$
 
 従って、
 
 $$
-m\frac{d{\tilde{x}^i}}{dt^2} = m T^i_j \frac{d x^i}{dt^2}
+m\frac{d{\tilde{x}^i}}{dt^2} = m T^i_j \frac{d x^i}{dt^2}.
 $$
 
 以上から、
 
 $$
 \begin{aligned}
-m\frac{d\tilde{x}^i}{dt^2} - \tilde{F}_i &= T^j_i (m \frac{d x^j}{dt^2} - F_j)
+m\frac{d\tilde{x}^i}{dt^2} - \tilde{F}_i &= T^j_i (m \frac{d x^j}{dt^2} - F_j).
 \end{aligned}
 $$
 
@@ -504,13 +504,13 @@ $$
 両辺を時間微分すると
 
 $$
-\tilde{\mathbf{v}} = \mathbf{v} + \mathbf{u}
+\tilde{\mathbf{v}} = \mathbf{v} + \mathbf{u}.
 $$
 
 両辺に質量$m$をかけて、さらに時間微分すると
 
 $$
-m \dot{\tilde{\mathbf{v}}} = m\dot{\mathbf{v}}
+m \dot{\tilde{\mathbf{v}}} = m\dot{\mathbf{v}}.
 $$
 
 運動量の時間微分が形を変えないため、(力が時間や速度を陽に含まない限り)運動方程式も同じ形となることがわかる。
@@ -535,7 +535,7 @@ $$
 \begin{aligned}
 \tilde{F} &= -\frac{dU}{d\tilde{x}}\\
 &= \underbrace{-\frac{dU}{dx}}_{F} \underbrace{\frac{dx}{d\tilde{x}}}_{1/a} \\
-&= \frac{1}{a}F
+&= \frac{1}{a}F.
 \end{aligned}
 $$
 
@@ -550,25 +550,25 @@ $$
 バネでつながれた質点の運動方程式を考えよう。
 
 $$
-m \ddot{x} = - kx
+m \ddot{x} = - kx.
 $$
 
 両辺に$x$の時間微分、すなわち速度$\dot{x}$をかける。
 
 $$
-m \dot{x} \ddot{x} = - k x \dot{x}
+m \dot{x} \ddot{x} = - k x \dot{x}.
 $$
 
 この式の左辺を眺めると、 $m\dot{x}^2/2$ を時間微分したものであることがわかる。同様に右辺も$-kx^2/2$を時間微分したものである。そこで、
 
 $$
-\frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2 \right) = - \frac{d}{dt}\left( \frac{1}{2} k x^2\right)
+\frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2 \right) = - \frac{d}{dt}\left( \frac{1}{2} k x^2\right).
 $$
 
 右辺を左辺に移行すると、
 
 $$
-\frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2 + \frac{1}{2} k x^2\right) =0
+\frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2 + \frac{1}{2} k x^2\right) =0.
 $$
 
 すなわち、運動方程式
@@ -583,7 +583,7 @@ $$
 E = \frac{1}{2}m\dot{x}^2 + \frac{1}{2} k x^2
 $$
 
-が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を **保存量**(Conserved value) と呼ぶ。この$E$をエネルギーと呼び、エネルギーが時間変化しないことをエネルギー保存則と呼ぶ。すなわち、エネルギーとは運動方程式の保存量の一つであり、エネルギー保存則は運動方程式の持つ性質の一つに過ぎない。
+が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を **保存量**(conserved value) と呼ぶ。この$E$をエネルギーと呼び、エネルギーが時間変化しないことをエネルギー保存則と呼ぶ。すなわち、エネルギーとは運動方程式の保存量の一つであり、エネルギー保存則は運動方程式の持つ性質の一つに過ぎない。
 
 ここで、
 
@@ -606,7 +606,7 @@ $$
 先程と全く同様に両辺に$\dot{x}$をかけることにより、以下のエネルギーが保存することを示すことができる。
 
 $$
-E = \frac{1}{2} m \dot{x}^2 + U(x)
+E = \frac{1}{2} m \dot{x}^2 + U(x).
 $$
 
 このうち、右辺第一項を **運動エネルギー**(kinetic energy) と呼び、$K$で表すことが多い。左辺第二項を **ポテンシャルエネルギー**(potential energy) と呼び、$U$で表すことが多い。一般的、物体に働く力が全てポテンシャルから引き出される場合、運動エネルギーとポテンシャルエネルギーの和である全エネルギーが必ず保存量となる。
@@ -630,7 +630,7 @@ $$
 $$
 \begin{aligned}
 r &= \sqrt{(\mathbf{r}_A -\mathbf{r}_B})^2\\
-&= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}
+&= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.
 \end{aligned}
 $$
 
@@ -649,13 +649,13 @@ $$
 であったから、両辺を$x_A$で偏微分すると
 
 $$
-\frac{\partial r}{\partial x_A} = \frac{(x_A-x_B)}{r}
+\frac{\partial r}{\partial x_A} = \frac{(x_A-x_B)}{r}.
 $$
 
 以上から、質点Aの運動方程式は
 
 $$
-m \ddot{x}_A = - U'(r) \frac{(x_A-x_B)}{r}
+m \ddot{x}_A = - U'(r) \frac{(x_A-x_B)}{r}.
 $$
 
 全く同様に、$r$の$x_B$偏微分は
@@ -688,8 +688,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial r}{\partial x} &= \frac{x}{r} \\
-\frac{\partial r}{\partial y} &= \frac{y}{r} \\
+\frac{\partial r}{\partial x} &= \frac{x}{r}, \\
+\frac{\partial r}{\partial y} &= \frac{y}{r}, \\
 \frac{\partial r}{\partial z} &= \frac{z}{r}
 \end{aligned}
 $$
@@ -698,28 +698,28 @@ $$
 
 $$
 \begin{aligned}
-m \ddot{x} &= - U'(r) \frac{x}{r} \\
-m \ddot{y} &= - U'(r) \frac{y}{r} \\
-m \ddot{z} &= - U'(r) \frac{z}{r}
+m \ddot{x} &= - U'(r) \frac{x}{r}, \\
+m \ddot{y} &= - U'(r) \frac{y}{r}, \\
+m \ddot{z} &= - U'(r) \frac{z}{r}.
 \end{aligned}
 $$
 
 $m x\ddot{y} - m y \ddot{x}$を計算すると、右辺が消えて、
 
 $$
-m x\ddot{y} - m y \ddot{x}= 0
+m x\ddot{y} - m y \ddot{x}= 0.
 $$
 
 $m\dot{x} \dot{y} - m\dot{x} \dot{y}$を足すと、
 
 $$
-m \left(x\ddot{y}  + \dot{x} \dot{y} - \dot{x} \dot{y} - y \ddot{x}\right) = 0
+m \left(x\ddot{y}  + \dot{x} \dot{y} - \dot{x} \dot{y} - y \ddot{x}\right) = 0.
 $$
 
 この式をじっと眺めると
 
 $$
-m \frac{d}{dt}\left( x\dot{y} - y \dot{x} \right) =0
+m \frac{d}{dt}\left( x\dot{y} - y \dot{x} \right) =0.
 $$
 
 ここで、$x-y$平面における角運動量
@@ -738,8 +738,8 @@ $$
 
 $$
 \begin{aligned}
-L_x &=  m (y \dot{z} - z\dot{y})\\
-L_y &=  m (z \dot{x} - x\dot{z})\\
+L_x &=  m (y \dot{z} - z\dot{y}),\\
+L_y &=  m (z \dot{x} - x\dot{z})
 \end{aligned}
 $$
 
