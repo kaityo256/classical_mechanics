@@ -21,30 +21,30 @@
 全体を歩くのにかかる時間$T(x)$は、
 
 $$
-T(x) = \frac{l_A}{v_A} + \frac{l_B}{v_B}
+T(x) = \frac{l_A}{v_A} + \frac{l_B}{v_B}.
 $$
 
 ただし、
 
 $$
 \begin{aligned}
-l_A(x) &= \sqrt{h_A^2 + x^2} \\
-l_B(x) &= \sqrt{h_B^2 + (L-x)^2} \\
+l_A(x) &= \sqrt{h_A^2 + x^2}, \\
+l_B(x) &= \sqrt{h_B^2 + (L-x)^2}.
 \end{aligned}
 $$
 
 $T(x)$を最小化する$x$は$T'(x) = 0$を満たすはずであるから、
 
 $$
-T'(x) = \frac{l_A'}{v_A} + \frac{l_B'}{v_B} = 0
+T'(x) = \frac{l_A'}{v_A} + \frac{l_B'}{v_B} = 0.
 $$
 
 ここで
 
 $$
 \begin{aligned}
-l_A'(x) &= \frac{x}{\sqrt{h_A^2 + x^2}} = \frac{x}{l_A} \\
-l_B'(x) &= \frac{-(L-x)}{\sqrt{h_B^2 + (L-x)^2}} = -\frac{L-x}{l_B}\\
+l_A'(x) &= \frac{x}{\sqrt{h_A^2 + x^2}} = \frac{x}{l_A}, \\
+l_B'(x) &= \frac{-(L-x)}{\sqrt{h_B^2 + (L-x)^2}} = -\frac{L-x}{l_B}
 \end{aligned}
 $$
 
@@ -52,21 +52,21 @@ $$
 
 $$
 \begin{aligned}
-\sin \theta_A &= \frac{x}{l_A} \\
-\sin \theta_B &= \frac{L-x}{l_B} \\
+\sin \theta_A &= \frac{x}{l_A}, \\
+\sin \theta_B &= \frac{L-x}{l_B}.
 \end{aligned}
 $$
 
 従って、
 
 $$
-T'(x) = \frac{\sin \theta_A}{v_A} - \frac{\sin \theta_B}{v_B} = 0
+T'(x) = \frac{\sin \theta_A}{v_A} - \frac{\sin \theta_B}{v_B} = 0.
 $$
 
 以上から、
 
 $$
-\frac{\sin \theta_A}{v_A} = \frac{\sin \theta_B}{v_B}
+\frac{\sin \theta_A}{v_A} = \frac{\sin \theta_B}{v_B}.
 $$
 
 これは、光線が平面に入射した場合、入射角と出射角(屈折角)と、その媒質中における光速との関係を表すスネルの法則にほかならない。
@@ -124,7 +124,7 @@ $$
 $$
 \begin{aligned}
 l(x_k) &=\sqrt{\Delta x^2 + (y_{k+1} - y_k)^2} \\
-&\sim \Delta x \sqrt{1 + (y'_k)^2} \\
+&\sim \Delta x \sqrt{1 + (y'_k)^2}.
 \end{aligned}
 $$
 
@@ -142,7 +142,7 @@ $$
 であるから、$L = N\Delta$を固定したまま$N\rightarrow \infty$として連続極限をとると
 
 $$
-T= \int_0^L \frac{\sqrt{1+y'^2}}{\sqrt{2gy}} dx
+T= \int_0^L \frac{\sqrt{1+y'^2}}{\sqrt{2gy}} dx.
 $$
 
 関数$y(x)$は、スカラー量を入力とし、スカラー量を返すものであった。先程の$T$は関数$y(x)$を入力とし、出力としてスカラー量が決まるため、「関数の関数」とみなすことができる。それを表現して$T[y]$と書くことがある。適当な境界条件のもとで$T[y]$を最小とするような関数$y(x)$を見つけよ、というのが最速降下曲線問題である。
@@ -150,7 +150,7 @@ $$
 この問題を、汎関数微分を用いて解くというのが本章の目的だが、まずは幾何学的な考察で解いてみよう。曲線を折れ線で近似した状態を考える。$x_{k-1}$から$x_k$までの領域の速度は$v_{k-1}$であり、$x_k$から$x_{k+1}$までの速度が$v_k$であるから、入射角$\theta_{k-1}$と出射角$\theta_k$を定義するとスネルの法則と同じ議論により
 
 $$
-\frac{\sin \theta_{k-1}}{v_{k-1}} = \frac{\sin \theta_k}{v_k}
+\frac{\sin \theta_{k-1}}{v_{k-1}} = \frac{\sin \theta_k}{v_k}.
 $$
 
 連続極限をとると、
@@ -188,7 +188,7 @@ $$
 $$
 \begin{aligned}
 \frac{dy}{dx} &= \tan\left(\frac{\pi}{2} - \theta \right) \\
-&= \frac{\cos \theta}{\sin \theta}
+&= \frac{\cos \theta}{\sin \theta}.
 \end{aligned}
 $$
 
@@ -199,26 +199,25 @@ $$
 \frac{dx}{d\theta} &= \frac{dx}{dy} \frac{dy}{d\theta} \\
 &=\frac{\sin \theta}{\cos\theta}\left( 4 a \sin \theta \cos \theta\right) \\
 &= 4 a \sin^2 \theta \\
-&= 2 a (1 - \cos 2\theta)
+&= 2 a (1 - \cos 2\theta).
 \end{aligned}
 $$
 
 両辺を$\theta$で積分すると
 
 $$
-x = 2 a \left(\theta - \frac{1}{2} \sin \theta \right)
-$$
-
-$$
-y = 2a \sin^2 \theta = a (1 - \cos 2 \theta)
+\begin{aligned}
+x &= 2 a \left(\theta - \frac{1}{2} \sin \theta \right),\\
+y &= 2a \sin^2 \theta = a (1 - \cos 2 \theta).
+\end{aligned}
 $$
 
 であったから、$s = 2\theta$とすると
 
 $$
 \begin{aligned}
-x &= a (s - \sin s) \\
-y &= a (1 - \cos s)
+x &= a (s - \sin s), \\
+y &= a (1 - \cos s).
 \end{aligned}
 $$
 
@@ -277,13 +276,13 @@ $$
 解析力学では、汎関数の積分の中に関数の関数、すなわち合成関数が入ることが多い。そこで、以下のような式を考える。
 
 $$
-I[f] = \int_a^b F(f(x)) dx
+I[f] = \int_a^b F(f(x)) dx.
 $$
 
 $F(x)$は普通の関数である。例えば $F(x) = x^2$であるならば、$I[f]$は、「関数$f(x)$の自乗を$a < x < b$で積分した値を返しなさい」という意味になる。ここで、関数 $f(x)$を微小量$\varepsilon$ を用いて $f(x) + \varepsilon \phi(x)$と変化させた時、$I$がどのように変化するか見てみよう。
 
 $$
-I[f + \varepsilon \phi] = \int_a^b F(f(x)+ \varepsilon \phi(x) ) dx
+I[f + \varepsilon \phi] = \int_a^b F(f(x)+ \varepsilon \phi(x) ) dx.
 $$
 
 ここで、ある$x$を固定すると、$f(x)$や$\phi(x)$は単なる値になるから $\varepsilon \phi(x)$をまとめて微小量とみなして良い。そこで
@@ -292,13 +291,13 @@ $$
 F(f(x) + \varepsilon \phi(x)) = F(f(x)) + F'(f(x)) \varepsilon \phi(x) + O(\varepsilon^2)
 $$
 
-とできる。元の積分に代入すると、
+と展開できる。元の積分に代入すると、
 
 $$
 \begin{aligned}
 I[f + \varepsilon \phi] &= \int_a^b F(f(x)+ \varepsilon \phi(x) ) dx \\
 &= \underbrace{\int_a^b F[f(x)] dx}_{I[f]} + \varepsilon \int_a^b F'[f(x)]\phi(x) dx +O(\varepsilon^2) \\
-&= I[f] + \varepsilon \int_a^b F'[f(x)]\phi(x) dx +O(\varepsilon^2)
+&= I[f] + \varepsilon \int_a^b F'[f(x)]\phi(x) dx +O(\varepsilon^2).
 \end{aligned}
 $$
 
@@ -311,19 +310,19 @@ $$
 となる。$\varepsilon \phi(x)$を、改めて $\delta f(x)$と表記しよう。ここで、これは$\delta$と$f(x)$の積ではなく、$\delta f$という一つの関数であることに注意。すると、
 
 $$
-\underbrace{I[f + \delta f]  - I[f]}_{\delta I} = \int_a^b F'[f(x)]\delta f dx + O(\varepsilon^2)
+\underbrace{I[f + \delta f]  - I[f]}_{\delta I} = \int_a^b F'[f(x)]\delta f dx + O(\varepsilon^2).
 $$
 
 ここで左辺を$\delta I$と書いて、$\varepsilon^2$のオーダーの項を無視すると、以下のように表記できる。
 
 $$
-\delta I = \int_a^b F'[f(x)]\delta f dx
+\delta I = \int_a^b F'[f(x)]\delta f dx.
 $$
 
-これは、関数の全微分
+これは、関数$f(x)$の全微分
 
 $$
-df = f' dx
+df = f'(x) dx
 $$
 
 の汎関数版である。要するに汎関数微分とは、積分の中の合成関数$F[f]$を、$f$を変数とみなして微分しろ、ということに過ぎない。
@@ -336,7 +335,7 @@ $$
 
 という形を考えることが多い。なぜなら、力学は位置と速度で表現されており、速度は位置の時間微分であるためだ(現在の議論における変数$x$が、力学では時間$t$にあたることに注意)。このような場合に汎関数微分がどうなるかを見ておこう。
 
-まず、二変数関数$F(f,g)$を考える。関数$Fの全微分は
+まず、二変数関数$F(f,g)$を考える。この関数の全微分は
 
 $$
 dF = \frac{\partial F}{\partial f} df +\frac{\partial F}{\partial g} dg
@@ -353,7 +352,7 @@ $$
 である。ここで、汎関数微分を行おう。$f \rightarrow f + \delta f$、$g \rightarrow g + \delta g$と変化した時、$I \rightarrow I + \delta I$と変化したならば、
 
 $$
-\delta I = \int_a^b \left(\frac{\partial F}{\partial f} \delta f(x) +  \frac{\partial F}{\partial g} \delta g(x)   \right) dx
+\delta I = \int_a^b \left(\frac{\partial F}{\partial f} \delta f(x) +  \frac{\partial F}{\partial g} \delta g(x)   \right) dx.
 $$
 
 ここまでは、二変数関数$F(f, g)$における汎関数微分の一般論である。さて、ここで$f$と$g$が常に
@@ -365,7 +364,7 @@ $$
 という関係を満たすことを要請しよう。この関係を満たしつつ、$f \rightarrow f + \delta f$と変化し、その結果$g \rightarrow g + \delta g$と変化したとする。ただし、それぞれ積分範囲の端点でゼロ、すなわち$\delta f(a) =\delta f(b) = \delta g(a) = \delta g(b)=0$を満たすように変化させる。変化後も微分の関係を満たさなければならないのだから、
 
 $$
-\frac{d}{dx} (f + \delta f) = g + \delta g
+\frac{d}{dx} (f + \delta f) = g + \delta g.
 $$
 
 もともと$g(x) = f'(x)$であったから、両辺から引くと
@@ -380,14 +379,14 @@ $$
 \begin{aligned}
 \delta I &= \int_a^b \left(\frac{\partial F}{\partial f} \delta f +  \frac{\partial F}{\partial g} \frac{d}{dx}(\delta f)   \right) dx \\
 &= \int_a^b \frac{\partial F}{\partial f} \delta f dx + \left[\frac{\partial F}{\partial g} \delta f \right]_a^b - \int_a^b \frac{d}{dx}\left(\frac{\partial F}{\partial g}\right) \delta f dx\\
-&= \int_a^b \left( \frac{\partial F}{\partial f} - \frac{d}{dx} \left(\frac{\partial F}{\partial g} \right)\right) \delta f dx
+&= \int_a^b \left( \frac{\partial F}{\partial f} - \frac{d}{dx} \left(\frac{\partial F}{\partial g} \right)\right) \delta f dx.
 \end{aligned}
 $$
 
 最後に、$g=f'$であるから、$g$での偏微分を$f'$での偏微分で表すと
 
 $$
-\delta I = \int_a^b \left( \frac{\partial F}{\partial f} - \frac{d}{dx} \left(\frac{\partial F}{\partial f'} \right)\right) \delta f dx
+\delta I = \int_a^b \left( \frac{\partial F}{\partial f} - \frac{d}{dx} \left(\frac{\partial F}{\partial f'} \right)\right) \delta f dx.
 $$
 
 これが、関数と関数の導関数に依存する汎関数
@@ -423,7 +422,7 @@ $$
 汎関数微分の導入が終わったので、これを用いて最速降下曲線の問題をもう一度考えよう。我々は、関数$y(x)$を与えると、通過時間$T$を与える以下の関係式を得たのであった。
 
 $$
-T[y] = \int_0^L \frac{\sqrt{1+y'^2}}{\sqrt{2gy}} dx
+T[y] = \int_0^L \frac{\sqrt{1+y'^2}}{\sqrt{2gy}} dx.
 $$
 
 積分の中身を、$y(x)$と$y'(x)$の関数$F(y, y')$とみなすと、
@@ -443,7 +442,7 @@ $$
 この$T$を最小化するような$y(x)$を求めなさい、というのが変分問題である。いま、$T$を最小にするような$y(x)$が選ばれたとしよう。すると、そこからどのように$y(x)$を変化させても、$T$は増えるはずだ。すなわち、$y \rightarrow y + \delta y$という変化に対して、$T \rightarrow T+ \delta T$と変化するなら、
 
 $$
-\delta T = \int_0^a \frac{\delta F}{\delta y} \delta y dx  + O(\delta y^2)
+\delta T = \int_0^a \frac{\delta F}{\delta y} \delta y dx  + O(\delta y^2).
 $$
 
 どのような$\delta y$に対しても一次のオーダーで$T$が変わらない、すなわち$\delta T =0$になるのであるから、
@@ -475,7 +474,7 @@ $$
 が成り立つとき、以下の量の$x$微分がゼロとなる。
 
 $$
-B = F - f' \frac{\partial F}{\partial f'}
+B = F - f' \frac{\partial F}{\partial f'}.
 $$
 
 証明は簡単で、$dB/dx$を計算すれば良い。
@@ -484,7 +483,7 @@ $$
 \begin{aligned}
 \frac{dB}{dx} &= \frac{\partial F}{\partial f} f' +  \frac{\partial F}{\partial f'} f'' - f'' \frac{\partial F}{\partial f'} - f' \underbrace{\frac{d}{dx}\left(\frac{\partial F}{\partial f'} \right)}_{=\partial x F} \\
 &= \frac{\partial F}{\partial f} f' +  \frac{\partial F}{\partial f'} f'' - f'' \frac{\partial F}{\partial f'} - f' \frac{\partial F}{\partial x} \\
-&= 0
+&= 0.
 \end{aligned}
 $$
 
@@ -502,20 +501,20 @@ $$
 \begin{aligned}
 F - y' \frac{\partial F}{\partial y'} &= \frac{\sqrt{1+y'^2}}{\sqrt{2gy}} - \frac{y'^2}{\sqrt{2gy}\sqrt{1+y'^2}} \\
 &= \frac{1}{\sqrt{2gy}\sqrt{1+y'^2}} \\
-&= C
+&= C.
 \end{aligned}
 $$
 
 $y'$について整理すると、
 
 $$
-y' =　\sqrt{\frac{1 -2gC^2y}{2gC^2y}}
+y' =　\sqrt{\frac{1 -2gC^2y}{2gC^2y}}.
 $$
 
 $2gC^2 = 1/2a$とすると、以下の微分方程式を得る。
 
 $$
-\frac{dy}{dx} = -\sqrt{\frac{2a - y}{y}}
+\frac{dy}{dx} = -\sqrt{\frac{2a - y}{y}}.
 $$
 
 これと、角度の定義
@@ -536,10 +535,10 @@ $$
 
 ## オイラー・ラグランジュ方程式
 
-さて、解析力学に戻ろう。位置と速度の関数としてラグランジアン$L(x(t),v(t))$が与えられたとする。先程までの議論とは異なり、積分変数が$x$から$t$となり、$x(t)$は時間の関数となることに注意。ここで、$\dot{x} = v$であるので、以後は$L(x,\dot{x})$と書こう。このラグランジアンを、適当な期間$t_1 < t < t_2$について時間積分する。
+さて、解析力学に戻ろう。位置と速度の関数としてラグランジアン$L(x(t),v(t))$が与えられたとする。先程までの議論とは異なり、積分変数が$x$から$t$となり、$x(t)$は時間の関数となることに注意。ここで、$v = \dot{x}$であるので、以後は$L(x,\dot{x})$と書こう。このラグランジアンを、適当な期間$t_1 < t < t_2$について時間積分する。
 
 $$
-I = \int_{t_1}^{t_2} L(x,\dot{x}) dt
+I = \int_{t_1}^{t_2} L(x,\dot{x}) dt.
 $$
 
 この量$I$を作用、この積分を作用積分と呼ぶ。ここで、運動の軌道$x(t)$はこの作用が最小になるように決まることを要請するのが最小作用の原理であった。そのような軌道は汎関数微分がゼロとなるはずであるから、被積分関数である$L$について変分を取ると、先程前の議論から
@@ -559,7 +558,7 @@ $$
 さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、
 
 $$
-B = L - \dot{x} \frac{\partial L}{\partial \dot{q}}
+B = L - \dot{x} \frac{\partial L}{\partial \dot{x}}
 $$
 
 が時間不変量となる。ここで、ラグランジアンが
@@ -575,7 +574,7 @@ $$
 B &= L - \dot{x} \frac{\partial L}{\partial \dot{x}}\\
 &= \frac{1}{2} m\dot{x}^2 - U(x) - m\dot{x}^2\\
 &= - \left( \frac{1}{2} m\dot{x}^2 + U(x) \right)\\
-&= -E
+&= -E.
 \end{aligned}
 $$
 
@@ -596,13 +595,13 @@ $$
 また、微分がゼロであるような点は最大値、最小値を与えるとも限らない。例えば、$0 \le x \le 1$で定義された以下の関数を考える。
 
 $$
-f(x) = 6 x^3 - 9x^2 + 4x
+f(x) = 6 x^3 - 9x^2 + 4x.
 $$
 
 微分すると、
 
 $$
-f'(x) = 18 x^2 - 18 x +4 = 2(3x-1)(3x-2)
+f'(x) = 18 x^2 - 18 x +4 = 2(3x-1)(3x-2).
 $$
 
 すなわち、この関数は$x=1/3, 2/3$で微分がゼロとなる。しかし、図示してみるとわかるように、この関数は微分がゼロとなる点で最大値も最小値も与えない。
@@ -618,7 +617,7 @@ $$
 * $x=2/3$ において極小値 $f(2/3)=4/9$
 * $x=1$ において最大値 $f(1)=0$
 
-また、$f(x) = x^3$という関数を考えると、$f'(x) = 0$であるが$x=0$は極小も極大も与えない。また、二変数関数$f(x,y) = x^2 - y^2$は、原点で$x$,$y$による偏微分がいずれもゼロとなるが、極大値も極小値も与えない。このような点を **鞍点**(saddle point) と呼ぶ。このように、微分がゼロとなる点をまとめて　**停留点**(stationary point) と呼ぶ。
+また、$f(x) = x^3$という関数を考えると、$f'(x) = 0$であるが$x=0$は極小も極大も与えない。また、二変数関数$f(x,y) = x^2 - y^2$は、原点で$x$,$y$による偏微分がいずれもゼロとなるが、極大値も極小値も与えない。このような点を **鞍点**(saddle point) と呼ぶ。このように、微分がゼロとなる点をまとめて**停留点**(stationary point) と呼ぶ。
 
 作用積分においても、変分がゼロとなるような関数が必ずしも作用を最小にするとは限らない。極小値となることが多いので「極小作用の法則」と呼ぶこともあるが、例えば調和振動子などは作用積分が極小値を与えない。そういう意味で「停留作用の法則」と呼ぶのが最も正確である。しかし、本書では以後、最小作用の法則と呼び、あたかも運動方程式の解が作用を最小にするかのように説明する。
 
