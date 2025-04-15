@@ -18,7 +18,7 @@ $$
 
 $$
 \begin{aligned}
-\dot{p}_x &= -\frac{\partial H}{\partial q^x} = 0 \\
+\dot{p}_x &= -\frac{\partial H}{\partial q^x} = 0, \\
 \dot{p}_y &= -\frac{\partial H}{\partial q^y} = 0
 \end{aligned}
 $$
@@ -35,7 +35,7 @@ $$
 
 $$
 \begin{aligned}
-Q^1 &= \frac{q^1 + q^1}{2}\\
+Q^1 &= \frac{q^1 + q^2}{2},\\
 Q^2 &= \frac{q^1 - q^2}{2}
 \end{aligned}
 $$
@@ -44,8 +44,8 @@ $$
 
 $$
 \begin{aligned}
-q^1 &= Q^1 + Q^2\\
-q^2 &= Q^1 - Q^2
+q^1 &= Q^1 + Q^2,\\
+q^2 &= Q^1 - Q^2.
 \end{aligned}
 $$
 
@@ -53,8 +53,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{q}^1 &= \dot{Q}^1 + \dot{Q}^2\\
-\dot{q}^2 &= \dot{Q}^1 - \dot{Q}^2
+\dot{q}^1 &= \dot{Q}^1 + \dot{Q}^2,\\
+\dot{q}^2 &= \dot{Q}^1 - \dot{Q}^2.
 \end{aligned}
 $$
 
@@ -63,23 +63,23 @@ $$
 $$
 \begin{aligned}
 P_1 &= \frac{\partial L}{\partial \dot{Q}^1}\\
-&= \underbrace{\frac{\partial L}{\partial \dot{q}^1}}_{p_1} \underbrace{\frac{\partial \dot{q}^1}{\partial \dot{Q}^1}}_{1} + \underbrace{\frac{\partial L}{\partial \dot{q}^2}}_{p_1} \underbrace{\frac{\partial \dot{q}^2}{\partial \dot{Q}^1}}_{1} \\
-&= p_1 + p_2
+&= \underbrace{\frac{\partial L}{\partial \dot{q}^1}}_{p_1} \underbrace{\frac{\partial \dot{q}^1}{\partial \dot{Q}^1}}_{1} + \underbrace{\frac{\partial L}{\partial \dot{q}^2}}_{p_2} \underbrace{\frac{\partial \dot{q}^2}{\partial \dot{Q}^1}}_{1} \\
+&= p_1 + p_2.
 \end{aligned}
 $$
 
 同様に、
 
 $$
-P_2 = p_1 - p_2
+P_2 = p_1 - p_2.
 $$
 
 $p_1, p_2$について解くと
 
 $$
 \begin{aligned}
-p_1 &= \frac{P_1 + P_2}{2}\\
-p_2 &= \frac{P_1 - P_2}{2}\\
+p_1 &= \frac{P_1 + P_2}{2},\\
+p_2 &= \frac{P_1 - P_2}{2}.
 \end{aligned}
 $$
 
@@ -101,8 +101,8 @@ $$
 
 $$
 \begin{aligned}
-p_r &= \frac{\partial L}{\partial \dot{r}} = m\dot{r}\\
-p_\theta &= \frac{\partial L}{\partial \dot{\theta}} = mr^2\dot{\theta}\\
+p_r &= \frac{\partial L}{\partial \dot{r}} = m\dot{r},\\
+p_\theta &= \frac{\partial L}{\partial \dot{\theta}} = mr^2\dot{\theta}
 \end{aligned}
 $$
 
@@ -112,14 +112,14 @@ $$
 \begin{aligned}
 H &= p_r \dot{r} + p_\theta \dot{\theta} - L\\
 &= \frac{p_r^2}{m}+\frac{p_\theta^2}{mr^2} - \frac{p_r^2}{2m} - \frac{p_\theta^2}{2mr^2} + U(r) \\
-&= \frac{1}{2m}\left(p_r^2 + \frac{p_\theta^2}{r^2} \right) + U(r)
+&= \frac{1}{2m}\left(p_r^2 + \frac{p_\theta^2}{r^2} \right) + U(r).
 \end{aligned}
 $$
 
 明らかにハミルトニアンは$\theta$に依存しないため、
 
 $$
-\dot{p_\theta} = - \frac{\partial H}{\partial \theta} = 0
+\dot{p_\theta} = - \frac{\partial H}{\partial \theta} = 0.
 $$
 
 すなわち、$\theta$に対応する一般化運動量が保存量となることがわかる。
@@ -134,8 +134,8 @@ $$
 
 $$
 \begin{aligned}
-x &= r \cos \theta \\
-y &= r \sin \theta
+x &= r \cos \theta, \\
+y &= r \sin \theta.
 \end{aligned}
 $$
 
@@ -143,8 +143,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{x} &= \dot{r} \cos \theta - r \dot{\theta} \sin \theta\\
-\dot{y} &= \dot{r} \sin \theta + r \dot{\theta} \cos \theta
+\dot{x} &= \dot{r} \cos \theta - r \dot{\theta} \sin \theta,\\
+\dot{y} &= \dot{r} \sin \theta + r \dot{\theta} \cos \theta.
 \end{aligned}
 $$
 
@@ -152,15 +152,15 @@ $$
 
 $$
 \begin{aligned}
-y\dot{x} &= r\dot{r} \cos \theta \sin \theta - r^2 \dot{\theta} \sin^2 \theta\\
-x\dot{y} &= r\dot{r} \sin \theta \cos \theta + r^2 \dot{\theta} \cos^2 \theta
+y\dot{x} &= r\dot{r} \cos \theta \sin \theta - r^2 \dot{\theta} \sin^2 \theta,\\
+x\dot{y} &= r\dot{r} \sin \theta \cos \theta + r^2 \dot{\theta} \cos^2 \theta.
 \end{aligned}
 $$
 
 従って、
 
 $$
-L_z = m(x\dot{y} - y \dot{x}) = mr^2 \dot{\theta} = p_\theta
+L_z = m(x\dot{y} - y \dot{x}) = mr^2 \dot{\theta} = p_\theta.
 $$
 
 すなわち、一般化座標$\theta$に対応する一般化運動量$p_\theta$は、角運動量に対応する。すなわち$\dot{p}_\theta = 0$は角運動量保存則に他ならない。
@@ -187,8 +187,8 @@ $$
 
 $$
 \begin{aligned}
-Q &= \frac{\partial W}{\partial P} = q + \varepsilon \frac{\partial}{\partial P}J(q,P) \\
-p &= \frac{\partial W}{\partial q} = P + \varepsilon \frac{\partial}{\partial q}J(q,P)
+Q &= \frac{\partial W}{\partial P} = q + \varepsilon \frac{\partial}{\partial P}J(q,P), \\
+p &= \frac{\partial W}{\partial q} = P + \varepsilon \frac{\partial}{\partial q}J(q,P),
 \end{aligned}
 $$
 
@@ -204,7 +204,7 @@ $$
 
 $$
 \begin{aligned}
-Q &= q + \varepsilon h \\
+Q &= q + \varepsilon h, \\
 P &= p - \varepsilon h
 \end{aligned}
 $$
@@ -217,7 +217,7 @@ $$
 \begin{aligned}
 J(q, P) &= J(q, p - \varepsilon h) \\
 &= J(q,p) -\varepsilon h \frac{\partial}{\partial p} J(q,p) \\
-&= J(q,p) + O(\varepsilon)
+&= J(q,p) + O(\varepsilon).
 \end{aligned}
 $$
 
@@ -238,12 +238,12 @@ $$
 P = p - \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
 $$
 
-となる。2式をあわせて
+となる。二式をあわせて
 
 $$
 \begin{aligned}
-Q &= q + \varepsilon \frac{\partial}{\partial p}J(q,p)\\
-P &= p - \varepsilon \frac{\partial}{\partial q}J(q,p)
+Q &= q + \varepsilon \frac{\partial}{\partial p}J(q,p),\\
+P &= p - \varepsilon \frac{\partial}{\partial q}J(q,p).
 \end{aligned}
 $$
 
@@ -263,7 +263,7 @@ $$
 -\varepsilon \displaystyle\frac{\partial^2 J}{\partial q^2}  &
 1 - \varepsilon \displaystyle\frac{\partial^2 J}{\partial q \partial p}
 \end{vmatrix} \\
-&= 1 + O(\varepsilon^2)
+&= 1 + O(\varepsilon^2).
 \end{aligned}
 $$
 
@@ -275,8 +275,8 @@ $$
 
 $$
 \begin{aligned}
-Q &= q + \varepsilon \frac{\partial J}{\partial p}\\
-P &= p - \varepsilon \frac{\partial J}{\partial q}\\
+Q &= q + \varepsilon \frac{\partial J}{\partial p},\\
+P &= p - \varepsilon \frac{\partial J}{\partial q}.
 \end{aligned}
 $$
 
@@ -286,7 +286,7 @@ $$
 \begin{aligned}
 H(Q, P) &= H\left(q + \varepsilon \frac{\partial J}{\partial p}, p - \varepsilon \frac{\partial J}{\partial q} \right) \\
 &= H(q,p) + \varepsilon \frac{\partial H}{\partial q}\frac{\partial J}{\partial p} - \varepsilon \frac{\partial H}{\partial p}\frac{\partial J}{\partial q} + O(\varepsilon^2)\\
-&= H(q,p) + \varepsilon \{H,J\} + O(\varepsilon^2)
+&= H(q,p) + \varepsilon \{H,J\} + O(\varepsilon^2).
 \end{aligned}
 $$
 
@@ -299,23 +299,23 @@ $$
 となる。この差がゼロであるならば
 
 $$
-\{H,J\} = 0
+\{H,J\} = 0.
 $$
 
 ハミルトニアンとのポアソン括弧は時間微分を意味するのであったから、
 
 $$
-\dot{J} = \{J, H\} = 0
+\dot{J} = \{J, H\} = 0.
 $$
 
-すなわち、母関数$J$が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　**ネーターの定理**(Noether's theorem)　と呼ぶ。
+すなわち、母関数$J$が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を**ネーターの定理**(Noether's theorem)と呼ぶ。
 
 母関数$J$として様々な物理量を入れてみよう。まず、$J$としてハミルトニアン$H$を入れてみる。
 
 $$
 \begin{aligned}
-Q &= q + \varepsilon \frac{\partial H}{\partial p} = q + \varepsilon \dot{q} \\
-P &= p - \varepsilon \frac{\partial H}{\partial q} = p + \varepsilon \dot{p} \\
+Q &= q + \varepsilon \frac{\partial H}{\partial p} = q + \varepsilon \dot{q}, \\
+P &= p - \varepsilon \frac{\partial H}{\partial q} = p + \varepsilon \dot{p}.
 \end{aligned}
 $$
 
@@ -323,8 +323,8 @@ $$
 
 $$
 \begin{aligned}
-q(t+\varepsilon) &= q + \varepsilon \dot{q} + O(\varepsilon^2)\\
-p(t+\varepsilon) &= p + \varepsilon \dot{p} + O(\varepsilon^2)\\
+q(t+\varepsilon) &= q + \varepsilon \dot{q} + O(\varepsilon^2),\\
+p(t+\varepsilon) &= p + \varepsilon \dot{p} + O(\varepsilon^2).
 \end{aligned}
 $$
 
@@ -333,7 +333,7 @@ $$
 ハミルトニアンは、当然ハミルトニアン自身と可換である。
 
 $$
-\{H, H\} = 0
+\{H, H\} = 0.
 $$
 
 したがって、ハミルトニアンは時間の並進操作$t \rightarrow t + \varepsilon$に対して保存量となる。これは、正準方程式が、時間を連続パラメータとして、ハミルトニアンを母関数とする正準変換を表していることを意味する。
@@ -341,30 +341,30 @@ $$
 次に、空間並進操作を考えよう。先ほど考えた相対距離に依存する相互作用をする二粒子系を考える。
 
 $$
-H = \frac{1}{2m}(p_1^2 + p_2^2) + U(q^1-q^2)
+H = \frac{1}{2m}(p_1^2 + p_2^2) + U(q^1-q^2).
 $$
 
 ここで、母関数として二粒子の運動量の和を考える。
 
 $$
-J = p_1 + p_2
+J = p_1 + p_2.
 $$
 
 この母関数による微小正準変換は以下のようになる。
 
 $$
 \begin{aligned}
-Q^1 &= q^1 + \varepsilon \\
-P_1 &= p_1\\
-Q^2 &= q^2 + \varepsilon \\
-P_2 &= p_2\\
+Q^1 &= q^1 + \varepsilon, \\
+P_1 &= p_1,\\
+Q^2 &= q^2 + \varepsilon, \\
+P_2 &= p_2,
 \end{aligned}
 $$
 
 要するに、座標を正の方向に$\varepsilon$だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、
 
 $$
-Q^1 - Q^2 = q^1 - q^2
+Q^1 - Q^2 = q^1 - q^2.
 $$
 
 また、運動量は変化しないから、
@@ -372,7 +372,7 @@ $$
 $$
 \begin{aligned}
 H &= \frac{1}{2m}(p_1^2 + p_2^2) + U(q^1-q^2) \\
-&= \frac{1}{2m}(P_1^2 + P_2^2) + U(Q^1-Q^2)
+&= \frac{1}{2m}(P_1^2 + P_2^2) + U(Q^1-Q^2).
 \end{aligned}
 $$
 
@@ -389,7 +389,7 @@ $$
 $$
 \begin{aligned}
 \{J, H\} &= \{p_1+p_2, H\}\\
-&= \{p_1, H\} +  \{p_2, H\}
+&= \{p_1, H\} +  \{p_2, H\}.
 \end{aligned}
 $$
 
@@ -398,22 +398,22 @@ $$
 $$
 \begin{aligned}
 \{p_1, H\} &= \underbrace{\frac{\partial p_1}{\partial q^i}}_{=0}\frac{\partial H}{\partial p_i} - \underbrace{\frac{\partial p_1}{\partial p_i}}_{\delta_1^i}\frac{\partial H}{\partial q^i} \\
-&= -\frac{\partial H}{\partial q^1}
+&= -\frac{\partial H}{\partial q^1}.
 \end{aligned}
 $$
 
 同様に、
 
 $$
-\{p_2, H\} = -\frac{\partial H}{\partial q^2}
+\{p_2, H\} = -\frac{\partial H}{\partial q^2}.
 $$
 
 ここで、ポテンシャルの形から、
 
 $$
 \begin{aligned}
-\frac{\partial H}{\partial q^1} &= \frac{dU}{dr} \frac{\partial r}{\partial q^1} = U'(r) \frac{(q^1 - q^2)}{r} \\
-\frac{\partial H}{\partial q^2} &= \frac{dU}{dr} \frac{\partial r}{\partial q^2} = U'(r) \frac{(q^2 - q^1)}{r}
+\frac{\partial H}{\partial q^1} &= \frac{dU}{dr} \frac{\partial r}{\partial q^1} = U'(r) \frac{(q^1 - q^2)}{r}, \\
+\frac{\partial H}{\partial q^2} &= \frac{dU}{dr} \frac{\partial r}{\partial q^2} = U'(r) \frac{(q^2 - q^1)}{r}.
 \end{aligned}
 $$
 
@@ -424,7 +424,7 @@ $$
 \{J, H\} &= \{p_1+p_2, H\} \\
 &= \{p_1, H\} +  \{p_2, H\} \\
 &= - U'(r) \frac{(q^1 - q^2)}{r} - U'(r)\frac{(q^2 - q^1)}{r} \\
-&=0
+&=0.
 \end{aligned}
 $$
 
@@ -433,13 +433,13 @@ $$
 回転対称性についても同様に理解することができる。以下のような中心力ポテンシャルに依存する系を考える。
 
 $$
-H = \frac{1}{2m}(p_1^2 + p_2^2) + U(r)
+H = \frac{1}{2m}(p_1^2 + p_2^2) + U(r).
 $$
 
 先ほどと形が似ているが、今回は
 
 $$
-r = \sqrt{(q^1)^2 + (q^2)^2}
+r = \sqrt{(q^1)^2 + (q^2)^2}.
 $$
 
 であることに注意。ここで、母関数として$z$軸周りの角運動量を選ぶ。
@@ -452,10 +452,10 @@ $$
 
 $$
 \begin{aligned}
-Q^1 &= q^1 + \varepsilon \frac{\partial J}{\partial p_1} = q^1 - \varepsilon q^2\\
-Q^2 &= q^2 + \varepsilon \frac{\partial J}{\partial p_2} = q^2 + \varepsilon q^1\\
-P_1 &= p_1 - \varepsilon \frac{\partial J}{\partial q^1} = p_1 - \varepsilon p_2 \\
-P_2 &= p_2 - \varepsilon \frac{\partial J}{\partial q^2} = p_2 + \varepsilon p_1 \\
+Q^1 &= q^1 + \varepsilon \frac{\partial J}{\partial p_1} = q^1 - \varepsilon q^2,\\
+Q^2 &= q^2 + \varepsilon \frac{\partial J}{\partial p_2} = q^2 + \varepsilon q^1,\\
+P_1 &= p_1 - \varepsilon \frac{\partial J}{\partial q^1} = p_1 - \varepsilon p_2,\\
+P_2 &= p_2 - \varepsilon \frac{\partial J}{\partial q^2} = p_2 + \varepsilon p_1,
 \end{aligned}
 $$
 
@@ -464,7 +464,7 @@ $$
 $$
 \begin{aligned}
 \delta H & \equiv H(Q^1,Q^2, P_1, P_2) - H(q^1,q^2,p_1,p_2) \\
-&= \frac{1}{2}(P_1^2+P_2^2) -\frac{1}{2}(p_1^2+p_2^2) + U(R) - U(r)
+&= \frac{1}{2}(P_1^2+P_2^2) -\frac{1}{2}(p_1^2+p_2^2) + U(R) - U(r).
 \end{aligned}
 $$
 
@@ -474,9 +474,11 @@ $$
 \begin{aligned}
 P_1^2 + P_2^2 &= (p_1 - \varepsilon p_2)^2 + (p_2 + \varepsilon p_1)^2 \\
 &= p_1^2 + p_2^2 + \varepsilon^2 (p_1^2 + p_2^2) \\
-&= p_1^2 + p_2^2 + O(\varepsilon^2)
+&= p_1^2 + p_2^2 + O(\varepsilon^2).
 \end{aligned}
 $$
+
+および、
 
 $$
 \begin{aligned}
@@ -485,9 +487,11 @@ R &= \sqrt{(Q^1)^2+(Q^2)^2} \\
 &= \sqrt{(q^1)^2+(q^2)^2+ \varepsilon^2\left((q^1)^2+(q^2)^2\right)}\\
 &= \sqrt{r^2 + \varepsilon^2 r^2}\\
 &= \sqrt{1+\varepsilon^2} r \\
-&= r + \frac{\varepsilon^2r}{2} + O(\varepsilon^4)
+&= r + \frac{\varepsilon^2r}{2} + O(\varepsilon^4).
 \end{aligned}
 $$
+
+従って、
 
 $$
 \begin{aligned}
