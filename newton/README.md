@@ -57,7 +57,7 @@
 
 ### スカラー
 
-地図を思い浮かべて欲しい。地図には等高線が書いてあり、その場所での標高がわかるようになっている。この地図を使って、現在自分がいる地点の標高を調べたとしよう。さて、目的地に向かうため、道の方向に合わせて地図を向きを回転させたとしよう。これは座標変換したことに対応するが、座標変換しても現時点の高さは変わらない。このように、座標変換により変換を受けない量を **スカラー**(scolar) と定義する。
+地図を思い浮かべて欲しい。地図には等高線が書いてあり、その場所での標高がわかるようになっている。この地図を使って、現在自分がいる地点の標高を調べたとしよう。さて、目的地に向かうため、道の方向に合わせて地図を向きを回転させたとしよう。これは座標変換したことに対応するが、座標変換しても現時点の高さは変わらない。このように、座標変換により変換を受けない量を **スカラー**(scalar) と定義する。
 
 地図の例でいえば、座標$(x,y)$に対して、高さ$h(x,y)$が定義されており、変数変換$(x,y)\rightarrow (\tilde{x}, \tilde{y})$をしても、そこが同じ場所であるならば高さの値$h(\tilde{x}, \tilde{y})$は変わらないことを意味する。
 
@@ -239,7 +239,7 @@ $$
 \end{aligned}
 $$
 
-ここで、
+ただし${}^tT$は行列$T$の転置を表す。ここで、
 
 $$
 \tilde{\mathbf{e}}^i = M^i_k \mathbf{e}^k
@@ -296,7 +296,7 @@ $$
 \begin{aligned}
 \left(\frac{\partial x}{\partial r}\right)_P &= (\cos \theta)_P = \frac{\sqrt{3}}{2}, \\
 \left(\frac{\partial x}{\partial \theta}\right)_P &= (-r \sin \theta)_P = -\frac{1}{2},\\
-\left(\frac{\partial y}{\partial r}\right)_P &= (\sin \theta)_P = \frac{\sqrt{1}}{2}, \\
+\left(\frac{\partial y}{\partial r}\right)_P &= (\sin \theta)_P = \frac{1}{2}, \\
 \left(\frac{\partial y}{\partial \theta}\right)_P &= (r \cos \theta)_P = \frac{\sqrt{3}}{2}.
 \end{aligned}
 $$
@@ -466,7 +466,7 @@ $$
 について、両辺に$T^{-1}$をかけると、
 
 $$
-\tilde{x}^i = (T^{-1})^i_j x^i.
+\tilde{x}^i = (T^{-1})^i_j x^j.
 $$
 
 ${}^t T = T^{-1}$であったから、
@@ -629,7 +629,7 @@ $$
 
 $$
 \begin{aligned}
-r &= \sqrt{(\mathbf{r}_A -\mathbf{r}_B})^2\\
+r &= \sqrt{(\mathbf{r}_A -\mathbf{r}_B)^2}\\
 &= \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.
 \end{aligned}
 $$
