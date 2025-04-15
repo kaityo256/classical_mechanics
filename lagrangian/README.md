@@ -226,7 +226,7 @@ $$
 自由度$\theta$に関するオイラー・ラグランジュ方程式は、
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} = m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial r} = 0.
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} = m\frac{d}{dt}(r^2 \dot{\theta}) + \frac{\partial U}{\partial \theta} = 0.
 $$
 
 それぞれ整理すると、先程得られた式と全く同じ運動方程式が得られる。
@@ -378,9 +378,9 @@ $$
 $$
 \begin{aligned}
 Q^1 &= Q^1(q^1, q^2, \cdots, q^N), \\
-Q^2 &= Q_2(q^1, q^2, \cdots, q^N), \\
+Q^2 &= Q^2(q^1, q^2, \cdots, q^N), \\
 &\cdots \\
-Q^N &= Q_N(q^1, q^2, \cdots, q^N)
+Q^N &= Q^N(q^1, q^2, \cdots, q^N)
 \end{aligned}
 $$
 
@@ -537,10 +537,10 @@ $$
 
 となる。これは、これまでニュートン力学で扱ってきたポテンシャルそのままである。
 
-次に、磁束密度$\textbf{B}$のみがある中での運動を考える。磁束密度が時間非依存のベクトルポテンシャル$\mathbf{A}$を用いて
+次に、磁束密度$\mathrm{B}$のみがある中での運動を考える。磁束密度が時間非依存のベクトルポテンシャル$\mathbf{A}$を用いて
 
 $$
-\textbf{B} = \nabla \times \textbf{A}
+\mathrm{B} = \nabla \times \mathrm{A}
 $$
 
 と書こう。後のために成分を書き下しておく。
