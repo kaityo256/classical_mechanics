@@ -11,19 +11,19 @@
 系のラグランジアンが$L(q, \dot{q})$で与えられている。一般化座標$q$と一般化速度$\dot{q}$が時間依存する時、ラグランジアンを時間積分したものを作用積分と呼ぶ。
 
 $$
-I = \int L dt
+I = \int L dt.
 $$
 
 この作用積分の変分がゼロとなる条件($\delta I = 0$)より、オイラー・ラグランジュ方程式が導かれるのであった。
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0.
 $$
 
-さて。ラグランジアン$L$が時間に陽に依存しない場合、すなわち$\partial_t L = 0$が成り立つ時、ベルトラミの公式により、以下の量が時間不変量になるのであった。
+さて、ラグランジアン$L$が時間に陽に依存しない場合、すなわち$\partial_t L = 0$が成り立つ時、ベルトラミの公式により、以下の量が時間不変量になるのであった。
 
 $$
-B = L - \dot{q} \frac{\partial L}{\partial \dot{q}}
+B = L - \dot{q} \frac{\partial L}{\partial \dot{q}}.
 $$
 
 ラグランジアンが
@@ -40,7 +40,7 @@ B &=  L - \dot{q} \frac{\partial L}{\partial \dot{q}} \\
 &=  \frac{1}{2}m \dot{q}^2 - U(q) - m \dot{q}^2 \\
 &= -\frac{1}{2}m \dot{q}^2 -U(q) \\
 &= -(K+U)\\
-&= -E
+&= -E.
 \end{aligned}
 $$
 
@@ -53,7 +53,7 @@ $$
 という量を考えよう。この時、ラグランジアンを一般化速度$\dot{q}$で偏微分したものを$p$とする。
 
 $$
-p \equiv \frac{\partial L}{\partial \dot{q}}
+p \equiv \frac{\partial L}{\partial \dot{q}}.
 $$
 
 ラグランジアンはエネルギーの次元を持っているため、もし一般化座標$q$が長さの次元を持っていれば、$p$は運動量の次元を持つことがわかる。そこで、$p$を**一般化運動量**(generalized momentum)と呼ぶ。
@@ -61,10 +61,10 @@ $$
 一般化運動量$p$を用いると、先程の量は以下のように書ける。
 
 $$
-H = \dot{q}p - L
+H = \dot{q}p - L.
 $$
 
-この量を **ハミルトニアン**(Hamiltonian) と呼ぶ。
+この量を**ハミルトニアン**(Hamiltonian)と呼ぶ。
 
 両辺の全微分をとって見よう。
 
@@ -73,7 +73,7 @@ $$
 dH &= p d\dot{q} + \dot{q} dp - dL \\
 &= p d\dot{q} + \dot{q} dp - \underbrace{\frac{\partial L}{\partial q}}_{\dot{p}}dq - \underbrace{\frac{\partial L}{\partial \dot{q}}}_{p}d\dot{q} \\
 &= \cancel{p d\dot{q}} + \dot{q} dp  - \dot{p}dq - \cancel{pd\dot{q}}\\
-&= \dot{q} dp - \dot{p}dq
+&= \dot{q} dp - \dot{p}dq.
 \end{aligned}
 $$
 
@@ -86,7 +86,7 @@ $$
 であることを使った。$H(q,p)$を全微分すると、
 
 $$
-dH = \frac{\partial H}{\partial q} dq + \frac{\partial H}{\partial p} dp
+dH = \frac{\partial H}{\partial q} dq + \frac{\partial H}{\partial p} dp.
 $$
 
 これと、
@@ -99,15 +99,15 @@ $$
 
 $$
 \begin{aligned}
-\dot{q} &= \frac{\partial H}{\partial p} \\
-\dot{p} &= -\frac{\partial H}{\partial q} \\
+\dot{q} &= \frac{\partial H}{\partial p}, \\
+\dot{p} &= -\frac{\partial H}{\partial q}.
 \end{aligned}
 $$
 
 これを**ハミルトンの運動方程式**(Hamilton's equation)、もしくは **正準方程式**(canonical equation) と呼ぶ。多変数の場合、ラグランジアンからハミルトニアンへの変換は以下のように書ける。
 
 $$
-H = p_i \dot{q}^i - L
+H = p_i \dot{q}^i - L.
 $$
 
 ここで、アインシュタイン記法による和を取っていることに注意。また、後にわかるように一般化運動量は共変ベクトルであるので、添字を下につけている。
@@ -116,8 +116,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{q}^i &= \frac{\partial H}{\partial p_i} \\
-\dot{p}_i &= -\frac{\partial H}{\partial q^i} \\
+\dot{q}^i &= \frac{\partial H}{\partial p_i}, \\
+\dot{p}_i &= -\frac{\partial H}{\partial q^i}.
 \end{aligned}
 $$
 
@@ -130,7 +130,7 @@ $$
 \dot{H} &= \frac{\partial H}{\partial q}\dot{q} +\frac{\partial H}{\partial p}\dot{p} \\
 &= \frac{\partial H}{\partial q}\frac{\partial H}{\partial p}
 - \frac{\partial H}{\partial p}\frac{\partial H}{\partial q} \\
-&= 0
+&= 0.
 \end{aligned}
 $$
 
@@ -158,21 +158,21 @@ $$
 
 $$
 \begin{aligned}
-d(xX) &= x dX + X dx\\
-dy &= X dx
+d(xX) &= x dX + X dx,\\
+dy &= X dx.
 \end{aligned}
 $$
 
 辺々引くと
 
 $$
-d(xX - y) = x dX
+d(xX - y) = x dX.
 $$
 
 ここで、$Y = xX -y$という量を考えると、
 
 $$
-dY = x dX
+dY = x dX.
 $$
 
 これは、新しい関数$Y$の自由変数は$X$になっていることを示す。すなわち、自由変数が$x$から$X$に入れ替わった。これをルジャンドル変換と呼ぶ。
@@ -193,8 +193,8 @@ $$
 
 $$
 \begin{aligned}
-d(yY) &= ydY + Ydy \\
-df &=  \frac{\partial f}{\partial x} dx + Ydy
+d(yY) &= ydY + Ydy, \\
+df &=  \frac{\partial f}{\partial x} dx + Ydy.
 \end{aligned}
 $$
 
@@ -218,7 +218,7 @@ $$
 dL(q_0, \dot{q}_0) =\left.\frac{\partial L}{\partial q}\right|_{q=q_0,\dot{q}=\dot{q}_0} dq + \left.L \frac{\partial L}{\partial \dot{q}}\right|_{q=q_0,\dot{q}=\dot{q}_0} d\dot{q}
 $$
 
-これは、$L(q,\dot{q})$で表現される二次元局面において、$(q_0, \dot{q}_0)$点での接平面を考えていることに対応する。接平面は平面であるから、基底が二つあれば全ての点を表現できる。この基底にあたるのが$dq$と$d\dot{q}$である。つまり、先程の式は
+これは、$L(q,\dot{q})$で表現される二次元曲面において、$(q_0, \dot{q}_0)$点での接平面を考えていることに対応する。接平面は平面であるから、基底が二つあれば全ての点を表現できる。この基底にあたるのが$dq$と$d\dot{q}$である。つまり、先程の式は
 
 $$
 \mathbf{v} = v^1 \mathbf{e}_1 + v^2 \mathbf{e}_2
@@ -238,16 +238,16 @@ $$
 dL = \frac{\partial L}{\partial q} dq + \frac{\partial L}{\partial \dot{q}} d\dot{q}
 $$
 
-このうち、右辺第二項の$\partial_{\dot{q}} L$と$d\dot{q}$を入れ替えたい。そのために$p=\partial_{\dot{q}} L$とすると、として、$p \dot{q}$の全微分を考える。
+このうち、右辺第二項の$\partial_{\dot{q}} L$と$d\dot{q}$を入れ替えたい。そのために$p=\partial_{\dot{q}} L$として、$p \dot{q}$の全微分を考える。
 
 $$
-d(p \dot{q}) = \dot{q}dp + p d\dot{q}
+d(p \dot{q}) = \dot{q}dp + p d\dot{q}.
 $$
 
-従って$d(p \dot{q}) - dL$を計算すると、
+辺々引いて$d(p \dot{q}) - dL$を計算すると、
 
 $$
-d(p \dot{q} - L) = \dot{q}dp + \cancel{p d\dot{q}} - \frac{\partial L}{\partial q} dq - \cancel{p d\dot{q}} = \dot{q}dp - \frac{\partial L}{\partial q} dq
+d(p \dot{q} - L) = \dot{q}dp + \cancel{p d\dot{q}} - \frac{\partial L}{\partial q} dq - \cancel{p d\dot{q}} = \dot{q}dp - \frac{\partial L}{\partial q} dq.
 $$
 
 ようするに、$L$を全微分して出てくる$d\dot{q}$を消して$dp$を足すために、その積$p\dot{q}$の全微分$d(p\dot{q})$から$dL$を引いているだけである。$p \dot{q} - L$をあらためて$H$という名前をつけると、$(q, \dot{q})$の関数であった$L$が、$(q,p)$の関数である$H$に変わったことがわかる。
@@ -270,7 +270,7 @@ $$
 
 $$
 \begin{aligned}
-X &= \frac{dy}{dx} \\
+X &= \frac{dy}{dx}, \\
 Y &= y - x\frac{dy}{dx} = y - xX
 \end{aligned}
 $$
@@ -283,14 +283,14 @@ $$
 \begin{aligned}
 \frac{dY}{dX} &= \frac{dY}{dx} \frac{dx}{dX} \\
 &= \left(\cancel{\frac{dy}{dx}} -  \cancel{\frac{dy}{dx}} - x \cancel{\frac{d^2y}{dx^2}}\right) \frac{1}{\cancel{\frac{dX}{dx}}} \\
-&= -x
+&= -x,
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 Y - X \frac{dY}{dX} &= y - \cancel{xX} -\cancel{Xx} \\
-&=y
+&=y.
 \end{aligned}
 $$
 
@@ -342,8 +342,8 @@ $$
 
 $$
 \begin{aligned}
-y &= \int_0^x X(x)dx\\
-Y &= \int_0^X x(X)dX
+y &= \int_0^x X(x)dx,\\
+Y &= \int_0^X x(X)dX.
 \end{aligned}
 $$
 
@@ -351,8 +351,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{dy}{dx} &= X\\
-\frac{dY}{dX} &= x
+\frac{dy}{dx} &= X,\\
+\frac{dY}{dX} &= x.
 \end{aligned}
 $$
 
@@ -387,8 +387,8 @@ $$
 
 $$
 \begin{aligned}
-p &= \frac{\partial L}{d \dot{q}} \\
-H &= p\dot{q} - L
+p &= \frac{\partial L}{d \dot{q}}, \\
+H &= p\dot{q} - L.
 \end{aligned}
 $$
 
@@ -419,7 +419,7 @@ $$
 について、変分を考えてみよう。両辺の変分をとると
 
 $$
-\delta I = \int \left(\dot{q}\delta p +p \delta \dot{q} - \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p} \delta p \right)dt
+\delta I = \int \left(\dot{q}\delta p +p \delta \dot{q} - \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p} \delta p \right)dt.
 $$
 
 ここで、$p \delta \dot{q}$の項目について部分積分すると
@@ -430,7 +430,7 @@ $$
 &= \int \left( \left(\dot{q} - \frac{\partial H}{\partial p}\right)\delta p
 - \left(\dot{p} + \frac{\partial H}{\partial q}\right)\delta q
 \right)dt \\
-&=0
+&=0.
 \end{aligned}
 $$
 
@@ -438,8 +438,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{q} &= \frac{\partial H}{\partial p} \\
-\dot{p} &= -\frac{\partial H}{\partial q} \\
+\dot{q} &= \frac{\partial H}{\partial p}, \\
+\dot{p} &= -\frac{\partial H}{\partial q}.
 \end{aligned}
 $$
 
@@ -452,15 +452,15 @@ $$
 まず、二次元極座標のラグランジアンを考える。
 
 $$
-L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U
+L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U.
 $$
 
 一般化座標$r,\theta$に対応する一般化運動量は
 
 $$
 \begin{aligned}
-p_r &= \frac{\partial L}{\partial \dot{r}} = m \dot{r} \\
-p_\theta &= \frac{\partial L}{\partial \dot{\theta}} = m r^2 \dot{\theta} \\
+p_r &= \frac{\partial L}{\partial \dot{r}} = m \dot{r}, \\
+p_\theta &= \frac{\partial L}{\partial \dot{\theta}} = m r^2 \dot{\theta}
 \end{aligned}
 $$
 
@@ -535,7 +535,7 @@ $$
 P &= \frac{\partial L}{\partial \dot{Q}} \\
   &= \frac{m\dot{Q}}{a^2} \\
   &= \frac{m\dot{q}}{a}\\
-  &= \frac{p}{a}
+  &= \frac{p}{a}.
 \end{aligned}
 $$
 
@@ -559,8 +559,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{q}^i &= \frac{\partial H}{\partial p_i} \\
-\dot{p}_i &= -\frac{\partial H}{\partial q_i}
+\dot{q}^i &= \frac{\partial H}{\partial p_i}, \\
+\dot{p}_i &= -\frac{\partial H}{\partial q_i}.
 \end{aligned}
 $$
 
@@ -582,10 +582,10 @@ $$
 
 $$
 \begin{aligned}
-\dot{x} &= \frac{\partial H}{\partial p_x} = \frac{p_x}{m} \\
-\dot{y} &= \frac{\partial H}{\partial p_y} = \frac{p_y}{m} \\
-\dot{p_x} &= -\frac{\partial H}{\partial x} = - \frac{\partial U}{\partial x} \\
-\dot{p_y} &= -\frac{\partial H}{\partial y} = - \frac{\partial U}{\partial y} \\
+\dot{x} &= \frac{\partial H}{\partial p_x} = \frac{p_x}{m}, \\
+\dot{y} &= \frac{\partial H}{\partial p_y} = \frac{p_y}{m}, \\
+\dot{p_x} &= -\frac{\partial H}{\partial x} = - \frac{\partial U}{\partial x}, \\
+\dot{p_y} &= -\frac{\partial H}{\partial y} = - \frac{\partial U}{\partial y}
 \end{aligned}
 $$
 
@@ -599,8 +599,8 @@ $$
 
 $$
 \begin{aligned}
-p_r &\equiv \frac{\partial L}{\partial \dot{r}} = m\dot{r} \\
-p_\theta &\equiv \frac{\partial L}{\partial \dot{\theta}} = mr^2\dot{\theta} \\
+p_r &\equiv \frac{\partial L}{\partial \dot{r}} = m\dot{r}, \\
+p_\theta &\equiv \frac{\partial L}{\partial \dot{\theta}} = mr^2\dot{\theta}
 \end{aligned}
 $$
 
@@ -639,7 +639,7 @@ $$
 さて、ハミルトニアンの極座標表示には$\theta$を含まないことがわかる。したがって$\partial_\theta H = 0$である。正準方程式から
 
 $$
-\dot{p}_\theta = -\frac{\partial H}{\partial \theta} = 0
+\dot{p}_\theta = -\frac{\partial H}{\partial \theta} = 0.
 $$
 
 すなわち、$\theta$に共役な運動量が時間保存量となることが、ハミルトニアンの形を見るだけでわかる。このように、ニュートンの運動方程式に比べて、保存則が非常に見やすいのがハミルトニアンの特徴である。この事実は後により一般的に議論する。
