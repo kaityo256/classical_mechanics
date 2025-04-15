@@ -442,7 +442,7 @@ $$
 この$T$を最小化するような$y(x)$を求めなさい、というのが変分問題である。いま、$T$を最小にするような$y(x)$が選ばれたとしよう。すると、そこからどのように$y(x)$を変化させても、$T$は増えるはずだ。すなわち、$y \rightarrow y + \delta y$という変化に対して、$T \rightarrow T+ \delta T$と変化するなら、
 
 $$
-\delta T = \int_0^a \frac{\delta F}{\delta y} \delta y dx  + O(\delta y^2).
+\delta T = \int_0^L \frac{\delta F}{\delta y} \delta y dx  + O(\delta y^2).
 $$
 
 どのような$\delta y$に対しても一次のオーダーで$T$が変わらない、すなわち$\delta T =0$になるのであるから、
@@ -481,8 +481,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{dB}{dx} &= \frac{\partial F}{\partial f} f' +  \frac{\partial F}{\partial f'} f'' - f'' \frac{\partial F}{\partial f'} - f' \underbrace{\frac{d}{dx}\left(\frac{\partial F}{\partial f'} \right)}_{=\partial x F} \\
-&= \frac{\partial F}{\partial f} f' +  \frac{\partial F}{\partial f'} f'' - f'' \frac{\partial F}{\partial f'} - f' \frac{\partial F}{\partial x} \\
+\frac{dB}{dx} &= \frac{\partial F}{\partial f} f' +  \frac{\partial F}{\partial f'} f'' - f'' \frac{\partial F}{\partial f'} - f' \underbrace{\frac{d}{dx}\left(\frac{\partial F}{\partial f'} \right)}_{=\partial F/\partial f} \\
+&= \frac{\partial F}{\partial f} f' +  \frac{\partial F}{\partial f'} f'' - f'' \frac{\partial F}{\partial f'} - f' \frac{\partial F}{\partial f} \\
 &= 0.
 \end{aligned}
 $$
@@ -553,7 +553,7 @@ $$
 \frac{\partial L}{\partial x} - \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}} \right) = 0
 $$
 
-が成り立つ。この式を **オイラー・ラグランジュ方程式**(Euler-Laglange equation) と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動法定式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。
+が成り立つ。この式を **オイラー・ラグランジュ方程式**(Euler-Laglange equation) と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動方程式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。
 
 さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、
 
