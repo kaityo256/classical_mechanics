@@ -125,7 +125,7 @@ $$
 であるから、
 
 $$
-W = - m \dot{v} \delta x  -U(x) \delta x = 0
+W = - m \dot{v} \delta x  -U'(x) \delta x = 0
 $$
 
 となる。
@@ -226,7 +226,7 @@ $$
 \begin{aligned}
 \delta \int_{t_1}^{t_2} K dt &\equiv \int_{t_1}^{t_2}  \delta K dt \\
 &= \int_{t_1}^{t_2} m v \frac{d}{dt} \left(\delta x\right) dt \\
-&= - \int_{t_1}^{t_2} m \frac{dv}{dt} \delta x dv.
+&= - \int_{t_1}^{t_2} m \frac{dv}{dt} \delta x dt.
 \end{aligned}
 $$
 
