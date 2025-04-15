@@ -622,7 +622,7 @@ $$
 以上から、電磁場中を荷電粒子が運動する際、その荷電粒子が感じるポテンシャルエネルギーは
 
 $$
-U(\textbf{r}, \dot{\textbf{r}}) = q (\phi - \dot{\mathbf{r}}\cdot \mathbf{A})
+U(\mathrm{r}, \dot{\mathrm{r}}) = q (\phi - \dot{\mathbf{r}}\cdot \mathbf{A})
 $$
 
 であることがわかった。このポテンシャルエネルギーはスカラー関数とベクトル関数を含んでいるため、それぞれスカラーポテンシャル、ベクトルポテンシャルと呼ぶ。
