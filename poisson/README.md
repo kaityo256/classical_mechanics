@@ -10,27 +10,27 @@
 
 $$
 \begin{aligned}
-\dot{q} &= \frac{\partial H}{\partial p} \\
-\dot{p} &= -\frac{\partial H}{\partial q}
+\dot{q} &= \frac{\partial H}{\partial p}, \\
+\dot{p} &= -\frac{\partial H}{\partial q}.
 \end{aligned}
 $$
 
 この系は$q,p$という正準変数によって記述されており、この系の全ての物理量は$q,p$の関数として表現される。例えば運動エネルギーなら$K(q,p) = p^2/2m$である。ある物理量$A(q,p)$を考えよう。この物理量を時間微分すると、
 
 $$
-\frac{dA}{dt} = \frac{\partial A}{\partial q}\dot{q} + \frac{\partial A}{\partial p}\dot{p}
+\frac{dA}{dt} = \frac{\partial A}{\partial q}\dot{q} + \frac{\partial A}{\partial p}\dot{p}.
 $$
 
 正準方程式を使って$\dot{p}, \dot{q}$を消去すると、
 
 $$
-\frac{dA}{dt} = \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q}
+\frac{dA}{dt} = \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q}.
 $$
 
 この式の右辺を見ると、$q,p$や$H,A$が対称な形で含まれていることがわかる。そこで、以下のような括弧式を定義する。
 
 $$
-\left\{X, Y\right\}_{q,p} \equiv \frac{\partial X}{\partial q}\frac{\partial Y}{\partial p} - \frac{\partial X}{\partial p}\frac{\partial Y}{\partial q}
+\left\{X, Y\right\}_{q,p} \equiv \frac{\partial X}{\partial q}\frac{\partial Y}{\partial p} - \frac{\partial X}{\partial p}\frac{\partial Y}{\partial q}.
 $$
 
 括弧の添字の$q,p$は、この変数で微分する、という意味である。これを用いると、物理量$A$の時間微分は
@@ -54,8 +54,8 @@ $$
 となる。ここで、$X, Y$を$(Q,P)$で表すと、$(q,p)$依存性は以下のように入ってくる。
 $$
 \begin{aligned}
-X &= X(Q(q,p), P(q,p))\\
-Y &= Y(Q(q,p), P(q,p))
+X &= X(Q(q,p), P(q,p)),\\
+Y &= Y(Q(q,p), P(q,p)).
 \end{aligned}
 $$
 
@@ -63,8 +63,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial X}{\partial q} &= \frac{\partial X}{\partial Q}\frac{\partial Q}{\partial q} + \frac{\partial X}{\partial P}\frac{\partial P}{\partial q} \\
-\frac{\partial Y}{\partial p} &= \frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p} + \frac{\partial Y}{\partial P}\frac{\partial P}{\partial p} \\
+\frac{\partial X}{\partial q} &= \frac{\partial X}{\partial Q}\frac{\partial Q}{\partial q} + \frac{\partial X}{\partial P}\frac{\partial P}{\partial q}, \\
+\frac{\partial Y}{\partial p} &= \frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p} + \frac{\partial Y}{\partial P}\frac{\partial P}{\partial p}
 \end{aligned}
 $$
 
@@ -82,7 +82,7 @@ $$
 &=
 \frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P}\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} +
 \frac{\partial X}{\partial P}\frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p}\frac{\partial P}{\partial q}\\
-&+ \underbrace{\frac{\partial X}{\partial Q}\frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p}\frac{\partial Q}{\partial q} + \frac{\partial X}{\partial P}\frac{\partial Y}{\partial P}\frac{\partial P}{\partial p}\frac{\partial P}{\partial q}}_{\bigstar}
+&+ \underbrace{\frac{\partial X}{\partial Q}\frac{\partial Y}{\partial Q}\frac{\partial Q}{\partial p}\frac{\partial Q}{\partial q} + \frac{\partial X}{\partial P}\frac{\partial Y}{\partial P}\frac{\partial P}{\partial p}\frac{\partial P}{\partial q}}_{\bigstar}.
 \end{aligned}
 $$
 
@@ -116,7 +116,7 @@ $$
 \right)}_{=1}\\
 &= \frac{\partial X}{\partial Q}\frac{\partial Y}{\partial P} -
 \frac{\partial X}{\partial P}\frac{\partial Y}{\partial Q} \\
-&= \left\{X,Y\right\}_{Q,P}
+&= \left\{X,Y\right\}_{Q,P}.
 \end{aligned}
 $$
 
@@ -125,7 +125,7 @@ $$
 $$
 \left\{X, Y\right\}_{q,p} =
 \left\{X, Y\right\}_{Q,P} =
-\left\{X, Y\right\}
+\left\{X, Y\right\}.
 $$
 
 多自由度系$(q^1, q^2, \cdots, q^N, p_1, p_2, \cdots, p_N)$におけるポアソン括弧は
@@ -141,7 +141,7 @@ $$
 
 $$
 \begin{aligned}
-\dot{q}^i &= \left\{q^i, H\right\}\\
+\dot{q}^i &= \left\{q^i, H\right\},\\
 \dot{p}_i &= \left\{p_i, H\right\}
 \end{aligned}
 $$
@@ -161,7 +161,7 @@ $$
 まず、括弧に入れる変数を入れ替えると負符号がつく。
 
 $$
-\left\{X, Y\right\} = - \left\{Y, X\right\}
+\left\{X, Y\right\} = - \left\{Y, X\right\}.
 $$
 
 これを反対称性と呼ぶ。
@@ -169,31 +169,28 @@ $$
 また、定数は括弧の外に出すことができる。
 
 $$
-\left\{a X, Y\right\} = a \left\{X, Y\right\}
-$$
-
-$$
-\left\{X, bY\right\} = b \left\{X, Y\right\}
+\begin{aligned}
+\left\{a X, Y\right\} &= a \left\{X, Y\right\},\\
+\left\{X, bY\right\} &= b \left\{X, Y\right\}.
+\end{aligned}
 $$
 
 さらに分配法則がなりたつ。
 
 $$
-\left\{X + Y , Z\right\} = \left\{X, Z\right\} + \left\{X, Y\right\}
-$$
-
-$$
-\left\{X, Y+Z\right\} = \left\{X, Y\right\} + \left\{X, Z\right\}
+\begin{aligned}
+\left\{X + Y , Z\right\} &= \left\{X, Z\right\} + \left\{Y, Z\right\},\\
+\left\{X, Y+Z\right\} &= \left\{X, Y\right\} + \left\{X, Z\right\}.
+\end{aligned}
 $$
 
 定数倍を外に出せることと、分配法則をまとめると以下の式が成り立つ。
 
 $$
-\left\{a X + bY , Z\right\} = a \left\{X, Y\right\} + b  \left\{Y, Z\right\}
-$$
-
-$$
-\left\{X, aY + bZ\right\} = a \left\{X, Y\right\} + b  \left\{X, Z\right\}
+\begin{aligned}
+\left\{a X + bY , Z\right\} &= a \left\{X, Z\right\} + b  \left\{Y, Z\right\},\\
+\left\{X, aY + bZ\right\} &= a \left\{X, Y\right\} + b  \left\{X, Z\right\}.
+\end{aligned}
 $$
 
 つまり、括弧の左側や右側に入れるものは線形性が成り立つ。括弧の両側で線形性が成り立っているため、これを**双線形性**(bilinearity) と呼ぶ。
@@ -203,7 +200,7 @@ $$
 $$
 \left\{X , \left\{Y, Z\right\}\right\} +
 \left\{Y , \left\{Z, X\right\}\right\} +
-\left\{Z , \left\{X, Y\right\}\right\} = 0
+\left\{Z , \left\{X, Y\right\}\right\} = 0.
 $$
 
 この恒等式をヤコビ恒等式と呼ぶ。証明はやや煩雑であるので、本書には掲載しない。
@@ -235,7 +232,7 @@ $$
 また、逆向きに$\phi$だけ回す、すなわち$U(-\phi)$を演算すると元の状態に戻る。
 
 $$
-U(-\phi) v(\theta+\phi) = v(\theta)
+U(-\phi) v(\theta+\phi) = v(\theta).
 $$
 
 つまり、操作の対象(ツマミ)があり、任意の操作に対して後からその操作を打ち消すことができるので、「ツマミを回す操作」の集合は群を作る。より正確には、以下の4つの条件を満たすものを群と呼ぶ。
@@ -259,12 +256,12 @@ $$
 (f\circ g)\circ h = f \circ (g \circ h)
 $$
 
-が成り立つことである。結合則が成り立たない例は、例えばベクトルの外積が挙げられる。
+が成り立つことである。結合法則が成り立たない例は、例えばベクトルの外積が挙げられる。
 
 単位元とは、任意の操作と演算しても、その操作を変えないような元である。すなわち、以下を満たすものである。
 
 $$
-e \circ  f = f \circ e = f
+e \circ  f = f \circ e = f.
 $$
 
 角度ゼロの操作$e \equiv U(0)$が単位元となることは明らかであろう。また、最初に示した通り、逆元の存在も明らかである。
@@ -288,7 +285,7 @@ U(\phi) =
 \begin{pmatrix}
 \cos \phi & - \sin \phi \\
 \sin \phi & \cos \phi
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 これを群の表現行列と呼ぶ。
@@ -298,7 +295,7 @@ $$
 さて、リー群は微分できるのが特徴であったから、微分してみよう。ツマミの角度が$\theta$であったとして、それを微小角$h$だけ回転する操作は以下のように表現できる。
 
 $$
-U(h) v(\theta) = v(\theta+h)
+U(h) v(\theta) = v(\theta+h).
 $$
 
 今、回転角$h$が小さい($\lvert h \rvert \ll 1)$として、右辺をテイラー展開しよう。
@@ -307,7 +304,7 @@ $$
 \begin{aligned}
 v(\theta+ h) &= v(\theta) + v'(\theta)h+ v''(\theta)\frac{h^2}{2} + \cdots\\
 &= v(\theta) + h \frac{d}{d \theta} v(\theta) + \frac{h^2}{2} \frac{d^2}{d \theta^2} v(\theta) + \cdots \\
-&= \sum_{k=0}^{\infty} \frac{h^k}{k!} \frac{d^k}{d \theta^k} v(\theta)
+&= \sum_{k=0}^{\infty} \frac{h^k}{k!} \frac{d^k}{d \theta^k} v(\theta).
 \end{aligned}
 $$
 
@@ -344,14 +341,14 @@ $$
 \frac{dv}{d\theta} &= \lim_{h \rightarrow 0} \frac{v(\theta+h)-v(\theta)}{h} \\
 &= \lim_{h \rightarrow 0} \frac{U(h)v(\theta)-U(0)v(\theta)}{h} \\
 &= \lim_{h \rightarrow 0} \left(\frac{U(h) - U(0)}{h} \right)v(\theta) \\
-&= U'(0) v(\theta)
+&= U'(0) v(\theta).
 \end{aligned}
 $$
 
 両辺を見比べると
 
 $$
-\frac{d}{d\theta} = U'(0)
+\frac{d}{d\theta} = U'(0).
 $$
 
 つまり、回転演算子について、微分してから回転角をゼロと置いたものは、微分演算子とみなすことができる。具体的な形は
@@ -382,7 +379,7 @@ $$
 と書くことができる。すなわち、この行列$i\mathcal{L}$は、微分を表す演算子になっている。両辺を$\theta$から$\theta+h$まで積分すると、
 
 $$
-v(\theta + h) = \exp(ih \mathcal{L}) v(\theta)
+v(\theta + h) = \exp(ih \mathcal{L}) v(\theta).
 $$
 
 これと、
@@ -419,7 +416,7 @@ U_z(h) =
 \cos h &  -\sin h & 0\\
 \sin h & \cos h & 0\\
 0 & 0 & 1
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 z方向の回転の生成子は、回転角が小さい時のテイラー展開
@@ -442,33 +439,32 @@ iL_z =
 0 &  -1 & 0\\
 1 & 0 & 0\\
 0 & 0 & 0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 同様に、$x,y$方向の生成子も以下のように書ける。
 
 $$
-iL_x =
+\begin{aligned}
+iL_x &=
 \begin{pmatrix}
 0 & 0 & 0\\
 0 & 0 & -1\\
 0 & 1 & 0
-\end{pmatrix}
-$$
-
-$$
-iL_y =
+\end{pmatrix},\\
+iL_y &=
 \begin{pmatrix}
 0 & 0 & 1\\
 0 & 0 & 0\\
 -1 & 0 & 0
-\end{pmatrix}
+\end{pmatrix}.
+\end{aligned}
 $$
 
 これらの生成子の積について考えよう。以下の交換関係を定義する。
 
 $$
-[X, Y ] \equiv XY - YX
+[X, Y ] \equiv XY - YX.
 $$
 
 これを積とみなすと、リー代数の公理(反対称性、双線形性、ヤコビ恒等式)を満たすことがわかる。
@@ -504,7 +500,7 @@ $$
 1 & 0 & 0\\
 0 & 0 & 0
 \end{pmatrix} \\
-&= iL_z
+&= iL_z.
 \end{aligned}
 $$
 
@@ -516,7 +512,7 @@ $$
 
 が成り立つ。この式は、
 
-* 3次元回転操作は一般に非可換である
+* 三次元回転操作は一般に非可換である
 * $x$方向の回転と$y$方向の回転を組み合わせると$z$方向の回転を作ることができる
 
 という二つの意味を持っている。
@@ -525,9 +521,9 @@ $$
 
 $$
 \begin{aligned}
-[iL_x, i L_y] &= i L_z\\
-[iL_y, i L_z] &= i L_x\\
-[iL_z, i L_x] &= i L_y\\
+[iL_x, i L_y] &= i L_z,\\
+[iL_y, i L_z] &= i L_x,\\
+[iL_z, i L_x] &= i L_y
 \end{aligned}
 $$
 
@@ -551,7 +547,7 @@ $$
 A(t+ h) &= A(t) + A'(t)h+ A''(t)\frac{h^2}{2} + \cdots\\
 &= \sum_{k=0}^{\infty} \frac{h^k}{k!} \frac{d^k}{dt^k} A(t)\\
 &= \underbrace{\exp\left(h \frac{d}{dt}\right)}_{\equiv U(h)} A(t) \\
-&\equiv U(h) A(t)
+&\equiv U(h) A(t).
 \end{aligned}
 $$
 
@@ -560,14 +556,14 @@ $A$の時間微分は
 $$
 \begin{aligned}
 \frac{dA}{dt} &= \frac{\partial A}{\partial q}\frac{\partial H}{\partial p} -\frac{\partial A}{\partial p}\frac{\partial H}{\partial q} \\
-&= \left( \frac{\partial H}{\partial p}\frac{\partial }{\partial q} -\frac{\partial H}{\partial q}\frac{\partial }{\partial p}\right) A
+&= \left( \frac{\partial H}{\partial p}\frac{\partial }{\partial q} -\frac{\partial H}{\partial q}\frac{\partial }{\partial p}\right) A.
 \end{aligned}
 $$
 
 時間発展に関する生成子$i\mathcal{L}$は、時間微分を引き起こす演算子であるから、
 
 $$
-\frac{dA}{dt} \equiv i\mathcal{L}A
+\frac{dA}{dt} \equiv i\mathcal{L}A.
 $$
 
 先程の式と見比べると、
@@ -579,13 +575,13 @@ $$
 であることがわかる。時間発展演算子の生成子を特に **リュービル演算子**(Liouville operator) と呼ぶ。回転の時と同様な議論により、リュービル演算子を指数関数の肩に載せたものが時間発展演算子である。
 
 $$
-U(h) = \exp(ih\mathcal{L})
+U(h) = \exp(ih\mathcal{L}).
 $$
 
 また、リュービル演算子が、ポアソン括弧の右側にハミルトニアンを、左側を空欄にしたものになっていることにも注意。
 
 $$
-i\mathcal{L} = \{~~~~, H\}
+i\mathcal{L} = \{~~~~, H\}.
 $$
 
 ## 交換関係
@@ -599,7 +595,7 @@ $$
 が成り立つ時、そのポアソン括弧の値はゼロに限られることがわかる。
 
 $$
-\{X, Y\} = \{Y, X\} \Longleftrightarrow \{X, Y\} = 0
+\{X, Y\} = \{Y, X\} \Longleftrightarrow \{X, Y\} = 0.
 $$
 
 これを、ポアソン括弧の意味で交換可能、あるいは単に可換と呼ぶ。ポアソン括弧に非可換な量を入れると、何かしらの値を持つ。例えば物理量$A, B$をポアソン括弧に入れた値が物理量$C$になった時、
@@ -615,13 +611,13 @@ $$
 $$
 \begin{aligned}
 \{q^i, q^j\} &= \frac{\partial q^i}{\partial q^k} \underbrace{\frac{\partial q^j}{\partial p_k}}_{=0} -
-\underbrace{\frac{\partial q^i}{\partial p_k}}_{=0} \frac{\partial q^j}{\partial q^k} = 0 \\
+\underbrace{\frac{\partial q^i}{\partial p_k}}_{=0} \frac{\partial q^j}{\partial q^k} = 0, \\
 \{p_i, p_j\} &= \underbrace{\frac{\partial p_i}{\partial q^k}}_{=0} \frac{\partial p_j}{\partial p_k} -
-\frac{\partial p_i}{\partial p_k} \underbrace{\frac{\partial p_j}{\partial q^k}}_{=0}  = 0\\
+\frac{\partial p_i}{\partial p_k} \underbrace{\frac{\partial p_j}{\partial q^k}}_{=0}  = 0,\\
 \{q^i, p_j\} &= \underbrace{\frac{\partial q^i}{\partial q^k}}_{\delta^i_k} \underbrace{\frac{\partial{p_j}}{\partial{p_k}}}_{\delta^k_j}-
 \underbrace{\frac{\partial q^i}{\partial p_k}}_{=0}\underbrace{\frac{\partial{p_j}}{\partial{q^k}}}_{=0} \\
 &= \delta^i_k \delta^k_j \\
-&= \delta^i_j
+&= \delta^i_j.
 \end{aligned}
 $$
 
@@ -632,7 +628,7 @@ $$
 ポアソン括弧を用いると、物理量の時間微分が以下のように書けた。
 
 $$
-\frac{dA}{dt} = \{A, H\}
+\frac{dA}{dt} = \{A, H\}.
 $$
 
 つまり、ポアソン括弧の右側にハミルトニアンを入れると、左側に入れた量の時間微分になった。
@@ -641,8 +637,8 @@ $$
 
 $$
 \begin{aligned}
-\{A, p\} &= \frac{\partial A}{\partial q} \underbrace{\frac{\partial p}{\partial p}}_{=1} - \frac{\partial A}{\partial q} \underbrace{\frac{\partial p}{\partial q}}_{=0}\\
-&= \frac{\partial A}{\partial q}
+\{A, p\} &= \frac{\partial A}{\partial q} \underbrace{\frac{\partial p}{\partial p}}_{=1} - \frac{\partial A}{\partial p} \underbrace{\frac{\partial p}{\partial q}}_{=0}\\
+&= \frac{\partial A}{\partial q}.
 \end{aligned}
 $$
 
@@ -665,15 +661,15 @@ $$
 を満たすとしよう。この時、ポアソン括弧の右側に新しい一般化座標$P$を入れてみると、
 
 $$
-\{A, P\} = \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p}
+\{A, P\} = \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial p}\frac{\partial P}{\partial q}.
 $$
 
 ここで、物理量$A$が新しい正準変数$(Q,P)$を使って$A(Q(q,p), P(q,p))$と書けたとすると、
 
 $$
 \begin{aligned}
-\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial q} \\
-\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}
+\frac{\partial A}{\partial q} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}, \\
+\frac{\partial A}{\partial p} = \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial p}.
 \end{aligned}
 $$
 
@@ -681,14 +677,14 @@ $$
 
 $$
 \begin{aligned}
-\{A, P\} &= \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial q}\frac{\partial P}{\partial p}  \\
+\{A, P\} &= \frac{\partial A}{\partial q}\frac{\partial P}{\partial p} -  \frac{\partial A}{\partial p}\frac{\partial P}{\partial q}  \\
 &= \left( \frac{\partial A}{\partial Q} \frac{\partial Q}{\partial q} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial q}\right)\frac{\partial P}{\partial p} \\
 &- \left(\frac{\partial A}{\partial Q} \frac{\partial Q}{\partial p} + \frac{\partial A}{\partial P} \frac{\partial P}{\partial p} \right)\frac{\partial P}{\partial q} \\
 &= \frac{\partial A}{\partial Q}
 \underbrace{\left(\frac{\partial Q}{\partial q}\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}\frac{\partial P}{\partial q} \right)}_{=1} \\
-& + \frac{\partial A}{\partial Q}
+& + \frac{\partial A}{\partial P}
 \underbrace{\left(\frac{\partial P}{\partial q}\frac{\partial P}{\partial p}-\frac{\partial P}{\partial p}\frac{\partial P}{\partial q} \right)}_{=0}\\
-&= \frac{\partial A}{\partial Q}
+&= \frac{\partial A}{\partial Q}.
 \end{aligned}
 $$
 
@@ -716,10 +712,10 @@ $$
 
 $$
 \begin{aligned}
-\{q^3, L_3\} &= \frac{\partial q^3}{\partial q^i} \frac{\partial L_3}{\partial p_i} - \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
+\{q^3, L_3\} &= \underbrace{\frac{\partial q^3}{\partial q^i}}_{=\delta^3_i} \frac{\partial L_3}{\partial p_i} - \underbrace{\frac{\partial q^3}{\partial p_i}}_{=0} \frac{\partial L_3}{\partial q^i} \\
 &= \delta^3_i \frac{\partial L_3}{\partial p_i} \\
 &= \frac{\partial L_3}{\partial p_3} \\
-&=0
+&=0.
 \end{aligned}
 $$
 
@@ -737,15 +733,15 @@ $$
 
 $$
 \begin{aligned}
-\dot{A} &= \{A, H\} = 0 \\
-\dot{B} &= \{B, H\} = 0 \\
+\dot{A} &= \{A, H\} = 0, \\
+\dot{B} &= \{B, H\} = 0.
 \end{aligned}
 $$
 
 ここで、$A$と$B$がポアソン括弧に対して非可換である時、ポアソン括弧の値を$C$としよう。
 
 $$
-\{A, B\} = C
+\{A, B\} = C.
 $$
 
 ここで、ポアソン括弧はヤコビ恒等式を満たすから、
@@ -753,7 +749,7 @@ $$
 $$
 \left\{H , \underbrace{\left\{A, B\right\}}_{=C}\right\} +
 \left\{A , \underbrace{\left\{B, H\right\}}_{=0}\right\} +
-\left\{B , \underbrace{\left\{H, A\right\}}_{=0}\right\} = 0
+\left\{B , \underbrace{\left\{H, A\right\}}_{=0}\right\} = 0.
 $$
 
 したがって
@@ -770,8 +766,8 @@ $$
 
 ## コラム：サイコロの雌雄と生命の選択
 
-サイコロに雌雄があるのを知っているだろうか。サイコロは、1から6までの数字を、裏にある数字の和が7となるように正六面体の各面に割り振ったものだ。いま、サイコロの上面に1を配置すると、下面は6となる。側面には2,3,4,5のどれかが配置されるが、2を手前にしよう。すると奥が5と決まる。残りは3,4のペアだが、3を右に配置するか、左に配置するかの二通りの自由度が残る。3を右に配置したものを雌サイコロ、左に配置したものを雄サイコロと呼ぶ。3次元軸の上下を「天地」、残り東西南北に割り振る時、「天一地六東五西二南三北四」とするのが雌サイコロ、「「天一地六東五西二**南四北三**」とするのが雄サイコロだ。他にも、「1,2,3の順番にx,y,z軸を決めた時に、右手系になるのが雌、左手系になるのが雄」「1,2,3の順番に見た時、反時計回りになるのが雌、時計回りになるのが雄」という覚え方がある。
+サイコロに雌雄があるのを知っているだろうか。サイコロは、1から6までの数字を、裏にある数字の和が7となるように正六面体の各面に割り振ったものだ。いま、サイコロの上面に1を配置すると、下面は6となる。側面には2,3,4,5のどれかが配置されるが、2を手前にしよう。すると奥が5と決まる。残りは3,4のペアだが、3を右に配置するか、左に配置するかの二通りの自由度が残る。3を右に配置したものを雌サイコロ、左に配置したものを雄サイコロと呼ぶ。3次元軸の上下を「天地」、残り東西南北に割り振る時、「天一地六東五西二**南三北四**」とするのが雌サイコロ、「天一地六東五西二**南四北三**」とするのが雄サイコロだ。他にも、「1,2,3の順番にx,y,z軸を決めた時に、右手系になるのが雌、左手系になるのが雄」「1,2,3の順番に見た時、反時計回りになるのが雌、時計回りになるのが雄」という覚え方がある。
 
-雄サイコロも雌サイコロも、サイコロとしての性質は全く変わらない。しかし現在使われているサイコロはほとんど雌サイコロである。同様に、このように、全く性質は変わらない二種類のうち、どちらかしか使われなくなる、という現象はよく見られる。例えばアミノ酸にも右手型と左手型が存在する。互いに鏡映の関係にあり、その化学的な性質はほとんど同じであるため、アミノ酸を化学合成すると右手系と左手系が同量できてしまう。にもかかわらず、地球生物はなぜか左手系のみを使うように進化した。我々は左手系のアミノ酸しか代謝できず、左手系のアミノ酸から構成されたタンパク質しか合成ことができない。「ドラえもん」に「フエルミラー」という道具がある。鏡に増やしたいものを映して、手を鏡に入れて取り出すことでものを増やすというものだが、これで食べ物を増やしても、アミノ酸の右手、左手が入れ替わるために食べることはできない(取り出したものをもう一度鏡で増やせばOKだが)。同様にSFなどで、鏡に写した自分がこの世界に飛び出してくる、というストーリーをたまに見かけるが、その生物は右手系のアミノ酸しか代謝できないため、この世界では長く生きることができないというエピソードが記述されたことがある。
+雄サイコロも雌サイコロも、サイコロとしての性質は全く変わらない。しかし現在使われているサイコロはほとんど雌サイコロである。同様に、このように、全く性質は変わらない二種類のうち、どちらかしか使われなくなる、という現象はよく見られる。例えばアミノ酸にも右手型と左手型が存在する。互いに鏡映の関係にあり、その化学的な性質はほとんど同じであるため、アミノ酸を化学合成すると右手系と左手系が同量できてしまう。にもかかわらず、地球生物はなぜか左手系のみを使うように進化した。我々は左手系のアミノ酸しか代謝できず、左手系のアミノ酸から構成されたタンパク質しか合成することができない。「ドラえもん」に「フエルミラー」という道具がある。鏡に増やしたいものを映して、手を鏡に入れて取り出すことでものを増やすというものだが、これで食べ物を増やしても、アミノ酸の右手、左手が入れ替わるために食べることはできない(取り出したものをもう一度鏡で増やせばOKだが)。同様にSFなどで、鏡に写した自分がこの世界に飛び出してくる、というストーリーをたまに見かけるが、その生物は右手系のアミノ酸しか代謝できないため、この世界では長く生きることができないというエピソードが記述されたことがある。
 
 糖も生命活動に重要な物質であり、アミノ酸と同様に右手型と左手型が存在するが、興味深いことに我々は右手型ばかりを使っている。なぜ我々はアミノ酸は左手型だけを、糖は右手型だけを使っているのか、その謎はおそらくまだ解明されていない。
