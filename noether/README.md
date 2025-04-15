@@ -497,7 +497,7 @@ $$
 \begin{aligned}
 U(R) &= U(r + \varepsilon^2 r/2)\\
 &= U(r) + U'(r)\frac{\varepsilon^2r}{2}\\
-&= U(r) + O(\varepsilon^2)
+&= U(r) + O(\varepsilon^2).
 \end{aligned}
 $$
 
@@ -521,7 +521,7 @@ $$
 \begin{aligned}
 \{q^1 p_2, H\} &= \frac{\partial (q^1 p_2)}{\partial q^i}\frac{\partial H}{\partial p_i} - \frac{\partial (q^1 p_2)}{\partial p_i}\frac{\partial H}{\partial q^i} \\
 &= p_2 \frac{\partial H}{\partial p_1} - q^1 \frac{\partial H}{\partial q^2} \\
-&= \frac{p_1 p_2}{m} - U'(r) \frac{q_1 q_2}{r}
+&= \frac{p_1 p_2}{m} - U'(r) \frac{q_1 q_2}{r}.
 \end{aligned}
 $$
 
