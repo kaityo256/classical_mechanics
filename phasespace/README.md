@@ -325,7 +325,7 @@ $\Delta \rho = \partial \rho/ \partial t$だと思えば、
 $$
 \begin{aligned}
 \Delta \rho &= - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right) \\
-&= - \nabla \left(\rho \mathbf{v} \right).
+&= - \nabla \cdot \left(\rho \mathbf{v} \right).
 \end{aligned}
 $$
 
