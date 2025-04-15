@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>本章ではラグランジアンをルジャンドル変換することにより、ハミルトニアンという新しい量が得られること、これがエネルギーに対応していること、さらにハミルトン形式の力学が得られることを見る。</p>
+                                    <!--- abstract --->
+                                    <p>本章ではラグランジアンをルジャンドル変換することにより、ハミルトニアンという新しい量が得られること、これがエネルギーに対応していること、さらにハミルトン形式の力学が得られることを見る。
+                                    <!--- end ---></p>
                                     <h1
                                     id="一般化運動量とハミルトニアン">一般化運動量とハミルトニアン</h1>
                                     <p>ニュートンの運動方程式を、ラグランジアンを使ってオイラー・ラグランジュの式で書いてやると、ニュートンの運動方程式よりも広い変数変換に対して運動方程式が不変となることを見た。これにより変数変換が楽になる。しかし、オイラー・ラグランジュの式で許される変換は座標のみを対象としたものであり、例えば運動量と座標を混ぜるような変換に対しては形を変えてしまう。そこで、ラグランジアンを変数変換することで、より広い変数変換について形を変えないような運動方程式を作ることにしよう。</p>
@@ -70,7 +70,7 @@
                                     class="math inline">\(q\)</span>と一般化速度<span
                                     class="math inline">\(\dot{q}\)</span>が時間依存する時、ラグランジアンを時間積分したものを作用積分と呼ぶ。</p>
                                     <p><span class="math display">\[
-                                    I = \int L dt
+                                    I = \int L dt.
                                     \]</span></p>
                                     <p>この作用積分の変分がゼロとなる条件(<span
                                     class="math inline">\(\delta I =
@@ -78,15 +78,15 @@
                                     <p><span class="math display">\[
                                     \frac{d}{dt}\left(\frac{\partial
                                     L}{\partial \dot{q}} \right) -
-                                    \frac{\partial L}{\partial q} = 0
+                                    \frac{\partial L}{\partial q} = 0.
                                     \]</span></p>
-                                    <p>さて。ラグランジアン<span
+                                    <p>さて、ラグランジアン<span
                                     class="math inline">\(L\)</span>が時間に陽に依存しない場合、すなわち<span
                                     class="math inline">\(\partial_t L =
                                     0\)</span>が成り立つ時、ベルトラミの公式により、以下の量が時間不変量になるのであった。</p>
                                     <p><span class="math display">\[
                                     B = L - \dot{q} \frac{\partial
-                                    L}{\partial \dot{q}}
+                                    L}{\partial \dot{q}}.
                                     \]</span></p>
                                     <p>ラグランジアンが</p>
                                     <p><span class="math display">\[
@@ -102,7 +102,7 @@
                                     &amp;= -\frac{1}{2}m \dot{q}^2 -U(q)
                                     \\
                                     &amp;= -(K+U)\\
-                                    &amp;= -E
+                                    &amp;= -E.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、この時間不変量はエネルギーに負符号をつけたものである。そこで、</p>
@@ -115,7 +115,7 @@
                                     class="math inline">\(p\)</span>とする。</p>
                                     <p><span class="math display">\[
                                     p \equiv \frac{\partial L}{\partial
-                                    \dot{q}}
+                                    \dot{q}}.
                                     \]</span></p>
                                     <p>ラグランジアンはエネルギーの次元を持っているため、もし一般化座標<span
                                     class="math inline">\(q\)</span>が長さの次元を持っていれば、<span
@@ -125,11 +125,9 @@
                                     <p>一般化運動量<span
                                     class="math inline">\(p\)</span>を用いると、先程の量は以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    H = \dot{q}p - L
+                                    H = \dot{q}p - L.
                                     \]</span></p>
-                                    <p>この量を
-                                    <strong>ハミルトニアン</strong>(Hamiltonian)
-                                    と呼ぶ。</p>
+                                    <p>この量を<strong>ハミルトニアン</strong>(Hamiltonian)と呼ぶ。</p>
                                     <p>両辺の全微分をとって見よう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
@@ -143,7 +141,7 @@
                                     &amp;= \cancel{p d\dot{q}} + \dot{q}
                                     dp  - \dot{p}dq -
                                     \cancel{pd\dot{q}}\\
-                                    &amp;= \dot{q} dp - \dot{p}dq
+                                    &amp;= \dot{q} dp - \dot{p}dq.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ただし、途中でオイラー・ラグランジュの方程式から</p>
@@ -159,7 +157,7 @@
                                     <p><span class="math display">\[
                                     dH = \frac{\partial H}{\partial q}
                                     dq + \frac{\partial H}{\partial p}
-                                    dp
+                                    dp.
                                     \]</span></p>
                                     <p>これと、</p>
                                     <p><span class="math display">\[
@@ -169,9 +167,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q} &amp;= \frac{\partial
-                                    H}{\partial p} \\
+                                    H}{\partial p}, \\
                                     \dot{p} &amp;= -\frac{\partial
-                                    H}{\partial q} \\
+                                    H}{\partial q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを<strong>ハミルトンの運動方程式</strong>(Hamilton’s
@@ -180,16 +178,16 @@
                                     equation)
                                     と呼ぶ。多変数の場合、ラグランジアンからハミルトニアンへの変換は以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    H = p_i \dot{q}^i - L
+                                    H = p_i \dot{q}^i - L.
                                     \]</span></p>
                                     <p>ここで、アインシュタイン記法による和を取っていることに注意。また、後にわかるように一般化運動量は共変ベクトルであるので、添字を下につけている。</p>
                                     <p>一変数の場合と同じ議論から、運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q}^i &amp;= \frac{\partial
-                                    H}{\partial p_i} \\
+                                    H}{\partial p_i}, \\
                                     \dot{p}_i &amp;= -\frac{\partial
-                                    H}{\partial q^i} \\
+                                    H}{\partial q^i}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>つまり、<span
@@ -209,7 +207,7 @@
                                     q}\frac{\partial H}{\partial p}
                                     - \frac{\partial H}{\partial
                                     p}\frac{\partial H}{\partial q} \\
-                                    &amp;= 0
+                                    &amp;= 0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、ハミルトニアンの時間微分は(ハミルトニアンが時間に陽に依存しない限り)必ずゼロとなる。これはエネルギー保存則に他ならない。ニュートンの運動方程式や、オイラー・ラグランジュ方程式に比べ、正準方程式はエネルギー保存則が見えやすい形となっている。</p>
@@ -249,19 +247,19 @@
                                     class="math inline">\(y\)</span>の全微分を並べて書いておく。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    d(xX) &amp;= x dX + X dx\\
-                                    dy &amp;= X dx
+                                    d(xX) &amp;= x dX + X dx,\\
+                                    dy &amp;= X dx.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>辺々引くと</p>
                                     <p><span class="math display">\[
-                                    d(xX - y) = x dX
+                                    d(xX - y) = x dX.
                                     \]</span></p>
                                     <p>ここで、<span
                                     class="math inline">\(Y = xX
                                     -y\)</span>という量を考えると、</p>
                                     <p><span class="math display">\[
-                                    dY = x dX
+                                    dY = x dX.
                                     \]</span></p>
                                     <p>これは、新しい関数<span
                                     class="math inline">\(Y\)</span>の自由変数は<span
@@ -288,9 +286,9 @@
                                     class="math inline">\(f\)</span>の全微分と並べて書くと</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    d(yY) &amp;= ydY + Ydy \\
+                                    d(yY) &amp;= ydY + Ydy, \\
                                     df &amp;=  \frac{\partial
-                                    f}{\partial x} dx + Ydy
+                                    f}{\partial x} dx + Ydy.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>辺々引くと、</p>
@@ -327,7 +325,7 @@
                                     d\dot{q}
                                     \]</span></p>
                                     <p>これは、<span
-                                    class="math inline">\(L(q,\dot{q})\)</span>で表現される二次元局面において、<span
+                                    class="math inline">\(L(q,\dot{q})\)</span>で表現される二次元曲面において、<span
                                     class="math inline">\((q_0,
                                     \dot{q}_0)\)</span>点での接平面を考えていることに対応する。接平面は平面であるから、基底が二つあれば全ての点を表現できる。この基底にあたるのが<span
                                     class="math inline">\(dq\)</span>と<span
@@ -355,14 +353,14 @@
                                     L\)</span>と<span
                                     class="math inline">\(d\dot{q}\)</span>を入れ替えたい。そのために<span
                                     class="math inline">\(p=\partial_{\dot{q}}
-                                    L\)</span>とすると、として、<span
+                                    L\)</span>として、<span
                                     class="math inline">\(p
                                     \dot{q}\)</span>の全微分を考える。</p>
                                     <p><span class="math display">\[
                                     d(p \dot{q}) = \dot{q}dp + p
-                                    d\dot{q}
+                                    d\dot{q}.
                                     \]</span></p>
-                                    <p>従って<span
+                                    <p>辺々引いて<span
                                     class="math inline">\(d(p \dot{q}) -
                                     dL\)</span>を計算すると、</p>
                                     <p><span class="math display">\[
@@ -370,7 +368,7 @@
                                     \cancel{p d\dot{q}} - \frac{\partial
                                     L}{\partial q} dq - \cancel{p
                                     d\dot{q}} = \dot{q}dp -
-                                    \frac{\partial L}{\partial q} dq
+                                    \frac{\partial L}{\partial q} dq.
                                     \]</span></p>
                                     <p>ようするに、<span
                                     class="math inline">\(L\)</span>を全微分して出てくる<span
@@ -416,7 +414,7 @@
                                     class="math inline">\(Y\)</span>の直線を表している。接線の定義からすぐに</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    X &amp;= \frac{dy}{dx} \\
+                                    X &amp;= \frac{dy}{dx}, \\
                                     Y &amp;= y - x\frac{dy}{dx} = y - xX
                                     \end{aligned}
                                     \]</span></p>
@@ -445,14 +443,14 @@
                                     -  \cancel{\frac{dy}{dx}} - x
                                     \cancel{\frac{d^2y}{dx^2}}\right)
                                     \frac{1}{\cancel{\frac{dX}{dx}}} \\
-                                    &amp;= -x
+                                    &amp;= -x,
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     Y - X \frac{dY}{dX} &amp;= y -
                                     \cancel{xX} -\cancel{Xx} \\
-                                    &amp;=y
+                                    &amp;=y.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これがルジャンドル逆変換を与える。ルジャンドル変換と逆変換を並べて書くと、</p>
@@ -518,15 +516,15 @@
                                     class="math inline">\(Y\)</span>と定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    y &amp;= \int_0^x X(x)dx\\
-                                    Y &amp;= \int_0^X x(X)dX
+                                    y &amp;= \int_0^x X(x)dx,\\
+                                    Y &amp;= \int_0^X x(X)dX.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺を微分すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \frac{dy}{dx} &amp;= X\\
-                                    \frac{dY}{dX} &amp;= x
+                                    \frac{dy}{dx} &amp;= X,\\
+                                    \frac{dY}{dX} &amp;= x.
                                     \end{aligned}
                                     \]</span></p>
                                     <figure>
@@ -570,8 +568,8 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     p &amp;= \frac{\partial L}{d
-                                    \dot{q}} \\
-                                    H &amp;= p\dot{q} - L
+                                    \dot{q}}, \\
+                                    H &amp;= p\dot{q} - L.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>面積表式では、自然に変換が対称となること、<span
@@ -616,7 +614,7 @@
                                     p +p \delta \dot{q} - \frac{\partial
                                     H}{\partial q}\delta q +
                                     \frac{\partial H}{\partial p} \delta
-                                    p \right)dt
+                                    p \right)dt.
                                     \]</span></p>
                                     <p>ここで、<span
                                     class="math inline">\(p \delta
@@ -635,7 +633,7 @@
                                     - \left(\dot{p} + \frac{\partial
                                     H}{\partial q}\right)\delta q
                                     \right)dt \\
-                                    &amp;=0
+                                    &amp;=0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これが任意の<span
@@ -645,9 +643,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q} &amp;= \frac{\partial
-                                    H}{\partial p} \\
+                                    H}{\partial p}, \\
                                     \dot{p} &amp;= -\frac{\partial
-                                    H}{\partial q} \\
+                                    H}{\partial q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>したがって、作用積分の中身をラグランジアン<span
@@ -660,17 +658,17 @@
                                     <p>まず、二次元極座標のラグランジアンを考える。</p>
                                     <p><span class="math display">\[
                                     L = \frac{1}{2}m(\dot{r}^2 +
-                                    r^2\dot{\theta}^2) - U
+                                    r^2\dot{\theta}^2) - U.
                                     \]</span></p>
                                     <p>一般化座標<span
                                     class="math inline">\(r,\theta\)</span>に対応する一般化運動量は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     p_r &amp;= \frac{\partial
-                                    L}{\partial \dot{r}} = m \dot{r} \\
+                                    L}{\partial \dot{r}} = m \dot{r}, \\
                                     p_\theta &amp;= \frac{\partial
                                     L}{\partial \dot{\theta}} = m r^2
-                                    \dot{\theta} \\
+                                    \dot{\theta}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>となる。ここで、一般化座標<span
@@ -741,7 +739,7 @@
                                     \dot{Q}} \\
                                       &amp;= \frac{m\dot{Q}}{a^2} \\
                                       &amp;= \frac{m\dot{q}}{a}\\
-                                      &amp;= \frac{p}{a}
+                                      &amp;= \frac{p}{a}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、</p>
@@ -763,9 +761,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q}^i &amp;= \frac{\partial
-                                    H}{\partial p_i} \\
+                                    H}{\partial p_i}, \\
                                     \dot{p}_i &amp;= -\frac{\partial
-                                    H}{\partial q_i}
+                                    H}{\partial q_i}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>自分の時間微分が、自分の「相方」による偏微分で得られている。したがって、例えばハミルトニアンが<span
@@ -787,15 +785,15 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{x} &amp;= \frac{\partial
-                                    H}{\partial p_x} = \frac{p_x}{m} \\
+                                    H}{\partial p_x} = \frac{p_x}{m}, \\
                                     \dot{y} &amp;= \frac{\partial
-                                    H}{\partial p_y} = \frac{p_y}{m} \\
+                                    H}{\partial p_y} = \frac{p_y}{m}, \\
                                     \dot{p_x} &amp;= -\frac{\partial
                                     H}{\partial x} = - \frac{\partial
-                                    U}{\partial x} \\
+                                    U}{\partial x}, \\
                                     \dot{p_y} &amp;= -\frac{\partial
                                     H}{\partial y} = - \frac{\partial
-                                    U}{\partial y} \\
+                                    U}{\partial y}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>と、ニュートンの運動方程式と等価な式が現れ、特にご利益はない。そこで、極座標表示をしてみよう。極座標でのラグランジアンは</p>
@@ -811,10 +809,10 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     p_r &amp;\equiv \frac{\partial
-                                    L}{\partial \dot{r}} = m\dot{r} \\
+                                    L}{\partial \dot{r}} = m\dot{r}, \\
                                     p_\theta &amp;\equiv \frac{\partial
                                     L}{\partial \dot{\theta}} =
-                                    mr^2\dot{\theta} \\
+                                    mr^2\dot{\theta}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>となる。したがって、ハミルトニアンの極座標表示は</p>
@@ -859,7 +857,7 @@
                                     0\)</span>である。正準方程式から</p>
                                     <p><span class="math display">\[
                                     \dot{p}_\theta = -\frac{\partial
-                                    H}{\partial \theta} = 0
+                                    H}{\partial \theta} = 0.
                                     \]</span></p>
                                     <p>すなわち、<span
                                     class="math inline">\(\theta\)</span>に共役な運動量が時間保存量となることが、ハミルトニアンの形を見るだけでわかる。このように、ニュートンの運動方程式に比べて、保存則が非常に見やすいのがハミルトニアンの特徴である。この事実は後により一般的に議論する。</p>

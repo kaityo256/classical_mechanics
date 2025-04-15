@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>ニュートン力学では、ニュートンの運動方程式が出発点であり、「その運動方程式はどこから来たか」に答えることができなかった。しかし、解析力学では、最小作用の原理から運動方程式を導く。これにより、運動方程式よりも一歩引いた立場から運動を記述、理解できるようになる。最小作用の原理は、変分原理と呼ばれるものの一種である。以下では、変分原理の例として最速降下曲線を挙げ、汎関数微分を導入する。解析力学は変分原理に立脚しており、その変分原理の心臓部分が関数の微分を含む汎関数の微分であるため、ここが解析力学で最も重要なパートである。</p>
+                                    <!--- abstract --->
+                                    <p>ニュートン力学では、ニュートンの運動方程式が出発点であり、「その運動方程式はどこから来たか」に答えることができなかった。しかし、解析力学では、最小作用の原理から運動方程式を導く。これにより、運動方程式よりも一歩引いた立場から運動を記述、理解できるようになる。最小作用の原理は、変分原理と呼ばれるものの一種である。以下では、変分原理の例として最速降下曲線を挙げ、汎関数微分を導入する。解析力学は変分原理に立脚しており、その変分原理の心臓部分が関数の微分を含む汎関数の微分であるため、ここが解析力学で最も重要なパートである。
+                                    <!--- end ---></p>
                                     <h1 id="変分問題">変分問題</h1>
                                     <p>我々は、何らかの制約のなかで、何かを最小化したり最大化したりしたいことがよくある。例えばレストランでご飯を注文する際、許される予算、およびカロリー上限の中で、もっとも食べたいものを選ぶであろう。このような問題を最適化問題と呼ぶ。最適化問題には様々なものがあるが、その中に選べる選択肢が連続的な場合がある。山を登る時、山の入口から山頂まで様々な道がある。傾きがきつい道ほど疲れやすいが登山時間は短くて済み、傾きが緩い道は楽だが登山時間が長くなる。この時、もっとも疲れずに登るためのルートはどのように決めれば良いか、といった問題が典型例である。この時、我々は「疲労度」という実数値を最小化するように「登山ルート」という連続的な経路を決める必要がある。このように連続的な自由度についての最適化問題を変分問題、変分問題を解く方法を変分法と呼ぶ。以下では、変分問題とその解法について説明する。以下、ややこしい計算を実施するが、計算の詳細は気にしなくて良い。</p>
                                     <h2
@@ -87,14 +87,14 @@
                                     class="math inline">\(T(x)\)</span>は、</p>
                                     <p><span class="math display">\[
                                     T(x) = \frac{l_A}{v_A} +
-                                    \frac{l_B}{v_B}
+                                    \frac{l_B}{v_B}.
                                     \]</span></p>
                                     <p>ただし、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    l_A(x) &amp;= \sqrt{h_A^2 + x^2} \\
-                                    l_B(x) &amp;= \sqrt{h_B^2 + (L-x)^2}
-                                    \\
+                                    l_A(x) &amp;= \sqrt{h_A^2 + x^2}, \\
+                                    l_B(x) &amp;= \sqrt{h_B^2 +
+                                    (L-x)^2}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span
@@ -104,17 +104,17 @@
                                     0\)</span>を満たすはずであるから、</p>
                                     <p><span class="math display">\[
                                     T&#39;(x) = \frac{l_A&#39;}{v_A} +
-                                    \frac{l_B&#39;}{v_B} = 0
+                                    \frac{l_B&#39;}{v_B} = 0.
                                     \]</span></p>
                                     <p>ここで</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     l_A&#39;(x) &amp;=
                                     \frac{x}{\sqrt{h_A^2 + x^2}} =
-                                    \frac{x}{l_A} \\
+                                    \frac{x}{l_A}, \\
                                     l_B&#39;(x) &amp;=
                                     \frac{-(L-x)}{\sqrt{h_B^2 +
-                                    (L-x)^2}} = -\frac{L-x}{l_B}\\
+                                    (L-x)^2}} = -\frac{L-x}{l_B}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>である。境界の法線に対して直線AX、XBのなす角をそれぞれ<span
@@ -122,22 +122,22 @@
                                     class="math inline">\(\theta_B\)</span>とすると、三角関数の定義から、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \sin \theta_A &amp;= \frac{x}{l_A}
+                                    \sin \theta_A &amp;= \frac{x}{l_A},
                                     \\
-                                    \sin \theta_B &amp;= \frac{L-x}{l_B}
-                                    \\
+                                    \sin \theta_B &amp;=
+                                    \frac{L-x}{l_B}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>従って、</p>
                                     <p><span class="math display">\[
                                     T&#39;(x) = \frac{\sin
                                     \theta_A}{v_A} - \frac{\sin
-                                    \theta_B}{v_B} = 0
+                                    \theta_B}{v_B} = 0.
                                     \]</span></p>
                                     <p>以上から、</p>
                                     <p><span class="math display">\[
                                     \frac{\sin \theta_A}{v_A} =
-                                    \frac{\sin \theta_B}{v_B}
+                                    \frac{\sin \theta_B}{v_B}.
                                     \]</span></p>
                                     <p>これは、光線が平面に入射した場合、入射角と出射角(屈折角)と、その媒質中における光速との関係を表すスネルの法則にほかならない。</p>
                                     <figure>
@@ -216,7 +216,7 @@
                                     l(x_k) &amp;=\sqrt{\Delta x^2 +
                                     (y_{k+1} - y_k)^2} \\
                                     &amp;\sim \Delta x \sqrt{1 +
-                                    (y&#39;_k)^2} \\
+                                    (y&#39;_k)^2}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ただし、<span
@@ -242,7 +242,7 @@
                                     <p><span class="math display">\[
                                     T= \int_0^L
                                     \frac{\sqrt{1+y&#39;^2}}{\sqrt{2gy}}
-                                    dx
+                                    dx.
                                     \]</span></p>
                                     <p>関数<span
                                     class="math inline">\(y(x)\)</span>は、スカラー量を入力とし、スカラー量を返すものであった。先程の<span
@@ -262,7 +262,7 @@
                                     class="math inline">\(\theta_k\)</span>を定義するとスネルの法則と同じ議論により</p>
                                     <p><span class="math display">\[
                                     \frac{\sin \theta_{k-1}}{v_{k-1}} =
-                                    \frac{\sin \theta_k}{v_k}
+                                    \frac{\sin \theta_k}{v_k}.
                                     \]</span></p>
                                     <p>連続極限をとると、</p>
                                     <p><span class="math display">\[
@@ -296,7 +296,7 @@
                                     \tan\left(\frac{\pi}{2} - \theta
                                     \right) \\
                                     &amp;= \frac{\cos \theta}{\sin
-                                    \theta}
+                                    \theta}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここから<span
@@ -310,26 +310,26 @@
                                     \theta}{\cos\theta}\left( 4 a \sin
                                     \theta \cos \theta\right) \\
                                     &amp;= 4 a \sin^2 \theta \\
-                                    &amp;= 2 a (1 - \cos 2\theta)
+                                    &amp;= 2 a (1 - \cos 2\theta).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺を<span
                                     class="math inline">\(\theta\)</span>で積分すると</p>
                                     <p><span class="math display">\[
-                                    x = 2 a \left(\theta - \frac{1}{2}
-                                    \sin \theta \right)
-                                    \]</span></p>
-                                    <p><span class="math display">\[
-                                    y = 2a \sin^2 \theta = a (1 - \cos 2
-                                    \theta)
+                                    \begin{aligned}
+                                    x &amp;= 2 a \left(\theta -
+                                    \frac{1}{2} \sin \theta \right),\\
+                                    y &amp;= 2a \sin^2 \theta = a (1 -
+                                    \cos 2 \theta).
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>であったから、<span
                                     class="math inline">\(s =
                                     2\theta\)</span>とすると</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x &amp;= a (s - \sin s) \\
-                                    y &amp;= a (1 - \cos s)
+                                    x &amp;= a (s - \sin s), \\
+                                    y &amp;= a (1 - \cos s).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これはサイクロイド曲線を表現している。</p>
@@ -408,7 +408,7 @@
                                     、もしくは第一変分と呼ぶ。</p>
                                     <p>解析力学では、汎関数の積分の中に関数の関数、すなわち合成関数が入ることが多い。そこで、以下のような式を考える。</p>
                                     <p><span class="math display">\[
-                                    I[f] = \int_a^b F(f(x)) dx
+                                    I[f] = \int_a^b F(f(x)) dx.
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(F(x)\)</span>は普通の関数である。例えば
@@ -428,7 +428,7 @@
                                     class="math inline">\(I\)</span>がどのように変化するか見てみよう。</p>
                                     <p><span class="math display">\[
                                     I[f + \varepsilon \phi] = \int_a^b
-                                    F(f(x)+ \varepsilon \phi(x) ) dx
+                                    F(f(x)+ \varepsilon \phi(x) ) dx.
                                     \]</span></p>
                                     <p>ここで、ある<span
                                     class="math inline">\(x\)</span>を固定すると、<span
@@ -442,7 +442,7 @@
                                     F(f(x)) + F&#39;(f(x)) \varepsilon
                                     \phi(x) + O(\varepsilon^2)
                                     \]</span></p>
-                                    <p>とできる。元の積分に代入すると、</p>
+                                    <p>と展開できる。元の積分に代入すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     I[f + \varepsilon \phi] &amp;=
@@ -454,7 +454,7 @@
                                     +O(\varepsilon^2) \\
                                     &amp;= I[f] + \varepsilon \int_a^b
                                     F&#39;[f(x)]\phi(x) dx
-                                    +O(\varepsilon^2)
+                                    +O(\varepsilon^2).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>汎関数微分の定義から、</p>
@@ -475,7 +475,7 @@
                                     \underbrace{I[f + \delta f]  -
                                     I[f]}_{\delta I} = \int_a^b
                                     F&#39;[f(x)]\delta f dx +
-                                    O(\varepsilon^2)
+                                    O(\varepsilon^2).
                                     \]</span></p>
                                     <p>ここで左辺を<span
                                     class="math inline">\(\delta
@@ -483,11 +483,12 @@
                                     class="math inline">\(\varepsilon^2\)</span>のオーダーの項を無視すると、以下のように表記できる。</p>
                                     <p><span class="math display">\[
                                     \delta I = \int_a^b
-                                    F&#39;[f(x)]\delta f dx
+                                    F&#39;[f(x)]\delta f dx.
                                     \]</span></p>
-                                    <p>これは、関数の全微分</p>
+                                    <p>これは、関数<span
+                                    class="math inline">\(f(x)\)</span>の全微分</p>
                                     <p><span class="math display">\[
-                                    df = f&#39; dx
+                                    df = f&#39;(x) dx
                                     \]</span></p>
                                     <p>の汎関数版である。要するに汎関数微分とは、積分の中の合成関数<span
                                     class="math inline">\(F[f]\)</span>を、<span
@@ -504,7 +505,7 @@
                                     class="math inline">\(x\)</span>が、力学では時間<span
                                     class="math inline">\(t\)</span>にあたることに注意)。このような場合に汎関数微分がどうなるかを見ておこう。</p>
                                     <p>まず、二変数関数<span
-                                    class="math inline">\(F(f,g)\)</span>を考える。関数$Fの全微分は</p>
+                                    class="math inline">\(F(f,g)\)</span>を考える。この関数の全微分は</p>
                                     <p><span class="math display">\[
                                     dF = \frac{\partial F}{\partial f}
                                     df +\frac{\partial F}{\partial g} dg
@@ -535,7 +536,7 @@
                                     \left(\frac{\partial F}{\partial f}
                                     \delta f(x) +  \frac{\partial
                                     F}{\partial g} \delta g(x)   \right)
-                                    dx
+                                    dx.
                                     \]</span></p>
                                     <p>ここまでは、二変数関数<span
                                     class="math inline">\(F(f,
@@ -557,7 +558,7 @@
                                     g(b)=0\)</span>を満たすように変化させる。変化後も微分の関係を満たさなければならないのだから、</p>
                                     <p><span class="math display">\[
                                     \frac{d}{dx} (f + \delta f) = g +
-                                    \delta g
+                                    \delta g.
                                     \]</span></p>
                                     <p>もともと<span
                                     class="math inline">\(g(x) =
@@ -583,7 +584,7 @@
                                     \frac{\partial F}{\partial f} -
                                     \frac{d}{dx} \left(\frac{\partial
                                     F}{\partial g} \right)\right) \delta
-                                    f dx
+                                    f dx.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>最後に、<span
@@ -595,7 +596,7 @@
                                     \frac{\partial F}{\partial f} -
                                     \frac{d}{dx} \left(\frac{\partial
                                     F}{\partial f&#39;} \right)\right)
-                                    \delta f dx
+                                    \delta f dx.
                                     \]</span></p>
                                     <p>これが、関数と関数の導関数に依存する汎関数</p>
                                     <p><span class="math display">\[
@@ -633,7 +634,7 @@
                                     <p><span class="math display">\[
                                     T[y] = \int_0^L
                                     \frac{\sqrt{1+y&#39;^2}}{\sqrt{2gy}}
-                                    dx
+                                    dx.
                                     \]</span></p>
                                     <p>積分の中身を、<span
                                     class="math inline">\(y(x)\)</span>と<span
@@ -665,7 +666,7 @@
                                     <p><span class="math display">\[
                                     \delta T = \int_0^a \frac{\delta
                                     F}{\delta y} \delta y dx  + O(\delta
-                                    y^2)
+                                    y^2).
                                     \]</span></p>
                                     <p>どのような<span
                                     class="math inline">\(\delta
@@ -710,7 +711,7 @@
                                     class="math inline">\(x\)</span>微分がゼロとなる。</p>
                                     <p><span class="math display">\[
                                     B = F - f&#39; \frac{\partial
-                                    F}{\partial f&#39;}
+                                    F}{\partial f&#39;}.
                                     \]</span></p>
                                     <p>証明は簡単で、<span
                                     class="math inline">\(dB/dx\)</span>を計算すれば良い。</p>
@@ -731,7 +732,7 @@
                                     \frac{\partial F}{\partial f&#39;} -
                                     f&#39; \frac{\partial F}{\partial x}
                                     \\
-                                    &amp;= 0
+                                    &amp;= 0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、ある定数<span
@@ -757,21 +758,21 @@
                                     &amp;=
                                     \frac{1}{\sqrt{2gy}\sqrt{1+y&#39;^2}}
                                     \\
-                                    &amp;= C
+                                    &amp;= C.
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(y&#39;\)</span>について整理すると、</p>
                                     <p><span class="math display">\[
                                     y&#39; =　\sqrt{\frac{1
-                                    -2gC^2y}{2gC^2y}}
+                                    -2gC^2y}{2gC^2y}}.
                                     \]</span></p>
                                     <p><span class="math inline">\(2gC^2
                                     =
                                     1/2a\)</span>とすると、以下の微分方程式を得る。</p>
                                     <p><span class="math display">\[
                                     \frac{dy}{dx} = -\sqrt{\frac{2a -
-                                    y}{y}}
+                                    y}{y}}.
                                     \]</span></p>
                                     <p>これと、角度の定義</p>
                                     <p><span class="math display">\[
@@ -804,14 +805,15 @@
                                     class="math inline">\(x\)</span>から<span
                                     class="math inline">\(t\)</span>となり、<span
                                     class="math inline">\(x(t)\)</span>は時間の関数となることに注意。ここで、<span
-                                    class="math inline">\(\dot{x} =
-                                    v\)</span>であるので、以後は<span
+                                    class="math inline">\(v =
+                                    \dot{x}\)</span>であるので、以後は<span
                                     class="math inline">\(L(x,\dot{x})\)</span>と書こう。このラグランジアンを、適当な期間<span
                                     class="math inline">\(t_1 &lt; t
                                     &lt;
                                     t_2\)</span>について時間積分する。</p>
                                     <p><span class="math display">\[
-                                    I = \int_{t_1}^{t_2} L(x,\dot{x}) dt
+                                    I = \int_{t_1}^{t_2} L(x,\dot{x})
+                                    dt.
                                     \]</span></p>
                                     <p>この量<span
                                     class="math inline">\(I\)</span>を作用、この積分を作用積分と呼ぶ。ここで、運動の軌道<span
@@ -839,7 +841,7 @@
                                     <p>さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、</p>
                                     <p><span class="math display">\[
                                     B = L - \dot{x} \frac{\partial
-                                    L}{\partial \dot{q}}
+                                    L}{\partial \dot{x}}
                                     \]</span></p>
                                     <p>が時間不変量となる。ここで、ラグランジアンが</p>
                                     <p><span class="math display">\[
@@ -855,7 +857,7 @@
                                     - m\dot{x}^2\\
                                     &amp;= - \left( \frac{1}{2}
                                     m\dot{x}^2 + U(x) \right)\\
-                                    &amp;= -E
+                                    &amp;= -E.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、エネルギー保存則を表している。また、これは自由変数を<span
@@ -883,12 +885,12 @@
                                     class="math inline">\(0 \le x \le
                                     1\)</span>で定義された以下の関数を考える。</p>
                                     <p><span class="math display">\[
-                                    f(x) = 6 x^3 - 9x^2 + 4x
+                                    f(x) = 6 x^3 - 9x^2 + 4x.
                                     \]</span></p>
                                     <p>微分すると、</p>
                                     <p><span class="math display">\[
                                     f&#39;(x) = 18 x^2 - 18 x +4 =
-                                    2(3x-1)(3x-2)
+                                    2(3x-1)(3x-2).
                                     \]</span></p>
                                     <p>すなわち、この関数は<span
                                     class="math inline">\(x=1/3,
@@ -935,8 +937,8 @@
                                     y^2\)</span>は、原点で<span
                                     class="math inline">\(x\)</span>,<span
                                     class="math inline">\(y\)</span>による偏微分がいずれもゼロとなるが、極大値も極小値も与えない。このような点を
-                                    <strong>鞍点 </strong>(saddle point)
-                                    と呼ぶ。このように、微分がゼロとなる点をまとめて　<strong>停留点</strong>(stationary
+                                    <strong>鞍点</strong>(saddle point)
+                                    と呼ぶ。このように、微分がゼロとなる点をまとめて<strong>停留点</strong>(stationary
                                     point) と呼ぶ。</p>
                                     <p>作用積分においても、変分がゼロとなるような関数が必ずしも作用を最小にするとは限らない。極小値となることが多いので「極小作用の法則」と呼ぶこともあるが、例えば調和振動子などは作用積分が極小値を与えない。そういう意味で「停留作用の法則」と呼ぶのが最も正確である。しかし、本書では以後、最小作用の法則と呼び、あたかも運動方程式の解が作用を最小にするかのように説明する。</p>
                                     <h1

@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。特に、数学の主要三分野である解析、代数、幾何の全てが現れるのが解析力学の難しいところであり、また面白いところでもある。以下では、特にベクトル空間及び内積空間の導入と、微分とベクトルがからむベクトル解析についてまとめておく。</p>
+                                    <!--- abstract --->
+                                    <p>解析力学を学ぶ前に、必要な数学的準備を済ませよう。解析力学には、ベクトルや座標変換といった線形代数、微分、偏微分、ルジャンドル変換、微分形式、汎関数微分など、多種多様な数学的ツールが現れる。特に、数学の主要三分野である解析、代数、幾何の全てが現れるのが解析力学の難しいところであり、また面白いところでもある。以下では、特にベクトル空間及び内積空間の導入と、微分とベクトルがからむベクトル解析についてまとめておく。
+                                    <!--- end ---></p>
                                     <h1
                                     id="ベクトル空間">ベクトル空間</h1>
                                     <h2
@@ -80,7 +80,7 @@
                                     と呼ぶ。特に、<span
                                     class="math inline">\(\mathbf{r}\)</span>
                                     は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本書では<span
-                                    class="math inline">\(\mathbf{r}\)</span>のように太字で表記する。板書においては、通常のアルファベットに縦線を一本加えることで太字を表現する。ベクトルは大きさと向きを持つ量である。板書では縦ベクトルは縦に書くが、本書では紙面の都合から横に書きたいことがある。その場合は<span
+                                    class="math inline">\(\mathbf{r}\)</span>のように太字で表記する。ベクトルは大きさと向きを持つ量である。本書では紙面の都合から縦ベクトルを横に書きたいことがある。その場合は<span
                                     class="math inline">\(\mathbf{r} =
                                     {}^t(r_x, r_y,
                                     r_z)\)</span>のように、ベクトルの最初に<span
@@ -113,13 +113,13 @@
                                     0\\
                                     0\\
                                     1
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>3つの基本的なベクトルの和にわけることができた。これらのベクトルを<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と書こう。すると、</p>
                                     <p><span class="math display">\[
-                                    \mathbf{r} = r_x \mathbf{e_x} + r_y
-                                    \mathbf{e_y} + r_z \mathbf{e_z}
+                                    \mathbf{r} = r_x \mathbf{e}_x + r_y
+                                    \mathbf{e}_y + r_z \mathbf{e}_z
                                     \]</span></p>
                                     <p>と表記できる。この時、<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を基底ベクトル、あるいは単に
@@ -159,8 +159,8 @@
                                     class="math inline">\(\mathbf{r}\)</span>の展開表現である。</p>
                                     <p>すなわち、本来なら</p>
                                     <p><span class="math display">\[
-                                    \mathbf{r} = r_x \mathbf{e_x} + r_y
-                                    \mathbf{e_y} + r_z \mathbf{e_z}
+                                    \mathbf{r} = r_x \mathbf{e}_x + r_y
+                                    \mathbf{e}_y + r_z \mathbf{e}_z
                                     \]</span></p>
                                     <p>と書くべきところを、基底ベクトルを<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と暗黙に仮定した上で括弧で略記した記法である。</p>
@@ -176,15 +176,15 @@
                                     \mathbf{e}^x =
                                     \begin{pmatrix}
                                     1 &amp; 0 &amp; 0
-                                    \end{pmatrix} \\
+                                    \end{pmatrix}, \\
                                     \mathbf{e}^y =
                                     \begin{pmatrix}
                                     0 &amp; 1 &amp; 0
-                                    \end{pmatrix} \\
+                                    \end{pmatrix}, \\
                                     \mathbf{e}^z =
                                     \begin{pmatrix}
                                     0 &amp; 0 &amp; 1
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>縦ベクトルの添字を下に、横ベクトルの添字を上につけている。縦ベクトルと横ベクトルの間には内積を定義することができる。</p>
@@ -201,7 +201,7 @@
                                     0\\
                                     0
                                     \end{pmatrix}
-                                    = 1
+                                    = 1.
                                     \]</span></p>
                                     <p>同様に、<span
                                     class="math inline">\(\mathbf{e}^x\)</span>と<span
@@ -216,7 +216,7 @@
                                     1\\
                                     0
                                     \end{pmatrix}
-                                    = 0
+                                    = 0.
                                     \]</span>
                                     つまり、添字が同じであれば1に、異なれば0になる。</p>
                                     <p>いちいち座標を<span
@@ -226,9 +226,13 @@
                                     class="math inline">\(\mathbf{e}^1,\mathbf{e}^2,\mathbf{e}^3\)</span>も同様である。この表記を用いると、先程の内積は以下のようにまとめて書ける。</p>
                                     <p><span class="math display">\[
                                     (\mathbf{e}^i, \mathbf{e}_j) =
-                                    \delta^i_j
+                                    \delta^i_j.
                                     \]</span></p>
-                                    <p>内積がゼロであることを
+                                    <p>ここで<span
+                                    class="math inline">\(\delta^i_j\)</span>はクロネッカーのデルタであり、<span
+                                    class="math inline">\(i=j\)</span>の時に<span
+                                    class="math inline">\(1\)</span>、そうでない時に<span
+                                    class="math inline">\(0\)</span>となる量である。内積がゼロであることを
                                     <strong>直交</strong>(orthogonal)
                                     していると呼ぶ。自分の相方が決まっており、相方以外との内積が全てゼロになるような基底を
                                     <strong>直交基底</strong>(orthogonal
@@ -282,7 +286,7 @@
                                     <p>で与えられている時、この基底でベクトルが以下のように展開できる。</p>
                                     <p><span class="math display">\[
                                     \mathbf{r} = r_1 \mathbf{e_1} + r_2
-                                    \mathbf{e_2} + r_3 \mathbf{e_3}
+                                    \mathbf{e_2} + r_3 \mathbf{e_3}.
                                     \]</span></p>
                                     <p>繰り返しとなるが、物理においては特定の座標を特別視しないため、まず座標系に依存しないベクトルが存在し、必要に応じて座標系を定義すると、内積によってその展開係数が決まる、というイメージを持つとよい。</p>
                                     <p>さて、ある基底<span
@@ -306,7 +310,7 @@
                                     &amp;= r&#39;_1
                                     \mathbf{e}&#39;_1  +r&#39;_1
                                     \mathbf{e}&#39;_2+r&#39;_3
-                                    \mathbf{e}&#39;_3\\
+                                    \mathbf{e}&#39;_3.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>もし、それぞれの基底が正規直交基底であるならば、任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。</p>
@@ -317,7 +321,7 @@
                                     class="math inline">\(\mathbf{r}\)</span>との内積を取ればよい。</p>
                                     <p><span class="math display">\[
                                     r&#39;_1 = \mathbf{e}&#39;_1 \cdot
-                                    \mathbf{r}
+                                    \mathbf{r}.
                                     \]</span></p>
                                     <p>さて、<span
                                     class="math inline">\(\mathbf{r}\)</span>を基底<span
@@ -328,7 +332,7 @@
                                     r&#39;_j &amp;= \mathbf{e}&#39;_j
                                     \cdot \mathbf{r}  \\
                                     &amp;= \sum_i r_i \mathbf{e}&#39;_j
-                                    \cdot  \mathbf{e}_i
+                                    \cdot  \mathbf{e}_i.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この式は「あるベクトル<span
@@ -337,12 +341,12 @@
                                     class="math inline">\(\mathbf{e}&#39;_j\)</span>での展開係数を知るには、基底同士の内積
                                     <span
                                     class="math inline">\(\mathbf{e}&#39;_j
-                                    \cdot \mathbf{e}_i\)</span>
+                                    \cdot  \mathbf{e}_i\)</span>
                                     がわかっていればいれば良い」ということを意味する。</p>
                                     <p>このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。</p>
                                     <h2
                                     id="ベクトル空間の定義">ベクトル空間の定義</h2>
-                                    <p>先ほどまで、ベクトルを「複数個の値の組」として捉えていた。しかし、今後はベクトルの概念を拡張し、より一般的に様々なものをベクトルとして扱う。まず、ベクトルとはどういうものであったかを確認しみよう。いま、2つのベクトル<span
+                                    <p>先ほどまで、ベクトルを「複数個の値の組」として捉えていた。しかし、今後はベクトルの概念を拡張し、より一般的に様々なものをベクトルとして扱う。まず、ベクトルとはどういうものであったかを確認してみよう。いま、2つのベクトル<span
                                     class="math inline">\(\mathbf{u},
                                     \mathbf{v}\)</span>があったとして、その和<span
                                     class="math inline">\(\mathbf{u}+\mathbf{v}\)</span>もベクトルである。また、それぞれの定数倍、<span
@@ -365,48 +369,66 @@
                                     class="math inline">\(\mathbb{V}\)</span>をベクトル空間、その元をベクトルと呼ぶ。</p>
                                     <ol type="1">
                                     <li>ベクトルの和が結合律を満たす
-                                    <span
+                                    <ul>
+                                    <li><span
                                     class="math inline">\(\mathbf{u} +
-                                    (\mathbf{v} + \mathbf{w}) =
-                                    (\mathbf{u} + \mathbf{v}) +
+                                    (\mathbf{v} + \mathbf{w})
+                                    =  (\mathbf{u} + \mathbf{v}) +
                                     \mathbf{w}\)</span></li>
-                                    <li>ベクトルの和が可換である <span
+                                    </ul></li>
+                                    <li>ベクトルの和が可換である
+                                    <ul>
+                                    <li><span
                                     class="math inline">\(\mathbf{u} +
                                     \mathbf{v} = \mathbf{v} +
                                     \mathbf{u}\)</span></li>
+                                    </ul></li>
                                     <li>零ベクトル(加法の単位元)が存在する
-                                    <span
+                                    <ul>
+                                    <li><span
                                     class="math inline">\(\mathbf{v} +
                                     \mathbf{0} =
                                     \mathbf{v}\)</span></li>
+                                    </ul></li>
                                     <li>ベクトルの加法に逆元が存在する(任意のベクトルに、和をとると零ベクトルにできるベクトルが存在する)
-                                    <span
+                                    <ul>
+                                    <li><span
                                     class="math inline">\(\mathbf{v} +
                                     (- \mathbf{v}) = 0\)</span></li>
+                                    </ul></li>
                                     <li>スカラーの乗法がベクトルに対して分配律を満たす
-                                    <span class="math inline">\(a
+                                    <ul>
+                                    <li><span class="math inline">\(a
                                     (\mathbf{u} + \mathbf{v}) = a
                                     \mathbf{u} + a
                                     \mathbf{v}\)</span></li>
+                                    </ul></li>
                                     <li>スカラーの加法と乗法が分配律を満たす
-                                    <span class="math inline">\((a+b)
+                                    <ul>
+                                    <li><span
+                                    class="math inline">\((a+b)
                                     \mathbf{u} = a \mathbf{u} + b
                                     \mathbf{u}\)</span></li>
+                                    </ul></li>
                                     <li>スカラーとベクトルの乗法とスカラー同士の乗法が結合律を満たす
-                                    <span
+                                    <ul>
+                                    <li><span
                                     class="math inline">\(a(b\mathbf{u})
                                     = (ab) \mathbf{u}\)</span></li>
+                                    </ul></li>
                                     <li>スカラー乗法に単位元が存在する
-                                    <span class="math inline">\(1
+                                    <ul>
+                                    <li><span class="math inline">\(1
                                     \mathbf{u} =
                                     \mathbf{u}\)</span></li>
+                                    </ul></li>
                                     </ol>
                                     <p>以上の8つをベクトル空間の
                                     <strong>公理</strong>(axiom)
                                     と呼ぶ。</p>
                                     <p>3次元ベクトルは明らかにこの定義を満たしているが、例えば任意の関数<span
                                     class="math inline">\(f(x)\)</span>もベクトルの定義を満たす。例えば<span
-                                    class="math inline">\(\mathbb{V}\)</span>として位置変数関数全体の集合をとし、適当な関数<span
+                                    class="math inline">\(\mathbb{V}\)</span>として一変数関数全体の集合をとし、適当な関数<span
                                     class="math inline">\(f(x)\)</span>と<span
                                     class="math inline">\(g(x)\)</span>をその要素とすると、<span
                                     class="math inline">\(f(x)\)</span>と<span
@@ -440,15 +462,15 @@
                                     1 &amp; 0 &amp; 0 \\
                                     0 &amp; 0 &amp; 0 \\
                                     0 &amp; 0 &amp; 0
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>3行3列の行列の1行目1列目の要素が1、それ以外が0となるような行列となっていることがわかる。全く同様に<span
                                     class="math inline">\(\mathbf{e}^i
                                     \otimes
                                     \mathbf{e}_j\)</span>を定義することができ、これが<span
-                                    class="math inline">\(j\)</span>行目の<span
-                                    class="math inline">\(i\)</span>列目の要素を表現する。このようにただ一つの要素が1、それ以外が0となるような行列を
+                                    class="math inline">\(i\)</span>行目の<span
+                                    class="math inline">\(j\)</span>列目の要素を表現する。このようにただ一つの要素が1、それ以外が0となるような行列を
                                     <strong>行列単位</strong>(matrix
                                     unit)
                                     と呼ぶ。ベクトルが標準基底ベクトルで自然に展開できたように、行列も行列単位によって自然に展開することができる。</p>
@@ -456,13 +478,13 @@
                                     \begin{aligned}
                                     A &amp;=
                                     \begin{pmatrix}
-                                    A^1_1 &amp; A^1_2 &amp; A^1_3 \\
-                                    A^2_1 &amp; A^2_2 &amp; A^2_3 \\
-                                    A^3_1 &amp; A^3_2 &amp; A^3_3
+                                    A^1_1 &amp; A^2_1 &amp; A^3_1 \\
+                                    A^1_2 &amp; A^2_2 &amp; A^3_2 \\
+                                    A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
                                     = \sum_{i=1}^{3} \sum_{j=1}^{3}
                                     A^j_i \mathbf{e}^i \otimes
-                                    \mathbf{e}_j
+                                    \mathbf{e}_j.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち行列単位が行列の標準基底の役割を果たしていることがわかる。</p>
@@ -484,12 +506,12 @@
                                     \begin{aligned}
                                     A &amp;=
                                     \begin{pmatrix}
-                                    A^1_1 &amp; A^1_2 &amp; A^1_3 \\
-                                    A^2_1 &amp; A^2_2 &amp; A^2_3 \\
-                                    A^3_1 &amp; A^3_2 &amp; A^3_3
+                                    A^1_1 &amp; A^2_1 &amp; A^3_1 \\
+                                    A^1_2 &amp; A^2_2 &amp; A^3_2 \\
+                                    A^1_3 &amp; A^2_3 &amp; A^3_3
                                     \end{pmatrix}
                                     = A^j_i \mathbf{e}^i \otimes
-                                    \mathbf{e}_j
+                                    \mathbf{e}_j.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ベクトルや行列を要素表現した時の添字の数を「足」と呼ぶ。ベクトルのテンソル積を考えることで足を増やすことができる。ベクトルは足が1本であり、行列は足が2本である。ベクトルのテンソル積により作られた世界は、元になったベクトルよりも広い世界になっている。例えば3次元縦ベクトルと横ベクトルのテンソル積は、3行3列の行列、すなわち9次元の空間になっている。このベクトルや行列をまとめて
@@ -500,24 +522,20 @@
                                     class="math inline">\(\mathbf{a}\)</span>と、縦ベクトル<span
                                     class="math inline">\(\mathbf{b}\)</span>の内積を考える。簡単のため、3次元ベクトルとしよう。それぞれ要素と基底を明示すると、</p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \mathbf{a} &amp;=
+                                    \mathbf{a} =
                                     \begin{pmatrix}
                                     a_1 &amp; a_2 &amp; a_3
-                                    \end{pmatrix}\\
-                                    &amp;= a_i \mathbf{e}^i
-                                    \end{aligned}
+                                    \end{pmatrix}
+                                    = a_i \mathbf{e}^i,
                                     \]</span></p>
                                     <p><span class="math display">\[
-                                    \begin{aligned}
-                                    \mathbf{b} &amp;=
+                                    \mathbf{b} =
                                     \begin{pmatrix}
                                     b^1 \\
                                     b^2\\
                                     b^3
-                                    \end{pmatrix}\\
-                                    &amp;= b^j \mathbf{e}_j
-                                    \end{aligned}
+                                    \end{pmatrix}
+                                    = b^j \mathbf{e}_j.
                                     \]</span></p>
                                     <p>これらの内積を取ると</p>
                                     <p><span class="math display">\[
@@ -538,7 +556,7 @@
                                     <p><span class="math display">\[
                                     (A, \mathbf{e}_k) = (A^j_i
                                     \mathbf{e}^i \otimes \mathbf{e}_j,
-                                    \mathbf{e}_k)
+                                    \mathbf{e}_k).
                                     \]</span></p>
                                     <p>ここで、横ベクトルと縦ベクトルの内積が</p>
                                     <p><span class="math display">\[
@@ -561,7 +579,7 @@
                                     <p>ここでは、2階のテンソルとして縦ベクトルと横ベクトルのテンソル積を考えたが、縦ベクトル2つのテンソル積を考えることもできる。その場合は添字が2つとも上付きとなる。</p>
                                     <p><span class="math display">\[
                                     A = A^{ij} \mathbf{e}_i \otimes
-                                    \mathbf{e}_j
+                                    \mathbf{e}_j.
                                     \]</span></p>
                                     <p>こうして作られたテンソルは、行列のようには表現できないが、「横ベクトルと内積をとると縦ベクトルとなり、さらに横ベクトルと内積をとるとスカラーになるもの」と理解できる。このように、テンソルがイメージできないうちは「上下の逆側の足を持つベクトルと内積をとると、その足が潰せるもの」と理解しておくと良い。</p>
                                     <h2 id="内積空間">内積空間</h2>
@@ -593,7 +611,7 @@
                                     \frac{df}{dt} = \frac{\partial
                                     f}{\partial x} \frac{dx}{dt} +
                                     \frac{\partial f}{\partial y}
-                                    \frac{dy}{dt}
+                                    \frac{dy}{dt}.
                                     \]</span></p>
                                     <p>さて、<span
                                     class="math inline">\(f(x,y)\)</span>は<span
@@ -607,15 +625,15 @@
                                     \frac{df}{ds} = \frac{\partial
                                     f}{\partial x} \frac{dx}{ds} +
                                     \frac{\partial f}{\partial y}
-                                    \frac{dy}{ds}
+                                    \frac{dy}{ds}.
                                     \]</span></p>
                                     <p>そこで、<span
                                     class="math inline">\(dt\)</span>や<span
                                     class="math inline">\(ds\)</span>を形式的に消して、以下のように書いてみる。</p>
                                     <p><span class="math display">\[
                                     df = \frac{\partial f}{\partial x}
-                                    dx
-                                    + \frac{\partial f}{\partial y} dy
+                                    dx + \frac{\partial f}{\partial y}
+                                    dy.
                                     \]</span></p>
                                     <p>このように書ける時、<span
                                     class="math inline">\(f\)</span>は全微分可能であると言い、この表式を<span
@@ -630,7 +648,7 @@
                                     \sim \frac{\partial f}{\partial x}
                                     \delta x +
                                     \frac{\partial f}{\partial y} \delta
-                                    y
+                                    y .
                                     \]</span></p>
                                     <p>つまり、<span
                                     class="math inline">\(\partial
@@ -645,18 +663,19 @@
                                     \frac{\partial f}{\partial x} &amp;=
                                     \frac{\partial f}{\partial x}
                                     \underbrace{\frac{\partial
-                                    x}{\partial x}}_{=1}
-                                    + \frac{\partial f}{\partial y}
+                                    x}{\partial x}}_{=1} +
+                                    \frac{\partial f}{\partial y}
                                     \underbrace{\frac{\partial
                                     y}{\partial x}}_{=0} \\
-                                    &amp;= \frac{\partial f}{\partial x}
+                                    &amp;= \frac{\partial f}{\partial
+                                    x}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この事実をもって、もう一度先の全微分の式を眺めてみる。</p>
                                     <p><span class="math display">\[
                                     df = \frac{\partial f}{\partial x}
                                     dx
-                                    + \frac{\partial f}{\partial y} dy
+                                    + \frac{\partial f}{\partial y} dy.
                                     \]</span></p>
                                     <p>すると、これがまるでベクトルを基底で展開しているかのように見える。また、<span
                                     class="math inline">\(dx\)</span>の内積をとる相方が<span
@@ -712,15 +731,15 @@
                                     class="math inline">\(f(x)\)</span>を微分しようとしたら<span
                                     class="math inline">\(x\)</span>に決まっているので、以下のようにプライム記号で表記する。</p>
                                     <p><span class="math display">\[
-                                    f&#39;(x) \equiv \frac{df}{dx}
+                                    f&#39;(x) \equiv \frac{df}{dx}.
                                     \]</span></p>
                                     <p>二階微分や三階微分は</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     f&#39;&#39;(x) &amp;\equiv
-                                    \frac{d^2f}{dx^2}\\
+                                    \frac{d^2f}{dx^2},\\
                                     f&#39;&#39;&#39;(x) &amp;\equiv
-                                    \frac{d^3f}{dx^3}\\
+                                    \frac{d^3f}{dx^3}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>とプライム記号を増やして表記する。このような表記を
@@ -733,26 +752,28 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     f^{(4)}(x) &amp;\equiv \frac{d^4
-                                    f}{dx^4}\\
+                                    f}{dx^4},\\
                                     f^{(n)}(x) &amp;\equiv \frac{d^n
                                     f}{dx^n}
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>などと表記するが、力学においてはほとんど高階微分は出てこないので気にしなくて良い。なお、扱う記号はプライム「’」であるが、<span
+                                    <p>などと表記するが、力学においてはほとんど高階微分は出てこないので気にしなくて良い。なお、扱う記号はプライム「<span
+                                    class="math inline">\(&#39;\)</span>」であるが、<span
                                     class="math inline">\(f&#39;(x)\)</span>を「エフダッシュエックス」と呼ぶことがある(コラム参照)。</p>
                                     <p>さて、力学は物体の運動、すなわち時間変化を追う学問である。したがって、時間微分が頻出する。そこで、時間微分をドットで表記することにする。二階微分は二重ドットで表記する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{x} &amp;\equiv \frac{dx}{dt} \\
+                                    \dot{x} &amp;\equiv \frac{dx}{dt},
+                                    \\
                                     \ddot{x} &amp;\equiv
-                                    \frac{d^2x}{dt^2}
+                                    \frac{d^2x}{dt^2}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを
                                     <strong>ニュートン記法</strong>(Newton’s
-                                    notation) と呼ぶ。<a href="#fn3"
+                                    notation) と呼ぶ<a href="#fn3"
                                     class="footnote-ref" id="fnref3"
-                                    role="doc-noteref"><sup>3</sup></a>
+                                    role="doc-noteref"><sup>3</sup></a>。
                                     高階数微分ではドットの上に数を書く表記もあるが、ほとんどの場合において二階微分までしか扱わないため、二重ドット表記まで覚えれば良い。</p>
                                     <p>これらの表記が複合する場合がある。例えば位置<span
                                     class="math inline">\(x\)</span>は時間の関数であり、力<span
@@ -778,7 +799,7 @@
                                     <p><span class="math display">\[
                                     \frac{\partial f}{\partial x} \equiv
                                     \lim_{h \rightarrow 0}
-                                    \frac{f(x + h , y) - f(x,y)}{h}
+                                    \frac{f(x + h , y) - f(x,y)}{h}.
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(y\)</span>に関する偏微分係数も同様に定義する。以後、<span
@@ -808,7 +829,7 @@
                                     +\frac{\partial f}{\partial y}
                                     \dot{y}
                                     +\frac{\partial f}{\partial z}
-                                    \dot{z}
+                                    \dot{z}.
                                     \]</span></p>
                                     <p>三次元空間では、このように<span
                                     class="math inline">\(x, y,
@@ -820,7 +841,7 @@
                                     \frac{\partial}{\partial x} \\
                                     \frac{\partial}{\partial y} \\
                                     \frac{\partial}{\partial z}
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>ナブラは成分に微分演算子が含まれているベクトルである。ベクトルであるから、スカラーに作用させるとベクトル量になる。</p>
                                     <p><span class="math display">\[
@@ -829,7 +850,7 @@
                                     \frac{\partial f}{\partial x} \\
                                     \frac{\partial f}{\partial y} \\
                                     \frac{\partial f}{\partial z}
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>ここで、速度ベクトル</p>
                                     <p><span class="math display">\[
@@ -844,19 +865,19 @@
                                     class="math inline">\(f\)</span>の時間微分は以下のように表記できる。</p>
                                     <p><span class="math display">\[
                                     \frac{df}{dt} = (\nabla f) \cdot
-                                    \dot{\mathbf{r}}
+                                    \dot{\mathbf{r}}.
                                     \]</span></p>
                                     <p><span
-                                    class="math inline">\(\nabla\)</span>を使う簡単な例として太陽系を考えよう。太陽質量を<span
+                                    class="math inline">\(\nabla\)</span>を使う簡単な例として太陽系を考えよう。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。太陽質量を<span
                                     class="math inline">\(M\)</span>、地球の質量を<span
                                     class="math inline">\(m\)</span>とし、地球の座標を<span
-                                    class="math inline">\((x,y)\)</span>とする。宇宙空間は3次元だが、公転面を考えることで2次元系を考える。さらに、太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。</p>
+                                    class="math inline">\((x,y)\)</span>とする。太陽が動かないと近似しよう。太陽質量は地球の33万倍なので、これは非常に良い近似である。この系の運動方程式は以下のようになる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     m \frac{d^2x}{dt^2} &amp;=  -G
-                                    \frac{Mmx}{r^3} \\
+                                    \frac{Mmx}{r^3}, \\
                                     m \frac{d^2y}{dt^2} &amp;=  -G
-                                    \frac{Mmy}{r^3}
+                                    \frac{Mmy}{r^3}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ただし、<span
@@ -866,7 +887,7 @@
                                     <p>まず、重力は保存力なので、ポテンシャルエネルギー<span
                                     class="math inline">\(V(r)\)</span>を考えよう。</p>
                                     <p><span class="math display">\[
-                                    V(r) = -\frac{GMm}{r}
+                                    V(r) = -\frac{GMm}{r}.
                                     \]</span></p>
                                     <p>これを<span
                                     class="math inline">\(x\)</span>で偏微分すると</p>
@@ -875,6 +896,7 @@
                                     V&#39;(r) \frac{\partial r}{\partial
                                     x}
                                     \]</span></p>
+                                    <p>また、</p>
                                     <p><span class="math display">\[
                                     r^2 = x^2 + y^2
                                     \]</span></p>
@@ -882,12 +904,12 @@
                                     class="math inline">\(x\)</span>で偏微分して、</p>
                                     <p><span class="math display">\[
                                     2r \frac{\partial r}{\partial x} = 2
-                                    x
+                                    x.
                                     \]</span></p>
                                     <p>従って、</p>
                                     <p><span class="math display">\[
                                     \frac{\partial r}{\partial x} =
-                                    \frac{x}{r}
+                                    \frac{x}{r}.
                                     \]</span></p>
                                     <p>以上から、</p>
                                     <p><span class="math display">\[
@@ -899,9 +921,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     m \frac{d^2x}{dt^2} &amp;=  -
-                                    \frac{\partial V}{\partial x} \\
+                                    \frac{\partial V}{\partial x}, \\
                                     m \frac{d^2y}{dt^2} &amp;=  -
-                                    \frac{\partial V}{\partial y}
+                                    \frac{\partial V}{\partial y}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>さらに、地球の座標をベクトルで表そう。</p>
@@ -909,16 +931,16 @@
                                     \mathbf{r} =
                                     \begin{pmatrix}
                                     x \\ y
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>すると、先程の運動方程式は以下のように一行にまとめられる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     m \frac{d^2 \mathbf{r}}{dt^2} &amp;=
-                                    - \nabla V
+                                    - \nabla V.
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>両辺ともにベクトルで有ることに注意。</p>
+                                    <p>両辺ともにベクトルであることに注意。</p>
                                     <p><span
                                     class="math inline">\(\nabla\)</span>を<span
                                     class="math inline">\(d/
@@ -940,24 +962,24 @@
                                     <p><span
                                     class="math inline">\(\nabla\)</span>はベクトルであるから、普通のベクトルのようにスカラー倍もできるし、ベクトルと内積をとればスカラー量に、外積を取ればベクトル量になる。</p>
                                     <p>先程見たように、スカラー場に<span
-                                    class="math inline">\(\nabla\)</span>を適用するとベクトル場を得る。これは勾配(gradient)と呼ばれ<span
+                                    class="math inline">\(\nabla\)</span>を適用するとベクトル場を得る。これは<strong>勾配</strong>(gradient)と呼ばれ<span
                                     class="math inline">\(\mathrm{grad}\)</span>で表記することがある。</p>
                                     <p><span class="math display">\[
-                                    \mathrm{grad} f \equiv \nabla f
+                                    \mathrm{grad} f \equiv \nabla f.
                                     \]</span></p>
                                     <p><span
-                                    class="math inline">\(\nabla\)</span>とベクトル場と内積を取るとスカラー場になる。これは発散(divergence)と呼ばれ、<span
+                                    class="math inline">\(\nabla\)</span>とベクトル場と内積を取るとスカラー場になる。これは<strong>発散</strong>(divergence)と呼ばれ、<span
                                     class="math inline">\(\mathrm{div}\)</span>で表記することがある。</p>
                                     <p><span class="math display">\[
                                     \mathrm{div} \mathbf{v} \equiv
-                                    \nabla \cdot \mathbf{v}
+                                    \nabla \cdot \mathbf{v}.
                                     \]</span></p>
                                     <p><span
-                                    class="math inline">\(\nabla\)</span>とベクトル場との外積をとるとベクトル場になる。これは回転(rotation)と呼ばれ、<span
+                                    class="math inline">\(\nabla\)</span>とベクトル場との外積をとるとベクトル場になる。これは<strong>回転</strong>(rotation)と呼ばれ、<span
                                     class="math inline">\(\mathrm{rot}\)</span>で表記することがある。</p>
                                     <p><span class="math display">\[
                                     \mathrm{rot} \mathbf{v} \equiv
-                                    \nabla \times \mathbf{v}
+                                    \nabla \times \mathbf{v}.
                                     \]</span></p>
                                     <p>これらがなぜ勾配、発散、回転と呼ばれているか、またその物理的な意味については位相空間の節で説明する。</p>
                                     <p>なお、<span
@@ -973,8 +995,8 @@
                                     class="math inline">\(f&#39;(x)\)</span>を「エフダッシュ」と呼ぶべきか「エフプライム」と呼ぶべきかはよく論争になる。田野村忠温氏による調査では、<span
                                     class="math inline">\(a&#39;\)</span>を「a
                                     dash」と読む最も初期の文献が1823年まで遡ることがわかっている。これは「A
-                                    Familiar Introduction
-                                    to　Crystallography」という、英国で出版された出版物である。一方、<span
+                                    Familiar Introduction to
+                                    Crystallography」という、英国で出版された出版物である。一方、<span
                                     class="math inline">\(a&#39;\)</span>を「a
                                     prime」と呼ぶ文献では、1832年に米国で出版された代数学の教科書がある(John
                                     Radford Young An Elementary Treatise
@@ -990,7 +1012,7 @@
                                     ─「ダッシュ、プライム」余論─
                                     田野村忠温</a></li>
                                     </ul>
-                                    <aside id="footnotes"
+                                    <section id="footnotes"
                                     class="footnotes footnotes-end-of-document"
                                     role="doc-endnotes">
                                     <hr />
@@ -1008,11 +1030,13 @@
                                     href="#fnref2" class="footnote-back"
                                     role="doc-backlink">↩︎</a></p></li>
                                     <li
-                                    id="fn3"><p>アイザック・ニュートン(1642–1727)に因む。ニュートン力学を構築した。微積分の研究、万有引力の法則や、光学の研究でも有名。<a
+                                    id="fn3"><p>アイザック・ニュートン(Isaac
+                                    Newton,
+                                    1642–1727)に因む。ニュートン力学を構築した。微積分の研究、万有引力の法則や、光学の研究でも有名。<a
                                     href="#fnref3" class="footnote-back"
                                     role="doc-backlink">↩︎</a></p></li>
                                     </ol>
-                                    </aside>
+                                    </section>
                     </article>
     </body>
 

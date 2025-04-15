@@ -58,18 +58,18 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は座標を陽に用いない運動方程式の表式を与える。また、ポアソン括弧はリー代数の構造を持っており、量子力学における交換関係と密接につながっている。本章では、群や環といった代数構造がなぜ、どのようにして力学に現れるかを学ぶ。</p>
+                                    <!--- abstract --->
+                                    <p>物理学の重要な要請の一つに、物理法則が座標の取り方に依らない、というものがある。それなら最初から座標を使わない形で運動方程式を書いてしまえばよい。ポアソン括弧は座標を陽に用いない運動方程式の表式を与える。また、ポアソン括弧はリー代数の構造を持っており、量子力学における交換関係と密接につながっている。本章では、群や環といった代数構造がなぜ、どのようにして力学に現れるかを学ぶ。
+                                    <!--- end ---></p>
                                     <h1
                                     id="ポアソン括弧-1">ポアソン括弧</h1>
                                     <p>1自由度系における正準方程式を考えよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q} &amp;= \frac{\partial
-                                    H}{\partial p} \\
+                                    H}{\partial p}, \\
                                     \dot{p} &amp;= -\frac{\partial
-                                    H}{\partial q}
+                                    H}{\partial q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この系は<span
@@ -81,7 +81,8 @@
                                     <p><span class="math display">\[
                                     \frac{dA}{dt} = \frac{\partial
                                     A}{\partial q}\dot{q} +
-                                    \frac{\partial A}{\partial p}\dot{p}
+                                    \frac{\partial A}{\partial
+                                    p}\dot{p}.
                                     \]</span></p>
                                     <p>正準方程式を使って<span
                                     class="math inline">\(\dot{p},
@@ -91,7 +92,7 @@
                                     A}{\partial q}\frac{\partial
                                     H}{\partial p} -\frac{\partial
                                     A}{\partial p}\frac{\partial
-                                    H}{\partial q}
+                                    H}{\partial q}.
                                     \]</span></p>
                                     <p>この式の右辺を見ると、<span
                                     class="math inline">\(q,p\)</span>や<span
@@ -101,7 +102,7 @@
                                     \frac{\partial X}{\partial
                                     q}\frac{\partial Y}{\partial p} -
                                     \frac{\partial X}{\partial
-                                    p}\frac{\partial Y}{\partial q}
+                                    p}\frac{\partial Y}{\partial q}.
                                     \]</span></p>
                                     <p>括弧の添字の<span
                                     class="math inline">\(q,p\)</span>は、この変数で微分する、という意味である。これを用いると、物理量<span
@@ -145,8 +146,8 @@
                                     class="math inline">\((q,p)\)</span>依存性は以下のように入ってくる。
                                     <span class="math display">\[
                                     \begin{aligned}
-                                    X &amp;= X(Q(q,p), P(q,p))\\
-                                    Y &amp;= Y(Q(q,p), P(q,p))
+                                    X &amp;= X(Q(q,p), P(q,p)),\\
+                                    Y &amp;= Y(Q(q,p), P(q,p)).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>それぞれ<span
@@ -157,12 +158,12 @@
                                     \frac{\partial X}{\partial
                                     Q}\frac{\partial Q}{\partial q} +
                                     \frac{\partial X}{\partial
-                                    P}\frac{\partial P}{\partial q} \\
+                                    P}\frac{\partial P}{\partial q}, \\
                                     \frac{\partial Y}{\partial p} &amp;=
                                     \frac{\partial Y}{\partial
                                     Q}\frac{\partial Q}{\partial p} +
                                     \frac{\partial Y}{\partial
-                                    P}\frac{\partial P}{\partial p} \\
+                                    P}\frac{\partial P}{\partial p}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>であるから、</p>
@@ -200,7 +201,7 @@
                                     X}{\partial P}\frac{\partial
                                     Y}{\partial P}\frac{\partial
                                     P}{\partial p}\frac{\partial
-                                    P}{\partial q}}_{\bigstar}
+                                    P}{\partial q}}_{\bigstar}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>後に<span
@@ -254,14 +255,14 @@
                                     Q}\frac{\partial Y}{\partial P} -
                                     \frac{\partial X}{\partial
                                     P}\frac{\partial Y}{\partial Q} \\
-                                    &amp;= \left\{X,Y\right\}_{Q,P}
+                                    &amp;= \left\{X,Y\right\}_{Q,P}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>なお、ここで正準変換の条件である「変換のヤコビアンが1であること」を用いた。したがって、ポアソン括弧式は正準変換で移り変わることができる、いかなる正準変数の組で表現しても同じ値になるため、添字に「どの変数で定義したか」を表記する必要はない。以後、括弧式の変数を省略しよう。</p>
                                     <p><span class="math display">\[
                                     \left\{X, Y\right\}_{q,p} =
                                     \left\{X, Y\right\}_{Q,P} =
-                                    \left\{X, Y\right\}
+                                    \left\{X, Y\right\}.
                                     \]</span></p>
                                     <p>多自由度系<span
                                     class="math inline">\((q^1, q^2,
@@ -280,7 +281,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q}^i &amp;= \left\{q^i,
-                                    H\right\}\\
+                                    H\right\},\\
                                     \dot{p}_i &amp;= \left\{p_i,
                                     H\right\}
                                     \end{aligned}
@@ -308,37 +309,39 @@
                                     <p>まず、括弧に入れる変数を入れ替えると負符号がつく。</p>
                                     <p><span class="math display">\[
                                     \left\{X, Y\right\} = - \left\{Y,
-                                    X\right\}
+                                    X\right\}.
                                     \]</span></p>
                                     <p>これを反対称性と呼ぶ。</p>
                                     <p>また、定数は括弧の外に出すことができる。</p>
                                     <p><span class="math display">\[
-                                    \left\{a X, Y\right\} = a \left\{X,
-                                    Y\right\}
-                                    \]</span></p>
-                                    <p><span class="math display">\[
-                                    \left\{X, bY\right\} = b \left\{X,
-                                    Y\right\}
+                                    \begin{aligned}
+                                    \left\{a X, Y\right\} &amp;= a
+                                    \left\{X, Y\right\},\\
+                                    \left\{X, bY\right\} &amp;= b
+                                    \left\{X, Y\right\}.
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>さらに分配法則がなりたつ。</p>
                                     <p><span class="math display">\[
-                                    \left\{X + Y , Z\right\} = \left\{X,
-                                    Z\right\} + \left\{X, Y\right\}
-                                    \]</span></p>
-                                    <p><span class="math display">\[
-                                    \left\{X, Y+Z\right\} = \left\{X,
-                                    Y\right\} + \left\{X, Z\right\}
+                                    \begin{aligned}
+                                    \left\{X + Y , Z\right\} &amp;=
+                                    \left\{X, Z\right\} + \left\{Y,
+                                    Z\right\},\\
+                                    \left\{X, Y+Z\right\} &amp;=
+                                    \left\{X, Y\right\} + \left\{X,
+                                    Z\right\}.
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>定数倍を外に出せることと、分配法則をまとめると以下の式が成り立つ。</p>
                                     <p><span class="math display">\[
-                                    \left\{a X + bY , Z\right\} = a
-                                    \left\{X, Y\right\} + b  \left\{Y,
-                                    Z\right\}
-                                    \]</span></p>
-                                    <p><span class="math display">\[
-                                    \left\{X, aY + bZ\right\} = a
+                                    \begin{aligned}
+                                    \left\{a X + bY , Z\right\} &amp;= a
+                                    \left\{X, Z\right\} + b  \left\{Y,
+                                    Z\right\},\\
+                                    \left\{X, aY + bZ\right\} &amp;= a
                                     \left\{X, Y\right\} + b  \left\{X,
-                                    Z\right\}
+                                    Z\right\}.
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>つまり、括弧の左側や右側に入れるものは線形性が成り立つ。括弧の両側で線形性が成り立っているため、これを<strong>双線形性</strong>(bilinearity)
                                     と呼ぶ。</p>
@@ -349,7 +352,7 @@
                                     \left\{Y , \left\{Z,
                                     X\right\}\right\} +
                                     \left\{Z , \left\{X,
-                                    Y\right\}\right\} = 0
+                                    Y\right\}\right\} = 0.
                                     \]</span></p>
                                     <p>この恒等式をヤコビ恒等式と呼ぶ。証明はやや煩雑であるので、本書には掲載しない。</p>
                                     <p>以上をまとめると、ポアソン括弧は以下の性質を持っている。</p>
@@ -359,7 +362,7 @@
                                     <li>ヤコビ恒等式</li>
                                     </ul>
                                     <p>このように、あるベクトル空間の要素2つを、別の要素に結びつける演算を積と呼ぶ。ポアソン括弧は積の一種である。この集合と積をあわせたものを代数と呼ぶ。積の満たす性質により様々な代数があり得るが、ポアソン括弧が満たす3つの性質(反対称性、双線型性、ヤコビ恒等式)を持つ積が作る代数を
-                                    <strong>リー代数 </strong>(Lie
+                                    <strong>リー代数</strong>(Lie
                                     algebra)
                                     、もしくはリー環と呼ぶ。リー環は、リー群と密接な関係を持つ。ここで、群や環について簡単に紹介しよう。</p>
                                     <h1 id="代数的構造">代数的構造</h1>
@@ -383,7 +386,7 @@
                                     class="math inline">\(\phi\)</span>だけ回す、すなわち<span
                                     class="math inline">\(U(-\phi)\)</span>を演算すると元の状態に戻る。</p>
                                     <p><span class="math display">\[
-                                    U(-\phi) v(\theta+\phi) = v(\theta)
+                                    U(-\phi) v(\theta+\phi) = v(\theta).
                                     \]</span></p>
                                     <p>つまり、操作の対象(ツマミ)があり、任意の操作に対して後からその操作を打ち消すことができるので、「ツマミを回す操作」の集合は群を作る。より正確には、以下の4つの条件を満たすものを群と呼ぶ。</p>
                                     <ol type="1">
@@ -413,17 +416,17 @@
                                     (f\circ g)\circ h = f \circ (g \circ
                                     h)
                                     \]</span></p>
-                                    <p>が成り立つことである。結合則が成り立たない例は、例えばベクトルの外積が挙げられる。</p>
+                                    <p>が成り立つことである。結合法則が成り立たない例は、例えばベクトルの外積が挙げられる。</p>
                                     <p>単位元とは、任意の操作と演算しても、その操作を変えないような元である。すなわち、以下を満たすものである。</p>
                                     <p><span class="math display">\[
-                                    e \circ  f = f \circ e = f
+                                    e \circ  f = f \circ e = f.
                                     \]</span></p>
                                     <p>角度ゼロの操作<span
                                     class="math inline">\(e \equiv
                                     U(0)\)</span>が単位元となることは明らかであろう。また、最初に示した通り、逆元の存在も明らかである。</p>
                                     <p>さて、群には様々な種類があるが、ここで挙げた例では回転角<span
                                     class="math inline">\(\theta\)</span>という実数により、群の要素を特徴づけることができた。回転角は実数であるから、このパラメタに対して微分を考えることができる。このように群の要素が連続パラメタで特徴づけられ、そのパラメタに対して微分することができるような群を
-                                    <strong>リー群 </strong>(Lie Group)
+                                    <strong>リー群</strong>(Lie Group)
                                     と呼ぶ。二次元空間における連続回転は最も簡単なリー群の例である。</p>
                                     <p>次に、この操作を行列で表現することを考える。ツマミの状態<span
                                     class="math inline">\(v(\phi)\)</span>を、二次元ベクトル</p>
@@ -442,7 +445,7 @@
                                     \begin{pmatrix}
                                     \cos \phi &amp; - \sin \phi \\
                                     \sin \phi &amp; \cos \phi
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>これを群の表現行列と呼ぶ。</p>
                                     <h2 id="生成子">生成子</h2>
@@ -450,7 +453,7 @@
                                     class="math inline">\(\theta\)</span>であったとして、それを微小角<span
                                     class="math inline">\(h\)</span>だけ回転する操作は以下のように表現できる。</p>
                                     <p><span class="math display">\[
-                                    U(h) v(\theta) = v(\theta+h)
+                                    U(h) v(\theta) = v(\theta+h).
                                     \]</span></p>
                                     <p>今、回転角<span
                                     class="math inline">\(h\)</span>が小さい(<span
@@ -469,7 +472,7 @@
                                     \cdots \\
                                     &amp;= \sum_{k=0}^{\infty}
                                     \frac{h^k}{k!} \frac{d^k}{d
-                                    \theta^k} v(\theta)
+                                    \theta^k} v(\theta).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>指数関数の定義</p>
@@ -505,12 +508,12 @@
                                     &amp;= \lim_{h \rightarrow 0}
                                     \left(\frac{U(h) - U(0)}{h}
                                     \right)v(\theta) \\
-                                    &amp;= U&#39;(0) v(\theta)
+                                    &amp;= U&#39;(0) v(\theta).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺を見比べると</p>
                                     <p><span class="math display">\[
-                                    \frac{d}{d\theta} = U&#39;(0)
+                                    \frac{d}{d\theta} = U&#39;(0).
                                     \]</span></p>
                                     <p>つまり、回転演算子について、微分してから回転角をゼロと置いたものは、微分演算子とみなすことができる。具体的な形は</p>
                                     <p><span class="math display">\[
@@ -539,7 +542,7 @@
                                     class="math inline">\(\theta+h\)</span>まで積分すると、</p>
                                     <p><span class="math display">\[
                                     v(\theta + h) = \exp(ih \mathcal{L})
-                                    v(\theta)
+                                    v(\theta).
                                     \]</span></p>
                                     <p>これと、</p>
                                     <p><span class="math display">\[
@@ -583,7 +586,7 @@
                                     \cos h &amp;  -\sin h &amp; 0\\
                                     \sin h &amp; \cos h &amp; 0\\
                                     0 &amp; 0 &amp; 1
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>z方向の回転の生成子は、回転角が小さい時のテイラー展開</p>
                                     <p><span class="math display">\[
@@ -601,29 +604,29 @@
                                     0 &amp;  -1 &amp; 0\\
                                     1 &amp; 0 &amp; 0\\
                                     0 &amp; 0 &amp; 0
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>同様に、<span
                                     class="math inline">\(x,y\)</span>方向の生成子も以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    iL_x =
+                                    \begin{aligned}
+                                    iL_x &amp;=
                                     \begin{pmatrix}
                                     0 &amp; 0 &amp; 0\\
                                     0 &amp; 0 &amp; -1\\
                                     0 &amp; 1 &amp; 0
-                                    \end{pmatrix}
-                                    \]</span></p>
-                                    <p><span class="math display">\[
-                                    iL_y =
+                                    \end{pmatrix},\\
+                                    iL_y &amp;=
                                     \begin{pmatrix}
                                     0 &amp; 0 &amp; 1\\
                                     0 &amp; 0 &amp; 0\\
                                     -1 &amp; 0 &amp; 0
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>これらの生成子の積について考えよう。以下の交換関係を定義する。</p>
                                     <p><span class="math display">\[
-                                    [X, Y ] \equiv XY - YX
+                                    [X, Y ] \equiv XY - YX.
                                     \]</span></p>
                                     <p>これを積とみなすと、リー代数の公理(反対称性、双線形性、ヤコビ恒等式)を満たすことがわかる。</p>
                                     <p>回転の生成子同士の積を実際に計算してみると、</p>
@@ -656,7 +659,7 @@
                                     1 &amp; 0 &amp; 0\\
                                     0 &amp; 0 &amp; 0
                                     \end{pmatrix} \\
-                                    &amp;= iL_z
+                                    &amp;= iL_z.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>つまり、</p>
@@ -665,7 +668,7 @@
                                     \]</span></p>
                                     <p>が成り立つ。この式は、</p>
                                     <ul>
-                                    <li>3次元回転操作は一般に非可換である</li>
+                                    <li>三次元回転操作は一般に非可換である</li>
                                     <li><span
                                     class="math inline">\(x\)</span>方向の回転と<span
                                     class="math inline">\(y\)</span>方向の回転を組み合わせると<span
@@ -678,9 +681,9 @@
                                     iL_x]\)</span>を計算し、3つの交換関係をまとめて書くと</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    [iL_x, i L_y] &amp;= i L_z\\
-                                    [iL_y, i L_z] &amp;= i L_x\\
-                                    [iL_z, i L_x] &amp;= i L_y\\
+                                    [iL_x, i L_y] &amp;= i L_z,\\
+                                    [iL_y, i L_z] &amp;= i L_x,\\
+                                    [iL_z, i L_x] &amp;= i L_y
                                     \end{aligned}
                                     \]</span></p>
                                     <p>が成り立つことがわかる。このように、なんらかの演算を定義し、その結果がどうなるかを表す構造を代数的構造と呼ぶ。ここでは交換関係により積を定義しているため、作られた構造は環となっている。</p>
@@ -726,7 +729,7 @@
                                     &amp;= \underbrace{\exp\left(h
                                     \frac{d}{dt}\right)}_{\equiv U(h)}
                                     A(t) \\
-                                    &amp;\equiv U(h) A(t)
+                                    &amp;\equiv U(h) A(t).
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span
@@ -742,13 +745,13 @@
                                     H}{\partial p}\frac{\partial
                                     }{\partial q} -\frac{\partial
                                     H}{\partial q}\frac{\partial
-                                    }{\partial p}\right) A
+                                    }{\partial p}\right) A.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>時間発展に関する生成子<span
                                     class="math inline">\(i\mathcal{L}\)</span>は、時間微分を引き起こす演算子であるから、</p>
                                     <p><span class="math display">\[
-                                    \frac{dA}{dt} \equiv i\mathcal{L}A
+                                    \frac{dA}{dt} \equiv i\mathcal{L}A.
                                     \]</span></p>
                                     <p>先程の式と見比べると、</p>
                                     <p><span class="math display">\[
@@ -763,11 +766,11 @@
                                     operator)
                                     と呼ぶ。回転の時と同様な議論により、リュービル演算子を指数関数の肩に載せたものが時間発展演算子である。</p>
                                     <p><span class="math display">\[
-                                    U(h) = \exp(ih\mathcal{L})
+                                    U(h) = \exp(ih\mathcal{L}).
                                     \]</span></p>
                                     <p>また、リュービル演算子が、ポアソン括弧の右側にハミルトニアンを、左側を空欄にしたものになっていることにも注意。</p>
                                     <p><span class="math display">\[
-                                    i\mathcal{L} = \{~~~~, H\}
+                                    i\mathcal{L} = \{~~~~, H\}.
                                     \]</span></p>
                                     <h1 id="交換関係">交換関係</h1>
                                     <p>ポアソンの反対称性から、もしポアソン括弧に入れる物理量を左右入れ替えた時に値が変わらない時、すなわち</p>
@@ -777,7 +780,7 @@
                                     <p>が成り立つ時、そのポアソン括弧の値はゼロに限られることがわかる。</p>
                                     <p><span class="math display">\[
                                     \{X, Y\} = \{Y, X\}
-                                    \Longleftrightarrow \{X, Y\} = 0
+                                    \Longleftrightarrow \{X, Y\} = 0.
                                     \]</span></p>
                                     <p>これを、ポアソン括弧の意味で交換可能、あるいは単に可換と呼ぶ。ポアソン括弧に非可換な量を入れると、何かしらの値を持つ。例えば物理量<span
                                     class="math inline">\(A,
@@ -801,14 +804,14 @@
                                     \underbrace{\frac{\partial
                                     q^i}{\partial p_k}}_{=0}
                                     \frac{\partial q^j}{\partial q^k} =
-                                    0 \\
+                                    0, \\
                                     \{p_i, p_j\} &amp;=
                                     \underbrace{\frac{\partial
                                     p_i}{\partial q^k}}_{=0}
                                     \frac{\partial p_j}{\partial p_k} -
                                     \frac{\partial p_i}{\partial p_k}
                                     \underbrace{\frac{\partial
-                                    p_j}{\partial q^k}}_{=0}  = 0\\
+                                    p_j}{\partial q^k}}_{=0}  = 0,\\
                                     \{q^i, p_j\} &amp;=
                                     \underbrace{\frac{\partial
                                     q^i}{\partial q^k}}_{\delta^i_k}
@@ -818,7 +821,7 @@
                                     p_k}}_{=0}\underbrace{\frac{\partial{p_j}}{\partial{q^k}}}_{=0}
                                     \\
                                     &amp;= \delta^i_k \delta^k_j \\
-                                    &amp;= \delta^i_j
+                                    &amp;= \delta^i_j.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、正準共役な変数を入れた時にのみ1、それ以外は全てゼロとなる。これを
@@ -828,7 +831,7 @@
                                     id="ポアソン括弧の物理的な意味">ポアソン括弧の物理的な意味</h1>
                                     <p>ポアソン括弧を用いると、物理量の時間微分が以下のように書けた。</p>
                                     <p><span class="math display">\[
-                                    \frac{dA}{dt} = \{A, H\}
+                                    \frac{dA}{dt} = \{A, H\}.
                                     \]</span></p>
                                     <p>つまり、ポアソン括弧の右側にハミルトニアンを入れると、左側に入れた量の時間微分になった。</p>
                                     <p>では、ポアソン括弧の右側に、ハミルトニアンの代わりに別の量、例えば<span
@@ -839,10 +842,11 @@
                                     A}{\partial q}
                                     \underbrace{\frac{\partial
                                     p}{\partial p}}_{=1} -
-                                    \frac{\partial A}{\partial q}
+                                    \frac{\partial A}{\partial p}
                                     \underbrace{\frac{\partial
                                     p}{\partial q}}_{=0}\\
-                                    &amp;= \frac{\partial A}{\partial q}
+                                    &amp;= \frac{\partial A}{\partial
+                                    q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、ハミルトニアンの右側に一般化運動量<span
@@ -872,8 +876,8 @@
                                     \{A, P\} = \frac{\partial
                                     A}{\partial q}\frac{\partial
                                     P}{\partial p} -  \frac{\partial
-                                    A}{\partial q}\frac{\partial
-                                    P}{\partial p}
+                                    A}{\partial p}\frac{\partial
+                                    P}{\partial q}.
                                     \]</span></p>
                                     <p>ここで、物理量<span
                                     class="math inline">\(A\)</span>が新しい正準変数<span
@@ -886,12 +890,12 @@
                                     \frac{\partial A}{\partial Q}
                                     \frac{\partial Q}{\partial q} +
                                     \frac{\partial A}{\partial P}
-                                    \frac{\partial P}{\partial q} \\
+                                    \frac{\partial P}{\partial q}, \\
                                     \frac{\partial A}{\partial p} =
                                     \frac{\partial A}{\partial Q}
                                     \frac{\partial Q}{\partial p} +
                                     \frac{\partial A}{\partial P}
-                                    \frac{\partial P}{\partial p}
+                                    \frac{\partial P}{\partial p}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを用いてポアソン括弧を書き直すと、</p>
@@ -900,8 +904,8 @@
                                     \{A, P\} &amp;= \frac{\partial
                                     A}{\partial q}\frac{\partial
                                     P}{\partial p} -  \frac{\partial
-                                    A}{\partial q}\frac{\partial
-                                    P}{\partial p}  \\
+                                    A}{\partial p}\frac{\partial
+                                    P}{\partial q}  \\
                                     &amp;= \left( \frac{\partial
                                     A}{\partial Q} \frac{\partial
                                     Q}{\partial q} + \frac{\partial
@@ -921,13 +925,14 @@
                                     Q}{\partial p}\frac{\partial
                                     P}{\partial q} \right)}_{=1} \\
                                     &amp; + \frac{\partial A}{\partial
-                                    Q}
+                                    P}
                                     \underbrace{\left(\frac{\partial
                                     P}{\partial q}\frac{\partial
                                     P}{\partial p}-\frac{\partial
                                     P}{\partial p}\frac{\partial
                                     P}{\partial q} \right)}_{=0}\\
-                                    &amp;= \frac{\partial A}{\partial Q}
+                                    &amp;= \frac{\partial A}{\partial
+                                    Q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>つまり、ポアソン括弧の右側に一般化座標<span
@@ -979,9 +984,10 @@
                                     class="math inline">\(L_3\)</span>と表現しておこう。すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \{q^3, L_3\} &amp;= \frac{\partial
-                                    q^3}{\partial q^i} \frac{\partial
-                                    L_3}{\partial p_i} -
+                                    \{q^3, L_3\} &amp;=
+                                    \underbrace{\frac{\partial
+                                    q^3}{\partial q^i}}_{=\delta^3_i}
+                                    \frac{\partial L_3}{\partial p_i} -
                                     \underbrace{\frac{\partial
                                     q^3}{\partial p_i}}_{=0}
                                     \frac{\partial L_3}{\partial q^i} \\
@@ -989,7 +995,7 @@
                                     L_3}{\partial p_i} \\
                                     &amp;= \frac{\partial L_3}{\partial
                                     p_3} \\
-                                    &amp;=0
+                                    &amp;=0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち<span
@@ -1013,8 +1019,8 @@
                                     B\)</span>が、時間不変量であったとしよう。すなわち、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \dot{A} &amp;= \{A, H\} = 0 \\
-                                    \dot{B} &amp;= \{B, H\} = 0 \\
+                                    \dot{A} &amp;= \{A, H\} = 0, \\
+                                    \dot{B} &amp;= \{B, H\} = 0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで、<span
@@ -1022,7 +1028,7 @@
                                     class="math inline">\(B\)</span>がポアソン括弧に対して非可換である時、ポアソン括弧の値を<span
                                     class="math inline">\(C\)</span>としよう。</p>
                                     <p><span class="math display">\[
-                                    \{A, B\} = C
+                                    \{A, B\} = C.
                                     \]</span></p>
                                     <p>ここで、ポアソン括弧はヤコビ恒等式を満たすから、</p>
                                     <p><span class="math display">\[
@@ -1031,7 +1037,7 @@
                                     \left\{A , \underbrace{\left\{B,
                                     H\right\}}_{=0}\right\} +
                                     \left\{B , \underbrace{\left\{H,
-                                    A\right\}}_{=0}\right\} = 0
+                                    A\right\}}_{=0}\right\} = 0.
                                     \]</span></p>
                                     <p>したがって</p>
                                     <p><span class="math display">\[
@@ -1047,8 +1053,8 @@
                                     <p>本章ではポアソン括弧を定義した。ポアソン括弧が作る代数構造はリー環になっており、その意味で自然に解析力学に代数的構造が入る。ポアソン括弧には、「入れた物理量と共役な変数による微分をとる」という意味があり、ハミルトニアンを入れると時間微分に、一般化運動量を入れると対応する一般化座標による微分となる。ポアソン括弧の性質から、入れ替えても値が変わらない、すなわちポアソン括弧の意味で可換である時、対応する量による微分がゼロ、すなわち何かしらの保存則を表していることがわかる。物理量の微分が交換関係から得られる、という性質は、量子力学の行列表現へと繋がっていく。</p>
                                     <h1
                                     id="コラムサイコロの雌雄と生命の選択">コラム：サイコロの雌雄と生命の選択</h1>
-                                    <p>サイコロに雌雄があるのを知っているだろうか。サイコロは、1から6までの数字を、裏にある数字の和が7となるように正六面体の各面に割り振ったものだ。いま、サイコロの上面に1を配置すると、下面は6となる。側面には2,3,4,5のどれかが配置されるが、2を手前にしよう。すると奥が5と決まる。残りは3,4のペアだが、3を右に配置するか、左に配置するかの二通りの自由度が残る。3を右に配置したものを雌サイコロ、左に配置したものを雄サイコロと呼ぶ。3次元軸の上下を「天地」、残り東西南北に割り振る時、「天一地六東五西二南三北四」とするのが雌サイコロ、「「天一地六東五西二<strong>南四北三</strong>」とするのが雄サイコロだ。他にも、「1,2,3の順番にx,y,z軸を決めた時に、右手系になるのが雌、左手系になるのが雄」「1,2,3の順番に見た時、反時計回りになるのが雌、時計回りになるのが雄」という覚え方がある。</p>
-                                    <p>雄サイコロも雌サイコロも、サイコロとしての性質は全く変わらない。しかし現在使われているサイコロはほとんど雌サイコロである。同様に、このように、全く性質は変わらない二種類のうち、どちらかしか使われなくなる、という現象はよく見られる。例えばアミノ酸にも右手型と左手型が存在する。互いに鏡映の関係にあり、その化学的な性質はほとんど同じであるため、アミノ酸を化学合成すると右手系と左手系が同量できてしまう。にもかかわらず、地球生物はなぜか左手系のみを使うように進化した。我々は左手系のアミノ酸しか代謝できず、左手系のアミノ酸から構成されたタンパク質しか合成ことができない。「ドラえもん」に「フエルミラー」という道具がある。鏡に増やしたいものを映して、手を鏡に入れて取り出すことでものを増やすというものだが、これで食べ物を増やしても、アミノ酸の右手、左手が入れ替わるために食べることはできない(取り出したものをもう一度鏡で増やせばOKだが)。同様にSFなどで、鏡に写した自分がこの世界に飛び出してくる、というストーリーをたまに見かけるが、その生物は右手系のアミノ酸しか代謝できないため、この世界では長く生きることができないというエピソードが記述されたことがある。</p>
+                                    <p>サイコロに雌雄があるのを知っているだろうか。サイコロは、1から6までの数字を、裏にある数字の和が7となるように正六面体の各面に割り振ったものだ。いま、サイコロの上面に1を配置すると、下面は6となる。側面には2,3,4,5のどれかが配置されるが、2を手前にしよう。すると奥が5と決まる。残りは3,4のペアだが、3を右に配置するか、左に配置するかの二通りの自由度が残る。3を右に配置したものを雌サイコロ、左に配置したものを雄サイコロと呼ぶ。3次元軸の上下を「天地」、残り東西南北に割り振る時、「天一地六東五西二<strong>南三北四</strong>」とするのが雌サイコロ、「天一地六東五西二<strong>南四北三</strong>」とするのが雄サイコロだ。他にも、「1,2,3の順番にx,y,z軸を決めた時に、右手系になるのが雌、左手系になるのが雄」「1,2,3の順番に見た時、反時計回りになるのが雌、時計回りになるのが雄」という覚え方がある。</p>
+                                    <p>雄サイコロも雌サイコロも、サイコロとしての性質は全く変わらない。しかし現在使われているサイコロはほとんど雌サイコロである。同様に、このように、全く性質は変わらない二種類のうち、どちらかしか使われなくなる、という現象はよく見られる。例えばアミノ酸にも右手型と左手型が存在する。互いに鏡映の関係にあり、その化学的な性質はほとんど同じであるため、アミノ酸を化学合成すると右手系と左手系が同量できてしまう。にもかかわらず、地球生物はなぜか左手系のみを使うように進化した。我々は左手系のアミノ酸しか代謝できず、左手系のアミノ酸から構成されたタンパク質しか合成することができない。「ドラえもん」に「フエルミラー」という道具がある。鏡に増やしたいものを映して、手を鏡に入れて取り出すことでものを増やすというものだが、これで食べ物を増やしても、アミノ酸の右手、左手が入れ替わるために食べることはできない(取り出したものをもう一度鏡で増やせばOKだが)。同様にSFなどで、鏡に写した自分がこの世界に飛び出してくる、というストーリーをたまに見かけるが、その生物は右手系のアミノ酸しか代謝できないため、この世界では長く生きることができないというエピソードが記述されたことがある。</p>
                                     <p>糖も生命活動に重要な物質であり、アミノ酸と同様に右手型と左手型が存在するが、興味深いことに我々は右手型ばかりを使っている。なぜ我々はアミノ酸は左手型だけを、糖は右手型だけを使っているのか、その謎はおそらくまだ解明されていない。</p>
                     </article>
     </body>

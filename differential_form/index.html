@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>本章では微分形式を導入し、最終的に運動方程式を微分形式で記述する。微分形式はベクトル解析を一般化したものであり、様々な概念をシンプルに記述することができる。この記法により、運動方程式の局所座標に依らない表現を記述できるようになる。</p>
+                                    <!--- abstract --->
+                                    <p>本章では微分形式を導入し、最終的に運動方程式を微分形式で記述する。微分形式はベクトル解析を一般化したものであり、様々な概念をシンプルに記述することができる。この記法により、運動方程式の局所座標に依らない表現を記述できるようになる。
+                                    <!--- end ---></p>
                                     <h1
                                     id="全微分とベクトル">全微分とベクトル</h1>
                                     <p>座標変換において、基底と同じ変換を受けるベクトルを共変ベクトル、逆向きの変換を受けるベクトルを反変ベクトルと呼ぶのであった。具体的には、ある基底<span
@@ -99,7 +99,7 @@
                                     <p><span class="math display">\[
                                     du = \frac{\partial u}{\partial x}
                                     dx + \frac{\partial u}{\partial y}
-                                    dy
+                                    dy.
                                     \]</span></p>
                                     <p>これは、あたかも<span
                                     class="math inline">\(du\)</span>というベクトルを、<span
@@ -107,8 +107,8 @@
                                     dy\)</span>という基底で展開しているように見える。そこで、以下の極座標表示を例に、基底の変換則を見てみよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x &amp;= r \cos \theta \\
-                                    y &amp;= r \sin \theta
+                                    x &amp;= r \cos \theta, \\
+                                    y &amp;= r \sin \theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>まずは具体的な<span
@@ -121,10 +121,10 @@
                                     \begin{aligned}
                                     dx &amp;= \frac{\partial x}{\partial
                                     r} dr + \frac{\partial x}{\partial
-                                    \theta} d\theta\\
+                                    \theta} d\theta,\\
                                     dy &amp;= \frac{\partial y}{\partial
                                     r}dr + \frac{\partial y}{\partial
-                                    \theta} d\theta
+                                    \theta} d\theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを行列で書けば</p>
@@ -150,7 +150,7 @@
                                     &amp;= A
                                     \begin{pmatrix}
                                     dr \\ d\theta
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは、ヤコビ行列<span
@@ -162,8 +162,8 @@
                                     class="math inline">\(dr =
                                     \mathbf{e}_1, d\theta =
                                     \mathbf{e}_2, dx =
-                                    \tilde{\mathbf{e}_1}, dy =
-                                    \tilde{\mathbf{e}_2}\)</span>として、</p>
+                                    \tilde{\mathbf{e}}_1, dy =
+                                    \tilde{\mathbf{e}}_2\)</span>として、</p>
                                     <p><span class="math display">\[
                                     \tilde{\mathbf{e}}_i = A_i^j
                                     \mathbf{e}_j
@@ -179,7 +179,7 @@
                                     y}dy \\
                                     &amp;=\frac{\partial u}{\partial
                                     r}dr +\frac{\partial u}{\partial
-                                    \theta}d\theta
+                                    \theta}d\theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは、</p>
@@ -195,7 +195,7 @@
                                     \frac{\partial u}{\partial
                                     x}\frac{\partial x}{\partial r} +
                                     \frac{\partial u}{\partial
-                                    y}\frac{\partial y}{\partial r} \\
+                                    y}\frac{\partial y}{\partial r}, \\
                                     \frac{\partial u}{\partial \theta}
                                     &amp;= \frac{\partial u}{\partial
                                     x}\frac{\partial x}{\partial \theta}
@@ -219,7 +219,7 @@
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     \partial_x u \\ \partial_y u
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \]</span></p>
                                     <p>これは、<span
                                     class="math inline">\(dr,
@@ -292,7 +292,7 @@
                                     <p><span class="math display">\[
                                     \frac{1}{\cos^2 \theta}
                                     \frac{\partial \theta}{\partial x} =
-                                    -\frac{y}{x^2}
+                                    -\frac{y}{x^2}.
                                     \]</span></p>
                                     <p>ここで、<span
                                     class="math inline">\(\cos \theta =
@@ -303,7 +303,7 @@
                                     &amp;=  - \frac{x^2}{r^2}
                                     \frac{y}{x^2}\\
                                     &amp;= \frac{-y}{x^2+y^2} \\
-                                    &amp;= -\frac{\sin \theta}{r}
+                                    &amp;= -\frac{\sin \theta}{r}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span
@@ -341,7 +341,7 @@
                                     A
                                     \begin{pmatrix}
                                     dr \\ d\theta
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺に<span
@@ -363,7 +363,7 @@
                                     \end{pmatrix}
                                     \begin{pmatrix}
                                     dx \\ dy
-                                    \end{pmatrix}
+                                    \end{pmatrix}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これと、</p>
@@ -392,7 +392,7 @@
                                     \theta}{\partial y} = \frac{\cos
                                     \theta}{r}
                                     \]</span></p>
-                                    <p>と求めることができる。多変数、例えば3次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。</p>
+                                    <p>と求めることができる。多変数、例えば三次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。</p>
                                     <h1
                                     id="外積と外微分">外積と外微分</h1>
                                     <p>全微分による<span
@@ -408,7 +408,7 @@
                                     df \equiv \frac{\partial f}{\partial
                                     x}dx + \frac{\partial f}{\partial
                                     y}dy + \frac{\partial f}{\partial
-                                    z}dz
+                                    z}dz.
                                     \]</span></p>
                                     <p>先ほど見たように、これは<span
                                     class="math inline">\(dx, dy,
@@ -426,7 +426,7 @@
                                     <p>すなわち、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    dx \wedge dx &amp;= 0 \\
+                                    dx \wedge dx &amp;= 0, \\
                                     dx \wedge dy &amp;= - dy \wedge dx
                                     \end{aligned}
                                     \]</span></p>
@@ -435,8 +435,9 @@
                                     以下のように2つの1形式が与えられたとする。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    du &amp;= u_x dx + u_y dy + u_z dz\\
-                                    dv &amp;= v_x dx + v_y dy + v_z dz
+                                    du &amp;= u_x dx + u_y dy + u_z
+                                    dz,\\
+                                    dv &amp;= v_x dx + v_y dy + v_z dz.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この2つの<span
@@ -449,7 +450,7 @@
                                     &amp;=
                                     (u_x v_y  - u_y v_x ) dx \wedge dy
                                     +(u_y v_z  - u_z v_y ) dy \wedge dz
-                                    +(u_z v_x  - u_x v_z ) dz \wedge dx
+                                    +(u_z v_x  - u_x v_z ) dz \wedge dx.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>さて、外積を用いて外微分を定義しよう。いま、<span
@@ -476,7 +477,7 @@
                                     \]</span></p>
                                     <p>で与えられる。<span
                                     class="math inline">\(f_y,
-                                    f_z\)</span>も同様である。したがって、</p>
+                                    f_z\)</span>も同様である。従って、</p>
                                     <p><span class="math display">\[
                                     d\omega_1 =
                                     \left(\frac{\partial f_x}{\partial
@@ -486,7 +487,7 @@
                                     \frac{\partial f_z}{\partial y}) dy
                                     \wedge dz + (\frac{\partial
                                     f_z}{\partial x} - \frac{\partial
-                                    f_x}{\partial x}) dz \wedge dx
+                                    f_x}{\partial z}) dz \wedge dx
                                     \]</span></p>
                                     <p>となる。<span
                                     class="math inline">\(dx\wedge
@@ -506,11 +507,11 @@
                                     \left&lt;dx,
                                     \frac{\partial}{\partial x}
                                     \right&gt; &amp;= \frac{\partial
-                                    x}{\partial x} = 1\\
+                                    x}{\partial x} = 1,\\
                                     \left&lt;dy,
                                     \frac{\partial}{\partial x}
                                     \right&gt; &amp;= \frac{\partial
-                                    y}{\partial x} = 0\\
+                                    y}{\partial x} = 0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、対応する双対基底と内積をとったら1、そうでなければ0となるため、<span
@@ -528,7 +529,7 @@
                                     \left&lt;dx,
                                     \frac{\partial}{\partial x}
                                     \right&gt; dy\\
-                                    &amp;= dy
+                                    &amp;= dy.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>対応する双対ベクトルが一番左になかった場合は、入れ替えることで一番左に持ってくる。その際、入れ替えた回数だけ負符号がつく。</p>
@@ -542,15 +543,15 @@
                                     &amp;= -\left&lt;dx,
                                     \frac{\partial}{\partial x}
                                     \right&gt; dy
-                                    &amp;= -dy
+                                    &amp;= -dy.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この全微分と外積のルールは、多変数間の変換のヤコビアンを一般化したものになっている。簡単な例を挙げよう。</p>
                                     <p>二次元の極座標表示を考える。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x &amp;= r \cos \theta \\
-                                    y &amp;= r \sin \theta
+                                    x &amp;= r \cos \theta, \\
+                                    y &amp;= r \sin \theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span class="math inline">\(x,
@@ -560,9 +561,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     dx &amp;= \cos \theta dr - r\sin
-                                    \theta d\theta\\
+                                    \theta d\theta,\\
                                     dy &amp;= \sin \theta dr + r\cos
-                                    \theta d\theta
+                                    \theta d\theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>定義に従って<span
@@ -576,7 +577,7 @@
                                     &amp;= r \cos^2 \theta dr \wedge
                                     d\theta - r \sin^2 \theta d\theta
                                     \wedge dr \\
-                                    &amp;= r dr \wedge d\theta
+                                    &amp;= r dr \wedge d\theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>途中で<span
@@ -621,7 +622,7 @@
                                     \partial_y f \\
                                     \partial_z f
                                     \end{pmatrix}
-                                    = \mathrm{grad} f
+                                    = \mathrm{grad} f.
                                     \]</span></p>
                                     <p>すなわち、これは勾配を表している。また、1形式<span
                                     class="math inline">\(\omega_1\)</span>が</p>
@@ -631,7 +632,7 @@
                                     <p>で与えられている時、</p>
                                     <p><span class="math display">\[
                                     d\omega_1 =  dB_x \wedge dx + B_y
-                                    \wedge dx + B_z \wedge dz
+                                    \wedge dy + B_z \wedge dz
                                     \]</span></p>
                                     <p>となる。ここで</p>
                                     <p><span class="math display">\[
@@ -654,7 +655,7 @@
                                     &amp;= - \frac{\partial
                                     B_x}{\partial y} dx \wedge dy +
                                     \frac{\partial B_x}{\partial z} dz
-                                    \wedge dx
+                                    \wedge dx.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ただし、<span
@@ -679,9 +680,9 @@
                                     class="math inline">\(\ast\)</span>を定義する。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \ast dx &amp;= dy \wedge dz \\
-                                    \ast dy &amp;= dz \wedge dx \\
-                                    \ast dz &amp;= dx \wedge dy
+                                    \ast dx &amp;= dy \wedge dz, \\
+                                    \ast dy &amp;= dz \wedge dx, \\
+                                    \ast dz &amp;= dx \wedge dy.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ホッジ作用素は、微分形式を裏返す演算子になっており、<span
@@ -690,15 +691,15 @@
                                     class="math inline">\(d-p\)</span>形式に対応させる。これは双対変換であり、もう一度作用させると元に戻る。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \ast (dy \wedge dz) &amp;= dx \\
-                                    \ast (dz \wedge dx) &amp;= dy \\
-                                    \ast (dx \wedge dy) &amp;= dz
+                                    \ast (dy \wedge dz) &amp;= dx, \\
+                                    \ast (dz \wedge dx) &amp;= dy, \\
+                                    \ast (dx \wedge dy) &amp;= dz.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>また、ベクトルが張る次元と等しい微分形式(<span
                                     class="math inline">\(p=d\)</span>の場合)に作用させるとスカラーとなる。</p>
                                     <p><span class="math display">\[
-                                    \ast (dx \wedge dy \wedge dz) = 1
+                                    \ast (dx \wedge dy \wedge dz) = 1.
                                     \]</span></p>
                                     <p>ホッジ作用素を用いると、</p>
                                     <p><span class="math display">\[
@@ -711,7 +712,8 @@
                                     B_z}{\partial x} \right) dy +
                                     \left(\frac{\partial B_y}{\partial
                                     x} - \frac{\partial B_x}{\partial y}
-                                    \right) dz \end{aligned}
+                                    \right) dz.
+                                    \end{aligned}
                                     \]</span></p>
                                     <p>これはベクトル場</p>
                                     <p><span class="math display">\[
@@ -726,7 +728,7 @@
                                     <p>また、以下の2形式を定義する。</p>
                                     <p><span class="math display">\[
                                     \omega_2 = E_x dy \wedge dz + E_y dz
-                                    \wedge dx + E_z dx \wedge dy
+                                    \wedge dx + E_z dx \wedge dy.
                                     \]</span></p>
                                     <p>この外微分を計算すると、</p>
                                     <p><span class="math display">\[
@@ -734,7 +736,7 @@
                                     E_x}{\partial x} + \frac{\partial
                                     E_y}{\partial y} +  \frac{\partial
                                     E_z}{\partial z} \right) dx \wedge
-                                    dy \wedge dz
+                                    dy \wedge dz.
                                     \]</span></p>
                                     <p>さらにホッジ作用素を作用させると、</p>
                                     <p><span class="math display">\[
@@ -742,7 +744,7 @@
                                     \left(\frac{\partial E_x}{\partial
                                     x} + \frac{\partial E_y}{\partial y}
                                     +  \frac{\partial E_z}{\partial z}
-                                    \right)
+                                    \right).
                                     \]</span></p>
                                     <p>これは、ベクトル場</p>
                                     <p><span class="math display">\[
@@ -786,12 +788,12 @@
                                     q^i \partial q^j} - \frac{\partial^2
                                     f}{\partial q^j \partial q^i}
                                     \right) dq^j \wedge dq^i \\
-                                    &amp;=0
+                                    &amp;=0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これは、よく知られた以下の公式を一般化したものになっている。</p>
                                     <p><span class="math display">\[
-                                    \mathrm{rot} (\mathrm{grad} f) = 0
+                                    \mathrm{rot} (\mathrm{grad} f) = 0.
                                     \]</span></p>
                                     <p>また、<span
                                     class="math inline">\(\omega\)</span>として<span
@@ -816,10 +818,10 @@
                                     \begin{aligned}
                                     dQ &amp;= \frac{\partial Q}{\partial
                                     q}dq + \frac{\partial Q}{\partial
-                                    p}dp\\
+                                    p}dp,\\
                                     dP &amp;= \frac{\partial P}{\partial
                                     q}dq + \frac{\partial P}{\partial
-                                    p}dp
+                                    p}dp.
                                     \end{aligned}
                                     \]</span></p>
                                     <p><span class="math inline">\(dP
@@ -838,7 +840,7 @@
                                     P}{\partial p}\frac{\partial
                                     Q}{\partial q} - \frac{\partial
                                     P}{\partial q}\frac{\partial
-                                    Q}{\partial p} \right) dp\wedge dq
+                                    Q}{\partial p} \right) dp\wedge dq.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、<span
@@ -852,12 +854,13 @@
                                     2-form) と呼び、一般に<span
                                     class="math inline">\(\omega\)</span>で表すことが多い。</p>
                                     <p><span class="math display">\[
-                                    \omega = dp \wedge dq = dP \wedge dQ
+                                    \omega = dp \wedge dq = dP \wedge
+                                    dQ.
                                     \]</span></p>
                                     <p>すなわち、正準2形式は正準変換で不変である。</p>
                                     <p>正準2形式を使うと、正準方程式を内積の形で書くことができる。正準方程式のリュービル演算子を考えよう。リュービル演算子とは、任意の物理量の時間微分を与える演算子であった。</p>
                                     <p><span class="math display">\[
-                                    \frac{dA}{dt} = i\mathcal{L}A
+                                    \frac{dA}{dt} = i\mathcal{L}A.
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(A\)</span>が<span
@@ -871,7 +874,7 @@
                                     \dot{p}\\
                                     &amp;=
                                     \underbrace{\left(\dot{q}\frac{\partial
-                                    }{\partial q} + \dot{q}
+                                    }{\partial q} + \dot{p}
                                     \frac{\partial}{\partial
                                     p}\right)}_{i\mathcal{L}}A
                                     \end{aligned}
@@ -933,7 +936,7 @@
                                     <p>ニュートンの運動方程式から始まり、局所座標に依らない正準方程式までたどり着いた。ここまでの長い旅路を振り返って置こう。</p>
                                     <p>我々は、力と加速度が比例する、というニュートンの運動方程式からスタートした。</p>
                                     <p><span class="math display">\[
-                                    F = ma
+                                    F = ma.
                                     \]</span></p>
                                     <p>ここで、<span
                                     class="math inline">\(F\)</span>がポテンシャル力であり、<span
@@ -959,7 +962,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     p &amp;= \frac{\partial L}{\partial
-                                    \dot{q}} \\
+                                    \dot{q}}, \\
                                     H &amp;= p \dot{q} - L
                                     \end{aligned}
                                     \]</span></p>
@@ -969,8 +972,8 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q} &amp;= \frac{\partial
-                                    H}{\partial p}\\
-                                    \dot{q} &amp;= -\frac{\partial
+                                    H}{\partial p},\\
+                                    \dot{p} &amp;= -\frac{\partial
                                     H}{\partial q}
                                     \end{aligned}
                                     \]</span></p>
@@ -995,7 +998,7 @@
                                     -\frac{\partial H}{\partial
                                     q}\frac{\partial}{\partial p}
                                     \]</span></p>
-                                    <p>となるため、リュービル演算子の正準2形式<span
+                                    <p>となる。リュービル演算子と正準2形式<span
                                     class="math inline">\(\omega = dp
                                     \wedge
                                     dq\)</span>との内積は、ハミルトニアンの全微分を用いて</p>
@@ -1003,7 +1006,7 @@
                                     \left&lt;\omega, i\mathcal{L}
                                     \right&gt; = -dH
                                     \]</span></p>
-                                    <p>という、局所座標に依らない運動方程式が得られた。</p>
+                                    <p>と表現され、局所座標に依らない運動方程式が得られた。</p>
                                     <figure>
                                     <img src="fig/differential_form.png"
                                     alt="運動方程式の座標に依らない表現" />
@@ -1013,19 +1016,19 @@
                                     <p>2つの式を並べて見ても、とても同じ現象を表現しているようには見えない。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \ddot{x} &amp;= -U&#39;(x) \\
+                                    m \ddot{x} &amp;= -U&#39;(x), \\
                                     \left&lt;\omega, i\mathcal{L}
-                                    \right&gt; &amp;= -dH
+                                    \right&gt; &amp;= -dH.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>しかし、ずっと等式変形をしてきたのだから、これは紛れもなく等価な式である。これは等式変形であるから、式の予言能力は変わらない。しかし、これまで見てきたように、「同じものが異なるように見える」「異なるものが同じように見える」という新たな視点を与えることが学問の真髄である。</p>
                                     <p>解析力学を学んだことが、読者の世界を広げたなら幸いである。</p>
                                     <h1
                                     id="コラム二次方程式は必要か">コラム：二次方程式は必要か</h1>
-                                    <p>中学、高校時代、数学に苦しんだ人は多いであろう。「大事だから」と教師に諭され、必死に勉強したにもかかわらず、実際に社会に出てみると、あれだけ苦労して学んだ数学の諸概念が全く出てこない。そこでSNSでうっかり「数学は役に立たない」などと言おうものなら、数学ガチ勢に袋叩きにされ、ますます数学が嫌いになってしまう。やり玉に上がりやすいのは三角関数であるが、以前、二次方程式なんて必要か？という問題的がなされ、やはり荒れているのを見かけた。無論、二次方程式は役に立つが、それ以前に面白いものなので、少しその話をしたい。</p>
+                                    <p>中学、高校時代、数学に苦しんだ人は多いであろう。「大事だから」と教師に諭され、必死に勉強したにもかかわらず、実際に社会に出てみると、あれだけ苦労して学んだ数学の諸概念が全く出てこない。そこでSNSでうっかり「数学は役に立たない」などと言おうものなら、数学ガチ勢に袋叩きにされ、ますます数学が嫌いになってしまう。やり玉に上がりやすいのは三角関数であるが、以前、二次方程式なんて必要か？という問題提起がなされ、やはり荒れているのを見かけた。無論、二次方程式は役に立つが、それ以前に面白いものなので、少しその話をしたい。</p>
                                     <p>一次方程式から始めよう。</p>
                                     <p><span class="math display">\[
-                                    y = a x + b
+                                    y = a x + b.
                                     \]</span></p>
                                     <p>ここで係数<span
                                     class="math inline">\(a,
@@ -1042,7 +1045,7 @@
                                     class="math inline">\(x=-1\)</span>と負の数になる。負の数は当たり前のようでいて、不思議な数だ。先程の式が負の数の定義になっている。すなわち、「1を足したら0になる量」が<span
                                     class="math inline">\(-1\)</span>だ。つまり、一次方程式を解くためには、係数に0か自然数しか使わなくても、負の数を導入する必要がある。自然数とゼロに加えて、負の数をあわせた数を整数と呼ぶ。</p>
                                     <p>さらに、<span
-                                    class="math inline">\(a = 1, b=1, y
+                                    class="math inline">\(a = 2, b=0, y
                                     = 1\)</span>を代入すると、</p>
                                     <p><span class="math display">\[
                                     2x = 1
@@ -1054,7 +1057,7 @@
                                     class="math inline">\(n/m\)</span>と表現できる数を有理数と呼ぶ。こうして、一次方程式は、係数としてゼロと自然数だけからスタートしても、解を得るために整数、有理数と世界を広げなければならないことがわかった。逆に、一次方程式は、係数が有理数であれば、有理数を使えば必ず解を表現できる。</p>
                                     <p>さて、二次方程式を考えよう。</p>
                                     <p><span class="math display">\[
-                                    y = ax^2+bx+c
+                                    y = ax^2+bx+c.
                                     \]</span></p>
                                     <p>自然数係数の一次方程式が負の数と有理数を要求したように、二次方程式も新たな数を二種類要求する。</p>
                                     <p>例えば<span

@@ -59,7 +59,7 @@
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
                                     <!--- abstract --->
-                                    <p>解析力学は、ニュートンの運動方程式と本質的に等価なことを延々と式変形していく学問である。その結果、仮想仕事の原理や変分原理、ラグランジアン、ハミルトニアンといった概念が生まれ、ニュートン力学が再定式化されるのみならず、量子力学へとつながる。多くの学問がそうであるように、解析力学はニュートン力学を抽象化する。その過程で「いま、ポアソン括弧を学んでいるけど、なんのためだっけ？」と迷子になりがちである。そこで、最初に本書で学ぶ全体像をざっと概観ておこう。
+                                    <p>解析力学は、ニュートンの運動方程式と本質的に等価なことを延々と式変形していく学問である。その結果、仮想仕事の原理や変分原理、ラグランジアン、ハミルトニアンといった概念が生まれ、ニュートン力学が再定式化されるのみならず、量子力学へとつながる。多くの学問がそうであるように、解析力学はニュートン力学を抽象化する。その過程で「いま、ポアソン括弧を学んでいるけど、なんのためだっけ？」と迷子になりがちである。そこで、最初に本書で学ぶ全体像をざっと概観しておこう。
                                     <!--- end ---></p>
                                     <h1
                                     id="式の見方について">式の見方について</h1>
@@ -72,7 +72,7 @@
                                     </figure>
                                     <p>ニュートンの運動方程式からはじめよう。</p>
                                     <p><span class="math display">\[
-                                    F = ma
+                                    F = ma.
                                     \]</span></p>
                                     <p>この式の意味を考えよう。
                                     単純には「質量<span
@@ -91,7 +91,7 @@
                                     <p>となっている。</p>
                                     <p>同様に、世の中には「外から何か操作した時に、対象が応答し、その係数が応答のしやすさを表す」という式が多いことがわかる。例えばバネに対する力と長さの関係式を考えよう。</p>
                                     <p><span class="math display">\[
-                                    F = k x
+                                    F = kx.
                                     \]</span></p>
                                     <p>これは「バネ定数<span
                                     class="math inline">\(k\)</span>のバネに、力<span
@@ -113,7 +113,7 @@
                                     class="math inline">\(V\)</span>をかけると、電流<span
                                     class="math inline">\(I\)</span>が流れるという式は以下のようにかける。</p>
                                     <p><span class="math display">\[
-                                    V = R I
+                                    V = RI.
                                     \]</span></p>
                                     <p>これも、以下のように分類できる。</p>
                                     <ul>
@@ -137,7 +137,7 @@
                                     <p>さて、先程は力を操作、加速度を応答と考えたが、力を応答と考える立場も可能である。通常、我々は質量の大きさを重量で判断する。一様な重力加速度<span
                                     class="math inline">\(g\)</span>が働く世界において、以下の運動方程式を考える。</p>
                                     <p><span class="math display">\[
-                                    F = mg
+                                    F = mg.
                                     \]</span></p>
                                     <p>これは質量<span
                                     class="math inline">\(m\)</span>の物体には<span
@@ -163,7 +163,7 @@
                                     class="math inline">\(F=ma\)</span>という式について、さらに別の見方をしてみよう。<span
                                     class="math inline">\(ma\)</span>を右辺に移項して、こんな式を作ってみる。</p>
                                     <p><span class="math display">\[
-                                    F - ma = 0
+                                    F - ma = 0.
                                     \]</span></p>
                                     <p>これは、もともと物体にかかっていた力<span
                                     class="math inline">\(F\)</span>と、仮想的な力<span
@@ -171,17 +171,18 @@
                                     class="math inline">\(F\)</span>も<span
                                     class="math inline">\(ma\)</span>、同じ「力」の次元を持っている。物理においては、同じ次元を持つ量は自由に足したり引いたりできる。そうして式を変形すると、式が持つ物理的な意味も異なって見える。</p>
                                     <p>例えば、長さ<span
-                                    class="math inline">\(r\)</span>の紐で結ばれた石が速度<span
+                                    class="math inline">\(r\)</span>の紐で結ばれた質量<span
+                                    class="math inline">\(m\)</span>の石が速度<span
                                     class="math inline">\(v\)</span>で回転しているとしよう。運動方程式は以下のようになる。</p>
                                     <p><span class="math display">\[
-                                    F = \frac{mv^2}{r}
+                                    F = \frac{mv^2}{r}.
                                     \]</span></p>
                                     <p>この式は、紐の張力によって、常に物体の進行方向と90度傾いた方向に力<span
                                     class="math inline">\(F\)</span>が作用しており、その結果として加速度<span
                                     class="math inline">\(mv^2/r\)</span>が生じている、ということを意味している。</p>
                                     <p>さて、この式の右辺を左辺に移項してみよう。</p>
                                     <p><span class="math display">\[
-                                    F - \frac{mv^2}{r} = 0
+                                    F - \frac{mv^2}{r} = 0.
                                     \]</span></p>
                                     <p>紐の張力<span
                                     class="math inline">\(F\)</span>に対して、仮想的な力<span
@@ -200,12 +201,12 @@
                                     class="math inline">\(x\)</span>とし、力が保存力であるとして、<span
                                     class="math inline">\(F=-V&#39;(r)\)</span>と書ける場合を考えると、運動方程式は以下のようにかける。</p>
                                     <p><span class="math display">\[
-                                    m \frac{d^2 x}{dt^2} = - V&#39;(x)
+                                    m \frac{d^2 x}{dt^2} = - V&#39;(x).
                                     \]</span></p>
                                     <p>この方程式の初期値問題を解くのがニュートン力学の目的であった。</p>
                                     <p>もし物体が静止している場合、左辺はゼロであるから、</p>
                                     <p><span class="math display">\[
-                                    F = -V&#39;(x) = 0
+                                    F = -V&#39;(x) = 0.
                                     \]</span></p>
                                     <p>これは、物体に働く力の総和<span
                                     class="math inline">\(F\)</span>が釣り合っている状態(<span
@@ -214,9 +215,9 @@
                                     class="math inline">\(v\)</span>を導入して、一階の連立微分方程式に変形しよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \frac{d v}{dt} &amp;= - V&#39;(x)
+                                    m \frac{d v}{dt} &amp;= - V&#39;(x),
                                     \\
-                                    \frac{dx}{dt} &amp;= v
+                                    \frac{dx}{dt} &amp;= v.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>最初の式の両辺に<span
@@ -226,7 +227,7 @@
                                     class="math inline">\(dx/dt\)</span>をかける。</p>
                                     <p><span class="math display">\[
                                     m v \frac{dv}{dt} = - V&#39;(x)
-                                    \frac{dx}{dt}
+                                    \frac{dx}{dt}.
                                     \]</span></p>
                                     <p>これを見ると、合成関数の微分則により、以下のように変形できる.</p>
                                     <p><span class="math display">\[
@@ -251,13 +252,14 @@
                                     <p>さて、右辺第二項はポテンシャルエネルギーを位置で微分したものだ。同様に、右辺第一項も、運動エネルギーを速度で偏微分した上で、さらに時間微分したものであるとみなすことができる。</p>
                                     <p><span class="math display">\[
                                     m\frac{dv}{dt} =
-                                    \frac{d}{dt}\left(\frac{d K}{d
-                                    v}\right)
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    K}{\partial v}\right).
                                     \]</span></p>
                                     <p>すると、運動方程式は以下のように書き直すことができる。</p>
                                     <p><span class="math display">\[
-                                    \frac{d}{dt}\left(\frac{d K}{d
-                                    v}\right) + \frac{d V}{dx} = 0
+                                    \frac{d}{dt}\left(\frac{\partial
+                                    K}{\partial v}\right) + \frac{d
+                                    V}{dx} = 0.
                                     \]</span></p>
                                     <p>ここで、後の都合のために<span
                                     class="math inline">\(v=\dot{x}\)</span>と表記する。<span
@@ -267,7 +269,7 @@
                                     \dot{x})\)</span>とみなす。</p>
                                     <p><span class="math display">\[
                                     L(x, \dot{x}) \equiv K(\dot{x}) -
-                                    V(x)
+                                    V(x).
                                     \]</span></p>
                                     <p>この量をラグランジアンと呼ぶ。先程の運動方程式はラグランジアンを用いると
                                     <span class="math display">\[
@@ -302,9 +304,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q} &amp;= \frac{\partial
-                                    H}{\partial p} \\
+                                    H}{\partial p}, \\
                                     \dot{p} &amp;= -\frac{\partial
-                                    H}{\partial q}
+                                    H}{\partial q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これをハミルトンの運動方程式、もしくは正準方程式と呼び、この方程式で記述する力学をハミルトン形式の力学と呼ぶ。</p>
@@ -338,7 +340,7 @@
                                     <span class="math display">\[
                                     \begin{aligned}
                                     \dot{Q} &amp;= \frac{\partial
-                                    H}{\partial P} \\
+                                    H}{\partial P}, \\
                                     \dot{P} &amp;= -\frac{\partial
                                     H}{\partial Q}
                                     \end{aligned}
@@ -376,8 +378,8 @@
                                     と記述できる。この括弧をポアソン括弧と呼ぶ。このポアソン括弧について、
                                     <span class="math display">\[
                                     \begin{aligned}
-                                    \{q, p\}&amp;=1 \\
-                                    \{p, p\}&amp;=0 \\
+                                    \{q, p\}&amp;=1, \\
+                                    \{p, p\}&amp;=0, \\
                                     \{q, q\}&amp;=0
                                     \end{aligned}
                                     \]</span>
@@ -396,13 +398,13 @@
                                     \begin{aligned}
                                     \left[\hat{x}, \hat{p}\right]
                                     &amp;\equiv \hat{x}\hat{p} -
-                                    \hat{p}\hat{x} = i\hbar \\
+                                    \hat{p}\hat{x} = i\hbar, \\
                                     \left[\hat{x}, \hat{x}\right]
                                     &amp;\equiv \hat{x}\hat{x} -
-                                    \hat{x}\hat{x} = 0\\
+                                    \hat{x}\hat{x} = 0,\\
                                     \left[\hat{p}, \hat{p}\right]
                                     &amp;\equiv \hat{p}\hat{p} -
-                                    \hat{p}\hat{p} = 0
+                                    \hat{p}\hat{p} = 0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで<span
@@ -414,7 +416,7 @@
                                     i\hbar\)</span>について考える。このような交換関係を満たす演算子の選び方はいろいろあるが、例えば
                                     <span class="math display">\[
                                     \begin{aligned}
-                                    \hat{x} &amp;= x\\
+                                    \hat{x} &amp;= x,\\
                                     \hat{p} &amp;= -i\hbar
                                     \frac{d}{dx}\\
                                     \end{aligned}
@@ -424,7 +426,7 @@
                                     class="math inline">\([\hat{x},\hat{p}]f\)</span>を計算してみよう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    [\hat{x},\hat{p}]f &amp;=
+                                    \left[\hat{x},\hat{p}\right]f &amp;=
                                     (\hat{x}\hat{p} - \hat{p}\hat{x})f
                                     \\
                                     &amp;= -i x\hbar \frac{df}{dx} + i
@@ -432,7 +434,7 @@
                                     &amp;= \cancel{-i x\hbar
                                     \frac{df}{dx}} + i \hbar f +
                                     \cancel{i x\hbar \frac{df}{dx}}\\
-                                    &amp;= i \hbar f
+                                    &amp;= i \hbar f.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、 <span
@@ -454,7 +456,7 @@
                                     &amp;= \frac{1}{2m} \left( -i\hbar
                                     \frac{d}{dx} \right)^2 + V(x) \\
                                     &amp;= - \frac{\hbar^2}{2m}
-                                    \frac{d^2}{dx^2} + V(x)
+                                    \frac{d^2}{dx^2} + V(x).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ハミルトニアン演算子<span
@@ -467,7 +469,7 @@
                                     class="math inline">\(\hat{H}\)</span>を微分演算子で表現したものを代入すると、
                                     <span class="math display">\[
                                     -\frac{\hbar^2}{2m} \frac{d^2
-                                    \psi}{dx^2} + V\psi = E\psi
+                                    \psi}{dx^2} + V\psi = E\psi.
                                     \]</span>
                                     これが時間非依存のシュレーディンガー方程式であり、量子力学的な現象を記述する基礎方程式である。</p>
                                     <figure>

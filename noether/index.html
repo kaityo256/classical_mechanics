@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>系を少しだけ変化させる微小正準変換を考え、微小正準変換によりハミルトニアンが変化しなければ(変化が高次であれば)対応する母関数が保存量になるというネーターの定理について学ぶ。さらに、時間発展も正準変換であり、平行移動や回転と同様に扱えることを見る。</p>
+                                    <!--- abstract --->
+                                    <p>系を少しだけ変化させる微小正準変換を考え、微小正準変換によりハミルトニアンが変化しなければ(変化が高次であれば)対応する母関数が保存量になるというネーターの定理について学ぶ。さらに、時間発展も正準変換であり、平行移動や回転と同様に扱えることを見る。
+                                    <!--- end ---></p>
                                     <h1
                                     id="ハミルトニアンと対称性">ハミルトニアンと対称性</h1>
                                     <p>ニュートンの運動方程式では、発見法的に保存則を見つけていた。しかし、全ての運動方程式がただひとつのハミルトニアンから導出されるのであるから、系に存在する保存量の情報もハミルトニアンに含まれるはずである。それを見ていこう。</p>
@@ -77,7 +77,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{p}_x &amp;= -\frac{\partial
-                                    H}{\partial q^x} = 0 \\
+                                    H}{\partial q^x} = 0, \\
                                     \dot{p}_y &amp;= -\frac{\partial
                                     H}{\partial q^y} = 0
                                     \end{aligned}
@@ -104,7 +104,7 @@
                                     q_2\)</span>の両方を含むため、循環座標は存在しない。ここで、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    Q^1 &amp;= \frac{q^1 + q^1}{2}\\
+                                    Q^1 &amp;= \frac{q^1 + q^2}{2},\\
                                     Q^2 &amp;= \frac{q^1 - q^2}{2}
                                     \end{aligned}
                                     \]</span></p>
@@ -116,17 +116,17 @@
                                     Q^2\)</span>について逆に解くと、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    q^1 &amp;= Q^1 + Q^2\\
-                                    q^2 &amp;= Q^1 - Q^2
+                                    q^1 &amp;= Q^1 + Q^2,\\
+                                    q^2 &amp;= Q^1 - Q^2.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺を時間微分すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{q}^1 &amp;= \dot{Q}^1 +
-                                    \dot{Q}^2\\
+                                    \dot{Q}^2,\\
                                     \dot{q}^2 &amp;= \dot{Q}^1 -
-                                    \dot{Q}^2
+                                    \dot{Q}^2.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>運動量の定義から、</p>
@@ -139,23 +139,23 @@
                                     \underbrace{\frac{\partial
                                     \dot{q}^1}{\partial \dot{Q}^1}}_{1}
                                     + \underbrace{\frac{\partial
-                                    L}{\partial \dot{q}^2}}_{p_1}
+                                    L}{\partial \dot{q}^2}}_{p_2}
                                     \underbrace{\frac{\partial
                                     \dot{q}^2}{\partial \dot{Q}^1}}_{1}
                                     \\
-                                    &amp;= p_1 + p_2
+                                    &amp;= p_1 + p_2.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>同様に、</p>
                                     <p><span class="math display">\[
-                                    P_2 = p_1 - p_2
+                                    P_2 = p_1 - p_2.
                                     \]</span></p>
                                     <p><span class="math inline">\(p_1,
                                     p_2\)</span>について解くと</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    p_1 &amp;= \frac{P_1 + P_2}{2}\\
-                                    p_2 &amp;= \frac{P_1 - P_2}{2}\\
+                                    p_1 &amp;= \frac{P_1 + P_2}{2},\\
+                                    p_2 &amp;= \frac{P_1 - P_2}{2}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これらを用いると、新しいハミルトニアンは</p>
@@ -179,10 +179,10 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     p_r &amp;= \frac{\partial
-                                    L}{\partial \dot{r}} = m\dot{r}\\
+                                    L}{\partial \dot{r}} = m\dot{r},\\
                                     p_\theta &amp;= \frac{\partial
                                     L}{\partial \dot{\theta}} =
-                                    mr^2\dot{\theta}\\
+                                    mr^2\dot{\theta}
                                     \end{aligned}
                                     \]</span></p>
                                     <p>を用いて、</p>
@@ -196,14 +196,14 @@
                                     \frac{p_\theta^2}{2mr^2} + U(r) \\
                                     &amp;= \frac{1}{2m}\left(p_r^2 +
                                     \frac{p_\theta^2}{r^2} \right) +
-                                    U(r)
+                                    U(r).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>明らかにハミルトニアンは<span
                                     class="math inline">\(\theta\)</span>に依存しないため、</p>
                                     <p><span class="math display">\[
                                     \dot{p_\theta} = - \frac{\partial
-                                    H}{\partial \theta} = 0
+                                    H}{\partial \theta} = 0.
                                     \]</span></p>
                                     <p>すなわち、<span
                                     class="math inline">\(\theta\)</span>に対応する一般化運動量が保存量となることがわかる。</p>
@@ -214,17 +214,17 @@
                                     <p>が時間不変量であった。極座標表示から</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x &amp;= r \cos \theta \\
-                                    y &amp;= r \sin \theta
+                                    x &amp;= r \cos \theta, \\
+                                    y &amp;= r \sin \theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺時間微分すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \dot{x} &amp;= \dot{r} \cos \theta -
-                                    r \dot{\theta} \sin \theta\\
+                                    r \dot{\theta} \sin \theta,\\
                                     \dot{y} &amp;= \dot{r} \sin \theta +
-                                    r \dot{\theta} \cos \theta
+                                    r \dot{\theta} \cos \theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>両辺に<span
@@ -234,16 +234,16 @@
                                     \begin{aligned}
                                     y\dot{x} &amp;= r\dot{r} \cos \theta
                                     \sin \theta - r^2 \dot{\theta}
-                                    \sin^2 \theta\\
+                                    \sin^2 \theta,\\
                                     x\dot{y} &amp;= r\dot{r} \sin \theta
                                     \cos \theta + r^2 \dot{\theta}
-                                    \cos^2 \theta
+                                    \cos^2 \theta.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>従って、</p>
                                     <p><span class="math display">\[
                                     L_z = m(x\dot{y} - y \dot{x}) = mr^2
-                                    \dot{\theta} = p_\theta
+                                    \dot{\theta} = p_\theta.
                                     \]</span></p>
                                     <p>すなわち、一般化座標<span
                                     class="math inline">\(\theta\)</span>に対応する一般化運動量<span
@@ -281,10 +281,11 @@
                                     \begin{aligned}
                                     Q &amp;= \frac{\partial W}{\partial
                                     P} = q + \varepsilon
-                                    \frac{\partial}{\partial P}J(q,P) \\
+                                    \frac{\partial}{\partial P}J(q,P),
+                                    \\
                                     p &amp;= \frac{\partial W}{\partial
                                     q} = P + \varepsilon
-                                    \frac{\partial}{\partial q}J(q,P)
+                                    \frac{\partial}{\partial q}J(q,P),
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これを<span
@@ -298,7 +299,7 @@
                                     <p>と定義しよう。すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    Q &amp;= q + \varepsilon h \\
+                                    Q &amp;= q + \varepsilon h, \\
                                     P &amp;= p - \varepsilon h
                                     \end{aligned}
                                     \]</span></p>
@@ -311,7 +312,7 @@
                                     &amp;= J(q,p) -\varepsilon h
                                     \frac{\partial}{\partial p} J(q,p)
                                     \\
-                                    &amp;= J(q,p) + O(\varepsilon)
+                                    &amp;= J(q,p) + O(\varepsilon).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>従って、</p>
@@ -337,13 +338,13 @@
                                     \frac{\partial}{\partial p}J(q,p) +
                                     O(\varepsilon^2)
                                     \]</span></p>
-                                    <p>となる。2式をあわせて</p>
+                                    <p>となる。二式をあわせて</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     Q &amp;= q + \varepsilon
-                                    \frac{\partial}{\partial p}J(q,p)\\
+                                    \frac{\partial}{\partial p}J(q,p),\\
                                     P &amp;= p - \varepsilon
-                                    \frac{\partial}{\partial q}J(q,p)
+                                    \frac{\partial}{\partial q}J(q,p).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、<strong>現時点での</strong>
@@ -372,7 +373,7 @@
                                     \displaystyle\frac{\partial^2
                                     J}{\partial q \partial p}
                                     \end{vmatrix} \\
-                                    &amp;= 1 + O(\varepsilon^2)
+                                    &amp;= 1 + O(\varepsilon^2).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、この変換は<span
@@ -387,9 +388,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     Q &amp;= q + \varepsilon
-                                    \frac{\partial J}{\partial p}\\
+                                    \frac{\partial J}{\partial p},\\
                                     P &amp;= p - \varepsilon
-                                    \frac{\partial J}{\partial q}\\
+                                    \frac{\partial J}{\partial q}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この変換により、ハミルトニアンが<span
@@ -409,7 +410,7 @@
                                     H}{\partial p}\frac{\partial
                                     J}{\partial q} + O(\varepsilon^2)\\
                                     &amp;= H(q,p) + \varepsilon \{H,J\}
-                                    + O(\varepsilon^2)
+                                    + O(\varepsilon^2).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、この微小正準変換において、ハミルトニアンの変化分は高次の項を無視すると、</p>
@@ -419,15 +420,15 @@
                                     \]</span></p>
                                     <p>となる。この差がゼロであるならば</p>
                                     <p><span class="math display">\[
-                                    \{H,J\} = 0
+                                    \{H,J\} = 0.
                                     \]</span></p>
                                     <p>ハミルトニアンとのポアソン括弧は時間微分を意味するのであったから、</p>
                                     <p><span class="math display">\[
-                                    \dot{J} = \{J, H\} = 0
+                                    \dot{J} = \{J, H\} = 0.
                                     \]</span></p>
                                     <p>すなわち、母関数<span
-                                    class="math inline">\(J\)</span>が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を　<strong>ネーターの定理</strong>(Noether’s
-                                    theorem)　と呼ぶ。</p>
+                                    class="math inline">\(J\)</span>が時間不変量であることが示された。以上をまとめると、何か連続的な変化を引き起こす操作がある時、その変化が小さい場合にハミルトニアンの変化分が高次となるならば、その操作に対応する保存量が存在することになる。この事実を<strong>ネーターの定理</strong>(Noether’s
+                                    theorem)と呼ぶ。</p>
                                     <p>母関数<span
                                     class="math inline">\(J\)</span>として様々な物理量を入れてみよう。まず、<span
                                     class="math inline">\(J\)</span>としてハミルトニアン<span
@@ -436,10 +437,10 @@
                                     \begin{aligned}
                                     Q &amp;= q + \varepsilon
                                     \frac{\partial H}{\partial p} = q +
-                                    \varepsilon \dot{q} \\
+                                    \varepsilon \dot{q}, \\
                                     P &amp;= p - \varepsilon
                                     \frac{\partial H}{\partial q} = p +
-                                    \varepsilon \dot{p} \\
+                                    \varepsilon \dot{p}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これと、時刻<span
@@ -448,16 +449,16 @@
                                     \begin{aligned}
                                     q(t+\varepsilon) &amp;= q +
                                     \varepsilon \dot{q} +
-                                    O(\varepsilon^2)\\
+                                    O(\varepsilon^2),\\
                                     p(t+\varepsilon) &amp;= p +
                                     \varepsilon \dot{p} +
-                                    O(\varepsilon^2)\\
+                                    O(\varepsilon^2).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、ハミルトニアンを母関数とする微小正準変換は、時間並進操作、つまり時間発展を表している。</p>
                                     <p>ハミルトニアンは、当然ハミルトニアン自身と可換である。</p>
                                     <p><span class="math display">\[
-                                    \{H, H\} = 0
+                                    \{H, H\} = 0.
                                     \]</span></p>
                                     <p>したがって、ハミルトニアンは時間の並進操作<span
                                     class="math inline">\(t \rightarrow
@@ -466,25 +467,25 @@
                                     <p>次に、空間並進操作を考えよう。先ほど考えた相対距離に依存する相互作用をする二粒子系を考える。</p>
                                     <p><span class="math display">\[
                                     H = \frac{1}{2m}(p_1^2 + p_2^2) +
-                                    U(q^1-q^2)
+                                    U(q^1-q^2).
                                     \]</span></p>
                                     <p>ここで、母関数として二粒子の運動量の和を考える。</p>
                                     <p><span class="math display">\[
-                                    J = p_1 + p_2
+                                    J = p_1 + p_2.
                                     \]</span></p>
                                     <p>この母関数による微小正準変換は以下のようになる。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    Q^1 &amp;= q^1 + \varepsilon \\
-                                    P_1 &amp;= p_1\\
-                                    Q^2 &amp;= q^2 + \varepsilon \\
-                                    P_2 &amp;= p_2\\
+                                    Q^1 &amp;= q^1 + \varepsilon, \\
+                                    P_1 &amp;= p_1,\\
+                                    Q^2 &amp;= q^2 + \varepsilon, \\
+                                    P_2 &amp;= p_2,
                                     \end{aligned}
                                     \]</span></p>
                                     <p>要するに、座標を正の方向に<span
                                     class="math inline">\(\varepsilon\)</span>だけずらす、空間並進操作となっている。今、ハミルトニアンは座標の相対距離にしか依存しないから、</p>
                                     <p><span class="math display">\[
-                                    Q^1 - Q^2 = q^1 - q^2
+                                    Q^1 - Q^2 = q^1 - q^2.
                                     \]</span></p>
                                     <p>また、運動量は変化しないから、</p>
                                     <p><span class="math display">\[
@@ -492,7 +493,7 @@
                                     H &amp;= \frac{1}{2m}(p_1^2 + p_2^2)
                                     + U(q^1-q^2) \\
                                     &amp;= \frac{1}{2m}(P_1^2 + P_2^2) +
-                                    U(Q^1-Q^2)
+                                    U(Q^1-Q^2).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>従って、この変換においてハミルトニアンは変化しない。すなわち、</p>
@@ -507,7 +508,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \{J, H\} &amp;= \{p_1+p_2, H\}\\
-                                    &amp;= \{p_1, H\} +  \{p_2, H\}
+                                    &amp;= \{p_1, H\} +  \{p_2, H\}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで、</p>
@@ -522,13 +523,13 @@
                                     p_i}}_{\delta_1^i}\frac{\partial
                                     H}{\partial q^i} \\
                                     &amp;= -\frac{\partial H}{\partial
-                                    q^1}
+                                    q^1}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>同様に、</p>
                                     <p><span class="math display">\[
                                     \{p_2, H\} = -\frac{\partial
-                                    H}{\partial q^2}
+                                    H}{\partial q^2}.
                                     \]</span></p>
                                     <p>ここで、ポテンシャルの形から、</p>
                                     <p><span class="math display">\[
@@ -536,11 +537,11 @@
                                     \frac{\partial H}{\partial q^1}
                                     &amp;= \frac{dU}{dr} \frac{\partial
                                     r}{\partial q^1} = U&#39;(r)
-                                    \frac{(q^1 - q^2)}{r} \\
+                                    \frac{(q^1 - q^2)}{r}, \\
                                     \frac{\partial H}{\partial q^2}
                                     &amp;= \frac{dU}{dr} \frac{\partial
                                     r}{\partial q^2} = U&#39;(r)
-                                    \frac{(q^2 - q^1)}{r}
+                                    \frac{(q^2 - q^1)}{r}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>従って、</p>
@@ -551,7 +552,7 @@
                                     &amp;= - U&#39;(r) \frac{(q^1 -
                                     q^2)}{r} - U&#39;(r)\frac{(q^2 -
                                     q^1)}{r} \\
-                                    &amp;=0
+                                    &amp;=0.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>すなわち、重心の運動量<span
@@ -560,11 +561,11 @@
                                     <p>回転対称性についても同様に理解することができる。以下のような中心力ポテンシャルに依存する系を考える。</p>
                                     <p><span class="math display">\[
                                     H = \frac{1}{2m}(p_1^2 + p_2^2) +
-                                    U(r)
+                                    U(r).
                                     \]</span></p>
                                     <p>先ほどと形が似ているが、今回は</p>
                                     <p><span class="math display">\[
-                                    r = \sqrt{(q^1)^2 + (q^2)^2}
+                                    r = \sqrt{(q^1)^2 + (q^2)^2}.
                                     \]</span></p>
                                     <p>であることに注意。ここで、母関数として<span
                                     class="math inline">\(z\)</span>軸周りの角運動量を選ぶ。</p>
@@ -576,16 +577,16 @@
                                     \begin{aligned}
                                     Q^1 &amp;= q^1 + \varepsilon
                                     \frac{\partial J}{\partial p_1} =
-                                    q^1 - \varepsilon q^2\\
+                                    q^1 - \varepsilon q^2,\\
                                     Q^2 &amp;= q^2 + \varepsilon
                                     \frac{\partial J}{\partial p_2} =
-                                    q^2 + \varepsilon q^1\\
+                                    q^2 + \varepsilon q^1,\\
                                     P_1 &amp;= p_1 - \varepsilon
                                     \frac{\partial J}{\partial q^1} =
-                                    p_1 - \varepsilon p_2 \\
+                                    p_1 - \varepsilon p_2,\\
                                     P_2 &amp;= p_2 - \varepsilon
                                     \frac{\partial J}{\partial q^2} =
-                                    p_2 + \varepsilon p_1 \\
+                                    p_2 + \varepsilon p_1,
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで<span
@@ -596,7 +597,7 @@
                                     P_1, P_2) - H(q^1,q^2,p_1,p_2) \\
                                     &amp;= \frac{1}{2}(P_1^2+P_2^2)
                                     -\frac{1}{2}(p_1^2+p_2^2) + U(R) -
-                                    U(r)
+                                    U(r).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>ここで、</p>
@@ -608,9 +609,10 @@
                                     &amp;= p_1^2 + p_2^2 + \varepsilon^2
                                     (p_1^2 + p_2^2) \\
                                     &amp;= p_1^2 + p_2^2 +
-                                    O(\varepsilon^2)
+                                    O(\varepsilon^2).
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>および、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     R &amp;= \sqrt{(Q^1)^2+(Q^2)^2} \\
@@ -623,16 +625,17 @@
                                     r^2}\\
                                     &amp;= \sqrt{1+\varepsilon^2} r \\
                                     &amp;= r + \frac{\varepsilon^2r}{2}
-                                    + O(\varepsilon^4)
+                                    + O(\varepsilon^4).
                                     \end{aligned}
                                     \]</span></p>
+                                    <p>従って、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     U(R) &amp;= U(r + \varepsilon^2
                                     r/2)\\
                                     &amp;= U(r) +
                                     U&#39;(r)\frac{\varepsilon^2r}{2}\\
-                                    &amp;= U(r) + O(\varepsilon^2)
+                                    &amp;= U(r) + O(\varepsilon^2).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>以上から、</p>
@@ -662,7 +665,7 @@
                                     H}{\partial p_1} - q^1
                                     \frac{\partial H}{\partial q^2} \\
                                     &amp;= \frac{p_1 p_2}{m} - U&#39;(r)
-                                    \frac{q_1 q_2}{r}
+                                    \frac{q_1 q_2}{r}.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>同様に<span

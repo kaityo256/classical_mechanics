@@ -58,9 +58,9 @@
                                     <p><a href="../index.html">[Up]</a>
                                     <a
                                     href="https://github.com/kaityo256/classical_mechanics">[Repository]</a></p>
-                                    <h1
-                                    id="本章で学ぶこと">本章で学ぶこと</h1>
-                                    <p>ここまで長い間準備をしてきたが、いよいよ解析力学に入る。解析力学の目的は、同じ現象を異なる観点から記述することだ。その第一歩が仮想仕事の原理である。ニュートン力学では、力という直接目に見えるものを、ポテンシャルという目に見えないものから導出されるものとして記述した。仮想仕事の原理では、力の釣り合いという静力学を仮想仕事という観点から記述する。これは後にダランベールの原理を用いて動力学へ拡張され、変分原理によりラグランジュ形式の力学へと繋がっていく。また、拘束力について学び、実際の空間の自由度と運動の自由度が一致しないこと、実質的な自由度のみで運動を記述するために一般化座標が必要であることなどを見る。</p>
+                                    <!--- abstract --->
+                                    <p>ここまで長い間準備をしてきたが、いよいよ解析力学に入る。解析力学の目的は、同じ現象を異なる観点から記述することだ。その第一歩が仮想仕事の原理である。ニュートン力学では、力という直接目に見えるものを、ポテンシャルという目に見えないものから導出されるものとして記述した。仮想仕事の原理では、力の釣り合いという静力学を仮想仕事という観点から記述する。これは後にダランベールの原理を用いて動力学へ拡張され、変分原理によりラグランジュ形式の力学へと繋がっていく。また、拘束力について学び、実際の空間の自由度と運動の自由度が一致しないこと、実質的な自由度のみで運動を記述するために一般化座標が必要であることなどを見る。
+                                    <!--- end ---></p>
                                     <h1 id="仕事">仕事</h1>
                                     <p>仮想仕事について学ぶ前に、仕事について復習しておこう。物体に力<span
                                     class="math inline">\(F\)</span>が働き、力と同じ方向に距離<span
@@ -157,13 +157,14 @@
                                     class="math inline">\(l\)</span>だけ運動させた結果、速度が<span
                                     class="math inline">\(V\)</span>になったとしよう。運動方程式は</p>
                                     <p><span class="math display">\[
-                                    m \frac{d^2 x}{dt^2} = F_\mathrm{ex}
+                                    m \frac{d^2 x}{dt^2} =
+                                    F_\mathrm{ex}.
                                     \]</span></p>
                                     <p>両辺を<span
                                     class="math inline">\(x\)</span>で積分すると、</p>
                                     <p><span class="math display">\[
                                     \int_0^l m \frac{d^2 x}{dt^2}dx =
-                                    F_\mathrm{ex} l
+                                    F_\mathrm{ex} l.
                                     \]</span></p>
                                     <p>左辺は</p>
                                     <p><span class="math display">\[
@@ -173,7 +174,7 @@
                                     \left(\frac{1}{2}mv^2 \right) dx \\
                                     &amp;= \left[ \frac{1}{2}mv^2
                                     \right]_0^l\\
-                                    &amp;= \frac{1}{2}mV^2
+                                    &amp;= \frac{1}{2}mV^2.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>つまり、</p>
@@ -201,7 +202,7 @@
                                     <p><span class="math display">\[
                                     \left[\frac{1}{2}mv^2 +
                                     \frac{1}{2}kx^2 \right]_0^l =
-                                    \int_0^l F_\mathrm{ex} dx \equiv W
+                                    \int_0^l F_\mathrm{ex} dx \equiv W.
                                     \]</span></p>
                                     <p>物体は最初と最後は静止していたのであるから<span
                                     class="math inline">\(v=0\)</span>なので</p>
@@ -231,14 +232,14 @@
                                     <p>である。この力を表すポテンシャル関数を<span
                                     class="math inline">\(U(x)\)</span>としよう。ポテンシャル関数を微分し、負符号をつけたものが力であった。</p>
                                     <p><span class="math display">\[
-                                    F(x) = -U&#39;(x)
+                                    F(x) = -U&#39;(x).
                                     \]</span></p>
                                     <p>釣り合いの位置近傍において、ポテンシャル関数をテイラー展開しよう。</p>
                                     <p><span class="math display">\[
                                     U(x_0+\delta x) = U(x_0) +
                                     U&#39;(x_0)\delta x
                                     +U&#39;&#39;(x)\frac{\delta x^2}{2}
-                                    + O(\delta x^3)
+                                    + O(\delta x^3).
                                     \]</span></p>
                                     <p>釣り合いの位置では力がゼロであるから、</p>
                                     <p><span class="math display">\[
@@ -260,9 +261,8 @@
                                     <strong>仮想変位</strong>(virtual
                                     displacement)
                                     と呼ぶ。定義から、力の釣り合いの近傍では仮想変位によりなされる仕事はゼロとなる。これを
-                                    <strong>仮想仕事の原理
-                                    </strong>(principle of virtual work)
-                                    と呼ぶ。</p>
+                                    <strong>仮想仕事の原理</strong>(principle
+                                    of virtual work) と呼ぶ。</p>
                                     <figure>
                                     <img src="fig/potential.png"
                                     alt="力の釣り合いとポテンシャル" />
@@ -284,8 +284,8 @@
                                     <strong>配位</strong>(configuraiton)
                                     と呼ぶ。そして、系の配置を一意に指定できる変数の数を
                                     <strong>自由度</strong>(degree of
-                                    freedom)
-                                    と呼ぶ。3次元空間中のN個の質点の座標が独立であれば、この系の自由度は<span
+                                    freedom) と呼ぶ。3次元空間中の<span
+                                    class="math inline">\(N\)</span>個の質点の座標が独立であれば、この系の自由度は<span
                                     class="math inline">\(3N\)</span>である。一方、座標が独立ではなく、その関係になんらかの制約がある場合も多い。例えば、二次元空間上に質点が一つあれば、その座標は<span
                                     class="math inline">\((x,y)\)</span>の二つで表現できるから自由度は2である。しかし、この質点が空間中の一点と長さ<span
                                     class="math inline">\(l\)</span>の硬い棒で繋がっており、硬い棒は自由に回転できる状態であるとする(剛体振り子)。固定されている点を原点にとると、常に</p>
@@ -320,7 +320,7 @@
                                     Y)\)</span>とすると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x^2 + y^2 &amp;=l^2 \\
+                                    x^2 + y^2 &amp;=l^2, \\
                                     (x-X)^2 + (y-Y)^2 &amp;=l^2
                                     \end{aligned}
                                     \]</span></p>
@@ -338,11 +338,11 @@
                                     <p>実際、剛体振り子では、極座標</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    x &amp;= l \cos \theta \\
-                                    y &amp;= l \sin \theta \\
+                                    x &amp;= l \cos \theta, \\
+                                    y &amp;= l \sin \theta
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>とすることで、拘束条件<span
+                                    <p>を採用することで、拘束条件<span
                                     class="math inline">\(x^2+y^2 =
                                     l^2\)</span>が自動的に満たされている。すると、系の配位は<span
                                     class="math inline">\(\theta\)</span>一つとなり、運動方程式は<span
@@ -350,8 +350,8 @@
                                     <p>同様に、多重振り子の場合も、二つの角度<span
                                     class="math inline">\(\theta,
                                     \phi\)</span>で配位を決めることができるため、その変数だけで運動を記述したくなる。このように、系の配位を決めることができるパラメータを
-                                    <strong>一般化座標
-                                    </strong>(generalized coordinates)
+                                    <strong>一般化座標</strong>(generalized
+                                    coordinates)
                                     と呼び、解析力学では<span
                                     class="math inline">\(q^i\)</span>で表すことが多い。一般化座標は、必ずしも長さの次元を持たないことに注意したい。例えば振り子の<span
                                     class="math inline">\(\theta\)</span>は一般化座標であるが、無次元量である。さらに、一般化座標は異なる次元を持つものが混ざることがある。例えば二次元空間内の剛体の棒の状態は中心座標<span
@@ -365,8 +365,8 @@
                                     <p>また、一般化座標<span
                                     class="math inline">\(q^i\)</span>の時間微分<span
                                     class="math inline">\(\dot{q}^i\)</span>を
-                                    <strong>一般化速度
-                                    </strong>(generalized velocity)
+                                    <strong>一般化速度</strong>(generalized
+                                    velocity)
                                     と呼ぶ。座標の場合と同様に、必ずしも速度の次元を持つとは限らない。</p>
                                     <p>一般化座標が張る空間を
                                     <strong>配位空間</strong>(configuraiton
@@ -410,9 +410,9 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     m\ddot{x} &amp;= F \cos \theta -
-                                    N\sin \theta \\
+                                    N\sin \theta, \\
                                     m\ddot{y} &amp;= F \sin \theta + N
-                                    \cos \theta - mg
+                                    \cos \theta - mg.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>静止状態であれば<span
@@ -440,7 +440,8 @@
                                     \begin{aligned}
                                     W &amp;= F \delta x - mg \sin \theta
                                     \delta x \\
-                                    &amp;= (F - mg \sin \theta) \delta x
+                                    &amp;= (F - mg \sin \theta) \delta
+                                    x.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>これがゼロであることから、ただちに</p>
@@ -454,18 +455,19 @@
                                     class="math inline">\(\mathbf{r}\)</span>とすると、運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
                                     m \ddot{\mathbf{r}} =
-                                    \mathbf{F}_\mathrm{all}
+                                    \mathbf{F}_\mathrm{all}.
                                     \]</span></p>
-                                    <p>今、力を拘束力<span
+                                    <p>今、力<span
+                                    class="math inline">\({F}_\mathrm{all}\)</span>を拘束力<span
                                     class="math inline">\(\mathbf{N}\)</span>と、それ以外の力<span
                                     class="math inline">\(\mathbf{F}\)</span>に分けることができたとしよう。すると、</p>
                                     <p><span class="math display">\[
                                     m \ddot{\mathbf{r}} = \mathbf{F}+
-                                    \mathbf{N}
+                                    \mathbf{N}.
                                     \]</span></p>
                                     <p>さて、物体が静止しているとしよう。すると、力は釣り合っていなければならないから、</p>
                                     <p><span class="math display">\[
-                                    \mathbf{F}+ \mathbf{N} = 0
+                                    \mathbf{F}+ \mathbf{N} = 0.
                                     \]</span></p>
                                     <p>いま、拘束を破らないような仮想変位<span
                                     class="math inline">\(\delta
@@ -473,7 +475,7 @@
                                     <p><span class="math display">\[
                                     \mathbf{F} \cdot \delta \mathbf{r} +
                                     \mathbf{N} \cdot \delta \mathbf{r} =
-                                    0
+                                    0.
                                     \]</span></p>
                                     <p>拘束力<span
                                     class="math inline">\(N\)</span>は、拘束条件を破らないように働く力であるから、拘束条件を満たすように選ばれた仮想変位<span
@@ -506,7 +508,7 @@
                                     class="math inline">\(g\)</span>として、この系が釣り合う条件を求めたい。</p>
                                     <p>まずはモーメントの定義から、ただちに</p>
                                     <p><span class="math display">\[
-                                    Mga = mgb
+                                    Mga = mgb.
                                     \]</span></p>
                                     <p>したがって、<span
                                     class="math inline">\(Ma =
@@ -521,7 +523,7 @@
                                     class="math inline">\(-Mg a \delta
                                     \theta\)</span>
                                     だけ仕事をされる。重力と同じ向きに動いたからポテンシャルエネルギーが下がり、結果として仕事が負になっている。逆に、右端の質点は重力に逆らって
-                                    <span class="math inline">\(mg\delta
+                                    <span class="math inline">\(b\delta
                                     \theta\)</span>
                                     だけ上がるから、<span
                                     class="math inline">\(mg b\delta
@@ -529,8 +531,8 @@
                                     だけ仕事をされる。</p>
                                     <p>系が釣り合っているのであれば、仮想仕事はゼロでなければならないので、</p>
                                     <p><span class="math display">\[
-                                    W = -Mg a \delta \theta + mg\delta
-                                    \theta = 0
+                                    W = -Mg a \delta \theta + mgb\delta
+                                    \theta = 0.
                                     \]</span></p>
                                     <p>ここから先程と同じ条件式 <span
                                     class="math inline">\(Ma =
@@ -548,8 +550,8 @@
                                     class="math inline">\(T\)</span>である。それぞれの重りについての力の釣り合いを考えると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    2T &amp;= Mg\\
-                                    T &amp;= mg
+                                    2T &amp;= Mg,\\
+                                    T &amp;= mg.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>以上から、<span
@@ -567,12 +569,12 @@
                                     /2\)</span>だけ上に動く。ここで、ひっぱることで紐の長さを変えない、すなわち拘束条件を破らないように仮想変位を選んでいることに注意。仮想仕事がゼロであることから</p>
                                     <p><span class="math display">\[
                                     W = Mg \frac{\delta l}{2} - mg
-                                    \delta l = 0
+                                    \delta l = 0.
                                     \]</span></p>
                                     <p>ここからやはり <span
                                     class="math inline">\(M=2m\)</span>
                                     が結論される。ここで、式に<span
-                                    class="math inline">\(T\)</span>が現れなかったことに注意したい。拘束力は仕事をしないので、拘束条件を満たすような変位を考えれば、拘束力は現れない。滑車やてこが複雑に組み合わされたような系では、張力を考えると計算が極めて面倒になる。最初から仮想仕事の原理を考えた方が早い。なお、中学受験などで、滑車の問題で横に線をひいて、横切った紐の数を数える方法を教わった人もいるであろう。実はこれは仮想仕事の原理を使っている。中学や高校で「そういうものだ」と教わった事実やテクニックの裏付けが、大学でようやくなされることが多い。</p>
+                                    class="math inline">\(T\)</span>が現れなかったことに注意したい。拘束力は仕事をしないので、拘束条件を満たすような変位を考えれば、拘束力は現れない。滑車やてこが複雑に組み合わされたような系では、拘束力を考えると計算が極めて面倒になる。最初から仮想仕事の原理を考えた方が早い。なお、中学受験などで、滑車の問題で横に線をひいて、横切った紐の数を数える方法を教わった人もいるであろう。実はこれは仮想仕事の原理を使っている。中学や高校で「そういうものだ」と教わった事実やテクニックの裏付けが、大学でようやくなされることが多い。</p>
                                     <figure>
                                     <img src="fig/stick.png"
                                     alt="壁に立てかけられた棒に働く力の釣り合い" />
@@ -600,7 +602,7 @@
                                     \]</span></p>
                                     <p>で与えられる。両辺全微分すると、</p>
                                     <p><span class="math display">\[
-                                    L dL = x dx + y dy
+                                    L dL = x dx + y dy.
                                     \]</span></p>
                                     <p>ここで、棒の長さは変わらないので<span
                                     class="math inline">\(\delta L =
@@ -611,7 +613,7 @@
                                     class="math inline">\(\delta x =
                                     -dx\)</span>であることを代入し、</p>
                                     <p><span class="math display">\[
-                                    \delta y = \frac{x}{y}\delta x
+                                    \delta y = \frac{x}{y}\delta x.
                                     \]</span></p>
                                     <p>いま、力<span
                                     class="math inline">\(F\)</span>で<span
@@ -627,7 +629,7 @@
                                     y/2\)</span>だけ上に動く。棒になされる仕事全体は</p>
                                     <p><span class="math display">\[
                                     W = - F \delta x + mg \frac{\delta
-                                    y}{2}
+                                    y}{2}.
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(\delta
@@ -638,17 +640,17 @@
                                     y\)</span>を消去すると、</p>
                                     <p><span class="math display">\[
                                     W = \left(-F + mg \frac{x}{2y}
-                                    \right) \delta x
+                                    \right) \delta x.
                                     \]</span></p>
                                     <p>これがゼロとなるのであるから</p>
                                     <p><span class="math display">\[
-                                    F = \frac{mgx}{2y}
+                                    F = \frac{mgx}{2y}.
                                     \]</span></p>
                                     <p><span
                                     class="math inline">\(\theta\)</span>
                                     を用いると、</p>
                                     <p><span class="math display">\[
-                                    F = \frac{mg}{2 \tan \theta}
+                                    F = \frac{mg}{2 \tan \theta}.
                                     \]</span></p>
                                     <p>これが求めたい関係式であった。ここでは仮想仕事の原理を用いたが、力の釣り合いだけで計算しようとすると、床や壁からの抗力を考える必要がある。これらの力は最終的に消去するのであるから、最初から現れない形で計算したほうが楽である。</p>
                                     <p>最後に、この系の自由度について考察しておこう。剛体の棒の配置を一意に決めるには、中心座標
@@ -668,7 +670,7 @@
                                     id="コラム雑草の名前">コラム：雑草の名前</h1>
                                     <p>「世の中に雑草という名の草はない」という言葉がある。NHK朝の連続ドラマ「らんまん」のモデルとなった植物学者、牧野富太郎の言葉とされる。歩いてると、ふと道端にある雑草が目に止まったとしよう。普段気にもかけていなかったが、小さく可愛らしい青い花が気になり、スマートフォンで画像検索し、それが「オオイヌノフグリ」という名前の外来種であることを知る。牧野富太郎が、在来種のイヌノフグリに似ており、より大きいことから名付けた和名だそうだ。そして、「イヌノフグリ」が「犬の陰嚢」であることを知って、なんでこんな可愛らしい花にそんな名前をつけたのか、と思うかもしれない。さらに調べてみると、そもそもイヌノフグリは江戸時代の植物図鑑「草木図説」に記載がある、由緒正しい名前である。このように、道端の草一つとっても、そこにはストーリーがある。別に全ての雑草の名前を知る必要はない。ただ、オオイヌノフグリを知ったことで、他の雑草にも名前があり、それぞれになんらかの由来があるということが想像できるであろう。</p>
                                     <p>「三角関数なんて日常生活では使わないのだから学んでも無駄だ」という話題を定期的に見かける。数学でサインやコサインを習った時、加法定理や倍角、半角公式といった大量の公式に辟易した人は多いであろう。ほとんどの人にとってそんな公式を日常使うことなどないのだから、なぜこんなものを学ばなければならないのか疑問に思うのも当然である。もちろん、三角関数は様々なところに顔を出す、非常に重要な概念であるから学ぶのであるが、それ以外にも学問には「世界を広げる」という重要な役割がある。</p>
-                                    <p>ニュートン力学で用は足りるのだから、解析力学を学ぶ必要などない。技術者でもなければ、電磁気学を学ぶ必要もないだろう。しかし、解析力学を学ぶと、バネにつながった質点が振動している様子を見て円運動を思い浮かべることができる。電磁気学を学ぶと、電子レンジ中ので飛び交う電磁波に思いを馳せたり、なぜ釣り人が偏光サングラスをしているのかが理解できたりする。それらを学ぶ前に比べて少しだけ世界が違って見える。多くの学問は日常生活に直結しないが、学んだあなたに、少しだけ異なる世界の見方を提供する。それはあなたの生活を少しだけ豊かにしてくれることであろう。</p>
+                                    <p>ニュートン力学で用は足りるのだから、解析力学を学ぶ必要などない。技術者でもなければ、電磁気学を学ぶ必要もないだろう。しかし、解析力学を学ぶと、バネにつながった質点が振動している様子を見て円運動を思い浮かべることができる。電磁気学を学ぶと、電子レンジ中で飛び交う電磁波に思いを馳せたり、なぜ釣り人が偏光サングラスをしているのかが理解できたりする。それらを学ぶ前に比べて少しだけ世界が違って見える。多くの学問は日常生活に直結しないが、学んだあなたに、少しだけ異なる世界の見方を提供する。それはあなたの生活を少しだけ豊かにしてくれることであろう。</p>
                     </article>
     </body>
 
