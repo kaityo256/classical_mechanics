@@ -6,20 +6,20 @@
 
 ## 量子論が必要な理由
 
-量子力学がなぜ必要か。それは、量子力学でないと説明できない観測事実があるからだ。物理学の目的は世界を記述することであり、世界の記述とは観測事実を説明することである。物理学は世界を記述する義務を負っており、これまでの理論では説明できない現象が出てきたら、新たな理論を構築しなければならない。量子論以前の物理を、量子論と区別するために古典論と呼ぶ。古典論では説明できない実験事実が多数発見され、新たな理論が必要となり、量子力学が生まれた。二重スリット実験やトンネル効果など、量子力学に従うミクロな系の振る舞いはしばしば非直感的な結果を生む。しかし、本書では量子力学の不思議さや面白さには触れず、解析力学で学んだ単語がどのように量子力学に現れるか、その数式に対応のみを概観する。
+量子力学がなぜ必要か。それは、量子力学でないと説明できない観測事実があるからだ。物理学の目的は世界を記述することであり、世界の記述とは観測事実を説明することである。物理学は世界を記述する義務を負っており、これまでの理論では説明できない現象が出てきたら、新たな理論を構築しなければならない。量子論以前の物理を、量子論と区別するために古典論と呼ぶ。古典論では説明できない実験事実が多数発見され、新たな理論が必要となり、量子力学が生まれた。二重スリット実験やトンネル効果など、量子力学に従うミクロな系の振る舞いはしばしば非直感的な結果を生む。しかし、本書では量子力学の不思議さや面白さには触れず、解析力学で学んだ単語がどのように量子力学に現れるか、その対応のみを概観する。
 
 ## 波動関数
 
 光子や電子などのミクロな粒子は粒子と波動の両方の性質を持ち、さらに確率的に振る舞うことがわかっている。物理は観測事実を説明する義務を負っているから、これらの性質を全て表現する表式を作らなければならない。まず、粒子と波動の両方の性質を説明するため、ある場所に局在しているが、有限の広がりを持つ存在を作ろう。ある関数$\psi(x)$のフーリエ変換を考える。
 
 $$
-\psi(x) = \int \tilde{\psi}(k) \mathrm{e}^{-ikx} dk
+\psi(x) = \int \tilde{\psi}(k) \mathrm{e}^{-ikx} dk.
 $$
 
 ただし$\tilde{\psi}(k)$は、以下のガウス分布とする。
 
 $$
-\tilde{\psi}(k) = \frac{1}{\sqrt{2 \pi \sigma_k^2}}\exp\left(-\frac{k^2}{2\sigma_k^2} \right)
+\tilde{\psi}(k) = \frac{1}{\sqrt{2 \pi \sigma_k^2}}\exp\left(-\frac{k^2}{2\sigma_k^2} \right).
 $$
 
 これは、ある場所$x$に局在する何かを表している。この何かが、速度$v$で$x$の正の方向に運動しているとしよう。そのような波は$\psi(x -vt)$で表現できるから、
@@ -27,7 +27,7 @@ $$
 $$
 \begin{aligned}
 \psi(x-vt) &= \int \tilde{\psi}(k) \mathrm{e}^{-ik(x-vt)} dk \\
-&= \int \tilde{\psi}(k) \mathrm{e}^{-i(kx-\omega t)} dk
+&= \int \tilde{\psi}(k) \mathrm{e}^{-i(kx-\omega t)} dk.
 \end{aligned}
 $$
 
@@ -39,7 +39,7 @@ $$
 \phi(\mathbf{r}, t) = \exp\left[ i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right) \right]
 $$
 
-は、 **平面波**(plain wave) と呼ばれる。平面波は、波数ベクトル$\mathbf{k}$の方向に速度$v = \omega/|\mathbf{k}|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$ではなく、$i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
+は、**平面波**(plain wave) と呼ばれる。平面波は、波数ベクトル$\mathbf{k}$の方向に速度$v = \omega/\left|\mathrm{k}\right|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$ではなく、$i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
 
 $$
 \begin{aligned}
@@ -65,42 +65,42 @@ $$
 \int_{-\infty}^\infty P(x)dx = 1
 $$
 
-である。これは、観測するたびに粒子の位置は確率的に揺らぐが、どこかには必ずある、ということを意味している。そこで、波動関数も適当な定数をかけて、その絶対値の二乗を全空間で積分したら1になるようにしておこう。
+を満たす。これは、観測するたびに粒子の位置は確率的に揺らぐが、どこかには必ずある、ということを意味している。そこで、波動関数も適当な定数をかけて、その絶対値の二乗を全空間で積分したら1になるようにしておこう。
 
 $$
-\int_{-\infty}^\infty |\psi(x)^2|dx = 1
+\int_{-\infty}^\infty |\psi(x)^2|dx = 1.
 $$
 
 これを規格化と呼ぶ。以後、波動関数は規格化されていると約束する。これにより、位置$x$に粒子が観測される確率は
 
 $$
-P(x) = |\psi(x)^2| = \psi(x)^\ast \psi(x)
+P(x) = |\psi(x)|^2 = \psi(x)^\ast \psi(x)
 $$
 
 と波動関数の絶対値の二乗と等式で結ばれる。
 
-ここまで時間非依存の波動関数を用いてきたが、時間に依存する場合も全く同様に議論できる。すなわち、時刻$t$に位置$x$に粒子を観測する確率$p(x,t)$は、時間依存する波動関数$\psi(x,t)$を用いて
+ここまで時間非依存の波動関数を用いてきたが、時間に依存する場合も全く同様に議論できる。すなわち、時刻$t$に位置$x$に粒子を観測する確率$P(x,t)$は、時間依存する波動関数$\psi(x,t)$を用いて
 
 $$
-P(x,t) = |\psi(x,t)^2| = \psi(x,t)^\ast \psi(x,t)
+P(x,t) = |\psi(x,t)|^2 = \psi(x,t)^\ast \psi(x,t)
 $$
 
 で表される。
 
 ## 物理量と演算子
 
-波動関数が定義できたところで、波動関数と物理量の関係を調べよう。系のエネルギーが位置と時刻に依存しており、$E(x,t)$と表現されるとする。粒子が時刻$t$において位置$x$に存在する確率が$p(x,t)$である時、エネルギーの期待値$\bar{E}(t)$は
+波動関数が定義できたところで、波動関数と物理量の関係を調べよう。系のエネルギーが位置と時刻に依存しており、$E(x,t)$と表現されるとする。粒子が時刻$t$において位置$x$に存在する確率が$P(x,t)$である時、エネルギーの期待値$\bar{E}(t)$は
 
 $$
-\bar{E}(t) = \int E(x,t) p(x,t) dx
+\bar{E}(t) = \int E(x,t) P(x,t) dx
 $$
 
 で与えられる。
 
-さて、$p(x,t) = |\psi(x,t)^2|$であったから、
+さて、$P(x,t) = \left|\psi(x,t)\right|^2$であったから、
 
 $$
-\bar{E}(t) = \int \psi^\ast(x,t) E \psi(x,t)  dx
+\bar{E}(t) = \int \psi^\ast(x,t) E \psi(x,t)dx.
 $$
 
 後のために、$E$を波動関数で挟んで表記していることに注意。
@@ -108,20 +108,20 @@ $$
 さて、波動関数の平面波展開は以下のように書けた。
 
 $$
-\psi(x, t) = \int \tilde{\psi}(k) \mathrm{e}^{i(kx-\omega t)} dk
+\psi(x, t) = \int \tilde{\psi}(k) \mathrm{e}^{i(kx-\omega t)} dk.
 $$
 
 ここで、エネルギーと運動量が、ある定数$\hbar$により角運動量や波数と結びついている、すなわち
 $$
 \begin{aligned}
-E &= \hbar \omega \\
+E &= \hbar \omega, \\
 p &= \hbar k
 \end{aligned}
 $$
 と記述できることを要請しよう。ただし、$\hbar = h/2\pi$であり、$h$はプランク定数と呼ばれる定数である。なぜこのように書けるかは本書では説明しない。この表記を用いると平面波展開は以下のように書き直すことができる。
 
 $$
-\psi(x, t) = \int \tilde{\psi}(k) \mathrm{e}^{i(px-Et)/\hbar} dk
+\psi(x, t) = \int \tilde{\psi}(k) \mathrm{e}^{i(px-Et)/\hbar} dk.
 $$
 
 一般には$E$は$k$依存性を持つが、ここでは定数として扱おう。この両辺を時間で偏微分すると、以下の関係が得られる。
@@ -129,14 +129,14 @@ $$
 $$
 \begin{aligned}
 \frac{\partial}{\partial t} \psi(x, t) &= -\frac{iE}{\hbar}\int \tilde{\psi}(k) \mathrm{e}^{i(px-Et)/\hbar} dk \\
-&= -\frac{iE}{\hbar} \psi(x,t)
+&= -\frac{iE}{\hbar} \psi(x,t).
 \end{aligned}
 $$
 
 整理すると、
 
 $$
-\frac{i}{\hbar}\frac{\partial}{\partial t} \psi = E \psi
+\frac{i}{\hbar}\frac{\partial}{\partial t} \psi = E \psi.
 $$
 
 これを見ると、エネルギーを
@@ -157,8 +157,8 @@ $$
 
 $$
 \begin{aligned}
-\bar{E}(t) &= \int \psi^\ast(x,t) E \psi(x,t)  dx \\
-&= \int \psi^\ast(x,t) \hat{E} \psi(x,t)  dx
+\bar{E}(t) &= \int \psi^\ast(x,t) E \psi(x,t)dx \\
+&= \int \psi^\ast(x,t) \hat{E} \psi(x,t)dx.
 \end{aligned}
 $$
 
@@ -171,7 +171,7 @@ $$
 すると、先程のエネルギーの期待値は以下のように表現できる。
 
 $$
-\bar{E} = (\psi, \hat{E}\psi)
+\bar{E} = (\psi, \hat{E}\psi).
 $$
 
 すなわち、エネルギーを演算子とみなしたものを波動関数に演算したものと、波動関数自身との内積がエネルギーの期待値を与えている。
@@ -180,34 +180,33 @@ $$
 
 $$
 \begin{aligned}
-\left|\psi\right> &\equiv \psi(x) \\
-\left<\psi\right| &\equiv \psi(x)^\ast \\
+\left|\psi\right> &\equiv \psi(x), \\
+\left<\psi\right| &\equiv \psi(x)^\ast.
 \end{aligned}
 $$
 
 これは、括弧(bracket)の左側をブラ(bra)、右側をケットと分解する、Diracが考案した記法である。それぞれブラベクトル、ケットベクトルと呼ぶが、ブラ、ケットと略すことも多い。この表記を用いると、波動関数がエネルギー演算子の固有関数であり、その固有値がエネルギーであることがわかりやすい。
 
 $$
-\hat{E} \left|\psi\right>  = E \left|\psi\right>
+\hat{E} \left|\psi\right>  = E \left|\psi\right>.
 $$
 
-ケットベクトルは、対応するブラベクトルを作ることができる。
+ケットベクトルから、対応するブラベクトルを作ることができる。
 
 $$
-\left|\psi\right> \rightarrow \left<\psi\right|
+\left|\psi\right> \rightarrow \left<\psi\right|.
 $$
 
 これは、ベクトルで言えば縦ベクトルから横ベクトルへの転置に対応する。ケットベクトルが縦ベクトル、ブラベクトルが横ベクトルであるから、その内積を定義できる。ブラベクトルとケットベクトルの内積を以下のように表記する。
 
 $$
-\left<\psi\right| \left. \psi\right> \equiv
-(\left<\psi\right|, \left|\psi\right>)
+\left<\psi\right| \left. \psi\right> \equiv (\left<\psi\right|, \left|\psi\right>).
 $$
 
 すると、エネルギーの期待値は以下のように表記できる。
 
 $$
-E =   \left<\psi\right| \hat{E} \left|\psi\right>
+E =   \left<\psi\right| \hat{E} \left|\psi\right>.
 $$
 
 ただし、期待値$\bar{E}$を、この系のエネルギー$E$と同一視した。つまり、量子力学では、物理量は対応する演算子があり、ブラベクトルとケットベクトルでその物理量を挟んだものが期待値を与えることがわかる。
@@ -217,20 +216,20 @@ $$
 $$
 \begin{aligned}
 \frac{\partial}{\partial x} \psi(x, t) &= \frac{ip}{\hbar}\int \tilde{\psi}(k) \mathrm{e}^{i(px-Et)/\hbar} dk \\
-&= \frac{ip}{\hbar} \psi(x,t)
+&= \frac{ip}{\hbar} \psi(x,t).
 \end{aligned}
 $$
 
 整理すると
 
 $$
-i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t)
+i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).
 $$
 
 エネルギーの場合と同様に、左辺の波動関数にかかっている演算子を運動量演算子であると解釈することができる。
 
 $$
-\hat{p} \equiv - i \hbar \frac{\partial}{\partial x}
+\hat{p} \equiv - i \hbar \frac{\partial}{\partial x}.
 $$
 
 この演算子とブラケットベクトル表記を用いると、
@@ -251,7 +250,7 @@ $$
 
 $$
 \begin{aligned}
-\hat{x} &= i \hbar \frac{\partial}{\partial p} \\
+\hat{x} &= i \hbar \frac{\partial}{\partial p}, \\
 \hat{p} &= p
 \end{aligned}
 $$
@@ -263,14 +262,14 @@ $$
 運動量が以下の演算子として記述できることがわかった。
 
 $$
-\hat{p} \equiv - i \hbar \frac{\partial}{\partial x}
+\hat{p} \equiv - i \hbar \frac{\partial}{\partial x}.
 $$
 
 これは微分演算子であるから、意味を持つためにはなにか微分できる関数に演算してやる必要がある。例えば微分可能な関数$f(x)$に演算すると、
 
 $$
 \begin{aligned}
-\hat{p}f &= - i\hbar \frac{\partial}{\partial x}f\\
+\hat{p}f &= - i\hbar \frac{\partial}{\partial x}f(x)\\
 &= - i\hbar f'(x)
 \end{aligned}
 $$
@@ -284,7 +283,7 @@ $$
 $$
 \begin{aligned}
 (\hat{x}\hat{p})f &= \hat{x} (\hat{p}f)\\
-&= - i\hbar f'(x)
+&= - i\hbar f'.
 \end{aligned}
 $$
 
@@ -295,7 +294,7 @@ $$
 (\hat{p}\hat{x})f &= \hat{p} (\hat{x}f)\\
 &= - i\hbar\frac{\partial}{\partial x} (xf)\\
 &= - ix\hbar\frac{\partial}{\partial x}f - i \hbar f \frac{\partial}{\partial x}x \\
-&=  - i \hbar x f'(x) - i \hbar f
+&=  - i \hbar x f' - i \hbar f
 \end{aligned}
 $$
 
@@ -303,8 +302,8 @@ $$
 
 $$
 \begin{aligned}
-(\hat{x}\hat{p} - \hat{p}\hat{x})f &= - \cancel{i\hbar f'(x)} + \cancel{i \hbar x f'(x)} + i \hbar f\\
-&= i \hbar f
+(\hat{x}\hat{p} - \hat{p}\hat{x})f &= - \cancel{i\hbar xf'} + \cancel{i \hbar x f'} + i \hbar f\\
+&= i \hbar f.
 \end{aligned}
 $$
 
@@ -359,7 +358,7 @@ $$
 と記述できた。ここで$\hat{E}$は以下のエネルギー演算子である。
 
 $$
-\hat{E} \equiv \frac{i}{\hbar}\frac{\partial}{\partial t}
+\hat{E} \equiv \frac{i}{\hbar}\frac{\partial}{\partial t}.
 $$
 
 ここで、エネルギーとして一粒子系のハミルトニアン
@@ -377,7 +376,7 @@ $$
 
 $$
 \begin{aligned}
-\hat{p} &= i \hbar \frac{\partial}{\partial x} \\
+\hat{p} &= i \hbar \frac{\partial}{\partial x}, \\
 \hat{x} &= x
 \end{aligned}
 $$
@@ -402,49 +401,49 @@ $$
 という式を得る。これは**シュレーディンガー方程式**(Schrödinger equation) にほかならない。今、ポテンシャル$V$が位置$x$のみに依存し、$t$に陽には依存しないとしよう。すると、左辺には時間に関係する項のみが、右辺には空間に関係する項のみがあるから変数分離ができる。
 
 $$
-\psi(x,t) = X(x)T(t)
+\psi(x,t) = X(x)T(t).
 $$
 
 両辺に代入すると、
 
 $$
-i\hbar X(x)T'(t) = T(t) \left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) X(x)
+i\hbar X(x)T'(t) = T(t) \left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) X(x).
 $$
 
 整理すると、
 
 $$
-i\hbar \frac{T'(t)}{T(t)} = \frac{1}{X(x)} \left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) X(x)
+i\hbar \frac{T'(t)}{T(t)} = \frac{1}{X(x)} \left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) X(x).
 $$
 
 左辺は$t$だけ、右辺は$x$だけの関数であるから、それが等式で結ばれるということは定数しかありえない。その定数を$E$とすると、
 
 $$
-i\hbar T'(t) = E T(t)
+i\hbar T'(t) = E T(t).
 $$
 
 ここから、
 
 $$
-T(t) \propto \exp(-i Et/\hbar)
+T(t) \propto \exp(-i Et/\hbar).
 $$
 
 また、$x$に関する項は
 
 $$
-\left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) X(x) = E X(x)
+\left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) X(x) = E X(x).
 $$
 
 改めて$X(x)$を$\psi(x)$と表記すると、
 
 $$
-\left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) \psi = E \psi
+\left( -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V \right) \psi = E \psi.
 $$
 
 左辺を$\hat{H}$で書けば
 
 $$
-\hat{H}\psi = E\psi
+\hat{H}\psi = E\psi.
 $$
 
 これが時間非依存のシュレーディンガー方程式である。この式の意味は、ハミルトニアンを演算子とした時、波動関数がその演算子の固有関数であり、固有値がエネルギーであることを意味している。これは先ほど「演算子化したハミルトニアンの固有値がエネルギーに等しい」ということを要請したから当然の帰結であり、一種のトートロジーになっているが、時間依存シュレーディンガー方程式を変数分離法で解いた時の定数がエネルギーであり、ハミルトニアンが時間非依存部分のエネルギー演算子に対応しているということがわかる。
@@ -457,7 +456,7 @@ $$
 
 球形の牛というジョークがある。いくつかバリエーションがあるが、典型的にはこんな内容だ。「経営が苦しい酪農場に工学者、心理学者、物理学者が呼ばれた。工学者は柵や搾乳機の改良を、心理学者は牛の心理的なケアを提案した。最後に物理学者このように切り出した。『まず、牛を球と仮定します』」。このジョークは、物理学者がしばしば現実を極端に単純化しすぎるという例として紹介されているようだ。しかし、場合によっては牛や人を球と仮定するのは悪くない近似となる。
 
-物理学は観測事実を説明するための学問である。「観測事実を説明する」とは、「結果を厳密に予測する」ことを意味しない。実際には誤差や観測精度の限界などがあるため、観測事実を満足できる精度で説明できればそれで良い。太陽系を考えよう。地球は太陽の回りを回っていると説明されるが、実際には太陽も地球にひっぱられて動いている。しかし、太陽の質量は地球の33万倍あるため、太陽を固定するという近似が生み出す誤差は33万分の1である。地球の平均公転半径は15億kmであるから、誤差は450km、すなわち地球の半径の7%程度のズレでしかない。災害時の避難経路について調べるため、人の避難行動の数値シミュレーションが行われることがある。この時、人は円としてモデル化されることが多い。よほど混み合う状況にならない限り、人が丸くないという影響は現れない。
+物理学は観測事実を説明するための学問である。「観測事実を説明する」とは、「結果を厳密に予測する」ことを意味しない。実際には誤差や観測精度の限界などがあるため、観測事実を満足できる精度で説明できればそれで良い。太陽系を考えよう。地球は太陽の周りを回っていると説明されるが、実際には太陽も地球にひっぱられて動いている。しかし、太陽の質量は地球の33万倍あるため、太陽を固定するという近似が生み出す誤差は33万分の1である。地球の平均公転半径は15億kmであるから、誤差は450km、すなわち地球の半径の7%程度のズレでしかない。災害時の避難経路について調べるため、人の避難行動の数値シミュレーションが行われることがある。この時、人は円としてモデル化されることが多い。よほど混み合う状況にならない限り、人が丸くないという影響は現れない。
 
 物を投げた時、それが鉄球などであれば質点と近似した上で空気抵抗も無視してよいであろう。しかし軽いものであれば空気抵抗も考慮する必要がある。野球の変化球などを考える場合は、質点ではなく大きさのある剛体と考えた上で回転も考慮する必要があり、バットで打ち返す瞬間を記述したければ、剛体ではなく弾性体として考える必要があるだろう。逆に、野球を考えてる時にトンネル効果や干渉など、量子力学で現れる現象を考慮する意味はない(たまに量子力学をマクロスケールに適用するトンデモ理論を見かけるが……)。
 
