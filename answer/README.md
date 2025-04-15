@@ -1,7 +1,7 @@
 # 解答と解説
 
 
-## 【1】
+【1】
 
 ### 解答
 
@@ -22,7 +22,7 @@
 角運動量の保存については以下のように直接示すと教育的である。系が等速直線運動をすることから、
 $$
     \begin{aligned}
-    x(t) & = x(0) + \dot{x} t \\
+    x(t) & = x(0) + \dot{x} t, \\
     y(t) & = y(0) + \dot{y} t
     \end{aligned}
 $$
@@ -30,7 +30,7 @@ $$
 $$
     \begin{aligned}
     x\dot{y} - y\dot{x} & = (x(0) + \dot{x}  t)\dot{y} - (y(0) + \dot{y}  t)\dot{x} \\
-                        & =  x(0)\dot{y} - y(0) \dot{x}
+                        & =  x(0)\dot{y} - y(0) \dot{x}.
     \end{aligned}
 $$
 今、$\dot{x}, \dot{y}$は時間依存しない、すなわち時間微分するとゼロであるから、$x\dot{y} - y\dot{x}$の時間微分もゼロ、すなわち保存量である。
@@ -49,7 +49,7 @@ $$
 
 全エネルギー及び$x$方向の運動量のみ保存するが、選択肢に存在しない。ウの位置エネルギーを保存すると誤答することが多い。
 
-## 【2】
+【2】
 
 (1) 質点$A$の$x$方向、$y$方向の釣り合い。
 $$
@@ -107,7 +107,7 @@ $$
 
 解析力学ではお約束の二重振り子の問題。お約束ではあるが、一般化座標や仮想仕事の理解の確認に便利である。
 
-## 【3】
+【3】
 
 ### 解答
 
@@ -146,8 +146,8 @@ $$
 $$
     \begin{aligned}
     x_g & = \frac{1}{2}\left(\frac{x}{2} + \frac{x+X}{2} \right) \\
-        & = \frac{x}{2} + \frac{X}{4}                            \\
-    y_g & = \frac{y}{2} + \frac{Y}{4}
+        & = \frac{x}{2} + \frac{X}{4},                            \\
+    y_g & = \frac{y}{2} + \frac{Y}{4}.
     \end{aligned}
 $$
 
@@ -163,12 +163,12 @@ $$
     \begin{aligned}
     W & = 2mg \delta y_g                                                               \\
         & = \frac{mgl}{2} \left( 3 \sin \theta - \sin(\theta + \phi)\right)\delta \theta \\
-        & = F_\theta \delta \theta
+        & = F_\theta \delta \theta.
     \end{aligned}
 $$
 従って、
 $$
-    F_\theta =  \frac{mgl}{2} \left( 3 \sin \theta - \sin(\theta + \phi)\right)
+    F_\theta =  \frac{mgl}{2} \left( 3 \sin \theta - \sin(\theta + \phi)\right).
 $$
 
 また、釣り合いと座標の取り方から、「$x$座標の重心位置が$0$でなければならない」という条件を使っても求めることができる。
@@ -177,11 +177,11 @@ $$
     x_g & = \frac{x}{2} + \frac{X}{4}                                                 \\
         & = \frac{l}{2} \sin \theta + \frac{l}{4} (\sin \theta - \sin(\theta + \phi)) \\
         & = \frac{l}{4}\left(3\sin \theta - \sin(\theta + \phi) \right)               \\
-        & = 0
+        & = 0.
     \end{aligned}
 $$
 
-## 【4】
+【4】
 
 ### 解答
 
@@ -209,17 +209,17 @@ $$
 
 角運動量保存則がラグランジュの運動方程式として直接現れる例である。最初にラグランジアンを扱う際は、二次元極座標を扱うのがわかりやすいであろう。
 
-## 【5】
+【5】
 
 ### 解答
 
 合成関数の微分公式から
 $$
-    \frac{dF}{dx} = \frac{\partial F}{\partial f}f'+\frac{\partial F}{\partial f'}f''
+    \frac{dF}{dx} = \frac{\partial F}{\partial f}f'+\frac{\partial F}{\partial f'}f''.
 $$
 また、オイラー・ラグランジュ方程式より
 $$
-    \frac{d}{dx}\left(\frac{\partial F}{\partial f'}\right) = \frac{\partial F}{\partial f}
+    \frac{d}{dx}\left(\frac{\partial F}{\partial f'}\right) = \frac{\partial F}{\partial f}.
 $$
 以上より、
 $$
@@ -228,7 +228,7 @@ $$
                     & = \underbrace{\frac{dF}{dx}}_{f' \partial_f F  + f''\partial_f' F} - f'' \frac{\partial F}{\partial f'}
     -  f' \underbrace{\frac{d}{dx}\left(\frac{\partial F}{\partial f'}\right)}_{\partial_f F}                                                                        \\
                     & = f' \frac{\partial F}{\partial f} + f'' \frac{\partial F}{\partial f'} - f'' \frac{\partial F}{\partial f'} -  f' \frac{\partial F}{\partial f} \\
-                    & = 0
+                    & = 0.
     \end{aligned}
 $$
 以上から、$dB/dx = 0$が示された。
@@ -237,7 +237,7 @@ $$
 
 解析力学において頻出する合成関数の微分ができるか問う問題である。変分原理においてベルトラミの公式は頻繁に利用するため、一度導出させておくのは教育的であろう。
 
-## 【6】
+【6】
 
 ### 解答
 
@@ -275,15 +275,15 @@ $$
 
 $$
 \begin{aligned}
-q^1 & = Q^1+Q^2 \\
+q^1 & = Q^1+Q^2, \\
 q^2 & = Q^1-Q^2
 \end{aligned}
 $$
 であるから、
 $$
 \begin{aligned}
-\dot{q}^1 & = \dot{Q}^1+\dot{Q}^2 \\
-\dot{q}^2 & = \dot{Q}^1-\dot{Q}^2
+\dot{q}^1 & = \dot{Q}^1+\dot{Q}^2, \\
+\dot{q}^2 & = \dot{Q}^1-\dot{Q}^2.
 \end{aligned}
 $$
 ここで、一般化運動量の定義から、
@@ -291,12 +291,12 @@ $$
 \begin{aligned}
 P_1 & = \frac{\partial L}{\partial \dot{Q}^1}                                                                                                                                 \\
     & = \frac{\partial L}{\partial \dot{q}^1}\frac{\partial \dot{q}^1}{\partial \dot{Q}^1}+\frac{\partial L}{\partial \dot{q}^2}\frac{\partial \dot{q}^2}{\partial \dot{Q}^1} \\
-    & = p_1 + p_2
+    & = p_1 + p_2.
 \end{aligned}
 $$
 同様に、
 $$
-P_2 = p_1 - p_2
+P_2 = p_1 - p_2.
 $$
 
 定義に戻らないと、2のファクターをよく間違える。
@@ -314,12 +314,12 @@ $$
 より、$P_1$が時間不変量であることがわかる。一方、相対運動量である$P_2$は保存しない。
 
 $$
-\{P_2, H\} =- \frac{\partial H}{\partial Q^2} = - 2U'(2Q^2)
+\{P_2, H\} =- \frac{\partial H}{\partial Q^2} = - 2U'(2Q^2).
 $$
 
 微分により、係数$2$が出てくることに注意。
 
-## 【7】
+【7】
 
 ### 解答
 
