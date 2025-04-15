@@ -41,15 +41,15 @@ $$
 さて、$(x,y)$空間における物理量$u(x,y)$の全微分を考えよう。
 
 $$
-du = \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy
+du = \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy.
 $$
 
 これは、あたかも$du$というベクトルを、$dx, dy$という基底で展開しているように見える。そこで、以下の極座標表示を例に、基底の変換則を見てみよう。
 
 $$
 \begin{aligned}
-x &= r \cos \theta \\
-y &= r \sin \theta
+x &= r \cos \theta, \\
+y &= r \sin \theta.
 \end{aligned}
 $$
 
@@ -58,8 +58,8 @@ $$
 
 $$
 \begin{aligned}
-dx &= \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta\\
-dy &= \frac{\partial y}{\partial r}dr + \frac{\partial y}{\partial \theta} d\theta
+dx &= \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta,\\
+dy &= \frac{\partial y}{\partial r}dr + \frac{\partial y}{\partial \theta} d\theta.
 \end{aligned}
 $$
 
@@ -82,11 +82,11 @@ dr \\ d\theta
 &= A
 \begin{pmatrix}
 dr \\ d\theta
-\end{pmatrix}
+\end{pmatrix}.
 \end{aligned}
 $$
 
-これは、ヤコビ行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。つまり、$dr = \mathbf{e}_1, d\theta = \mathbf{e}_2, dx = \tilde{\mathbf{e}_1}, dy = \tilde{\mathbf{e}_2}$として、
+これは、ヤコビ行列$A$を用いた$\{dr, d\theta\}$という基底から$\{dx, dy\}$という基底への変換則のように見える。つまり、$dr = \mathbf{e}_1, d\theta = \mathbf{e}_2, dx = \tilde{\mathbf{e}}_1, dy = \tilde{\mathbf{e}}_2$として、
 
 $$
 \tilde{\mathbf{e}}_i = A_i^j \mathbf{e}_j
@@ -99,7 +99,7 @@ $$
 $$
 \begin{aligned}
 du &= \frac{\partial u}{\partial x}dx +\frac{\partial u}{\partial y}dy \\
-&=\frac{\partial u}{\partial r}dr +\frac{\partial u}{\partial \theta}d\theta
+&=\frac{\partial u}{\partial r}dr +\frac{\partial u}{\partial \theta}d\theta.
 \end{aligned}
 $$
 
@@ -115,7 +115,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial u}{\partial r} &= \frac{\partial u}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial r} \\
+\frac{\partial u}{\partial r} &= \frac{\partial u}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial r}, \\
 \frac{\partial u}{\partial \theta} &= \frac{\partial u}{\partial x}\frac{\partial x}{\partial \theta} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial \theta}
 \end{aligned}
 $$
@@ -132,7 +132,7 @@ $$
 \end{pmatrix}
 \begin{pmatrix}
 \partial_x u \\ \partial_y u
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 これは、$dr, d\theta$から$dx, dy$への座標変換と逆の変換を受けているため、$u$の全微分の係数$\partial_x u, \partial_y u$などは反変ベクトルであることがわかる。
@@ -177,7 +177,7 @@ $$
 として$r$を消去し、両辺を$x$で偏微分すると
 
 $$
-\frac{1}{\cos^2 \theta} \frac{\partial \theta}{\partial x} = -\frac{y}{x^2}
+\frac{1}{\cos^2 \theta} \frac{\partial \theta}{\partial x} = -\frac{y}{x^2}.
 $$
 
 ここで、$\cos \theta = x/r$であることから以下のように求めることができる。
@@ -186,7 +186,7 @@ $$
 \begin{aligned}
 \frac{\partial \theta}{\partial x} &=  - \frac{x^2}{r^2} \frac{y}{x^2}\\
 &= \frac{-y}{x^2+y^2} \\
-&= -\frac{\sin \theta}{r}
+&= -\frac{\sin \theta}{r}.
 \end{aligned}
 $$
 
@@ -219,7 +219,7 @@ dr \\ d\theta
 A
 \begin{pmatrix}
 dr \\ d\theta
-\end{pmatrix}
+\end{pmatrix}.
 \end{aligned}
 $$
 
@@ -241,7 +241,7 @@ r \cos \theta &  r \sin \theta \\
 \end{pmatrix}
 \begin{pmatrix}
 dx \\ dy
-\end{pmatrix}
+\end{pmatrix}.
 \end{aligned}
 $$
 
@@ -266,7 +266,7 @@ $$
 \frac{\partial \theta}{\partial x} = -\frac{\sin \theta}{r},\frac{\partial \theta}{\partial y} = \frac{\cos \theta}{r}
 $$
 
-と求めることができる。多変数、例えば3次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。
+と求めることができる。多変数、例えば三次元の極座標などでは計算が煩雑になるが、それでもヤコビ行列を使えば発見法的に計算する必要がなく、系統的に計算ができるようになる。
 
 ## 外積と外微分
 
@@ -275,7 +275,7 @@ $$
 任意の次元の空間で議論できるが、わかりやすさのために3次元空間$(x,y,z)$で考えよう。この空間に定義されたスカラー関数$f(x,y,z)$を考える。この関数の全微分を以下のように定義する。
 
 $$
-df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz
+df \equiv \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz.
 $$
 
 先ほど見たように、これは$dx, dy, dz$を基底としたベクトルとみなすことができる。スカラー関数を全微分したものを1次微分形式、もしくは単純に **1形式**(1-form) と呼ぶ。また、微分する前のスカラー関数を **0形式**(0-form) と呼ぶ。
@@ -289,7 +289,7 @@ $$
 
 $$
 \begin{aligned}
-dx \wedge dx &= 0 \\
+dx \wedge dx &= 0, \\
 dx \wedge dy &= - dy \wedge dx
 \end{aligned}
 $$
@@ -299,8 +299,8 @@ $$
 
 $$
 \begin{aligned}
-du &= u_x dx + u_y dy + u_z dz\\
-dv &= v_x dx + v_y dy + v_z dz
+du &= u_x dx + u_y dy + u_z dz,\\
+dv &= v_x dx + v_y dy + v_z dz.
 \end{aligned}
 $$
 
@@ -312,7 +312,7 @@ du \wedge dv &= (u_x dx + u_y dy + u_z dz) \wedge (v_x dx + v_y dy + v_z dz) \\
 &=
 (u_x v_y  - u_y v_x ) dx \wedge dy
 +(u_y v_z  - u_z v_y ) dy \wedge dz
-+(u_z v_x  - u_x v_z ) dz \wedge dx
++(u_z v_x  - u_x v_z ) dz \wedge dx.
 \end{aligned}
 $$
 
@@ -336,11 +336,11 @@ $$
 df_x = \frac{\partial f_x}{\partial x} dx + \frac{\partial f_y}{\partial y} dy + \frac{\partial f_z}{\partial z} dz
 $$
 
-で与えられる。$f_y, f_z$も同様である。したがって、
+で与えられる。$f_y, f_z$も同様である。従って、
 
 $$
 d\omega_1 =
-\left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy + (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz + (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial x}) dz \wedge dx
+\left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy + (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz + (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial z}) dz \wedge dx
 $$
 
 となる。$dx\wedge dy$など、$1$形式の外積で作られた新たな基底で表現されたものを$2$形式と呼ぶ。すなわち$1$形式を外微分することで$2$形式を作ることができた。同様にして、$p$形式を外微分することで$p+1$形式を作ることができる。
@@ -349,8 +349,8 @@ $1$形式の基底$dx$に対しては、偏微分演算子$\partial_x$が双対�
 
 $$
 \begin{aligned}
-\left<dx, \frac{\partial}{\partial x} \right> &= \frac{\partial x}{\partial x} = 1\\
-\left<dy, \frac{\partial}{\partial x} \right> &= \frac{\partial y}{\partial x} = 0\\
+\left<dx, \frac{\partial}{\partial x} \right> &= \frac{\partial x}{\partial x} = 1,\\
+\left<dy, \frac{\partial}{\partial x} \right> &= \frac{\partial y}{\partial x} = 0.
 \end{aligned}
 $$
 
@@ -362,7 +362,7 @@ $$
 \begin{aligned}
 \left<dx \wedge dy, \frac{\partial}{\partial x} \right> & \equiv
 \left<dx, \frac{\partial}{\partial x} \right> dy\\
-&= dy
+&= dy.
 \end{aligned}
 $$
 
@@ -372,7 +372,7 @@ $$
 \begin{aligned}
 \left<dy \wedge dx, \frac{\partial}{\partial x} \right> & = \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
 &= -\left<dx, \frac{\partial}{\partial x} \right> dy
-&= -dy
+&= -dy.
 \end{aligned}
 $$
 
@@ -382,8 +382,8 @@ $$
 
 $$
 \begin{aligned}
-x &= r \cos \theta \\
-y &= r \sin \theta
+x &= r \cos \theta, \\
+y &= r \sin \theta.
 \end{aligned}
 $$
 
@@ -391,8 +391,8 @@ $x, y$を$r, \theta$の関数だと思って、それぞれ全微分してみよ
 
 $$
 \begin{aligned}
-dx &= \cos \theta dr - r\sin \theta d\theta\\
-dy &= \sin \theta dr + r\cos \theta d\theta
+dx &= \cos \theta dr - r\sin \theta d\theta,\\
+dy &= \sin \theta dr + r\cos \theta d\theta.
 \end{aligned}
 $$
 
@@ -402,7 +402,7 @@ $$
 \begin{aligned}
 dx \wedge dy &= (\cos \theta dr - r\sin \theta d\theta) (\sin \theta dr + r\cos \theta d\theta) \\
 &= r \cos^2 \theta dr \wedge d\theta - r \sin^2 \theta d\theta \wedge dr \\
-&= r dr \wedge d\theta
+&= r dr \wedge d\theta.
 \end{aligned}
 $$
 
@@ -436,7 +436,7 @@ df =
 \partial_y f \\
 \partial_z f
 \end{pmatrix}
-= \mathrm{grad} f
+= \mathrm{grad} f.
 $$
 
 すなわち、これは勾配を表している。また、1形式$\omega_1$が
@@ -448,7 +448,7 @@ $$
 で与えられている時、
 
 $$
-d\omega_1 =  dB_x \wedge dx + B_y \wedge dx + B_z \wedge dz
+d\omega_1 =  dB_x \wedge dx + B_y \wedge dy + B_z \wedge dz
 $$
 
 となる。ここで
@@ -463,7 +463,7 @@ $$
 \begin{aligned}
 dB_x \wedge dx &= \left(\frac{\partial B_x}{\partial x} dx +\frac{\partial B_x}{\partial y} dy +\frac{\partial B_x}{\partial z} dz \right) \wedge dx \\
 &= \frac{\partial B_x}{\partial y} dy \wedge dx + \frac{\partial B_x}{\partial z} dz \wedge dx \\
-&= - \frac{\partial B_x}{\partial y} dx \wedge dy + \frac{\partial B_x}{\partial z} dz \wedge dx
+&= - \frac{\partial B_x}{\partial y} dx \wedge dy + \frac{\partial B_x}{\partial z} dz \wedge dx.
 \end{aligned}
 $$
 
@@ -477,9 +477,9 @@ $$
 
 $$
 \begin{aligned}
-\ast dx &= dy \wedge dz \\
-\ast dy &= dz \wedge dx \\
-\ast dz &= dx \wedge dy
+\ast dx &= dy \wedge dz, \\
+\ast dy &= dz \wedge dx, \\
+\ast dz &= dx \wedge dy.
 \end{aligned}
 $$
 
@@ -487,23 +487,24 @@ $$
 
 $$
 \begin{aligned}
-\ast (dy \wedge dz) &= dx \\
-\ast (dz \wedge dx) &= dy \\
-\ast (dx \wedge dy) &= dz
+\ast (dy \wedge dz) &= dx, \\
+\ast (dz \wedge dx) &= dy, \\
+\ast (dx \wedge dy) &= dz.
 \end{aligned}
 $$
 
 また、ベクトルが張る次元と等しい微分形式($p=d$の場合)に作用させるとスカラーとなる。
 
 $$
-\ast (dx \wedge dy \wedge dz) = 1
+\ast (dx \wedge dy \wedge dz) = 1.
 $$
 
 ホッジ作用素を用いると、
 
 $$
 \begin{aligned}
-\ast (d\omega_1) &= \left(\frac{\partial B_z}{\partial y} - \frac{\partial B_y}{\partial z} \right) dx + \left(\frac{\partial B_x}{\partial z} - \frac{\partial B_z}{\partial x} \right) dy + \left(\frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) dz \end{aligned}
+\ast (d\omega_1) &= \left(\frac{\partial B_z}{\partial y} - \frac{\partial B_y}{\partial z} \right) dx + \left(\frac{\partial B_x}{\partial z} - \frac{\partial B_z}{\partial x} \right) dy + \left(\frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) dz.
+\end{aligned}
 $$
 
 これはベクトル場
@@ -520,19 +521,19 @@ $$
 また、以下の2形式を定義する。
 
 $$
-\omega_2 = E_x dy \wedge dz + E_y dz \wedge dx + E_z dx \wedge dy
+\omega_2 = E_x dy \wedge dz + E_y dz \wedge dx + E_z dx \wedge dy.
 $$
 
 この外微分を計算すると、
 
 $$
-d \omega_2 = \left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} +  \frac{\partial E_z}{\partial z} \right) dx \wedge dy \wedge dz
+d \omega_2 = \left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} +  \frac{\partial E_z}{\partial z} \right) dx \wedge dy \wedge dz.
 $$
 
 さらにホッジ作用素を作用させると、
 
 $$
-\ast (d \omega_2) = \left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} +  \frac{\partial E_z}{\partial z} \right)
+\ast (d \omega_2) = \left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} +  \frac{\partial E_z}{\partial z} \right).
 $$
 
 これは、ベクトル場
@@ -566,14 +567,14 @@ d(df) &= \sum_i d \left(\frac{\partial f}{\partial q^i}dq^i \right) \\
 &= \sum_i\left(\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j\right) \wedge dq^i\\
 &= \sum_i\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j \wedge dq^i \\
 &= \sum_{i<j} \left(\frac{\partial^2 f}{\partial q^i \partial q^j} - \frac{\partial^2 f}{\partial q^j \partial q^i} \right) dq^j \wedge dq^i \\
-&=0
+&=0.
 \end{aligned}
 $$
 
 これは、よく知られた以下の公式を一般化したものになっている。
 
 $$
-\mathrm{rot} (\mathrm{grad} f) = 0
+\mathrm{rot} (\mathrm{grad} f) = 0.
 $$
 
 また、$\omega$として$1$形式を採用した場合は
@@ -590,8 +591,8 @@ $$
 
 $$
 \begin{aligned}
-dQ &= \frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\\
-dP &= \frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp
+dQ &= \frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp,\\
+dP &= \frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp.
 \end{aligned}
 $$
 
@@ -601,7 +602,7 @@ $$
 \begin{aligned}
 dP \wedge dQ &= \left(\frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp \right)
 \left(\frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\right) \\
-&= \left(\frac{\partial P}{\partial p}\frac{\partial Q}{\partial q} - \frac{\partial P}{\partial q}\frac{\partial Q}{\partial p} \right) dp\wedge dq
+&= \left(\frac{\partial P}{\partial p}\frac{\partial Q}{\partial q} - \frac{\partial P}{\partial q}\frac{\partial Q}{\partial p} \right) dp\wedge dq.
 \end{aligned}
 $$
 
@@ -614,7 +615,7 @@ $$
 が成り立つことが正準変換の条件となる。このように、正準共役な変数同士を結んだ2形式を **正準2形式**(canonical 2-form) と呼び、一般に$\omega$で表すことが多い。
 
 $$
-\omega = dp \wedge dq = dP \wedge dQ
+\omega = dp \wedge dq = dP \wedge dQ.
 $$
 
 すなわち、正準2形式は正準変換で不変である。
@@ -622,7 +623,7 @@ $$
 正準2形式を使うと、正準方程式を内積の形で書くことができる。正準方程式のリュービル演算子を考えよう。リュービル演算子とは、任意の物理量の時間微分を与える演算子であった。
 
 $$
-\frac{dA}{dt} = i\mathcal{L}A
+\frac{dA}{dt} = i\mathcal{L}A.
 $$
 
 $A$が$(q,p)$の関数であり、$(q,p)$が時間の関数であるなら
@@ -631,7 +632,7 @@ $$
 \begin{aligned}
 \frac{dA}{dt} &= \frac{\partial A}{\partial q} \dot{q} +
 \frac{\partial A}{\partial p} \dot{p}\\
-&= \underbrace{\left(\dot{q}\frac{\partial }{\partial q} + \dot{q} \frac{\partial}{\partial p}\right)}_{i\mathcal{L}}A
+&= \underbrace{\left(\dot{q}\frac{\partial }{\partial q} + \dot{p} \frac{\partial}{\partial p}\right)}_{i\mathcal{L}}A
 \end{aligned}
 $$
 
@@ -699,7 +700,7 @@ $$
 我々は、力と加速度が比例する、というニュートンの運動方程式からスタートした。
 
 $$
-F = ma
+F = ma.
 $$
 
 ここで、$F$がポテンシャル力であり、$F(x) = -U'(x)$と書けるならば、
@@ -724,7 +725,7 @@ $$
 
 $$
 \begin{aligned}
-p &= \frac{\partial L}{\partial \dot{q}} \\
+p &= \frac{\partial L}{\partial \dot{q}}, \\
 H &= p \dot{q} - L
 \end{aligned}
 $$
@@ -733,8 +734,8 @@ $$
 
 $$
 \begin{aligned}
-\dot{q} &= \frac{\partial H}{\partial p}\\
-\dot{q} &= -\frac{\partial H}{\partial q}
+\dot{q} &= \frac{\partial H}{\partial p},\\
+\dot{p} &= -\frac{\partial H}{\partial q}
 \end{aligned}
 $$
 
@@ -756,13 +757,13 @@ $$
 i \mathcal{L} = \frac{\partial H}{\partial p}\frac{\partial}{\partial q} -\frac{\partial H}{\partial q}\frac{\partial}{\partial p}
 $$
 
-となるため、リュービル演算子の正準2形式$\omega = dp \wedge dq$との内積は、ハミルトニアンの全微分を用いて
+となる。リュービル演算子と正準2形式$\omega = dp \wedge dq$との内積は、ハミルトニアンの全微分を用いて
 
 $$
 \left<\omega, i\mathcal{L} \right> = -dH
 $$
 
-という、局所座標に依らない運動方程式が得られた。
+と表現され、局所座標に依らない運動方程式が得られた。
 
 ![運動方程式の座標に依らない表現](fig/differential_form.png)
 
@@ -770,8 +771,8 @@ $$
 
 $$
 \begin{aligned}
-m \ddot{x} &= -U'(x) \\
-\left<\omega, i\mathcal{L} \right> &= -dH
+m \ddot{x} &= -U'(x), \\
+\left<\omega, i\mathcal{L} \right> &= -dH.
 \end{aligned}
 $$
 
@@ -781,12 +782,12 @@ $$
 
 ## コラム：二次方程式は必要か
 
-中学、高校時代、数学に苦しんだ人は多いであろう。「大事だから」と教師に諭され、必死に勉強したにもかかわらず、実際に社会に出てみると、あれだけ苦労して学んだ数学の諸概念が全く出てこない。そこでSNSでうっかり「数学は役に立たない」などと言おうものなら、数学ガチ勢に袋叩きにされ、ますます数学が嫌いになってしまう。やり玉に上がりやすいのは三角関数であるが、以前、二次方程式なんて必要か？という問題的がなされ、やはり荒れているのを見かけた。無論、二次方程式は役に立つが、それ以前に面白いものなので、少しその話をしたい。
+中学、高校時代、数学に苦しんだ人は多いであろう。「大事だから」と教師に諭され、必死に勉強したにもかかわらず、実際に社会に出てみると、あれだけ苦労して学んだ数学の諸概念が全く出てこない。そこでSNSでうっかり「数学は役に立たない」などと言おうものなら、数学ガチ勢に袋叩きにされ、ますます数学が嫌いになってしまう。やり玉に上がりやすいのは三角関数であるが、以前、二次方程式なんて必要か？という問題提起がなされ、やはり荒れているのを見かけた。無論、二次方程式は役に立つが、それ以前に面白いものなので、少しその話をしたい。
 
 一次方程式から始めよう。
 
 $$
-y = a x + b
+y = a x + b.
 $$
 
 ここで係数$a, b$や、$y$の値がわかっている時に、この式を満たす$x$を求める作業を「方程式を解く」と言う。
@@ -799,7 +800,7 @@ $$
 
 となる。答えは$x=-1$と負の数になる。負の数は当たり前のようでいて、不思議な数だ。先程の式が負の数の定義になっている。すなわち、「1を足したら0になる量」が$-1$だ。つまり、一次方程式を解くためには、係数に0か自然数しか使わなくても、負の数を導入する必要がある。自然数とゼロに加えて、負の数をあわせた数を整数と呼ぶ。
 
-さらに、$a = 1, b=1, y = 1$を代入すると、
+さらに、$a = 2, b=0, y = 1$を代入すると、
 
 $$
 2x = 1
@@ -810,7 +811,7 @@ $$
 さて、二次方程式を考えよう。
 
 $$
-y = ax^2+bx+c
+y = ax^2+bx+c.
 $$
 
 自然数係数の一次方程式が負の数と有理数を要求したように、二次方程式も新たな数を二種類要求する。
