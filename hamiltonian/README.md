@@ -215,7 +215,7 @@ $$
 と書ける。ここでは変数を省略して書いたが、実際には微分係数は「どこにおける微分係数であるか」の情報が必要である。ここでは、点$(q_0, \dot{q}_0)$での微分を考えたことにしよう。変数を省略せずに書くと、
 
 $$
-dL(q_0, \dot{q}_0) =\left.\frac{\partial L}{\partial q}\right|_{q=q_0,\dot{q}=\dot{q}_0} dq + \left.L \frac{\partial L}{\partial \dot{q}}\right|_{q=q_0,\dot{q}=\dot{q}_0} d\dot{q}
+dL(q_0, \dot{q}_0) =\left.\frac{\partial L}{\partial q}\right|_{q=q_0,\dot{q}=\dot{q}_0} dq + \left. \frac{\partial L}{\partial \dot{q}}\right|_{q=q_0,\dot{q}=\dot{q}_0} d\dot{q}
 $$
 
 これは、$L(q,\dot{q})$で表現される二次元曲面において、$(q_0, \dot{q}_0)$点での接平面を考えていることに対応する。接平面は平面であるから、基底が二つあれば全ての点を表現できる。この基底にあたるのが$dq$と$d\dot{q}$である。つまり、先程の式は
@@ -387,7 +387,7 @@ $$
 
 $$
 \begin{aligned}
-p &= \frac{\partial L}{d \dot{q}}, \\
+p &= \frac{\partial L}{\partial \dot{q}}, \\
 H &= p\dot{q} - L.
 \end{aligned}
 $$
