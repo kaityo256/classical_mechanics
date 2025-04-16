@@ -384,7 +384,7 @@ $$
 であったから
 
 $$
-\hat{H} = -\frac{\hbar^2}{m}\frac{\partial^2}{\partial x^2} + V
+\hat{H} = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V
 $$
 
 と書ける。さて、波動関数$\psi$に対して、エネルギー演算子$\hat{E}$と、ハミルトニアンを演算子化した$\hat{H}$の固有値が等しいことを要請する。すなわち、
