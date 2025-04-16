@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="ページ1" id="Xpi5GvDhhlEL-7WdTvqS">
-    <mxGraphModel dx="973" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="750" math="1" shadow="0">
+    <mxGraphModel dx="278" dy="151" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="750" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -139,7 +139,7 @@
         <mxCell id="bC-y-SfwGKUDFejCJZRV-14" value="`H\left(q,\frac{\partial W}{\partial q},t\right)+\frac{\partial W}{\partial t} = 0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="922" y="387" width="195" height="67" as="geometry" />
         </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-17" value="`\hat{p} = -i \frac{h}{2\pi} \frac{\partial}{\partial x}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-17" value="`\hat{p} = -i h \frac{\partial}{\partial x}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="542" y="625" width="157.12" height="70" as="geometry" />
         </mxCell>
         <mxCell id="bC-y-SfwGKUDFejCJZRV-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
@@ -148,7 +148,7 @@
             <mxPoint x="542" y="659.57" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bC-y-SfwGKUDFejCJZRV-19" value="`[\hat{x},\hat{p}]= i\frac{h}{2\pi}`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="bC-y-SfwGKUDFejCJZRV-19" value="`[\hat{x},\hat{p}]= ih`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="342" y="635" width="127.63" height="50" as="geometry" />
         </mxCell>
         <mxCell id="bC-y-SfwGKUDFejCJZRV-20" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#FF0000;fontSize=16;" parent="1" edge="1">
@@ -229,6 +229,18 @@
               <mxPoint x="720" y="610" />
               <mxPoint x="406" y="610" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SM6MBXZaQpiXMX6AJhht-1" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="629" y="656.23" as="sourcePoint" />
+            <mxPoint x="638" y="656" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SM6MBXZaQpiXMX6AJhht-2" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="654.23" as="sourcePoint" />
+            <mxPoint x="449" y="654" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
