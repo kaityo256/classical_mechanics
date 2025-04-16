@@ -296,7 +296,7 @@ $$
 \delta H = H(Q,P) - H(q,p) = \varepsilon \{H,J\}
 $$
 
-となる。この差$\delts H$がゼロであるならば
+となる。この差$\delta H$がゼロであるならば
 
 $$
 \{H,J\} = 0.
