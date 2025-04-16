@@ -234,22 +234,14 @@ $$
 
 この「線形結合できる」という性質をきちんと定義しよう。線形結合とは「定数倍して和をとる」ことであるから、まず定数倍するための適当なスカラー$a, b$を用意する。これは実数や複素数である。また、定数倍したり和をとったりするための要素を含む集合$\mathbb{V}$を考えよう。この集合の任意の元$\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{V}$が、以下の8つの性質を満たすとき、集合$\mathbb{V}$をベクトル空間、その元をベクトルと呼ぶ。
 
-1. ベクトルの和が結合律を満たす
-    * $\mathbf{u} + (\mathbf{v} + \mathbf{w}) =  (\mathbf{u} + \mathbf{v}) + \mathbf{w}$
-1. ベクトルの和が可換である
-    * $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}$
-1. 零ベクトル(加法の単位元)が存在する
-    * $\mathbf{v} + \mathbf{0} = \mathbf{v}$
-1. ベクトルの加法に逆元が存在する(任意のベクトルに、和をとると零ベクトルにできるベクトルが存在する)
-    * $\mathbf{v} + (- \mathbf{v}) = 0$
-1. スカラーの乗法がベクトルに対して分配律を満たす
-    * $a (\mathbf{u} + \mathbf{v}) = a \mathbf{u} + a \mathbf{v}$
-1. スカラーの加法と乗法が分配律を満たす
-    * $(a+b) \mathbf{u} = a \mathbf{u} + b \mathbf{u}$
-1. スカラーとベクトルの乗法とスカラー同士の乗法が結合律を満たす
-    * $a(b\mathbf{u}) = (ab) \mathbf{u}$
-1. スカラー乗法に単位元が存在する
-    * $1 \mathbf{u} = \mathbf{u}$
+1. ベクトルの和が結合律を満たす $\mathbf{u} + (\mathbf{v} + \mathbf{w}) =  (\mathbf{u} + \mathbf{v}) + \mathbf{w}$
+1. ベクトルの和が可換である $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}$
+1. 零ベクトル(加法の単位元)が存在する $\mathbf{v} + \mathbf{0} = \mathbf{v}$
+1. ベクトルの加法に逆元が存在する(任意のベクトルに、和をとると零ベクトルにできるベクトルが存在する) $\mathbf{v} + (- \mathbf{v}) = 0$
+1. スカラーの乗法がベクトルに対して分配律を満たす $a (\mathbf{u} + \mathbf{v}) = a \mathbf{u} + a \mathbf{v}$
+1. スカラーの加法と乗法が分配律を満たす $(a+b) \mathbf{u} = a \mathbf{u} + b \mathbf{u}$
+1. スカラーとベクトルの乗法とスカラー同士の乗法が結合律を満たす $a(b\mathbf{u}) = (ab) \mathbf{u}$
+1. スカラー乗法に単位元が存在する $1 \mathbf{u} = \mathbf{u}$
 
 以上の8つをベクトル空間の **公理**(axiom) と呼ぶ。
 
