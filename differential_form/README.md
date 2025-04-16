@@ -442,13 +442,13 @@ $$
 すなわち、これは勾配を表している。また、1形式$\omega_1$が
 
 $$
-\omega_1 = B_x dx + B_y dx + B_z dz
+\omega_1 = B_x dx + B_y dy + B_z dz
 $$
 
 で与えられている時、
 
 $$
-d\omega_1 =  dB_x \wedge dx + B_y \wedge dy + B_z \wedge dz
+d\omega_1 =  dB_x \wedge dx + dB_y \wedge dy + dB_z \wedge dz
 $$
 
 となる。ここで
@@ -470,7 +470,7 @@ $$
 ただし、$dx \wedge dx = 0$、$dy \wedge dx = - dx \wedge dy$を用いた。他の成分も同様に計算すると、
 
 $$
-dB = \left(\frac{\partial B_z}{\partial y} - \frac{\partial B_y}{\partial z} \right) dy \wedge dz + \left(\frac{\partial B_x}{\partial z} - \frac{\partial B_z}{\partial x} \right) dz \wedge dx + \left(\frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) dx \wedge dy
+d\omega_1 = \left(\frac{\partial B_z}{\partial y} - \frac{\partial B_y}{\partial z} \right) dy \wedge dz + \left(\frac{\partial B_x}{\partial z} - \frac{\partial B_z}{\partial x} \right) dz \wedge dx + \left(\frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) dx \wedge dy
 $$
 
 ここで、以下の性質を満たすホッジ作用素$\ast$を定義する。
