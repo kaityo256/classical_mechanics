@@ -39,7 +39,7 @@ $$
 \phi(\mathbf{r}, t) = \exp\left[ i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right) \right]
 $$
 
-は、**平面波**(plain wave) と呼ばれる。平面波は、波数ベクトル$\mathbf{k}$の方向に速度$v = \omega/\left|\mathrm{k}\right|$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$ではなく、$i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
+は、**平面波**(plain wave) と呼ばれる。平面波は、波数ベクトル$\mathbf{k}$の方向に速度$v = \omega / \lvert \mathrm{k} \rvert$で進行する波であり、任意の波を平面波で展開することを平面波展開と呼ぶ。平面波展開は空間におけるフーリエ変換である。ここで、指数関数の中身を$-i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$ではなく、$i\left(\mathbf{k} \cdot\mathbf{r} - \omega t \right)$としていることに注意して欲しい。これは、空間と時間のどちらを正符号に取るかの自由度があるためで、空間フーリエ変換から素直に平面波を作ると空間の方が負符号となるのだが、量子力学では空間を正符号とするのが一般的である。それに伴い、一次元の場合の平面波展開も、
 
 $$
 \begin{aligned}
@@ -97,7 +97,7 @@ $$
 
 で与えられる。
 
-さて、$P(x,t) = \left|\psi(x,t)\right|^2$であったから、
+さて、$P(x,t) = \lvert\psi(x,t)\rvert^2$であったから、
 
 $$
 \bar{E}(t) = \int \psi^\ast(x,t) E \psi(x,t)dx.
