@@ -437,7 +437,7 @@ $$
 
 すると、これがまるでベクトルを基底で展開しているかのように見える。また、$dx$の内積をとる相方が$\partial_x$であることもわかる。
 
-となる。以上から、$df$をベクトル、$dx$や$dy$を基底のように扱うことができることがわかる。さらに、$dx$をベクトルと見た時、その相方となるベクトルが$\partial_x$であることもわかる。すなわち、$dx, dy, dz$と$\partial_x, \partial_y, \partial_z$の間には、自然な内積、
+以上から、$df$をベクトル、$dx$や$dy$を基底のように扱うことができることがわかる。さらに、$dx$をベクトルと見た時、その相方となるベクトルが$\partial_x$であることもわかる。すなわち、$dx, dy, dz$と$\partial_x, \partial_y, \partial_z$の間には、自然な内積、
 
 $$
 \left<d\alpha,\frac{\partial}{\partial \beta}\right> = \frac{\partial \alpha}{\partial \beta} = \delta_{\alpha, \beta}

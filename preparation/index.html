@@ -261,7 +261,7 @@
                                     \mathbf{b}) \\
                                     &amp;= a_1 b_1 + a_2 b_2 + a_3 b_3
                                     \\
-                                    &amp;= \sum_i^{3} a_i b_j
+                                    &amp;= \sum_i^{3} a_i b_i
                                     \end{aligned}
                                     \]</span></p>
                                     <p>とドット表記で書く場合もある。以後、内積の表記法としてドット表記<span
@@ -305,10 +305,10 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \mathbf{r} &amp;= r_1
-                                    \mathbf{e}_1  +r_1 \mathbf{e}_2+r_3
+                                    \mathbf{e}_1  +r_2 \mathbf{e}_2+r_3
                                     \mathbf{e}_3\\
                                     &amp;= r&#39;_1
-                                    \mathbf{e}&#39;_1  +r&#39;_1
+                                    \mathbf{e}&#39;_1  +r&#39;_2
                                     \mathbf{e}&#39;_2+r&#39;_3
                                     \mathbf{e}&#39;_3.
                                     \end{aligned}
@@ -369,59 +369,41 @@
                                     class="math inline">\(\mathbb{V}\)</span>をベクトル空間、その元をベクトルと呼ぶ。</p>
                                     <ol type="1">
                                     <li>ベクトルの和が結合律を満たす
-                                    <ul>
-                                    <li><span
+                                    <span
                                     class="math inline">\(\mathbf{u} +
                                     (\mathbf{v} + \mathbf{w})
                                     =  (\mathbf{u} + \mathbf{v}) +
                                     \mathbf{w}\)</span></li>
-                                    </ul></li>
-                                    <li>ベクトルの和が可換である
-                                    <ul>
-                                    <li><span
+                                    <li>ベクトルの和が可換である <span
                                     class="math inline">\(\mathbf{u} +
                                     \mathbf{v} = \mathbf{v} +
                                     \mathbf{u}\)</span></li>
-                                    </ul></li>
                                     <li>零ベクトル(加法の単位元)が存在する
-                                    <ul>
-                                    <li><span
+                                    <span
                                     class="math inline">\(\mathbf{v} +
                                     \mathbf{0} =
                                     \mathbf{v}\)</span></li>
-                                    </ul></li>
                                     <li>ベクトルの加法に逆元が存在する(任意のベクトルに、和をとると零ベクトルにできるベクトルが存在する)
-                                    <ul>
-                                    <li><span
+                                    <span
                                     class="math inline">\(\mathbf{v} +
                                     (- \mathbf{v}) = 0\)</span></li>
-                                    </ul></li>
                                     <li>スカラーの乗法がベクトルに対して分配律を満たす
-                                    <ul>
-                                    <li><span class="math inline">\(a
+                                    <span class="math inline">\(a
                                     (\mathbf{u} + \mathbf{v}) = a
                                     \mathbf{u} + a
                                     \mathbf{v}\)</span></li>
-                                    </ul></li>
                                     <li>スカラーの加法と乗法が分配律を満たす
-                                    <ul>
-                                    <li><span
-                                    class="math inline">\((a+b)
+                                    <span class="math inline">\((a+b)
                                     \mathbf{u} = a \mathbf{u} + b
                                     \mathbf{u}\)</span></li>
-                                    </ul></li>
                                     <li>スカラーとベクトルの乗法とスカラー同士の乗法が結合律を満たす
-                                    <ul>
-                                    <li><span
+                                    <span
                                     class="math inline">\(a(b\mathbf{u})
                                     = (ab) \mathbf{u}\)</span></li>
-                                    </ul></li>
                                     <li>スカラー乗法に単位元が存在する
-                                    <ul>
-                                    <li><span class="math inline">\(1
+                                    <span class="math inline">\(1
                                     \mathbf{u} =
                                     \mathbf{u}\)</span></li>
-                                    </ul></li>
                                     </ol>
                                     <p>以上の8つをベクトル空間の
                                     <strong>公理</strong>(axiom)
@@ -442,7 +424,7 @@
                                     <h2 id="テンソル積">テンソル積</h2>
                                     <p>ベクトルには標準基底を考えることができた。では、行列に同様な基底はあるのだろうか？また、その基底はどのように定義されるのだろうか？その疑問に答えるのがテンソル積である。</p>
                                     <p>基底<span
-                                    class="math inline">\(\mathbf{e}_1\)</span>と、その相方とのクロネッカー積<span
+                                    class="math inline">\(\mathbf{e}_1\)</span>と、その相方とのテンソル積<span
                                     class="math inline">\(\mathbf{e}^1
                                     \otimes
                                     \mathbf{e}_1\)</span>を以下のように定義する。</p>
@@ -490,8 +472,7 @@
                                     <p>すなわち行列単位が行列の標準基底の役割を果たしていることがわかる。</p>
                                     <p>今、3次元縦ベクトルと3次元横ベクトルから、3行3列の行列を作ることができた。このように、2つのベクトル空間から新たなベクトル空間を作る操作を
                                     <strong>テンソル積</strong>(tensor
-                                    product)
-                                    と呼ぶ。クロネッカー積はテンソル積の表現の一つである。</p>
+                                    product) と呼ぶ。</p>
                                     <p>さて、多くの場合において、和の範囲は自明である。例えば3次元空間において<span
                                     class="math inline">\(i\)</span>が軸に関するものであれば、和の範囲は1から3までであろうし、<span
                                     class="math inline">\(N\)</span>粒子系において<span
@@ -680,7 +661,7 @@
                                     <p>すると、これがまるでベクトルを基底で展開しているかのように見える。また、<span
                                     class="math inline">\(dx\)</span>の内積をとる相方が<span
                                     class="math inline">\(\partial_x\)</span>であることもわかる。</p>
-                                    <p>となる。以上から、<span
+                                    <p>以上から、<span
                                     class="math inline">\(df\)</span>をベクトル、<span
                                     class="math inline">\(dx\)</span>や<span
                                     class="math inline">\(dy\)</span>を基底のように扱うことができることがわかる。さらに、<span

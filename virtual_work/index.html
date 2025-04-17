@@ -72,12 +72,12 @@
                                     class="math inline">\(F\)</span>の他に、外部からの力<span
                                     class="math inline">\(F_\mathrm{ex}\)</span>が働いているとする。運動方程式は以下のように書ける。</p>
                                     <p><span class="math display">\[
-                                    m\frac{dx^2}{dt^2} = F +
+                                    m\frac{d^2x}{dt^2} = F +
                                     F_\mathrm{ex}.
                                     \]</span></p>
                                     <p>保存力だけ左辺に移項しよう。</p>
                                     <p><span class="math display">\[
-                                    m\frac{dx^2}{dt^2} -F =
+                                    m\frac{d^2x}{dt^2} -F =
                                     F_\mathrm{ex}.
                                     \]</span></p>
                                     <p><span
@@ -85,7 +85,7 @@
                                     class="math inline">\(U(x)\)</span>が存在し、<span
                                     class="math inline">\(F=-U&#39;(x)\)</span>と表現できる。</p>
                                     <p><span class="math display">\[
-                                    m\frac{dx^2}{dt^2} + U&#39;(x) =
+                                    m\frac{d^2x}{dt^2} + U&#39;(x) =
                                     F_\mathrm{ex}.
                                     \]</span></p>
                                     <p>両辺を<span
@@ -94,7 +94,7 @@
                                     class="math inline">\(x_\mathrm{f}\)</span>までとしよう。</p>
                                     <p><span class="math display">\[
                                     \int_{x_\mathrm{i}}^{x_\mathrm{f}}
-                                    \left(m\frac{dx^2}{dt^2}\right)dx +
+                                    \left(m\frac{d^2x}{dt^2}\right)dx +
                                     \int_{x_\mathrm{i}}^{x_\mathrm{f}}
                                     U&#39;(x)dx =
                                     \int_{x_\mathrm{i}}^{x_\mathrm{f}}F_\mathrm{ex}
@@ -103,7 +103,7 @@
                                     <p>ここで</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    m \frac{dx^2}{dt^2} &amp;= m
+                                    m \frac{d^2x}{dt^2} &amp;= m
                                     \frac{dv}{dt} \\
                                     &amp;= m \frac{dv}{dx}
                                     \underbrace{\frac{dx}{dt}}_{v} \\
@@ -281,7 +281,7 @@
                                     class="math inline">\(N\)</span>個の質点がある時、この質点の場所は<span
                                     class="math inline">\(3N\)</span>個の座標で記述できる。また、2次元空間に剛体がある場合、座標と向き、合わせて<span
                                     class="math inline">\(3\)</span>つの座標で記述できる。このように系の位置や姿勢をまとめて
-                                    <strong>配位</strong>(configuraiton)
+                                    <strong>配位</strong>(configuration)
                                     と呼ぶ。そして、系の配置を一意に指定できる変数の数を
                                     <strong>自由度</strong>(degree of
                                     freedom) と呼ぶ。3次元空間中の<span
@@ -369,7 +369,7 @@
                                     velocity)
                                     と呼ぶ。座標の場合と同様に、必ずしも速度の次元を持つとは限らない。</p>
                                     <p>一般化座標が張る空間を
-                                    <strong>配位空間</strong>(configuraiton
+                                    <strong>配位空間</strong>(configuration
                                     space)
                                     と呼ぶ。一般に配位空間は、ユークリッド空間とならない。例えば剛体振り子の場合、一般化座標は<span
                                     class="math inline">\(\theta\)</span>であり、<span

@@ -664,7 +664,7 @@
                                     T+ \delta
                                     T\)</span>と変化するなら、</p>
                                     <p><span class="math display">\[
-                                    \delta T = \int_0^a \frac{\delta
+                                    \delta T = \int_0^L \frac{\delta
                                     F}{\delta y} \delta y dx  + O(\delta
                                     y^2).
                                     \]</span></p>
@@ -725,12 +725,12 @@
                                     f&#39;
                                     \underbrace{\frac{d}{dx}\left(\frac{\partial
                                     F}{\partial f&#39;}
-                                    \right)}_{=\partial x F} \\
+                                    \right)}_{=\partial F/\partial f} \\
                                     &amp;= \frac{\partial F}{\partial f}
                                     f&#39; +  \frac{\partial F}{\partial
                                     f&#39;} f&#39;&#39; - f&#39;&#39;
                                     \frac{\partial F}{\partial f&#39;} -
-                                    f&#39; \frac{\partial F}{\partial x}
+                                    f&#39; \frac{\partial F}{\partial f}
                                     \\
                                     &amp;= 0.
                                     \end{aligned}
@@ -837,7 +837,7 @@
                                     <p>が成り立つ。この式を
                                     <strong>オイラー・ラグランジュ方程式</strong>(Euler-Laglange
                                     equation)
-                                    と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動法定式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。</p>
+                                    と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動方程式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。</p>
                                     <p>さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、</p>
                                     <p><span class="math display">\[
                                     B = L - \dot{x} \frac{\partial

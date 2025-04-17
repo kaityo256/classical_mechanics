@@ -119,7 +119,7 @@
                                     <p>力学は空間の中の物体の軌跡を追いかける学問であり、異なる座標系を用いれば、軌跡も異なって見える。その中で何が形を変えないものが物理法則である。そこで、座標変換によって物理法則がどのように変換されるかを知る必要がある。その準備として、座標変換によりスカラーやベクトルがどのように変換を受けるかを調べ、改めてスカラー、ベクトルを定義しよう。</p>
                                     <h2 id="スカラー">スカラー</h2>
                                     <p>地図を思い浮かべて欲しい。地図には等高線が書いてあり、その場所での標高がわかるようになっている。この地図を使って、現在自分がいる地点の標高を調べたとしよう。さて、目的地に向かうため、道の方向に合わせて地図を向きを回転させたとしよう。これは座標変換したことに対応するが、座標変換しても現時点の高さは変わらない。このように、座標変換により変換を受けない量を
-                                    <strong>スカラー</strong>(scolar)
+                                    <strong>スカラー</strong>(scalar)
                                     と定義する。</p>
                                     <p>地図の例でいえば、座標<span
                                     class="math inline">\((x,y)\)</span>に対して、高さ<span
@@ -336,7 +336,9 @@
                                     ({}^tT)^i_k \mathbf{e}^k.
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>ここで、</p>
+                                    <p>ただし<span
+                                    class="math inline">\({}^tT\)</span>は行列<span
+                                    class="math inline">\(T\)</span>の転置を表す。ここで、</p>
                                     <p><span class="math display">\[
                                     \tilde{\mathbf{e}}^i = M^i_k
                                     \mathbf{e}^k
@@ -428,7 +430,7 @@
                                     \theta)_P = -\frac{1}{2},\\
                                     \left(\frac{\partial y}{\partial
                                     r}\right)_P &amp;= (\sin \theta)_P =
-                                    \frac{\sqrt{1}}{2}, \\
+                                    \frac{1}{2}, \\
                                     \left(\frac{\partial y}{\partial
                                     \theta}\right)_P &amp;= (r \cos
                                     \theta)_P = \frac{\sqrt{3}}{2}.
@@ -620,7 +622,7 @@
                                     <p>について、両辺に<span
                                     class="math inline">\(T^{-1}\)</span>をかけると、</p>
                                     <p><span class="math display">\[
-                                    \tilde{x}^i = (T^{-1})^i_j x^i.
+                                    \tilde{x}^i = (T^{-1})^i_j x^j.
                                     \]</span></p>
                                     <p><span class="math inline">\({}^t
                                     T =
@@ -802,7 +804,7 @@
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     r &amp;= \sqrt{(\mathbf{r}_A
-                                    -\mathbf{r}_B})^2\\
+                                    -\mathbf{r}_B)^2}\\
                                     &amp;=
                                     \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.
                                     \end{aligned}
