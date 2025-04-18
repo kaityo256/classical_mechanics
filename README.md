@@ -113,6 +113,8 @@
 
 ## ライセンス
 
-Copyright (C) 2022-present Hiroshi Watanabe
+Copyright (C) 2022–present Hiroshi Watanabe
 
-この文章と絵(pptxファイルを含む)はクリエイティブ・コモンズ 4.0 表示 (CC-BY 4.0)で提供する。
+この文章と絵（pptxファイルを含む）は、クリエイティブ・コモンズ 表示–非営利 4.0 国際（CC BY-NC 4.0）ライセンスのもとで提供する。
+
+ライセンスの詳細は [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/) を参照のこと。
