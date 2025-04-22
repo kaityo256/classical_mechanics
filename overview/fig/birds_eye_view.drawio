@@ -22,7 +22,7 @@
         <mxCell id="-pB7I64REoCSjXhP6a5t-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF8000;strokeWidth=3;dashed=1;fontColor=#FF8000;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="22" y="55" width="150" height="205" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-1" value="`m\frac{dx}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-1" value="`m\frac{d^2x}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="27" y="125" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="rrx2s7AU9UJIHRH4i8Ev-2" value="ニュートン力学" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF8000;" parent="1" vertex="1">
@@ -37,10 +37,10 @@
         <mxCell id="rrx2s7AU9UJIHRH4i8Ev-6" value="`\sum_i F_i \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="502" y="110" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-7" value="`m\frac{d^x}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-7" value="`m\frac{d^2 x}{dt^2}=\sum_i F_i`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="262" y="180" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-8" value="`m\frac{d^x}{dt^2}-\sum_i F_i=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="rrx2s7AU9UJIHRH4i8Ev-8" value="`m\frac{d^2x}{dt^2}-\sum_i F_i=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="502" y="180" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="t1Iy8DMnqRUx4DhuXsr5-1" value="仮想仕事&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;の原理&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
@@ -52,7 +52,7 @@
         <mxCell id="t1Iy8DMnqRUx4DhuXsr5-3" value="`\frac{d}{dx}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} = 0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="1012" y="180" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-4" value="`\left(m\frac{d^x}{dt^2}-\sum_i F_i\right) \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="t1Iy8DMnqRUx4DhuXsr5-4" value="`\left(m\frac{d^2 x}{dt^2}-\sum_i F_i\right) \delta x=0`" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="761.88" y="230" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="t1Iy8DMnqRUx4DhuXsr5-5" value="ダランベールの原理" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
