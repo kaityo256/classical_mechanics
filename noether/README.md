@@ -139,7 +139,7 @@ y &= r \sin \theta.
 \end{aligned}
 $$
 
-両辺時間微分すると、
+両辺を時間微分すると、
 
 $$
 \begin{aligned}
@@ -238,7 +238,7 @@ $$
 P = p - \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
 $$
 
-となる。二式をあわせて
+となる。2式をあわせて
 
 $$
 \begin{aligned}
