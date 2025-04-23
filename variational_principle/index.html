@@ -204,7 +204,7 @@
                                     \]</span></p>
                                     <p>が成り立つ。従って、</p>
                                     <p><span class="math display">\[
-                                    v(x_k) = \sqrt{2gy_k}
+                                    v(x_k) = \sqrt{2gy_k}.
                                     \]</span></p>
                                     <p>また、位置<span
                                     class="math inline">\(x_k\)</span>から<span
@@ -320,7 +320,7 @@
                                     x &amp;= 2 a \left(\theta -
                                     \frac{1}{2} \sin \theta \right),\\
                                     y &amp;= 2a \sin^2 \theta = a (1 -
-                                    \cos 2 \theta).
+                                    \cos 2 \theta)
                                     \end{aligned}
                                     \]</span></p>
                                     <p>であったから、<span
@@ -344,7 +344,7 @@
                                     <strong>汎関数</strong>(functional)
                                     と呼ぶ。様々な汎関数があり得るが、力学においては以下のような定積分として現れる。</p>
                                     <p><span class="math display">\[
-                                    I[f] = \int_a^b f(x) dx
+                                    I[f] = \int_a^b f(x) dx.
                                     \]</span></p>
                                     <p>積分範囲 <span
                                     class="math inline">\((a,b)\)</span>
@@ -415,7 +415,7 @@
                                     <span class="math inline">\(F(x) =
                                     x^2\)</span>であるならば、<span
                                     class="math inline">\(I[f]\)</span>は、「関数<span
-                                    class="math inline">\(f(x)\)</span>の自乗を<span
+                                    class="math inline">\(f(x)\)</span>の二乗を<span
                                     class="math inline">\(a &lt; x &lt;
                                     b\)</span>で積分した値を返しなさい」という意味になる。ここで、関数
                                     <span
@@ -804,7 +804,7 @@
                                     class="math inline">\(L(x(t),v(t))\)</span>が与えられたとする。先程までの議論とは異なり、積分変数が<span
                                     class="math inline">\(x\)</span>から<span
                                     class="math inline">\(t\)</span>となり、<span
-                                    class="math inline">\(x(t)\)</span>は時間の関数となることに注意。ここで、<span
+                                    class="math inline">\(x(t)\)</span>は時間の関数となる。ここで、<span
                                     class="math inline">\(v =
                                     \dot{x}\)</span>であるので、以後は<span
                                     class="math inline">\(L(x,\dot{x})\)</span>と書こう。このラグランジアンを、適当な期間<span
@@ -818,7 +818,7 @@
                                     <p>この量<span
                                     class="math inline">\(I\)</span>を作用、この積分を作用積分と呼ぶ。ここで、運動の軌道<span
                                     class="math inline">\(x(t)\)</span>はこの作用が最小になるように決まることを要請するのが最小作用の原理であった。そのような軌道は汎関数微分がゼロとなるはずであるから、被積分関数である<span
-                                    class="math inline">\(L\)</span>について変分を取ると、先程前の議論から</p>
+                                    class="math inline">\(L\)</span>について変分を取ると、</p>
                                     <p><span class="math display">\[
                                     \delta L = \left( \frac{\partial
                                     L}{\partial x} -
@@ -834,10 +834,7 @@
                                     \frac{d}{dt}\left(\frac{\partial
                                     L}{\partial \dot{x}} \right) = 0
                                     \]</span></p>
-                                    <p>が成り立つ。この式を
-                                    <strong>オイラー・ラグランジュ方程式</strong>(Euler-Laglange
-                                    equation)
-                                    と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動方程式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。</p>
+                                    <p>が成り立つ。この式をオイラー・ラグランジュ方程式と呼ぶ。ユークリッド座標を用いた時、これがもとのニュートンの運動方程式に帰着するのは既に見た。その意味でこの式の情報量はニュートンの運動方程式と同じである。しかし、ニュートンの運動方程式がガリレイ変換に対してのみ共変であったのに対して、オイラー・ラグランジュ方程式はより広い範囲の変換に対して共変となる。これを利用すると変数変換が楽になる。</p>
                                     <p>さて、ラグランジアンは運動エネルギーとポテンシャルエネルギーの差であった。ポテンシャルエネルギーが時間に依存するようなケースでない限り、ラグランジアンは時間に陽に依存しないことが多い。ラグランジアンが時間に陽に依存しない場合、ベルトラミの公式が適用できる。すなわち、</p>
                                     <p><span class="math display">\[
                                     B = L - \dot{x} \frac{\partial
@@ -870,7 +867,7 @@
                                     <p>いま、静止している物体に働く力が釣り合っているとする。すなわち、その物体の位置<span
                                     class="math inline">\(x\)</span>において、力<span
                                     class="math inline">\(F(x)=0\)</span>である。この時、物体の位置<span
-                                    class="math inline">\(x\)</span>を少しずらした時にどうなるかは、<span
+                                    class="math inline">\(x\)</span>を少しずらすとどうなるかは、<span
                                     class="math inline">\(x\)</span>まわりの<span
                                     class="math inline">\(F(x)\)</span>の関数形による。</p>
                                     <figure>
