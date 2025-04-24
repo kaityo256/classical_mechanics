@@ -285,8 +285,8 @@ $$
 
 $$
 \begin{aligned}
-dx &= \left(\frac{\partial x}{\partial r}\right)_P dr +\left(\frac{\partial x}{\partial \theta}\right)_P dr,  \\
-dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\partial \theta}\right)_P dr.
+dx &= \left(\frac{\partial x}{\partial r}\right)_P dr +\left(\frac{\partial x}{\partial \theta}\right)_P d\theta,  \\
+dy &= \left(\frac{\partial y}{\partial r}\right)_P dr +\left(\frac{\partial y}{\partial \theta}\right)_P d\theta.
 \end{aligned}
 $$
 
@@ -343,7 +343,7 @@ $$
 \tilde{B}_i = \frac{\partial x^j}{\partial \tilde{x}^i} B_j
 $$
 
-のように変換を受けるベクトル$\mathbf{B}$を **共変ベクトル**(covariant vector) と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが反変ベクトルである。この変換公式が共変ベクトルの定義を与える。
+のように変換を受けるベクトル$\mathbf{B}$を **共変ベクトル**(covariant vector) と呼び、添字を右下につける。チルダのある量を左辺に持ってきた時、右辺の変換行列の偏微分の分母にチルダが現れるのが共変ベクトルである。この変換公式が共変ベクトルの定義を与える。
 
 数学的準備の章にて、$dx$を横ベクトルとみなすと、$\partial_x$が自然な双対基底であり、縦ベクトルとみなせることを見た。従って、$\partial_x, \partial_y$は共変ベクトルとなることが期待される。
 
@@ -485,7 +485,7 @@ $$
 
 $$
 \begin{aligned}
-m\frac{d\tilde{x}^i}{dt^2} - \tilde{F}_i &= T^j_i (m \frac{d x^j}{dt^2} - F_j).
+m\frac{d^2\tilde{x}^i}{dt^2} - \tilde{F}_i &= T^j_i (m \frac{d x^j}{dt^2} - F_j).
 \end{aligned}
 $$
 
@@ -583,7 +583,7 @@ $$
 E = \frac{1}{2}m\dot{x}^2 + \frac{1}{2} k x^2
 $$
 
-が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を **保存量**(conserved value) と呼ぶ。この$E$をエネルギーと呼び、エネルギーが時間変化しないことをエネルギー保存則と呼ぶ。すなわち、エネルギーとは運動方程式の保存量の一つであり、エネルギー保存則は運動方程式の持つ性質の一つに過ぎない。
+が存在する。微分方程式において、時間不変量、すなわち時間微分してゼロとなる量を **保存量**(conserved quantity) と呼ぶ。この$E$をエネルギーと呼び、エネルギーが時間変化しないことをエネルギー保存則と呼ぶ。すなわち、エネルギーとは運動方程式の保存量の一つであり、エネルギー保存則は運動方程式の持つ性質の一つに過ぎない。
 
 ここで、
 
