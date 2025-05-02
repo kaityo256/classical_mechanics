@@ -206,10 +206,13 @@ $$
 両辺を$\theta$で積分すると
 
 $$
-\begin{aligned}
-x &= 2 a \left(\theta - \frac{1}{2} \sin \theta \right),\\
-y &= 2a \sin^2 \theta = a (1 - \cos 2 \theta)
-\end{aligned}
+x = 2 a \left(\theta - \frac{1}{2} \sin 2\theta \right).
+$$
+
+ここで、
+
+$$
+y = 2a \sin^2 \theta = a (1 - \cos 2 \theta)
 $$
 
 であったから、$s = 2\theta$とすると
@@ -233,7 +236,7 @@ $$
 I[f] = \int_a^b f(x) dx.
 $$
 
-積分範囲 $(a,b)$ を固定すると、$F$は関数に実数を対応付けるため汎関数になっていることがわかる。例えば引数として$f(x) = x$を代入すると
+積分範囲 $(a,b)$ を固定すると、$I$は関数に実数を対応付けるため汎関数になっていることがわかる。例えば引数として$f(x) = x$を代入すると
 
 $$
 \begin{aligned}
@@ -514,7 +517,7 @@ $$
 $2gC^2 = 1/2a$とすると、以下の微分方程式を得る。
 
 $$
-\frac{dy}{dx} = -\sqrt{\frac{2a - y}{y}}.
+\frac{dy}{dx} = \sqrt{\frac{2a - y}{y}}.
 $$
 
 これと、角度の定義
