@@ -419,16 +419,15 @@ $$
 について、変分を考えてみよう。両辺の変分をとると
 
 $$
-\delta I = \int \left(\dot{q}\delta p +p \delta \dot{q} - \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p} \delta p \right)dt.
+\delta I = \int \left(\dot{q}\delta p +p \delta \dot{q} - \frac{\partial H}{\partial q}\delta q - \frac{\partial H}{\partial p} \delta p \right)dt.
 $$
 
 ここで、$p \delta \dot{q}$の項目について部分積分すると
 
 $$
 \begin{aligned}
-\delta I &= \int \left(\dot{q}\delta p -\dot{p} \delta q - \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p} \delta p \right)dt \\
-&= \int \left( \left(\dot{q} - \frac{\partial H}{\partial p}\right)\delta p
-- \left(\dot{p} + \frac{\partial H}{\partial q}\right)\delta q
+\delta I &= \int \left(\dot{q}\delta p -\dot{p} \delta q - \frac{\partial H}{\partial q}\delta q - \frac{\partial H}{\partial p} \delta p \right)dt \\
+&= \int \left( \left(\dot{q} - \frac{\partial H}{\partial p}\right)\delta p - \left(\dot{p} + \frac{\partial H}{\partial q}\right)\delta q
 \right)dt \\
 &=0.
 \end{aligned}
