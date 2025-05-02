@@ -443,7 +443,7 @@
                                     class="math inline">\(t\)</span>から<span
                                     class="math inline">\(h\)</span>後に、どこの場所の値と比較しているかの違いを表している。オイラー微分は、同じ場所において、異なる時間の変化を追いかけている。</p>
                                     <p><span class="math display">\[
-                                    \rho(x,t+h)-\rho(x,h) \sim
+                                    \rho(x,t+h)-\rho(x,t) \sim
                                     \frac{\partial \rho}{\partial t}h +
                                     O(h^2).
                                     \]</span></p>
@@ -458,7 +458,7 @@
                                     \begin{aligned}
                                     \rho(x+vh,t+h) - \rho(x,h) &amp;=
                                     \rho(x+vh,t+h) - \rho(x+vh,t)
-                                    +\rho(x+vh,t)- \rho(x,h) \\
+                                    +\rho(x+vh,t)- \rho(x,t) \\
                                     &amp;= v \frac{\partial
                                     \rho}{\partial x}h + \frac{\partial
                                     \rho}{\partial t}h +O(h^2).

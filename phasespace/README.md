@@ -274,14 +274,14 @@ $$
 オイラー微分とラグランジュ微分は、時刻$t$から$h$後に、どこの場所の値と比較しているかの違いを表している。オイラー微分は、同じ場所において、異なる時間の変化を追いかけている。
 
 $$
-\rho(x,t+h)-\rho(x,h) \sim \frac{\partial \rho}{\partial t}h + O(h^2).
+\rho(x,t+h)-\rho(x,t) \sim \frac{\partial \rho}{\partial t}h + O(h^2).
 $$
 
 ラグランジュ微分は、流れ(速度場)に沿って移動する観測者が感じる変化を追いかける。時刻$t$において観測者が位置$x(t)$におり、その場所における速度場が$v(x)$であったなら、時刻$t+h$後には、この観測者は$x + vt$の場所に移動しているため、その差を取ると
 
 $$
 \begin{aligned}
-\rho(x+vh,t+h) - \rho(x,h) &= \rho(x+vh,t+h) - \rho(x+vh,t) +\rho(x+vh,t)- \rho(x,h) \\
+\rho(x+vh,t+h) - \rho(x,h) &= \rho(x+vh,t+h) - \rho(x+vh,t) +\rho(x+vh,t)- \rho(x,t) \\
 &= v \frac{\partial \rho}{\partial x}h + \frac{\partial \rho}{\partial t}h +O(h^2).
 \end{aligned}
 $$
