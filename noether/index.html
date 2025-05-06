@@ -335,7 +335,7 @@
                                     class="math inline">\((q,p)\)</span>だけで表現できた。同様に、</p>
                                     <p><span class="math display">\[
                                     P = p - \varepsilon
-                                    \frac{\partial}{\partial p}J(q,p) +
+                                    \frac{\partial}{\partial q}J(q,p) +
                                     O(\varepsilon^2)
                                     \]</span></p>
                                     <p>となる。2式をあわせて</p>
@@ -533,17 +533,16 @@
                                     \{p_2, H\} = -\frac{\partial
                                     H}{\partial q^2}.
                                     \]</span></p>
-                                    <p>ここで、ポテンシャルの形から、</p>
+                                    <p>ここで、ポテンシャルの形から<span
+                                    class="math inline">\(r=q^1-q^2\)</span>とすると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \frac{\partial H}{\partial q^1}
                                     &amp;= \frac{dU}{dr} \frac{\partial
-                                    r}{\partial q^1} = U&#39;(r)
-                                    \frac{(q^1 - q^2)}{r}, \\
+                                    r}{\partial q^1} = U&#39;(r), \\
                                     \frac{\partial H}{\partial q^2}
                                     &amp;= \frac{dU}{dr} \frac{\partial
-                                    r}{\partial q^2} = U&#39;(r)
-                                    \frac{(q^2 - q^1)}{r}.
+                                    r}{\partial q^2} = -U&#39;(r).
                                     \end{aligned}
                                     \]</span></p>
                                     <p>従って、</p>
@@ -551,9 +550,7 @@
                                     \begin{aligned}
                                     \{J, H\} &amp;= \{p_1+p_2, H\} \\
                                     &amp;= \{p_1, H\} +  \{p_2, H\} \\
-                                    &amp;= - U&#39;(r) \frac{(q^1 -
-                                    q^2)}{r} - U&#39;(r)\frac{(q^2 -
-                                    q^1)}{r} \\
+                                    &amp;= - U&#39;(r) + U&#39;(r)\\
                                     &amp;=0.
                                     \end{aligned}
                                     \]</span></p>

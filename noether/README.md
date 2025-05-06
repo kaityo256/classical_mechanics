@@ -235,7 +235,7 @@ $$
 と、$Q$を$(q,p)$だけで表現できた。同様に、
 
 $$
-P = p - \varepsilon \frac{\partial}{\partial p}J(q,p) + O(\varepsilon^2)
+P = p - \varepsilon \frac{\partial}{\partial q}J(q,p) + O(\varepsilon^2)
 $$
 
 となる。2式をあわせて
@@ -408,12 +408,12 @@ $$
 \{p_2, H\} = -\frac{\partial H}{\partial q^2}.
 $$
 
-ここで、ポテンシャルの形から、
+ここで、ポテンシャルの形から$r=q^1-q^2$とすると、
 
 $$
 \begin{aligned}
-\frac{\partial H}{\partial q^1} &= \frac{dU}{dr} \frac{\partial r}{\partial q^1} = U'(r) \frac{(q^1 - q^2)}{r}, \\
-\frac{\partial H}{\partial q^2} &= \frac{dU}{dr} \frac{\partial r}{\partial q^2} = U'(r) \frac{(q^2 - q^1)}{r}.
+\frac{\partial H}{\partial q^1} &= \frac{dU}{dr} \frac{\partial r}{\partial q^1} = U'(r), \\
+\frac{\partial H}{\partial q^2} &= \frac{dU}{dr} \frac{\partial r}{\partial q^2} = -U'(r).
 \end{aligned}
 $$
 
@@ -423,7 +423,7 @@ $$
 \begin{aligned}
 \{J, H\} &= \{p_1+p_2, H\} \\
 &= \{p_1, H\} +  \{p_2, H\} \\
-&= - U'(r) \frac{(q^1 - q^2)}{r} - U'(r)\frac{(q^2 - q^1)}{r} \\
+&= - U'(r) + U'(r)\\
 &=0.
 \end{aligned}
 $$
