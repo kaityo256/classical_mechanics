@@ -471,8 +471,8 @@
                                     class="math inline">\(x,y,z\)</span>の関数であるから、その外微分は</p>
                                     <p><span class="math display">\[
                                     df_x = \frac{\partial f_x}{\partial
-                                    x} dx + \frac{\partial f_y}{\partial
-                                    y} dy + \frac{\partial f_z}{\partial
+                                    x} dx + \frac{\partial f_x}{\partial
+                                    x} dy + \frac{\partial f_z}{\partial
                                     z} dz
                                     \]</span></p>
                                     <p>で与えられる。<span
@@ -480,14 +480,15 @@
                                     f_z\)</span>も同様である。従って、</p>
                                     <p><span class="math display">\[
                                     d\omega_1 =
-                                    \left(\frac{\partial f_x}{\partial
+                                    \left(\frac{\partial f_y}{\partial
+                                    x} - \frac{\partial f_x}{\partial
+                                    y}\right) dx \wedge dy +
+                                    \left(\frac{\partial f_z}{\partial
                                     y} - \frac{\partial f_y}{\partial
-                                    x}\right) dx \wedge dy +
-                                    (\frac{\partial f_y}{\partial z} -
-                                    \frac{\partial f_z}{\partial y}) dy
-                                    \wedge dz + (\frac{\partial
-                                    f_z}{\partial x} - \frac{\partial
-                                    f_x}{\partial z}) dz \wedge dx
+                                    z}\right) dy \wedge dz +
+                                    \left(\frac{\partial f_x}{\partial
+                                    z} - \frac{\partial f_z}{\partial
+                                    x}\right) dz \wedge dx
                                     \]</span></p>
                                     <p>となる。<span
                                     class="math inline">\(dx\wedge
@@ -537,7 +538,7 @@
                                     \begin{aligned}
                                     \left&lt;dy \wedge dx,
                                     \frac{\partial}{\partial x}
-                                    \right&gt; &amp; = \left&lt;dx
+                                    \right&gt; &amp; = -\left&lt;dx
                                     \wedge dy, \frac{\partial}{\partial
                                     x} \right&gt; \\
                                     &amp;= -\left&lt;dx,
@@ -777,10 +778,11 @@
                                     d(df) &amp;= \sum_i d
                                     \left(\frac{\partial f}{\partial
                                     q^i}dq^i \right) \\
-                                    &amp;= \sum_i\left(\frac{\partial^2
+                                    &amp;=
+                                    \sum_{i,j}\left(\frac{\partial^2
                                     f}{\partial q^i \partial q^j}
                                     dq^j\right) \wedge dq^i\\
-                                    &amp;= \sum_i\frac{\partial^2
+                                    &amp;= \sum_{i,j}\frac{\partial^2
                                     f}{\partial q^i \partial q^j} dq^j
                                     \wedge dq^i \\
                                     &amp;= \sum_{i&lt;j}

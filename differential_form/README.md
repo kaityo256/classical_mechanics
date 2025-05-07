@@ -333,14 +333,14 @@ $$
 $f_x$はスカラー関数、すなわち$0$形式であり、一般に$x,y,z$の関数であるから、その外微分は
 
 $$
-df_x = \frac{\partial f_x}{\partial x} dx + \frac{\partial f_y}{\partial y} dy + \frac{\partial f_z}{\partial z} dz
+df_x = \frac{\partial f_x}{\partial x} dx + \frac{\partial f_x}{\partial x} dy + \frac{\partial f_z}{\partial z} dz
 $$
 
 で与えられる。$f_y, f_z$も同様である。従って、
 
 $$
 d\omega_1 =
-\left(\frac{\partial f_x}{\partial y} - \frac{\partial f_y}{\partial x}\right) dx \wedge dy + (\frac{\partial f_y}{\partial z} - \frac{\partial f_z}{\partial y}) dy \wedge dz + (\frac{\partial f_z}{\partial x} - \frac{\partial f_x}{\partial z}) dz \wedge dx
+\left(\frac{\partial f_y}{\partial x} - \frac{\partial f_x}{\partial y}\right) dx \wedge dy + \left(\frac{\partial f_z}{\partial y} - \frac{\partial f_y}{\partial z}\right) dy \wedge dz + \left(\frac{\partial f_x}{\partial z} - \frac{\partial f_z}{\partial x}\right) dz \wedge dx
 $$
 
 となる。$dx\wedge dy$など、$1$形式の外積で作られた新たな基底で表現されたものを$2$形式と呼ぶ。すなわち$1$形式を外微分することで$2$形式を作ることができた。同様にして、$p$形式を外微分することで$p+1$形式を作ることができる。
@@ -370,7 +370,7 @@ $$
 
 $$
 \begin{aligned}
-\left<dy \wedge dx, \frac{\partial}{\partial x} \right> & = \left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
+\left<dy \wedge dx, \frac{\partial}{\partial x} \right> & = -\left<dx \wedge dy, \frac{\partial}{\partial x} \right> \\
 &= -\left<dx, \frac{\partial}{\partial x} \right> dy
 &= -dy.
 \end{aligned}
@@ -564,8 +564,8 @@ $$
 $$
 \begin{aligned}
 d(df) &= \sum_i d \left(\frac{\partial f}{\partial q^i}dq^i \right) \\
-&= \sum_i\left(\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j\right) \wedge dq^i\\
-&= \sum_i\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j \wedge dq^i \\
+&= \sum_{i,j}\left(\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j\right) \wedge dq^i\\
+&= \sum_{i,j}\frac{\partial^2 f}{\partial q^i \partial q^j} dq^j \wedge dq^i \\
 &= \sum_{i<j} \left(\frac{\partial^2 f}{\partial q^i \partial q^j} - \frac{\partial^2 f}{\partial q^j \partial q^i} \right) dq^j \wedge dq^i \\
 &=0.
 \end{aligned}
