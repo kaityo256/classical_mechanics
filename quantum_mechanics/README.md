@@ -136,13 +136,13 @@ $$
 整理すると、
 
 $$
-\frac{i}{\hbar}\frac{\partial}{\partial t} \psi = E \psi.
+i \hbar \frac{\partial}{\partial t} \psi = E \psi.
 $$
 
 これを見ると、エネルギーを
 
 $$
-\hat{E} \equiv \frac{i}{\hbar}\frac{\partial}{\partial t}
+\hat{E} \equiv i\hbar \frac{\partial}{\partial t}
 $$
 
 という演算子とみなすのが自然であることがわかる。すると、
