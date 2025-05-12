@@ -225,7 +225,7 @@ $$
 整理すると
 
 $$
-i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).
+-i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).
 $$
 
 エネルギーの場合と同様に、左辺の波動関数にかかっている演算子を運動量演算子であると解釈することができる。
