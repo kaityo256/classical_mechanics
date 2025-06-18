@@ -37,8 +37,7 @@ $$
 これは運動方程式の左辺である。以上から、運動方程式を以下のようにまとめることができた。
 
 $$
-\frac{d}{dt}\left(\frac{\partial K}{\partial v_x}\right).
-= -\frac{\partial U}{\partial x}
+\frac{d}{dt}\left(\frac{\partial K}{\partial v_x}\right) = -\frac{\partial U}{\partial x}
 $$
 
 ポテンシャルエネルギーが運動方程式の右辺を作っており、運動エネルギーが左辺を作っていることがわかる。
