@@ -502,7 +502,7 @@ $$
 従って、
 
 $$
-m\frac{d{\tilde{x}^i}}{dt^2} = m T^i_j \frac{d x^i}{dt^2}.
+m\frac{d{\tilde{x}^i}}{dt^2} = m T^i_j \frac{d x^j}{dt^2}.
 $$
 
 以上から、
