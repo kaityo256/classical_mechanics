@@ -288,10 +288,7 @@ $$
 $$
 
 $$
-\begin{aligned}
-Y - X \frac{dY}{dX} &= y - \cancel{xX} + \cancel{Xx} \\
-&=y.
-\end{aligned}
+y = Y + x X
 $$
 
 これがルジャンドル逆変換を与える。ルジャンドル変換と逆変換を並べて書くと、
@@ -306,12 +303,12 @@ Y & = &y - xX
 \left\{
 \begin{matrix}
 x & = & - \displaystyle\frac{dY}{dX} \\
-y & = &Y - xX
+y & = &Y + xX
 \end{matrix}
 \right.
 $$
 
-のように、$x$と$X$の間の変換と逆変換で負符号がつく。これを嫌って、接線の切片に負符号をつけて、
+のように、変換と逆変換で符号が変わる。これを嫌って、接線の切片に負符号をつけて、
 
 $$
 y = xX -Y
