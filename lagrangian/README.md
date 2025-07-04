@@ -497,14 +497,14 @@ $$
 で定義すると、この系のラグランジアンは
 
 $$
-L = \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) + q \phi(x,y,z)
+L = \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) - q \phi(x,y,z)
 $$
 
 となる。$x$成分についてオイラー・ラグランジュ方程式を作ってみよう。
 
 $$
 \begin{aligned}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}} \right) + \frac{\partial L}{\partial x}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}} \right) - \frac{\partial L}{\partial x}
 &= m\ddot{x} +q \frac{\partial \phi}{\partial x} \\
 &= 0.
 \end{aligned}
