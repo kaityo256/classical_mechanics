@@ -41,7 +41,7 @@ $$
 $$
 \begin{aligned}
 \dot{p} &= -\frac{\partial H}{\partial q} \\
-&= -\frac{\partial H}{\partial Q}\frac{\partial Q}{\partial q} + \frac{\partial H}{\partial P}\frac{\partial P}{\partial q}.
+&= -\frac{\partial H}{\partial Q}\frac{\partial Q}{\partial q} -                            \frac{\partial H}{\partial P}\frac{\partial P}{\partial q}.
 \end{aligned}
 $$
 
