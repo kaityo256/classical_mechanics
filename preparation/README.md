@@ -423,7 +423,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial f}{\partial x} &= \frac{\partial f}{\partial x} \underbrace{\frac{\partial x}{\partial x}}_{=1} + \frac{\partial f}{\partial y} \underbrace{\frac{\partial y}{\partial x}}_{=0} \\
+\frac{d f}{d x} &= \frac{\partial f}{\partial x} \underbrace{\frac{\partial x}{\partial x}}_{=1} + \frac{\partial f}{\partial y} \underbrace{\frac{\partial y}{\partial x}}_{=0} \\
 &= \frac{\partial f}{\partial x}.
 \end{aligned}
 $$
@@ -431,8 +431,7 @@ $$
 この事実をもって、もう一度先の全微分の式を眺めてみる。
 
 $$
-df = \frac{\partial f}{\partial x} dx
-+ \frac{\partial f}{\partial y} dy.
+df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy.
 $$
 
 すると、これがまるでベクトルを基底で展開しているかのように見える。また、$dx$の内積をとる相方が$\partial_x$であることもわかる。
