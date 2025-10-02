@@ -289,7 +289,7 @@ dy &= \sin \theta dr + r \cos \theta d\theta. \\
 \end{aligned}
 $$
 
-これは、基底$\{dr, d\theta\}$から、$\{dx, dy\}$への線形変換と見ることができる。後で見やすいように、$(r,\theta)$を$(x^1,x^2)$、$(x,y)$を$\tilde{x}^1, \tilde{x}^2$と表記すると、先程の全微分の式は、
+これは、基底$\{dr, d\theta\}$から、$\{dx, dy\}$への線形変換と見ることができる。後で見やすいように、$(r,\theta)$を$(x^1,x^2)$、$(x,y)$を$(\tilde{x}^1, \tilde{x}^2)$と表記すると、先程の全微分の式は、
 
 $$
 d\tilde{x}^i = \frac{\partial \tilde{x}^i}{\partial x^k} dx^k
