@@ -499,7 +499,7 @@ $$
 \tilde{x}^i = T^j_i x^j.
 $$
 
-従って、
+したがって、
 
 $$
 m\frac{d{\tilde{x}^i}}{dt^2} = m T^i_j \frac{d x^j}{dt^2}.
