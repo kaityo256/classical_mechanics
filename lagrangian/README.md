@@ -349,7 +349,7 @@ $$
 &- \frac{\partial L}{\partial q} \frac{dq}{dQ} - \cancel{\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial Q}} \\
 &= \left[
 \underbrace{
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) + \frac{\partial L}{\partial q}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q}
 }_{=0}
 \right]
 \frac{dq}{dQ} \\
