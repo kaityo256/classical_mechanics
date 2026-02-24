@@ -19,7 +19,6 @@
 | p. 23| ![p023_error](fig/p023_error.png) | ![p023_correct](fig/p023_correct.png) |
 | p. 26| 以後、$x$に関する偏微分演算子$\partial/\partial_x$を、$\partial_x$のように略記することがある。 | 以後、$x$に関する偏微分演算子$\partial/\partial x$を、$\partial_x$のように略記することがある。|
 | p. 40| 後で見やすいように、$(r,\theta)$を$(x^1,x^2)$、$(x,y)$を$\tilde{x}^1, \tilde{x}^2$と表記すると、 | 後で見やすいように、$(r,\theta)$を$(x^1,x^2)$、$(x,y)$を$(\tilde{x}^1, \tilde{x}^2)$と表記すると、|
-| p. 44| ![p044_error](fig/p044_error.png) | ![p044_correct](fig/p044_correct.png) |
 | p. 66| また逆に、仮想変位に伴う仮想仕事がゼロである時、この質点系に働く力は釣り合ってる。 | また逆に、仮想変位に伴う仮想仕事がゼロである時、この質点系に働く力は釣り合っている。|
 | p.70 | 歩いてると、ふと道端にある雑草が目に止まったとしよう。 | 歩いていると、ふと道端にある雑草が目に止まったとしよう。|
 | p.85 | 運動エネルギーも含むことで多自由度系の運動方程式の情報をただ一つのスカラー関数に押し込めることができてる。| 運動エネルギーも含むことで多自由度系の運動方程式の情報をただ一つのスカラー関数に押し込めることができている。|
@@ -33,7 +32,6 @@
 | p. 181| $ U_z(h) = 1 + ihL_z + O(h^2)$ | $ U_z(h) = I + ihL_z + O(h^2) $|
 | p. 181| $i$hL_z = U_z'(0)$ | $iL_z = U_z'(0) $|
 | p. 194| さて、この系では各運動量 | さて、この系では角運動量|
-| p. 229| $i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).$ | $-i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).$|
 
 ## 第1刷正誤表
 
@@ -41,6 +39,8 @@
 
 | ページ番号 | 誤 | 正 |
 | ---  | --- | --- |
+| p. 44| ![p044_error](fig/p044_error.png) | ![p044_correct](fig/p044_correct.png) |
 | p. 119| $L = \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) + q \phi(x,y,z)$ | $L = \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) - q \phi(x,y,z)$|
 | p. 119| ![p119_error](fig/p119_error.png) | ![p119_correct](fig/p119_correct.png) |
 | p. 160| ![p160_error](fig/p160_error.png) | ![p160_correct](fig/p160_correct.png) |
+| p. 229| $i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).$ | $-i \hbar \frac{\partial}{\partial x}\psi(x,t) = p \psi(x,t).$|
