@@ -23,6 +23,10 @@ index.html: index.md
 %/index.html: %/index.md
 	pandoc -s $< -o $@ $(PANDOC_HTMLOPT) --shift-heading-level-by=-1 
 
+errata/index.html: errata/README.md
+	pandoc -s $< -o $@ $(PANDOC_HTMLOPT)  --shift-heading-level-by=-1 
+	sed -i 's/style=\"width:17%;\"//' $@ 
+
 %/README.pdf: %/README.md
 	cd $(dir $@);pandoc $(notdir $<) -s -o $(notdir $@) $(PANDOC_TEXOPT)
 
