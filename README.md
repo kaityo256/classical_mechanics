@@ -121,6 +121,10 @@
 * 教科書の読み方
 * 参考文献
 
+## [正誤表](errata/README.md)
+
+書籍版「[行間がしっかり埋まった 驚くほどていねいな解析力学 (KS物理専門書)](https://www.amazon.co.jp/dp/4065395658)」の[正誤表](errata/README.md)です。ウェブ版では全て修正されています。
+
 ## ライセンス
 
 Copyright (C) 2022–present Hiroshi Watanabe
