@@ -30,6 +30,7 @@
 | p. 118 | ![p118_error1](fig/p118_error1.png) | ![p118_correct1](fig/p118_correct1.png) |
 | p. 118 | ![p118_error2](fig/p118_error2.png) | ![p118_correct2](fig/p118_correct2.png) |
 | p. 150 | $\Omega \nabla H$により、勾配ベクトル場を反時計回りに90度回転させたものがハミルトニアンベクトル場である | $\Omega \nabla H$により、勾配ベクトル場を時計回りに90度回転させたものがハミルトニアンベクトル場である |
+| p. 154 | $\Delta \rho = - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right)$ | $\frac{\partial \rho}{\partial t} = - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right)$ |
 | p. 181 | $ U_z(h) = 1 + ihL_z + O(h^2)$ | $ U_z(h) = I + ihL_z + O(h^2) $ |
 | p. 181 | $i$hL_z = U_z'(0)$ | $iL_z = U_z'(0) $ |
 | p. 194 | さて、この系では各運動量 | さて、この系では角運動量 |
