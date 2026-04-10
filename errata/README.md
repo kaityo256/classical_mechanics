@@ -29,6 +29,7 @@
 | p. 115 | ![p115_error](fig/p115_error.png) | ![p115_correct](fig/p115_correct.png) |
 | p. 118 | ![p118_error1](fig/p118_error1.png) | ![p118_correct1](fig/p118_correct1.png) |
 | p. 118 | ![p118_error2](fig/p118_error2.png) | ![p118_correct2](fig/p118_correct2.png) |
+| P. 143 | として時間を無次元化すると、運動方程式は $\ddot{q} = -q$ となる。| として時間を無次元化すると、運動方程式は $\ddot{q} = -q$ となる。なお、本来は無次元化後の時間に別の記号(例えば$\tau$)を用いるべきであるが、記法の簡潔さを優先し、記号の濫用により引き続き$t$を用いることにする。 |
 | p. 150 | $\Omega \nabla H$により、勾配ベクトル場を反時計回りに90度回転させたものがハミルトニアンベクトル場である | $\Omega \nabla H$により、勾配ベクトル場を時計回りに90度回転させたものがハミルトニアンベクトル場である |
 | p. 154 | $\Delta \rho = - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right)$ | $\frac{\partial \rho}{\partial t} = - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right)$ |
 | p. 181 | $U_z(h) = 1 + ihL_z + O(h^2)$ | $U_z(h) = I + ihL_z + O(h^2)$ |
