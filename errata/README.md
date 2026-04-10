@@ -32,6 +32,7 @@
 | P. 143 | として時間を無次元化すると、運動方程式は $\ddot{q} = -q$ となる。| として時間を無次元化すると、運動方程式は $\ddot{q} = -q$ となる。なお、本来は無次元化後の時間に別の記号(例えば$\tau$)を用いるべきであるが、記法の簡潔さを優先し、記号の濫用により引き続き$t$を用いることにする。 |
 | p. 150 | $\Omega \nabla H$により、勾配ベクトル場を反時計回りに90度回転させたものがハミルトニアンベクトル場である | $\Omega \nabla H$により、勾配ベクトル場を時計回りに90度回転させたものがハミルトニアンベクトル場である |
 | p. 154 | $\Delta \rho = - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right)$ | $\frac{\partial \rho}{\partial t} = - \frac{\partial}{\partial x} \left(v_x \rho \right) - \frac{\partial}{\partial y} \left(v_y \rho \right)$ |
+| p. 172 | さて、実はポアソン括弧は正準変数に対して不変であること、| さて、実はポアソン括弧は正準変換に対して不変であること、|
 | p. 181 | $U_z(h) = 1 + ihL_z + O(h^2)$ | $U_z(h) = I + ihL_z + O(h^2)$ |
 | p. 181 | $ihL_z = U_z'(0)$ | $iL_z = U_z'(0)$ |
 | p. 194 | さて、この系では各運動量 | さて、この系では角運動量 |
