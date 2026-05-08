@@ -6,6 +6,16 @@
 
 最終更新日：2026年2月24日
 
+## 第3刷正誤表
+
+| ページ番号 | 誤 | 正 |
+| --- | --- | --- |
+| p. 200 | $\frac{1}{2}(P_1^2+P_2^2) -\frac{1}{2}(p_1^2+p_2^2) + U(R) - U(r)$ | $\frac{1}{2m}(P_1^2+P_2^2) -\frac{1}{2m}(p_1^2+p_2^2) + U(R) - U(r)$ |
+| p. 205 | このベクトルで展開されたベクトルの成分 | この基底で展開されたベクトルの成分 |
+| p. 211 |$dx \wedge dy = (\cos \theta dr - r\sin \theta d\theta) (\sin \theta dr + r\cos \theta d\theta) $ | $dx \wedge dy = (\cos \theta dr - r\sin \theta d\theta) \wedge (\sin \theta dr + r\cos \theta d\theta) $  |
+| p.  215| $dP \wedge dQ = \left(\frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp \right)
+\left(\frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\right)$  | $dP \wedge dQ = \left(\frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp \right)\wedge \left(\frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\right)$  |
+
 ## 第2刷正誤表
 
 | ページ番号 | 誤 | 正 |

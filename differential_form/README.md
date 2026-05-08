@@ -12,7 +12,7 @@ $$
 \tilde{\mathbf{e}}_i = A_i^j \mathbf{e}_j
 $$
 
-で与えられている時、このベクトルで展開されたベクトルの成分
+で与えられている時、この基底で展開されたベクトルの成分
 
 $$
 \mathbf{u} = u^i \mathbf{e}_i = \tilde{u}^i \tilde{\mathbf{e}}_i
@@ -400,7 +400,7 @@ $$
 
 $$
 \begin{aligned}
-dx \wedge dy &= (\cos \theta dr - r\sin \theta d\theta) (\sin \theta dr + r\cos \theta d\theta) \\
+dx \wedge dy &= (\cos \theta dr - r\sin \theta d\theta)\wedge (\sin \theta dr + r\cos \theta d\theta) \\
 &= r \cos^2 \theta dr \wedge d\theta - r \sin^2 \theta d\theta \wedge dr \\
 &= r dr \wedge d\theta.
 \end{aligned}
@@ -600,7 +600,7 @@ $dP \wedge dQ$に代入して計算すると、
 
 $$
 \begin{aligned}
-dP \wedge dQ &= \left(\frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp \right)
+dP \wedge dQ &= \left(\frac{\partial P}{\partial q}dq + \frac{\partial P}{\partial p}dp \right) \wedge
 \left(\frac{\partial Q}{\partial q}dq + \frac{\partial Q}{\partial p}dp\right) \\
 &= \left(\frac{\partial P}{\partial p}\frac{\partial Q}{\partial q} - \frac{\partial P}{\partial q}\frac{\partial Q}{\partial p} \right) dp\wedge dq.
 \end{aligned}
