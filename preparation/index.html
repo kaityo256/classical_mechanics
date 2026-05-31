@@ -66,24 +66,25 @@
                                     <h2
                                     id="ベクトルの表記">ベクトルの表記</h2>
                                     <p>我々は3次元空間に住んでいるため、力学でも3次元空間中の運動を扱うことが多い。3次元空間中では、質点の位置を指定したり、速度や力を指定したりするのに3つの数字の組が必要になる。例えば、ある質点の座標が<span
-                                    class="math inline">\((r_x,r_y,r_z)\)</span>である時、</p>
+                                    class="math inline">\((r^x,r^y,r^z)\)</span>である時、</p>
                                     <p><span class="math display">\[
                                     \mathbf{r} =
                                     \begin{pmatrix}
-                                    r_x\\
-                                    r_y\\
-                                    r_z
+                                    r^x\\
+                                    r^y\\
+                                    r^z
                                     \end{pmatrix}
                                     \]</span></p>
-                                    <p>とまとめて表記する。このように、いくつかの数字の組で表現される量を
+                                    <p>とまとめて表記する。ここで、後の便利のために要素を<span
+                                    class="math inline">\(r^x\)</span>のように上付きで表しておく。このように、いくつかの数字の組で表現される量を
                                     <strong>ベクトル</strong>(vector)
                                     と呼ぶ。特に、<span
                                     class="math inline">\(\mathbf{r}\)</span>
                                     は位置ベクトルと呼ばれる。同様に速度ベクトルなどが定義される。本書では<span
                                     class="math inline">\(\mathbf{r}\)</span>のように太字で表記する。ベクトルは大きさと向きを持つ量である。本書では紙面の都合から縦ベクトルを横に書きたいことがある。その場合は<span
                                     class="math inline">\(\mathbf{r} =
-                                    {}^t(r_x, r_y,
-                                    r_z)\)</span>のように、ベクトルの最初に<span
+                                    {}^t(r^x, r^y,
+                                    r^z)\)</span>のように、ベクトルの最初に<span
                                     class="math inline">\(t\)</span>をつけて表す。この<span
                                     class="math inline">\(t\)</span>は転置を表し、横ベクトルを転置することで、縦ベクトルであることを表現している。</p>
                                     <p>一方、ベクトルではない普通の数を
@@ -94,21 +95,21 @@
                                     <p>力学におけるベクトルで重要なのは、座標変換によるベクトルの変換である。先程のベクトル表記では、数を3つ縦に並べた。これは、以下のように書き直すことができる。</p>
                                     <p><span class="math display">\[
                                     \mathbf{r} =
-                                    r_x
+                                    r^x
                                     \begin{pmatrix}
                                     1\\
                                     0\\
                                     0
                                     \end{pmatrix}
                                     +
-                                    r_y
+                                    r^y
                                     \begin{pmatrix}
                                     0\\
                                     1\\
                                     0
                                     \end{pmatrix}
                                     +
-                                    r_z
+                                    r^z
                                     \begin{pmatrix}
                                     0\\
                                     0\\
@@ -118,8 +119,8 @@
                                     <p>3つの基本的なベクトルの和にわけることができた。これらのベクトルを<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と書こう。すると、</p>
                                     <p><span class="math display">\[
-                                    \mathbf{r} = r_x \mathbf{e}_x + r_y
-                                    \mathbf{e}_y + r_z \mathbf{e}_z
+                                    \mathbf{r} = r^x \mathbf{e}_x + r^y
+                                    \mathbf{e}_y + r^z \mathbf{e}_z
                                     \]</span></p>
                                     <p>と表記できる。この時、<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>を基底ベクトル、あるいは単に
@@ -149,9 +150,9 @@
                                     <p><span class="math display">\[
                                     \mathbf{r} =
                                     \begin{pmatrix}
-                                    r_x\\
-                                    r_y\\
-                                    r_z
+                                    r^x\\
+                                    r^y\\
+                                    r^z
                                     \end{pmatrix}
                                     \]</span>
                                     という表記は、標準基底ベクトル<span
@@ -159,8 +160,8 @@
                                     class="math inline">\(\mathbf{r}\)</span>の展開表現である。</p>
                                     <p>すなわち、本来なら</p>
                                     <p><span class="math display">\[
-                                    \mathbf{r} = r_x \mathbf{e}_x + r_y
-                                    \mathbf{e}_y + r_z \mathbf{e}_z
+                                    \mathbf{r} = r^x \mathbf{e}_x + r^y
+                                    \mathbf{e}_y + r^z \mathbf{e}_z
                                     \]</span></p>
                                     <p>と書くべきところを、基底ベクトルを<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>と暗黙に仮定した上で括弧で略記した記法である。</p>
@@ -168,7 +169,7 @@
                                     <p>さて、今は<span
                                     class="math inline">\(\mathbf{e}_x\)</span>などが簡単な形をしているため、<span
                                     class="math inline">\(\mathbf{r}\)</span>を<span
-                                    class="math inline">\(\mathbf{e}_x\)</span>などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を求める。</p>
+                                    class="math inline">\(\mathbf{e}_x\)</span>などで展開した時の係数が簡単に求まった。しかし、一般のベクトルを基底ベクトルにした場合、その展開係数を求めるのは面倒である。そこで、ベクトルの内積により展開係数を定める。</p>
                                     <p>基底ベクトル<span
                                     class="math inline">\(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)</span>は、要素が縦に並んでいる縦ベクトルであった。これらの対になるベクトルとして、以下の横ベクトルを定義する。</p>
                                     <p><span class="math display">\[
@@ -250,18 +251,18 @@
                                     と呼ぶ。双対空間はお互い様であり、縦ベクトルから見れば横ベクトルが住む空間が双対空間だが、横ベクトルから見れば縦ベクトルが住む空間が双対空間である。また、ある基底と内積をとる相方の基底のことを双対基底と呼ぶ。双対基底は、双対空間に住んでいる基底である。</p>
                                     <p>ここまではベクトルが住む空間がわかりやすいように、住む世界を添え字の上下で区別したが、2つの空間を区別する必要がない場合は2つのベクトル<span
                                     class="math inline">\(\mathbf{a} =
-                                    {}^t(a_1, a_2, a_3)\)</span>と<span
+                                    {}^t(a^1, a^2, a^3)\)</span>と<span
                                     class="math inline">\(\mathbf{b} =
-                                    {}^t(b_1, b_2,
-                                    b_3)\)</span>の内積を</p>
+                                    {}^t(b^1, b^2,
+                                    b^3)\)</span>の内積を</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
                                     \mathbf{a} \cdot \mathbf{b}
                                     &amp;\equiv ({}^t \mathbf{a},
                                     \mathbf{b}) \\
-                                    &amp;= a_1 b_1 + a_2 b_2 + a_3 b_3
+                                    &amp;= a^1 b^1 + a^2 b^2 + a^3 b^3
                                     \\
-                                    &amp;= \sum_i^{3} a_i b_i
+                                    &amp;= \sum_i^{3} a^i b^i
                                     \end{aligned}
                                     \]</span></p>
                                     <p>とドット表記で書く場合もある。以後、内積の表記法としてドット表記<span
@@ -275,18 +276,18 @@
                                     class="math inline">\(\mathbf{r}\)</span>と基底との内積が、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \mathbf{r} \cdot \mathbf{e}_1 &amp;=
-                                    r_1 \\
-                                    \mathbf{r} \cdot \mathbf{e}_2 &amp;=
-                                    r_2 \\
-                                    \mathbf{r} \cdot \mathbf{e}_3 &amp;=
-                                    r_3
+                                    \mathbf{e}_1 \cdot
+                                    \mathbf{r}  &amp;= r^1 \\
+                                    \mathbf{e}_2 \cdot
+                                    \mathbf{r}  &amp;= r^2 \\
+                                    \mathbf{e}_3 \cdot
+                                    \mathbf{r}  &amp;= r^3
                                     \end{aligned}
                                     \]</span></p>
                                     <p>で与えられている時、この基底でベクトルが以下のように展開できる。</p>
                                     <p><span class="math display">\[
-                                    \mathbf{r} = r_1 \mathbf{e}_1 + r_2
-                                    \mathbf{e}_2 + r_3 \mathbf{e}_3.
+                                    \mathbf{r} = r^1 \mathbf{e}_1 + r^2
+                                    \mathbf{e}_2 + r^3 \mathbf{e}_3.
                                     \]</span></p>
                                     <p>繰り返しとなるが、物理においては特定の座標を特別視しないため、まず座標系に依存しないベクトルが存在し、必要に応じて座標系を定義すると、内積によってその展開係数が決まる、というイメージを持つとよい。</p>
                                     <p>さて、ある基底<span
@@ -294,54 +295,56 @@
                                     \mathbf{e}_2,
                                     \mathbf{e}_3\)</span>で表現されたベクトル<span
                                     class="math inline">\(\mathbf{r} =
-                                    {}^t(r_1, r_2,
-                                    r_3)\)</span>について、別の基底<span
-                                    class="math inline">\(\mathbf{e}&#39;_1,
-                                    \mathbf{e}&#39;_2,
-                                    \mathbf{e}&#39;_3\)</span>で展開した時の表現<span
+                                    {}^t(r^1, r^2,
+                                    r^3)\)</span>について、別の基底<span
+                                    class="math inline">\(\tilde{\mathbf{e}}_1,
+                                    \tilde{\mathbf{e}}_2,
+                                    \tilde{\mathbf{e}}_3\)</span>で展開した時の表現<span
                                     class="math inline">\(\mathbf{r} =
-                                    {}^t(r&#39;_1, r&#39;_2,
-                                    r&#39;_3)\)</span>を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。</p>
+                                    {}^t(\tilde{r}^1, \tilde{r}^2,
+                                    \tilde{r}^3)\)</span>を求めたい。つまり、以下のように、ある基底での展開係数がわかっている時、別の基底で表現した場合の展開係数を求めたい。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    \mathbf{r} &amp;= r_1
-                                    \mathbf{e}_1  +r_2 \mathbf{e}_2+r_3
-                                    \mathbf{e}_3\\
-                                    &amp;= r&#39;_1
-                                    \mathbf{e}&#39;_1  +r&#39;_2
-                                    \mathbf{e}&#39;_2+r&#39;_3
-                                    \mathbf{e}&#39;_3.
+                                    \mathbf{r} &amp;= r^1
+                                    \mathbf{e}_1  +r^2 \mathbf{e}_2 +
+                                    r^3 \mathbf{e}_3\\
+                                    &amp;= \tilde{r}^1
+                                    \tilde{\mathbf{e}}_1  +\tilde{r}^2
+                                    \tilde{\mathbf{e}}_2+\tilde{r}^3
+                                    \tilde{\mathbf{e}}_3.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>もし、それぞれの基底が正規直交基底であるならば、任意のベクトルと基底の内積を取ることで、その基底方向への成分を得ることができる。</p>
                                     <p>例えば、基底ベクトル<span
-                                    class="math inline">\(\mathbf{e}&#39;_1\)</span>に対する成分<span
-                                    class="math inline">\(r&#39;_1\)</span>を知りたければ、<span
-                                    class="math inline">\(\mathbf{e}&#39;_1\)</span>と<span
+                                    class="math inline">\(\tilde{\mathbf{e}}_1\)</span>に対する成分<span
+                                    class="math inline">\(\tilde{r}^1\)</span>を知りたければ、<span
+                                    class="math inline">\(\tilde{\mathbf{e}}_1\)</span>と<span
                                     class="math inline">\(\mathbf{r}\)</span>との内積を取ればよい。</p>
                                     <p><span class="math display">\[
-                                    r&#39;_1 = \mathbf{e}&#39;_1 \cdot
+                                    r^1 = \tilde{\mathbf{e}}_1 \cdot
                                     \mathbf{r}.
                                     \]</span></p>
                                     <p>さて、<span
                                     class="math inline">\(\mathbf{r}\)</span>を基底<span
                                     class="math inline">\(\mathbf{e}_i\)</span>で展開しておき、左から別の基底<span
-                                    class="math inline">\(\mathbf{e}&#39;_j\)</span>との内積を取ろう。</p>
+                                    class="math inline">\(\tilde{\mathbf{e}}_j\)</span>との内積を取ろう。</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    r&#39;_j &amp;= \mathbf{e}&#39;_j
-                                    \cdot \mathbf{r}  \\
-                                    &amp;= \sum_i r_i \mathbf{e}&#39;_j
-                                    \cdot  \mathbf{e}_i.
+                                    \tilde{r}^j &amp;=
+                                    \tilde{\mathbf{e}}_j \cdot
+                                    \mathbf{r}  \\
+                                    &amp;= \sum_i r_i
+                                    \tilde{\mathbf{e}}_j \cdot
+                                    \mathbf{e}_i.
                                     \end{aligned}
                                     \]</span></p>
                                     <p>この式は「あるベクトル<span
                                     class="math inline">\(\mathbf{r}\)</span>について、ある基底<span
                                     class="math inline">\(\mathbf{e}_i\)</span>での展開係数がわかっている場合、別の基底<span
-                                    class="math inline">\(\mathbf{e}&#39;_j\)</span>での展開係数を知るには、基底同士の内積
+                                    class="math inline">\(\tilde{\mathbf{e}}_j\)</span>での展開係数を知るには、基底同士の内積
                                     <span
-                                    class="math inline">\(\mathbf{e}&#39;_j
-                                    \cdot  \mathbf{e}_i\)</span>
+                                    class="math inline">\(\tilde{\mathbf{e}}_j
+                                    \cdot \mathbf{e}_i\)</span>
                                     がわかっていればいれば良い」ということを意味する。</p>
                                     <p>このように、ベクトルをある基底から別の基底で表現しなおすことを基底変換と呼ぶ。物理学において基底変換は極めて重要であり、解析力学においてもその変換性を議論する。それは、「物理法則が座標変換をしても形を変えてはならない」ことを要請するからである。この事情については後述する。</p>
                                     <h2
@@ -371,8 +374,8 @@
                                     <li>ベクトルの和が結合律を満たす
                                     <span
                                     class="math inline">\(\mathbf{u} +
-                                    (\mathbf{v} + \mathbf{w})
-                                    =  (\mathbf{u} + \mathbf{v}) +
+                                    (\mathbf{v} + \mathbf{w}) =
+                                    (\mathbf{u} + \mathbf{v}) +
                                     \mathbf{w}\)</span></li>
                                     <li>ベクトルの和が可換である <span
                                     class="math inline">\(\mathbf{u} +
@@ -568,7 +571,35 @@
                                     <p>さて、物理で現れるベクトル空間には、自然な内積が定義できることが多い。内積が定義されたベクトル空間を
                                     <strong>内積空間</strong>(inner
                                     product space)
-                                    と呼ぶ。内積とは、ベクトル2つを、1つのスカラーに結びつける写像のことである。既に見たように、縦ベクトルや横ベクトルには自然な内積が定義できるが、関数をベクトルとみなすと、関数同士にも内積を定義することができる。いま、関数<span
+                                    と呼ぶ。この内積空間の公理をまとめておこう。あるベクトル空間<span
+                                    class="math inline">\(\mathbb{V}\)</span>を考える。内積とは、そのベクトル空間の任意の2つ元に対して一つの実数を結びつける写像<span
+                                    class="math inline">\((\cdot,\cdot):
+                                    \mathbb{V} \times \mathbb{V}
+                                    \rightarrow
+                                    \mathbb{R}\)</span>であり、以下の4つの性質を持つもののことである。ここで、<span
+                                    class="math inline">\(a, b \in
+                                    \mathbb{R}\)</span>、<span
+                                    class="math inline">\(\mathbf{u},\mathbf{v},\mathbf{w}
+                                    \in \mathbb{V}\)</span>とする。</p>
+                                    <ol type="1">
+                                    <li>正定値性 <span
+                                    class="math inline">\((\mathbf{v},\mathbf{v})
+                                    \ge 0\)</span>、<span
+                                    class="math inline">\((\mathbf{v},\mathbf{v})
+                                    = 0 \Leftrightarrow \mathbf{v} =
+                                    0\)</span></li>
+                                    <li>対称性 <span
+                                    class="math inline">\((\mathbf{u},\mathbf{v})
+                                    =
+                                    (\mathbf{v},\mathbf{u})\)</span></li>
+                                    <li>第一引数に関する線形性 <span
+                                    class="math inline">\((a \mathbf{u}
+                                    + b \mathbf{v}, \mathbf{w}) = a
+                                    (\mathbf{u},\mathbf{w}) + b
+                                    (\mathbf{v},
+                                    \mathbf{w})\)</span></li>
+                                    </ol>
+                                    <p>既に見たように、縦ベクトルや横ベクトルには自然な内積が定義できるが、関数をベクトルとみなすと、関数同士にも内積を定義することができる。いま、関数<span
                                     class="math inline">\(f(x)\)</span>と<span
                                     class="math inline">\(g(x)\)</span>について、その内積を</p>
                                     <p><span class="math display">\[
@@ -994,7 +1025,7 @@
                                     ─「ダッシュ、プライム」余論─
                                     田野村忠温</a></li>
                                     </ul>
-                                    <section id="footnotes"
+                                    <aside id="footnotes"
                                     class="footnotes footnotes-end-of-document"
                                     role="doc-endnotes">
                                     <hr />
@@ -1018,7 +1049,7 @@
                                     href="#fnref3" class="footnote-back"
                                     role="doc-backlink">↩︎</a></p></li>
                                     </ol>
-                                    </section>
+                                    </aside>
                     </article>
     </body>
 
