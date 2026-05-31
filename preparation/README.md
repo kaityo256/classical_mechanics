@@ -384,7 +384,7 @@ $$
 
 ベクトル空間とは、要素の線形結合ができる世界のことである。これにより、いわゆる「向きと大きさ」を持ったベクトルだけでなく、関数や微分演算子などもベクトルとみなすことができる。
 
-さて、物理で現れるベクトル空間には、自然な内積が定義できることが多い。内積が定義されたベクトル空間を **内積空間**(inner product space) と呼ぶ。この内積空間の公理をまとめておこう。あるベクトル空間$\mathbb{V}$を考える。内積とは、そのベクトル空間の任意の2つ元に対して一つの実数を結びつける写像$(\cdot,\cdot): \mathbb{V} \times \mathbb{V} \rightarrow \mathbb{R}$であり、以下の4つの性質を持つもののことである。ここで、$a, b \in \mathbb{R}$、$\mathbf{u},\mathbf{v},\mathbf{w} \in \mathbb{V}$とする。
+さて、物理で現れるベクトル空間には、自然な内積が定義できることが多い。内積が定義されたベクトル空間を **内積空間**(inner product space) と呼ぶ。この内積空間の公理をまとめておこう。あるベクトル空間$\mathbb{V}$を考える。内積とは、そのベクトル空間の任意の2つ元に対して一つの実数を結びつける写像$(\cdot,\cdot): \mathbb{V} \times \mathbb{V} \rightarrow \mathbb{R}$であり、以下の性質を持つもののことである。ここで、$a, b \in \mathbb{R}$、$\mathbf{u},\mathbf{v},\mathbf{w} \in \mathbb{V}$とする。
 
 1. 正定値性 $(\mathbf{v},\mathbf{v}) \ge 0$、$(\mathbf{v},\mathbf{v}) = 0 \Leftrightarrow \mathbf{v} = 0$
 1. 対称性 $(\mathbf{u},\mathbf{v}) = (\mathbf{v},\mathbf{u})$
