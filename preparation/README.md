@@ -284,9 +284,9 @@ $$
 \begin{aligned}
 A &=
 \begin{pmatrix}
-A^1_1 & A^2_1 & A^3_1 \\
-A^1_2 & A^2_2 & A^3_2 \\
-A^1_3 & A^2_3 & A^3_3
+A^1_1 & A^1_2 & A^1_3 \\
+A^2_1 & A^2_2 & A^2_3 \\
+A^3_1 & A^3_2 & A^3_3
 \end{pmatrix}
 = \sum_{i=1}^{3} \sum_{j=1}^{3} A^j_i \mathbf{e}^i \otimes \mathbf{e}_j.
 \end{aligned}
@@ -304,9 +304,9 @@ $$
 \begin{aligned}
 A &=
 \begin{pmatrix}
-A^1_1 & A^2_1 & A^3_1 \\
-A^1_2 & A^2_2 & A^3_2 \\
-A^1_3 & A^2_3 & A^3_3
+A^1_1 & A^1_2 & A^1_3 \\
+A^2_1 & A^2_2 & A^2_3 \\
+A^3_1 & A^3_2 & A^3_3
 \end{pmatrix}
 = A^j_i \mathbf{e}^i \otimes \mathbf{e}_j.
 \end{aligned}
