@@ -253,41 +253,33 @@
                                     \tilde{\mathbf{e}}^i = M^i_{\,k}
                                     \mathbf{e}^k
                                     \]</span></p>
-                                    <p>と展開できるとする。両辺、<span
-                                    class="math inline">\(\mathbf{e}_j\)</span>との内積を取ると、</p>
+                                    <p>と展開できるとする。</p>
+                                    <p>横ベクトルの正規直交条件から</p>
+                                    <p><span class="math display">\[
+                                    (\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i)
+                                    = \delta^j_i
+                                    \]</span></p>
+                                    <p>左辺の内積に<span
+                                    class="math inline">\(\tilde{\mathbf{e}}^j
+                                    = M^j_k
+                                    \mathbf{e}^k\)</span>および<span
+                                    class="math inline">\(\tilde{\mathbf{e}}_i
+                                    = T_i^l
+                                    \mathbf{e}_l\)</span>を代入すると、</p>
                                     <p><span class="math display">\[
                                     \begin{aligned}
-                                    (\tilde{\mathbf{e}}^i, \mathbf{e}_j)
-                                    &amp;= M^i_{\,k} (\mathbf{e}^k,
-                                    \mathbf{e}_j)
-                                    &amp;= M^i_{\,k} \delta^k_{\,j} \\
-                                    &amp;= M^i_{\,j}.
+                                    (\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i)
+                                    &amp;= (M^j_k \mathbf{e}^k, T_i^l
+                                    \mathbf{e}_l) \\
+                                    &amp;= M^j_k T^l_i (\mathbf{e}^k,
+                                    \mathbf{e}_l) \\
+                                    &amp;= M^j_k T^l_i \delta^k_l \\
+                                    &amp;= M^j_k T^k_i
                                     \end{aligned}
                                     \]</span></p>
-                                    <p>縦ベクトルの基底の変換は以下で与えられているとする。</p>
+                                    <p>もともとの直交条件から</p>
                                     <p><span class="math display">\[
-                                    \tilde{\mathbf{e}}_i = T^k_{\,i}
-                                    \mathbf{e}_k.
-                                    \]</span></p>
-                                    <p>両辺、<span
-                                    class="math inline">\(\tilde{\mathbf{e}}^j\)</span>と内積をとると、左辺は直交性から</p>
-                                    <p><span class="math display">\[
-                                    (\tilde{\mathbf{e}}^j,
-                                    \tilde{\mathbf{e}}_i) =
-                                    \delta^j_{\,i}.
-                                    \]</span></p>
-                                    <p>右辺は、先程求めた<span
-                                    class="math inline">\((\tilde{\mathbf{e}}^i,
-                                    \mathbf{e}_j) =
-                                    M^i_{\,j}\)</span>を代入することで</p>
-                                    <p><span class="math display">\[
-                                    T^k_{\,i} (\tilde{\mathbf{e}}^j,
-                                    \mathbf{e}_k) =   M^j_{\,k}
-                                    T^k_{\,i}.
-                                    \]</span></p>
-                                    <p>以上から、</p>
-                                    <p><span class="math display">\[
-                                    T^k_{\,i} M^j_{\,k} = \delta^j_{\,i}
+                                    M^j_k T^k_i = \delta^j_i
                                     \]</span></p>
                                     <p>これは、行列表示すれば<span
                                     class="math inline">\(TM =
