@@ -155,38 +155,29 @@ $$
 \tilde{\mathbf{e}}^i = M^i_{\,k} \mathbf{e}^k
 $$
 
-と展開できるとする。両辺、$\mathbf{e}_j$との内積を取ると、
+と展開できるとする。
+
+横ベクトルの正規直交条件から
+
+$$
+(\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i) = \delta^j_i
+$$
+
+左辺の内積に$\tilde{\mathbf{e}}^j = M^j_k \mathbf{e}^k$および$\tilde{\mathbf{e}}_i = T_i^l \mathbf{e}_l$を代入すると、
 
 $$
 \begin{aligned}
-(\tilde{\mathbf{e}}^i, \mathbf{e}_j) &= M^i_{\,k} (\mathbf{e}^k, \mathbf{e}_j)
-&= M^i_{\,k} \delta^k_{\,j} \\
-&= M^i_{\,j}.
+(\tilde{\mathbf{e}}^j,\tilde{\mathbf{e}}_i) &= (M^j_k \mathbf{e}^k, T_i^l \mathbf{e}_l) \\
+&= M^j_k T^l_i (\mathbf{e}^k, \mathbf{e}_l) \\
+&= M^j_k T^l_i \delta^k_l \\
+&= M^j_k T^k_i
 \end{aligned}
 $$
 
-縦ベクトルの基底の変換は以下で与えられているとする。
+もともとの直交条件から
 
 $$
-\tilde{\mathbf{e}}_i = T^k_{\,i} \mathbf{e}_k.
-$$
-
-両辺、$\tilde{\mathbf{e}}^j$と内積をとると、左辺は直交性から
-
-$$
-(\tilde{\mathbf{e}}^j, \tilde{\mathbf{e}}_i) = \delta^j_{\,i}.
-$$
-
-右辺は、先程求めた$(\tilde{\mathbf{e}}^i, \mathbf{e}_j) = M^i_{\,j}$を代入することで
-
-$$
-T^k_{\,i} (\tilde{\mathbf{e}}^j, \mathbf{e}_k) =   M^j_{\,k} T^k_{\,i}.
-$$
-
-以上から、
-
-$$
-T^k_{\,i} M^j_{\,k} = \delta^j_{\,i}
+M^j_k T^k_i = \delta^j_i
 $$
 
 これは、行列表示すれば$TM = I$、すなわち行列$M$と$T$が互いに逆行列の関係にあることを意味する。
